@@ -38,10 +38,24 @@ router.post(
     const { fullName, email } = req.body as z.infer<typeof registerSchema>;
     const firebaseUid = req.user!.uid;
 
-    // Idempotent: return existing user if already registered
-    const existingUser = await User.findOne({ firebaseUid });
-    if (existingUser) {
-      res.status(200).json({ user: existingUser });
+    // Idempotent: return existing user if already registered with this firebaseUid
+    const existingByUid = await User.findOne({ firebaseUid });
+    if (existingByUid) {
+      res.status(200).json({ user: existingByUid });
+      return;
+    }
+
+    // Handle re-registration: user deleted account and signed up again
+    // with same email but a new Firebase Auth uid.
+    const existingByEmail = await User.findOne({
+      email: email.toLowerCase(),
+    });
+    if (existingByEmail) {
+      existingByEmail.firebaseUid = firebaseUid;
+      existingByEmail.fullName = fullName;
+      existingByEmail.lastActiveAt = new Date();
+      await existingByEmail.save();
+      res.status(200).json({ user: existingByEmail });
       return;
     }
 
@@ -63,7 +77,17 @@ router.get(
   asyncHandler(async (req: Request, res: Response) => {
     const firebaseUid = req.user!.uid;
 
-    const user = await User.findOne({ firebaseUid });
+    let user = await User.findOne({ firebaseUid });
+
+    // If not found by firebaseUid, check by email — the user may have
+    // re-created their Firebase Auth account (new uid, same email).
+    if (!user && req.user!.email) {
+      user = await User.findOne({ email: req.user!.email.toLowerCase() });
+      if (user) {
+        user.firebaseUid = firebaseUid;
+      }
+    }
+
     if (!user) {
       res.status(404).json({ error: "User not found" });
       return;

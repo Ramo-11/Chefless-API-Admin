@@ -48,6 +48,10 @@ export function validate(schemas: ValidationTarget) {
     }
 
     if (errors.length > 0) {
+      console.log(
+        `[Validation] ${req.method} ${req.path}:`,
+        JSON.stringify(errors, null, 2)
+      );
       res.status(400).json({ error: "Validation failed", details: errors });
       return;
     }

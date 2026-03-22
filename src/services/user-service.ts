@@ -79,12 +79,13 @@ export async function getUserById(
 
 interface ProfileUpdates {
   fullName?: string;
-  bio?: string;
-  phone?: string;
+  bio?: string | null;
+  phone?: string | null;
   isPublic?: boolean;
   dietaryPreferences?: string[];
   cuisinePreferences?: string[];
-  profilePicture?: string;
+  profilePicture?: string | null;
+  onboardingComplete?: boolean;
 }
 
 export async function updateProfile(
@@ -135,7 +136,7 @@ export async function deleteAccount(userId: string): Promise<void> {
     $or: [{ followerId: objectId }, { followingId: objectId }],
   });
 
-  // Delete the user document
+  // Delete the user document from MongoDB
   await User.findByIdAndDelete(userId);
 }
 

@@ -1,8 +1,10 @@
 import rateLimit from "express-rate-limit";
 
+const isDev = process.env.NODE_ENV !== "production";
+
 export const defaultLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  limit: 100,
+  limit: isDev ? 1000 : 100,
   standardHeaders: "draft-7",
   legacyHeaders: false,
   message: { error: "Too many requests, please try again later" },
@@ -10,7 +12,7 @@ export const defaultLimiter = rateLimit({
 
 export const strictLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  limit: 20,
+  limit: isDev ? 200 : 20,
   standardHeaders: "draft-7",
   legacyHeaders: false,
   message: { error: "Too many requests, please try again later" },
@@ -18,7 +20,7 @@ export const strictLimiter = rateLimit({
 
 export const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  limit: 10,
+  limit: isDev ? 100 : 10,
   standardHeaders: "draft-7",
   legacyHeaders: false,
   message: { error: "Too many authentication attempts, please try again later" },

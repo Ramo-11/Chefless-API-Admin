@@ -44,12 +44,13 @@ const objectIdParam = z.object({
 
 const updateProfileSchema = z.object({
   fullName: z.string().min(1).max(100).optional(),
-  bio: z.string().max(150).optional(),
-  phone: z.string().max(20).optional(),
+  bio: z.string().max(150).nullable().optional(),
+  phone: z.string().max(20).nullable().optional(),
   isPublic: z.boolean().optional(),
   dietaryPreferences: z.array(z.string().max(50)).max(20).optional(),
   cuisinePreferences: z.array(z.string().max(50)).max(20).optional(),
-  profilePicture: z.string().url().optional(),
+  profilePicture: z.string().url().nullable().optional(),
+  onboardingComplete: z.boolean().optional(),
 });
 
 const searchQuerySchema = z.object({
@@ -201,6 +202,34 @@ router.delete(
     await deleteAccount(currentUser._id.toString());
 
     res.status(200).json({ success: true });
+  })
+);
+
+// POST /api/users/me/profile-picture
+router.post(
+  "/me/profile-picture",
+  requireAuth,
+  validate({ body: signatureBodySchema }),
+  asyncHandler(async (req: Request, res: Response) => {
+    const firebaseUid = req.user!.uid;
+    const currentUser = await User.findOne({ firebaseUid }).select("_id").lean();
+
+    if (!currentUser) {
+      res.status(404).json({ error: "User not found" });
+      return;
+    }
+
+    const { image } = req.body as z.infer<typeof signatureBodySchema>;
+
+    const result = await uploadImage(image, "profile-pictures");
+
+    const user = await User.findByIdAndUpdate(
+      currentUser._id,
+      { $set: { profilePicture: result.secureUrl } },
+      { new: true }
+    );
+
+    res.status(200).json({ user });
   })
 );
 
