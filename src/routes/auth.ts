@@ -125,4 +125,20 @@ router.post(
   })
 );
 
+// DELETE /api/auth/fcm-token — Clear FCM token (call on sign-out)
+router.delete(
+  "/fcm-token",
+  requireAuth,
+  asyncHandler(async (req: Request, res: Response) => {
+    const firebaseUid = req.user!.uid;
+
+    await User.findOneAndUpdate(
+      { firebaseUid },
+      { $unset: { fcmToken: 1 } }
+    );
+
+    res.status(200).json({ success: true });
+  })
+);
+
 export default router;

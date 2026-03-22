@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #1a1a1a;
+      background: #fafafa;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 32px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      background: #0D9488;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 18px;
+    }
+    .brand-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: #0D9488;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #111;
+    }
+    .effective-date {
+      font-size: 14px;
+      color: #6b7280;
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      color: #111;
+    }
+    p, li {
+      font-size: 15px;
+      color: #374151;
+      margin-bottom: 12px;
+    }
+    ul {
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+    li { margin-bottom: 6px; }
+    a { color: #0D9488; }
+    .contact {
+      margin-top: 40px;
+      padding: 20px;
+      background: #f0fdfa;
+      border-radius: 10px;
+      border: 1px solid #ccfbf1;
+    }
+    .contact p { margin-bottom: 4px; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #111; color: #e5e7eb; }
+      h1, h2 { color: #f9fafb; }
+      p, li { color: #d1d5db; }
+      .brand-name { color: #2dd4bf; }
+      .brand-icon { background: #14b8a6; }
+      .effective-date { color: #9ca3af; }
+      .brand { border-bottom-color: #374151; }
+      a { color: #2dd4bf; }
+      .contact { background: #1a2e2b; border-color: #2d4a45; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="brand">
+      <div class="brand-icon">&#127860;</div>
+      <span class="brand-name">Chefless</span>
+    </div>
+    <%- body %>
+  </div>
+</body>
+</html>

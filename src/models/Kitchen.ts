@@ -6,6 +6,7 @@ export interface IKitchen extends Document {
   leadId: Types.ObjectId;
   inviteCode: string;
   photo?: string;
+  isPublic: boolean;
   membersWithScheduleEdit: Types.ObjectId[];
   membersWithApprovalPower: Types.ObjectId[];
   memberCount: number;
@@ -34,6 +35,11 @@ const kitchenSchema = new Schema<IKitchen>(
       index: true,
     },
     photo: { type: String },
+    isPublic: {
+      type: Boolean,
+      default: false,
+      index: true,
+    },
     membersWithScheduleEdit: [
       {
         type: Schema.Types.ObjectId,

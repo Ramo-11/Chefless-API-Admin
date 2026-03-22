@@ -1,0 +1,79 @@
+<%- include('layout', { title, body: `
+
+<h1>Privacy Policy</h1>
+<p class="effective-date">Effective Date: March 22, 2026</p>
+
+<p>Chefless ("we", "our", "us") is operated by Sahab Solutions. This Privacy Policy explains how we collect, use, and protect your personal information when you use the Chefless mobile application and related services.</p>
+
+<h2>1. Information We Collect</h2>
+
+<p><strong>Account Information:</strong> When you create an account, we collect your name, email address, and optionally a profile photo and phone number. If you sign in with Apple or Google, we receive your name and email from those providers.</p>
+
+<p><strong>Content You Create:</strong> Recipes, meal schedules, shopping lists, photos, and other content you create within the app are stored on our servers.</p>
+
+<p><strong>Usage Data:</strong> We collect information about how you interact with the app, including features used, actions taken, and timestamps of activity.</p>
+
+<p><strong>Device Information:</strong> We may collect device identifiers, operating system version, and push notification tokens to deliver notifications and improve the app experience.</p>
+
+<p><strong>Images:</strong> Photos you upload (profile pictures, recipe photos) are stored securely via Cloudinary, a third-party image hosting service.</p>
+
+<h2>2. How We Use Your Information</h2>
+<ul>
+  <li>To provide and maintain the Chefless app and its features</li>
+  <li>To personalize your experience (recipe suggestions, dietary preferences)</li>
+  <li>To enable social features (following, sharing recipes, Kitchen groups)</li>
+  <li>To send push notifications about meal schedules, Kitchen activity, and app updates</li>
+  <li>To process subscriptions and payments through RevenueCat and Apple/Google</li>
+  <li>To detect and prevent abuse, fraud, and policy violations</li>
+  <li>To improve and develop new features</li>
+</ul>
+
+<h2>3. Information Sharing</h2>
+
+<p>We do not sell your personal information. We share data only in these circumstances:</p>
+<ul>
+  <li><strong>With other users:</strong> Your public profile, shared recipes, and Kitchen activity are visible to others based on your privacy settings.</li>
+  <li><strong>Service providers:</strong> We use third-party services to operate the app, including Firebase (authentication), MongoDB Atlas (data storage), Cloudinary (image hosting), and RevenueCat (subscriptions). These providers access only the data necessary to perform their services.</li>
+  <li><strong>Legal requirements:</strong> We may disclose information if required by law, regulation, or legal process.</li>
+</ul>
+
+<h2>4. Data Storage and Security</h2>
+
+<p>Your data is stored on MongoDB Atlas servers and protected with industry-standard encryption in transit and at rest. Authentication is handled through Firebase Auth with secure token-based verification. We implement rate limiting, input validation, and access controls to protect your account.</p>
+
+<h2>5. Your Rights and Choices</h2>
+<ul>
+  <li><strong>Access and Edit:</strong> You can view and update your profile information, preferences, and content at any time within the app.</li>
+  <li><strong>Privacy Settings:</strong> You can switch your account between public and private to control who can see your profile and recipes.</li>
+  <li><strong>Notifications:</strong> You can manage notification preferences in the app settings.</li>
+  <li><strong>Delete Your Account:</strong> You can permanently delete your account and all associated data from the app settings. This removes your data from our servers and Firebase Auth.</li>
+  <li><strong>Data Export:</strong> Contact us to request an export of your data.</li>
+</ul>
+
+<h2>6. Children's Privacy</h2>
+
+<p>Chefless is not intended for children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us and we will delete it.</p>
+
+<h2>7. Third-Party Services</h2>
+
+<p>The app integrates with third-party services that have their own privacy policies:</p>
+<ul>
+  <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase (Google)</a> — Authentication and push notifications</li>
+  <li><a href="https://www.mongodb.com/legal/privacy-policy" target="_blank" rel="noopener">MongoDB Atlas</a> — Data storage</li>
+  <li><a href="https://cloudinary.com/privacy" target="_blank" rel="noopener">Cloudinary</a> — Image hosting</li>
+  <li><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> — Subscription management</li>
+</ul>
+
+<h2>8. Changes to This Policy</h2>
+
+<p>We may update this Privacy Policy from time to time. We will notify you of significant changes through the app or by email. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+
+<h2>9. Contact Us</h2>
+
+<div class="contact">
+  <p>If you have questions about this Privacy Policy or your data, contact us at:</p>
+  <p><strong>Email:</strong> <a href="mailto:support@sahab-solutions.com">support@sahab-solutions.com</a></p>
+  <p><strong>Company:</strong> Sahab Solutions</p>
+</div>
+
+` }) %>

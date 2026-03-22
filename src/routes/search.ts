@@ -3,8 +3,9 @@ import { z } from "zod";
 import { Types } from "mongoose";
 import { requireAuth } from "../middleware/auth";
 import { validate } from "../middleware/validate";
-import User, { IUser } from "../models/User";
-import Recipe, { IRecipe } from "../models/Recipe";
+import User from "../models/User";
+import Recipe from "../models/Recipe";
+import Kitchen from "../models/Kitchen";
 import Follow from "../models/Follow";
 import { computeSpatulaBadge } from "../services/user-service";
 
@@ -18,14 +19,33 @@ function asyncHandler(
   };
 }
 
+// ── Validation ──────────────────────────────────────────────────────────────
+
 const searchQuerySchema = z.object({
   q: z.string().min(1, "Search query is required").max(100),
-  type: z.enum(["all", "recipes", "users"]).default("all"),
+  type: z.enum(["all", "recipes", "users", "kitchens"]).default("all"),
   page: z.coerce.number().int().min(1).default(1),
   limit: z.coerce.number().int().min(1).max(50).default(20),
 });
 
 type SearchQuery = z.infer<typeof searchQuerySchema>;
+
+// ── Utilities ───────────────────────────────────────────────────────────────
+
+/** Escape regex special characters so user input is treated literally. */
+function escapeRegex(str: string): string {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+/** Split a query string into non-empty terms. */
+function parseTerms(query: string): string[] {
+  return query
+    .trim()
+    .split(/\s+/)
+    .filter((t) => t.length > 0);
+}
+
+// ── Result Interfaces ───────────────────────────────────────────────────────
 
 interface RecipeSearchResult {
   _id: Types.ObjectId;
@@ -61,50 +81,96 @@ interface UserSearchResult {
   spatulaBadge: string | null;
 }
 
+interface KitchenSearchResult {
+  _id: Types.ObjectId;
+  name: string;
+  photo?: string;
+  memberCount: number;
+  lead: {
+    _id: Types.ObjectId;
+    fullName: string;
+    profilePicture?: string;
+  };
+}
+
+// ── Visibility ──────────────────────────────────────────────────────────────
+
 /**
- * Build a list of author IDs whose shared recipes the viewer can see.
- * Returns:
- * - All public account IDs (anyone can see their shared recipes)
- * - Private account IDs that the viewer actively follows
- * - Private account IDs that share a kitchen with the viewer
+ * Build the recipe visibility filter for a given viewer.
+ *
+ * Rules:
+ * 1. Own recipes (including private) — always visible
+ * 2. Shared (non-private) recipes from public, non-banned accounts — visible
+ * 3. Shared recipes from private accounts the viewer follows or shares a kitchen with — visible
  */
-async function getVisibleAuthorIds(
+async function buildRecipeVisibilityFilter(
   viewerId: Types.ObjectId
-): Promise<{
-  publicUserIds: Types.ObjectId[];
-  followedPrivateIds: Types.ObjectId[];
-  kitchenMemberIds: Types.ObjectId[];
-}> {
-  // Get all users the viewer actively follows who are private
-  const followedPrivateUsers = await Follow.find({
+): Promise<Record<string, unknown>> {
+  // IDs of users the viewer actively follows
+  const follows = await Follow.find({
     followerId: viewerId,
     status: "active",
   })
     .select("followingId")
     .lean();
+  const followedIds = follows.map((f) => f.followingId);
 
-  const followedIds = followedPrivateUsers.map((f) => f.followingId);
-
-  // Get viewer's kitchen to find kitchen members
+  // IDs of kitchen members (if viewer is in a kitchen)
   const viewer = await User.findById(viewerId).select("kitchenId").lean();
   let kitchenMemberIds: Types.ObjectId[] = [];
-
   if (viewer?.kitchenId) {
-    const kitchenMembers = await User.find({
+    const members = await User.find({
       kitchenId: viewer.kitchenId,
       _id: { $ne: viewerId },
     })
       .select("_id")
       .lean();
-    kitchenMemberIds = kitchenMembers.map((m) => m._id);
+    kitchenMemberIds = members.map((m) => m._id);
+  }
+
+  const accessiblePrivateIds = [...followedIds, ...kitchenMemberIds];
+
+  // IDs of public, non-banned users
+  const publicUsers = await User.find({
+    isPublic: true,
+    isBanned: { $ne: true },
+  })
+    .select("_id")
+    .lean();
+  const publicIds = publicUsers.map((u) => u._id);
+
+  // IDs of banned users (to exclude as recipe authors)
+  const bannedUsers = await User.find({ isBanned: true })
+    .select("_id")
+    .lean();
+  const bannedIds = bannedUsers.map((u) => u._id);
+
+  const orClauses: Record<string, unknown>[] = [
+    // Own recipes
+    { authorId: viewerId },
+    // Shared recipes from public accounts
+    { isPrivate: false, authorId: { $in: publicIds } },
+  ];
+
+  if (accessiblePrivateIds.length > 0) {
+    orClauses.push({
+      isPrivate: false,
+      authorId: { $in: accessiblePrivateIds },
+    });
   }
 
   return {
-    publicUserIds: [], // We'll handle public accounts via the isPublic field in the query
-    followedPrivateIds: followedIds,
-    kitchenMemberIds,
+    $and: [
+      { $or: orClauses },
+      { isHidden: { $ne: true } },
+      ...(bannedIds.length > 0
+        ? [{ authorId: { $nin: bannedIds } }]
+        : []),
+    ],
   };
 }
+
+// ── Search Functions ────────────────────────────────────────────────────────
 
 async function searchRecipes(
   query: string,
@@ -112,87 +178,147 @@ async function searchRecipes(
   page: number,
   limit: number
 ): Promise<{ recipes: RecipeSearchResult[]; total: number }> {
-  const skip = (page - 1) * limit;
+  const terms = parseTerms(query);
+  if (!terms.length) return { recipes: [], total: 0 };
 
-  const { followedPrivateIds, kitchenMemberIds } =
-    await getVisibleAuthorIds(viewerId);
+  const escapedTerms = terms.map(escapeRegex);
+  const fullQueryEscaped = escapeRegex(query.trim());
 
-  // Combine followed + kitchen member IDs (these are private accounts whose shared recipes we can see)
-  const accessiblePrivateAuthorIds = [
-    ...followedPrivateIds,
-    ...kitchenMemberIds,
-  ];
+  // Every term must match at least one searchable field
+  const termFilter = {
+    $and: escapedTerms.map((term) => ({
+      $or: [
+        { title: { $regex: term, $options: "i" } },
+        { description: { $regex: term, $options: "i" } },
+        { "ingredients.name": { $regex: term, $options: "i" } },
+        { dietaryTags: { $regex: term, $options: "i" } },
+        { cuisineTags: { $regex: term, $options: "i" } },
+      ],
+    })),
+  };
 
-  // Build the visibility filter:
-  // 1. Own recipes (including private)
-  // 2. Public accounts' shared (non-private) recipes
-  // 3. Followed/kitchen private accounts' shared recipes
-  const visibilityFilter = {
-    $or: [
-      // Own recipes (including private ones)
-      { authorId: viewerId },
-      // Shared recipes from public accounts
-      {
-        isPrivate: false,
-        authorId: {
-          $in: await User.find({ isPublic: true })
-            .select("_id")
-            .lean()
-            .then((users) => users.map((u) => u._id)),
+  const visibilityFilter = await buildRecipeVisibilityFilter(viewerId);
+
+  const matchFilter = {
+    $and: [termFilter, visibilityFilter],
+  };
+
+  const pipeline = [
+    { $match: matchFilter },
+    // Relevance scoring: title match quality + engagement
+    {
+      $addFields: {
+        _relevance: {
+          $sum: [
+            // Full query appears in title (highest signal)
+            {
+              $cond: [
+                {
+                  $regexMatch: {
+                    input: "$title",
+                    regex: fullQueryEscaped,
+                    options: "i",
+                  },
+                },
+                100,
+                0,
+              ],
+            },
+            // Title starts with the first search term
+            {
+              $cond: [
+                {
+                  $regexMatch: {
+                    input: "$title",
+                    regex: `^${escapedTerms[0]}`,
+                    options: "i",
+                  },
+                },
+                50,
+                0,
+              ],
+            },
+            // Engagement bonus (log-scaled so high-like recipes don't dominate)
+            {
+              $multiply: [
+                {
+                  $ln: {
+                    $add: [{ $add: ["$likesCount", "$forksCount"] }, 2],
+                  },
+                },
+                5,
+              ],
+            },
+          ],
         },
       },
-      // Shared recipes from accessible private accounts
-      ...(accessiblePrivateAuthorIds.length > 0
-        ? [
-            {
-              isPrivate: false,
-              authorId: { $in: accessiblePrivateAuthorIds },
+    },
+    { $sort: { _relevance: -1 as const, likesCount: -1 as const, createdAt: -1 as const } },
+    {
+      $facet: {
+        results: [
+          { $skip: (page - 1) * limit },
+          { $limit: limit },
+          {
+            $project: {
+              title: 1,
+              description: 1,
+              photos: 1,
+              labels: 1,
+              dietaryTags: 1,
+              cuisineTags: 1,
+              difficulty: 1,
+              prepTime: 1,
+              cookTime: 1,
+              totalTime: 1,
+              servings: 1,
+              likesCount: 1,
+              forksCount: 1,
+              createdAt: 1,
+              authorId: 1,
             },
-          ]
-        : []),
-    ],
-  };
+          },
+        ],
+        count: [{ $count: "total" }],
+      },
+    },
+  ];
 
-  const filter = {
-    $text: { $search: query },
-    ...visibilityFilter,
-  };
-
-  const [recipes, total] = await Promise.all([
-    Recipe.find(filter, { score: { $meta: "textScore" } })
-      .sort({ score: { $meta: "textScore" } })
-      .skip(skip)
-      .limit(limit)
-      .lean(),
-    Recipe.countDocuments(filter),
-  ]);
+  const [result] = await Recipe.aggregate(pipeline);
+  const recipes = result.results as Array<
+    Record<string, unknown> & { authorId: Types.ObjectId }
+  >;
+  const total = (result.count[0]?.total as number) ?? 0;
 
   // Populate author info
-  const authorIds = [...new Set(recipes.map((r) => r.authorId.toString()))];
+  const authorIds = [
+    ...new Set(recipes.map((r) => r.authorId.toString())),
+  ];
   const authors = await User.find({ _id: { $in: authorIds } })
     .select("fullName profilePicture")
     .lean();
-
-  const authorMap = new Map(authors.map((a) => [a._id.toString(), a]));
+  const authorMap = new Map(
+    authors.map((a) => [a._id.toString(), a])
+  );
 
   const results: RecipeSearchResult[] = recipes.map((recipe) => {
     const author = authorMap.get(recipe.authorId.toString());
     return {
-      _id: recipe._id,
-      title: recipe.title,
-      description: recipe.description,
-      photos: recipe.photos,
-      labels: recipe.labels,
-      dietaryTags: recipe.dietaryTags,
-      cuisineTags: recipe.cuisineTags,
-      difficulty: recipe.difficulty,
-      prepTime: recipe.prepTime,
-      cookTime: recipe.cookTime,
-      totalTime: recipe.totalTime,
-      servings: recipe.servings,
-      likesCount: recipe.likesCount,
-      forksCount: recipe.forksCount,
-      createdAt: recipe.createdAt,
+      _id: recipe._id as Types.ObjectId,
+      title: recipe.title as string,
+      description: recipe.description as string | undefined,
+      photos: recipe.photos as string[],
+      labels: recipe.labels as string[],
+      dietaryTags: recipe.dietaryTags as string[],
+      cuisineTags: recipe.cuisineTags as string[],
+      difficulty: recipe.difficulty as string | undefined,
+      prepTime: recipe.prepTime as number | undefined,
+      cookTime: recipe.cookTime as number | undefined,
+      totalTime: recipe.totalTime as number | undefined,
+      servings: recipe.servings as number | undefined,
+      likesCount: recipe.likesCount as number,
+      forksCount: recipe.forksCount as number,
+      createdAt: recipe.createdAt as Date,
       author: {
         _id: author?._id ?? recipe.authorId,
         fullName: author?.fullName ?? "Unknown",
@@ -210,40 +336,244 @@ async function searchUsers(
   page: number,
   limit: number
 ): Promise<{ users: UserSearchResult[]; total: number }> {
-  const skip = (page - 1) * limit;
+  const terms = parseTerms(query);
+  if (!terms.length) return { users: [], total: 0 };
 
-  const filter = {
-    $text: { $search: query },
-    _id: { $ne: viewerId },
+  const escapedTerms = terms.map(escapeRegex);
+  const fullQueryEscaped = escapeRegex(query.trim());
+  const looksLikeEmail = query.includes("@");
+
+  // Every term must match name or email
+  const termFilter = {
+    $and: escapedTerms.map((term) => ({
+      $or: [
+        { fullName: { $regex: term, $options: "i" } },
+        { email: { $regex: term, $options: "i" } },
+      ],
+    })),
   };
 
-  const [users, total] = await Promise.all([
-    User.find(filter, { score: { $meta: "textScore" } })
-      .select(
-        "fullName profilePicture bio isPublic recipesCount followersCount"
-      )
-      .sort({ score: { $meta: "textScore" } })
-      .skip(skip)
-      .limit(limit)
-      .lean(),
-    User.countDocuments(filter),
-  ]);
+  const pipeline = [
+    {
+      $match: {
+        $and: [
+          termFilter,
+          { _id: { $ne: viewerId } },
+          { isBanned: { $ne: true } },
+        ],
+      },
+    },
+    {
+      $addFields: {
+        _relevance: {
+          $sum: [
+            // Full name contains full query
+            {
+              $cond: [
+                {
+                  $regexMatch: {
+                    input: "$fullName",
+                    regex: fullQueryEscaped,
+                    options: "i",
+                  },
+                },
+                100,
+                0,
+              ],
+            },
+            // Name starts with first term
+            {
+              $cond: [
+                {
+                  $regexMatch: {
+                    input: "$fullName",
+                    regex: `^${escapedTerms[0]}`,
+                    options: "i",
+                  },
+                },
+                50,
+                0,
+              ],
+            },
+            // Email match (weighted higher if query looks like an email)
+            {
+              $cond: [
+                {
+                  $regexMatch: {
+                    input: "$email",
+                    regex: fullQueryEscaped,
+                    options: "i",
+                  },
+                },
+                looksLikeEmail ? 200 : 10,
+                0,
+              ],
+            },
+            // Followers bonus
+            {
+              $multiply: [
+                { $ln: { $add: ["$followersCount", 2] } },
+                3,
+              ],
+            },
+          ],
+        },
+      },
+    },
+    { $sort: { _relevance: -1 as const, followersCount: -1 as const } },
+    {
+      $facet: {
+        results: [
+          { $skip: (page - 1) * limit },
+          { $limit: limit },
+          {
+            $project: {
+              fullName: 1,
+              profilePicture: 1,
+              bio: 1,
+              isPublic: 1,
+              recipesCount: 1,
+              followersCount: 1,
+            },
+          },
+        ],
+        count: [{ $count: "total" }],
+      },
+    },
+  ];
+
+  const [result] = await User.aggregate(pipeline);
+  const users = result.results as Array<Record<string, unknown>>;
+  const total = (result.count[0]?.total as number) ?? 0;
 
   const results: UserSearchResult[] = users.map((user) => ({
-    _id: user._id,
-    fullName: user.fullName,
-    profilePicture: user.profilePicture,
-    bio: user.bio,
-    isPublic: user.isPublic,
-    recipesCount: user.recipesCount,
-    followersCount: user.followersCount,
-    spatulaBadge: computeSpatulaBadge(user.recipesCount),
+    _id: user._id as Types.ObjectId,
+    fullName: user.fullName as string,
+    profilePicture: user.profilePicture as string | undefined,
+    bio: user.bio as string | undefined,
+    isPublic: user.isPublic as boolean,
+    recipesCount: user.recipesCount as number,
+    followersCount: user.followersCount as number,
+    spatulaBadge: computeSpatulaBadge((user.recipesCount as number) ?? 0),
   }));
 
   return { users: results, total };
 }
 
-// GET /api/search?q=&type=&page=&limit=
+async function searchKitchens(
+  query: string,
+  viewerId: Types.ObjectId,
+  page: number,
+  limit: number
+): Promise<{ kitchens: KitchenSearchResult[]; total: number }> {
+  const terms = parseTerms(query);
+  if (!terms.length) return { kitchens: [], total: 0 };
+
+  const escapedTerms = terms.map(escapeRegex);
+  const fullQueryEscaped = escapeRegex(query.trim());
+
+  // Every term must match the kitchen name
+  const termFilter = {
+    $and: escapedTerms.map((term) => ({
+      name: { $regex: term, $options: "i" },
+    })),
+  };
+
+  // Show public kitchens + kitchens the viewer belongs to
+  const viewer = await User.findById(viewerId).select("kitchenId").lean();
+
+  const visibilityFilter: Record<string, unknown> = viewer?.kitchenId
+    ? { $or: [{ isPublic: true }, { _id: viewer.kitchenId }] }
+    : { isPublic: true };
+
+  const pipeline = [
+    {
+      $match: {
+        $and: [termFilter, visibilityFilter],
+      },
+    },
+    {
+      $addFields: {
+        _relevance: {
+          $sum: [
+            {
+              $cond: [
+                {
+                  $regexMatch: {
+                    input: "$name",
+                    regex: fullQueryEscaped,
+                    options: "i",
+                  },
+                },
+                100,
+                0,
+              ],
+            },
+            {
+              $cond: [
+                {
+                  $regexMatch: {
+                    input: "$name",
+                    regex: `^${escapedTerms[0]}`,
+                    options: "i",
+                  },
+                },
+                50,
+                0,
+              ],
+            },
+            { $multiply: ["$memberCount", 2] },
+          ],
+        },
+      },
+    },
+    { $sort: { _relevance: -1 as const, memberCount: -1 as const } },
+    {
+      $facet: {
+        results: [
+          { $skip: (page - 1) * limit },
+          { $limit: limit },
+          {
+            $lookup: {
+              from: "users",
+              localField: "leadId",
+              foreignField: "_id",
+              as: "_lead",
+              pipeline: [
+                { $project: { fullName: 1, profilePicture: 1 } },
+              ],
+            },
+          },
+          {
+            $addFields: {
+              lead: { $arrayElemAt: ["$_lead", 0] },
+            },
+          },
+          {
+            $project: {
+              name: 1,
+              photo: 1,
+              memberCount: 1,
+              "lead._id": 1,
+              "lead.fullName": 1,
+              "lead.profilePicture": 1,
+            },
+          },
+        ],
+        count: [{ $count: "total" }],
+      },
+    },
+  ];
+
+  const [result] = await Kitchen.aggregate(pipeline);
+  const kitchens = result.results as KitchenSearchResult[];
+  const total = (result.count[0]?.total as number) ?? 0;
+
+  return { kitchens, total };
+}
+
+// ── Route Handler ───────────────────────────────────────────────────────────
+
 router.get(
   "/",
   requireAuth,
@@ -265,34 +595,52 @@ router.get(
 
     let recipes: RecipeSearchResult[] = [];
     let users: UserSearchResult[] = [];
+    let kitchens: KitchenSearchResult[] = [];
     let recipesTotal = 0;
     let usersTotal = 0;
+    let kitchensTotal = 0;
 
     if (type === "all") {
-      const [recipeResults, userResults] = await Promise.all([
-        searchRecipes(q, viewerId, page, limit),
-        searchUsers(q, viewerId, page, limit),
-      ]);
+      // Fetch all types in parallel
+      const [recipeResults, userResults, kitchenResults] =
+        await Promise.all([
+          searchRecipes(q, viewerId, page, limit),
+          searchUsers(q, viewerId, page, limit),
+          searchKitchens(q, viewerId, page, limit),
+        ]);
       recipes = recipeResults.recipes;
       recipesTotal = recipeResults.total;
       users = userResults.users;
       usersTotal = userResults.total;
+      kitchens = kitchenResults.kitchens;
+      kitchensTotal = kitchenResults.total;
     } else if (type === "recipes") {
       const recipeResults = await searchRecipes(q, viewerId, page, limit);
       recipes = recipeResults.recipes;
       recipesTotal = recipeResults.total;
-    } else {
+    } else if (type === "users") {
       const userResults = await searchUsers(q, viewerId, page, limit);
       users = userResults.users;
       usersTotal = userResults.total;
+    } else {
+      const kitchenResults = await searchKitchens(
+        q,
+        viewerId,
+        page,
+        limit
+      );
+      kitchens = kitchenResults.kitchens;
+      kitchensTotal = kitchenResults.total;
     }
 
     res.status(200).json({
       recipes,
       users,
-      total: {
+      kitchens,
+      totals: {
         recipes: recipesTotal,
         users: usersTotal,
+        kitchens: kitchensTotal,
       },
     });
   })

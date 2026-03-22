@@ -3,7 +3,7 @@ import Notification, {
   INotification,
   NotificationType,
 } from "../models/Notification";
-import User from "../models/User";
+import User, { NotificationPreferences } from "../models/User";
 import Recipe from "../models/Recipe";
 import Kitchen from "../models/Kitchen";
 import ScheduleEntry from "../models/ScheduleEntry";
@@ -38,11 +38,24 @@ interface PaginatedNotifications {
 
 /**
  * Create a notification document and send a push notification if the user has an FCM token.
+ * Respects user notification preferences — if the type is disabled, neither the
+ * in-app notification nor the push is created.
  * Push failures are logged but never thrown.
  */
 export async function createNotification(
   params: CreateNotificationParams
-): Promise<INotification> {
+): Promise<INotification | null> {
+  // Single query to check preferences and get FCM token
+  const user = await User.findById(params.userId)
+    .select("notificationPreferences fcmToken")
+    .lean();
+
+  // Check user's notification preferences before creating
+  if (user?.notificationPreferences) {
+    const prefs = user.notificationPreferences as NotificationPreferences;
+    if (prefs[params.type] === false) return null;
+  }
+
   const notification = await Notification.create({
     userId: params.userId,
     type: params.type,
@@ -57,34 +70,28 @@ export async function createNotification(
   });
 
   // Send push notification if user has an FCM token
-  if (params.pushTitle && params.pushBody) {
-    const user = await User.findById(params.userId)
-      .select("fcmToken")
-      .lean();
+  if (params.pushTitle && params.pushBody && user?.fcmToken) {
+    const pushData: Record<string, string> = {
+      notificationId: notification._id.toString(),
+      type: params.type,
+    };
 
-    if (user?.fcmToken) {
-      const pushData: Record<string, string> = {
-        notificationId: notification._id.toString(),
-        type: params.type,
-      };
-
-      if (params.recipeId) {
-        pushData.recipeId = params.recipeId.toString();
-      }
-      if (params.kitchenId) {
-        pushData.kitchenId = params.kitchenId.toString();
-      }
-
-      sendPushNotification(
-        user.fcmToken,
-        params.pushTitle,
-        params.pushBody,
-        pushData
-      ).catch((err: unknown) => {
-        const msg = err instanceof Error ? err.message : "Unknown error";
-        console.error(`Push notification failed: ${msg}`);
-      });
+    if (params.recipeId) {
+      pushData.recipeId = params.recipeId.toString();
     }
+    if (params.kitchenId) {
+      pushData.kitchenId = params.kitchenId.toString();
+    }
+
+    sendPushNotification(
+      user.fcmToken,
+      params.pushTitle,
+      params.pushBody,
+      pushData
+    ).catch((err: unknown) => {
+      const msg = err instanceof Error ? err.message : "Unknown error";
+      console.error(`Push notification failed: ${msg}`);
+    });
   }
 
   return notification;
@@ -125,6 +132,17 @@ export async function markAsRead(
 
   const result = await Notification.updateMany(
     { _id: { $in: ids }, userId: objectId },
+    { $set: { isRead: true } }
+  );
+
+  return result.modifiedCount;
+}
+
+export async function markAllAsRead(userId: string): Promise<number> {
+  const objectId = new Types.ObjectId(userId);
+
+  const result = await Notification.updateMany(
+    { userId: objectId, isRead: false },
     { $set: { isRead: true } }
   );
 

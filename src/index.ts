@@ -21,6 +21,7 @@ import webhooksRouter from "./routes/webhooks";
 import labelsRouter from "./routes/labels";
 import reportsRouter from "./routes/reports";
 import adminRouter from "./admin/routes";
+import pagesRouter from "./routes/pages";
 
 const app = express();
 
@@ -56,6 +57,9 @@ app.use(
     },
   })
 );
+
+// ── Public pages (privacy, terms) ───────────────────────────────────
+app.use("/", pagesRouter);
 
 // ── Admin panel (served at /admin) ──────────────────────────────────
 app.use("/admin", adminRouter);

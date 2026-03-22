@@ -9,6 +9,38 @@ export interface ShippingAddress {
   country: string;
 }
 
+export interface NotificationPreferences {
+  new_follower: boolean;
+  follow_request: boolean;
+  follow_accepted: boolean;
+  recipe_liked: boolean;
+  recipe_forked: boolean;
+  recipe_shared: boolean;
+  schedule_suggestion: boolean;
+  suggestion_approved: boolean;
+  suggestion_denied: boolean;
+  kitchen_invite: boolean;
+  kitchen_joined: boolean;
+  kitchen_removed: boolean;
+  system: boolean;
+}
+
+export const DEFAULT_NOTIFICATION_PREFERENCES: NotificationPreferences = {
+  new_follower: true,
+  follow_request: true,
+  follow_accepted: true,
+  recipe_liked: true,
+  recipe_forked: true,
+  recipe_shared: true,
+  schedule_suggestion: true,
+  suggestion_approved: true,
+  suggestion_denied: true,
+  kitchen_invite: true,
+  kitchen_joined: true,
+  kitchen_removed: true,
+  system: true,
+};
+
 export interface IUser extends Document {
   _id: Types.ObjectId;
   firebaseUid: string;
@@ -32,6 +64,7 @@ export interface IUser extends Document {
   cuisinePreferences?: string[];
   onboardingComplete: boolean;
   fcmToken?: string;
+  notificationPreferences: NotificationPreferences;
   isAdmin: boolean;
   isBanned: boolean;
   banReason?: string;
@@ -120,6 +153,25 @@ const userSchema = new Schema<IUser>(
       default: false,
     },
     fcmToken: { type: String },
+    notificationPreferences: {
+      type: {
+        new_follower: { type: Boolean, default: true },
+        follow_request: { type: Boolean, default: true },
+        follow_accepted: { type: Boolean, default: true },
+        recipe_liked: { type: Boolean, default: true },
+        recipe_forked: { type: Boolean, default: true },
+        recipe_shared: { type: Boolean, default: true },
+        schedule_suggestion: { type: Boolean, default: true },
+        suggestion_approved: { type: Boolean, default: true },
+        suggestion_denied: { type: Boolean, default: true },
+        kitchen_invite: { type: Boolean, default: true },
+        kitchen_joined: { type: Boolean, default: true },
+        kitchen_removed: { type: Boolean, default: true },
+        system: { type: Boolean, default: true },
+      },
+      default: () => ({ ...DEFAULT_NOTIFICATION_PREFERENCES }),
+      _id: false,
+    },
     isAdmin: {
       type: Boolean,
       default: false,
