@@ -232,8 +232,8 @@ router.post(
       return;
     }
 
-    const { image, folder } = req.body as z.infer<typeof uploadPhotoSchema>;
-    const result = await uploadRecipePhoto(image, folder ?? "recipes");
+    const { image } = req.body as z.infer<typeof uploadPhotoSchema>;
+    const result = await uploadRecipePhoto(image, `recipes/${user._id}`);
 
     res.status(200).json(result);
   })

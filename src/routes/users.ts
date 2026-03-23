@@ -221,7 +221,7 @@ router.post(
 
     const { image } = req.body as z.infer<typeof signatureBodySchema>;
 
-    const result = await uploadImage(image, "profile-pictures");
+    const result = await uploadImage(image, `users/${currentUser._id}/profile-pictures`);
 
     const user = await User.findByIdAndUpdate(
       currentUser._id,
@@ -249,7 +249,7 @@ router.post(
 
     const { image } = req.body as z.infer<typeof signatureBodySchema>;
 
-    const result = await uploadImage(image, "signatures");
+    const result = await uploadImage(image, `users/${currentUser._id}/signatures`);
 
     const user = await User.findByIdAndUpdate(
       currentUser._id,
