@@ -103,7 +103,7 @@ export async function banUser(req: Request, res: Response): Promise<void> {
       return;
     }
 
-    await audit(req, "ban_user", "user", req.params.id, { reason });
+    await audit(req, "ban_user", "user", req.params.id as string, { reason });
     res.json({ success: true });
   } catch (error) {
     console.error("Failed to ban user:", error);
@@ -127,7 +127,7 @@ export async function unbanUser(req: Request, res: Response): Promise<void> {
       return;
     }
 
-    await audit(req, "unban_user", "user", req.params.id);
+    await audit(req, "unban_user", "user", req.params.id as string);
     res.json({ success: true });
   } catch (error) {
     console.error("Failed to unban user:", error);

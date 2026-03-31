@@ -1,6 +1,6 @@
 import { Router, Request, Response, NextFunction } from "express";
 import { z } from "zod";
-import { Types } from "mongoose";
+import { Types, PipelineStage } from "mongoose";
 import { requireAuth } from "../middleware/auth";
 import { validate } from "../middleware/validate";
 import User from "../models/User";
@@ -279,7 +279,7 @@ async function searchRecipes(
     },
   ];
 
-  const [result] = await Recipe.aggregate(pipeline);
+  const [result] = await Recipe.aggregate(pipeline as unknown as PipelineStage[]);
   const recipes = result.results as Array<
     Record<string, unknown> & { authorId: Types.ObjectId }
   >;

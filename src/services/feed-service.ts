@@ -1,4 +1,4 @@
-import { Document, Types } from "mongoose";
+import { Document, Types, PipelineStage } from "mongoose";
 import Recipe, { IRecipe } from "../models/Recipe";
 import User, { IUser } from "../models/User";
 import Follow from "../models/Follow";
@@ -253,7 +253,7 @@ export async function forYouFeed(
         },
       },
     },
-  ]);
+  ] as unknown[] as PipelineStage[]);
   const maxEngagement = Math.max(1, (maxResult[0]?.max as number) ?? 0);
 
   // Second pass: score in aggregation and paginate
@@ -426,7 +426,7 @@ export async function forYouFeed(
     },
   ];
 
-  const [result] = await Recipe.aggregate(pipeline);
+  const [result] = await Recipe.aggregate(pipeline as unknown as PipelineStage[]);
   const recipes = (result?.data ?? []) as LeanRecipe[];
   const total = (result?.total[0]?.n ?? 0) as number;
 
@@ -471,7 +471,7 @@ export async function trendingFeed(
         total: [{ $count: "n" }],
       },
     },
-  ]);
+  ] as unknown as PipelineStage[]);
 
   const recipes = (result?.data ?? []) as LeanRecipe[];
   const total = (result?.total[0]?.n ?? 0) as number;
@@ -578,7 +578,7 @@ export async function seasonalFeed(
         total: [{ $count: "n" }],
       },
     },
-  ]);
+  ] as unknown as PipelineStage[]);
 
   const recipes = (result?.data ?? []) as LeanRecipe[];
   const total = (result?.total[0]?.n ?? 0) as number;

@@ -84,7 +84,7 @@ export async function toggleHideRecipe(
     }
     recipe.isHidden = !recipe.isHidden;
     await recipe.save();
-    await audit(req, recipe.isHidden ? "hide_recipe" : "unhide_recipe", "recipe", req.params.id);
+    await audit(req, recipe.isHidden ? "hide_recipe" : "unhide_recipe", "recipe", req.params.id as string);
     res.json({ success: true, isHidden: recipe.isHidden });
   } catch (error) {
     console.error("Failed to toggle recipe visibility:", error);
@@ -109,7 +109,7 @@ export async function deleteRecipe(
       targetId: recipe._id,
     });
 
-    await audit(req, "delete_recipe", "recipe", req.params.id, { title: recipe.title });
+    await audit(req, "delete_recipe", "recipe", req.params.id as string, { title: recipe.title });
     res.json({ success: true });
   } catch (error) {
     console.error("Failed to delete recipe:", error);

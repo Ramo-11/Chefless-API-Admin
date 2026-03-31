@@ -6,5 +6,6 @@ declare module "express-session" {
     adminEmail: string;
     adminName: string;
     adminRole: string;
+    csrfToken: string;
   }
 }
