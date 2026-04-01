@@ -14,14 +14,14 @@ export async function loginPost(req: Request, res: Response): Promise<void> {
   const { email, password } = req.body;
 
   if (!email || !password) {
-    res.render("login", { error: "Email and password are required" });
+    res.render("login", { error: "Email and password are required", csrfToken: generateCsrfToken(req) });
     return;
   }
 
   const admin = await AdminUser.findOne({ email: email.toLowerCase(), isActive: true });
 
   if (!admin || !(await admin.comparePassword(password))) {
-    res.render("login", { error: "Invalid email or password" });
+    res.render("login", { error: "Invalid email or password", csrfToken: generateCsrfToken(req) });
     return;
   }
 

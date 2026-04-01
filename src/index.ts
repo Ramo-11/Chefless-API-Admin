@@ -25,6 +25,9 @@ import pagesRouter from "./routes/pages";
 
 const app = express();
 
+// ── Trust proxy (Render runs behind a reverse proxy) ────────────────
+app.set("trust proxy", 1);
+
 // ── View engine (EJS for admin panel) ───────────────────────────────
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
