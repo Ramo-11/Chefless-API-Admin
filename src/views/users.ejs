@@ -151,8 +151,7 @@
   function viewUser(id) {
     openModal('user-detail-modal');
     document.getElementById('user-detail-body').innerHTML = '<div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i></div>';
-    fetch('/admin/api/users/' + id)
-      .then(r => r.json())
+    adminFetch('/admin/api/users/' + id)
       .then(data => {
         const u = data.user;
         document.getElementById('user-detail-body').innerHTML = `
@@ -198,12 +197,10 @@
   function confirmBan() {
     if (!banUserId) return;
     const reason = document.getElementById('ban-reason').value;
-    fetch('/admin/api/users/' + banUserId + '/ban', {
+    adminFetch('/admin/api/users/' + banUserId + '/ban', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ reason })
     })
-    .then(r => r.json())
     .then(() => {
       closeModal('ban-modal');
       toastAndReload('User banned successfully');
@@ -213,11 +210,7 @@
 
   function unbanUser(id) {
     if (!confirm('Are you sure you want to unban this user?')) return;
-    fetch('/admin/api/users/' + id + '/unban', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' }
-    })
-    .then(r => r.json())
+    adminFetch('/admin/api/users/' + id + '/unban', { method: 'POST' })
     .then(() => {
       toastAndReload('User unbanned successfully');
     })

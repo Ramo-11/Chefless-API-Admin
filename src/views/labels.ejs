@@ -100,14 +100,9 @@
       return;
     }
 
-    fetch('/admin/api/labels', {
+    adminFetch('/admin/api/labels', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, slug, icon, order })
-    })
-    .then(r => {
-      if (!r.ok) return r.json().then(d => { throw new Error(d.error); });
-      return r.json();
     })
     .then(() => {
       toastAndReload('Label created');
@@ -122,12 +117,10 @@
       return;
     }
 
-    fetch('/admin/api/labels/' + id, {
+    adminFetch('/admin/api/labels/' + id, {
       method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name })
     })
-    .then(r => r.json())
     .then(() => showToast('Label updated', 'success'))
     .catch(() => showToast('Failed to update label', 'error'));
   }
@@ -135,8 +128,7 @@
   function deleteLabel(id, name) {
     if (!confirm('Delete label "' + name + '"? Recipes using it will keep the tag but it won\'t appear in the label list.')) return;
 
-    fetch('/admin/api/labels/' + id, { method: 'DELETE' })
-      .then(r => r.json())
+    adminFetch('/admin/api/labels/' + id, { method: 'DELETE' })
       .then(() => {
         showToast('Label deleted', 'success');
         document.getElementById('label-' + id)?.remove();

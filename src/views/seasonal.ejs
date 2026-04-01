@@ -165,49 +165,41 @@
       return;
     }
 
-    fetch('/admin/api/seasonal/tags', {
+    adminFetch('/admin/api/seasonal/tags', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, slug, startDate, endDate })
     })
-    .then(r => { if (!r.ok) return r.json().then(d => { throw new Error(d.error); }); return r.json(); })
     .then(() => { toastAndReload('Tag created'); })
     .catch(e => showToast(e.message || 'Failed to create tag', 'error'));
   }
 
   function toggleTag(id) {
-    fetch('/admin/api/seasonal/tags/' + id + '/toggle', { method: 'POST' })
-      .then(r => r.json())
+    adminFetch('/admin/api/seasonal/tags/' + id + '/toggle', { method: 'POST' })
       .then(() => { toastAndReload('Tag updated'); })
       .catch(() => showToast('Failed to update tag', 'error'));
   }
 
   function deleteTag(id, name) {
     if (!confirm('Delete "' + name + '"? This will remove the tag from all recipes.')) return;
-    fetch('/admin/api/seasonal/tags/' + id, { method: 'DELETE' })
-      .then(r => r.json())
+    adminFetch('/admin/api/seasonal/tags/' + id, { method: 'DELETE' })
       .then(() => { toastAndReload('Tag deleted'); })
       .catch(() => showToast('Failed to delete tag', 'error'));
   }
 
   function tagRecipe(recipeId, tagSlug) {
-    fetch('/admin/api/seasonal/tag-recipe', {
+    adminFetch('/admin/api/seasonal/tag-recipe', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ recipeId, tagSlug })
     })
-    .then(r => r.json())
     .then(() => { toastAndReload('Recipe tagged'); })
     .catch(() => showToast('Failed to tag recipe', 'error'));
   }
 
   function untagRecipe(recipeId, tagSlug) {
-    fetch('/admin/api/seasonal/untag-recipe', {
+    adminFetch('/admin/api/seasonal/untag-recipe', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ recipeId, tagSlug })
     })
-    .then(r => r.json())
     .then(() => { toastAndReload('Tag removed'); })
     .catch(() => showToast('Failed to remove tag', 'error'));
   }

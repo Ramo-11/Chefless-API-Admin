@@ -138,8 +138,7 @@
   function viewRecipe(id) {
     openModal('recipe-detail-modal');
     document.getElementById('recipe-detail-body').innerHTML = '<div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i></div>';
-    fetch('/admin/api/recipes/' + id)
-      .then(r => r.json())
+    adminFetch('/admin/api/recipes/' + id)
       .then(data => {
         const r = data.recipe;
         const author = r.authorId || {};
@@ -179,8 +178,7 @@
   }
 
   function toggleHide(id) {
-    fetch('/admin/api/recipes/' + id + '/toggle-hide', { method: 'POST' })
-      .then(r => r.json())
+    adminFetch('/admin/api/recipes/' + id + '/toggle-hide', { method: 'POST' })
       .then(data => {
         toastAndReload(data.isHidden ? 'Recipe hidden' : 'Recipe visible');
       })
@@ -189,8 +187,7 @@
 
   function deleteRecipe(id, title) {
     if (!confirm('Permanently delete "' + title + '"? This cannot be undone.')) return;
-    fetch('/admin/api/recipes/' + id, { method: 'DELETE' })
-      .then(r => r.json())
+    adminFetch('/admin/api/recipes/' + id, { method: 'DELETE' })
       .then(() => {
         toastAndReload('Recipe deleted');
       })

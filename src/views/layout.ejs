@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="csrf-token" content="<%= csrfToken %>">
   <title><%= typeof pageTitle !== 'undefined' ? pageTitle + ' — ' : '' %>Chefless Admin</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="/admin/css/admin.css">
@@ -13,7 +14,7 @@
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-header">
         <div class="sidebar-logo">
-          <i class="fas fa-utensils"></i>
+          <img src="/admin/images/logo.png" alt="Chefless" style="width:28px;height:28px;object-fit:contain;">
           <span>Chefless</span>
         </div>
         <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
@@ -62,6 +63,7 @@
           </div>
         </div>
         <form action="/admin/logout" method="POST" class="logout-form">
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>">
           <button type="submit" class="btn-logout" aria-label="Logout">
             <i class="fas fa-sign-out-alt"></i>
           </button>

@@ -77,14 +77,28 @@ function esc(str) {
   return div.innerHTML;
 }
 
+// ── CSRF Token ─────────────────────────────────────────────
+function getCsrfToken() {
+  var meta = document.querySelector('meta[name="csrf-token"]');
+  return meta ? meta.getAttribute('content') : '';
+}
+
 // ── Admin Fetch Helper ──────────────────────────────────────
 /**
- * Wrapper around fetch with standard JSON handling and error display.
+ * Wrapper around fetch with standard JSON handling, CSRF token, and error display.
  */
 function adminFetch(url, options) {
   var opts = Object.assign({
-    headers: { 'Content-Type': 'application/json' }
+    headers: {
+      'Content-Type': 'application/json',
+      'x-csrf-token': getCsrfToken()
+    }
   }, options || {});
+
+  // Ensure CSRF header is always present even if caller overrides headers
+  if (opts.headers && !opts.headers['x-csrf-token']) {
+    opts.headers['x-csrf-token'] = getCsrfToken();
+  }
 
   return fetch(url, opts)
     .then(function (r) {

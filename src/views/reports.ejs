@@ -151,12 +151,10 @@
     const status = document.getElementById('review-status').value;
     const reviewNote = document.getElementById('review-note').value;
 
-    fetch('/admin/api/reports/' + reviewReportId + '/review', {
+    adminFetch('/admin/api/reports/' + reviewReportId + '/review', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ status, reviewNote })
     })
-    .then(r => r.json())
     .then(() => {
       closeModal('review-modal');
       toastAndReload('Report updated');
@@ -166,11 +164,7 @@
 
   function dismissReport(id) {
     if (!confirm('Dismiss this report?')) return;
-    fetch('/admin/api/reports/' + id + '/dismiss', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' }
-    })
-    .then(r => r.json())
+    adminFetch('/admin/api/reports/' + id + '/dismiss', { method: 'POST' })
     .then(() => {
       toastAndReload('Report dismissed');
     })
