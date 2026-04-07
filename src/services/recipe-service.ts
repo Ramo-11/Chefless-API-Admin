@@ -23,6 +23,13 @@ function createError(message: string, statusCode: number): AppError {
   return error;
 }
 
+/** Checks both isPremium flag AND premiumExpiresAt to determine active premium status. */
+function hasActivePremium(user: { isPremium: boolean; premiumExpiresAt?: Date | null }): boolean {
+  if (!user.isPremium) return false;
+  if (!user.premiumExpiresAt) return true; // lifetime or unset expiry
+  return new Date(user.premiumExpiresAt) > new Date();
+}
+
 // --- Types ---
 
 interface CreateRecipeData {
@@ -113,12 +120,12 @@ export async function createRecipe(
   authorId: string,
   data: CreateRecipeData
 ): Promise<IRecipe> {
-  const author = await User.findById(authorId).select("isPremium recipesCount").lean();
+  const author = await User.findById(authorId).select("isPremium premiumExpiresAt recipesCount").lean();
   if (!author) {
     throw createError("User not found", 404);
   }
 
-  if (!author.isPremium && author.recipesCount >= FREE_TIER_RECIPE_LIMIT) {
+  if (!hasActivePremium(author) && author.recipesCount >= FREE_TIER_RECIPE_LIMIT) {
     throw createError(
       `Free tier is limited to ${FREE_TIER_RECIPE_LIMIT} recipes. Upgrade to premium for unlimited recipes.`,
       403
@@ -376,12 +383,12 @@ export async function forkRecipe(
   recipeId: string,
   userId: string
 ): Promise<IRecipe> {
-  const user = await User.findById(userId).select("isPremium recipesCount fullName").lean();
+  const user = await User.findById(userId).select("isPremium premiumExpiresAt recipesCount fullName").lean();
   if (!user) {
     throw createError("User not found", 404);
   }
 
-  if (!user.isPremium && user.recipesCount >= FREE_TIER_RECIPE_LIMIT) {
+  if (!hasActivePremium(user) && user.recipesCount >= FREE_TIER_RECIPE_LIMIT) {
     throw createError(
       `Free tier is limited to ${FREE_TIER_RECIPE_LIMIT} recipes. Upgrade to premium for unlimited recipes.`,
       403
@@ -475,13 +482,13 @@ export async function duplicateRecipe(
   userId: string
 ): Promise<IRecipe> {
   const user = await User.findById(userId)
-    .select("isPremium recipesCount")
+    .select("isPremium premiumExpiresAt recipesCount")
     .lean();
   if (!user) {
     throw createError("User not found", 404);
   }
 
-  if (!user.isPremium && user.recipesCount >= FREE_TIER_RECIPE_LIMIT) {
+  if (!hasActivePremium(user) && user.recipesCount >= FREE_TIER_RECIPE_LIMIT) {
     throw createError(
       `Free tier is limited to ${FREE_TIER_RECIPE_LIMIT} recipes. Upgrade to premium for unlimited recipes.`,
       403

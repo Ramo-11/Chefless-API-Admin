@@ -17,6 +17,7 @@ import {
   updatePermissions,
   regenerateInviteCode,
   getKitchenRecipes,
+  INVITE_CODE_REGEX,
 } from "../services/kitchen-service";
 
 const router = Router();
@@ -57,7 +58,7 @@ const joinKitchenSchema = z.object({
   inviteCode: z
     .string()
     .min(1)
-    .regex(/^CHEF-[A-Z0-9]{6}$/, {
+    .regex(INVITE_CODE_REGEX, {
       message: "Invalid invite code format. Expected CHEF-XXXXXX",
     }),
 });

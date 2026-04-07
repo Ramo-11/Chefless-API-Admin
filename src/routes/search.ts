@@ -249,6 +249,8 @@ async function searchRecipes(
       },
     },
     { $sort: { _relevance: -1 as const, likesCount: -1 as const, createdAt: -1 as const } },
+    // Cap documents flowing into facet to prevent memory exhaustion
+    { $limit: Math.min(page * limit, 1000) },
     {
       $facet: {
         results: [
@@ -398,6 +400,8 @@ async function searchUsers(
       },
     },
     { $sort: { _relevance: -1 as const, followersCount: -1 as const } },
+    // Cap documents flowing into facet to prevent memory exhaustion
+    { $limit: Math.min(page * limit, 1000) },
     {
       $facet: {
         results: [
@@ -505,6 +509,8 @@ async function searchKitchens(
       },
     },
     { $sort: { _relevance: -1 as const, memberCount: -1 as const } },
+    // Cap documents flowing into facet to prevent memory exhaustion
+    { $limit: Math.min(page * limit, 1000) },
     {
       $facet: {
         results: [

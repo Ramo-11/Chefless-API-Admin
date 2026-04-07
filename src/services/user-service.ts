@@ -161,14 +161,20 @@ export async function deleteAccount(userId: string): Promise<void> {
     await Promise.all([
       Like.deleteMany({ recipeId: { $in: recipeIds } }),
       RecipeShare.deleteMany({ recipeId: { $in: recipeIds } }),
-      // Clear forkedFrom on any recipe that was forked from this user's recipes
+      // Preserve fork chain: null out authorId but keep authorName for display
       Recipe.updateMany(
         { "forkedFrom.recipeId": { $in: recipeIds } },
-        { $unset: { forkedFrom: 1 } }
+        { $set: { "forkedFrom.authorId": null } }
       ),
     ]);
     await Recipe.deleteMany({ authorId: objectId });
   }
+
+  // Also null out authorId on forks of recipes by OTHER users that reference this user as fork author
+  await Recipe.updateMany(
+    { "forkedFrom.authorId": objectId },
+    { $set: { "forkedFrom.authorId": null } }
+  );
 
   // Remove user from their kitchen
   if (user.kitchenId) {

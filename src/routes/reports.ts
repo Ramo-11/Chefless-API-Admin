@@ -47,11 +47,22 @@ router.post(
 
 // ── Admin-facing endpoints — require auth + admin session ──────────
 
+/** Inline admin guard for API routes — returns 403 JSON instead of redirect. */
+function requireAdminApi(req: Request, res: Response): boolean {
+  if (!req.session?.adminId) {
+    res.status(403).json({ error: "Admin access required" });
+    return false;
+  }
+  return true;
+}
+
 router.get(
   "/",
   requireAuth,
   async (req: Request, res: Response, next: NextFunction) => {
     try {
+      if (!requireAdminApi(req, res)) return;
+
       const page = parseInt(req.query.page as string) || 1;
       const limit = parseInt(req.query.limit as string) || 20;
       const status = req.query.status as string | undefined;
@@ -76,6 +87,8 @@ router.get(
   requireAuth,
   async (req: Request, res: Response, next: NextFunction) => {
     try {
+      if (!requireAdminApi(req, res)) return;
+
       const id = req.params.id as string;
       const report = await getReportById(id);
       res.json({ report });
@@ -96,11 +109,13 @@ router.patch(
   validate({ body: reviewSchema }),
   async (req: Request, res: Response, next: NextFunction) => {
     try {
+      if (!requireAdminApi(req, res)) return;
+
       const id = req.params.id as string;
-      const adminUserId = req.adminUserId;
+      const adminUserId = req.session?.adminId ?? "system";
       const report = await reviewReport(
         id,
-        adminUserId || "system",
+        adminUserId,
         req.body.status,
         req.body.reviewNote
       );

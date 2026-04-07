@@ -44,10 +44,10 @@ recipeShareSchema.index(
   { unique: true }
 );
 
-// TTL: auto-delete shares older than 180 days
+// TTL: auto-delete shares older than 365 days
 recipeShareSchema.index(
   { createdAt: 1 },
-  { expireAfterSeconds: 180 * 24 * 60 * 60 }
+  { expireAfterSeconds: 365 * 24 * 60 * 60 }
 );
 
 const RecipeShare =

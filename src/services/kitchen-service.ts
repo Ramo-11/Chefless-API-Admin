@@ -11,6 +11,9 @@ import {
 
 const FREE_TIER_MAX_MEMBERS = 4;
 
+/** Regex for validating invite codes. Shared with route validation. */
+export const INVITE_CODE_REGEX = /^CHEF-[A-Z0-9]{6}$/;
+
 interface ServiceError extends Error {
   statusCode: number;
 }
@@ -200,12 +203,13 @@ export async function joinKitchen(
   }
 
   // Check capacity based on lead's premium status
-  const lead = await User.findById(kitchen.leadId).select("isPremium").lean();
+  const lead = await User.findById(kitchen.leadId).select("isPremium premiumExpiresAt").lean();
   if (!lead) {
     throw createError("Kitchen lead not found", 404);
   }
 
-  if (!lead.isPremium && kitchen.memberCount >= FREE_TIER_MAX_MEMBERS) {
+  const leadHasPremium = lead.isPremium && (!lead.premiumExpiresAt || new Date(lead.premiumExpiresAt) > new Date());
+  if (!leadHasPremium && kitchen.memberCount >= FREE_TIER_MAX_MEMBERS) {
     throw createError(
       "This kitchen has reached its maximum capacity. The kitchen lead needs to upgrade to premium.",
       403
@@ -355,6 +359,10 @@ export async function transferLead(
   currentLeadId: string,
   newLeadId: string
 ): Promise<IKitchen> {
+  if (currentLeadId === newLeadId) {
+    throw createError("Cannot transfer leadership to yourself", 400);
+  }
+
   const lead = await User.findById(currentLeadId).select("kitchenId").lean();
   if (!lead || !lead.kitchenId) {
     throw createError("You are not in a kitchen", 400);

@@ -8,9 +8,10 @@ const router = Router();
  * Returns all system labels sorted by order.
  * Public endpoint — no auth required.
  */
-router.get("/", async (_req: Request, res: Response) => {
+router.get("/", async (req: Request, res: Response) => {
   try {
-    const labels = await SystemLabel.find().sort({ order: 1 }).lean();
+    const limit = Math.min(parseInt(req.query.limit as string) || 100, 200);
+    const labels = await SystemLabel.find().sort({ order: 1 }).limit(limit).lean();
     res.json({ labels });
   } catch (error) {
     console.error("Failed to fetch labels:", error);
