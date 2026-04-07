@@ -62,6 +62,10 @@ const kitchenSchema = new Schema<IKitchen>(
     customMealSlots: {
       type: [String],
       default: [],
+      validate: {
+        validator: (v: string[]) => v.length <= 20,
+        message: "Maximum 20 custom meal slots allowed",
+      },
     },
   },
   {

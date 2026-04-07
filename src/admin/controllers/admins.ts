@@ -59,6 +59,14 @@ export async function createAdmin(req: Request, res: Response): Promise<void> {
       return;
     }
 
+    if (!/[A-Z]/.test(password) || !/[a-z]/.test(password) ||
+        !/\d/.test(password) || !/[^A-Za-z0-9]/.test(password)) {
+      res.status(400).json({
+        error: "Password must include uppercase, lowercase, number, and special character",
+      });
+      return;
+    }
+
     const existing = await AdminUser.findOne({ email: email.toLowerCase() });
     if (existing) {
       res.status(400).json({ error: "An admin with this email already exists" });
@@ -172,6 +180,14 @@ export async function resetAdminPassword(
 
     if (!newPassword || typeof newPassword !== "string" || newPassword.length < 8) {
       res.status(400).json({ error: "Password must be at least 8 characters" });
+      return;
+    }
+
+    if (!/[A-Z]/.test(newPassword) || !/[a-z]/.test(newPassword) ||
+        !/\d/.test(newPassword) || !/[^A-Za-z0-9]/.test(newPassword)) {
+      res.status(400).json({
+        error: "Password must include uppercase, lowercase, number, and special character",
+      });
       return;
     }
 

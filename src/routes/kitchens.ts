@@ -127,7 +127,13 @@ router.get(
       return;
     }
 
-    res.status(200).json(result);
+    // Strip invite code for non-lead members
+    const kitchenObj = result.kitchen.toObject();
+    if (!result.kitchen.leadId.equals(currentUser._id)) {
+      delete (kitchenObj as Record<string, unknown>).inviteCode;
+    }
+
+    res.status(200).json({ kitchen: kitchenObj, members: result.members });
   })
 );
 
@@ -188,7 +194,9 @@ router.post(
     const { inviteCode } = req.body as z.infer<typeof joinKitchenSchema>;
     const kitchen = await joinKitchen(currentUser._id.toString(), inviteCode);
 
-    res.status(200).json({ kitchen });
+    // Strip invite code — the joining user should not see it
+    const { inviteCode: _stripped, ...kitchenData } = kitchen.toObject();
+    res.status(200).json({ kitchen: kitchenData });
   })
 );
 

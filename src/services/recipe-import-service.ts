@@ -116,11 +116,17 @@ function validateUrl(url: string): void {
     isPrivateClassB(host) ||
     // Private class C
     host.startsWith("192.168.") ||
+    // Multicast
+    isMulticast(host) ||
+    // Reserved
+    isReserved(host) ||
     // Unspecified
     host === "0.0.0.0" ||
     // IPv6 loopback
     host === "::1" ||
     host === "0:0:0:0:0:0:0:1" ||
+    // IPv4-mapped IPv6 loopback/private
+    isIPv4MappedPrivate(host) ||
     // IPv6 link-local
     host.startsWith("fe80:") ||
     // IPv6 unique local
@@ -140,6 +146,37 @@ function isPrivateClassB(host: string): boolean {
   if (parts.length !== 4) return false;
   const second = parseInt(parts[1], 10);
   return parts[0] === "172" && second >= 16 && second <= 31;
+}
+
+function isMulticast(host: string): boolean {
+  const parts = host.split(".");
+  if (parts.length !== 4) return false;
+  const first = parseInt(parts[0], 10);
+  return first >= 224 && first <= 239;
+}
+
+function isReserved(host: string): boolean {
+  const parts = host.split(".");
+  if (parts.length !== 4) return false;
+  const first = parseInt(parts[0], 10);
+  return first >= 240;
+}
+
+function isIPv4MappedPrivate(host: string): boolean {
+  // Matches ::ffff:127.0.0.1, ::ffff:10.x.x.x, etc.
+  const match = host.match(/^::ffff:(\d+\.\d+\.\d+\.\d+)$/i);
+  if (!match) return false;
+  const ipv4 = match[1];
+  return (
+    ipv4.startsWith("127.") ||
+    ipv4.startsWith("10.") ||
+    ipv4.startsWith("192.168.") ||
+    ipv4.startsWith("169.254.") ||
+    ipv4 === "0.0.0.0" ||
+    isPrivateClassB(ipv4) ||
+    isMulticast(ipv4) ||
+    isReserved(ipv4)
+  );
 }
 
 // ---------------------------------------------------------------------------

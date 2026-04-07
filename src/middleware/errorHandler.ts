@@ -12,7 +12,8 @@ export function errorHandler(
   res: Response,
   _next: NextFunction
 ): void {
-  console.error(`[Error] ${err.message}`, err.stack);
+  const requestId = _req.requestId ?? "unknown";
+  console.error(`[Error] [${requestId}] ${err.message}`, err.stack);
 
   // Zod validation errors
   if (err instanceof ZodError) {

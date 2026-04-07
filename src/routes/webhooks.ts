@@ -1,3 +1,4 @@
+import crypto from "crypto";
 import { Router, Request, Response } from "express";
 import User from "../models/User";
 import { env } from "../lib/env";
@@ -31,7 +32,12 @@ router.post("/revenuecat", async (req: Request, res: Response) => {
     return;
   }
 
-  if (!authHeader || authHeader !== `Bearer ${env.REVENUECAT_WEBHOOK_SECRET}`) {
+  const expectedToken = `Bearer ${env.REVENUECAT_WEBHOOK_SECRET}`;
+  if (
+    !authHeader ||
+    authHeader.length !== expectedToken.length ||
+    !crypto.timingSafeEqual(Buffer.from(authHeader), Buffer.from(expectedToken))
+  ) {
     res.status(401).json({ error: "Unauthorized" });
     return;
   }

@@ -45,10 +45,11 @@ router.post(
   }
 );
 
-// ── Admin-facing endpoints (protected by admin check in admin routes) ──
+// ── Admin-facing endpoints — require auth + admin session ──────────
 
 router.get(
   "/",
+  requireAuth,
   async (req: Request, res: Response, next: NextFunction) => {
     try {
       const page = parseInt(req.query.page as string) || 1;
@@ -72,6 +73,7 @@ router.get(
 
 router.get(
   "/:id",
+  requireAuth,
   async (req: Request, res: Response, next: NextFunction) => {
     try {
       const id = req.params.id as string;
@@ -90,6 +92,7 @@ const reviewSchema = z.object({
 
 router.patch(
   "/:id",
+  requireAuth,
   validate({ body: reviewSchema }),
   async (req: Request, res: Response, next: NextFunction) => {
     try {
