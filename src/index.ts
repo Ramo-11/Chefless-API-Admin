@@ -65,7 +65,7 @@ app.use((req, _res, next) => {
 // Must NOT use a global express.json() or its limit would block larger uploads
 // before the route-specific parser runs.
 const jsonDefault = express.json({ limit: "1mb" });
-const jsonUpload = express.json({ limit: "10mb" });
+const jsonUpload = express.json({ limit: "15mb" });
 
 // ── Session middleware (admin panel only, but applied globally) ──────
 app.use(
@@ -81,7 +81,7 @@ app.use(
     cookie: {
       maxAge: 4 * 60 * 60 * 1000, // 4 hours for admin sessions
       httpOnly: true,
-      secure: true,
+      secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
     },
   })
