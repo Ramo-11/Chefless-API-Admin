@@ -45,6 +45,7 @@ interface KitchenMember {
   _id: Types.ObjectId;
   fullName: string;
   profilePicture?: string;
+  recipesCount?: number;
 }
 
 interface KitchenWithMembers {
@@ -108,7 +109,7 @@ export async function getMyKitchen(
   }
 
   const members = await User.find({ kitchenId: kitchen._id })
-    .select("fullName profilePicture")
+    .select("fullName profilePicture recipesCount")
     .lean<KitchenMember[]>();
 
   return { kitchen, members };
@@ -116,7 +117,7 @@ export async function getMyKitchen(
 
 export async function updateKitchen(
   userId: string,
-  updates: { name?: string; photo?: string }
+  updates: { name?: string; photo?: string; isPublic?: boolean }
 ): Promise<IKitchen> {
   const user = await User.findById(userId).select("kitchenId").lean();
   if (!user || !user.kitchenId) {
@@ -132,9 +133,10 @@ export async function updateKitchen(
     throw createError("Only the kitchen lead can update the kitchen", 403);
   }
 
-  const updateFields: Record<string, string> = {};
+  const updateFields: Record<string, string | boolean> = {};
   if (updates.name !== undefined) updateFields.name = updates.name;
   if (updates.photo !== undefined) updateFields.photo = updates.photo;
+  if (updates.isPublic !== undefined) updateFields.isPublic = updates.isPublic;
 
   const updated = await Kitchen.findByIdAndUpdate(
     kitchen._id,
@@ -482,10 +484,12 @@ export async function regenerateInviteCode(
 export async function getKitchenRecipes(
   kitchenId: string,
   page: number,
-  limit: number
+  limit: number,
+  memberId?: string
 ): Promise<PaginatedRecipes> {
   const skip = (page - 1) * limit;
   const kitchenObjectId = new Types.ObjectId(kitchenId);
+  const memberObjectId = memberId ? new Types.ObjectId(memberId) : null;
 
   // Get all members of this kitchen
   const memberIds = await User.find({ kitchenId: kitchenObjectId })
@@ -493,8 +497,15 @@ export async function getKitchenRecipes(
     .lean()
     .then((users) => users.map((u) => u._id));
 
+  if (
+    memberObjectId &&
+    !memberIds.some((id) => id.toString() === memberObjectId.toString())
+  ) {
+    throw createError("Selected user is not a member of this kitchen", 400);
+  }
+
   const filter = {
-    authorId: { $in: memberIds },
+    authorId: memberObjectId ? memberObjectId : { $in: memberIds },
     isPrivate: false,
     isHidden: { $ne: true },
   };

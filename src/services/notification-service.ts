@@ -97,6 +97,12 @@ export async function createNotification(
     scheduleEntryId: params.scheduleEntryId,
   });
 
+  console.log(
+    `[FCM-DEBUG] createNotification: type="${params.type}", ` +
+      `userId="${params.userId}", hasPushTitle=${!!params.pushTitle}, ` +
+      `hasPushBody=${!!params.pushBody}, userFcmToken=${user?.fcmToken ? `"${user.fcmToken.slice(0, 12)}..."` : "NONE"}`
+  );
+
   // Send push notification if user has an FCM token
   if (params.pushTitle && params.pushBody && user?.fcmToken) {
     const pushData: Record<string, string> = {
@@ -121,6 +127,11 @@ export async function createNotification(
       pushData.route = route;
     }
 
+    console.log(
+      `[FCM-DEBUG] Dispatching push: title="${params.pushTitle}", route="${route}", ` +
+        `data=${JSON.stringify(pushData)}`
+    );
+
     sendPushNotification(
       user.fcmToken,
       params.pushTitle,
@@ -128,8 +139,13 @@ export async function createNotification(
       pushData
     ).catch((err: unknown) => {
       const msg = err instanceof Error ? err.message : "Unknown error";
-      console.error(`Push notification failed: ${msg}`);
+      console.error(`[FCM-DEBUG] Push notification failed: ${msg}`);
     });
+  } else {
+    console.log(
+      `[FCM-DEBUG] SKIPPING push: pushTitle=${!!params.pushTitle}, ` +
+        `pushBody=${!!params.pushBody}, hasFcmToken=${!!user?.fcmToken}`
+    );
   }
 
   return notification;

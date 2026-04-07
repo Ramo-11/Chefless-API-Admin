@@ -10,9 +10,21 @@ if (!admin.apps.length) {
   const serviceAccountKey = process.env.FIREBASE_SERVICE_ACCOUNT_KEY;
   if (!serviceAccountKey) {
     console.warn(
-      "Firebase Admin initialized without FIREBASE_SERVICE_ACCOUNT_KEY. " +
-        "Auth verification may still work, but FCM push notifications are disabled."
+      "[FCM-DEBUG] Firebase Admin initialized WITHOUT FIREBASE_SERVICE_ACCOUNT_KEY. " +
+        "Auth verification may still work, but FCM push notifications are DISABLED."
     );
+  } else {
+    try {
+      const parsed = JSON.parse(serviceAccountKey) as Record<string, unknown>;
+      console.log(
+        `[FCM-DEBUG] Firebase Admin initializing WITH service account. ` +
+          `project_id=${parsed.project_id}, client_email=${parsed.client_email}`
+      );
+    } catch (e) {
+      console.error(
+        `[FCM-DEBUG] FIREBASE_SERVICE_ACCOUNT_KEY is set but INVALID JSON: ${e instanceof Error ? e.message : e}`
+      );
+    }
   }
   admin.initializeApp({
     projectId: process.env.FIREBASE_PROJECT_ID,
@@ -22,6 +34,10 @@ if (!admin.apps.length) {
       ),
     }),
   });
+  console.log(
+    `[FCM-DEBUG] Firebase Admin initialized. App name: ${admin.app().name}, ` +
+      `projectId: ${process.env.FIREBASE_PROJECT_ID}`
+  );
 }
 
 export async function requireAuth(

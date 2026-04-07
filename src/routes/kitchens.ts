@@ -44,19 +44,21 @@ const objectIdParam = z.object({
 const createKitchenSchema = z.object({
   name: z.string().min(1).max(100).trim(),
   photo: z.string().url().optional(),
+  isPublic: z.boolean().optional(),
 });
 
 const updateKitchenSchema = z.object({
   name: z.string().min(1).max(100).trim().optional(),
   photo: z.string().url().optional(),
+  isPublic: z.boolean().optional(),
 });
 
 const joinKitchenSchema = z.object({
   inviteCode: z
     .string()
     .min(1)
-    .regex(/^CHEF-[A-Z0-9]{4}$/, {
-      message: "Invalid invite code format. Expected CHEF-XXXX",
+    .regex(/^CHEF-[A-Z0-9]{6}$/, {
+      message: "Invalid invite code format. Expected CHEF-XXXXXX",
     }),
 });
 
@@ -72,6 +74,10 @@ const updatePermissionsSchema = z.object({
 const paginationSchema = z.object({
   page: z.coerce.number().int().min(1).default(1),
   limit: z.coerce.number().int().min(1).max(50).default(20),
+  memberId: z
+    .string()
+    .refine(isValidObjectId, { message: "Invalid ID format" })
+    .optional(),
 });
 
 // --- Routes ---
@@ -311,16 +317,23 @@ router.get(
       return;
     }
 
-    const { page, limit } = req.query as unknown as z.infer<
+    const { page, limit, memberId } = req.query as unknown as z.infer<
       typeof paginationSchema
     >;
     const result = await getKitchenRecipes(
       currentUser.kitchenId.toString(),
       page,
-      limit
+      limit,
+      memberId
     );
 
-    res.status(200).json(result);
+    res.status(200).json({
+      recipes: result.data,
+      page: result.page,
+      limit: result.limit,
+      total: result.total,
+      totalPages: result.totalPages,
+    });
   })
 );
 
