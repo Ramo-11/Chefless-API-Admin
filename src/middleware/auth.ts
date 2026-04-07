@@ -38,6 +38,27 @@ if (!admin.apps.length) {
     `[FCM-DEBUG] Firebase Admin initialized. App name: ${admin.app().name}, ` +
       `projectId: ${process.env.FIREBASE_PROJECT_ID}`
   );
+
+  // Verify the credential can actually generate an access token.
+  const app = admin.app();
+  if (app.options.credential) {
+    app.options.credential
+      .getAccessToken()
+      .then((token) => {
+        console.log(
+          `[FCM-DEBUG] Credential VERIFIED — access token obtained ` +
+            `(expires: ${new Date(token.expires_in * 1000 + Date.now()).toISOString()}, ` +
+            `tokenPrefix: "${token.access_token.slice(0, 20)}...")`
+        );
+      })
+      .catch((err: unknown) => {
+        console.error(
+          `[FCM-DEBUG] Credential FAILED — cannot get access token: ${err instanceof Error ? err.message : err}`
+        );
+      });
+  } else {
+    console.warn("[FCM-DEBUG] No credential attached to Firebase Admin — FCM will NOT work");
+  }
 }
 
 export async function requireAuth(
