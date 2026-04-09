@@ -10,6 +10,8 @@ import {
   getList,
   updateList,
   deleteList,
+  duplicateList,
+  uncheckAll,
   addItem,
   removeItem,
   updateItem,
@@ -51,6 +53,7 @@ const createListSchema = z.object({
     .string()
     .refine(isValidObjectId, { message: "Invalid kitchen ID format" })
     .optional(),
+  isPrivate: z.boolean().optional(),
   items: z
     .array(
       z.object({
@@ -64,6 +67,11 @@ const createListSchema = z.object({
 });
 
 const updateListSchema = z.object({
+  name: z.string().min(1).max(200).trim().optional(),
+  isPrivate: z.boolean().optional(),
+});
+
+const duplicateListSchema = z.object({
   name: z.string().min(1).max(200).trim().optional(),
 });
 
@@ -160,7 +168,12 @@ router.post(
     if (!userId) return;
 
     const data = req.body as z.infer<typeof createListSchema>;
-    const list = await createList(userId, data);
+    const list = await createList(userId, {
+      name: data.name,
+      kitchenId: data.kitchenId,
+      isPrivate: data.isPrivate,
+      items: data.items,
+    });
 
     res.status(201).json({ list });
   })
@@ -276,6 +289,39 @@ router.patch(
     const { id, itemId } = req.params as z.infer<typeof itemIdParams>;
     const updates = req.body as z.infer<typeof updateItemSchema>;
     const list = await updateItem(id, userId, itemId, updates);
+
+    res.status(200).json({ list });
+  })
+);
+
+// POST /api/shopping-lists/:id/duplicate — Duplicate a list
+router.post(
+  "/:id/duplicate",
+  requireAuth,
+  validate({ params: objectIdParam, body: duplicateListSchema }),
+  asyncHandler(async (req: Request, res: Response) => {
+    const userId = await resolveUserId(req, res);
+    if (!userId) return;
+
+    const { id } = req.params as z.infer<typeof objectIdParam>;
+    const { name } = req.body as z.infer<typeof duplicateListSchema>;
+    const list = await duplicateList(id, userId, name);
+
+    res.status(201).json({ list });
+  })
+);
+
+// POST /api/shopping-lists/:id/uncheck-all — Uncheck all items
+router.post(
+  "/:id/uncheck-all",
+  requireAuth,
+  validate({ params: objectIdParam }),
+  asyncHandler(async (req: Request, res: Response) => {
+    const userId = await resolveUserId(req, res);
+    if (!userId) return;
+
+    const { id } = req.params as z.infer<typeof objectIdParam>;
+    const list = await uncheckAll(id, userId);
 
     res.status(200).json({ list });
   })

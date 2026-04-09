@@ -229,6 +229,7 @@ async function assertListAccess(
 interface CreateListData {
   name?: string;
   kitchenId?: string;
+  isPrivate?: boolean;
   items?: Array<{
     name: string;
     quantity?: number;
@@ -256,8 +257,11 @@ export async function createList(
     generatedFromSchedule: false,
   };
 
-  // If kitchenId provided and user belongs to it, make it a kitchen list
-  if (data.kitchenId) {
+  // Explicit private list — belongs to this user only
+  if (data.isPrivate) {
+    listFields.userId = user._id;
+  } else if (data.kitchenId) {
+    // Explicit kitchen ID — verify membership
     if (!user.kitchenId || !user.kitchenId.equals(data.kitchenId)) {
       throw createError("You are not a member of this kitchen", 403);
     }
@@ -307,6 +311,7 @@ export async function getList(
 
 interface UpdateListData {
   name?: string;
+  isPrivate?: boolean;
 }
 
 export async function updateList(
@@ -321,14 +326,47 @@ export async function updateList(
 
   await assertListAccess(list, userId);
 
-  const updateFields: Record<string, unknown> = {};
+  const setFields: Record<string, unknown> = {};
+  const unsetFields: Record<string, 1> = {};
+
   if (updates.name !== undefined) {
-    updateFields.name = updates.name;
+    setFields.name = updates.name;
+  }
+
+  if (updates.isPrivate !== undefined) {
+    const user = await getUserWithKitchen(userId);
+    if (updates.isPrivate) {
+      // Make personal — set userId, remove kitchenId
+      setFields.userId = user._id;
+      unsetFields.kitchenId = 1;
+    } else {
+      // Make shared — set kitchenId, remove userId
+      if (!user.kitchenId) {
+        throw createError(
+          "You must be in a kitchen to make a list shared",
+          400
+        );
+      }
+      setFields.kitchenId = user.kitchenId;
+      unsetFields.userId = 1;
+    }
+  }
+
+  const updateQuery: Record<string, unknown> = {};
+  if (Object.keys(setFields).length > 0) {
+    updateQuery.$set = setFields;
+  }
+  if (Object.keys(unsetFields).length > 0) {
+    updateQuery.$unset = unsetFields;
+  }
+
+  if (Object.keys(updateQuery).length === 0) {
+    return list;
   }
 
   const updated = await ShoppingList.findByIdAndUpdate(
     listId,
-    { $set: updateFields },
+    updateQuery,
     { new: true, runValidators: true }
   );
 
@@ -537,6 +575,74 @@ export async function toggleItem(
   const updated = await ShoppingList.findOneAndUpdate(
     { _id: listId, "items._id": new Types.ObjectId(itemId) },
     { $set: { "items.$.isChecked": !item.isChecked } },
+    { new: true }
+  );
+
+  if (!updated) {
+    throw createError("Shopping list not found", 404);
+  }
+
+  return updated;
+}
+
+export async function duplicateList(
+  listId: string,
+  userId: string,
+  name?: string
+): Promise<IShoppingList> {
+  const list = await ShoppingList.findById(listId).lean<IShoppingList>();
+  if (!list) {
+    throw createError("Shopping list not found", 404);
+  }
+
+  await assertListAccess(list as IShoppingList, userId);
+
+  const user = await getUserWithKitchen(userId);
+
+  // Duplicate items — reset checked state and assign to current user
+  const duplicatedItems = list.items.map((item) => ({
+    name: item.name,
+    quantity: item.quantity,
+    unit: item.unit,
+    recipeId: item.recipeId,
+    isChecked: false,
+    addedBy: user._id,
+    category: item.category,
+    notes: item.notes,
+    imageUrl: item.imageUrl,
+  }));
+
+  const listFields: Record<string, unknown> = {
+    name: name ?? `${list.name ?? "Untitled"} (copy)`,
+    items: duplicatedItems,
+    generatedFromSchedule: false,
+  };
+
+  // Inherit visibility from original list
+  if (list.kitchenId) {
+    listFields.kitchenId = list.kitchenId;
+  } else {
+    listFields.userId = user._id;
+  }
+
+  const newList = await ShoppingList.create(listFields);
+  return newList;
+}
+
+export async function uncheckAll(
+  listId: string,
+  userId: string
+): Promise<IShoppingList> {
+  const list = await ShoppingList.findById(listId);
+  if (!list) {
+    throw createError("Shopping list not found", 404);
+  }
+
+  await assertListAccess(list, userId);
+
+  const updated = await ShoppingList.findByIdAndUpdate(
+    listId,
+    { $set: { "items.$[].isChecked": false } },
     { new: true }
   );
 
