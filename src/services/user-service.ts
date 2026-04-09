@@ -48,12 +48,22 @@ interface FullProfile {
 
 type LimitedProfile = PublicProfile & { spatulaBadge: SpatulaBadge; isPrivate: true };
 
-export function computeSpatulaBadge(recipesCount: number): SpatulaBadge {
-  if (recipesCount >= 10000) return "ruby";
-  if (recipesCount >= 1000) return "diamond";
-  if (recipesCount >= 100) return "golden";
-  if (recipesCount >= 10) return "silver";
+/** Spatula tiers use original recipe count only (no remixes). */
+export function computeSpatulaBadge(originalRecipesCount: number): SpatulaBadge {
+  if (originalRecipesCount >= 10000) return "ruby";
+  if (originalRecipesCount >= 1000) return "diamond";
+  if (originalRecipesCount >= 100) return "golden";
+  if (originalRecipesCount >= 10) return "silver";
   return null;
+}
+
+function spatulaCountForUser(user: {
+  originalRecipesCount?: number;
+  recipesCount: number;
+}): number {
+  return user.originalRecipesCount !== undefined && user.originalRecipesCount !== null
+    ? user.originalRecipesCount
+    : user.recipesCount;
 }
 
 export async function getUserById(
@@ -68,7 +78,7 @@ export async function getUserById(
     user
   );
 
-  const badge = computeSpatulaBadge(user.recipesCount);
+  const badge = computeSpatulaBadge(spatulaCountForUser(user));
 
   if (!canView) {
     return {

@@ -10,10 +10,12 @@
     "typecheck": "tsc --noEmit",
     "seed": "tsx src/scripts/seed-labels.ts",
     "seed:admin": "tsx src/scripts/seed-admin.ts",
+    "backfill:original-recipes": "tsx src/scripts/backfill-original-recipes-count.ts",
     "test": "vitest run",
     "test:watch": "vitest"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
     "bcryptjs": "^3.0.3",
     "cloudinary": "^2.5.1",
     "connect-mongo": "^6.0.0",

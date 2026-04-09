@@ -414,6 +414,7 @@ async function searchUsers(
               bio: 1,
               isPublic: 1,
               recipesCount: 1,
+              originalRecipesCount: 1,
               followersCount: 1,
             },
           },
@@ -435,7 +436,12 @@ async function searchUsers(
     isPublic: user.isPublic as boolean,
     recipesCount: user.recipesCount as number,
     followersCount: user.followersCount as number,
-    spatulaBadge: computeSpatulaBadge((user.recipesCount as number) ?? 0),
+    spatulaBadge: computeSpatulaBadge(
+      (user.originalRecipesCount as number | undefined) !== undefined &&
+        (user.originalRecipesCount as number | undefined) !== null
+        ? (user.originalRecipesCount as number)
+        : ((user.recipesCount as number) ?? 0)
+    ),
   }));
 
   return { users: results, total };

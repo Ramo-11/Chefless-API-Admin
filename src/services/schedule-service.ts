@@ -8,6 +8,7 @@ import {
   notifySuggestionApproved,
   notifySuggestionDeniedWithData,
 } from "./notification-service";
+import { hasActivePremium } from "../lib/premium";
 
 interface ServiceError extends Error {
   statusCode: number;
@@ -19,20 +20,33 @@ function createError(message: string, statusCode: number): ServiceError {
   return error;
 }
 
-const FREE_TIER_MAX_DAYS_AHEAD = 14;
-
 function stripTime(date: Date): Date {
   const d = new Date(date);
   d.setUTCHours(0, 0, 0, 0);
   return d;
 }
 
-function isBeyondFreeTierLimit(date: Date): boolean {
-  const now = new Date();
-  const today = stripTime(now);
-  const maxDate = new Date(today);
-  maxDate.setUTCDate(maxDate.getUTCDate() + FREE_TIER_MAX_DAYS_AHEAD);
-  return date > maxDate;
+/** UTC Monday 00:00 for the week containing `d` (week starts Monday). */
+function utcMondayOf(d: Date): Date {
+  const x = stripTime(d);
+  const dow = x.getUTCDay();
+  const delta = dow === 0 ? -6 : 1 - dow;
+  const m = new Date(x);
+  m.setUTCDate(m.getUTCDate() + delta);
+  return stripTime(m);
+}
+
+/** Last schedulable calendar day for free tier: Sunday of next week (UTC). */
+function freeTierMaxScheduleDateUtc(): Date {
+  const mon = utcMondayOf(new Date());
+  const end = new Date(mon);
+  end.setUTCDate(end.getUTCDate() + 13);
+  return end;
+}
+
+function isBeyondFreeTierScheduleLimit(date: Date): boolean {
+  const max = freeTierMaxScheduleDateUtc();
+  return stripTime(date) > max;
 }
 
 interface AddEntryData {
@@ -67,7 +81,9 @@ export async function addEntry(
   kitchenId: string,
   data: AddEntryData
 ): Promise<IScheduleEntry> {
-  const user = await User.findById(userId).select("kitchenId isPremium").lean();
+  const user = await User.findById(userId)
+    .select("kitchenId isPremium premiumExpiresAt")
+    .lean();
   if (!user) {
     throw createError("User not found", 404);
   }
@@ -78,10 +94,9 @@ export async function addEntry(
 
   const entryDate = stripTime(data.date);
 
-  // Free tier check
-  if (!user.isPremium && isBeyondFreeTierLimit(entryDate)) {
+  if (!hasActivePremium(user) && isBeyondFreeTierScheduleLimit(entryDate)) {
     throw createError(
-      "Free tier users can only schedule up to 14 days ahead. Upgrade to premium for unlimited scheduling.",
+      "Free tier users can plan through the end of next week only. Upgrade to premium for monthly scheduling.",
       403
     );
   }
@@ -175,7 +190,9 @@ export async function updateEntry(
     throw createError("Schedule entry not found", 404);
   }
 
-  const user = await User.findById(userId).select("kitchenId isPremium").lean();
+  const user = await User.findById(userId)
+    .select("kitchenId isPremium premiumExpiresAt")
+    .lean();
   if (!user) {
     throw createError("User not found", 404);
   }
@@ -207,9 +224,9 @@ export async function updateEntry(
 
   if (updates.date !== undefined) {
     const newDate = stripTime(updates.date);
-    if (!user.isPremium && isBeyondFreeTierLimit(newDate)) {
+    if (!hasActivePremium(user) && isBeyondFreeTierScheduleLimit(newDate)) {
       throw createError(
-        "Free tier users can only schedule up to 14 days ahead. Upgrade to premium for unlimited scheduling.",
+        "Free tier users can plan through the end of next week only. Upgrade to premium for monthly scheduling.",
         403
       );
     }

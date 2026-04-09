@@ -10,6 +10,7 @@ import {
   notifyRecipeForked,
   notifyRecipeShared,
 } from "./notification-service";
+import { hasActivePremium } from "../lib/premium";
 
 const FREE_TIER_RECIPE_LIMIT = 10;
 
@@ -21,13 +22,6 @@ function createError(message: string, statusCode: number): AppError {
   const error = new Error(message) as AppError;
   error.statusCode = statusCode;
   return error;
-}
-
-/** Checks both isPremium flag AND premiumExpiresAt to determine active premium status. */
-function hasActivePremium(user: { isPremium: boolean; premiumExpiresAt?: Date | null }): boolean {
-  if (!user.isPremium) return false;
-  if (!user.premiumExpiresAt) return true; // lifetime or unset expiry
-  return new Date(user.premiumExpiresAt) > new Date();
 }
 
 // --- Types ---
@@ -120,14 +114,17 @@ export async function createRecipe(
   authorId: string,
   data: CreateRecipeData
 ): Promise<IRecipe> {
-  const author = await User.findById(authorId).select("isPremium premiumExpiresAt recipesCount").lean();
+  const author = await User.findById(authorId)
+    .select("isPremium premiumExpiresAt originalRecipesCount")
+    .lean();
   if (!author) {
     throw createError("User not found", 404);
   }
 
-  if (!hasActivePremium(author) && author.recipesCount >= FREE_TIER_RECIPE_LIMIT) {
+  const originals = author.originalRecipesCount ?? 0;
+  if (!hasActivePremium(author) && originals >= FREE_TIER_RECIPE_LIMIT) {
     throw createError(
-      `Free tier is limited to ${FREE_TIER_RECIPE_LIMIT} recipes. Upgrade to premium for unlimited recipes.`,
+      `Free tier is limited to ${FREE_TIER_RECIPE_LIMIT} original recipes. Remixes do not count toward this limit. Upgrade to premium for unlimited recipes.`,
       403
     );
   }
@@ -157,10 +154,9 @@ export async function createRecipe(
     isPrivate: data.isPrivate ?? false,
   });
 
-  // Increment user's recipe count atomically
   await User.updateOne(
     { _id: authorId },
-    { $inc: { recipesCount: 1 } }
+    { $inc: { recipesCount: 1, originalRecipesCount: 1 } }
   );
 
   return recipe;
@@ -191,6 +187,11 @@ export async function getRecipe(
   const recipeObj = recipe.toObject() as unknown as Record<string, unknown>;
   recipeObj.authorName = author.fullName;
   recipeObj.authorPhoto = author.profilePicture ?? null;
+  if (recipe.showSignature && author.signature) {
+    recipeObj.authorSignatureUrl = author.signature;
+  } else {
+    recipeObj.authorSignatureUrl = null;
+  }
 
   // Dynamically populate forkedFrom.authorName to prevent stale names after renames
   const forkedFrom = recipeObj.forkedFrom as { recipeId: Types.ObjectId; authorId: Types.ObjectId; authorName: string } | undefined;
@@ -321,10 +322,14 @@ export async function deleteRecipe(
   // Delete the recipe
   await Recipe.findByIdAndDelete(recipeId);
 
-  // Decrement author's recipe count atomically
   await User.updateOne(
     { _id: userId },
-    { $inc: { recipesCount: -1 } }
+    {
+      $inc: {
+        recipesCount: -1,
+        originalRecipesCount: recipe.forkedFrom ? 0 : -1,
+      },
+    }
   );
 }
 
@@ -383,16 +388,9 @@ export async function forkRecipe(
   recipeId: string,
   userId: string
 ): Promise<IRecipe> {
-  const user = await User.findById(userId).select("isPremium premiumExpiresAt recipesCount fullName").lean();
+  const user = await User.findById(userId).select("fullName").lean();
   if (!user) {
     throw createError("User not found", 404);
-  }
-
-  if (!hasActivePremium(user) && user.recipesCount >= FREE_TIER_RECIPE_LIMIT) {
-    throw createError(
-      `Free tier is limited to ${FREE_TIER_RECIPE_LIMIT} recipes. Upgrade to premium for unlimited recipes.`,
-      403
-    );
   }
 
   const originalRecipe = await Recipe.findById(recipeId);
@@ -408,12 +406,11 @@ export async function forkRecipe(
 
   const canView = await canViewRecipe(new Types.ObjectId(userId), originalRecipe, author);
   if (!canView) {
-    throw createError("You do not have permission to fork this recipe", 403);
+    throw createError("You do not have permission to remix this recipe", 403);
   }
 
-  // Cannot fork your own recipe
   if (originalRecipe.authorId.equals(userId)) {
-    throw createError("You cannot fork your own recipe", 400);
+    throw createError("You cannot remix your own recipe", 400);
   }
 
   // Prevent duplicate forks — one remix per recipe per user
@@ -482,15 +479,16 @@ export async function duplicateRecipe(
   userId: string
 ): Promise<IRecipe> {
   const user = await User.findById(userId)
-    .select("isPremium premiumExpiresAt recipesCount")
+    .select("isPremium premiumExpiresAt originalRecipesCount")
     .lean();
   if (!user) {
     throw createError("User not found", 404);
   }
 
-  if (!hasActivePremium(user) && user.recipesCount >= FREE_TIER_RECIPE_LIMIT) {
+  const originals = user.originalRecipesCount ?? 0;
+  if (!hasActivePremium(user) && originals >= FREE_TIER_RECIPE_LIMIT) {
     throw createError(
-      `Free tier is limited to ${FREE_TIER_RECIPE_LIMIT} recipes. Upgrade to premium for unlimited recipes.`,
+      `Free tier is limited to ${FREE_TIER_RECIPE_LIMIT} original recipes. Upgrade to premium for unlimited recipes.`,
       403
     );
   }
@@ -533,8 +531,10 @@ export async function duplicateRecipe(
     isPrivate: originalRecipe.isPrivate,
   });
 
-  // Increment user's recipe count
-  await User.updateOne({ _id: userId }, { $inc: { recipesCount: 1 } });
+  await User.updateOne(
+    { _id: userId },
+    { $inc: { recipesCount: 1, originalRecipesCount: 1 } }
+  );
 
   return duplicated;
 }

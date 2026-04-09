@@ -87,14 +87,20 @@ router.get(
       { $text: { $search: q }, isBanned: { $ne: true } },
       { score: { $meta: "textScore" } }
     )
-      .select("fullName profilePicture bio isPublic recipesCount followersCount")
+      .select(
+        "fullName profilePicture bio isPublic recipesCount originalRecipesCount followersCount"
+      )
       .sort({ score: { $meta: "textScore" } })
       .limit(20)
       .lean();
 
     const results = users.map((user) => ({
       ...user,
-      spatulaBadge: computeSpatulaBadge(user.recipesCount),
+      spatulaBadge: computeSpatulaBadge(
+        user.originalRecipesCount !== undefined && user.originalRecipesCount !== null
+          ? user.originalRecipesCount
+          : user.recipesCount
+      ),
     }));
 
     res.status(200).json({ users: results });

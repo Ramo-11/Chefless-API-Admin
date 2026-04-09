@@ -46,7 +46,7 @@ describe("User model", () => {
     expect(user.isPublic).toBe(true);
   });
 
-  it("defaults followersCount, followingCount, recipesCount to 0", async () => {
+  it("defaults followersCount, followingCount, recipesCount, originalRecipesCount to 0", async () => {
     const user = await User.create({
       firebaseUid: "firebase-counts-test",
       email: "counts-test@example.com",
@@ -56,6 +56,7 @@ describe("User model", () => {
     expect(user.followersCount).toBe(0);
     expect(user.followingCount).toBe(0);
     expect(user.recipesCount).toBe(0);
+    expect(user.originalRecipesCount).toBe(0);
   });
 
   it("defaults isPremium to false", async () => {

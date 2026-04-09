@@ -54,6 +54,8 @@ export interface IUser extends Document {
   followersCount: number;
   followingCount: number;
   recipesCount: number;
+  /** Original recipes only (no remixes) — used for spatula badges and free-tier recipe cap */
+  originalRecipesCount: number;
   kitchenId?: Types.ObjectId;
   isPremium: boolean;
   premiumPlan?: "monthly" | "annual";
@@ -72,6 +74,9 @@ export interface IUser extends Document {
   lastActiveAt: Date;
   createdAt: Date;
   updatedAt: Date;
+  /** UTC calendar day (YYYY-MM-DD) for daily AI helper rate limit */
+  aiRecipeHelperUsageDay?: string;
+  aiRecipeHelperUsageCount?: number;
 }
 
 const shippingAddressSchema = new Schema<ShippingAddress>(
@@ -127,6 +132,10 @@ const userSchema = new Schema<IUser>(
       default: 0,
     },
     recipesCount: {
+      type: Number,
+      default: 0,
+    },
+    originalRecipesCount: {
       type: Number,
       default: 0,
     },
@@ -190,6 +199,8 @@ const userSchema = new Schema<IUser>(
       type: Date,
       default: Date.now,
     },
+    aiRecipeHelperUsageDay: { type: String },
+    aiRecipeHelperUsageCount: { type: Number, default: 0 },
   },
   {
     timestamps: true,

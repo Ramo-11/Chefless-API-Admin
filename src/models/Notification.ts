@@ -10,7 +10,7 @@ export const NOTIFICATION_TYPES = [
   "schedule_suggestion",
   "suggestion_approved",
   "suggestion_denied",
-  "kitchen_invite", // NOTE: defined but not yet sent — reserved for future direct invite feature
+  "kitchen_invite", // Welcome / invite receipt for members who join a kitchen
   "kitchen_joined",
   "kitchen_removed",
   "system",

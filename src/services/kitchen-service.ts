@@ -5,6 +5,7 @@ import Recipe, { IRecipe } from "../models/Recipe";
 import ScheduleEntry from "../models/ScheduleEntry";
 import ShoppingList from "../models/ShoppingList";
 import {
+  notifyKitchenInviteWelcome,
   notifyKitchenJoined,
   notifyKitchenRemoved,
 } from "./notification-service";
@@ -231,11 +232,17 @@ export async function joinKitchen(
     throw createError("Kitchen not found", 404);
   }
 
-  // Fire-and-forget notification
   notifyKitchenJoined(userId, kitchen._id.toString()).catch(
     (err: unknown) => {
       const msg = err instanceof Error ? err.message : "Unknown error";
       console.error(`Failed to send kitchen_joined notification: ${msg}`);
+    }
+  );
+
+  notifyKitchenInviteWelcome(userId, kitchen._id.toString()).catch(
+    (err: unknown) => {
+      const msg = err instanceof Error ? err.message : "Unknown error";
+      console.error(`Failed to send kitchen_invite notification: ${msg}`);
     }
   );
 

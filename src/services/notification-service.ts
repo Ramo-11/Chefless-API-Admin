@@ -56,6 +56,7 @@ function deriveRouteForType(params: CreateNotificationParams): string | null {
     case "suggestion_denied":
       return "/schedule";
     case "kitchen_joined":
+    case "kitchen_invite":
     case "kitchen_removed":
       return "/kitchen";
     default:
@@ -335,8 +336,8 @@ export async function notifyRecipeForked(
     actorPhoto: actor.profilePicture,
     recipeId: new Types.ObjectId(recipeId),
     recipeTitle: recipe.title,
-    pushTitle: "Recipe Forked",
-    pushBody: `${actor.fullName} forked your recipe "${recipe.title}".`,
+    pushTitle: "Recipe remixed",
+    pushBody: `${actor.fullName} remixed your recipe "${recipe.title}".`,
   });
 }
 
@@ -501,6 +502,24 @@ export async function notifyKitchenJoined(
     kitchenName: kitchen.name,
     pushTitle: "New Kitchen Member",
     pushBody: `${actor.fullName} joined ${kitchen.name}.`,
+  });
+}
+
+/** Welcome receipt for the member who joined (uses `kitchen_invite` preference). */
+export async function notifyKitchenInviteWelcome(
+  newMemberId: string,
+  kitchenId: string
+): Promise<void> {
+  const kitchen = await Kitchen.findById(kitchenId).select("name").lean();
+  if (!kitchen) return;
+
+  await createNotification({
+    userId: new Types.ObjectId(newMemberId),
+    type: "kitchen_invite",
+    kitchenId: new Types.ObjectId(kitchenId),
+    kitchenName: kitchen.name,
+    pushTitle: "Kitchen",
+    pushBody: `You're now a member of ${kitchen.name}.`,
   });
 }
 

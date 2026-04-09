@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import User from "../models/User";
+import { hasActivePremium } from "../lib/premium";
 
 /**
  * Middleware that checks if the authenticated user has an active premium
@@ -18,13 +19,15 @@ export async function requirePremium(
     return;
   }
 
-  const user = await User.findOne({ firebaseUid }).select("isPremium").lean();
+  const user = await User.findOne({ firebaseUid })
+    .select("isPremium premiumExpiresAt")
+    .lean();
   if (!user) {
     res.status(404).json({ error: "User not found" });
     return;
   }
 
-  if (!user.isPremium) {
+  if (!hasActivePremium(user)) {
     res.status(403).json({
       error: "This feature requires a premium subscription.",
     });
