@@ -51,4 +51,23 @@ export function getImageUrl(
   });
 }
 
+export async function deleteImage(publicId: string): Promise<void> {
+  try {
+    await cloudinary.uploader.destroy(publicId);
+  } catch (err: unknown) {
+    const msg = err instanceof Error ? err.message : "Unknown error";
+    console.error(`Cloudinary delete failed for ${publicId}: ${msg}`);
+  }
+}
+
+/**
+ * Extract the Cloudinary public ID from a secure URL.
+ * e.g. "https://res.cloudinary.com/xxx/image/upload/v123/chefless/shopping/abc.jpg"
+ *   → "chefless/shopping/abc"
+ */
+export function publicIdFromUrl(url: string): string | null {
+  const match = url.match(/\/upload\/(?:v\d+\/)?(chefless\/.+?)(?:\.\w+)?$/);
+  return match ? match[1] : null;
+}
+
 export { cloudinary };

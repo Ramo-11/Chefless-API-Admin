@@ -3,6 +3,7 @@ import ShoppingList, { IShoppingList } from "../models/ShoppingList";
 import ScheduleEntry from "../models/ScheduleEntry";
 import Recipe, { IIngredient } from "../models/Recipe";
 import User from "../models/User";
+import { deleteImage, publicIdFromUrl } from "../lib/cloudinary";
 
 interface ServiceError extends Error {
   statusCode: number;
@@ -454,6 +455,15 @@ export async function removeItem(
   }
 
   await assertListAccess(list, userId);
+
+  // Delete the item's image from Cloudinary if it has one
+  const item = list.items.find((i) => i._id.equals(itemId));
+  if (item?.imageUrl) {
+    const publicId = publicIdFromUrl(item.imageUrl);
+    if (publicId) {
+      deleteImage(publicId).catch(() => {});
+    }
+  }
 
   const updated = await ShoppingList.findByIdAndUpdate(
     listId,
