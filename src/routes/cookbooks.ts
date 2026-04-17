@@ -48,6 +48,13 @@ const paginationSchema = z.object({
   limit: z.coerce.number().int().min(1).max(50).default(20),
 });
 
+// Cookbook recipe lists are rendered as one scrollable view (no pagination
+// UI), so allow a larger window than the default list endpoints.
+const cookbookRecipesPaginationSchema = z.object({
+  page: z.coerce.number().int().min(1).default(1),
+  limit: z.coerce.number().int().min(1).max(200).default(50),
+});
+
 const createCookbookSchema = z.object({
   name: z.string().min(1).max(100).trim(),
   description: z.string().max(500).optional(),
@@ -73,7 +80,7 @@ const addRecipesSchema = z.object({
     .max(100),
 });
 
-const filterRecipesSchema = paginationSchema.extend({
+const filterRecipesSchema = cookbookRecipesPaginationSchema.extend({
   label: z.string().max(50).optional(),
   dietaryTag: z.string().max(50).optional(),
   cuisineTag: z.string().max(50).optional(),
