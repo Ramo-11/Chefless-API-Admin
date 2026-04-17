@@ -7,7 +7,12 @@ import session from "express-session";
 import MongoStore from "connect-mongo";
 import { env } from "./lib/env";
 import { connectDatabase } from "./lib/db";
-import { defaultLimiter, strictLimiter } from "./middleware/rateLimit";
+import {
+  apiReadLimiter,
+  apiWriteLimiter,
+  strictLimiter,
+  authLimiter,
+} from "./middleware/rateLimit";
 import { errorHandler } from "./middleware/errorHandler";
 import healthRouter from "./routes/health";
 import authRouter from "./routes/auth";
@@ -56,7 +61,6 @@ app.use(cors({
   allowedHeaders: ["Authorization", "Content-Type"],
 }));
 app.use(express.urlencoded({ extended: true }));
-app.use(defaultLimiter);
 
 // ── Request ID for tracing ─────────────────────────────────────────
 app.use((req, _res, next) => {
@@ -100,22 +104,29 @@ app.use("/admin", adminRouter);
 app.use("/api/webhooks", webhooksRouter);
 
 // ── API routes ──────────────────────────────────────────────────────
+// Rate limit strategy:
+//   - apiReadLimiter:  per-user, generous (only counts GET/HEAD)
+//   - apiWriteLimiter: per-user, moderate (only counts POST/PATCH/DELETE)
+//   - Both applied to authed API routes; together they form one cohesive limit
+//     without one method type starving the other.
+const apiLimiters = [apiReadLimiter, apiWriteLimiter];
+
 app.use("/api/health", jsonDefault, healthRouter);
-app.use("/api/auth", jsonDefault, strictLimiter, authRouter);
+app.use("/api/auth", jsonDefault, authLimiter, authRouter);
 // Upload routes need a higher body limit for base64 image data
-app.use("/api/users", jsonUpload, usersRouter);
-app.use("/api/recipes", jsonUpload, recipesRouter);
-app.use("/api/cookbooks", jsonUpload, cookbooksRouter);
-app.use("/api/kitchens", jsonDefault, kitchensRouter);
-app.use("/api/schedule", jsonDefault, scheduleRouter);
-app.use("/api/shopping-lists", jsonDefault, shoppingListsRouter);
-app.use("/api/search", jsonDefault, searchRouter);
-app.use("/api/feed", jsonDefault, feedRouter);
-app.use("/api/notifications", jsonDefault, notificationsRouter);
-app.use("/api/labels", jsonDefault, labelsRouter);
+app.use("/api/users", jsonUpload, ...apiLimiters, usersRouter);
+app.use("/api/recipes", jsonUpload, ...apiLimiters, recipesRouter);
+app.use("/api/cookbooks", jsonUpload, ...apiLimiters, cookbooksRouter);
+app.use("/api/kitchens", jsonDefault, ...apiLimiters, kitchensRouter);
+app.use("/api/schedule", jsonDefault, ...apiLimiters, scheduleRouter);
+app.use("/api/shopping-lists", jsonDefault, ...apiLimiters, shoppingListsRouter);
+app.use("/api/search", jsonDefault, ...apiLimiters, searchRouter);
+app.use("/api/feed", jsonDefault, ...apiLimiters, feedRouter);
+app.use("/api/notifications", jsonDefault, ...apiLimiters, notificationsRouter);
+app.use("/api/labels", jsonDefault, ...apiLimiters, labelsRouter);
 app.use("/api/reports", jsonDefault, strictLimiter, reportsRouter);
 app.use("/api/ai", jsonDefault, strictLimiter, aiRouter);
-app.use("/api/promo-codes", jsonDefault, promoCodesRouter);
+app.use("/api/promo-codes", jsonDefault, ...apiLimiters, promoCodesRouter);
 
 // ── Error handler (must be last) ────────────────────────────────────
 app.use(errorHandler);

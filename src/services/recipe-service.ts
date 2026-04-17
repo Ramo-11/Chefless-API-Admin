@@ -3,7 +3,7 @@ import Recipe, { IRecipe, IIngredient, IStep } from "../models/Recipe";
 import Like from "../models/Like";
 import SavedRecipe from "../models/SavedRecipe";
 import RecipeShare from "../models/RecipeShare";
-import User from "../models/User";
+import User, { IUser } from "../models/User";
 import { canViewRecipe } from "./visibility-service";
 import { uploadImage } from "../lib/cloudinary";
 import {
@@ -176,45 +176,52 @@ export async function getRecipe(
     throw createError("Recipe not found", 404);
   }
 
-  const author = await User.findById(recipe.authorId);
+  const viewerId = requesterId ? new Types.ObjectId(requesterId) : null;
+  const forkedFrom = recipe.forkedFrom;
+
+  // Fan out everything that depends on `recipe` in a single round-trip.
+  // Previously we awaited author → fork-author → like/save sequentially,
+  // adding ~3× the latency. Now they all run in parallel.
+  const [author, forkAuthor, liked, saved] = await Promise.all([
+    User.findById(recipe.authorId)
+      .select("fullName profilePicture signature isPublic kitchenId")
+      .lean(),
+    forkedFrom?.authorId
+      ? User.findById(forkedFrom.authorId).select("fullName").lean()
+      : Promise.resolve(null),
+    viewerId
+      ? Like.exists({ userId: viewerId, recipeId: recipe._id })
+      : Promise.resolve(null),
+    viewerId
+      ? SavedRecipe.exists({ userId: viewerId, recipeId: recipe._id })
+      : Promise.resolve(null),
+  ]);
+
   if (!author) {
     throw createError("Recipe author not found", 404);
   }
 
-  const viewerId = requesterId ? new Types.ObjectId(requesterId) : null;
-  const canView = await canViewRecipe(viewerId, recipe, author);
-
+  const canView = await canViewRecipe(
+    viewerId,
+    recipe,
+    author as unknown as IUser
+  );
   if (!canView) {
     throw createError("You do not have permission to view this recipe", 403);
   }
 
-  // Attach author info to the response.
   const recipeObj = recipe.toObject() as unknown as Record<string, unknown>;
   recipeObj.authorName = author.fullName;
   recipeObj.authorPhoto = author.profilePicture ?? null;
-  if (recipe.showSignature && author.signature) {
-    recipeObj.authorSignatureUrl = author.signature;
-  } else {
-    recipeObj.authorSignatureUrl = null;
+  recipeObj.authorSignatureUrl =
+    recipe.showSignature && author.signature ? author.signature : null;
+
+  if (forkAuthor && recipeObj.forkedFrom) {
+    (recipeObj.forkedFrom as Record<string, unknown>).authorName =
+      forkAuthor.fullName;
   }
 
-  // Dynamically populate forkedFrom.authorName to prevent stale names after renames
-  const forkedFrom = recipeObj.forkedFrom as { recipeId: Types.ObjectId; authorId: Types.ObjectId; authorName: string } | undefined;
-  if (forkedFrom?.authorId) {
-    const forkAuthor = await User.findById(forkedFrom.authorId)
-      .select("fullName")
-      .lean();
-    if (forkAuthor) {
-      (recipeObj.forkedFrom as Record<string, unknown>).authorName = forkAuthor.fullName;
-    }
-  }
-
-  // Check if the requester has liked / saved this recipe.
   if (viewerId) {
-    const [liked, saved] = await Promise.all([
-      Like.exists({ userId: viewerId, recipeId: recipe._id }),
-      SavedRecipe.exists({ userId: viewerId, recipeId: recipe._id }),
-    ]);
     recipeObj.isLiked = !!liked;
     recipeObj.isSaved = !!saved;
   }
@@ -404,26 +411,36 @@ export async function forkRecipe(
     throw createError("Recipe not found", 404);
   }
 
-  // Check visibility
-  const author = await User.findById(originalRecipe.authorId);
-  if (!author) {
-    throw createError("Recipe author not found", 404);
-  }
-
-  const canView = await canViewRecipe(new Types.ObjectId(userId), originalRecipe, author);
-  if (!canView) {
-    throw createError("You do not have permission to remix this recipe", 403);
-  }
-
   if (originalRecipe.authorId.equals(userId)) {
     throw createError("You cannot remix your own recipe", 400);
   }
 
-  // Prevent duplicate forks — one remix per recipe per user
-  const existingFork = await Recipe.findOne({
-    authorId: new Types.ObjectId(userId),
-    "forkedFrom.recipeId": originalRecipe._id,
-  }).lean();
+  // Visibility check + duplicate-fork check in parallel.
+  const [author, existingFork] = await Promise.all([
+    User.findById(originalRecipe.authorId)
+      .select("fullName isPublic kitchenId")
+      .lean(),
+    Recipe.findOne({
+      authorId: new Types.ObjectId(userId),
+      "forkedFrom.recipeId": originalRecipe._id,
+    })
+      .select("_id")
+      .lean(),
+  ]);
+
+  if (!author) {
+    throw createError("Recipe author not found", 404);
+  }
+
+  const canView = await canViewRecipe(
+    new Types.ObjectId(userId),
+    originalRecipe,
+    author as unknown as IUser
+  );
+  if (!canView) {
+    throw createError("You do not have permission to remix this recipe", 403);
+  }
+
   if (existingFork) {
     throw createError("You have already remixed this recipe", 400);
   }
@@ -554,13 +571,18 @@ export async function likeRecipe(
     throw createError("Recipe not found", 404);
   }
 
-  // Check visibility before allowing like
-  const author = await User.findById(recipe.authorId);
+  const author = await User.findById(recipe.authorId)
+    .select("isPublic kitchenId")
+    .lean();
   if (!author) {
     throw createError("Recipe author not found", 404);
   }
 
-  const canView = await canViewRecipe(new Types.ObjectId(userId), recipe, author);
+  const canView = await canViewRecipe(
+    new Types.ObjectId(userId),
+    recipe,
+    author as unknown as IUser
+  );
   if (!canView) {
     throw createError("You do not have permission to like this recipe", 403);
   }
@@ -659,12 +681,18 @@ export async function saveRecipe(
     throw createError("Recipe not found", 404);
   }
 
-  const author = await User.findById(recipe.authorId);
+  const author = await User.findById(recipe.authorId)
+    .select("isPublic kitchenId")
+    .lean();
   if (!author) {
     throw createError("Recipe author not found", 404);
   }
 
-  const canView = await canViewRecipe(new Types.ObjectId(userId), recipe, author);
+  const canView = await canViewRecipe(
+    new Types.ObjectId(userId),
+    recipe,
+    author as unknown as IUser
+  );
   if (!canView) {
     throw createError("You do not have permission to save this recipe", 403);
   }

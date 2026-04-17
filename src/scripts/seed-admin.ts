@@ -1,3 +1,4 @@
+import "dotenv/config";
 import * as readline from "readline";
 import mongoose from "mongoose";
 import AdminUser from "../models/AdminUser";
