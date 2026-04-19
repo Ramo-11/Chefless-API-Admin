@@ -52,6 +52,13 @@ import {
   toggleAdminActive,
   resetAdminPassword,
 } from "./controllers/admins";
+import {
+  feedbackPage,
+  feedbackDetail,
+  updateFeedbackStatus,
+  updateFeedbackNote,
+  deleteFeedback,
+} from "./controllers/feedback";
 
 const router = Router();
 
@@ -96,6 +103,11 @@ router.post("/api/kitchens/:id/remove-member", csrfProtection, removeKitchenMemb
 router.post("/api/kitchens/:id/transfer-lead", csrfProtection, transferKitchenLead);
 router.delete("/api/kitchens/:id", csrfProtection, deleteKitchen);
 
+// ── Feedback mutation routes (form POSTs, redirect responses) ──────
+router.post("/feedback/:id/status", csrfProtection, updateFeedbackStatus);
+router.post("/feedback/:id/note", csrfProtection, updateFeedbackNote);
+router.post("/feedback/:id/delete", csrfProtection, deleteFeedback);
+
 // ── Admin management API routes (super admin only) ─────────────────
 router.post("/api/admins", requireSuperAdmin, csrfProtection, createAdmin);
 router.put("/api/admins/:id", requireSuperAdmin, csrfProtection, updateAdmin);
@@ -113,6 +125,8 @@ router.get("/labels", labelsPage);
 router.get("/seasonal", seasonalPage);
 router.get("/promo-codes", promoCodesPage);
 router.get("/kitchens", kitchensPage);
+router.get("/feedback", feedbackPage);
+router.get("/feedback/:id", feedbackDetail);
 router.get("/admins", requireSuperAdmin, adminsPage);
 
 export default router;

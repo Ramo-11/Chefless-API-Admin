@@ -50,6 +50,10 @@
             <span class="badge badge-danger"><%= pendingCount %></span>
           <% } %>
         </a>
+        <a href="/admin/feedback" class="nav-item <%= page === 'feedback' ? 'active' : '' %>">
+          <i class="fas fa-comment-dots"></i>
+          <span>Feedback</span>
+        </a>
         <a href="/admin/labels" class="nav-item <%= page === 'labels' ? 'active' : '' %>">
           <i class="fas fa-tags"></i>
           <span>Labels</span>

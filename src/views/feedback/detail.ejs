@@ -1,0 +1,109 @@
+<% var pageTitle = 'Feedback Detail'; %>
+<% var page = 'feedback'; %>
+
+<%
+  var statusClass = 'badge-info';
+  if (feedback.status === 'triaged') statusClass = 'badge-warning';
+  else if (feedback.status === 'resolved') statusClass = 'badge-success';
+  else if (feedback.status === 'archived') statusClass = 'badge-default';
+%>
+
+<div class="page-header">
+  <div>
+    <a href="/admin/feedback" class="text-muted text-sm" style="display:inline-flex;align-items:center;gap:.35rem;">
+      <i class="fas fa-chevron-left"></i> Back to feedback
+    </a>
+    <h1 style="margin-top:.35rem;">Feedback #<%= feedback._id.toString().slice(-6) %></h1>
+    <p class="page-subtitle">
+      Submitted <%= new Date(feedback.createdAt).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' }) %>
+    </p>
+  </div>
+  <div style="display:flex;gap:.5rem;align-items:center;">
+    <span class="badge badge-default"><%= feedback.category %></span>
+    <span class="badge <%= statusClass %>"><%= feedback.status %></span>
+  </div>
+</div>
+
+<div class="card" style="margin-bottom:1rem;">
+  <div class="card-header">
+    <h2><i class="fas fa-user"></i> Submitted by</h2>
+  </div>
+  <div class="card-body">
+    <div class="user-cell">
+      <% if (feedback.userId && feedback.userId.profilePicture) { %>
+        <img src="<%= feedback.userId.profilePicture %>" alt="" class="avatar-sm">
+      <% } else { %>
+        <div class="avatar-sm avatar-placeholder">
+          <%= (feedback.userName || '?').charAt(0).toUpperCase() %>
+        </div>
+      <% } %>
+      <div>
+        <div><strong><%= feedback.userName %></strong></div>
+        <div class="text-muted text-sm"><%= feedback.userEmail %></div>
+      </div>
+    </div>
+    <div class="text-muted text-sm" style="margin-top:.75rem;">
+      <% if (feedback.platform) { %>Platform: <strong><%= feedback.platform %></strong><% } %>
+      <% if (feedback.appVersion) { %> · App version: <strong>v<%= feedback.appVersion %></strong><% } %>
+    </div>
+  </div>
+</div>
+
+<div class="card" style="margin-bottom:1rem;">
+  <div class="card-header">
+    <h2><i class="fas fa-comment-dots"></i> Message</h2>
+  </div>
+  <div class="card-body">
+    <p style="white-space:pre-wrap;margin:0;"><%= feedback.message %></p>
+  </div>
+</div>
+
+<div class="card" style="margin-bottom:1rem;">
+  <div class="card-header">
+    <h2><i class="fas fa-flag"></i> Status</h2>
+  </div>
+  <div class="card-body">
+    <form action="/admin/feedback/<%= feedback._id %>/status" method="POST" style="display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;">
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+      <label for="feedback-status" class="text-muted text-sm">Set status</label>
+      <select id="feedback-status" name="status">
+        <option value="new" <%= feedback.status === 'new' ? 'selected' : '' %>>New</option>
+        <option value="triaged" <%= feedback.status === 'triaged' ? 'selected' : '' %>>Triaged</option>
+        <option value="resolved" <%= feedback.status === 'resolved' ? 'selected' : '' %>>Resolved</option>
+        <option value="archived" <%= feedback.status === 'archived' ? 'selected' : '' %>>Archived</option>
+      </select>
+      <button type="submit" class="btn btn-primary btn-sm">Update status</button>
+    </form>
+  </div>
+</div>
+
+<div class="card" style="margin-bottom:1rem;">
+  <div class="card-header">
+    <h2><i class="fas fa-sticky-note"></i> Admin note</h2>
+  </div>
+  <div class="card-body">
+    <form action="/admin/feedback/<%= feedback._id %>/note" method="POST">
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+      <div class="form-group">
+        <label for="admin-note" class="text-muted text-sm">Internal note (max 2000 chars)</label>
+        <textarea id="admin-note" name="adminNote" rows="4" maxlength="2000" placeholder="Private notes for the admin team…"><%= feedback.adminNote || '' %></textarea>
+      </div>
+      <div style="display:flex;justify-content:flex-end;">
+        <button type="submit" class="btn btn-primary btn-sm">Save note</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="card" style="border:1px solid var(--danger-light);">
+  <div class="card-header">
+    <h2 style="color:var(--danger);"><i class="fas fa-trash"></i> Danger zone</h2>
+  </div>
+  <div class="card-body">
+    <p class="text-muted text-sm" style="margin-top:0;">Deleting feedback is permanent and cannot be undone.</p>
+    <form action="/admin/feedback/<%= feedback._id %>/delete" method="POST" onsubmit="return confirm('Delete this feedback permanently? This cannot be undone.');">
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+      <button type="submit" class="btn btn-danger btn-sm">Delete feedback</button>
+    </form>
+  </div>
+</div>

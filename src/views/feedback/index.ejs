@@ -1,0 +1,105 @@
+<% var pageTitle = 'Feedback'; %>
+<% var page = 'feedback'; %>
+
+<div class="page-header">
+  <h1>Feedback</h1>
+  <p class="page-subtitle"><%= newCount %> new <%= newCount === 1 ? 'submission' : 'submissions' %></p>
+</div>
+
+<!-- Filters -->
+<div class="toolbar">
+  <div class="toolbar-filters">
+    <a href="/admin/feedback?status=new<%= category ? '&category=' + category : '' %>" class="filter-chip <%= status === 'new' ? 'active' : '' %>">
+      New <% if (newCount > 0) { %><span class="filter-count"><%= newCount %></span><% } %>
+    </a>
+    <a href="/admin/feedback?status=triaged<%= category ? '&category=' + category : '' %>" class="filter-chip <%= status === 'triaged' ? 'active' : '' %>">Triaged</a>
+    <a href="/admin/feedback?status=resolved<%= category ? '&category=' + category : '' %>" class="filter-chip <%= status === 'resolved' ? 'active' : '' %>">Resolved</a>
+    <a href="/admin/feedback?status=archived<%= category ? '&category=' + category : '' %>" class="filter-chip <%= status === 'archived' ? 'active' : '' %>">Archived</a>
+    <a href="/admin/feedback?status=all<%= category ? '&category=' + category : '' %>" class="filter-chip <%= status === 'all' ? 'active' : '' %>">All</a>
+  </div>
+  <div class="toolbar-filters">
+    <a href="/admin/feedback?status=<%= status %>" class="filter-chip <%= !category ? 'active' : '' %>">All Categories</a>
+    <a href="/admin/feedback?status=<%= status %>&category=bug" class="filter-chip <%= category === 'bug' ? 'active' : '' %>">Bug</a>
+    <a href="/admin/feedback?status=<%= status %>&category=idea" class="filter-chip <%= category === 'idea' ? 'active' : '' %>">Idea</a>
+    <a href="/admin/feedback?status=<%= status %>&category=improvement" class="filter-chip <%= category === 'improvement' ? 'active' : '' %>">Improvement</a>
+    <a href="/admin/feedback?status=<%= status %>&category=praise" class="filter-chip <%= category === 'praise' ? 'active' : '' %>">Praise</a>
+    <a href="/admin/feedback?status=<%= status %>&category=other" class="filter-chip <%= category === 'other' ? 'active' : '' %>">Other</a>
+  </div>
+</div>
+
+<!-- Feedback Table -->
+<div class="card">
+  <div class="table-responsive">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Category</th>
+          <th>Message</th>
+          <th>Platform</th>
+          <th>Status</th>
+          <th>Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% feedbackItems.forEach(function(item) { %>
+        <tr>
+          <td>
+            <div class="user-cell">
+              <% if (item.userId && item.userId.profilePicture) { %>
+                <img src="<%= item.userId.profilePicture %>" alt="" class="avatar-sm">
+              <% } else { %>
+                <div class="avatar-sm avatar-placeholder">
+                  <%= (item.userName || '?').charAt(0).toUpperCase() %>
+                </div>
+              <% } %>
+              <div>
+                <div><%= item.userName %></div>
+                <div class="text-muted text-sm"><%= item.userEmail %></div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <span class="badge badge-default"><%= item.category %></span>
+          </td>
+          <td>
+            <p class="report-desc"><%= item.message.length > 140 ? item.message.slice(0, 140) + '…' : item.message %></p>
+          </td>
+          <td class="text-muted text-sm">
+            <% if (item.platform) { %><%= item.platform %><% } %>
+            <% if (item.appVersion) { %> · v<%= item.appVersion %><% } %>
+          </td>
+          <td>
+            <%
+              var statusClass = 'badge-info';
+              if (item.status === 'triaged') statusClass = 'badge-warning';
+              else if (item.status === 'resolved') statusClass = 'badge-success';
+              else if (item.status === 'archived') statusClass = 'badge-default';
+            %>
+            <span class="badge <%= statusClass %>"><%= item.status %></span>
+          </td>
+          <td class="text-muted"><%= new Date(item.createdAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) %></td>
+          <td>
+            <div class="action-buttons">
+              <a class="btn btn-sm btn-primary" href="/admin/feedback/<%= item._id %>" aria-label="Open feedback">Open</a>
+            </div>
+          </td>
+        </tr>
+        <% }); %>
+        <% if (feedbackItems.length === 0) { %>
+        <tr>
+          <td colspan="7" class="empty-state">
+            <i class="fas fa-comment-dots"></i>
+            <span>No feedback to show</span>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<% if (pagination.total > 1) { %>
+  <%- include('../partials/pagination', { pagination, baseUrl: '/admin/feedback?status=' + status + '&category=' + (category || '') }) %>
+<% } %>
