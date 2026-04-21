@@ -53,7 +53,9 @@ const dateString = z
     return date;
   });
 
-const MAX_SCHEDULE_RANGE_DAYS = 90;
+// Week view asks for 7 days, month for ~31, year for 366. Capped at 400 so
+// a bad query can't ask for decades of entries, but year aggregation works.
+const MAX_SCHEDULE_RANGE_DAYS = 400;
 
 // --- Schemas ---
 

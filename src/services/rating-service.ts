@@ -230,9 +230,14 @@ export async function getRatingAggregateForViewer(
 }
 
 /**
- * Finds the user's confirmed-but-uncooked past entries that should surface
+ * Finds the viewer's confirmed-but-uncooked past entries that should surface
  * as cook prompts. Limits to the most recent `limit` entries to keep the
  * payload small; the client cycles through them one at a time.
+ *
+ * Scope mirrors the schedule GET endpoint: kitchen members see every
+ * uncooked meal from their kitchen (not just ones they personally added),
+ * solo cooks see only their own. Without this breadth a meal the kitchen
+ * lead scheduled would never prompt the member who actually cooked it.
  */
 export async function listPendingCookPrompts(
   userId: string,
@@ -244,9 +249,10 @@ export async function listPendingCookPrompts(
   // user doesn't return from a vacation to a 30-item prompt queue.
   const cutoff = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
 
+  const user = await User.findById(userOid).select("kitchenId").lean();
+
   // Respect the kitchen's "off" toggle — don't surface prompts from a kitchen
   // that has disabled rating flows.
-  const user = await User.findById(userOid).select("kitchenId").lean();
   if (user?.kitchenId) {
     const kitchen = await Kitchen.findById(user.kitchenId)
       .select("ratingsVisibility")
@@ -254,8 +260,12 @@ export async function listPendingCookPrompts(
     if (kitchen?.ratingsVisibility === "off") return [];
   }
 
+  const scopeFilter = user?.kitchenId
+    ? { kitchenId: user.kitchenId }
+    : { userId: userOid, kitchenId: { $exists: false } };
+
   const entries = await ScheduleEntry.find({
-    userId: userOid,
+    ...scopeFilter,
     status: "confirmed",
     cookedAt: null,
     recipeId: { $ne: null },
@@ -268,6 +278,28 @@ export async function listPendingCookPrompts(
   return entries;
 }
 
+/**
+ * Ensures the current user is allowed to toggle `cookedAt` on [entry].
+ * Cooking is a shared kitchen action — any member of the entry's kitchen
+ * can mark it cooked (or undo), not just whoever originally added it.
+ * Personal entries remain owner-only.
+ */
+async function assertCanToggleCooked(
+  entry: { userId: Types.ObjectId; kitchenId?: Types.ObjectId | null },
+  userId: string
+): Promise<void> {
+  if (!entry.kitchenId) {
+    if (!entry.userId.equals(userId)) {
+      throw createError("You can only modify your own entries", 403);
+    }
+    return;
+  }
+  const user = await User.findById(userId).select("kitchenId").lean();
+  if (!user?.kitchenId || !user.kitchenId.equals(entry.kitchenId)) {
+    throw createError("You are not a member of this kitchen", 403);
+  }
+}
+
 export async function markEntryCooked(
   userId: string,
   entryId: string,
@@ -275,9 +307,7 @@ export async function markEntryCooked(
 ): Promise<void> {
   const entry = await ScheduleEntry.findById(entryId);
   if (!entry) throw createError("Schedule entry not found", 404);
-  if (!entry.userId.equals(userId)) {
-    throw createError("You can only mark your own entries as cooked", 403);
-  }
+  await assertCanToggleCooked(entry, userId);
   entry.cookedAt = cookedAt ?? new Date();
   await entry.save();
 }
@@ -288,9 +318,7 @@ export async function clearEntryCooked(
 ): Promise<void> {
   const entry = await ScheduleEntry.findById(entryId);
   if (!entry) throw createError("Schedule entry not found", 404);
-  if (!entry.userId.equals(userId)) {
-    throw createError("You can only modify your own entries", 403);
-  }
+  await assertCanToggleCooked(entry, userId);
   entry.cookedAt = null;
   await entry.save();
 }
