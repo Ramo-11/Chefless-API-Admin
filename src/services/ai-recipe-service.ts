@@ -101,7 +101,7 @@ function extractJsonObject(text: string): string {
 async function runRecipeJsonPrompt(system: string, userMessage: string): Promise<ImportedRecipe> {
   const client = getClient();
   const resp = await client.messages.create({
-    model: "claude-3-5-haiku-20241022",
+    model: "claude-haiku-4-5",
     max_tokens: 4096,
     system,
     messages: [{ role: "user", content: userMessage }],
@@ -185,7 +185,7 @@ export async function aiSuggestSubstitutions(
   });
 
   const resp = await client.messages.create({
-    model: "claude-3-5-haiku-20241022",
+    model: "claude-haiku-4-5",
     max_tokens: 2048,
     system:
       "Reply with JSON only: { \"substitutions\": [{ \"original\", \"replacement\", \"note?\" }] }",
