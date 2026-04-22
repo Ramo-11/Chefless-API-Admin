@@ -23,6 +23,12 @@ export interface IScheduleEntry extends Document {
    * after the user acknowledges they actually made it.
    */
   cookedAt?: Date | null;
+  /**
+   * Timestamp when the user dismissed the "did you cook this?" prompt for
+   * this entry. Persists across app restarts so a skipped prompt never
+   * resurfaces. Null = never skipped.
+   */
+  ratingPromptSkippedAt?: Date | null;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -88,6 +94,10 @@ const scheduleEntrySchema = new Schema<IScheduleEntry>(
       ref: "User",
     },
     cookedAt: {
+      type: Date,
+      default: null,
+    },
+    ratingPromptSkippedAt: {
       type: Date,
       default: null,
     },

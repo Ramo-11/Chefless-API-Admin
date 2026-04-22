@@ -268,6 +268,12 @@ export async function listPendingCookPrompts(
     ...scopeFilter,
     status: "confirmed",
     cookedAt: null,
+    // Skip prompts the viewer has already dismissed — this persists across
+    // app restarts so we never nag twice for the same meal.
+    $or: [
+      { ratingPromptSkippedAt: null },
+      { ratingPromptSkippedAt: { $exists: false } },
+    ],
     recipeId: { $ne: null },
     date: { $gte: cutoff, $lt: now },
   })
@@ -276,6 +282,22 @@ export async function listPendingCookPrompts(
     .lean();
 
   return entries;
+}
+
+/**
+ * Marks the cook prompt for [entryId] as dismissed by the user. Same kitchen /
+ * ownership check as cooking toggles — if you can cook it, you can skip it.
+ * Idempotent: skipping an already-skipped entry is a no-op.
+ */
+export async function skipCookPrompt(
+  userId: string,
+  entryId: string
+): Promise<void> {
+  const entry = await ScheduleEntry.findById(entryId);
+  if (!entry) throw createError("Schedule entry not found", 404);
+  await assertCanToggleCooked(entry, userId);
+  entry.ratingPromptSkippedAt = new Date();
+  await entry.save();
 }
 
 /**

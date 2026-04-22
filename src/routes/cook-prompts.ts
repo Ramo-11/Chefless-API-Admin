@@ -1,7 +1,11 @@
 import { Router, Request, Response, NextFunction } from "express";
+import { Types } from "mongoose";
 import { requireAuth } from "../middleware/auth";
 import User from "../models/User";
-import { listPendingCookPrompts } from "../services/rating-service";
+import {
+  listPendingCookPrompts,
+  skipCookPrompt,
+} from "../services/rating-service";
 
 const router = Router();
 
@@ -27,6 +31,30 @@ router.get(
 
     const prompts = await listPendingCookPrompts(user._id.toString());
     res.status(200).json({ prompts });
+  })
+);
+
+// POST /api/cook-prompts/:id/skip — permanently dismiss the rating prompt for
+// one entry so it never resurfaces on app reopen.
+router.post(
+  "/:id/skip",
+  requireAuth,
+  asyncHandler(async (req: Request, res: Response) => {
+    const { id } = req.params;
+    if (!Types.ObjectId.isValid(id)) {
+      res.status(400).json({ error: "Invalid entry id" });
+      return;
+    }
+
+    const firebaseUid = req.user!.uid;
+    const user = await User.findOne({ firebaseUid }).select("_id").lean();
+    if (!user) {
+      res.status(404).json({ error: "User not found" });
+      return;
+    }
+
+    await skipCookPrompt(user._id.toString(), id);
+    res.status(204).end();
   })
 );
 
