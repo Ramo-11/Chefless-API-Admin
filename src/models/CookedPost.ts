@@ -8,6 +8,11 @@ import mongoose, { Schema, Document, Types } from "mongoose";
  * read time) so the passport stamp map remains stable even if the recipe is
  * later edited or deleted. Tags align with Taste-the-World markers by cuisine
  * adjective (e.g. "Lebanese", "Italian").
+ *
+ * Soft-delete fields (`removedAt`, `removedBy`, `removalReason`) capture
+ * recipe-owner moderation actions. A removed post stays in Mongo so admins can
+ * audit it, but every read path filters it out and passport stamps earned via
+ * a removed post collapse back.
  */
 export interface ICookedPost extends Document {
   _id: Types.ObjectId;
@@ -24,6 +29,12 @@ export interface ICookedPost extends Document {
    * and regional-completion progress. Empty array if the recipe had no cuisines.
    */
   cuisineTags: string[];
+  /** Set when the recipe owner removed this post. Null otherwise. */
+  removedAt?: Date | null;
+  /** Recipe owner who performed the removal. */
+  removedBy?: Types.ObjectId | null;
+  /** Required reason captured from the owner at removal time (max 500 chars). */
+  removalReason?: string | null;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -68,6 +79,22 @@ const cookedPostSchema = new Schema<ICookedPost>(
       default: [],
       index: true,
     },
+    removedAt: {
+      type: Date,
+      default: null,
+      index: true,
+    },
+    removedBy: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+      default: null,
+    },
+    removalReason: {
+      type: String,
+      trim: true,
+      maxlength: 500,
+      default: null,
+    },
   },
   {
     timestamps: true,
@@ -79,6 +106,9 @@ cookedPostSchema.index({ recipeId: 1, createdAt: -1 });
 
 // User's own "I Cooked It" feed on profile + Wrapped aggregation.
 cookedPostSchema.index({ userId: 1, createdAt: -1 });
+
+// Moderation feed for the admin dashboard — newest removals first.
+cookedPostSchema.index({ removedAt: -1 });
 
 const CookedPost =
   (mongoose.models.CookedPost as mongoose.Model<ICookedPost>) ||

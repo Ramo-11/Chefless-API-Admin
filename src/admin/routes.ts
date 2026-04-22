@@ -59,6 +59,7 @@ import {
   updateFeedbackNote,
   deleteFeedback,
 } from "./controllers/feedback";
+import { moderatedPostsPage } from "./controllers/moderated-posts";
 
 const router = Router();
 
@@ -120,6 +121,7 @@ router.get("/", dashboardPage);
 router.get("/analytics", analyticsPage);
 router.get("/users", usersPage);
 router.get("/recipes", recipesPage);
+router.get("/moderated-posts", moderatedPostsPage);
 router.get("/reports", reportsPage);
 router.get("/labels", labelsPage);
 router.get("/seasonal", seasonalPage);

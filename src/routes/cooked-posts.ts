@@ -9,6 +9,7 @@ import {
   deleteCookedPost,
   listCookedPostsForRecipe,
   listCookedPostsForUser,
+  removeCookedPostByOwner,
   uploadCookedPostPhoto,
   countCookedPostsForRecipe,
 } from "../services/cooked-post-service";
@@ -133,6 +134,37 @@ router.get(
     >;
     const page = await listCookedPostsForUser(id, cursor, limit);
     res.status(200).json(page);
+  })
+);
+
+const removePostSchema = z.object({
+  reason: z
+    .string()
+    .trim()
+    .min(1, "A reason is required.")
+    .max(500, "Reason must be 500 characters or fewer."),
+});
+
+// POST /api/cooked-posts/:id/remove — recipe owner removes someone else's post
+router.post(
+  "/:id/remove",
+  requireAuth,
+  validate({ params: objectIdParam, body: removePostSchema }),
+  asyncHandler(async (req: Request, res: Response) => {
+    const firebaseUid = req.user!.uid;
+    const user = await User.findOne({ firebaseUid }).select("_id").lean();
+    if (!user) {
+      res.status(404).json({ error: "User not found" });
+      return;
+    }
+    const { id } = req.params as z.infer<typeof objectIdParam>;
+    const { reason } = req.body as z.infer<typeof removePostSchema>;
+    await removeCookedPostByOwner({
+      postId: id,
+      ownerId: user._id.toString(),
+      reason,
+    });
+    res.status(200).json({ success: true });
   })
 );
 

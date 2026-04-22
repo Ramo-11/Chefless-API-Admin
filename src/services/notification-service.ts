@@ -50,6 +50,8 @@ function deriveRouteForType(params: CreateNotificationParams): string | null {
     case "recipe_shared":
     case "recipe_cooked":
       return params.recipeId ? `/recipe/${params.recipeId}` : null;
+    case "cooked_post_removed":
+      return params.recipeId ? `/recipe/${params.recipeId}` : "/notifications";
     case "passport_stamp":
       return "/passport";
     case "new_follower":
@@ -788,5 +790,31 @@ export async function notifyPassportBadge(params: {
     shareMessage: `badge:${params.badgeId}`,
     pushTitle: "Badge unlocked",
     pushBody: "You earned a new Chefless passport badge.",
+  });
+}
+
+/**
+ * Notify the uploader that a recipe owner has removed their "I Cooked It"
+ * photo. The owner-supplied reason is surfaced in the push body so the user
+ * understands why without having to open the app.
+ */
+export async function notifyCookedPostRemoved(params: {
+  uploaderId: string;
+  recipeId: string | null;
+  recipeTitle: string;
+  ownerName: string;
+  reason: string;
+}): Promise<void> {
+  const body =
+    `${params.ownerName} removed your "I Cooked It" photo for ` +
+    `"${params.recipeTitle}". Reason: ${params.reason}`;
+  await createNotification({
+    userId: new Types.ObjectId(params.uploaderId),
+    type: "cooked_post_removed",
+    recipeId: params.recipeId ? new Types.ObjectId(params.recipeId) : undefined,
+    recipeTitle: params.recipeTitle,
+    shareMessage: params.reason,
+    pushTitle: "Your cooked-it photo was removed",
+    pushBody: body,
   });
 }

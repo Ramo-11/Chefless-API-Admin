@@ -13,6 +13,7 @@ import {
   notifyRecipeCooked,
   notifyPassportStamp,
   notifyPassportBadge,
+  notifyCookedPostRemoved,
 } from "./notification-service";
 import { canViewRecipe } from "./visibility-service";
 
@@ -153,6 +154,7 @@ export async function createCookedPost(params: {
   // inserting the post so we can accurately detect first unlocks.
   const priorCuisines = await CookedPost.distinct("cuisineTags", {
     userId: userOid,
+    removedAt: null,
   });
   const priorSet = new Set<string>(
     priorCuisines
@@ -278,6 +280,7 @@ export async function listCookedPostsForRecipe(
 
   const query: Record<string, unknown> = {
     recipeId: new Types.ObjectId(recipeId),
+    removedAt: null,
   };
   if (cursor) {
     query._id = { $lt: new Types.ObjectId(cursor) };
@@ -325,6 +328,7 @@ export async function listCookedPostsForUser(
 ): Promise<PaginatedCookedPosts> {
   const query: Record<string, unknown> = {
     userId: new Types.ObjectId(userId),
+    removedAt: null,
   };
   if (cursor) {
     query._id = { $lt: new Types.ObjectId(cursor) };
@@ -380,5 +384,64 @@ export async function countCookedPostsForRecipe(
 ): Promise<number> {
   return CookedPost.countDocuments({
     recipeId: new Types.ObjectId(recipeId),
+    removedAt: null,
   });
+}
+
+/**
+ * Recipe-owner moderation: flag an "I Cooked It" post as removed, capturing
+ * the owner's mandatory reason. The uploader gets a push notification; the
+ * post stays in Mongo so admins can audit the action. Passport stamps earned
+ * through a removed post collapse because every read path filters them out.
+ */
+export async function removeCookedPostByOwner(params: {
+  postId: string;
+  ownerId: string;
+  reason: string;
+}): Promise<{ ok: true }> {
+  const { postId, ownerId, reason } = params;
+  const trimmed = reason.trim();
+  if (trimmed.length === 0) {
+    throw createError("A reason is required to remove this post.", 400);
+  }
+  if (trimmed.length > 500) {
+    throw createError("Reason must be 500 characters or fewer.", 400);
+  }
+
+  const post = await CookedPost.findById(postId);
+  if (!post) throw createError("Post not found", 404);
+  if (post.removedAt) {
+    throw createError("This post has already been removed.", 409);
+  }
+  if (!post.recipeAuthorId || !post.recipeAuthorId.equals(ownerId)) {
+    throw createError(
+      "Only the recipe owner can remove a cooked-it post.",
+      403
+    );
+  }
+  if (post.userId.equals(ownerId)) {
+    throw createError(
+      "Use delete instead of remove on your own post.",
+      400
+    );
+  }
+
+  post.removedAt = new Date();
+  post.removedBy = new Types.ObjectId(ownerId);
+  post.removalReason = trimmed;
+  await post.save();
+
+  const owner = await User.findById(ownerId).select("fullName").lean();
+  notifyCookedPostRemoved({
+    uploaderId: post.userId.toString(),
+    recipeId: post.recipeId?.toString() ?? null,
+    recipeTitle: post.recipeTitle,
+    ownerName: owner?.fullName ?? "The recipe owner",
+    reason: trimmed,
+  }).catch((err: unknown) => {
+    const msg = err instanceof Error ? err.message : "Unknown error";
+    console.error(`notifyCookedPostRemoved failed: ${msg}`);
+  });
+
+  return { ok: true };
 }

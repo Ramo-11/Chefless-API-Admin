@@ -18,6 +18,7 @@ export const NOTIFICATION_TYPES = [
   "kitchen_joined",
   "kitchen_removed",
   "recipe_cooked", // Someone posted an "I Cooked It" photo of your recipe
+  "cooked_post_removed", // Recipe owner removed your "I Cooked It" photo
   "passport_stamp", // You unlocked a new country/region stamp
   "system",
 ] as const;

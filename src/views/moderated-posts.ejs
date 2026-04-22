@@ -1,0 +1,93 @@
+<% var pageTitle = 'Moderated Cooked-It Posts'; %>
+<% var page = 'moderated-posts'; %>
+
+<div class="page-header">
+  <h1>Moderated "I Cooked It" Posts</h1>
+  <p class="page-subtitle">
+    <%= pagination.totalItems %> post<%= pagination.totalItems === 1 ? '' : 's' %>
+    removed by recipe owners
+  </p>
+</div>
+
+<div class="card">
+  <div class="table-responsive">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Photo</th>
+          <th>Recipe</th>
+          <th>Uploader</th>
+          <th>Removed by</th>
+          <th>Reason</th>
+          <th>Caption</th>
+          <th>When</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% posts.forEach(function(post) { %>
+        <tr>
+          <td>
+            <% if (post.photoUrl) { %>
+              <a href="<%= post.photoUrl %>" target="_blank" rel="noopener">
+                <img src="<%= post.photoUrl %>" alt="Removed cooked-it photo" class="recipe-thumb">
+              </a>
+            <% } else { %>
+              <div class="recipe-thumb recipe-thumb-placeholder"><i class="fas fa-image"></i></div>
+            <% } %>
+          </td>
+          <td>
+            <% if (post.recipeId) { %>
+              <a href="/admin/recipes?search=<%= encodeURIComponent(post.recipeTitle) %>" class="recipe-title">
+                <%= post.recipeTitle %>
+              </a>
+            <% } else { %>
+              <span class="recipe-title text-muted"><%= post.recipeTitle %></span>
+            <% } %>
+          </td>
+          <td>
+            <% if (post.uploader) { %>
+              <div><strong><%= post.uploader.fullName %></strong></div>
+              <div class="text-muted" style="font-size:12px;"><%= post.uploader.email %></div>
+            <% } else { %>
+              <span class="text-muted">Unknown</span>
+            <% } %>
+          </td>
+          <td>
+            <% if (post.owner) { %>
+              <div><strong><%= post.owner.fullName %></strong></div>
+              <div class="text-muted" style="font-size:12px;"><%= post.owner.email %></div>
+            <% } else { %>
+              <span class="text-muted">Unknown</span>
+            <% } %>
+          </td>
+          <td style="max-width:280px;">
+            <span><%= post.removalReason || '—' %></span>
+          </td>
+          <td style="max-width:240px;">
+            <% if (post.caption && post.caption.length) { %>
+              <span class="text-muted"><%= post.caption %></span>
+            <% } else { %>
+              <span class="text-muted">—</span>
+            <% } %>
+          </td>
+          <td class="text-muted" style="white-space:nowrap;">
+            <%= new Date(post.removedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) %>
+          </td>
+        </tr>
+        <% }); %>
+        <% if (posts.length === 0) { %>
+        <tr>
+          <td colspan="7" class="empty-state">
+            <i class="fas fa-check-circle"></i>
+            <span>No cooked-it posts have been moderated yet.</span>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<% if (pagination.total > 1) { %>
+  <%- include('partials/pagination', { pagination, baseUrl: '/admin/moderated-posts?' }) %>
+<% } %>
