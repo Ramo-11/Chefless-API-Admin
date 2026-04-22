@@ -40,7 +40,8 @@ router.post(
   "/:id/skip",
   requireAuth,
   asyncHandler(async (req: Request, res: Response) => {
-    const { id } = req.params;
+    const idParam = req.params.id;
+    const id = typeof idParam === "string" ? idParam : "";
     if (!Types.ObjectId.isValid(id)) {
       res.status(400).json({ error: "Invalid entry id" });
       return;
