@@ -162,7 +162,6 @@ async function run() {
         email: m.email,
         fullName: m.fullName,
         lastActiveAt: new Date(),
-        // @ts-expect-error — extra tag for cleanup scoping
         videoDemo: true,
       });
     }),
@@ -187,7 +186,6 @@ async function run() {
       membersWithScheduleEdit: memberDocs.map((m) => m._id),
       membersWithApprovalPower: [],
       isPublic: false,
-      // @ts-expect-error — extra tag for cleanup scoping
       videoDemo: true,
     });
   }
@@ -222,7 +220,6 @@ async function run() {
         photos: [],
         isPrivate: false,
         isHidden: false,
-        // @ts-expect-error — extra tag for cleanup scoping
         videoDemo: true,
       });
       return { recipe: doc, author };
