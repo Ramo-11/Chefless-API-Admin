@@ -62,7 +62,13 @@
           <td>
             <div class="badge-group">
               <% if (user.isPremium) { %>
-                <span class="badge badge-premium"><i class="fas fa-crown"></i> Premium</span>
+                <% if (user.premiumPlan === 'admin') { %>
+                  <span class="badge badge-premium" title="Granted by an admin"><i class="fas fa-crown"></i> Premium · Comp</span>
+                <% } else if (user.premiumPlan === 'promo') { %>
+                  <span class="badge badge-premium" title="Activated via promo code"><i class="fas fa-crown"></i> Premium · Promo</span>
+                <% } else { %>
+                  <span class="badge badge-premium" title="Paid subscriber"><i class="fas fa-crown"></i> Premium · Paid</span>
+                <% } %>
               <% } %>
               <% if (user.isBanned) { %>
                 <span class="badge badge-danger">Banned</span>
@@ -282,7 +288,24 @@
             <div class="detail-section">
               <h4>Account Info</h4>
               <div class="detail-row"><span>Profile:</span> <span>${u.isPublic ? 'Public' : 'Private'}</span></div>
-              <div class="detail-row"><span>Premium:</span> <span>${u.isPremium ? 'Yes (' + esc(u.premiumPlan || 'active') + ')' : 'No'}</span></div>
+              <div class="detail-row"><span>Premium:</span> <span>${(() => {
+                if (!u.isPremium) return 'No';
+                const plan = u.premiumPlan;
+                if (plan === 'admin') {
+                  const granter = u.premiumGrantedBy
+                    ? `${esc(u.premiumGrantedBy.name)} (${esc(u.premiumGrantedBy.email)})`
+                    : 'unknown admin';
+                  const when = u.premiumGrantedAt
+                    ? ` on ${new Date(u.premiumGrantedAt).toLocaleDateString()}`
+                    : '';
+                  return `Comp — granted by ${granter}${when}`;
+                }
+                if (plan === 'promo') return 'Promo code';
+                if (plan === 'monthly') return 'Paid · monthly';
+                if (plan === 'annual') return 'Paid · annual';
+                return 'Yes';
+              })()}</span></div>
+              ${u.isPremium && u.premiumExpiresAt ? `<div class="detail-row"><span>Expires:</span> <span>${new Date(u.premiumExpiresAt).toLocaleDateString()}</span></div>` : ''}
               <div class="detail-row"><span>Status:</span> <span>${u.isBanned ? '<span class="badge badge-danger">Banned</span>' : '<span class="badge badge-success">Active</span>'}</span></div>
               <div class="detail-row"><span>Joined:</span> <span>${new Date(u.createdAt).toLocaleDateString()}</span></div>
               <div class="detail-row"><span>Last Active:</span> <span>${u.lastActiveAt ? new Date(u.lastActiveAt).toLocaleDateString() : 'N/A'}</span></div>

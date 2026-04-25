@@ -162,7 +162,13 @@ router.post("/revenuecat", async (req: Request, res: Response) => {
           }
         }
 
-        await User.updateOne({ firebaseUid: appUserId }, { $set: set });
+        await User.updateOne(
+          { firebaseUid: appUserId },
+          {
+            $set: set,
+            $unset: { premiumGrantedBy: 1, premiumGrantedAt: 1 },
+          }
+        );
         break;
       }
 
@@ -172,7 +178,12 @@ router.post("/revenuecat", async (req: Request, res: Response) => {
           { firebaseUid: appUserId },
           {
             $set: { isPremium: false },
-            $unset: { premiumPlan: 1, premiumExpiresAt: 1 },
+            $unset: {
+              premiumPlan: 1,
+              premiumExpiresAt: 1,
+              premiumGrantedBy: 1,
+              premiumGrantedAt: 1,
+            },
           }
         );
         break;

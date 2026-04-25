@@ -20,6 +20,13 @@ export interface IKitchen extends Document {
   /** Custom meal slot names added by the kitchen lead (e.g. "Pre-Workout", "Late Night"). */
   customMealSlots: string[];
   /**
+   * Lowercase-canonical names of default meal slots the lead has chosen to hide
+   * for this kitchen. Subset of `DEFAULT_MEAL_SLOTS`. Empty by default — every
+   * default surfaces to members until the lead opts a slot out. Hiding a slot
+   * removes it from the schedule grid and from `mealSlotOrder` (in lockstep).
+   */
+  hiddenDefaultSlots: string[];
+  /**
    * Kitchen-preferred display order for all meal slots (defaults + customs).
    * When set, this is the single source of truth for sorting on the home
    * glance strip and the schedule screen. When `undefined` (grandfathered
@@ -128,6 +135,23 @@ const kitchenSchema = new Schema<IKitchen>(
       validate: {
         validator: (v: string[]) => v.length <= 20,
         message: "Maximum 20 custom meal slots allowed",
+      },
+    },
+    hiddenDefaultSlots: {
+      type: [String],
+      default: [],
+      validate: {
+        // Allowed values are the four canonical defaults — bound by name AND
+        // count so a malformed write can't silently grow the array.
+        validator: (v: string[]) =>
+          v.length <= 4 &&
+          v.every((s) =>
+            ["breakfast", "lunch", "dinner", "snack"].includes(
+              s.trim().toLowerCase()
+            )
+          ),
+        message:
+          "hiddenDefaultSlots may only contain breakfast, lunch, dinner, or snack",
       },
     },
     mealSlotOrder: {

@@ -15,6 +15,8 @@
     "seed:admin": "tsx src/scripts/seed-admin.ts",
     "backfill:original-recipes": "tsx src/scripts/backfill-original-recipes-count.ts",
     "backfill:remix-signatures": "tsx src/scripts/backfill-remix-signatures.ts",
+    "create-apple-review-user": "tsx src/scripts/create-apple-review-user.ts",
+    "backfill-premium-grants": "tsx src/scripts/backfill-premium-grants.ts",
     "test": "vitest run",
     "test:watch": "vitest"
   },

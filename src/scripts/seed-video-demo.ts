@@ -16,6 +16,7 @@ import User from "../models/User";
 import Kitchen from "../models/Kitchen";
 import Recipe from "../models/Recipe";
 import ScheduleEntry from "../models/ScheduleEntry";
+import ShoppingList from "../models/ShoppingList";
 
 const TAG = { videoDemo: true } as const;
 
@@ -25,97 +26,208 @@ const MEMBERS = [
   { fullName: "Layla Henderson", email: "layla.demo@chefless.test" },
 ];
 
-const RECIPES = [
+type RecipeSeed = {
+  title: string;
+  description: string;
+  cuisineTags: string[];
+  difficulty: "easy" | "medium" | "hard";
+  prepTime: number;
+  cookTime: number;
+  servings: number;
+  photo: string;
+  ingredients: Array<{ name: string; quantity: number; unit: string }>;
+};
+
+// Unsplash direct image URLs — stable CDN, resized inline
+const img = (id: string) =>
+  `https://images.unsplash.com/${id}?w=900&h=900&fit=crop&auto=format&q=80`;
+
+const RECIPES: RecipeSeed[] = [
   {
     title: "Chicken Tikka Masala",
     description: "Creamy tomato-cashew sauce, charred chicken, garam masala finish.",
     cuisineTags: ["indian"],
-    difficulty: "medium" as const,
+    difficulty: "medium",
     prepTime: 20,
     cookTime: 25,
     servings: 4,
+    photo: img("photo-1585937421612-70a008356fbe"),
+    ingredients: [
+      { name: "Chicken thigh", quantity: 700, unit: "g" },
+      { name: "Yogurt", quantity: 200, unit: "g" },
+      { name: "Tomato passata", quantity: 400, unit: "g" },
+      { name: "Garam masala", quantity: 2, unit: "tsp" },
+      { name: "Heavy cream", quantity: 150, unit: "ml" },
+    ],
   },
   {
     title: "Shakshuka & Sourdough",
     description: "Eggs poached in smoked paprika tomato, crusty sourdough soldiers.",
     cuisineTags: ["middle_eastern"],
-    difficulty: "easy" as const,
+    difficulty: "easy",
     prepTime: 5,
     cookTime: 20,
     servings: 2,
+    photo: img("photo-1590412200988-a436970781fa"),
+    ingredients: [
+      { name: "Eggs", quantity: 4, unit: "pc" },
+      { name: "Canned tomatoes", quantity: 400, unit: "g" },
+      { name: "Red bell pepper", quantity: 1, unit: "pc" },
+      { name: "Smoked paprika", quantity: 1, unit: "tsp" },
+      { name: "Sourdough loaf", quantity: 1, unit: "pc" },
+    ],
   },
   {
     title: "Lamb Kofta Wraps",
     description: "Charcoal-grilled lamb, yogurt-tahini, pickled onions, warm laffa.",
     cuisineTags: ["middle_eastern"],
-    difficulty: "medium" as const,
+    difficulty: "medium",
     prepTime: 15,
     cookTime: 15,
     servings: 4,
+    photo: img("photo-1529042410759-befb1204b468"),
+    ingredients: [
+      { name: "Ground lamb", quantity: 500, unit: "g" },
+      { name: "Red onion", quantity: 1, unit: "pc" },
+      { name: "Parsley", quantity: 1, unit: "bunch" },
+      { name: "Tahini", quantity: 3, unit: "tbsp" },
+      { name: "Laffa bread", quantity: 4, unit: "pc" },
+    ],
   },
   {
     title: "Date & Pistachio Maamoul",
     description: "Semolina shortbread filled with date paste, crushed pistachio.",
     cuisineTags: ["middle_eastern"],
-    difficulty: "medium" as const,
+    difficulty: "medium",
     prepTime: 30,
     cookTime: 22,
     servings: 12,
+    photo: img("photo-1534432182912-63863115e106"),
+    ingredients: [
+      { name: "Semolina flour", quantity: 300, unit: "g" },
+      { name: "Medjool dates", quantity: 250, unit: "g" },
+      { name: "Pistachios", quantity: 100, unit: "g" },
+      { name: "Butter", quantity: 150, unit: "g" },
+    ],
   },
   {
     title: "Grilled Sea Bass",
     description: "Whole branzino, lemon-za'atar, fennel, roasted potatoes.",
     cuisineTags: ["mediterranean"],
-    difficulty: "medium" as const,
+    difficulty: "medium",
     prepTime: 10,
     cookTime: 20,
     servings: 2,
+    photo: img("photo-1519708227418-c8fd9a32b7a2"),
+    ingredients: [
+      { name: "Whole sea bass", quantity: 2, unit: "pc" },
+      { name: "Lemon", quantity: 2, unit: "pc" },
+      { name: "Fennel bulb", quantity: 1, unit: "pc" },
+      { name: "Baby potatoes", quantity: 500, unit: "g" },
+    ],
   },
   {
     title: "Miso Oats with Soft Egg",
     description: "Savory oats, white miso, scallion, 6-minute egg.",
     cuisineTags: ["japanese"],
-    difficulty: "easy" as const,
+    difficulty: "easy",
     prepTime: 5,
     cookTime: 10,
     servings: 1,
+    photo: img("photo-1542691457-cbe4df041eb2"),
+    ingredients: [
+      { name: "Rolled oats", quantity: 80, unit: "g" },
+      { name: "White miso", quantity: 1, unit: "tbsp" },
+      { name: "Eggs", quantity: 1, unit: "pc" },
+      { name: "Scallion", quantity: 2, unit: "pc" },
+    ],
   },
   {
     title: "Roast Chicken & Schmaltz Potatoes",
     description: "Dry-brined whole bird, crispy schmaltz fingerlings.",
     cuisineTags: ["american"],
-    difficulty: "medium" as const,
+    difficulty: "medium",
     prepTime: 20,
     cookTime: 80,
     servings: 4,
+    photo: img("photo-1598103442097-8b74394b95c6"),
+    ingredients: [
+      { name: "Whole chicken", quantity: 1, unit: "pc" },
+      { name: "Fingerling potatoes", quantity: 700, unit: "g" },
+      { name: "Thyme", quantity: 1, unit: "bunch" },
+      { name: "Butter", quantity: 80, unit: "g" },
+    ],
   },
   {
     title: "Kale Caesar with Anchovy Croutons",
     description: "Massaged kale, parmesan snow, brown-butter croutons with anchovy.",
     cuisineTags: ["american"],
-    difficulty: "easy" as const,
+    difficulty: "easy",
     prepTime: 12,
     cookTime: 8,
     servings: 2,
+    photo: img("photo-1546793665-c74683f339c1"),
+    ingredients: [
+      { name: "Lacinato kale", quantity: 1, unit: "bunch" },
+      { name: "Parmesan", quantity: 80, unit: "g" },
+      { name: "Anchovy fillets", quantity: 6, unit: "pc" },
+      { name: "Sourdough cubes", quantity: 2, unit: "cups" },
+    ],
   },
   {
     title: "Biryani (Hyderabadi)",
     description: "Dum-style basmati, saffron, marinated chicken, browned onions.",
     cuisineTags: ["indian"],
-    difficulty: "hard" as const,
+    difficulty: "hard",
     prepTime: 45,
     cookTime: 60,
     servings: 6,
+    photo: img("photo-1563379091339-03b21ab4a4f8"),
+    ingredients: [
+      { name: "Basmati rice", quantity: 500, unit: "g" },
+      { name: "Chicken", quantity: 1, unit: "kg" },
+      { name: "Saffron", quantity: 1, unit: "pinch" },
+      { name: "Yogurt", quantity: 200, unit: "g" },
+      { name: "Brown onions", quantity: 200, unit: "g" },
+    ],
   },
   {
     title: "Ginger-Scallion Bowls",
     description: "Jasmine rice, poached chicken, soy-ginger-scallion oil.",
     cuisineTags: ["chinese"],
-    difficulty: "easy" as const,
+    difficulty: "easy",
     prepTime: 10,
     cookTime: 25,
     servings: 3,
+    photo: img("photo-1569718212165-3a8278d5f624"),
+    ingredients: [
+      { name: "Jasmine rice", quantity: 400, unit: "g" },
+      { name: "Chicken breast", quantity: 500, unit: "g" },
+      { name: "Ginger", quantity: 60, unit: "g" },
+      { name: "Scallion", quantity: 6, unit: "pc" },
+      { name: "Soy sauce", quantity: 3, unit: "tbsp" },
+    ],
   },
+];
+
+// Split recipe authorship so Omar (lead) owns 6 — makes Recipes tab look full.
+const LEAD_RECIPE_INDEXES = new Set([0, 4, 6, 7, 8, 9]);
+
+const SHOPPING_ITEMS: Array<{ name: string; quantity: number; unit: string; category: string }> = [
+  { name: "Chicken thighs", quantity: 1, unit: "kg", category: "Meat & Seafood" },
+  { name: "Whole sea bass", quantity: 2, unit: "pc", category: "Meat & Seafood" },
+  { name: "Greek yogurt", quantity: 500, unit: "g", category: "Dairy" },
+  { name: "Heavy cream", quantity: 250, unit: "ml", category: "Dairy" },
+  { name: "Parmesan", quantity: 200, unit: "g", category: "Dairy" },
+  { name: "Eggs", quantity: 12, unit: "pc", category: "Dairy" },
+  { name: "Lemons", quantity: 4, unit: "pc", category: "Produce" },
+  { name: "Scallions", quantity: 1, unit: "bunch", category: "Produce" },
+  { name: "Lacinato kale", quantity: 2, unit: "bunches", category: "Produce" },
+  { name: "Red bell peppers", quantity: 3, unit: "pc", category: "Produce" },
+  { name: "Basmati rice", quantity: 1, unit: "kg", category: "Pantry" },
+  { name: "Tomato passata", quantity: 800, unit: "g", category: "Pantry" },
+  { name: "Sourdough loaf", quantity: 1, unit: "pc", category: "Bakery" },
+  { name: "Laffa bread", quantity: 1, unit: "pack", category: "Bakery" },
 ];
 
 /** Monday 00:00 of the week containing `d`. */
@@ -197,27 +309,49 @@ async function run() {
     { $set: { kitchenId: kitchen._id } },
   );
 
-  // 4. Seed recipes (half authored by lead, half by members)
-  const authors = [lead, ...memberDocs];
+  // 4. Seed recipes with photos + ingredients. Lead (Omar) owns 6, members split the rest.
+  const memberRotation = [...memberDocs];
+  let memberIdx = 0;
   const recipeDocs = await Promise.all(
     RECIPES.map(async (r, i) => {
-      const author = authors[i % authors.length];
+      const author = LEAD_RECIPE_INDEXES.has(i)
+        ? lead
+        : memberRotation[memberIdx++ % memberRotation.length];
       const existing = await Recipe.findOne({
         authorId: author._id,
         title: r.title,
       });
-      if (existing) return { recipe: existing, author };
+      if (existing) {
+        // Backfill photo + ingredients if missing
+        let dirty = false;
+        if (!existing.photos || existing.photos.length === 0) {
+          existing.photos = [r.photo];
+          dirty = true;
+        }
+        if (!existing.ingredients || existing.ingredients.length === 0) {
+          existing.ingredients = r.ingredients as never;
+          dirty = true;
+        }
+        if (dirty) await existing.save();
+        return { recipe: existing, author };
+      }
       const doc = await Recipe.create({
-        ...r,
+        title: r.title,
+        description: r.description,
+        cuisineTags: r.cuisineTags,
+        difficulty: r.difficulty,
+        prepTime: r.prepTime,
+        cookTime: r.cookTime,
+        servings: r.servings,
         authorId: author._id,
-        totalTime: (r.prepTime ?? 0) + (r.cookTime ?? 0),
-        baseServings: r.servings ?? 2,
+        totalTime: r.prepTime + r.cookTime,
+        baseServings: r.servings,
         tags: [],
         labels: [],
         dietaryTags: [],
-        ingredients: [],
+        ingredients: r.ingredients,
         steps: [],
-        photos: [],
+        photos: [r.photo],
         isPrivate: false,
         isHidden: false,
         videoDemo: true,
@@ -312,6 +446,28 @@ async function run() {
     console.log("pinned tonight's dinner: Chicken Tikka Masala");
   }
 
+  // 7. Seed the week's shopping list — categorized items, a few pre-checked.
+  const weekStartDate = weekStart(new Date());
+  const weekEndDate = new Date(weekStartDate);
+  weekEndDate.setDate(weekStartDate.getDate() + 6);
+
+  await ShoppingList.deleteMany({ kitchenId: kitchen._id, generatedFromSchedule: true });
+  await ShoppingList.create({
+    kitchenId: kitchen._id,
+    userId: lead._id,
+    name: "This Week",
+    generatedFromSchedule: true,
+    scheduleStartDate: weekStartDate,
+    scheduleEndDate: weekEndDate,
+    items: SHOPPING_ITEMS.map((it, i) => ({
+      ...it,
+      isChecked: i < 3, // a few checked for social-proof of active use
+      addedBy: lead._id,
+    })),
+    videoDemo: true,
+  });
+  console.log("shopping list items:", SHOPPING_ITEMS.length);
+
   console.log("\n✅ seeded. Log in with", leadEmail, "/ DemoPass_2026!");
   console.log("kitchen id:", kitchen._id.toString());
 
@@ -322,8 +478,9 @@ async function cleanup() {
   const kitchen = await Kitchen.findOne({ name: "The Hendersons" });
   if (kitchen) {
     await ScheduleEntry.deleteMany({ kitchenId: kitchen._id });
+    await ShoppingList.deleteMany({ kitchenId: kitchen._id });
     await Kitchen.deleteOne({ _id: kitchen._id });
-    console.log("removed kitchen + schedule");
+    console.log("removed kitchen + schedule + shopping");
   }
   await User.updateMany(
     { email: { $in: MEMBERS.map((m) => m.email) } },

@@ -219,6 +219,16 @@ export const DEFAULT_MEAL_SLOTS: readonly string[] = [
   "snack",
 ];
 
+/** Defaults the lead has not hidden — subtract `hiddenDefaultSlots` from the canonical four. */
+export function activeDefaultSlots(
+  kitchen: Pick<IKitchen, "hiddenDefaultSlots">
+): string[] {
+  const hidden = new Set(
+    (kitchen.hiddenDefaultSlots ?? []).map((s) => s.trim().toLowerCase())
+  );
+  return DEFAULT_MEAL_SLOTS.filter((d) => !hidden.has(d));
+}
+
 function hasSlotOrderEditPermission(
   userId: string,
   kitchen: Pick<
@@ -266,7 +276,7 @@ export async function updateMealSlotOrder(
     );
   }
 
-  const expected = [...DEFAULT_MEAL_SLOTS, ...kitchen.customMealSlots];
+  const expected = [...activeDefaultSlots(kitchen), ...kitchen.customMealSlots];
   const normaliseKey = (s: string) => s.trim().toLowerCase();
   const expectedKeys = [...expected].map(normaliseKey).sort();
   const submittedKeys = [...submittedOrder].map(normaliseKey).sort();
@@ -301,17 +311,17 @@ export async function syncMealSlotOrderWithCustomSlots(
   newCustomSlots: string[]
 ): Promise<void> {
   const kitchen = await Kitchen.findById(kitchenId).select(
-    "mealSlotOrder customMealSlots"
+    "mealSlotOrder customMealSlots hiddenDefaultSlots"
   );
   if (!kitchen || !kitchen.mealSlotOrder) return;
 
   const lower = (s: string) => s.trim().toLowerCase();
   const customLowerToCased = new Map(newCustomSlots.map((s) => [lower(s), s]));
-  const defaultSet = new Set(DEFAULT_MEAL_SLOTS.map(lower));
+  const activeDefaultSet = new Set(activeDefaultSlots(kitchen).map(lower));
 
   const retained = kitchen.mealSlotOrder.filter((slot) => {
     const key = lower(slot);
-    return defaultSet.has(key) || customLowerToCased.has(key);
+    return activeDefaultSet.has(key) || customLowerToCased.has(key);
   });
   const retainedKeys = new Set(retained.map(lower));
   const appended = [...customLowerToCased.entries()]
@@ -320,6 +330,119 @@ export async function syncMealSlotOrderWithCustomSlots(
 
   kitchen.mealSlotOrder = [...retained, ...appended];
   await kitchen.save();
+}
+
+/**
+ * Result of [setHiddenDefaultSlots]. Mirrors the cascade-confirmation flow of
+ * the custom-slots PUT handler: a `needsConfirmation` outcome lets the client
+ * surface a count-aware warning before re-submitting with `force=true`.
+ */
+export type SetHiddenDefaultsResult =
+  | { kind: "ok"; kitchen: IKitchen; deletedEntries: number; removedSlots: string[] }
+  | {
+      kind: "needs_confirmation";
+      affectedCount: number;
+      removedSlots: string[];
+      affectedBySlot: Record<string, number>;
+    };
+
+/**
+ * Replaces the kitchen's hidden-default-slot list (lead only). Members lose
+ * access to the hidden defaults — the slot vanishes from the schedule grid,
+ * the slot picker, and `mealSlotOrder` (kept in lockstep). Any schedule
+ * entries planned in a slot being newly hidden cascade-delete on `force=true`.
+ *
+ * Unhiding a default is unconditional (no orphans to consider) and reuses this
+ * same path with a shorter input list.
+ */
+export async function setHiddenDefaultSlots(
+  userId: string,
+  hiddenSlots: string[],
+  options: { force?: boolean } = {}
+): Promise<SetHiddenDefaultsResult> {
+  const user = await User.findById(userId).select("kitchenId").lean();
+  if (!user || !user.kitchenId) {
+    throw createError("You are not in a kitchen", 400);
+  }
+
+  const kitchen = await Kitchen.findById(user.kitchenId);
+  if (!kitchen) {
+    throw createError("Kitchen not found", 404);
+  }
+
+  if (!kitchen.leadId.equals(userId)) {
+    throw createError("Only the kitchen lead can manage meal slots", 403);
+  }
+
+  const lower = (s: string) => s.trim().toLowerCase();
+  const allowed = new Set(DEFAULT_MEAL_SLOTS.map(lower));
+  const normalised = [
+    ...new Set(hiddenSlots.map(lower).filter((s) => allowed.has(s))),
+  ];
+
+  // Slots becoming hidden in this call (i.e. not previously hidden) — those
+  // are the ones whose schedule entries we may need to cascade-delete.
+  const previouslyHidden = new Set(
+    (kitchen.hiddenDefaultSlots ?? []).map(lower)
+  );
+  const newlyHidden = normalised.filter((s) => !previouslyHidden.has(s));
+
+  let affectedCount = 0;
+  const affectedBySlot: Record<string, number> = {};
+  if (newlyHidden.length > 0) {
+    for (const slot of newlyHidden) {
+      const count = await ScheduleEntry.countDocuments({
+        kitchenId: kitchen._id,
+        // Schedule entries store mealSlot in canonical lowercase already, but
+        // we match case-insensitively so legacy mixed-case data still cascades.
+        mealSlot: { $regex: `^${slot}$`, $options: "i" },
+      });
+      affectedBySlot[slot] = count;
+      affectedCount += count;
+    }
+  }
+
+  if (affectedCount > 0 && options.force !== true) {
+    return {
+      kind: "needs_confirmation",
+      affectedCount,
+      removedSlots: newlyHidden,
+      affectedBySlot,
+    };
+  }
+
+  kitchen.hiddenDefaultSlots = normalised;
+  await kitchen.save();
+
+  // Drop the now-hidden defaults from `mealSlotOrder` if it's set, so the
+  // ordered view doesn't render slots that no longer exist.
+  await syncMealSlotOrderWithCustomSlots(
+    kitchen._id,
+    kitchen.customMealSlots
+  );
+
+  let deletedEntries = 0;
+  if (newlyHidden.length > 0 && affectedCount > 0) {
+    const deleteResult = await ScheduleEntry.deleteMany({
+      kitchenId: kitchen._id,
+      mealSlot: {
+        $in: newlyHidden.map((s) => new RegExp(`^${s}$`, "i")),
+      },
+    });
+    deletedEntries = deleteResult.deletedCount ?? 0;
+  }
+
+  const fresh = await Kitchen.findById(kitchen._id);
+  if (!fresh) {
+    throw createError("Kitchen not found", 404);
+  }
+
+  return {
+    kind: "ok",
+    kitchen: fresh,
+    deletedEntries,
+    removedSlots: newlyHidden,
+  };
 }
 
 export async function deleteKitchen(userId: string): Promise<void> {

@@ -12,8 +12,9 @@ import User from "../models/User";
 async function run() {
   const uri = process.env.MONGODB_URI;
   const email = process.env.LEAD_EMAIL;
+  const name = process.env.LEAD_NAME;
   if (!uri) throw new Error("MONGODB_URI required");
-  if (!email) throw new Error("LEAD_EMAIL required");
+  if (!email && !name) throw new Error("LEAD_EMAIL or LEAD_NAME required");
   if (!uri.includes("chefless_dev")) {
     throw new Error("Refusing to run: MONGODB_URI must target chefless_dev");
   }
@@ -21,16 +22,14 @@ async function run() {
   await mongoose.connect(uri);
   const expires = new Date();
   expires.setFullYear(expires.getFullYear() + 1);
-  const r = await User.updateOne(
-    { email: email.toLowerCase() },
-    {
-      $set: {
-        isPremium: true,
-        premiumPlan: "admin",
-        premiumExpiresAt: expires,
-      },
+  const filter = email ? { email: email.toLowerCase() } : { fullName: name };
+  const r = await User.updateOne(filter, {
+    $set: {
+      isPremium: true,
+      premiumPlan: "admin",
+      premiumExpiresAt: expires,
     },
-  );
+  });
   console.log("matched:", r.matchedCount, "modified:", r.modifiedCount);
   await mongoose.disconnect();
 }

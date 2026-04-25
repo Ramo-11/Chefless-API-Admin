@@ -74,6 +74,10 @@ export interface IUser extends Document {
   isPremium: boolean;
   premiumPlan?: "monthly" | "annual" | "promo" | "admin";
   premiumExpiresAt?: Date;
+  /** AdminUser._id of the admin who granted premium (only set when premiumPlan === "admin"). */
+  premiumGrantedBy?: Types.ObjectId;
+  /** When the admin grant happened. Cleared on revoke or on real purchase. */
+  premiumGrantedAt?: Date;
   chefHatShipped?: boolean;
   shippingAddress?: ShippingAddress;
   dietaryPreferences?: string[];
@@ -188,6 +192,11 @@ const userSchema = new Schema<IUser>(
       enum: ["monthly", "annual", "promo", "admin"],
     },
     premiumExpiresAt: { type: Date },
+    premiumGrantedBy: {
+      type: Schema.Types.ObjectId,
+      ref: "AdminUser",
+    },
+    premiumGrantedAt: { type: Date },
     // NOTE: chefHatShipped and shippingAddress are reserved for a future
     // "Chef Hat" premium physical reward feature. No API endpoints exist yet.
     chefHatShipped: { type: Boolean },

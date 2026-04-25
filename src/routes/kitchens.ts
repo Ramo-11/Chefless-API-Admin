@@ -32,6 +32,8 @@ import {
   deleteKitchenPhoto,
   updateMealSlotOrder,
   syncMealSlotOrderWithCustomSlots,
+  setHiddenDefaultSlots,
+  DEFAULT_MEAL_SLOTS,
   INVITE_CODE_REGEX,
 } from "../services/kitchen-service";
 
@@ -749,6 +751,77 @@ router.put(
       customMealSlots: updated?.customMealSlots ?? [],
       deletedEntries,
       removedSlots,
+    });
+  })
+);
+
+// --- Hidden default meal slots (lead only) ---
+
+const hiddenDefaultsSchema = z.object({
+  hiddenDefaultSlots: z
+    .array(z.string().trim().toLowerCase())
+    .max(DEFAULT_MEAL_SLOTS.length, {
+      message: `At most ${DEFAULT_MEAL_SLOTS.length} default slots can be hidden`,
+    })
+    .refine(
+      (arr) => arr.every((s) => DEFAULT_MEAL_SLOTS.includes(s)),
+      {
+        message: `hiddenDefaultSlots may only contain ${DEFAULT_MEAL_SLOTS.join(", ")}`,
+      }
+    ),
+  /**
+   * When true, the server cascade-deletes any schedule entries planned in a
+   * default that's being newly hidden. When false (default), the server
+   * rejects with 409 if any meal would be orphaned — the client must
+   * re-submit with `force=true` after the user confirms.
+   */
+  force: z.boolean().optional(),
+});
+
+// PUT /api/kitchens/slots/defaults — Replace hidden-default-slot list (lead only)
+router.put(
+  "/slots/defaults",
+  requireAuth,
+  validate({ body: hiddenDefaultsSchema }),
+  asyncHandler(async (req: Request, res: Response) => {
+    const firebaseUid = req.user!.uid;
+    const currentUser = await User.findOne({ firebaseUid })
+      .select("_id")
+      .lean();
+
+    if (!currentUser) {
+      res.status(404).json({ error: "User not found" });
+      return;
+    }
+
+    const { hiddenDefaultSlots, force } = req.body as z.infer<
+      typeof hiddenDefaultsSchema
+    >;
+
+    const result = await setHiddenDefaultSlots(
+      currentUser._id.toString(),
+      hiddenDefaultSlots,
+      { force }
+    );
+
+    if (result.kind === "needs_confirmation") {
+      res.status(409).json({
+        error:
+          `${result.affectedCount} meal${result.affectedCount === 1 ? " is" : "s are"} ` +
+          `planned in ${result.removedSlots.length === 1 ? "this slot" : "these slots"}. ` +
+          "Re-submit with force=true to delete them.",
+        needsConfirmation: true,
+        affectedCount: result.affectedCount,
+        removedSlots: result.removedSlots,
+        affectedBySlot: result.affectedBySlot,
+      });
+      return;
+    }
+
+    res.status(200).json({
+      hiddenDefaultSlots: result.kitchen.hiddenDefaultSlots ?? [],
+      deletedEntries: result.deletedEntries,
+      removedSlots: result.removedSlots,
     });
   })
 );

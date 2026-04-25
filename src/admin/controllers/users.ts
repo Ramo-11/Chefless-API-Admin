@@ -52,7 +52,7 @@ export async function usersPage(req: Request, res: Response): Promise<void> {
         .skip(skip)
         .limit(limit)
         .select(
-          "fullName email profilePicture isPremium isBanned isAdmin recipesCount followersCount followingCount createdAt lastActiveAt isPublic"
+          "fullName email profilePicture isPremium premiumPlan isBanned isAdmin recipesCount followersCount followingCount createdAt lastActiveAt isPublic"
         )
         .lean(),
       User.countDocuments(query),
@@ -75,7 +75,11 @@ export async function usersPage(req: Request, res: Response): Promise<void> {
 
 export async function userDetail(req: Request, res: Response): Promise<void> {
   try {
-    const user = await User.findById(req.params.id).lean();
+    const user = await User.findById(req.params.id)
+      .populate<{
+        premiumGrantedBy: { _id: unknown; name: string; email: string } | null;
+      }>("premiumGrantedBy", "name email")
+      .lean();
     if (!user) {
       res.status(404).json({ error: "User not found" });
       return;
@@ -167,23 +171,28 @@ export async function unbanUser(req: Request, res: Response): Promise<void> {
 export async function grantPremium(req: Request, res: Response): Promise<void> {
   try {
     const { durationDays } = req.body;
-    const update: Record<string, unknown> = {
+    const adminId = req.session.adminId;
+
+    const baseSet: Record<string, unknown> = {
       isPremium: true,
       premiumPlan: "admin",
+      premiumGrantedAt: new Date(),
     };
-    if (durationDays && Number(durationDays) > 0) {
-      const expires = new Date();
+    if (adminId) baseSet.premiumGrantedBy = adminId;
+
+    const hasDuration = durationDays && Number(durationDays) > 0;
+    let expires: Date | undefined;
+    if (hasDuration) {
+      expires = new Date();
       expires.setDate(expires.getDate() + Number(durationDays));
-      update.premiumExpiresAt = expires;
-    } else {
-      update.$unset = { premiumExpiresAt: 1 };
+      baseSet.premiumExpiresAt = expires;
     }
 
     const user = await User.findByIdAndUpdate(
       req.params.id,
-      durationDays && Number(durationDays) > 0
-        ? { $set: { isPremium: true, premiumPlan: "admin", premiumExpiresAt: update.premiumExpiresAt } }
-        : { $set: { isPremium: true, premiumPlan: "admin" }, $unset: { premiumExpiresAt: 1 } },
+      hasDuration
+        ? { $set: baseSet }
+        : { $set: baseSet, $unset: { premiumExpiresAt: 1 } },
       { new: true }
     );
 
@@ -208,8 +217,13 @@ export async function revokePremium(req: Request, res: Response): Promise<void> 
     const user = await User.findByIdAndUpdate(
       req.params.id,
       {
-        isPremium: false,
-        $unset: { premiumPlan: 1, premiumExpiresAt: 1 },
+        $set: { isPremium: false },
+        $unset: {
+          premiumPlan: 1,
+          premiumExpiresAt: 1,
+          premiumGrantedBy: 1,
+          premiumGrantedAt: 1,
+        },
       },
       { new: true }
     );
