@@ -5,6 +5,10 @@ import User, { IUser } from "../models/User";
 import { canViewProfile, canViewRecipe } from "./visibility-service";
 import { isBlocked } from "./block-service";
 import { hydrateListForViewer } from "./recipe-service";
+import { hasActivePremium } from "../lib/premium";
+
+/** Max cookbooks a free user can own. Premium is unlimited. */
+const FREE_TIER_COOKBOOK_LIMIT = 1;
 
 interface AppError extends Error {
   statusCode: number;
@@ -94,6 +98,28 @@ export async function createCookbook(
   ownerId: string,
   data: CreateCookbookData
 ): Promise<ICookbook> {
+  // Free-tier cap: 1 cookbook. Premium = unlimited. We don't denormalize a
+  // cookbooksCount on User (cookbook creation is rare), so we read directly
+  // from the Cookbook collection. There is a small race window between count
+  // and create — acceptable given the low volume of cookbook creation.
+  const owner = await User.findById(ownerId)
+    .select("isPremium premiumExpiresAt")
+    .lean();
+  if (!owner) {
+    throw createError("User not found", 404);
+  }
+  if (!hasActivePremium(owner)) {
+    const existing = await Cookbook.countDocuments({
+      ownerId: new Types.ObjectId(ownerId),
+    });
+    if (existing >= FREE_TIER_COOKBOOK_LIMIT) {
+      throw createError(
+        `Free tier cap reached — limited to ${FREE_TIER_COOKBOOK_LIMIT} cookbook. Upgrade to premium for unlimited cookbooks.`,
+        403
+      );
+    }
+  }
+
   const recipeIds = (data.recipeIds ?? [])
     .filter((id) => Types.ObjectId.isValid(id))
     .map((id) => new Types.ObjectId(id));
