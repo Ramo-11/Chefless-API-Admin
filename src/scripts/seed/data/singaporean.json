@@ -1,0 +1,312 @@
+{
+  "cuisine": "Singaporean",
+  "names": {
+    "first": ["Wei Ming", "Hui Shan", "Jia Hao", "Mei Ling", "Aiman", "Kavita", "Daniel", "Priya", "Xin Yi", "Rajesh", "Hafiz", "Nadia"],
+    "last": ["Tan", "Lim", "Lee", "Ng", "Chua", "Goh", "Wong", "Yap", "Krishnan", "Ibrahim", "Subramaniam", "Chan"]
+  },
+  "recipes": [
+    {
+      "title": "Chilli Crab",
+      "description": "Singaporean mud crab in a sweet, tangy and mildly spicy tomato chilli gravy thickened with egg.",
+      "ingredients": [
+        {"name": "Mud crabs", "quantity": 1.5, "unit": "kg"},
+        {"name": "Garlic", "quantity": 8, "unit": "pc"},
+        {"name": "Ginger", "quantity": 40, "unit": "g"},
+        {"name": "Shallots", "quantity": 4, "unit": "pc"},
+        {"name": "Red chillies", "quantity": 6, "unit": "pc"},
+        {"name": "Tomato sauce", "quantity": 200, "unit": "ml"},
+        {"name": "Chilli sauce", "quantity": 100, "unit": "ml"},
+        {"name": "Sambal", "quantity": 2, "unit": "tbsp"},
+        {"name": "Sugar", "quantity": 3, "unit": "tbsp"},
+        {"name": "Rice vinegar", "quantity": 2, "unit": "tbsp"},
+        {"name": "Cornstarch", "quantity": 2, "unit": "tbsp"},
+        {"name": "Eggs", "quantity": 2, "unit": "pc"},
+        {"name": "Cilantro", "quantity": 1, "unit": "bunch"},
+        {"name": "Vegetable oil", "quantity": 4, "unit": "tbsp"},
+        {"name": "Water", "quantity": 500, "unit": "ml"}
+      ],
+      "steps": [
+        "Clean and chop crabs into pieces, cracking the claws.",
+        "Pound garlic, ginger, shallots and chillies into a paste.",
+        "Heat oil in a wok and fry the paste until fragrant and slightly oily.",
+        "Add tomato sauce, chilli sauce, sambal, sugar, vinegar and water; bring to a simmer.",
+        "Add crab pieces, cover and cook 8 minutes until shells are bright red.",
+        "Stir cornstarch with water, drizzle in to thicken sauce.",
+        "Beat eggs and stream into the sauce, swirling for ribbons.",
+        "Garnish with cilantro and serve with mantou buns to mop up the gravy."
+      ],
+      "tags": ["seafood", "iconic", "spicy"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Hainanese Chicken Rice",
+      "description": "Singapore's beloved poached chicken with fragrant chicken-fat rice, chilli sauce and dark soy.",
+      "ingredients": [
+        {"name": "Whole chicken", "quantity": 1.5, "unit": "kg"},
+        {"name": "Jasmine rice", "quantity": 500, "unit": "g"},
+        {"name": "Ginger", "quantity": 80, "unit": "g"},
+        {"name": "Garlic", "quantity": 8, "unit": "pc"},
+        {"name": "Pandan leaves", "quantity": 3, "unit": "pc"},
+        {"name": "Scallions", "quantity": 6, "unit": "pc"},
+        {"name": "Sesame oil", "quantity": 2, "unit": "tbsp"},
+        {"name": "Vegetable oil", "quantity": 3, "unit": "tbsp"},
+        {"name": "Light soy sauce", "quantity": 3, "unit": "tbsp"},
+        {"name": "Dark soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Red chillies", "quantity": 8, "unit": "pc"},
+        {"name": "Lime", "quantity": 2, "unit": "pc"},
+        {"name": "Cucumber", "quantity": 1, "unit": "pc"},
+        {"name": "Salt", "quantity": 2, "unit": "tbsp"},
+        {"name": "Water", "quantity": 4, "unit": "l"}
+      ],
+      "steps": [
+        "Stuff chicken with smashed ginger, garlic and scallions, then rub with salt.",
+        "Bring a deep pot of water to a rolling boil and dunk chicken three times to set the skin.",
+        "Lower heat to a bare simmer and poach chicken for 35 minutes until just cooked.",
+        "Plunge chicken into ice water for 10 minutes, then drain and rub with sesame oil.",
+        "Saute minced ginger and garlic in oil, add rinsed rice and toast briefly.",
+        "Add hot poaching stock and pandan leaves, cook covered until rice is fluffy.",
+        "Blend chillies, garlic, ginger, lime and a little stock for chilli sauce.",
+        "Chop chicken and serve with rice, cucumber, chilli sauce and dark soy."
+      ],
+      "tags": ["chicken", "rice", "iconic"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 60,
+      "servings": 4
+    },
+    {
+      "title": "Char Kway Teow",
+      "description": "Wok-fried flat rice noodles with prawns, cockles, Chinese sausage, egg and bean sprouts in dark soy.",
+      "ingredients": [
+        {"name": "Flat rice noodles", "quantity": 500, "unit": "g"},
+        {"name": "Shrimp", "quantity": 200, "unit": "g"},
+        {"name": "Cockles", "quantity": 150, "unit": "g"},
+        {"name": "Chinese sausage", "quantity": 100, "unit": "g"},
+        {"name": "Eggs", "quantity": 3, "unit": "pc"},
+        {"name": "Bean sprouts", "quantity": 200, "unit": "g"},
+        {"name": "Garlic chives", "quantity": 80, "unit": "g"},
+        {"name": "Garlic", "quantity": 4, "unit": "pc"},
+        {"name": "Dark soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Light soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Sambal", "quantity": 2, "unit": "tbsp"},
+        {"name": "Lard", "quantity": 3, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Heat a wok until smoking and melt lard.",
+        "Stir-fry minced garlic and sambal, add Chinese sausage and shrimp.",
+        "Push aside and crack in eggs, scrambling lightly.",
+        "Add noodles and toss with dark and light soy sauce until evenly colored.",
+        "Add cockles, bean sprouts and garlic chives, toss 30 seconds for wok hei.",
+        "Plate immediately while ingredients are hot."
+      ],
+      "tags": ["noodles", "stir-fry", "hawker"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 10,
+      "servings": 3
+    },
+    {
+      "title": "Laksa",
+      "description": "Singaporean Katong-style coconut prawn laksa with thick rice noodles, fish cake and laksa leaves.",
+      "ingredients": [
+        {"name": "Thick rice noodles", "quantity": 400, "unit": "g"},
+        {"name": "Shrimp", "quantity": 300, "unit": "g"},
+        {"name": "Fish cake", "quantity": 200, "unit": "g"},
+        {"name": "Cockles", "quantity": 150, "unit": "g"},
+        {"name": "Tofu puffs", "quantity": 8, "unit": "pc"},
+        {"name": "Bean sprouts", "quantity": 150, "unit": "g"},
+        {"name": "Coconut milk", "quantity": 500, "unit": "ml"},
+        {"name": "Shrimp stock", "quantity": 1, "unit": "l"},
+        {"name": "Dried chillies", "quantity": 40, "unit": "g"},
+        {"name": "Shallots", "quantity": 6, "unit": "pc"},
+        {"name": "Garlic", "quantity": 4, "unit": "pc"},
+        {"name": "Lemongrass", "quantity": 2, "unit": "pc"},
+        {"name": "Galangal", "quantity": 30, "unit": "g"},
+        {"name": "Belacan", "quantity": 1, "unit": "tbsp"},
+        {"name": "Candlenuts", "quantity": 4, "unit": "pc"},
+        {"name": "Laksa leaves", "quantity": 1, "unit": "bunch"},
+        {"name": "Vegetable oil", "quantity": 4, "unit": "tbsp"},
+        {"name": "Lime", "quantity": 2, "unit": "pc"}
+      ],
+      "steps": [
+        "Soak dried chillies and blend with shallots, garlic, lemongrass, galangal, candlenuts and belacan.",
+        "Saute the laksa paste in oil for 15 minutes until red and fragrant.",
+        "Pour in shrimp stock and simmer 10 minutes.",
+        "Add coconut milk and tofu puffs, simmer gently for another 5 minutes.",
+        "Add shrimp, cockles and fish cake; cook just until shrimp turns pink.",
+        "Cook noodles, drain and divide between bowls with bean sprouts.",
+        "Ladle hot laksa over and finish with chopped laksa leaves and lime."
+      ],
+      "tags": ["soup", "Katong", "iconic"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 45,
+      "servings": 4
+    },
+    {
+      "title": "Roti Prata",
+      "description": "Singaporean flaky pan-fried flatbread with crisp edges, served with curry dipping sauce.",
+      "ingredients": [
+        {"name": "All-purpose flour", "quantity": 500, "unit": "g"},
+        {"name": "Condensed milk", "quantity": 60, "unit": "ml"},
+        {"name": "Egg", "quantity": 1, "unit": "pc"},
+        {"name": "Sugar", "quantity": 1, "unit": "tbsp"},
+        {"name": "Salt", "quantity": 1, "unit": "tsp"},
+        {"name": "Water", "quantity": 230, "unit": "ml"},
+        {"name": "Ghee", "quantity": 100, "unit": "g"},
+        {"name": "Vegetable oil", "quantity": 200, "unit": "ml"},
+        {"name": "Curry powder", "quantity": 2, "unit": "tbsp"},
+        {"name": "Onion", "quantity": 1, "unit": "pc"},
+        {"name": "Coconut milk", "quantity": 200, "unit": "ml"},
+        {"name": "Mutton", "quantity": 300, "unit": "g"}
+      ],
+      "steps": [
+        "Mix flour, salt, sugar, condensed milk, egg and water into a soft dough; knead 10 minutes.",
+        "Divide into balls, coat in oil and rest in a covered tray for 4 hours.",
+        "Brown mutton chunks, then simmer with onion, curry powder and coconut milk until tender.",
+        "Oil a clean surface and slap a dough ball flat, then flick and stretch tissue-thin.",
+        "Brush with ghee, fold into a square and pan-cook on a hot oiled griddle until golden.",
+        "Crush each cooked prata gently to fluff layers and serve with hot mutton curry."
+      ],
+      "tags": ["bread", "breakfast", "hawker"],
+      "difficulty": "hard",
+      "prepTime": 270,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Bak Kut Teh",
+      "description": "Singaporean pork rib soup simmered with garlic, white pepper, herbs and dark soy.",
+      "ingredients": [
+        {"name": "Pork ribs", "quantity": 1, "unit": "kg"},
+        {"name": "Garlic", "quantity": 2, "unit": "pc"},
+        {"name": "White peppercorns", "quantity": 2, "unit": "tbsp"},
+        {"name": "Black peppercorns", "quantity": 1, "unit": "tbsp"},
+        {"name": "Star anise", "quantity": 2, "unit": "pc"},
+        {"name": "Cinnamon stick", "quantity": 1, "unit": "pc"},
+        {"name": "Cloves", "quantity": 4, "unit": "pc"},
+        {"name": "Dark soy sauce", "quantity": 3, "unit": "tbsp"},
+        {"name": "Light soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Salt", "quantity": 1, "unit": "tbsp"},
+        {"name": "Tofu puffs", "quantity": 8, "unit": "pc"},
+        {"name": "Enoki mushrooms", "quantity": 100, "unit": "g"},
+        {"name": "Lettuce", "quantity": 1, "unit": "pc"},
+        {"name": "Water", "quantity": 3, "unit": "l"}
+      ],
+      "steps": [
+        "Parboil pork ribs for 5 minutes, then drain and rinse.",
+        "Tie peppercorns, star anise, cinnamon and cloves in a muslin bag.",
+        "Place ribs, whole garlic heads and the spice bag in fresh water and bring to a boil.",
+        "Lower heat and simmer for 1.5 hours until ribs are tender.",
+        "Add dark soy, light soy and salt; simmer 10 more minutes.",
+        "Add tofu puffs, enoki mushrooms and lettuce; cook just until wilted.",
+        "Serve hot with steamed rice and dark soy with sliced chillies on the side."
+      ],
+      "tags": ["soup", "pork", "comfort"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 100,
+      "servings": 4
+    },
+    {
+      "title": "Kaya Toast",
+      "description": "Singaporean breakfast of crisp toast layered with cold butter and pandan-coconut kaya jam.",
+      "ingredients": [
+        {"name": "White bread", "quantity": 8, "unit": "pc"},
+        {"name": "Eggs", "quantity": 5, "unit": "pc"},
+        {"name": "Sugar", "quantity": 200, "unit": "g"},
+        {"name": "Coconut milk", "quantity": 200, "unit": "ml"},
+        {"name": "Pandan leaves", "quantity": 4, "unit": "pc"},
+        {"name": "Butter", "quantity": 80, "unit": "g"},
+        {"name": "Soy sauce", "quantity": 1, "unit": "tbsp"},
+        {"name": "White pepper", "quantity": 1, "unit": "pinch"}
+      ],
+      "steps": [
+        "Tie pandan leaves into a knot and crush slightly to release aroma.",
+        "Whisk eggs and sugar over a double boiler until pale.",
+        "Add coconut milk and pandan, then whisk constantly over low heat for 30 minutes until thick and amber.",
+        "Remove pandan, cool kaya completely; refrigerate to set.",
+        "Toast bread until golden and crisp, then split each slice horizontally.",
+        "Spread cold butter on the cut side, top with kaya, sandwich and slice into fingers.",
+        "Serve with soft-boiled eggs seasoned with soy and pepper alongside."
+      ],
+      "tags": ["breakfast", "toast", "iconic"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 40,
+      "servings": 4
+    },
+    {
+      "title": "Chai Tow Kway",
+      "description": "Singaporean stir-fried radish cake with eggs, preserved radish, garlic and dark sweet soy sauce.",
+      "ingredients": [
+        {"name": "Daikon radish", "quantity": 800, "unit": "g"},
+        {"name": "Rice flour", "quantity": 200, "unit": "g"},
+        {"name": "Cornstarch", "quantity": 30, "unit": "g"},
+        {"name": "Water", "quantity": 600, "unit": "ml"},
+        {"name": "Preserved radish", "quantity": 80, "unit": "g"},
+        {"name": "Garlic", "quantity": 6, "unit": "pc"},
+        {"name": "Eggs", "quantity": 4, "unit": "pc"},
+        {"name": "Dark sweet soy sauce", "quantity": 3, "unit": "tbsp"},
+        {"name": "Light soy sauce", "quantity": 1, "unit": "tbsp"},
+        {"name": "Sambal", "quantity": 2, "unit": "tbsp"},
+        {"name": "Scallions", "quantity": 4, "unit": "pc"},
+        {"name": "Vegetable oil", "quantity": 4, "unit": "tbsp"},
+        {"name": "White pepper", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Grate daikon and simmer in water until softened.",
+        "Whisk rice flour and cornstarch with cool water until smooth, then stream into the daikon.",
+        "Stir constantly until thick and shiny, then pour into an oiled pan and steam 45 minutes until firm.",
+        "Cool the radish cake completely, then dice into 2cm cubes.",
+        "Heat oil in a wok, fry garlic and preserved radish until fragrant.",
+        "Add radish cake cubes and pan-fry until edges crisp.",
+        "Push aside, scramble eggs in the open space, mix with cake.",
+        "Drizzle with dark soy, light soy and sambal; toss with scallions and pepper before serving."
+      ],
+      "tags": ["hawker", "breakfast", "stir-fry"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 70,
+      "servings": 4
+    },
+    {
+      "title": "Black Pepper Crab",
+      "description": "Singaporean wok-tossed crab in a fragrant black pepper, butter and curry leaf glaze.",
+      "ingredients": [
+        {"name": "Mud crabs", "quantity": 1.5, "unit": "kg"},
+        {"name": "Black peppercorns", "quantity": 4, "unit": "tbsp"},
+        {"name": "White peppercorns", "quantity": 1, "unit": "tbsp"},
+        {"name": "Butter", "quantity": 100, "unit": "g"},
+        {"name": "Garlic", "quantity": 8, "unit": "pc"},
+        {"name": "Shallots", "quantity": 5, "unit": "pc"},
+        {"name": "Curry leaves", "quantity": 2, "unit": "bunch"},
+        {"name": "Oyster sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Light soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Sugar", "quantity": 1, "unit": "tbsp"},
+        {"name": "Chicken stock", "quantity": 200, "unit": "ml"},
+        {"name": "Red chillies", "quantity": 2, "unit": "pc"},
+        {"name": "Vegetable oil", "quantity": 3, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Clean and chop crabs into pieces, cracking the claws.",
+        "Toast peppercorns until fragrant, then grind coarsely.",
+        "Lightly fry crab pieces in oil for 3 minutes to set the shell color.",
+        "Wipe wok and melt butter; saute garlic, shallots, curry leaves and chillies until fragrant.",
+        "Add ground pepper and cook 1 minute until very aromatic.",
+        "Add oyster sauce, light soy, sugar and stock; simmer to a glossy glaze.",
+        "Return crab and toss for 5 minutes until coated and cooked through, then serve immediately."
+      ],
+      "tags": ["seafood", "iconic", "spicy"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 20,
+      "servings": 4
+    }
+  ]
+}

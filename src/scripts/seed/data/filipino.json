@@ -1,0 +1,495 @@
+{
+  "cuisine": "Filipino",
+  "names": {
+    "first": ["Maria", "Jose", "Juan", "Ana", "Liza", "Carlos", "Rosa", "Ramon", "Elena", "Mateo", "Andrea", "Miguel"],
+    "last": ["Santos", "Reyes", "Cruz", "Bautista", "Garcia", "Mendoza", "Aquino", "Dela Cruz", "Ramos", "Villanueva", "Tan", "Aguinaldo"]
+  },
+  "recipes": [
+    {
+      "title": "Adobo",
+      "description": "Filipino national dish of chicken or pork braised in soy sauce, vinegar, garlic, bay leaves and peppercorns.",
+      "ingredients": [
+        {"name": "Chicken thighs", "quantity": 1, "unit": "kg"},
+        {"name": "Soy sauce", "quantity": 120, "unit": "ml"},
+        {"name": "White vinegar", "quantity": 120, "unit": "ml"},
+        {"name": "Garlic", "quantity": 10, "unit": "pc"},
+        {"name": "Bay leaves", "quantity": 4, "unit": "pc"},
+        {"name": "Black peppercorns", "quantity": 1, "unit": "tbsp"},
+        {"name": "Brown sugar", "quantity": 1, "unit": "tbsp"},
+        {"name": "Water", "quantity": 250, "unit": "ml"},
+        {"name": "Vegetable oil", "quantity": 2, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Marinate chicken in soy sauce, smashed garlic and pepper for at least 30 minutes.",
+        "Heat oil and sear marinated chicken until lightly browned on all sides.",
+        "Add the marinade, vinegar, water, bay leaves and brown sugar without stirring.",
+        "Bring to a boil, then reduce and simmer uncovered for 30 minutes until chicken is tender.",
+        "Remove chicken and reduce sauce until glossy and slightly thickened.",
+        "Return chicken to the pan, coat in sauce and serve with steamed rice."
+      ],
+      "tags": ["braise", "iconic", "chicken"],
+      "difficulty": "easy",
+      "prepTime": 35,
+      "cookTime": 45,
+      "servings": 4
+    },
+    {
+      "title": "Sinigang",
+      "description": "Filipino sour soup with pork, vegetables and tamarind broth.",
+      "ingredients": [
+        {"name": "Pork ribs", "quantity": 800, "unit": "g"},
+        {"name": "Tamarind", "quantity": 150, "unit": "g"},
+        {"name": "Tomato", "quantity": 2, "unit": "pc"},
+        {"name": "Onion", "quantity": 1, "unit": "pc"},
+        {"name": "Daikon radish", "quantity": 1, "unit": "pc"},
+        {"name": "Eggplant", "quantity": 2, "unit": "pc"},
+        {"name": "Long beans", "quantity": 200, "unit": "g"},
+        {"name": "Okra", "quantity": 200, "unit": "g"},
+        {"name": "Water spinach", "quantity": 1, "unit": "bunch"},
+        {"name": "Green chilli", "quantity": 2, "unit": "pc"},
+        {"name": "Fish sauce", "quantity": 3, "unit": "tbsp"},
+        {"name": "Water", "quantity": 2, "unit": "l"}
+      ],
+      "steps": [
+        "Boil pork ribs with quartered onion and tomatoes in water for 45 minutes, skimming foam.",
+        "Boil tamarind in 1 cup water until soft, then mash and strain pulp into the soup.",
+        "Add daikon and simmer 5 minutes until tender.",
+        "Add eggplant, long beans and okra, simmer until just cooked.",
+        "Season with fish sauce and add chillies.",
+        "Add water spinach last and cook 1 minute until wilted before serving."
+      ],
+      "tags": ["soup", "sour", "comfort"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 70,
+      "servings": 6
+    },
+    {
+      "title": "Lechon",
+      "description": "Whole roasted suckling pig with crackling skin, a centerpiece of Filipino fiestas.",
+      "ingredients": [
+        {"name": "Suckling pig", "quantity": 6, "unit": "kg"},
+        {"name": "Lemongrass", "quantity": 6, "unit": "pc"},
+        {"name": "Garlic", "quantity": 1, "unit": "pc"},
+        {"name": "Bay leaves", "quantity": 8, "unit": "pc"},
+        {"name": "Salt", "quantity": 4, "unit": "tbsp"},
+        {"name": "Black pepper", "quantity": 2, "unit": "tbsp"},
+        {"name": "Soy sauce", "quantity": 60, "unit": "ml"},
+        {"name": "Calamansi juice", "quantity": 60, "unit": "ml"},
+        {"name": "Vegetable oil", "quantity": 4, "unit": "tbsp"},
+        {"name": "Liver pate", "quantity": 200, "unit": "g"},
+        {"name": "Vinegar", "quantity": 120, "unit": "ml"}
+      ],
+      "steps": [
+        "Pat the pig dry inside and out, then rub the cavity with salt, pepper, soy sauce and calamansi.",
+        "Stuff the cavity with lemongrass, smashed garlic and bay leaves; sew closed.",
+        "Truss the pig onto a spit and let air-dry uncovered, ideally overnight in the fridge.",
+        "Roast slowly over hot coals or in a 160C oven for 4 hours, basting occasionally.",
+        "Brush skin with oil and a little vinegar to crisp, then raise heat for 20 minutes until skin blisters.",
+        "Rest 20 minutes, then chop into pieces and serve with liver sauce made from pate, vinegar and aromatics."
+      ],
+      "tags": ["roast", "fiesta", "iconic", "pork"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 270,
+      "servings": 12
+    },
+    {
+      "title": "Lumpia",
+      "description": "Filipino spring rolls filled with seasoned ground pork and vegetables, fried until crisp.",
+      "ingredients": [
+        {"name": "Lumpia wrappers", "quantity": 30, "unit": "pc"},
+        {"name": "Ground pork", "quantity": 500, "unit": "g"},
+        {"name": "Carrot", "quantity": 1, "unit": "pc"},
+        {"name": "Cabbage", "quantity": 200, "unit": "g"},
+        {"name": "Onion", "quantity": 1, "unit": "pc"},
+        {"name": "Garlic", "quantity": 4, "unit": "pc"},
+        {"name": "Soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Black pepper", "quantity": 1, "unit": "tsp"},
+        {"name": "Egg", "quantity": 1, "unit": "pc"},
+        {"name": "Vegetable oil", "quantity": 500, "unit": "ml"},
+        {"name": "Sweet chilli sauce", "quantity": 100, "unit": "ml"}
+      ],
+      "steps": [
+        "Saute chopped onion and garlic in a little oil, add pork and brown.",
+        "Add finely chopped carrot and cabbage, season with soy sauce and pepper, cook 3 minutes.",
+        "Cool the filling completely.",
+        "Place a heaped tablespoon of filling on a wrapper, fold in sides and roll tightly, sealing with beaten egg.",
+        "Heat oil to 170C and fry lumpia in batches for 4 minutes until golden and crisp.",
+        "Drain on paper towels and serve with sweet chilli sauce."
+      ],
+      "tags": ["fried", "rolls", "snack"],
+      "difficulty": "easy",
+      "prepTime": 35,
+      "cookTime": 20,
+      "servings": 6
+    },
+    {
+      "title": "Pancit",
+      "description": "Filipino stir-fried noodles with chicken, pork, shrimp and vegetables, often served at celebrations.",
+      "ingredients": [
+        {"name": "Pancit canton noodles", "quantity": 400, "unit": "g"},
+        {"name": "Chicken breast", "quantity": 250, "unit": "g"},
+        {"name": "Pork", "quantity": 200, "unit": "g"},
+        {"name": "Shrimp", "quantity": 200, "unit": "g"},
+        {"name": "Cabbage", "quantity": 200, "unit": "g"},
+        {"name": "Carrot", "quantity": 1, "unit": "pc"},
+        {"name": "Snow peas", "quantity": 100, "unit": "g"},
+        {"name": "Garlic", "quantity": 4, "unit": "pc"},
+        {"name": "Onion", "quantity": 1, "unit": "pc"},
+        {"name": "Soy sauce", "quantity": 4, "unit": "tbsp"},
+        {"name": "Oyster sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Chicken stock", "quantity": 500, "unit": "ml"},
+        {"name": "Vegetable oil", "quantity": 3, "unit": "tbsp"},
+        {"name": "Calamansi", "quantity": 4, "unit": "pc"}
+      ],
+      "steps": [
+        "Saute garlic and onion in oil, add diced chicken and pork, cook until browned.",
+        "Add shrimp and cook 1 minute until pink.",
+        "Pour in stock, soy sauce and oyster sauce; bring to a simmer.",
+        "Add carrot and noodles, tossing until they soften and absorb most of the liquid.",
+        "Add cabbage and snow peas, toss for 2 minutes until crisp-tender.",
+        "Serve hot with calamansi halves on the side."
+      ],
+      "tags": ["noodles", "stir-fry", "celebration"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 20,
+      "servings": 6
+    },
+    {
+      "title": "Kare-Kare",
+      "description": "Filipino oxtail and vegetable stew in a thick peanut sauce, served with sauteed shrimp paste.",
+      "ingredients": [
+        {"name": "Oxtail", "quantity": 1.2, "unit": "kg"},
+        {"name": "Tripe", "quantity": 300, "unit": "g"},
+        {"name": "Peanut butter", "quantity": 150, "unit": "g"},
+        {"name": "Ground rice", "quantity": 3, "unit": "tbsp"},
+        {"name": "Annatto seeds", "quantity": 1, "unit": "tbsp"},
+        {"name": "Garlic", "quantity": 6, "unit": "pc"},
+        {"name": "Onion", "quantity": 1, "unit": "pc"},
+        {"name": "Eggplant", "quantity": 2, "unit": "pc"},
+        {"name": "Long beans", "quantity": 200, "unit": "g"},
+        {"name": "Banana blossom", "quantity": 200, "unit": "g"},
+        {"name": "Water spinach", "quantity": 1, "unit": "bunch"},
+        {"name": "Bagoong shrimp paste", "quantity": 4, "unit": "tbsp"},
+        {"name": "Vegetable oil", "quantity": 3, "unit": "tbsp"},
+        {"name": "Water", "quantity": 2, "unit": "l"}
+      ],
+      "steps": [
+        "Simmer oxtail and tripe in water for 2.5 hours until very tender; reserve broth.",
+        "Steep annatto seeds in 100 ml hot water for 10 minutes, then strain.",
+        "Saute garlic and onion in oil, add annatto water, peanut butter and ground rice.",
+        "Pour in 1 liter reserved broth and whisk until sauce thickens.",
+        "Add oxtail and tripe back to the sauce and simmer 10 minutes to meld flavors.",
+        "Blanch eggplant, long beans, banana blossom and water spinach, then arrange on top.",
+        "Saute bagoong with a little garlic and onion until fragrant; serve alongside the stew."
+      ],
+      "tags": ["stew", "peanut", "celebration"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 180,
+      "servings": 6
+    },
+    {
+      "title": "Tinola",
+      "description": "Filipino chicken soup with green papaya, ginger and chilli leaves in a clear ginger broth.",
+      "ingredients": [
+        {"name": "Chicken", "quantity": 1.2, "unit": "kg"},
+        {"name": "Ginger", "quantity": 60, "unit": "g"},
+        {"name": "Garlic", "quantity": 5, "unit": "pc"},
+        {"name": "Onion", "quantity": 1, "unit": "pc"},
+        {"name": "Green papaya", "quantity": 500, "unit": "g"},
+        {"name": "Chilli leaves", "quantity": 1, "unit": "bunch"},
+        {"name": "Fish sauce", "quantity": 3, "unit": "tbsp"},
+        {"name": "Black pepper", "quantity": 1, "unit": "tsp"},
+        {"name": "Vegetable oil", "quantity": 2, "unit": "tbsp"},
+        {"name": "Water", "quantity": 1.5, "unit": "l"}
+      ],
+      "steps": [
+        "Saute ginger, garlic and onion in oil until fragrant.",
+        "Add chicken pieces and brown lightly.",
+        "Pour in water and bring to a boil, skimming foam.",
+        "Simmer covered for 30 minutes until chicken is tender.",
+        "Add cubed green papaya and cook 8 minutes until just soft.",
+        "Season with fish sauce and pepper, then stir in chilli leaves and serve."
+      ],
+      "tags": ["soup", "chicken", "comfort"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 45,
+      "servings": 4
+    },
+    {
+      "title": "Bicol Express",
+      "description": "Spicy Filipino pork stew from Bicol simmered in coconut milk with chillies and shrimp paste.",
+      "ingredients": [
+        {"name": "Pork belly", "quantity": 800, "unit": "g"},
+        {"name": "Coconut milk", "quantity": 500, "unit": "ml"},
+        {"name": "Coconut cream", "quantity": 200, "unit": "ml"},
+        {"name": "Long green chillies", "quantity": 250, "unit": "g"},
+        {"name": "Bird's eye chillies", "quantity": 6, "unit": "pc"},
+        {"name": "Garlic", "quantity": 8, "unit": "pc"},
+        {"name": "Onion", "quantity": 1, "unit": "pc"},
+        {"name": "Ginger", "quantity": 30, "unit": "g"},
+        {"name": "Bagoong shrimp paste", "quantity": 3, "unit": "tbsp"},
+        {"name": "Vegetable oil", "quantity": 2, "unit": "tbsp"},
+        {"name": "Black pepper", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Render diced pork belly in a pot until lightly browned and fat is released.",
+        "Add chopped onion, garlic and ginger, saute until soft.",
+        "Stir in shrimp paste and cook 1 minute until fragrant.",
+        "Pour in coconut milk and simmer covered for 30 minutes.",
+        "Add sliced long green chillies and bird's eye chillies, cook 10 more minutes.",
+        "Stir in coconut cream and reduce until thick and oily, season with pepper and serve."
+      ],
+      "tags": ["spicy", "coconut", "Bicol"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 50,
+      "servings": 4
+    },
+    {
+      "title": "Halo-Halo",
+      "description": "Filipino shaved ice dessert layered with sweet beans, jellies, fruits, leche flan and ube ice cream.",
+      "ingredients": [
+        {"name": "Shaved ice", "quantity": 1, "unit": "kg"},
+        {"name": "Evaporated milk", "quantity": 400, "unit": "ml"},
+        {"name": "Sweetened red beans", "quantity": 200, "unit": "g"},
+        {"name": "Sweetened white beans", "quantity": 200, "unit": "g"},
+        {"name": "Sweetened plantains", "quantity": 200, "unit": "g"},
+        {"name": "Sweetened jackfruit", "quantity": 150, "unit": "g"},
+        {"name": "Macapuno coconut", "quantity": 150, "unit": "g"},
+        {"name": "Coconut gel", "quantity": 150, "unit": "g"},
+        {"name": "Sago pearls", "quantity": 100, "unit": "g"},
+        {"name": "Leche flan", "quantity": 200, "unit": "g"},
+        {"name": "Ube ice cream", "quantity": 4, "unit": "pc"},
+        {"name": "Pinipig", "quantity": 4, "unit": "tbsp"},
+        {"name": "Sugar", "quantity": 4, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Layer 2 tbsp each of sweetened beans, plantains, jackfruit, macapuno, coconut gel and sago in tall glasses.",
+        "Sprinkle each glass with sugar.",
+        "Mound shaved ice high above the rim of each glass.",
+        "Drizzle generously with evaporated milk.",
+        "Top each glass with a slice of leche flan, a scoop of ube ice cream and a sprinkle of pinipig.",
+        "Serve immediately with a long spoon for mixing it all together."
+      ],
+      "tags": ["dessert", "iced", "iconic"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 0,
+      "servings": 4
+    },
+    {
+      "title": "Pinakbet",
+      "description": "Ilocano vegetable stew of bitter melon, eggplant, squash and okra flavored with bagoong shrimp paste.",
+      "ingredients": [
+        {"name": "Pork belly", "quantity": 250, "unit": "g"},
+        {"name": "Bitter melon", "quantity": 1, "unit": "pc"},
+        {"name": "Eggplant", "quantity": 2, "unit": "pc"},
+        {"name": "Squash", "quantity": 300, "unit": "g"},
+        {"name": "Okra", "quantity": 200, "unit": "g"},
+        {"name": "Long beans", "quantity": 150, "unit": "g"},
+        {"name": "Tomato", "quantity": 2, "unit": "pc"},
+        {"name": "Onion", "quantity": 1, "unit": "pc"},
+        {"name": "Garlic", "quantity": 4, "unit": "pc"},
+        {"name": "Ginger", "quantity": 20, "unit": "g"},
+        {"name": "Bagoong shrimp paste", "quantity": 3, "unit": "tbsp"},
+        {"name": "Water", "quantity": 250, "unit": "ml"}
+      ],
+      "steps": [
+        "Render pork belly in a wide pan until golden and fat is released.",
+        "Add garlic, onion, ginger and tomatoes, cook until tomatoes break down.",
+        "Stir in shrimp paste and cook 1 minute until fragrant.",
+        "Pour in water and add squash; simmer 5 minutes.",
+        "Layer in long beans, eggplant, bitter melon and okra without stirring.",
+        "Cover and simmer 8 minutes, then gently fold to combine and serve."
+      ],
+      "tags": ["vegetable", "stew", "Ilocos"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Chicken Inasal",
+      "description": "Bacolod-style grilled chicken marinated in calamansi, vinegar, lemongrass, ginger and annatto oil.",
+      "ingredients": [
+        {"name": "Chicken legs", "quantity": 1.2, "unit": "kg"},
+        {"name": "Calamansi juice", "quantity": 80, "unit": "ml"},
+        {"name": "White vinegar", "quantity": 60, "unit": "ml"},
+        {"name": "Lemongrass", "quantity": 4, "unit": "pc"},
+        {"name": "Ginger", "quantity": 40, "unit": "g"},
+        {"name": "Garlic", "quantity": 6, "unit": "pc"},
+        {"name": "Annatto seeds", "quantity": 1, "unit": "tbsp"},
+        {"name": "Vegetable oil", "quantity": 80, "unit": "ml"},
+        {"name": "Brown sugar", "quantity": 2, "unit": "tbsp"},
+        {"name": "Soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Black pepper", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Crush lemongrass, ginger and garlic into a paste.",
+        "Marinate chicken with the paste, calamansi, vinegar, soy sauce, sugar and pepper for 4 hours.",
+        "Steep annatto seeds in warm oil for 15 minutes, then strain to make annatto oil.",
+        "Heat grill to medium-high and grill chicken for 8 minutes per side, basting with annatto oil.",
+        "Continue cooking until juices run clear and skin is charred.",
+        "Brush with more annatto oil and serve with garlic rice and dipping sauce of vinegar, calamansi and chillies."
+      ],
+      "tags": ["grilled", "Bacolod", "chicken"],
+      "difficulty": "medium",
+      "prepTime": 250,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Sisig",
+      "description": "Sizzling chopped pork face and ears with onions, chillies and calamansi served on a hot plate.",
+      "ingredients": [
+        {"name": "Pork face and ears", "quantity": 800, "unit": "g"},
+        {"name": "Pork liver", "quantity": 150, "unit": "g"},
+        {"name": "Onion", "quantity": 2, "unit": "pc"},
+        {"name": "Garlic", "quantity": 6, "unit": "pc"},
+        {"name": "Bird's eye chillies", "quantity": 6, "unit": "pc"},
+        {"name": "Calamansi juice", "quantity": 4, "unit": "tbsp"},
+        {"name": "Soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Mayonnaise", "quantity": 3, "unit": "tbsp"},
+        {"name": "Eggs", "quantity": 2, "unit": "pc"},
+        {"name": "Vegetable oil", "quantity": 2, "unit": "tbsp"},
+        {"name": "Black pepper", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Boil pork face and ears with bay leaves, peppercorns and salt for 1 hour until tender.",
+        "Cool, then grill or broil until skin is crisp; chop very finely.",
+        "Saute garlic and onion in oil, add liver and cook briefly, then chop fine and return to pan.",
+        "Add chopped pork, soy sauce, calamansi and chillies; toss to combine.",
+        "Stir in mayonnaise off the heat for creaminess.",
+        "Transfer to a hot sizzling plate, crack eggs on top and let the heat cook them slightly before serving."
+      ],
+      "tags": ["sizzling", "pork", "Pampanga"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 90,
+      "servings": 4
+    },
+    {
+      "title": "Pork Humba",
+      "description": "Visayan-style braised pork belly with banana blossoms, soy, vinegar and palm sugar.",
+      "ingredients": [
+        {"name": "Pork belly", "quantity": 1, "unit": "kg"},
+        {"name": "Soy sauce", "quantity": 100, "unit": "ml"},
+        {"name": "Cane vinegar", "quantity": 80, "unit": "ml"},
+        {"name": "Brown sugar", "quantity": 4, "unit": "tbsp"},
+        {"name": "Garlic", "quantity": 8, "unit": "pc"},
+        {"name": "Onion", "quantity": 1, "unit": "pc"},
+        {"name": "Bay leaves", "quantity": 3, "unit": "pc"},
+        {"name": "Black peppercorns", "quantity": 1, "unit": "tbsp"},
+        {"name": "Black beans", "quantity": 60, "unit": "g"},
+        {"name": "Dried banana blossoms", "quantity": 30, "unit": "g"},
+        {"name": "Star anise", "quantity": 2, "unit": "pc"},
+        {"name": "Water", "quantity": 500, "unit": "ml"}
+      ],
+      "steps": [
+        "Sear cubed pork belly in its own fat until golden brown.",
+        "Add chopped onion and garlic, cook until soft.",
+        "Pour in soy sauce, vinegar and water without stirring; add bay leaves, peppercorns and star anise.",
+        "Simmer covered for 1 hour until pork is tender.",
+        "Add brown sugar, black beans and rehydrated banana blossoms.",
+        "Continue cooking uncovered until sauce reduces to a glossy glaze."
+      ],
+      "tags": ["braise", "pork", "Visayas"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Bistek",
+      "description": "Filipino beef steak braised in soy sauce, calamansi and onions until tender.",
+      "ingredients": [
+        {"name": "Beef sirloin", "quantity": 700, "unit": "g"},
+        {"name": "Soy sauce", "quantity": 80, "unit": "ml"},
+        {"name": "Calamansi juice", "quantity": 60, "unit": "ml"},
+        {"name": "Onion", "quantity": 3, "unit": "pc"},
+        {"name": "Garlic", "quantity": 6, "unit": "pc"},
+        {"name": "Black pepper", "quantity": 1, "unit": "tsp"},
+        {"name": "Sugar", "quantity": 1, "unit": "tbsp"},
+        {"name": "Vegetable oil", "quantity": 3, "unit": "tbsp"},
+        {"name": "Water", "quantity": 250, "unit": "ml"}
+      ],
+      "steps": [
+        "Slice beef thinly across the grain.",
+        "Marinate beef in soy sauce, calamansi, garlic and pepper for 1 hour.",
+        "Slice onions into rings and fry briefly in oil until just softened, then set aside.",
+        "Sear marinated beef in batches in the same pan over high heat until browned.",
+        "Pour marinade and water back in, add sugar and simmer 20 minutes until tender.",
+        "Top with the reserved onion rings and serve with steamed rice."
+      ],
+      "tags": ["beef", "braise", "comfort"],
+      "difficulty": "easy",
+      "prepTime": 75,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Laing",
+      "description": "Bicolano dish of dried taro leaves stewed in coconut milk with chillies and shrimp paste.",
+      "ingredients": [
+        {"name": "Dried taro leaves", "quantity": 80, "unit": "g"},
+        {"name": "Coconut milk", "quantity": 500, "unit": "ml"},
+        {"name": "Coconut cream", "quantity": 200, "unit": "ml"},
+        {"name": "Pork belly", "quantity": 200, "unit": "g"},
+        {"name": "Bagoong shrimp paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "Garlic", "quantity": 6, "unit": "pc"},
+        {"name": "Onion", "quantity": 1, "unit": "pc"},
+        {"name": "Ginger", "quantity": 30, "unit": "g"},
+        {"name": "Bird's eye chillies", "quantity": 8, "unit": "pc"},
+        {"name": "Dried shrimp", "quantity": 30, "unit": "g"}
+      ],
+      "steps": [
+        "Render diced pork belly in a pot until golden.",
+        "Add garlic, onion and ginger; saute until fragrant.",
+        "Stir in shrimp paste and dried shrimp, cook 1 minute.",
+        "Pour in coconut milk and add dried taro leaves; do not stir to avoid itchiness.",
+        "Simmer gently for 35 minutes until leaves are tender and most liquid is absorbed.",
+        "Stir in coconut cream and chillies, cook 5 minutes more until oil separates."
+      ],
+      "tags": ["coconut", "Bicol", "spicy"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 50,
+      "servings": 4
+    },
+    {
+      "title": "Tortang Talong",
+      "description": "Filipino eggplant omelette of grilled eggplant dipped in beaten egg and pan-fried until golden.",
+      "ingredients": [
+        {"name": "Eggplant", "quantity": 4, "unit": "pc"},
+        {"name": "Eggs", "quantity": 4, "unit": "pc"},
+        {"name": "Ground pork", "quantity": 200, "unit": "g"},
+        {"name": "Onion", "quantity": 1, "unit": "pc"},
+        {"name": "Garlic", "quantity": 3, "unit": "pc"},
+        {"name": "Tomato", "quantity": 1, "unit": "pc"},
+        {"name": "Soy sauce", "quantity": 1, "unit": "tbsp"},
+        {"name": "Black pepper", "quantity": 1, "unit": "tsp"},
+        {"name": "Vegetable oil", "quantity": 4, "unit": "tbsp"},
+        {"name": "Salt", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Grill or roast eggplants over an open flame until skin is charred and flesh is soft.",
+        "Cool, peel off skin keeping the stem on, then flatten with a fork.",
+        "Saute onion and garlic, add pork and tomato, season with soy and pepper, cook until dry.",
+        "Beat eggs with salt in a wide plate.",
+        "Dip a flattened eggplant into the egg, place in hot oil and spoon some pork on top, then more egg.",
+        "Fry until golden on both sides and serve hot with banana ketchup or rice."
+      ],
+      "tags": ["eggplant", "breakfast", "comfort"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 4
+    }
+  ]
+}

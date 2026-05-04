@@ -413,8 +413,8 @@
   var reportReasons = <%- JSON.stringify(reportsByReason) %>;
 
   var premiumBreakdown = {
-    labels: ['Free', 'Monthly', 'Annual', 'Promo'],
-    data: [<%= freeUsers %>, <%= premiumMonthly %>, <%= premiumAnnual %>, <%= premiumPromo %>]
+    labels: ['Free', 'Monthly', 'Annual'],
+    data: [<%= freeUsers %>, <%= premiumMonthly %>, <%= premiumAnnual %>]
   };
 
   // ── Helper: format date label (Jan 5) ──

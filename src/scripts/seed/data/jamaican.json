@@ -1,0 +1,393 @@
+{
+  "cuisine": "Jamaican",
+  "names": {
+    "first": ["Damar", "Kemar", "Jermaine", "Andre", "Marlon", "Devon", "Shanique", "Tanya", "Latoya", "Kerry-Ann", "Simone", "Janelle"],
+    "last": ["Brown", "Williams", "Campbell", "Smith", "Thompson", "Henry", "Reid", "Wilson", "Bailey", "Clarke"]
+  },
+  "recipes": [
+    {
+      "title": "Jerk Chicken",
+      "description": "Jamaica's iconic spice-marinated chicken slow-grilled over pimento wood — fiery, smoky, and aromatic with allspice and Scotch bonnet.",
+      "ingredients": [
+        { "name": "chicken pieces (legs and thighs)", "quantity": 1.5, "unit": "kg" },
+        { "name": "Scotch bonnet peppers, deseeded", "quantity": 3, "unit": "pc" },
+        { "name": "scallions, chopped", "quantity": 6, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 6, "unit": "pc" },
+        { "name": "fresh thyme", "quantity": 2, "unit": "tbsp" },
+        { "name": "ground allspice (pimento)", "quantity": 2, "unit": "tbsp" },
+        { "name": "soy sauce", "quantity": 60, "unit": "ml" },
+        { "name": "lime juice", "quantity": 60, "unit": "ml" },
+        { "name": "brown sugar", "quantity": 2, "unit": "tbsp" },
+        { "name": "vegetable oil", "quantity": 60, "unit": "ml" },
+        { "name": "ground ginger", "quantity": 1, "unit": "tsp" },
+        { "name": "ground nutmeg", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cinnamon", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Blend Scotch bonnets, scallions, garlic, thyme, allspice, soy sauce, lime juice, brown sugar, oil, ginger, nutmeg, and cinnamon into a thick paste.",
+        "Score chicken pieces deeply through the skin and slather the jerk paste all over and into the cuts.",
+        "Marinate at least 8 hours, ideally 24, in the refrigerator.",
+        "Build a charcoal fire and add pimento wood chips if available; heat should be medium-low for slow cooking.",
+        "Grill chicken skin-side up first, away from direct flame, with the lid down for 30 minutes.",
+        "Turn and cook another 25 minutes, basting with reserved marinade and moving over hotter spots to char the skin.",
+        "Internal temperature should reach 75°C. Rest 5 minutes, chop into smaller pieces, and serve with rice and peas."
+      ],
+      "tags": ["national dish", "grilled", "chicken", "spicy", "iconic"],
+      "dietaryTags": ["dairy-free"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Ackee and Saltfish",
+      "description": "Jamaica's national breakfast: salted cod sautéed with ackee fruit, peppers, onions, and tomatoes — buttery and savory.",
+      "ingredients": [
+        { "name": "salted cod (saltfish)", "quantity": 400, "unit": "g" },
+        { "name": "fresh or canned ackee", "quantity": 540, "unit": "g" },
+        { "name": "onion, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "tomato, chopped", "quantity": 2, "unit": "pc" },
+        { "name": "red bell pepper, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "scallions, chopped", "quantity": 4, "unit": "pc" },
+        { "name": "Scotch bonnet pepper, minced", "quantity": 0.5, "unit": "pc" },
+        { "name": "fresh thyme", "quantity": 1, "unit": "tbsp" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak saltfish in cold water overnight, changing water 2–3 times to remove excess salt.",
+        "Boil saltfish for 15 minutes, drain, and flake with a fork, removing skin and bones.",
+        "If using canned ackee, drain very gently to keep pieces intact.",
+        "Heat oil and sauté onion, bell pepper, and scallions until soft, about 6 minutes.",
+        "Add garlic, thyme, Scotch bonnet, and tomato; cook 3 minutes until tomato softens.",
+        "Stir in flaked saltfish and black pepper, cook 2 minutes.",
+        "Gently fold in ackee and warm through 3 minutes — handle delicately so it doesn't break apart. Serve with fried dumplings or boiled green bananas."
+      ],
+      "tags": ["national dish", "breakfast", "saltfish", "iconic", "main course"],
+      "dietaryTags": ["dairy-free", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Curry Goat",
+      "description": "Jamaican curry goat slow-braised with curry powder, allspice, and Scotch bonnet — tender, fragrant, and unapologetically rich.",
+      "ingredients": [
+        { "name": "goat meat, bone-in, cubed", "quantity": 1.5, "unit": "kg" },
+        { "name": "Jamaican curry powder", "quantity": 4, "unit": "tbsp" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "scallions, chopped", "quantity": 4, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 5, "unit": "pc" },
+        { "name": "ginger, grated", "quantity": 2, "unit": "tbsp" },
+        { "name": "Scotch bonnet pepper, whole", "quantity": 1, "unit": "pc" },
+        { "name": "fresh thyme", "quantity": 2, "unit": "tbsp" },
+        { "name": "ground allspice", "quantity": 1, "unit": "tsp" },
+        { "name": "potato, cubed", "quantity": 400, "unit": "g" },
+        { "name": "vegetable oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "water or stock", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "Toss goat meat with curry powder, allspice, half the garlic, half the ginger, scallions, thyme, and salt. Marinate at least 4 hours.",
+        "Heat oil in a heavy pot until very hot. Brown the goat in batches, scraping up the toasted curry from the pan.",
+        "Add onion, remaining garlic, and ginger; cook 4 minutes.",
+        "Pour in water or stock, drop in the whole Scotch bonnet (do not pierce), and bring to a boil.",
+        "Reduce heat, cover, and simmer 90 minutes — check occasionally and top up liquid if needed.",
+        "Add potato and continue cooking 30 minutes until potato is tender and goat is fork-tender.",
+        "Discard Scotch bonnet, adjust salt, and let the curry rest 10 minutes. Serve with rice and peas."
+      ],
+      "tags": ["curry", "goat", "slow-cooked", "main course", "iconic"],
+      "dietaryTags": ["dairy-free", "gluten-free"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 130,
+      "servings": 6
+    },
+    {
+      "title": "Oxtail Stew",
+      "description": "Jamaican oxtail braised low and slow with butter beans, allspice, and brown sauce until the meat falls off the bone.",
+      "ingredients": [
+        { "name": "oxtail, trimmed", "quantity": 1.5, "unit": "kg" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 5, "unit": "pc" },
+        { "name": "ginger, grated", "quantity": 1, "unit": "tbsp" },
+        { "name": "scallions, chopped", "quantity": 4, "unit": "pc" },
+        { "name": "fresh thyme", "quantity": 2, "unit": "tbsp" },
+        { "name": "ground allspice", "quantity": 1, "unit": "tbsp" },
+        { "name": "browning sauce", "quantity": 1, "unit": "tbsp" },
+        { "name": "soy sauce", "quantity": 2, "unit": "tbsp" },
+        { "name": "Worcestershire sauce", "quantity": 1, "unit": "tbsp" },
+        { "name": "butter beans, drained", "quantity": 400, "unit": "g" },
+        { "name": "carrot, chunked", "quantity": 2, "unit": "pc" },
+        { "name": "Scotch bonnet pepper, whole", "quantity": 1, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Season oxtail with allspice, browning, soy, Worcestershire, half the garlic, ginger, scallions, thyme, salt, and pepper. Marinate 4 hours.",
+        "Heat oil in a heavy pot and brown oxtail on all sides — about 10 minutes total.",
+        "Add onion and remaining garlic; cook 3 minutes.",
+        "Pour in 1.5 liters water, drop in the whole Scotch bonnet (unpierced), bring to a boil.",
+        "Reduce heat, cover, and simmer 2.5 hours, topping up water as needed.",
+        "Add carrot and butter beans; simmer 30 minutes more until oxtail is fall-apart tender and sauce thickened.",
+        "Discard Scotch bonnet, adjust seasoning, and serve over white rice or rice and peas."
+      ],
+      "tags": ["oxtail", "stew", "slow-cooked", "main course", "iconic"],
+      "dietaryTags": ["dairy-free"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 200,
+      "servings": 6
+    },
+    {
+      "title": "Jamaican Patties",
+      "description": "Flaky golden turmeric pastries with spiced ground beef filling — Jamaica's most popular street snack.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 500, "unit": "g" },
+        { "name": "cold butter, cubed", "quantity": 200, "unit": "g" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tbsp" },
+        { "name": "curry powder", "quantity": 1, "unit": "tsp" },
+        { "name": "ice water", "quantity": 180, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "ground beef", "quantity": 500, "unit": "g" },
+        { "name": "onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "scallions, finely chopped", "quantity": 3, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "Scotch bonnet, minced", "quantity": 0.5, "unit": "pc" },
+        { "name": "fresh thyme", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground allspice", "quantity": 1, "unit": "tsp" },
+        { "name": "breadcrumbs", "quantity": 60, "unit": "g" },
+        { "name": "egg, beaten (for wash)", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Combine flour, turmeric, curry powder, and salt. Cut in cold butter until pea-sized, then add ice water and form a dough. Chill 1 hour.",
+        "Brown beef with onion, scallions, garlic, Scotch bonnet, thyme, and allspice. Season well with salt.",
+        "Stir in breadcrumbs and 80 ml water; simmer 5 minutes until thick. Cool completely.",
+        "Roll dough thin and cut into 15 cm circles.",
+        "Spoon filling onto half of each circle, fold over into half-moons, and crimp edges firmly with a fork.",
+        "Brush tops with beaten egg.",
+        "Bake at 200°C (400°F) for 25 minutes until deeply golden and flaky."
+      ],
+      "tags": ["pastry", "snack", "street food", "beef", "iconic"],
+      "difficulty": "medium",
+      "prepTime": 90,
+      "cookTime": 30,
+      "servings": 8
+    },
+    {
+      "title": "Rice and Peas",
+      "description": "Jamaican kidney beans and rice cooked together with coconut milk, thyme, and Scotch bonnet — Sunday dinner's heart.",
+      "ingredients": [
+        { "name": "long-grain rice", "quantity": 400, "unit": "g" },
+        { "name": "dried kidney beans, soaked overnight", "quantity": 200, "unit": "g" },
+        { "name": "coconut milk", "quantity": 400, "unit": "ml" },
+        { "name": "scallions, chopped", "quantity": 4, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "fresh thyme", "quantity": 2, "unit": "tbsp" },
+        { "name": "Scotch bonnet pepper, whole", "quantity": 1, "unit": "pc" },
+        { "name": "ground allspice", "quantity": 0.5, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Drain soaked beans and place in a pot with 1 liter fresh water. Boil 50–60 minutes until tender. Reserve cooking liquid.",
+        "To the beans, add coconut milk, scallions, garlic, thyme, allspice, Scotch bonnet (do not pierce), and salt.",
+        "Bring to a boil and adjust seasoning.",
+        "Add rice and enough reserved bean liquid so the total liquid is about 1.5 times the volume of rice.",
+        "Bring back to a boil, then immediately reduce to lowest heat and cover tightly.",
+        "Cook 18 minutes without lifting the lid.",
+        "Discard Scotch bonnet, fluff with a fork, and rest 5 minutes before serving."
+      ],
+      "tags": ["rice", "beans", "side dish", "Sunday dinner", "iconic"],
+      "dietaryTags": ["vegan", "gluten-free", "dairy-free"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Escovitch Fish",
+      "description": "Crisp-fried whole fish topped with a tangy pickle of vinegar, peppers, carrots, and onion — a Jamaican Easter staple.",
+      "ingredients": [
+        { "name": "whole snapper or grunt, scaled and gutted", "quantity": 1, "unit": "kg" },
+        { "name": "lime juice", "quantity": 60, "unit": "ml" },
+        { "name": "all-purpose flour", "quantity": 100, "unit": "g" },
+        { "name": "vegetable oil for frying", "quantity": 500, "unit": "ml" },
+        { "name": "white vinegar", "quantity": 200, "unit": "ml" },
+        { "name": "onion, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "carrot, julienned", "quantity": 2, "unit": "pc" },
+        { "name": "bell pepper, julienned", "quantity": 1, "unit": "pc" },
+        { "name": "Scotch bonnet pepper, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "whole pimento berries", "quantity": 6, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Score fish on both sides, rub with lime juice, salt, and pepper. Rest 15 minutes.",
+        "Pat fish dry and dredge lightly in flour.",
+        "Heat oil to 180°C and fry fish 6–7 minutes per side until skin is crisp and meat cooked through. Drain on paper towels.",
+        "In a saucepan, combine vinegar, onion, carrot, bell pepper, Scotch bonnet, pimento berries, and a pinch of salt.",
+        "Bring to a boil and simmer 3 minutes — vegetables should remain crunchy.",
+        "Place fish on a serving plate.",
+        "Pour the hot pickle and its liquid over the fish and let stand 15 minutes for flavors to meld. Serve at room temperature with bammy or hard dough bread."
+      ],
+      "tags": ["seafood", "fried", "pickled", "iconic", "main course"],
+      "dietaryTags": ["dairy-free"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Bammy",
+      "description": "Jamaican flatbread made from grated cassava, soaked in coconut milk and pan-fried — a crisp, slightly sweet side for fish.",
+      "ingredients": [
+        { "name": "fresh cassava (yuca), peeled", "quantity": 1, "unit": "kg" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "coconut milk", "quantity": 250, "unit": "ml" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Finely grate the peeled cassava on a fine grater into a bowl.",
+        "Place grated cassava in a clean kitchen towel and squeeze out as much liquid as possible — this is critical.",
+        "Mix the dry cassava with salt.",
+        "Heat a non-stick skillet over medium heat. Place a metal ring (about 12 cm) in the pan.",
+        "Press a portion of cassava firmly into the ring to about 1 cm thick. Cook 7 minutes until the bottom sets and lightly browns.",
+        "Remove ring, flip, and cook 5 more minutes. Repeat with remaining cassava.",
+        "Soak cooked bammies briefly in coconut milk, then pan-fry in oil 2 minutes per side until golden. Serve with escovitch fish."
+      ],
+      "tags": ["bread", "cassava", "side dish", "gluten-free", "traditional"],
+      "dietaryTags": ["vegan", "gluten-free", "dairy-free"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Brown Stew Chicken",
+      "description": "Jamaican chicken pieces marinated with herbs and seared, then simmered in a rich brown gravy of allspice, soy, and tomato.",
+      "ingredients": [
+        { "name": "chicken pieces", "quantity": 1.2, "unit": "kg" },
+        { "name": "onion, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "scallions, chopped", "quantity": 4, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "ginger, grated", "quantity": 1, "unit": "tbsp" },
+        { "name": "fresh thyme", "quantity": 2, "unit": "tbsp" },
+        { "name": "ground allspice", "quantity": 1, "unit": "tsp" },
+        { "name": "tomato, chopped", "quantity": 2, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 1, "unit": "tbsp" },
+        { "name": "browning sauce", "quantity": 1, "unit": "tbsp" },
+        { "name": "soy sauce", "quantity": 2, "unit": "tbsp" },
+        { "name": "Scotch bonnet, whole", "quantity": 1, "unit": "pc" },
+        { "name": "carrot, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "bell pepper, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 4, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Marinate chicken pieces with browning sauce, soy sauce, allspice, half the garlic, half the scallions, thyme, salt, and pepper for 2 hours.",
+        "Heat oil in a heavy pot until very hot. Brown chicken pieces in batches until deeply colored on all sides.",
+        "Remove chicken and pour off most of the oil.",
+        "Sauté onion, remaining scallions, garlic, ginger, and bell pepper for 4 minutes.",
+        "Stir in tomato, tomato paste, and 500 ml water. Bring to a boil.",
+        "Return chicken with any juices, drop in Scotch bonnet (do not pierce), cover, and simmer 30 minutes.",
+        "Add carrot and cook 10 minutes more until chicken is tender and gravy is glossy. Discard Scotch bonnet and serve over rice."
+      ],
+      "tags": ["chicken", "stew", "main course", "weeknight", "iconic"],
+      "dietaryTags": ["dairy-free"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 60,
+      "servings": 4
+    },
+    {
+      "title": "Rundown",
+      "description": "Jamaican mackerel simmered in reduced coconut milk with onions, peppers, and thyme until thick and luscious.",
+      "ingredients": [
+        { "name": "mackerel fillets (or salted mackerel, soaked)", "quantity": 600, "unit": "g" },
+        { "name": "coconut milk", "quantity": 800, "unit": "ml" },
+        { "name": "onion, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "scallions, chopped", "quantity": 4, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "tomato, chopped", "quantity": 2, "unit": "pc" },
+        { "name": "Scotch bonnet pepper, whole", "quantity": 1, "unit": "pc" },
+        { "name": "fresh thyme", "quantity": 2, "unit": "tbsp" },
+        { "name": "ground allspice", "quantity": 0.5, "unit": "tsp" },
+        { "name": "ginger, grated", "quantity": 1, "unit": "tbsp" },
+        { "name": "lime juice", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "If using salted mackerel, soak in cold water 4 hours, drain, and rinse.",
+        "Pour coconut milk into a wide pan and simmer over medium heat, stirring occasionally, for 15 minutes until reduced and oil starts to separate.",
+        "Add onion, scallions, garlic, ginger, allspice, and thyme; cook 5 minutes.",
+        "Stir in tomato and Scotch bonnet (whole, not pierced); simmer 5 minutes.",
+        "Add mackerel pieces and lime juice, gently spooning sauce over the fish.",
+        "Simmer 10–12 minutes uncovered until fish is cooked and the sauce is very thick.",
+        "Discard Scotch bonnet, adjust salt, and serve with boiled green bananas, dumplings, or yam."
+      ],
+      "tags": ["seafood", "coconut", "stew", "traditional", "main course"],
+      "dietaryTags": ["dairy-free", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 35,
+      "servings": 4
+    },
+    {
+      "title": "Cornmeal Porridge",
+      "description": "Jamaican breakfast porridge of cornmeal cooked with coconut milk, cinnamon, and nutmeg, sweetened with condensed milk.",
+      "ingredients": [
+        { "name": "fine yellow cornmeal", "quantity": 150, "unit": "g" },
+        { "name": "water", "quantity": 750, "unit": "ml" },
+        { "name": "coconut milk", "quantity": 400, "unit": "ml" },
+        { "name": "cinnamon stick", "quantity": 1, "unit": "pc" },
+        { "name": "ground nutmeg", "quantity": 0.5, "unit": "tsp" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "sweetened condensed milk", "quantity": 100, "unit": "ml" },
+        { "name": "salt", "quantity": 0.25, "unit": "tsp" }
+      ],
+      "steps": [
+        "In a bowl, whisk cornmeal with 250 ml of the cold water until smooth — this prevents lumps.",
+        "Bring remaining water to a boil with cinnamon stick, nutmeg, and salt.",
+        "Slowly drizzle the cornmeal slurry into the boiling water, whisking constantly.",
+        "Reduce heat to low and cook 12 minutes, stirring frequently to prevent sticking, until thickened and the cornmeal taste is gone.",
+        "Stir in coconut milk and cook another 5 minutes until creamy.",
+        "Off heat, stir in vanilla extract and sweetened condensed milk to taste.",
+        "Discard cinnamon stick, ladle into bowls, and serve hot."
+      ],
+      "tags": ["breakfast", "porridge", "comfort food", "sweet", "traditional"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Festival",
+      "description": "Sweet Jamaican fried cornmeal dumplings — golden, slightly crisp outside and tender inside, served alongside jerk and fried fish.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 200, "unit": "g" },
+        { "name": "fine yellow cornmeal", "quantity": 100, "unit": "g" },
+        { "name": "sugar", "quantity": 60, "unit": "g" },
+        { "name": "baking powder", "quantity": 2, "unit": "tsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" },
+        { "name": "ground nutmeg", "quantity": 0.25, "unit": "tsp" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "water", "quantity": 150, "unit": "ml" },
+        { "name": "vegetable oil for frying", "quantity": 750, "unit": "ml" }
+      ],
+      "steps": [
+        "Whisk together flour, cornmeal, sugar, baking powder, salt, and nutmeg.",
+        "Stir in vanilla and gradually add water, mixing into a soft, slightly tacky dough.",
+        "Knead briefly on a floured surface until smooth, then rest 10 minutes covered.",
+        "Divide dough into 8 equal portions and roll each into a 12 cm long log, tapered at the ends.",
+        "Heat oil to 170°C (340°F) — too hot and the outside will burn before the inside cooks.",
+        "Fry festivals in batches, turning frequently, for 6–7 minutes until deeply golden all over.",
+        "Drain on paper towels and serve hot alongside jerk chicken or escovitch fish."
+      ],
+      "tags": ["dumpling", "fried", "side dish", "sweet", "iconic"],
+      "dietaryTags": ["vegan", "dairy-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 4
+    }
+  ]
+}

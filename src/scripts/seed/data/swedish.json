@@ -1,0 +1,381 @@
+{
+  "cuisine": "Swedish",
+  "names": {
+    "first": ["Erik", "Lars", "Anders", "Johan", "Magnus", "Gustav", "Henrik", "Oskar", "Astrid", "Linnea", "Elin", "Saga", "Ingrid", "Maja", "Freja", "Alva"],
+    "last": ["Andersson", "Johansson", "Karlsson", "Nilsson", "Eriksson", "Larsson", "Olsson", "Persson", "Svensson", "Gustafsson", "Pettersson", "Jonsson"]
+  },
+  "recipes": [
+    {
+      "title": "Köttbullar",
+      "description": "Swedish meatballs of beef and pork in a creamy gravy, served with lingonberry jam and mashed potato.",
+      "ingredients": [
+        { "name": "ground beef", "quantity": 400, "unit": "g" },
+        { "name": "ground pork", "quantity": 200, "unit": "g" },
+        { "name": "breadcrumbs", "quantity": 50, "unit": "g" },
+        { "name": "milk", "quantity": 100, "unit": "ml" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "allspice", "quantity": 0.5, "unit": "tsp" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "flour", "quantity": 2, "unit": "tbsp" },
+        { "name": "beef stock", "quantity": 400, "unit": "ml" },
+        { "name": "double cream", "quantity": 150, "unit": "ml" },
+        { "name": "soy sauce", "quantity": 1, "unit": "tbsp" },
+        { "name": "lingonberry jam", "quantity": 100, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak breadcrumbs in milk 5 minutes.",
+        "Sauté finely chopped onion in 20g butter until soft; cool.",
+        "Combine meats, soaked breadcrumbs, onion, egg, allspice and salt; knead well.",
+        "Roll into walnut-size meatballs.",
+        "Brown in remaining butter in batches; remove.",
+        "Whisk flour into pan drippings, then add stock, cream and soy; simmer until thick.",
+        "Return meatballs and warm through 5 minutes.",
+        "Serve with mashed potato and lingonberry jam."
+      ],
+      "tags": ["meatballs", "swedish-classic", "comfort-food"],
+      "difficulty": "easy",
+      "prepTime": 25,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Gravlax",
+      "description": "Swedish cured salmon with dill, sugar and salt, sliced thin and served with mustard sauce.",
+      "ingredients": [
+        { "name": "salmon fillet", "quantity": 1, "unit": "kg" },
+        { "name": "coarse sea salt", "quantity": 80, "unit": "g" },
+        { "name": "sugar", "quantity": 80, "unit": "g" },
+        { "name": "white peppercorns", "quantity": 1, "unit": "tbsp" },
+        { "name": "fresh dill", "quantity": 2, "unit": "bunch" },
+        { "name": "Dijon mustard", "quantity": 3, "unit": "tbsp" },
+        { "name": "honey", "quantity": 2, "unit": "tbsp" },
+        { "name": "white wine vinegar", "quantity": 1, "unit": "tbsp" },
+        { "name": "vegetable oil", "quantity": 100, "unit": "ml" }
+      ],
+      "steps": [
+        "Crush peppercorns coarsely and mix with salt and sugar.",
+        "Lay salmon skin-side down on a tray and rub with cure.",
+        "Cover with chopped dill, pressing in firmly.",
+        "Wrap tightly in cling film, weight with a plate, and refrigerate 48 hours, turning once.",
+        "Whisk mustard, honey and vinegar; slowly drizzle in oil to emulsify, then stir in chopped dill.",
+        "Scrape cure off salmon, pat dry, and slice thinly across the grain.",
+        "Serve with mustard-dill sauce, rye bread and lemon."
+      ],
+      "tags": ["fish", "cured", "swedish-classic", "no-cook"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 0,
+      "servings": 8
+    },
+    {
+      "title": "Pyttipanna",
+      "description": "Swedish hash of diced potato, onion and meat fried golden, topped with a fried egg and pickled beets.",
+      "ingredients": [
+        { "name": "boiled potatoes", "quantity": 600, "unit": "g" },
+        { "name": "cooked beef or ham", "quantity": 300, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "eggs", "quantity": 4, "unit": "pc" },
+        { "name": "pickled beetroot", "quantity": 200, "unit": "g" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Dice potatoes, meat and onion into 1cm cubes.",
+        "Heat half the butter and oil; fry potatoes until deep golden.",
+        "Push potatoes aside, add remaining fat and fry meat until crisp.",
+        "Add onion and cook 5 minutes until soft.",
+        "Toss everything together, season and keep warm.",
+        "Fry eggs sunny-side up in butter.",
+        "Top each portion of hash with an egg and serve with pickled beets."
+      ],
+      "tags": ["hash", "leftovers", "swedish-classic", "comfort-food"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Janssons Frestelse",
+      "description": "Swedish gratin of potato matchsticks, onion, anchovies and cream baked until golden.",
+      "ingredients": [
+        { "name": "potatoes", "quantity": 1, "unit": "kg" },
+        { "name": "onions", "quantity": 2, "unit": "pc" },
+        { "name": "Swedish anchovy fillets (sprat)", "quantity": 100, "unit": "g" },
+        { "name": "double cream", "quantity": 400, "unit": "ml" },
+        { "name": "milk", "quantity": 100, "unit": "ml" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "breadcrumbs", "quantity": 50, "unit": "g" },
+        { "name": "white pepper", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Cut potatoes into thin matchsticks; rinse and pat dry.",
+        "Slice onions thin and sauté in 30g butter until soft and golden.",
+        "Butter a baking dish and layer half the potatoes, all the onions and anchovies.",
+        "Top with remaining potatoes; pepper generously.",
+        "Pour cream and milk over (plus a few spoons of anchovy brine).",
+        "Scatter breadcrumbs and dot with remaining butter.",
+        "Bake at 200°C for 50 minutes until tender and golden on top."
+      ],
+      "tags": ["gratin", "potato", "anchovy", "swedish-classic", "christmas"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 50,
+      "servings": 6
+    },
+    {
+      "title": "Smörgåstårta",
+      "description": "Swedish savoury layered sandwich cake with bread, mayo, shrimp, smoked salmon and herbs.",
+      "ingredients": [
+        { "name": "white sandwich bread", "quantity": 24, "unit": "pc" },
+        { "name": "cream cheese", "quantity": 400, "unit": "g" },
+        { "name": "mayonnaise", "quantity": 200, "unit": "g" },
+        { "name": "sour cream", "quantity": 150, "unit": "g" },
+        { "name": "cooked shrimp", "quantity": 300, "unit": "g" },
+        { "name": "smoked salmon", "quantity": 200, "unit": "g" },
+        { "name": "hard-boiled eggs", "quantity": 4, "unit": "pc" },
+        { "name": "fresh dill", "quantity": 1, "unit": "bunch" },
+        { "name": "cucumber", "quantity": 1, "unit": "pc" },
+        { "name": "lemon juice", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Trim crusts from bread; arrange 8 slices in a rectangle on a serving board.",
+        "Beat cream cheese with mayonnaise and sour cream until smooth; reserve a third.",
+        "Spread a layer of cream cheese mix; top with chopped eggs and half the dill.",
+        "Add a second bread layer; spread cream cheese, then layer salmon and lemon juice.",
+        "Add a third bread layer; press gently and chill 30 minutes.",
+        "Coat the entire cake with reserved cream cheese mix like icing.",
+        "Decorate top with shrimp, cucumber slices and dill sprigs.",
+        "Chill at least 4 hours before slicing into rectangles."
+      ],
+      "tags": ["sandwich-cake", "celebration", "swedish-classic"],
+      "difficulty": "medium",
+      "prepTime": 60,
+      "cookTime": 0,
+      "servings": 10
+    },
+    {
+      "title": "Kanelbullar",
+      "description": "Swedish cinnamon buns with cardamom dough, swirled with butter and pearl sugar.",
+      "ingredients": [
+        { "name": "milk", "quantity": 300, "unit": "ml" },
+        { "name": "active dry yeast", "quantity": 7, "unit": "g" },
+        { "name": "sugar", "quantity": 80, "unit": "g" },
+        { "name": "ground cardamom", "quantity": 2, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "butter for dough", "quantity": 100, "unit": "g" },
+        { "name": "flour", "quantity": 600, "unit": "g" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "softened butter for filling", "quantity": 100, "unit": "g" },
+        { "name": "brown sugar", "quantity": 100, "unit": "g" },
+        { "name": "ground cinnamon", "quantity": 2, "unit": "tbsp" },
+        { "name": "pearl sugar", "quantity": 50, "unit": "g" }
+      ],
+      "steps": [
+        "Warm milk to 37°C; whisk in yeast and rest 10 minutes.",
+        "Add sugar, cardamom, salt, melted butter, egg and most of the flour; knead 8 minutes.",
+        "Cover and rise 1 hour until doubled.",
+        "Mix soft butter, brown sugar and cinnamon for filling.",
+        "Roll dough into a 40x30cm rectangle, spread filling and roll up tightly.",
+        "Cut into 14 slices and place on a lined tray; cover and rise 45 minutes.",
+        "Brush with beaten egg and sprinkle with pearl sugar.",
+        "Bake at 200°C for 12 minutes until golden; cool on a rack."
+      ],
+      "tags": ["pastry", "yeasted", "cinnamon", "swedish-classic"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 90,
+      "cookTime": 15,
+      "servings": 14
+    },
+    {
+      "title": "Räksmörgås",
+      "description": "Iconic Swedish open-faced shrimp sandwich on rye with egg, mayo, dill and lemon.",
+      "ingredients": [
+        { "name": "rye bread", "quantity": 4, "unit": "pc" },
+        { "name": "butter", "quantity": 30, "unit": "g" },
+        { "name": "lettuce leaves", "quantity": 4, "unit": "pc" },
+        { "name": "hard-boiled eggs", "quantity": 4, "unit": "pc" },
+        { "name": "cooked peeled shrimp", "quantity": 400, "unit": "g" },
+        { "name": "mayonnaise", "quantity": 4, "unit": "tbsp" },
+        { "name": "fresh dill", "quantity": 0.5, "unit": "bunch" },
+        { "name": "lemon", "quantity": 1, "unit": "pc" },
+        { "name": "black pepper", "quantity": 1, "unit": "pinch" }
+      ],
+      "steps": [
+        "Lightly butter the rye bread.",
+        "Layer a lettuce leaf on each slice.",
+        "Slice eggs and arrange three slices per sandwich.",
+        "Pile shrimp generously on top of eggs.",
+        "Spoon mayonnaise over the shrimp.",
+        "Top with chopped dill, a grind of pepper and a lemon wedge."
+      ],
+      "tags": ["sandwich", "shrimp", "no-cook", "swedish-classic"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Ärtsoppa",
+      "description": "Traditional Swedish yellow pea soup with smoked pork, served with mustard.",
+      "ingredients": [
+        { "name": "yellow split peas", "quantity": 400, "unit": "g" },
+        { "name": "smoked pork knuckle", "quantity": 800, "unit": "g" },
+        { "name": "onions", "quantity": 2, "unit": "pc" },
+        { "name": "carrots", "quantity": 2, "unit": "pc" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "fresh thyme", "quantity": 1, "unit": "tsp" },
+        { "name": "marjoram", "quantity": 1, "unit": "tsp" },
+        { "name": "Swedish mustard", "quantity": 4, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak split peas overnight in cold water; drain.",
+        "Place pork knuckle in a large pot with 2.5L water; bring to simmer and skim.",
+        "Add peas, chopped onions, carrots, bay, thyme and marjoram.",
+        "Simmer covered 90 minutes until pork is tender.",
+        "Remove pork, shred meat and return to pot.",
+        "Discard bay; adjust salt.",
+        "Serve hot with a dollop of mustard."
+      ],
+      "tags": ["soup", "peas", "swedish-classic", "winter"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 100,
+      "servings": 6
+    },
+    {
+      "title": "Kåldolmar",
+      "description": "Swedish cabbage rolls stuffed with rice and pork, served with cream gravy and lingonberry.",
+      "ingredients": [
+        { "name": "white cabbage", "quantity": 1, "unit": "pc" },
+        { "name": "ground pork", "quantity": 400, "unit": "g" },
+        { "name": "ground beef", "quantity": 200, "unit": "g" },
+        { "name": "long grain rice", "quantity": 100, "unit": "g" },
+        { "name": "milk", "quantity": 200, "unit": "ml" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "allspice", "quantity": 0.5, "unit": "tsp" },
+        { "name": "golden syrup", "quantity": 2, "unit": "tbsp" },
+        { "name": "butter", "quantity": 40, "unit": "g" },
+        { "name": "double cream", "quantity": 150, "unit": "ml" },
+        { "name": "beef stock", "quantity": 300, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Core cabbage and blanch whole 5 minutes; peel softened leaves.",
+        "Simmer rice in milk until creamy and absorbed; cool.",
+        "Sauté chopped onion in butter; cool.",
+        "Combine meats, rice, onion, egg, allspice and salt; mix well.",
+        "Place 2 tablespoons filling on each leaf, fold and roll tightly.",
+        "Arrange seam-down in a baking dish, brush with syrup, dot with butter.",
+        "Pour stock over and bake at 200°C for 60 minutes, basting twice.",
+        "Pour pan juices into a saucepan, add cream, simmer to gravy and serve over rolls."
+      ],
+      "tags": ["cabbage-rolls", "stuffed", "swedish-classic", "comfort-food"],
+      "difficulty": "medium",
+      "prepTime": 40,
+      "cookTime": 75,
+      "servings": 6
+    },
+    {
+      "title": "Falukorv",
+      "description": "Swedish baked sausage glazed with mustard, served with macaroni or potatoes.",
+      "ingredients": [
+        { "name": "falukorv sausage", "quantity": 800, "unit": "g" },
+        { "name": "Swedish mustard", "quantity": 3, "unit": "tbsp" },
+        { "name": "ketchup", "quantity": 2, "unit": "tbsp" },
+        { "name": "honey", "quantity": 1, "unit": "tbsp" },
+        { "name": "butter", "quantity": 20, "unit": "g" },
+        { "name": "macaroni", "quantity": 400, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Score the falukorv on the diagonal across the top.",
+        "Whisk mustard, ketchup and honey to a glaze.",
+        "Brush sausage all over with the glaze.",
+        "Place in a baking dish, dot with butter, bake at 200°C for 25 minutes.",
+        "Boil macaroni in salted water until al dente; drain.",
+        "Slice the falukorv thickly and serve with the macaroni."
+      ],
+      "tags": ["sausage", "baked", "weeknight", "swedish-classic"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Princess Cake",
+      "description": "Swedish layered sponge cake with raspberry, vanilla cream and whipped cream, covered in green marzipan.",
+      "ingredients": [
+        { "name": "eggs", "quantity": 6, "unit": "pc" },
+        { "name": "sugar", "quantity": 200, "unit": "g" },
+        { "name": "flour", "quantity": 100, "unit": "g" },
+        { "name": "potato starch", "quantity": 100, "unit": "g" },
+        { "name": "baking powder", "quantity": 1, "unit": "tsp" },
+        { "name": "milk", "quantity": 300, "unit": "ml" },
+        { "name": "egg yolks", "quantity": 4, "unit": "pc" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "extra sugar for cream", "quantity": 80, "unit": "g" },
+        { "name": "cornflour", "quantity": 30, "unit": "g" },
+        { "name": "double cream", "quantity": 500, "unit": "ml" },
+        { "name": "raspberry jam", "quantity": 200, "unit": "g" },
+        { "name": "green marzipan", "quantity": 500, "unit": "g" },
+        { "name": "icing sugar", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Whisk eggs and sugar 8 minutes until tripled; fold in sifted flour, starch and baking powder.",
+        "Bake in a 24cm tin at 175°C for 25 minutes; cool and slice into three layers.",
+        "Whisk yolks, sugar, cornflour and a little milk; warm the rest of the milk.",
+        "Combine and cook, whisking, until thick; stir in vanilla and chill the pastry cream.",
+        "Whip cream to firm peaks.",
+        "Place bottom sponge on a plate, spread jam, then a layer of pastry cream.",
+        "Add the middle sponge, spread more cream, then the top sponge.",
+        "Cover the cake in a smooth dome of whipped cream.",
+        "Roll marzipan thinly and drape over the cake; trim and dust with icing sugar."
+      ],
+      "tags": ["dessert", "cake", "swedish-classic", "celebration"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 90,
+      "cookTime": 25,
+      "servings": 12
+    },
+    {
+      "title": "Kroppkakor",
+      "description": "Swedish potato dumplings stuffed with smoked pork, served with butter and lingonberry.",
+      "ingredients": [
+        { "name": "raw potatoes", "quantity": 800, "unit": "g" },
+        { "name": "boiled potatoes", "quantity": 400, "unit": "g" },
+        { "name": "flour", "quantity": 200, "unit": "g" },
+        { "name": "egg yolks", "quantity": 2, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "smoked pork or bacon", "quantity": 250, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "allspice", "quantity": 0.5, "unit": "tsp" },
+        { "name": "butter", "quantity": 80, "unit": "g" },
+        { "name": "lingonberry jam", "quantity": 100, "unit": "g" }
+      ],
+      "steps": [
+        "Grate raw potatoes finely and squeeze out all liquid.",
+        "Mash boiled potatoes; combine with raw potato, flour, yolks and salt.",
+        "Dice pork and onion; sauté until onion is soft and pork crisp; add allspice.",
+        "Take a handful of potato dough, flatten on your palm, place a spoon of pork filling in the centre.",
+        "Close dough around filling and roll into a smooth ball; flour lightly.",
+        "Drop into boiling salted water and simmer 15 minutes once they float.",
+        "Drain and serve hot with melted butter and lingonberry jam."
+      ],
+      "tags": ["dumplings", "potato", "stuffed", "swedish-classic"],
+      "difficulty": "hard",
+      "prepTime": 45,
+      "cookTime": 25,
+      "servings": 4
+    }
+  ]
+}

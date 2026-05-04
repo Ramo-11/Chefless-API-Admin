@@ -1,0 +1,483 @@
+{
+  "cuisine": "Ethiopian",
+  "names": {
+    "first": ["Abebe", "Selamawit", "Tewodros", "Hiwot", "Yonas", "Meskerem", "Dawit", "Tigist", "Henok", "Mahlet", "Getachew", "Bethlehem"],
+    "last": ["Tesfaye", "Kebede", "Bekele", "Hailu", "Girma", "Alemu", "Mengistu", "Tadesse", "Wolde", "Desta", "Abebe", "Asfaw"]
+  },
+  "recipes": [
+    {
+      "title": "Doro Wat",
+      "description": "Iconic Ethiopian chicken stew simmered in a deeply spiced berbere and onion sauce, served with hard-boiled eggs.",
+      "ingredients": [
+        { "name": "chicken legs", "quantity": 1.2, "unit": "kg" },
+        { "name": "red onions, finely chopped", "quantity": 6, "unit": "pc" },
+        { "name": "berbere spice", "quantity": 4, "unit": "tbsp" },
+        { "name": "niter kibbeh (spiced clarified butter)", "quantity": 4, "unit": "tbsp" },
+        { "name": "garlic, minced", "quantity": 6, "unit": "pc" },
+        { "name": "ginger, grated", "quantity": 2, "unit": "tbsp" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "hard-boiled eggs", "quantity": 6, "unit": "pc" },
+        { "name": "lemon juice", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Marinate the chicken legs in lemon juice and salt for 30 minutes, then pat dry.",
+        "In a heavy pot, dry-cook the chopped onions over low heat for 25 minutes until deeply softened, stirring often.",
+        "Add the niter kibbeh, garlic, and ginger. Cook for another 5 minutes until fragrant.",
+        "Stir in the berbere and tomato paste. Toast the spice paste for 3-4 minutes to bloom the flavors.",
+        "Add 250 ml water to loosen the sauce, then nestle in the chicken legs and coat them well.",
+        "Cover and simmer over low heat for 45 minutes, turning the chicken occasionally.",
+        "Score the hard-boiled eggs and add them to the pot for the last 10 minutes.",
+        "Taste and adjust salt. Serve hot with injera."
+      ],
+      "tags": ["stew", "spicy", "national-dish", "festive"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Injera",
+      "description": "Spongy sourdough flatbread made from teff flour, the foundational staple of Ethiopian and Eritrean cuisine.",
+      "ingredients": [
+        { "name": "teff flour", "quantity": 500, "unit": "g" },
+        { "name": "water", "quantity": 1, "unit": "l" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "In a large bowl, mix the teff flour with water until smooth and lump-free.",
+        "Cover loosely and leave at room temperature for 2-3 days to ferment until bubbly and tangy.",
+        "Stir in the salt and adjust consistency with water until it resembles a thin pancake batter.",
+        "Heat a wide non-stick pan over medium-high heat with no oil.",
+        "Pour batter in a spiral from outside to center, covering the pan in one thin layer.",
+        "Cover with a lid and steam for 2-3 minutes until the surface is fully covered with small holes (eyes) and edges lift.",
+        "Remove without flipping and cool on a clean cloth. Stack as you go.",
+        "Serve fresh with stews ladled directly on top."
+      ],
+      "tags": ["flatbread", "fermented", "staple", "vegan"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "hard",
+      "prepTime": 4320,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Tibs",
+      "description": "Quick-fired Ethiopian sauté of beef or lamb with onions, peppers, and rosemary in spiced butter.",
+      "ingredients": [
+        { "name": "beef sirloin, cubed", "quantity": 700, "unit": "g" },
+        { "name": "red onion, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "green chilies, sliced", "quantity": 3, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 4, "unit": "pc" },
+        { "name": "rosemary sprigs", "quantity": 2, "unit": "pc" },
+        { "name": "niter kibbeh", "quantity": 3, "unit": "tbsp" },
+        { "name": "berbere spice", "quantity": 1, "unit": "tbsp" },
+        { "name": "tomato, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Heat the niter kibbeh in a heavy skillet until shimmering hot.",
+        "Add the beef cubes and sear over high heat for 4-5 minutes until browned on all sides.",
+        "Add the garlic, rosemary, and chilies. Stir-fry for 1 minute.",
+        "Toss in the onion and tomato, cook for another 3-4 minutes until just softened but still crisp.",
+        "Sprinkle the berbere, salt, and pepper over the meat and toss to coat.",
+        "Cook for 2 more minutes to bring everything together.",
+        "Serve sizzling on injera or with rice."
+      ],
+      "tags": ["beef", "stir-fry", "spicy", "quick"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Kitfo",
+      "description": "Ethiopian dish of finely minced raw beef seasoned with mitmita and warmed niter kibbeh.",
+      "ingredients": [
+        { "name": "lean beef tenderloin", "quantity": 600, "unit": "g" },
+        { "name": "niter kibbeh, warmed", "quantity": 4, "unit": "tbsp" },
+        { "name": "mitmita spice", "quantity": 2, "unit": "tsp" },
+        { "name": "korarima (cardamom) ground", "quantity": 0.5, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "ayib (Ethiopian fresh cheese)", "quantity": 200, "unit": "g" },
+        { "name": "gomen (cooked collard greens)", "quantity": 200, "unit": "g" }
+      ],
+      "steps": [
+        "Trim the beef of any sinew and chill until very cold.",
+        "Mince the beef extremely finely by hand with a sharp knife until almost a paste.",
+        "Warm the niter kibbeh gently until just liquid, not hot.",
+        "In a bowl, combine the minced beef with mitmita, korarima, salt, and warmed niter kibbeh.",
+        "Mix vigorously with a wooden spoon until silky and uniform.",
+        "Plate immediately, accompanied by ayib cheese and gomen on the side.",
+        "Serve with injera and eat fresh; it must not sit out."
+      ],
+      "tags": ["raw-beef", "spicy", "delicacy", "festive"],
+      "difficulty": "hard",
+      "prepTime": 25,
+      "cookTime": 0,
+      "servings": 4
+    },
+    {
+      "title": "Shiro",
+      "description": "Smooth, savory chickpea flour stew spiced with berbere, a daily staple across Ethiopia and Eritrea.",
+      "ingredients": [
+        { "name": "shiro (roasted chickpea) flour", "quantity": 200, "unit": "g" },
+        { "name": "red onion, finely chopped", "quantity": 2, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 4, "unit": "pc" },
+        { "name": "berbere", "quantity": 2, "unit": "tbsp" },
+        { "name": "niter kibbeh or oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "tomato, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "water", "quantity": 750, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Cook the onions in a dry pot over medium heat until softened, about 8 minutes.",
+        "Add the niter kibbeh and garlic, cook for 2 minutes until fragrant.",
+        "Stir in the berbere and tomato, toasting for 3 minutes.",
+        "Pour in the water and bring to a gentle boil.",
+        "Slowly whisk in the shiro flour to avoid lumps.",
+        "Reduce heat and simmer, stirring frequently, for 15-20 minutes until creamy and thick.",
+        "Adjust salt and consistency with hot water if needed.",
+        "Serve in a clay dish on injera, drizzled with extra niter kibbeh."
+      ],
+      "tags": ["legume", "vegan", "everyday", "spicy"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Misir Wat",
+      "description": "Ethiopian red lentil stew built on caramelized onions and berbere, eaten on fasting days.",
+      "ingredients": [
+        { "name": "red split lentils", "quantity": 300, "unit": "g" },
+        { "name": "red onion, finely chopped", "quantity": 3, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 5, "unit": "pc" },
+        { "name": "ginger, grated", "quantity": 1, "unit": "tbsp" },
+        { "name": "berbere", "quantity": 3, "unit": "tbsp" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "vegetable oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "water", "quantity": 1, "unit": "l" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Rinse the lentils thoroughly until the water runs clear.",
+        "Dry-cook the onions in a heavy pot for 15 minutes until deep golden, stirring often.",
+        "Add the oil, garlic, and ginger, cook for 3 minutes.",
+        "Stir in the berbere and tomato paste, toasting for 4 minutes until oil separates.",
+        "Add the lentils and water, bring to a boil.",
+        "Reduce heat, cover, and simmer for 30-35 minutes until lentils break down.",
+        "Stir occasionally and add water if it dries out. Season with salt.",
+        "Serve hot scooped onto injera."
+      ],
+      "tags": ["lentils", "vegan", "fasting", "spicy"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 45,
+      "servings": 6
+    },
+    {
+      "title": "Beyaynetu",
+      "description": "Ethiopian fasting platter of assorted vegetable and legume stews arranged on injera.",
+      "ingredients": [
+        { "name": "misir wat", "quantity": 300, "unit": "g" },
+        { "name": "shiro", "quantity": 300, "unit": "g" },
+        { "name": "kik alicha (yellow split peas)", "quantity": 250, "unit": "g" },
+        { "name": "atakilt wat (cabbage potato carrot)", "quantity": 300, "unit": "g" },
+        { "name": "gomen (collard greens)", "quantity": 200, "unit": "g" },
+        { "name": "fosolia (green beans and carrots)", "quantity": 200, "unit": "g" },
+        { "name": "salata (tomato salad)", "quantity": 150, "unit": "g" },
+        { "name": "injera", "quantity": 4, "unit": "pc" }
+      ],
+      "steps": [
+        "Prepare each component stew separately in advance and keep warm.",
+        "Lay a large injera flat on a round serving platter.",
+        "Spoon misir wat onto one section of the injera.",
+        "Add shiro, kik alicha, atakilt, gomen, fosolia, and salata in distinct mounds around the platter.",
+        "Place rolled extra injera pieces on the edge of the platter.",
+        "Garnish with a slice of fresh chili if desired.",
+        "Serve communally; diners tear off injera to scoop each stew."
+      ],
+      "tags": ["platter", "vegan", "fasting", "communal"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 0,
+      "servings": 4
+    },
+    {
+      "title": "Kik Alicha",
+      "description": "Mild Ethiopian yellow split pea stew gently turmeric-tinted, free of berbere heat.",
+      "ingredients": [
+        { "name": "yellow split peas", "quantity": 300, "unit": "g" },
+        { "name": "yellow onion, chopped", "quantity": 2, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 4, "unit": "pc" },
+        { "name": "ginger, grated", "quantity": 1, "unit": "tbsp" },
+        { "name": "turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "green chili, slit", "quantity": 1, "unit": "pc" },
+        { "name": "water", "quantity": 1, "unit": "l" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak the yellow split peas in cold water for 1 hour, then drain.",
+        "Cook the onions in oil over medium heat for 8 minutes until soft.",
+        "Add the garlic, ginger, and turmeric. Cook for 2 minutes.",
+        "Add the split peas and water, bring to a boil.",
+        "Lower the heat, add the green chili, cover, and simmer for 40 minutes.",
+        "Stir occasionally and mash some peas against the side for body.",
+        "Season with salt and cook 5 more minutes uncovered.",
+        "Serve warm on injera as part of a beyaynetu platter."
+      ],
+      "tags": ["legume", "mild", "vegan", "fasting"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 60,
+      "cookTime": 50,
+      "servings": 4
+    },
+    {
+      "title": "Gomen",
+      "description": "Ethiopian sautéed collard greens with garlic, ginger, and a hint of green chili.",
+      "ingredients": [
+        { "name": "collard greens, finely chopped", "quantity": 700, "unit": "g" },
+        { "name": "yellow onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 4, "unit": "pc" },
+        { "name": "ginger, grated", "quantity": 1, "unit": "tbsp" },
+        { "name": "green chili, slit", "quantity": 1, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "water", "quantity": 200, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Wash the collard greens, remove tough stems, and chop finely.",
+        "Boil the greens in salted water for 8 minutes, then drain and squeeze.",
+        "Heat oil in a pan and sauté onions for 6 minutes until translucent.",
+        "Add garlic, ginger, and chili. Cook for 2 minutes.",
+        "Add the drained greens and stir to coat.",
+        "Splash in water and cook covered for 10 minutes over low heat.",
+        "Season with salt and cook uncovered another 3 minutes.",
+        "Serve as a side on a beyaynetu platter."
+      ],
+      "tags": ["greens", "vegan", "side", "healthy"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Atakilt Wat",
+      "description": "Ethiopian mild stew of cabbage, carrots, and potatoes lightly turmeric-spiced.",
+      "ingredients": [
+        { "name": "cabbage, shredded", "quantity": 600, "unit": "g" },
+        { "name": "carrots, sliced", "quantity": 3, "unit": "pc" },
+        { "name": "potatoes, cubed", "quantity": 3, "unit": "pc" },
+        { "name": "yellow onion, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 3, "unit": "pc" },
+        { "name": "ginger, grated", "quantity": 1, "unit": "tbsp" },
+        { "name": "turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Heat oil in a wide pot and sauté the onion for 5 minutes.",
+        "Add the garlic, ginger, and turmeric. Cook for 2 minutes.",
+        "Add the carrots and potatoes, stir to coat.",
+        "Cover and cook over medium-low heat for 10 minutes, stirring occasionally.",
+        "Add the cabbage and salt, fold in gently.",
+        "Cover and steam for 15 more minutes until vegetables are tender.",
+        "Uncover and cook 3 minutes to evaporate excess moisture.",
+        "Serve warm with injera."
+      ],
+      "tags": ["vegetable", "vegan", "mild", "side"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Dabo Kolo",
+      "description": "Crunchy Ethiopian roasted barley or wheat snack flavored with berbere or sweet spices.",
+      "ingredients": [
+        { "name": "wheat flour", "quantity": 500, "unit": "g" },
+        { "name": "berbere", "quantity": 1, "unit": "tbsp" },
+        { "name": "sugar", "quantity": 2, "unit": "tbsp" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" },
+        { "name": "water", "quantity": 200, "unit": "ml" }
+      ],
+      "steps": [
+        "In a bowl, combine flour, berbere, sugar, and salt.",
+        "Add the oil and rub it into the flour mixture.",
+        "Slowly add water and knead into a stiff dough.",
+        "Rest the dough covered for 15 minutes.",
+        "Roll into thin ropes and cut into small pea-sized pieces.",
+        "Bake in a 175°C oven on lined trays for 30-35 minutes, stirring twice, until golden and crisp.",
+        "Cool completely before storing in an airtight jar.",
+        "Serve as a snack with coffee."
+      ],
+      "tags": ["snack", "crunchy", "spiced", "shelf-stable"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 25,
+      "cookTime": 35,
+      "servings": 8
+    },
+    {
+      "title": "Doro Tibs",
+      "description": "Pan-seared chicken pieces with onions, jalapeños, and rosemary in spiced butter.",
+      "ingredients": [
+        { "name": "boneless chicken thighs, cubed", "quantity": 700, "unit": "g" },
+        { "name": "red onion, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "jalapeños, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 4, "unit": "pc" },
+        { "name": "rosemary", "quantity": 1, "unit": "tbsp" },
+        { "name": "niter kibbeh", "quantity": 3, "unit": "tbsp" },
+        { "name": "berbere", "quantity": 1, "unit": "tbsp" },
+        { "name": "lemon juice", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Marinate the chicken in lemon juice and salt for 20 minutes.",
+        "Heat niter kibbeh in a skillet over high heat.",
+        "Add chicken and sear for 6 minutes until browned.",
+        "Add garlic, rosemary, and jalapeños. Cook for 2 minutes.",
+        "Add the onion and stir-fry for 3 minutes until just softened.",
+        "Sprinkle berbere over the chicken and toss to coat.",
+        "Cook another 3 minutes until chicken is fully done.",
+        "Serve immediately on injera."
+      ],
+      "tags": ["chicken", "stir-fry", "quick", "spicy"],
+      "difficulty": "easy",
+      "prepTime": 25,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Ful Medames",
+      "description": "Ethiopian breakfast of mashed fava beans seasoned with onions, tomato, and chili, eaten with bread.",
+      "ingredients": [
+        { "name": "dried fava beans", "quantity": 400, "unit": "g" },
+        { "name": "tomato, diced", "quantity": 1, "unit": "pc" },
+        { "name": "red onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "green chili, chopped", "quantity": 2, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 3, "unit": "pc" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "berbere", "quantity": 1, "unit": "tsp" },
+        { "name": "lemon juice", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak the fava beans overnight, then drain.",
+        "Boil the beans in fresh water for 90 minutes until very soft.",
+        "Drain and lightly mash, keeping some beans whole.",
+        "Heat oil in a pan and sauté garlic for 1 minute.",
+        "Add tomato and onion, cook for 4 minutes.",
+        "Stir in berbere, salt, and the mashed beans, adding a splash of cooking water.",
+        "Simmer for 10 minutes, stirring often.",
+        "Finish with lemon juice and chopped chili. Serve with bread."
+      ],
+      "tags": ["breakfast", "fava-beans", "vegan", "everyday"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 720,
+      "cookTime": 110,
+      "servings": 4
+    },
+    {
+      "title": "Genfo",
+      "description": "Thick Ethiopian barley porridge mounded with a niter kibbeh and berbere well in the center.",
+      "ingredients": [
+        { "name": "barley flour", "quantity": 400, "unit": "g" },
+        { "name": "water", "quantity": 1, "unit": "l" },
+        { "name": "niter kibbeh", "quantity": 4, "unit": "tbsp" },
+        { "name": "berbere", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "yogurt", "quantity": 100, "unit": "ml" }
+      ],
+      "steps": [
+        "Bring water and salt to a boil in a heavy pot.",
+        "Reduce the heat and slowly whisk in the barley flour.",
+        "Stir vigorously with a wooden spoon for 10-12 minutes until very thick and pulling from the sides.",
+        "Mound the porridge onto a serving plate, smoothing the top.",
+        "Make a deep well in the center.",
+        "Mix the niter kibbeh with berbere and pour into the well.",
+        "Spoon yogurt around the edges.",
+        "Serve hot, scooping from the porridge into the spiced butter well."
+      ],
+      "tags": ["porridge", "breakfast", "comfort", "traditional"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 5,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Yebeg Tibs",
+      "description": "Ethiopian sautéed lamb with onions, peppers, and rosemary in spiced butter.",
+      "ingredients": [
+        { "name": "boneless lamb, cubed", "quantity": 700, "unit": "g" },
+        { "name": "red onion, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "green pepper, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 4, "unit": "pc" },
+        { "name": "rosemary", "quantity": 1, "unit": "tbsp" },
+        { "name": "niter kibbeh", "quantity": 3, "unit": "tbsp" },
+        { "name": "berbere", "quantity": 1, "unit": "tbsp" },
+        { "name": "tomato, diced", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Pat the lamb dry and season with salt and pepper.",
+        "Heat the niter kibbeh in a heavy skillet until very hot.",
+        "Add the lamb in a single layer and sear for 6-8 minutes until well browned.",
+        "Add the garlic and rosemary, cook for 2 minutes.",
+        "Stir in the onion, pepper, and tomato. Cook for 4 minutes.",
+        "Sprinkle the berbere and toss to coat.",
+        "Cook 3 more minutes until vegetables are crisp-tender and lamb is medium.",
+        "Serve sizzling on injera."
+      ],
+      "tags": ["lamb", "stir-fry", "spicy", "festive"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Sambusa",
+      "description": "Ethiopian fried triangular pastry filled with spiced lentils or minced meat, served as a snack.",
+      "ingredients": [
+        { "name": "spring roll wrappers", "quantity": 20, "unit": "pc" },
+        { "name": "red lentils, cooked", "quantity": 300, "unit": "g" },
+        { "name": "onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 3, "unit": "pc" },
+        { "name": "berbere", "quantity": 1, "unit": "tbsp" },
+        { "name": "ginger, grated", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil for frying", "quantity": 500, "unit": "ml" },
+        { "name": "flour-water paste for sealing", "quantity": 4, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Sauté onion in 2 tbsp oil until softened, about 5 minutes.",
+        "Add garlic, ginger, and berbere. Cook for 2 minutes.",
+        "Stir in the cooked lentils and salt. Mash slightly and cook 5 minutes until dry.",
+        "Cool the filling completely.",
+        "Cut wrappers into long strips. Fold a triangle pocket and fill with a tablespoon of mixture.",
+        "Continue folding into a tight triangle, sealing the end with flour paste.",
+        "Heat oil to 175°C and deep fry the sambusas in batches for 3 minutes until golden.",
+        "Drain on paper towels and serve hot with chili sauce."
+      ],
+      "tags": ["fried", "snack", "stuffed", "ramadan"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 40,
+      "cookTime": 20,
+      "servings": 6
+    }
+  ]
+}

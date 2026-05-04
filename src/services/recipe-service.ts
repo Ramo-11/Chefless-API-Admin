@@ -16,7 +16,15 @@ import {
 import { hasActivePremium } from "../lib/premium";
 import { getBlockedUserIds } from "./block-service";
 
-const FREE_TIER_RECIPE_LIMIT = 10;
+/**
+ * Combined free-tier cap across the user's own originals + recipes they have
+ * saved/bookmarked. Remixes are tracked separately. Increasing this requires
+ * a backfill so existing user counters stay consistent — see
+ * scripts/backfill-recipe-counters.ts.
+ */
+const FREE_TIER_RECIPE_LIMIT = 5;
+/** Max remixes a free user can author. */
+const FREE_TIER_REMIX_LIMIT = 1;
 
 interface AppError extends Error {
   statusCode: number;
@@ -177,30 +185,21 @@ const CONTENT_FIELDS: ReadonlyArray<keyof UpdateRecipeData> = [
 
 /**
  * Reserve a recipe-counter slot atomically before inserting the Recipe doc.
- * For free-tier non-remix creates the conditional `findOneAndUpdate` fails
- * when the user already has 10 originals — this prevents the classic
- * read-then-write race where two simultaneous creates both pass the check.
- * Caller MUST roll the counter back if the subsequent insert fails.
+ *
+ * Free tier rules enforced here:
+ *   - Originals: `originalRecipesCount + savedRecipesCount < FREE_TIER_RECIPE_LIMIT`
+ *   - Remixes:   `remixesCount < FREE_TIER_REMIX_LIMIT`
+ *
+ * Both gates run as conditional `findOneAndUpdate` so two concurrent creates
+ * cannot both pass the cap check. Premium users skip the gate entirely.
+ * Caller MUST call `releaseRecipeQuota` if the subsequent insert fails.
  */
 async function reserveRecipeQuota(
   authorId: string,
   isRemix: boolean
 ): Promise<void> {
   const authorOid = new Types.ObjectId(authorId);
-  if (isRemix) {
-    // Remixes don't count toward the free-tier cap; bump only total recipes count
-    const res = await User.updateOne(
-      { _id: authorOid },
-      { $inc: { recipesCount: 1 } }
-    );
-    if (res.matchedCount === 0) {
-      throw createError("User not found", 404);
-    }
-    return;
-  }
 
-  // Non-remix: originalRecipesCount must also increment. Premium users have no cap;
-  // free users are gated by the conditional update (acts as atomic CAS).
   const author = await User.findById(authorId)
     .select("isPremium premiumExpiresAt")
     .lean();
@@ -209,25 +208,58 @@ async function reserveRecipeQuota(
   }
 
   if (hasActivePremium(author)) {
-    await User.updateOne(
-      { _id: authorOid },
-      { $inc: { recipesCount: 1, originalRecipesCount: 1 } }
-    );
+    if (isRemix) {
+      await User.updateOne(
+        { _id: authorOid },
+        { $inc: { recipesCount: 1, remixesCount: 1 } }
+      );
+    } else {
+      await User.updateOne(
+        { _id: authorOid },
+        { $inc: { recipesCount: 1, originalRecipesCount: 1 } }
+      );
+    }
     return;
   }
 
+  if (isRemix) {
+    const updated = await User.findOneAndUpdate(
+      {
+        _id: authorOid,
+        isPremium: false,
+        remixesCount: { $lt: FREE_TIER_REMIX_LIMIT },
+      },
+      { $inc: { recipesCount: 1, remixesCount: 1 } },
+      { new: true }
+    );
+    if (!updated) {
+      throw createError(
+        `Free tier remix cap reached — limited to ${FREE_TIER_REMIX_LIMIT} remix. Upgrade to premium for unlimited remixes.`,
+        403
+      );
+    }
+    return;
+  }
+
+  // Combined cap: originals + saves must stay under FREE_TIER_RECIPE_LIMIT.
+  // `$expr` is required because the cap is on the sum of two fields.
   const updated = await User.findOneAndUpdate(
     {
       _id: authorOid,
       isPremium: false,
-      originalRecipesCount: { $lt: FREE_TIER_RECIPE_LIMIT },
+      $expr: {
+        $lt: [
+          { $add: ["$originalRecipesCount", "$savedRecipesCount"] },
+          FREE_TIER_RECIPE_LIMIT,
+        ],
+      },
     },
     { $inc: { recipesCount: 1, originalRecipesCount: 1 } },
     { new: true }
   );
   if (!updated) {
     throw createError(
-      `Free tier cap reached — limited to ${FREE_TIER_RECIPE_LIMIT} original recipes. Remixes do not count toward this limit. Upgrade to premium for unlimited recipes.`,
+      `Free tier cap reached — originals plus saved recipes are limited to ${FREE_TIER_RECIPE_LIMIT} total. Upgrade to premium for unlimited recipes.`,
       403
     );
   }
@@ -244,12 +276,12 @@ async function releaseRecipeQuota(
   const authorOid = new Types.ObjectId(authorId);
   if (isRemix) {
     await User.updateOne(
-      { _id: authorOid },
-      { $inc: { recipesCount: -1 } }
+      { _id: authorOid, remixesCount: { $gt: 0 } },
+      { $inc: { recipesCount: -1, remixesCount: -1 } }
     );
   } else {
     await User.updateOne(
-      { _id: authorOid },
+      { _id: authorOid, originalRecipesCount: { $gt: 0 } },
       { $inc: { recipesCount: -1, originalRecipesCount: -1 } }
     );
   }
@@ -465,6 +497,13 @@ export async function deleteRecipe(
     );
   }
 
+  // Capture the IDs of every user who saved this recipe BEFORE we wipe the
+  // SavedRecipe rows. Each of those users must have their savedRecipesCount
+  // decremented so the free-tier combined cap stays consistent.
+  const savers = await SavedRecipe.find({ recipeId: recipe._id })
+    .select("userId")
+    .lean();
+
   // Delete all likes, saves, and shares associated with this recipe.
   // Preserve remix attribution: null out the recipeId/authorId pointers on
   // child forks but keep the authorName so future readers still see "Remix of …".
@@ -481,15 +520,35 @@ export async function deleteRecipe(
     ),
   ]);
 
+  // Decrement savedRecipesCount for every user who had this recipe saved.
+  // Each user has at most one save row per recipe (unique index), so a single
+  // -1 per user is correct.
+  if (savers.length > 0) {
+    await User.updateMany(
+      {
+        _id: { $in: savers.map((s) => s.userId) },
+        savedRecipesCount: { $gt: 0 },
+      },
+      { $inc: { savedRecipesCount: -1 } }
+    );
+  }
+
   // Delete the recipe
   await Recipe.findByIdAndDelete(recipeId);
 
+  const isRemix = !!recipe.forkedFrom;
   await User.updateOne(
-    { _id: userId },
+    {
+      _id: userId,
+      ...(isRemix
+        ? { remixesCount: { $gt: 0 } }
+        : { originalRecipesCount: { $gt: 0 } }),
+    },
     {
       $inc: {
         recipesCount: -1,
-        originalRecipesCount: recipe.forkedFrom ? 0 : -1,
+        originalRecipesCount: isRemix ? 0 : -1,
+        remixesCount: isRemix ? -1 : 0,
       },
     }
   );
@@ -848,6 +907,9 @@ export async function saveRecipe(
   recipeId: string,
   userId: string
 ): Promise<void> {
+  const userOid = new Types.ObjectId(userId);
+  const recipeOid = new Types.ObjectId(recipeId);
+
   const recipe = await Recipe.findById(recipeId);
   if (!recipe) {
     throw createError("Recipe not found", 404);
@@ -861,7 +923,7 @@ export async function saveRecipe(
   }
 
   const canView = await canViewRecipe(
-    new Types.ObjectId(userId),
+    userOid,
     recipe,
     author as unknown as IUser
   );
@@ -869,10 +931,58 @@ export async function saveRecipe(
     throw createError("You do not have permission to save this recipe", 403);
   }
 
+  // Idempotency: a repeat save by the same user is a no-op (no counter bump,
+  // no extra notification). The unique index on (userId, recipeId) is a final
+  // safety net; this short-circuit avoids an unnecessary CAS roundtrip.
+  const alreadySaved = await SavedRecipe.exists({
+    userId: userOid,
+    recipeId: recipeOid,
+  });
+  if (alreadySaved) {
+    return;
+  }
+
+  // Reserve a save slot atomically. Premium = unconditional bump. Free =
+  // gated by combined originals + saves cap.
+  const saver = await User.findById(userId)
+    .select("isPremium premiumExpiresAt")
+    .lean();
+  if (!saver) {
+    throw createError("User not found", 404);
+  }
+
+  if (hasActivePremium(saver)) {
+    await User.updateOne(
+      { _id: userOid },
+      { $inc: { savedRecipesCount: 1 } }
+    );
+  } else {
+    const updated = await User.findOneAndUpdate(
+      {
+        _id: userOid,
+        isPremium: false,
+        $expr: {
+          $lt: [
+            { $add: ["$originalRecipesCount", "$savedRecipesCount"] },
+            FREE_TIER_RECIPE_LIMIT,
+          ],
+        },
+      },
+      { $inc: { savedRecipesCount: 1 } },
+      { new: true }
+    );
+    if (!updated) {
+      throw createError(
+        `Free tier cap reached — originals plus saved recipes are limited to ${FREE_TIER_RECIPE_LIMIT} total. Upgrade to premium for unlimited recipes.`,
+        403
+      );
+    }
+  }
+
   try {
     await SavedRecipe.create({
-      userId: new Types.ObjectId(userId),
-      recipeId: new Types.ObjectId(recipeId),
+      userId: userOid,
+      recipeId: recipeOid,
     });
 
     notifyRecipeSaved(userId, recipeId).catch((err: unknown) => {
@@ -880,6 +990,14 @@ export async function saveRecipe(
       console.error(`Failed to send recipe_saved notification: ${msg}`);
     });
   } catch (err: unknown) {
+    // Roll back the counter — either a concurrent save won the dup-key race
+    // (counter is now correct after rollback) or a real failure (we shouldn't
+    // have charged the user for a save that didn't land).
+    await User.updateOne(
+      { _id: userOid, savedRecipesCount: { $gt: 0 } },
+      { $inc: { savedRecipesCount: -1 } }
+    );
+
     if (
       err instanceof Error &&
       "code" in err &&
@@ -895,14 +1013,22 @@ export async function unsaveRecipe(
   recipeId: string,
   userId: string
 ): Promise<void> {
+  const userOid = new Types.ObjectId(userId);
   const result = await SavedRecipe.findOneAndDelete({
-    userId: new Types.ObjectId(userId),
+    userId: userOid,
     recipeId: new Types.ObjectId(recipeId),
   });
 
   if (!result) {
     throw createError("You have not saved this recipe", 404);
   }
+
+  // Decrement only when the row actually existed; guard against drifting
+  // negative if the counter is somehow already 0.
+  await User.updateOne(
+    { _id: userOid, savedRecipesCount: { $gt: 0 } },
+    { $inc: { savedRecipesCount: -1 } }
+  );
 }
 
 export async function listSavedRecipes(

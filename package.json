@@ -14,6 +14,7 @@
     "seed": "tsx src/scripts/seed-labels.ts",
     "seed:admin": "tsx src/scripts/seed-admin.ts",
     "backfill:original-recipes": "tsx src/scripts/backfill-original-recipes-count.ts",
+    "backfill:recipe-counters": "tsx src/scripts/backfill-recipe-counters.ts",
     "backfill:remix-signatures": "tsx src/scripts/backfill-remix-signatures.ts",
     "create-apple-review-user": "tsx src/scripts/create-apple-review-user.ts",
     "delete-apple-review-user": "tsx src/scripts/delete-apple-review-user.ts",

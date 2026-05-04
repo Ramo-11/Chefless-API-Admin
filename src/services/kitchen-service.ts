@@ -21,7 +21,7 @@ import {
   notifyKitchenInviteDeclined,
 } from "./notification-service";
 
-const FREE_TIER_MAX_MEMBERS = 4;
+const FREE_TIER_MAX_MEMBERS = 2;
 
 /** Regex for validating invite codes. Shared with route validation. */
 export const INVITE_CODE_REGEX = /^CHEF-[A-Z0-9]{6}$/;
@@ -945,12 +945,17 @@ export async function sendKitchenInvite(
   }
 
   const recipient = await User.findById(recipientUserId)
-    .select("kitchenId isBanned")
+    .select("kitchenId isBanned isSeed")
     .lean();
   if (!recipient) {
     throw createError("User not found", 404);
   }
   if (recipient.isBanned) {
+    throw createError("This user cannot receive invites.", 400);
+  }
+  if (recipient.isSeed) {
+    // Seed accounts have unusable Firebase UIDs, so they can never accept an
+    // invite. Block here instead of leaving a pending invite hanging.
     throw createError("This user cannot receive invites.", 400);
   }
   if (recipient.kitchenId) {

@@ -1,0 +1,500 @@
+{
+  "cuisine": "Moroccan",
+  "names": {
+    "first": ["Youssef", "Fatima", "Hicham", "Khadija", "Rachid", "Amina", "Mehdi", "Souad", "Karim", "Nadia", "Saad", "Latifa"],
+    "last": ["Bennani", "El Fassi", "Alaoui", "Benjelloun", "Berrada", "Tazi", "Lahlou", "Cherkaoui", "El Idrissi", "Saidi", "Cherki", "Boukili"]
+  },
+  "recipes": [
+    {
+      "title": "Tagine",
+      "description": "Moroccan slow-cooked stew of lamb, preserved lemon and olives in a conical clay pot, perfumed with saffron and ginger.",
+      "ingredients": [
+        {"name": "lamb shoulder", "quantity": 1, "unit": "kg"},
+        {"name": "onions", "quantity": 2, "unit": "pc"},
+        {"name": "preserved lemon", "quantity": 1, "unit": "pc"},
+        {"name": "green olives", "quantity": 150, "unit": "g"},
+        {"name": "ground ginger", "quantity": 1, "unit": "tsp"},
+        {"name": "ground turmeric", "quantity": 0.5, "unit": "tsp"},
+        {"name": "saffron threads", "quantity": 1, "unit": "pinch"},
+        {"name": "ground cumin", "quantity": 1, "unit": "tsp"},
+        {"name": "olive oil", "quantity": 60, "unit": "ml"},
+        {"name": "fresh coriander", "quantity": 0.5, "unit": "bunch"},
+        {"name": "fresh parsley", "quantity": 0.5, "unit": "bunch"},
+        {"name": "salt", "quantity": 1.5, "unit": "tsp"},
+        {"name": "water", "quantity": 500, "unit": "ml"}
+      ],
+      "steps": [
+        "Cube the lamb and toss with ginger, turmeric, saffron, cumin, salt and chopped herbs.",
+        "Layer sliced onions in the base of a tagine and pour over olive oil.",
+        "Place the lamb on top and add water to come halfway up the meat.",
+        "Cover and cook over very low heat (or 160°C) for 1.5 hours.",
+        "Add olives and chopped preserved lemon peel and continue 30 minutes.",
+        "Reduce the sauce to a glossy coating and serve with crusty bread."
+      ],
+      "tags": ["stew", "slow-cooked", "national dish"],
+      "dietaryTags": ["halal", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 130,
+      "servings": 6
+    },
+    {
+      "title": "Couscous",
+      "description": "Steamed semolina couscous topped with seven vegetables and tender lamb in a saffron-scented broth, served on Fridays.",
+      "ingredients": [
+        {"name": "couscous", "quantity": 500, "unit": "g"},
+        {"name": "lamb shoulder", "quantity": 800, "unit": "g"},
+        {"name": "carrots", "quantity": 3, "unit": "pc"},
+        {"name": "turnips", "quantity": 2, "unit": "pc"},
+        {"name": "courgettes", "quantity": 2, "unit": "pc"},
+        {"name": "pumpkin", "quantity": 300, "unit": "g"},
+        {"name": "cabbage", "quantity": 0.25, "unit": "pc"},
+        {"name": "cooked chickpeas", "quantity": 200, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "ground turmeric", "quantity": 1, "unit": "tsp"},
+        {"name": "ground ginger", "quantity": 1, "unit": "tsp"},
+        {"name": "saffron", "quantity": 1, "unit": "pinch"},
+        {"name": "tomato paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "olive oil", "quantity": 60, "unit": "ml"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"}
+      ],
+      "steps": [
+        "Brown the lamb with chopped onion, spices, tomato paste and salt; pour over 1.5 liters of water.",
+        "Simmer for 1 hour, then add the harder vegetables (carrots, turnips) and cook 20 minutes.",
+        "Add courgettes, pumpkin, cabbage and chickpeas and cook 15 minutes more.",
+        "Steam couscous in a couscoussier above the broth for 20 minutes; rake with oil and water and steam again.",
+        "Pile couscous on a wide platter, hollow the center and place lamb and vegetables in.",
+        "Ladle hot broth over the top and serve more on the side."
+      ],
+      "tags": ["national dish", "Friday meal", "celebration"],
+      "dietaryTags": ["halal"],
+      "difficulty": "hard",
+      "prepTime": 40,
+      "cookTime": 120,
+      "servings": 8
+    },
+    {
+      "title": "Harira",
+      "description": "Moroccan tomato, lentil and chickpea soup thickened with herbs and tedouira, traditionally eaten to break Ramadan fast.",
+      "ingredients": [
+        {"name": "lamb pieces", "quantity": 300, "unit": "g"},
+        {"name": "cooked chickpeas", "quantity": 200, "unit": "g"},
+        {"name": "brown lentils", "quantity": 100, "unit": "g"},
+        {"name": "tomatoes", "quantity": 4, "unit": "pc"},
+        {"name": "tomato paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "celery", "quantity": 2, "unit": "pc"},
+        {"name": "fresh coriander", "quantity": 1, "unit": "bunch"},
+        {"name": "fresh parsley", "quantity": 0.5, "unit": "bunch"},
+        {"name": "ground ginger", "quantity": 1, "unit": "tsp"},
+        {"name": "ground turmeric", "quantity": 1, "unit": "tsp"},
+        {"name": "all-purpose flour", "quantity": 60, "unit": "g"},
+        {"name": "olive oil", "quantity": 3, "unit": "tbsp"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"},
+        {"name": "water", "quantity": 1.5, "unit": "l"}
+      ],
+      "steps": [
+        "Brown the lamb in olive oil with chopped onion, celery and spices.",
+        "Add grated tomatoes, tomato paste and lentils and pour over 1 liter of water.",
+        "Simmer 35 minutes, then add chopped herbs and chickpeas and cook 10 minutes.",
+        "Whisk flour with 200 ml cold water to make tedouira.",
+        "Pour the slurry slowly into the simmering soup, stirring constantly until lightly thickened.",
+        "Cook 8 minutes more, season and serve with dates and lemon wedges."
+      ],
+      "tags": ["soup", "Ramadan", "iftar"],
+      "dietaryTags": ["halal"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 70,
+      "servings": 8
+    },
+    {
+      "title": "Bastilla",
+      "description": "Sweet-and-savory Moroccan pie of pigeon or chicken layered with almonds, eggs and cinnamon, wrapped in warqa and dusted with sugar.",
+      "ingredients": [
+        {"name": "warqa or filo pastry", "quantity": 12, "unit": "pc"},
+        {"name": "chicken thighs", "quantity": 800, "unit": "g"},
+        {"name": "blanched almonds", "quantity": 200, "unit": "g"},
+        {"name": "eggs", "quantity": 6, "unit": "pc"},
+        {"name": "onions", "quantity": 2, "unit": "pc"},
+        {"name": "ghee", "quantity": 150, "unit": "g"},
+        {"name": "sugar", "quantity": 60, "unit": "g"},
+        {"name": "ground cinnamon", "quantity": 1, "unit": "tbsp"},
+        {"name": "ground ginger", "quantity": 1, "unit": "tsp"},
+        {"name": "saffron", "quantity": 1, "unit": "pinch"},
+        {"name": "powdered sugar", "quantity": 30, "unit": "g"},
+        {"name": "salt", "quantity": 1.5, "unit": "tsp"}
+      ],
+      "steps": [
+        "Simmer chicken with chopped onion, ginger, saffron and salt in 500 ml water for 30 minutes; shred and reduce broth.",
+        "Beat eggs into the reduced broth over low heat and stir until softly curdled.",
+        "Toast almonds, then pulse with sugar and 1 tsp cinnamon to a coarse crumb.",
+        "Layer 6 buttered sheets of warqa in a round tin, overlapping the edges.",
+        "Spread shredded chicken, then egg curds, then almond mixture; fold the edges over and top with 6 more buttered sheets.",
+        "Bake at 200°C for 25 minutes until deep gold, then dust with powdered sugar and cinnamon."
+      ],
+      "tags": ["celebration", "pastry", "sweet-savory"],
+      "dietaryTags": ["halal"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 60,
+      "servings": 8
+    },
+    {
+      "title": "Mechoui",
+      "description": "Whole spit-roasted lamb rubbed with cumin and saffron, slow-cooked until the meat falls from the bone, served with cumin salt.",
+      "ingredients": [
+        {"name": "lamb shoulder", "quantity": 2, "unit": "kg"},
+        {"name": "ghee", "quantity": 100, "unit": "g"},
+        {"name": "ground cumin", "quantity": 2, "unit": "tbsp"},
+        {"name": "paprika", "quantity": 1, "unit": "tbsp"},
+        {"name": "saffron", "quantity": 1, "unit": "pinch"},
+        {"name": "garlic cloves", "quantity": 6, "unit": "pc"},
+        {"name": "ground ginger", "quantity": 1, "unit": "tsp"},
+        {"name": "salt", "quantity": 1, "unit": "tbsp"},
+        {"name": "water", "quantity": 250, "unit": "ml"}
+      ],
+      "steps": [
+        "Pound garlic, salt, cumin, paprika, ginger and saffron with melted ghee to a thick paste.",
+        "Score the lamb shoulder all over and rub the spice paste in deeply.",
+        "Place in a heavy roasting tin with water in the base and cover tightly with foil.",
+        "Cook at 150°C for 4 hours until the meat is falling apart.",
+        "Uncover and roast at 220°C for 20 minutes to crisp the surface.",
+        "Pull into chunks and serve with a small bowl of mixed cumin and salt."
+      ],
+      "tags": ["roast", "celebration", "lamb"],
+      "dietaryTags": ["halal", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 260,
+      "servings": 8
+    },
+    {
+      "title": "Rfissa",
+      "description": "Moroccan comfort dish of shredded msemen flatbread soaked in fenugreek-spiced lentil broth with chicken and onions.",
+      "ingredients": [
+        {"name": "msemen flatbread", "quantity": 6, "unit": "pc"},
+        {"name": "whole chicken", "quantity": 1.5, "unit": "kg"},
+        {"name": "brown lentils", "quantity": 200, "unit": "g"},
+        {"name": "onions", "quantity": 4, "unit": "pc"},
+        {"name": "fenugreek seeds", "quantity": 1, "unit": "tbsp"},
+        {"name": "ras el hanout", "quantity": 2, "unit": "tsp"},
+        {"name": "ground ginger", "quantity": 1, "unit": "tsp"},
+        {"name": "saffron", "quantity": 1, "unit": "pinch"},
+        {"name": "ghee", "quantity": 4, "unit": "tbsp"},
+        {"name": "fresh coriander", "quantity": 0.5, "unit": "bunch"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"},
+        {"name": "water", "quantity": 1.5, "unit": "l"}
+      ],
+      "steps": [
+        "Soak fenugreek seeds in warm water for 30 minutes.",
+        "Brown the chicken with sliced onions in ghee, then add ras el hanout, ginger, saffron and salt.",
+        "Add drained fenugreek and water and simmer 50 minutes.",
+        "Add lentils and cook a further 30 minutes until soft.",
+        "Tear the msemen into pieces and arrange on a wide platter.",
+        "Spoon hot broth over to soak, then top with chicken, lentils and chopped coriander."
+      ],
+      "tags": ["comfort food", "celebration", "chicken"],
+      "dietaryTags": ["halal"],
+      "difficulty": "medium",
+      "prepTime": 40,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Zaalouk",
+      "description": "Smoky Moroccan salad of charred aubergines and tomatoes simmered with garlic, paprika and cumin until thick and jammy.",
+      "ingredients": [
+        {"name": "aubergines", "quantity": 2, "unit": "pc"},
+        {"name": "ripe tomatoes", "quantity": 4, "unit": "pc"},
+        {"name": "garlic cloves", "quantity": 4, "unit": "pc"},
+        {"name": "olive oil", "quantity": 60, "unit": "ml"},
+        {"name": "ground cumin", "quantity": 1, "unit": "tsp"},
+        {"name": "paprika", "quantity": 1, "unit": "tsp"},
+        {"name": "fresh coriander", "quantity": 0.5, "unit": "bunch"},
+        {"name": "fresh parsley", "quantity": 0.5, "unit": "bunch"},
+        {"name": "lemon juice", "quantity": 1, "unit": "tbsp"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Char the aubergines over an open flame for 12 minutes until blackened, then peel and chop the flesh.",
+        "Grate the tomatoes and crush the garlic.",
+        "Heat olive oil and cook the tomatoes, garlic, cumin, paprika and salt for 15 minutes until thick.",
+        "Stir in the chopped aubergine and cook another 15 minutes, smashing it into the sauce.",
+        "Finish with chopped herbs and lemon juice.",
+        "Serve at room temperature with crusty bread."
+      ],
+      "tags": ["salad", "smoky", "vegan"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 35,
+      "servings": 4
+    },
+    {
+      "title": "Msemen",
+      "description": "Square Moroccan flatbreads of layered semolina dough folded with butter and pan-cooked until flaky and golden.",
+      "ingredients": [
+        {"name": "all-purpose flour", "quantity": 250, "unit": "g"},
+        {"name": "fine semolina", "quantity": 250, "unit": "g"},
+        {"name": "instant yeast", "quantity": 5, "unit": "g"},
+        {"name": "warm water", "quantity": 320, "unit": "ml"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"},
+        {"name": "neutral oil", "quantity": 100, "unit": "ml"},
+        {"name": "melted butter", "quantity": 100, "unit": "g"}
+      ],
+      "steps": [
+        "Mix flour, semolina, yeast, salt and water into a soft dough; knead 8 minutes.",
+        "Divide into 12 balls, coat in oil and rest 30 minutes.",
+        "Press each ball into a thin transparent circle on an oiled surface.",
+        "Drizzle with melted butter and dust with semolina, then fold into a tight square.",
+        "Press the square out gently and pan-cook in a dry hot skillet for 2 minutes per side.",
+        "Stack and serve hot with honey and butter or alongside tagines."
+      ],
+      "tags": ["breakfast", "flatbread", "flaky"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 60,
+      "cookTime": 25,
+      "servings": 6
+    },
+    {
+      "title": "Chebakia",
+      "description": "Sesame-coated rose-shaped Moroccan pastries fried until crisp then soaked in honey, eaten throughout Ramadan with harira.",
+      "ingredients": [
+        {"name": "all-purpose flour", "quantity": 500, "unit": "g"},
+        {"name": "sesame seeds", "quantity": 200, "unit": "g"},
+        {"name": "blanched almonds", "quantity": 100, "unit": "g"},
+        {"name": "anise seeds", "quantity": 1, "unit": "tbsp"},
+        {"name": "ground cinnamon", "quantity": 1, "unit": "tsp"},
+        {"name": "saffron", "quantity": 1, "unit": "pinch"},
+        {"name": "egg", "quantity": 1, "unit": "pc"},
+        {"name": "orange blossom water", "quantity": 60, "unit": "ml"},
+        {"name": "vinegar", "quantity": 1, "unit": "tbsp"},
+        {"name": "warm water", "quantity": 80, "unit": "ml"},
+        {"name": "frying oil", "quantity": 1, "unit": "l"},
+        {"name": "honey", "quantity": 500, "unit": "g"}
+      ],
+      "steps": [
+        "Toast 150 g sesame and the almonds, then grind both finely with anise, cinnamon and saffron.",
+        "Mix the ground paste into the flour with egg, blossom water, vinegar and warm water; knead 10 minutes to a firm dough.",
+        "Roll out thin, cut into rectangles, slit and fold into rose shapes.",
+        "Fry in 175°C oil until deep golden and crisp, working in batches.",
+        "Warm the honey gently and submerge each fried piece for 1 minute.",
+        "Drain on a rack and roll in remaining sesame seeds while still sticky."
+      ],
+      "tags": ["dessert", "Ramadan", "fried"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 30,
+      "servings": 12
+    },
+    {
+      "title": "Sellou",
+      "description": "Toasted flour, almond and sesame energy paste sweetened with honey, served at Ramadan, weddings and after childbirth.",
+      "ingredients": [
+        {"name": "all-purpose flour", "quantity": 400, "unit": "g"},
+        {"name": "blanched almonds", "quantity": 200, "unit": "g"},
+        {"name": "sesame seeds", "quantity": 200, "unit": "g"},
+        {"name": "powdered sugar", "quantity": 150, "unit": "g"},
+        {"name": "ground cinnamon", "quantity": 1, "unit": "tsp"},
+        {"name": "anise seeds", "quantity": 1, "unit": "tsp"},
+        {"name": "ghee", "quantity": 200, "unit": "g"},
+        {"name": "honey", "quantity": 100, "unit": "g"}
+      ],
+      "steps": [
+        "Toast the flour in a dry pan for 15 minutes, stirring constantly until pale gold.",
+        "Toast almonds at 180°C for 8 minutes and let cool.",
+        "Toast sesame seeds in a dry pan, then grind with anise.",
+        "Pulse the toasted almonds finely, then mix with the toasted flour, sesame, cinnamon and sugar.",
+        "Stir in melted ghee and honey to form a soft paste.",
+        "Pack into a serving dish, smooth and decorate with whole almonds; serve in small spoonfuls."
+      ],
+      "tags": ["dessert", "Ramadan", "celebration"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 25,
+      "servings": 12
+    },
+    {
+      "title": "Tangia",
+      "description": "Marrakchi clay-jar slow-cooked lamb perfumed with preserved lemon, cumin and saffron — historically buried in hammam embers.",
+      "ingredients": [
+        {"name": "lamb shanks", "quantity": 1.2, "unit": "kg"},
+        {"name": "preserved lemon", "quantity": 1, "unit": "pc"},
+        {"name": "garlic cloves", "quantity": 8, "unit": "pc"},
+        {"name": "ground cumin", "quantity": 2, "unit": "tsp"},
+        {"name": "saffron", "quantity": 1, "unit": "pinch"},
+        {"name": "ground ginger", "quantity": 1, "unit": "tsp"},
+        {"name": "smen (or ghee)", "quantity": 3, "unit": "tbsp"},
+        {"name": "olive oil", "quantity": 60, "unit": "ml"},
+        {"name": "salt", "quantity": 1.5, "unit": "tsp"},
+        {"name": "water", "quantity": 250, "unit": "ml"}
+      ],
+      "steps": [
+        "Place the lamb in a tangia jar or a heavy lidded pot.",
+        "Add whole peeled garlic, chopped preserved lemon peel, smen, oil, spices and salt.",
+        "Pour in water and seal the jar with parchment paper tied down.",
+        "Cook at 130°C for 6 hours, or buried in hot ashes traditionally.",
+        "Uncover and check the meat is meltingly tender.",
+        "Serve straight from the pot with bread to scoop the juices."
+      ],
+      "tags": ["slow-cooked", "Marrakech", "lamb"],
+      "dietaryTags": ["halal", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 360,
+      "servings": 4
+    },
+    {
+      "title": "Khobz",
+      "description": "Round Moroccan country bread with a crisp crust and dense crumb, served alongside every meal to scoop tagines.",
+      "ingredients": [
+        {"name": "wholewheat flour", "quantity": 250, "unit": "g"},
+        {"name": "white bread flour", "quantity": 250, "unit": "g"},
+        {"name": "instant yeast", "quantity": 5, "unit": "g"},
+        {"name": "warm water", "quantity": 320, "unit": "ml"},
+        {"name": "olive oil", "quantity": 1, "unit": "tbsp"},
+        {"name": "salt", "quantity": 1.5, "unit": "tsp"},
+        {"name": "semolina for dusting", "quantity": 30, "unit": "g"}
+      ],
+      "steps": [
+        "Combine flours, yeast, salt and water and mix into a soft dough.",
+        "Knead 10 minutes until smooth, then divide into 4 balls.",
+        "Flatten each into a 15 cm round and dust with semolina.",
+        "Cover and proof on a tray for 1 hour.",
+        "Slash the tops, brush with olive oil and prick with a fork.",
+        "Bake at 230°C for 18-20 minutes until the bread is dark gold and sounds hollow."
+      ],
+      "tags": ["bread", "everyday", "staple"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 80,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Briouats",
+      "description": "Crispy triangular Moroccan pastries of warqa wrapped around spiced lamb or almond filling, fried golden and dipped in honey.",
+      "ingredients": [
+        {"name": "warqa or filo pastry", "quantity": 12, "unit": "pc"},
+        {"name": "minced lamb", "quantity": 400, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "fresh coriander", "quantity": 0.25, "unit": "bunch"},
+        {"name": "ground cumin", "quantity": 1, "unit": "tsp"},
+        {"name": "ground cinnamon", "quantity": 0.5, "unit": "tsp"},
+        {"name": "ras el hanout", "quantity": 1, "unit": "tsp"},
+        {"name": "olive oil", "quantity": 2, "unit": "tbsp"},
+        {"name": "egg yolk", "quantity": 1, "unit": "pc"},
+        {"name": "frying oil", "quantity": 750, "unit": "ml"},
+        {"name": "honey", "quantity": 100, "unit": "g"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Brown the lamb with chopped onion, coriander, cumin, cinnamon, ras el hanout and salt.",
+        "Cook until dry, then cool completely.",
+        "Cut warqa sheets into long strips about 8 cm wide.",
+        "Place a teaspoon of filling at one end and fold up into tight triangles, sealing with egg yolk.",
+        "Fry in 175°C oil until deep golden, about 3 minutes.",
+        "Drain briefly, dip into warmed honey and serve immediately."
+      ],
+      "tags": ["pastry", "fried", "celebration"],
+      "dietaryTags": ["halal"],
+      "difficulty": "medium",
+      "prepTime": 40,
+      "cookTime": 25,
+      "servings": 6
+    },
+    {
+      "title": "Pastilla bil Hout",
+      "description": "Coastal Moroccan version of bastilla filled with seasoned fish, vermicelli and herbs in crispy warqa pastry.",
+      "ingredients": [
+        {"name": "warqa or filo pastry", "quantity": 12, "unit": "pc"},
+        {"name": "white fish fillets", "quantity": 600, "unit": "g"},
+        {"name": "rice vermicelli", "quantity": 100, "unit": "g"},
+        {"name": "prawns", "quantity": 200, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "fresh coriander", "quantity": 0.5, "unit": "bunch"},
+        {"name": "garlic cloves", "quantity": 4, "unit": "pc"},
+        {"name": "ground cumin", "quantity": 1, "unit": "tsp"},
+        {"name": "harissa", "quantity": 1, "unit": "tbsp"},
+        {"name": "lemon juice", "quantity": 1, "unit": "tbsp"},
+        {"name": "olive oil", "quantity": 60, "unit": "ml"},
+        {"name": "ghee", "quantity": 80, "unit": "g"},
+        {"name": "salt", "quantity": 1.5, "unit": "tsp"}
+      ],
+      "steps": [
+        "Sauté chopped onion and garlic in olive oil, then add cumin and harissa and cook 2 minutes.",
+        "Stir in cubed fish and prawns and cook 4 minutes; season with salt and lemon juice.",
+        "Soak vermicelli in hot water for 5 minutes, drain and toss with the seafood and coriander.",
+        "Brush a round tin with melted ghee and layer 6 sheets of warqa overlapping the edges.",
+        "Spoon in the seafood, fold the edges over and top with 6 more buttered sheets, tucking under.",
+        "Bake at 200°C for 20 minutes until crisp and golden; serve with lemon wedges."
+      ],
+      "tags": ["pastry", "fish", "coastal"],
+      "dietaryTags": ["halal"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Bissara",
+      "description": "Moroccan winter breakfast soup of pureed split fava beans, garlic and cumin, drizzled generously with olive oil.",
+      "ingredients": [
+        {"name": "dried split fava beans", "quantity": 300, "unit": "g"},
+        {"name": "garlic cloves", "quantity": 6, "unit": "pc"},
+        {"name": "ground cumin", "quantity": 2, "unit": "tsp"},
+        {"name": "paprika", "quantity": 1, "unit": "tsp"},
+        {"name": "olive oil", "quantity": 80, "unit": "ml"},
+        {"name": "lemon juice", "quantity": 1, "unit": "tbsp"},
+        {"name": "salt", "quantity": 1.5, "unit": "tsp"},
+        {"name": "water", "quantity": 1.5, "unit": "l"}
+      ],
+      "steps": [
+        "Soak the favas overnight then drain.",
+        "Cover with water and simmer with peeled garlic and salt for 60 minutes until very soft.",
+        "Blend the soup until silky, adding water to loosen.",
+        "Stir in cumin, half the paprika and lemon juice.",
+        "Ladle into bowls and drizzle generously with olive oil.",
+        "Dust with the remaining paprika and serve with bread."
+      ],
+      "tags": ["soup", "breakfast", "winter"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 720,
+      "cookTime": 60,
+      "servings": 4
+    },
+    {
+      "title": "Taktouka",
+      "description": "Moroccan cooked salad of charred peppers and tomatoes with garlic, cumin and a hit of paprika, served as a side or dip.",
+      "ingredients": [
+        {"name": "green bell peppers", "quantity": 4, "unit": "pc"},
+        {"name": "tomatoes", "quantity": 4, "unit": "pc"},
+        {"name": "garlic cloves", "quantity": 4, "unit": "pc"},
+        {"name": "ground cumin", "quantity": 1, "unit": "tsp"},
+        {"name": "paprika", "quantity": 1, "unit": "tsp"},
+        {"name": "olive oil", "quantity": 4, "unit": "tbsp"},
+        {"name": "fresh parsley", "quantity": 0.25, "unit": "bunch"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Char the peppers under a hot grill until blackened, then steam in a covered bowl 10 minutes.",
+        "Peel and seed the peppers and chop the flesh.",
+        "Grate the tomatoes and crush the garlic.",
+        "Cook the tomato pulp with garlic, cumin, paprika, salt and olive oil for 15 minutes.",
+        "Stir in the chopped peppers and cook another 10 minutes until thick and jammy.",
+        "Finish with chopped parsley and serve with bread."
+      ],
+      "tags": ["salad", "side", "vegan"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 30,
+      "servings": 4
+    }
+  ]
+}

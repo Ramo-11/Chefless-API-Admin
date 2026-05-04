@@ -1,0 +1,350 @@
+{
+  "cuisine": "Venezuelan",
+  "names": {
+    "first": ["Andrés", "María", "Luis", "Daniela", "José", "Valentina", "Carlos", "Gabriela", "Diego", "Andreína", "Rafael", "Mariana"],
+    "last": ["Hernández", "Rodríguez", "García", "Pérez", "Blanco", "Mendoza", "Rivas", "Suárez", "Castillo", "Ramírez", "Sánchez", "Acosta"]
+  },
+  "recipes": [
+    {
+      "title": "Arepa",
+      "description": "Venezuelan griddled cornmeal cake split and filled with cheese, meats or shredded beef.",
+      "ingredients": [
+        { "name": "precooked white corn flour (harina P.A.N.)", "quantity": 250, "unit": "g" },
+        { "name": "warm water", "quantity": 320, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "neutral oil", "quantity": 1, "unit": "tbsp" },
+        { "name": "queso de mano or fresh white cheese", "quantity": 150, "unit": "g" }
+      ],
+      "steps": [
+        "Mix water and salt, gradually add corn flour and oil, kneading into a smooth, soft dough.",
+        "Rest the dough 5 minutes, then divide into 6 portions and shape into 2 cm thick discs.",
+        "Heat a budare or heavy pan over medium heat and cook arepas 4-5 minutes per side until a crust forms.",
+        "Transfer to a 200°C oven for 10 minutes until they sound hollow when tapped.",
+        "Split open and fill with cheese or your filling of choice."
+      ],
+      "tags": ["cornmeal", "griddle", "national-dish"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 20,
+      "servings": 6
+    },
+    {
+      "title": "Pabellón Criollo",
+      "description": "Venezuelan national plate of shredded beef, black beans, white rice and fried sweet plantain.",
+      "ingredients": [
+        { "name": "flank steak", "quantity": 800, "unit": "g" },
+        { "name": "onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "red bell pepper, diced", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "tomatoes, diced", "quantity": 2, "unit": "pc" },
+        { "name": "cooked black beans", "quantity": 400, "unit": "g" },
+        { "name": "long-grain rice", "quantity": 300, "unit": "g" },
+        { "name": "ripe plantains", "quantity": 2, "unit": "pc" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Simmer the flank steak in water with onion and salt for 90 minutes until very tender, then shred.",
+        "Sauté onion, bell pepper and garlic with cumin, add tomatoes and the shredded beef and cook until thickened.",
+        "Cook the rice with salt and a splash of oil until fluffy.",
+        "Reheat the black beans seasoned with sautéed garlic, onion and a touch of cumin.",
+        "Slice plantains diagonally and pan-fry in oil until caramelised on both sides.",
+        "Plate rice, beef, beans and plantain side by side."
+      ],
+      "tags": ["beef", "beans", "rice", "national-dish"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 110,
+      "servings": 4
+    },
+    {
+      "title": "Hallaca",
+      "description": "Venezuelan Christmas tamale of corn dough filled with spiced beef, pork and chicken stew, wrapped in plantain leaves.",
+      "ingredients": [
+        { "name": "precooked white corn flour (harina P.A.N.)", "quantity": 1, "unit": "kg" },
+        { "name": "annatto-infused lard", "quantity": 250, "unit": "g" },
+        { "name": "chicken stock", "quantity": 1.2, "unit": "l" },
+        { "name": "beef, diced", "quantity": 500, "unit": "g" },
+        { "name": "pork shoulder, diced", "quantity": 500, "unit": "g" },
+        { "name": "chicken thighs, diced", "quantity": 500, "unit": "g" },
+        { "name": "onions, diced", "quantity": 3, "unit": "pc" },
+        { "name": "leeks, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "red bell peppers, diced", "quantity": 2, "unit": "pc" },
+        { "name": "olives, capers and raisins", "quantity": 200, "unit": "g" },
+        { "name": "plantain leaves, cleaned", "quantity": 20, "unit": "pc" },
+        { "name": "kitchen twine", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Brown the meats with onion, leek and bell pepper, season with salt, cumin and a splash of wine; simmer 1 hour and chill overnight.",
+        "Knead corn flour with warm stock and annatto lard until a soft, pliable, deeply yellow dough forms.",
+        "Pass plantain leaves over a flame to soften, then cut into 30 cm rectangles and oil lightly.",
+        "Spread a thin disc of dough on each leaf, top with stewed meats, olives, capers and raisins.",
+        "Fold the leaf into a tight rectangular parcel and tie with twine in a cross pattern.",
+        "Boil hallacas in salted water for 45 minutes, drain and rest before serving."
+      ],
+      "tags": ["holiday", "tamale", "tradition"],
+      "difficulty": "hard",
+      "prepTime": 240,
+      "cookTime": 60,
+      "servings": 12
+    },
+    {
+      "title": "Cachapa",
+      "description": "Venezuelan sweet fresh-corn pancake folded around queso de mano, cooked on a griddle.",
+      "ingredients": [
+        { "name": "fresh corn kernels", "quantity": 600, "unit": "g" },
+        { "name": "milk", "quantity": 100, "unit": "ml" },
+        { "name": "sugar", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "precooked corn flour", "quantity": 2, "unit": "tbsp" },
+        { "name": "butter", "quantity": 30, "unit": "g" },
+        { "name": "queso de mano or fresh mozzarella", "quantity": 300, "unit": "g" }
+      ],
+      "steps": [
+        "Blend corn, milk, sugar, salt and corn flour until thick but pourable.",
+        "Melt a little butter on a hot griddle and pour about a cup of batter, spreading into a 20 cm round.",
+        "Cook 3-4 minutes until set and lightly browned, then flip and cook another 2-3 minutes.",
+        "Place a generous slice of cheese on one half, fold over and serve immediately with extra butter."
+      ],
+      "tags": ["corn", "griddle", "vegetarian"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Tequeños",
+      "description": "Venezuelan party finger food of soft white cheese batons wrapped in wheat dough and deep-fried.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 400, "unit": "g" },
+        { "name": "butter, softened", "quantity": 80, "unit": "g" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "water", "quantity": 120, "unit": "ml" },
+        { "name": "sugar", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "queso blanco or halloumi, cut into batons", "quantity": 500, "unit": "g" },
+        { "name": "oil for frying", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "Mix flour, sugar and salt, rub in butter, then add egg and water to form a smooth elastic dough; rest 30 minutes.",
+        "Roll dough thin and cut long strips 2 cm wide.",
+        "Wrap each cheese baton spirally with a strip of dough, sealing the ends with water.",
+        "Heat oil to 170°C and fry tequeños in batches for 3-4 minutes until deeply golden.",
+        "Drain on paper and serve hot with guasacaca or pink sauce."
+      ],
+      "tags": ["fried", "appetizer", "party"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 45,
+      "cookTime": 15,
+      "servings": 6
+    },
+    {
+      "title": "Asado Negro",
+      "description": "Caracas Sunday classic of beef eye round slow-braised in caramelised sugar, wine and aromatics until jet-black and tender.",
+      "ingredients": [
+        { "name": "beef eye of round", "quantity": 1.5, "unit": "kg" },
+        { "name": "sugar", "quantity": 100, "unit": "g" },
+        { "name": "onions, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "leeks, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 6, "unit": "pc" },
+        { "name": "red wine", "quantity": 250, "unit": "ml" },
+        { "name": "Worcestershire sauce", "quantity": 2, "unit": "tbsp" },
+        { "name": "beef stock", "quantity": 750, "unit": "ml" },
+        { "name": "bay leaf", "quantity": 2, "unit": "pc" },
+        { "name": "olive oil", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Marinate the beef overnight with crushed garlic, Worcestershire, salt and pepper.",
+        "In a heavy pot, melt the sugar with a splash of oil until it forms a deep mahogany caramel.",
+        "Add the beef and sear it on all sides in the caramel until blackened.",
+        "Add onion, leek and garlic; deglaze with red wine, then add stock and bay leaf.",
+        "Cover and braise on low heat for 2.5 hours, turning the meat every 30 minutes.",
+        "Remove the meat, blend the sauce smooth, slice the beef and nap with the dark gravy."
+      ],
+      "tags": ["beef", "braise", "sunday-dinner"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 180,
+      "servings": 6
+    },
+    {
+      "title": "Pernil",
+      "description": "Venezuelan slow-roasted pork leg marinated in garlic, citrus and herbs, a Christmas table centrepiece.",
+      "ingredients": [
+        { "name": "bone-in pork leg", "quantity": 4, "unit": "kg" },
+        { "name": "garlic cloves", "quantity": 12, "unit": "pc" },
+        { "name": "orange juice", "quantity": 250, "unit": "ml" },
+        { "name": "lime juice", "quantity": 100, "unit": "ml" },
+        { "name": "fresh oregano", "quantity": 1, "unit": "bunch" },
+        { "name": "soy sauce", "quantity": 60, "unit": "ml" },
+        { "name": "Worcestershire sauce", "quantity": 30, "unit": "ml" },
+        { "name": "olive oil", "quantity": 60, "unit": "ml" },
+        { "name": "salt", "quantity": 2, "unit": "tbsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Score the pork skin in a diamond pattern.",
+        "Blend garlic, citrus juices, oregano, soy, Worcestershire, oil, salt and pepper into a marinade.",
+        "Pierce the meat and rub the marinade deep into all crevices; refrigerate at least 12 hours.",
+        "Roast at 160°C, covered, for 4 hours, basting every hour.",
+        "Uncover, raise heat to 220°C and roast 30-40 minutes until skin is crackling.",
+        "Rest 20 minutes before carving and serve with the pan juices."
+      ],
+      "tags": ["pork", "roast", "holiday"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 270,
+      "servings": 10
+    },
+    {
+      "title": "Pisca Andina",
+      "description": "Venezuelan Andean breakfast soup of potato, milk, cilantro, egg and white cheese.",
+      "ingredients": [
+        { "name": "potatoes, diced", "quantity": 600, "unit": "g" },
+        { "name": "onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 2, "unit": "pc" },
+        { "name": "fresh cilantro, chopped", "quantity": 1, "unit": "bunch" },
+        { "name": "milk", "quantity": 500, "unit": "ml" },
+        { "name": "water", "quantity": 1, "unit": "l" },
+        { "name": "eggs", "quantity": 4, "unit": "pc" },
+        { "name": "queso blanco, crumbled", "quantity": 150, "unit": "g" },
+        { "name": "butter", "quantity": 30, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Sauté onion and garlic in butter until soft.",
+        "Add potatoes and water and simmer until potatoes are tender, about 20 minutes.",
+        "Pour in the milk and most of the cilantro and bring back to a gentle simmer.",
+        "Crack the eggs straight into the soup and poach for 3-4 minutes until set.",
+        "Ladle into bowls, top with crumbled cheese and the remaining cilantro."
+      ],
+      "tags": ["soup", "breakfast", "andean"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Chupe Andino",
+      "description": "Andean Venezuelan creamy chowder of chicken, potato, corn and queso blanco.",
+      "ingredients": [
+        { "name": "chicken thighs", "quantity": 800, "unit": "g" },
+        { "name": "onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "leek, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "potatoes, diced", "quantity": 500, "unit": "g" },
+        { "name": "corn kernels", "quantity": 200, "unit": "g" },
+        { "name": "carrot, diced", "quantity": 1, "unit": "pc" },
+        { "name": "milk", "quantity": 500, "unit": "ml" },
+        { "name": "water", "quantity": 1.5, "unit": "l" },
+        { "name": "queso blanco, crumbled", "quantity": 150, "unit": "g" },
+        { "name": "fresh cilantro", "quantity": 1, "unit": "bunch" }
+      ],
+      "steps": [
+        "Simmer chicken with onion, leek and water for 40 minutes; remove, shred and reserve the broth.",
+        "Sauté garlic in oil and add the broth, potatoes, carrot and corn; cook until potatoes are tender.",
+        "Return shredded chicken and pour in the milk; simmer gently 10 minutes.",
+        "Stir in cheese and cilantro just before serving so the cheese stays soft."
+      ],
+      "tags": ["soup", "chicken", "andean"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Mandoca",
+      "description": "Maracaibo street snack of ring-shaped fried dough made from corn, plantain, panela and white cheese.",
+      "ingredients": [
+        { "name": "ripe plantains", "quantity": 2, "unit": "pc" },
+        { "name": "precooked corn flour", "quantity": 250, "unit": "g" },
+        { "name": "panela or brown sugar, grated", "quantity": 100, "unit": "g" },
+        { "name": "queso blanco, grated", "quantity": 100, "unit": "g" },
+        { "name": "anise seeds", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "warm water", "quantity": 200, "unit": "ml" },
+        { "name": "oil for frying", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "Boil plantains until soft, then mash.",
+        "Dissolve panela in warm water, add salt and anise.",
+        "Mix mashed plantain, corn flour, cheese and panela water into a soft dough; rest 10 minutes.",
+        "Roll pieces into 15 cm ropes and join the ends to form rings.",
+        "Heat oil to 170°C and fry mandocas until deep golden, about 4 minutes.",
+        "Drain and serve hot with butter or fresh cheese."
+      ],
+      "tags": ["fried", "breakfast", "street-food"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 25,
+      "cookTime": 15,
+      "servings": 6
+    },
+    {
+      "title": "Carne Mechada",
+      "description": "Venezuelan shredded beef braised with sofrito, peppers and tomato, the classic filling for arepas and pabellón.",
+      "ingredients": [
+        { "name": "flank or skirt steak", "quantity": 1, "unit": "kg" },
+        { "name": "onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "red bell pepper, diced", "quantity": 1, "unit": "pc" },
+        { "name": "green bell pepper, diced", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "tomatoes, diced", "quantity": 3, "unit": "pc" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "Worcestershire sauce", "quantity": 1, "unit": "tbsp" },
+        { "name": "bay leaf", "quantity": 2, "unit": "pc" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Cover the beef with water, add a halved onion, salt and bay leaf, and simmer 90 minutes until very tender.",
+        "Cool slightly and shred the beef along the grain; reserve a cup of cooking liquid.",
+        "Sauté onion, bell peppers and garlic in oil until softened.",
+        "Add tomatoes and cumin, cook 5 minutes, then stir in the shredded beef, Worcestershire and reserved liquid.",
+        "Simmer 15 minutes until the sauce coats the beef; adjust salt and serve."
+      ],
+      "tags": ["beef", "braise", "filling"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 110,
+      "servings": 6
+    },
+    {
+      "title": "Polvorosa",
+      "description": "Venezuelan double-crusted chicken pie with a delicate, crumbly butter pastry and a sweet-savoury filling.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 500, "unit": "g" },
+        { "name": "butter, cold", "quantity": 250, "unit": "g" },
+        { "name": "powdered sugar", "quantity": 50, "unit": "g" },
+        { "name": "egg yolks", "quantity": 3, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "chicken thighs, cooked and shredded", "quantity": 800, "unit": "g" },
+        { "name": "onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "tomatoes, diced", "quantity": 2, "unit": "pc" },
+        { "name": "raisins", "quantity": 50, "unit": "g" },
+        { "name": "olives, sliced", "quantity": 80, "unit": "g" },
+        { "name": "Worcestershire sauce", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Rub flour, sugar, salt and butter into a coarse crumb, bind with yolks and a splash of water; chill 1 hour.",
+        "Sauté onion until soft, add tomato, chicken, raisins, olives and Worcestershire and cook 10 minutes; cool.",
+        "Roll two-thirds of the dough into a 24 cm pie pan.",
+        "Fill with the chicken mixture, top with the remaining rolled dough and seal the edges.",
+        "Brush with egg yolk and bake at 180°C for 35-40 minutes until pale gold and crisp."
+      ],
+      "tags": ["pie", "chicken", "tradition"],
+      "difficulty": "medium",
+      "prepTime": 60,
+      "cookTime": 40,
+      "servings": 8
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "cuisine": "Nepali",
+  "names": {
+    "first": ["Bikash", "Suraj", "Anish", "Prakash", "Rajesh", "Kiran", "Sandeep", "Bibek", "Sita", "Sunita", "Anjali", "Sabina", "Manisha", "Sapana", "Pratima", "Asha"],
+    "last": ["Sharma", "Shrestha", "Tamang", "Gurung", "Rai", "Magar", "Thapa", "Adhikari", "Khadka", "Pradhan", "Karki", "Bhattarai"]
+  },
+  "recipes": [
+    {
+      "title": "Dal Bhat",
+      "description": "Nepal's everyday platter of steamed rice, spiced lentil soup, vegetable tarkari, and tangy pickle.",
+      "ingredients": [
+        {"name": "rice", "quantity": 300, "unit": "g"},
+        {"name": "split mung dal", "quantity": 200, "unit": "g"},
+        {"name": "turmeric", "quantity": 1, "unit": "tsp"},
+        {"name": "cumin seeds", "quantity": 1, "unit": "tsp"},
+        {"name": "garlic", "quantity": 4, "unit": "pc"},
+        {"name": "ginger", "quantity": 20, "unit": "g"},
+        {"name": "dried red chili", "quantity": 2, "unit": "pc"},
+        {"name": "ghee", "quantity": 2, "unit": "tbsp"},
+        {"name": "timur pepper", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Cook rice with double its volume of water until fluffy.",
+        "Boil dal with turmeric and salt until completely soft.",
+        "Whisk dal smooth and add water to a soup-like consistency.",
+        "Heat ghee in a small pan and crackle cumin seeds.",
+        "Add garlic, ginger, dried chilies, and timur pepper; cook 30 seconds.",
+        "Pour the tempering over the dal.",
+        "Serve with rice, vegetable tarkari, and achar."
+      ],
+      "tags": ["nepali", "everyday", "lentils", "rice"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Momo",
+      "description": "Steamed Nepali dumplings stuffed with spiced minced meat or vegetables, served with sesame tomato achar.",
+      "ingredients": [
+        {"name": "all purpose flour", "quantity": 300, "unit": "g"},
+        {"name": "minced chicken", "quantity": 400, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "garlic", "quantity": 6, "unit": "pc"},
+        {"name": "ginger", "quantity": 30, "unit": "g"},
+        {"name": "coriander leaves", "quantity": 1, "unit": "bunch"},
+        {"name": "cumin powder", "quantity": 1, "unit": "tsp"},
+        {"name": "soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "vegetable oil", "quantity": 2, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Knead flour with water and salt to a firm dough; rest 30 minutes.",
+        "Combine minced chicken with finely chopped onion, ginger, garlic, coriander, and spices.",
+        "Add soy sauce, oil, and salt and mix thoroughly.",
+        "Roll dough into a long log and cut into small pieces; flatten and roll into thin discs.",
+        "Place a spoon of filling in each disc and pleat the edges to seal in a half-moon or round shape.",
+        "Steam momos for 12 minutes in a multi-tier steamer until the dough is glossy.",
+        "Serve hot with sesame tomato achar."
+      ],
+      "tags": ["dumpling", "steamed", "chicken", "newari"],
+      "difficulty": "medium",
+      "prepTime": 60,
+      "cookTime": 15,
+      "servings": 5
+    },
+    {
+      "title": "Sel Roti",
+      "description": "Crispy fermented sweet rice doughnuts deep fried until golden, a Nepali festival staple.",
+      "ingredients": [
+        {"name": "rice", "quantity": 400, "unit": "g"},
+        {"name": "sugar", "quantity": 100, "unit": "g"},
+        {"name": "cardamom powder", "quantity": 1, "unit": "tsp"},
+        {"name": "milk", "quantity": 100, "unit": "ml"},
+        {"name": "ghee", "quantity": 2, "unit": "tbsp"},
+        {"name": "vegetable oil", "quantity": 600, "unit": "ml"},
+        {"name": "salt", "quantity": 1, "unit": "pinch"}
+      ],
+      "steps": [
+        "Soak rice for at least 6 hours, then drain.",
+        "Grind soaked rice with sugar, ghee, milk, cardamom, and salt to a thick smooth batter.",
+        "Rest the batter 1 hour to develop flavour.",
+        "Heat oil to 170 C in a wide deep pan.",
+        "Pour batter from a height in a circular motion to form a ring.",
+        "Fry until deep golden, flipping once for even color.",
+        "Drain and serve with yogurt or pickle."
+      ],
+      "tags": ["festival", "fried", "vegetarian", "sweet"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 420,
+      "cookTime": 25,
+      "servings": 6
+    },
+    {
+      "title": "Thukpa",
+      "description": "Himalayan noodle soup with vegetables, meat, and a peppery garlic-ginger broth from the Tibetan border.",
+      "ingredients": [
+        {"name": "wheat noodles", "quantity": 250, "unit": "g"},
+        {"name": "boneless chicken", "quantity": 300, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "garlic", "quantity": 4, "unit": "pc"},
+        {"name": "ginger", "quantity": 30, "unit": "g"},
+        {"name": "tomato", "quantity": 2, "unit": "pc"},
+        {"name": "cabbage", "quantity": 100, "unit": "g"},
+        {"name": "carrot", "quantity": 1, "unit": "pc"},
+        {"name": "soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "vegetable oil", "quantity": 3, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Saute chopped onion, garlic, and ginger in oil until fragrant.",
+        "Add diced chicken and brown lightly.",
+        "Stir in tomatoes and salt; cook until softened.",
+        "Add julienned carrot, cabbage, and 1 liter of water.",
+        "Bring to a boil and simmer 10 minutes.",
+        "Add wheat noodles and cook until just tender.",
+        "Finish with soy sauce and chopped coriander; serve steaming hot."
+      ],
+      "tags": ["soup", "noodles", "tibetan", "comfort"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Gundruk",
+      "description": "Fermented dried leafy greens cooked into a tangy soup with tomato, garlic, and timur pepper.",
+      "ingredients": [
+        {"name": "gundruk", "quantity": 50, "unit": "g"},
+        {"name": "tomato", "quantity": 2, "unit": "pc"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "garlic", "quantity": 4, "unit": "pc"},
+        {"name": "ginger", "quantity": 20, "unit": "g"},
+        {"name": "turmeric", "quantity": 1, "unit": "tsp"},
+        {"name": "timur pepper", "quantity": 1, "unit": "tsp"},
+        {"name": "mustard oil", "quantity": 2, "unit": "tbsp"},
+        {"name": "dried red chili", "quantity": 2, "unit": "pc"}
+      ],
+      "steps": [
+        "Soak gundruk in warm water for 15 minutes, then squeeze and chop.",
+        "Heat mustard oil and bloom dried chilies and timur pepper.",
+        "Add chopped onion, garlic, and ginger; saute until soft.",
+        "Stir in turmeric and chopped tomato; cook until pulpy.",
+        "Add the gundruk and toss to coat.",
+        "Pour in 600 ml water with salt and simmer 20 minutes.",
+        "Serve as a tangy side soup with rice."
+      ],
+      "tags": ["nepali", "fermented", "vegan", "soup"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Newari Bara",
+      "description": "Newari black lentil pancakes pan-fried with a soft, savoury egg or minced meat topping.",
+      "ingredients": [
+        {"name": "black urad dal", "quantity": 300, "unit": "g"},
+        {"name": "ginger", "quantity": 20, "unit": "g"},
+        {"name": "garlic", "quantity": 4, "unit": "pc"},
+        {"name": "asafoetida", "quantity": 1, "unit": "pinch"},
+        {"name": "minced buffalo meat", "quantity": 200, "unit": "g"},
+        {"name": "chili powder", "quantity": 1, "unit": "tsp"},
+        {"name": "mustard oil", "quantity": 4, "unit": "tbsp"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Soak urad dal overnight, then drain.",
+        "Grind dal with ginger, garlic, salt, and asafoetida to a thick fluffy paste.",
+        "Heat a flat skillet and brush with mustard oil.",
+        "Spread a ladle of batter into a small thick pancake.",
+        "Top with seasoned minced meat and a little chili powder.",
+        "Drizzle oil around the edges and cook until the underside is crisp.",
+        "Flip carefully and cook until cooked through; serve hot."
+      ],
+      "tags": ["newari", "snack", "lentils", "pancake"],
+      "difficulty": "medium",
+      "prepTime": 480,
+      "cookTime": 25,
+      "servings": 5
+    },
+    {
+      "title": "Aloo Tama",
+      "description": "Tangy Nepali curry of potatoes, fermented bamboo shoots, and black-eyed peas in a turmeric broth.",
+      "ingredients": [
+        {"name": "potatoes", "quantity": 400, "unit": "g"},
+        {"name": "fermented bamboo shoots", "quantity": 200, "unit": "g"},
+        {"name": "black-eyed peas", "quantity": 100, "unit": "g"},
+        {"name": "tomato", "quantity": 2, "unit": "pc"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "garlic", "quantity": 4, "unit": "pc"},
+        {"name": "ginger", "quantity": 20, "unit": "g"},
+        {"name": "turmeric", "quantity": 1, "unit": "tsp"},
+        {"name": "timur pepper", "quantity": 1, "unit": "tsp"},
+        {"name": "mustard oil", "quantity": 3, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Soak black-eyed peas overnight, then boil with salt until tender.",
+        "Heat mustard oil and saute onion until soft.",
+        "Add garlic, ginger, and turmeric; cook 1 minute.",
+        "Stir in chopped tomato and cook into a thick masala.",
+        "Add potatoes, bamboo shoots, and cooked beans.",
+        "Pour in 600 ml water and simmer 25 minutes until potatoes are tender.",
+        "Crush in timur pepper and serve with rice."
+      ],
+      "tags": ["nepali", "curry", "vegan", "fermented"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 480,
+      "cookTime": 35,
+      "servings": 4
+    },
+    {
+      "title": "Choila",
+      "description": "Newari smoked grilled buffalo or chicken tossed with mustard oil, ginger, garlic, and timur pepper.",
+      "ingredients": [
+        {"name": "boneless chicken thighs", "quantity": 600, "unit": "g"},
+        {"name": "mustard oil", "quantity": 3, "unit": "tbsp"},
+        {"name": "ginger paste", "quantity": 1, "unit": "tbsp"},
+        {"name": "garlic paste", "quantity": 1, "unit": "tbsp"},
+        {"name": "chili powder", "quantity": 1, "unit": "tbsp"},
+        {"name": "timur pepper", "quantity": 1, "unit": "tsp"},
+        {"name": "fenugreek seeds", "quantity": 1, "unit": "tsp"},
+        {"name": "lemon juice", "quantity": 1, "unit": "tbsp"},
+        {"name": "coriander leaves", "quantity": 1, "unit": "bunch"}
+      ],
+      "steps": [
+        "Grill chicken thighs over charcoal or under a hot grill until charred and cooked through.",
+        "Cut into bite-sized pieces.",
+        "Heat mustard oil until smoking, then crackle fenugreek seeds.",
+        "Cool the oil slightly and pour over the grilled chicken.",
+        "Add ginger, garlic, chili powder, timur pepper, salt, and lemon juice.",
+        "Toss vigorously to coat every piece.",
+        "Garnish with coriander and serve with chiura (beaten rice)."
+      ],
+      "tags": ["newari", "grilled", "chicken", "spicy"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Yomari",
+      "description": "Steamed Newari rice flour dumplings shaped like figs and stuffed with sweet sesame and jaggery.",
+      "ingredients": [
+        {"name": "rice flour", "quantity": 300, "unit": "g"},
+        {"name": "boiling water", "quantity": 350, "unit": "ml"},
+        {"name": "molasses jaggery", "quantity": 200, "unit": "g"},
+        {"name": "white sesame", "quantity": 100, "unit": "g"},
+        {"name": "grated coconut", "quantity": 50, "unit": "g"},
+        {"name": "ghee", "quantity": 1, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Pour boiling water into rice flour with a pinch of salt and mix to a soft dough.",
+        "Knead well until smooth and pliable; cover and rest 15 minutes.",
+        "Toast sesame seeds, then pound coarsely.",
+        "Mix sesame with grated coconut and crushed jaggery into a sticky filling.",
+        "Take a ball of dough and shape into a hollow cup.",
+        "Fill with the sweet mixture and pinch closed into the iconic fig shape with a pointed tip.",
+        "Steam yomari for 18 minutes until the dough is glossy and translucent."
+      ],
+      "tags": ["newari", "dessert", "festival", "steamed"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 25,
+      "servings": 5
+    }
+  ]
+}

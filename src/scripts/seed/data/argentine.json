@@ -1,0 +1,379 @@
+{
+  "cuisine": "Argentine",
+  "names": {
+    "first": ["Mateo", "Santiago", "Joaquín", "Tomás", "Agustín", "Lautaro", "Martina", "Catalina", "Valentina", "Florencia", "Camila", "Julieta"],
+    "last": ["González", "Rodríguez", "Fernández", "López", "Martínez", "Pérez", "García", "Sánchez", "Romero", "Álvarez"]
+  },
+  "recipes": [
+    {
+      "title": "Asado",
+      "description": "Argentina's iconic barbecue: an array of beef cuts and sausages slow-grilled over wood embers, served with chimichurri.",
+      "ingredients": [
+        { "name": "tira de asado (short ribs)", "quantity": 1.5, "unit": "kg" },
+        { "name": "vacío (flank steak)", "quantity": 1, "unit": "kg" },
+        { "name": "chorizo sausages", "quantity": 6, "unit": "pc" },
+        { "name": "morcilla (blood sausage)", "quantity": 4, "unit": "pc" },
+        { "name": "coarse rock salt", "quantity": 4, "unit": "tbsp" },
+        { "name": "parsley, chopped", "quantity": 1, "unit": "bunch" },
+        { "name": "garlic cloves, minced", "quantity": 6, "unit": "pc" },
+        { "name": "red wine vinegar", "quantity": 100, "unit": "ml" },
+        { "name": "olive oil", "quantity": 150, "unit": "ml" },
+        { "name": "dried oregano", "quantity": 1, "unit": "tbsp" },
+        { "name": "red pepper flakes", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Build a wood or charcoal fire and let it burn down to glowing embers; the grill (parrilla) should be 25–30 cm above them.",
+        "Make chimichurri: combine parsley, garlic, vinegar, oil, oregano, pepper flakes, and salt; rest 1 hour.",
+        "Salt all meats generously with coarse rock salt 30 minutes before grilling.",
+        "Start the chorizos and morcillas on the grill — they take about 20 minutes total, turning occasionally.",
+        "Place tira de asado bone-side down for 25–30 minutes, then flip and cook another 15 minutes.",
+        "Add vacío fat-side down for 20 minutes, then flip and cook 15 more minutes for medium-rare.",
+        "Rest meats 5 minutes, slice across the grain, and serve with chimichurri and crusty bread."
+      ],
+      "tags": ["barbecue", "beef", "national dish", "grilled", "iconic"],
+      "dietaryTags": ["gluten-free", "dairy-free"],
+      "difficulty": "hard",
+      "prepTime": 45,
+      "cookTime": 90,
+      "servings": 8
+    },
+    {
+      "title": "Empanada",
+      "description": "Argentine baked turnovers with flaky pastry and savory beef filling spiced with cumin, paprika, and green olives.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 500, "unit": "g" },
+        { "name": "lard or butter, cold", "quantity": 150, "unit": "g" },
+        { "name": "warm water", "quantity": 180, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "ground beef", "quantity": 500, "unit": "g" },
+        { "name": "onion, finely chopped", "quantity": 2, "unit": "pc" },
+        { "name": "green onion, sliced", "quantity": 4, "unit": "pc" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "sweet paprika", "quantity": 1, "unit": "tbsp" },
+        { "name": "red pepper flakes", "quantity": 0.5, "unit": "tsp" },
+        { "name": "boiled eggs, chopped", "quantity": 2, "unit": "pc" },
+        { "name": "green olives, chopped", "quantity": 50, "unit": "g" },
+        { "name": "egg, beaten (for wash)", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Make pastry: rub fat into flour with salt, add warm water, and knead briefly into a smooth dough. Rest 1 hour.",
+        "Brown beef quickly, drain excess fat, and stir in onion, green onion, cumin, paprika, and pepper flakes.",
+        "Cook 5 minutes until onions soften, season with salt, and chill the filling thoroughly.",
+        "Stir in chopped boiled eggs and olives.",
+        "Roll dough thin and cut into 12 cm rounds. Place 1 tbsp filling in each.",
+        "Moisten edges, fold over into half-moons, and crimp with the classic repulgue twist.",
+        "Brush with beaten egg and bake at 200°C (400°F) for 18–20 minutes until golden."
+      ],
+      "tags": ["pastry", "beef", "snack", "appetizer", "iconic"],
+      "difficulty": "medium",
+      "prepTime": 60,
+      "cookTime": 25,
+      "servings": 12
+    },
+    {
+      "title": "Milanesa",
+      "description": "Argentine breaded beef cutlets pounded thin and pan-fried until golden — a weeknight staple, often topped with ham and cheese.",
+      "ingredients": [
+        { "name": "beef top round, sliced thin", "quantity": 800, "unit": "g" },
+        { "name": "eggs", "quantity": 3, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "parsley, chopped", "quantity": 0.5, "unit": "bunch" },
+        { "name": "milk", "quantity": 60, "unit": "ml" },
+        { "name": "fine breadcrumbs", "quantity": 300, "unit": "g" },
+        { "name": "vegetable oil for frying", "quantity": 250, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "lemon wedges", "quantity": 4, "unit": "pc" }
+      ],
+      "steps": [
+        "Pound beef slices between sheets of plastic to about 5 mm thick.",
+        "Beat eggs with milk, garlic, parsley, and salt in a shallow dish.",
+        "Spread breadcrumbs in a second shallow dish.",
+        "Soak each cutlet in egg mixture 5 minutes, then press firmly into breadcrumbs to coat both sides.",
+        "Heat oil in a large skillet over medium-high until shimmering.",
+        "Fry milanesas 2–3 minutes per side until deep golden and crisp; do not crowd the pan.",
+        "Drain on paper towels, season with extra salt if needed, and serve with lemon wedges and a green salad."
+      ],
+      "tags": ["beef", "fried", "weeknight", "comfort food", "main course"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Choripán",
+      "description": "Argentina's beloved street sandwich: grilled chorizo butterflied into crusty bread and slathered with chimichurri.",
+      "ingredients": [
+        { "name": "chorizo sausages", "quantity": 4, "unit": "pc" },
+        { "name": "crusty bread rolls", "quantity": 4, "unit": "pc" },
+        { "name": "parsley, chopped", "quantity": 1, "unit": "bunch" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "red wine vinegar", "quantity": 60, "unit": "ml" },
+        { "name": "olive oil", "quantity": 100, "unit": "ml" },
+        { "name": "dried oregano", "quantity": 1, "unit": "tsp" },
+        { "name": "red pepper flakes", "quantity": 0.5, "unit": "tsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Whisk together parsley, garlic, vinegar, olive oil, oregano, pepper flakes, and salt to make chimichurri. Rest 1 hour.",
+        "Light a grill or charcoal fire and let coals burn down until glowing.",
+        "Prick chorizos a few times to prevent bursting.",
+        "Grill chorizos over medium heat for 12–15 minutes, turning often, until cooked through and charred.",
+        "Butterfly each chorizo lengthwise without cutting all the way through, then return to the grill cut-side down for 2 minutes.",
+        "Split bread rolls and lightly toast them on the grill.",
+        "Place a chorizo in each roll, top generously with chimichurri, and serve immediately."
+      ],
+      "tags": ["sandwich", "street food", "grilled", "sausage", "iconic"],
+      "dietaryTags": ["dairy-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Provoleta",
+      "description": "Argentine grilled provolone disc with crispy edges and gooey center, finished with oregano and chili — the asado opener.",
+      "ingredients": [
+        { "name": "provolone cheese, thick disc", "quantity": 400, "unit": "g" },
+        { "name": "dried oregano", "quantity": 1, "unit": "tbsp" },
+        { "name": "red pepper flakes", "quantity": 1, "unit": "tsp" },
+        { "name": "olive oil", "quantity": 1, "unit": "tbsp" },
+        { "name": "crusty bread, sliced", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Use a thick (about 2 cm) round of aged provolone — provoleta-specific cheese works best.",
+        "Place cheese in a small cast-iron skillet or directly on a clean, hot grill grate.",
+        "Drizzle the top with olive oil and sprinkle with oregano and chili flakes.",
+        "Grill over medium-high heat for 3–4 minutes until the bottom forms a deep golden crust.",
+        "Carefully flip with a spatula and grill another 2 minutes until the underside is crisp and the inside is molten.",
+        "Slide onto a wooden board.",
+        "Serve immediately with crusty bread to scoop up the cheese."
+      ],
+      "tags": ["appetizer", "cheese", "grilled", "asado", "starter"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 8,
+      "servings": 4
+    },
+    {
+      "title": "Locro",
+      "description": "Hearty Andean stew of corn, beans, squash, and various meats — Argentina's traditional dish for May 25 and Independence Day.",
+      "ingredients": [
+        { "name": "white hominy corn", "quantity": 300, "unit": "g" },
+        { "name": "white beans", "quantity": 200, "unit": "g" },
+        { "name": "pork shoulder, cubed", "quantity": 400, "unit": "g" },
+        { "name": "beef brisket, cubed", "quantity": 400, "unit": "g" },
+        { "name": "chorizo colorado", "quantity": 200, "unit": "g" },
+        { "name": "pork ribs", "quantity": 300, "unit": "g" },
+        { "name": "butternut squash, cubed", "quantity": 500, "unit": "g" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "sweet paprika", "quantity": 2, "unit": "tbsp" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "green onions, sliced", "quantity": 4, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Soak hominy and beans separately in cold water overnight, then drain.",
+        "In a large pot, brown pork, beef, ribs, and chorizo in oil.",
+        "Add onion and garlic, cook until soft, then stir in paprika and cumin.",
+        "Add hominy, beans, and 3 liters of water. Bring to a boil, reduce, and simmer 2 hours.",
+        "Add squash and continue cooking for 1 more hour until everything is meltingly tender and the broth thickens.",
+        "Mash some squash and beans against the side of the pot to thicken the locro further.",
+        "For the topping, fry green onions in oil with paprika to make a quitucho. Spoon over each bowl."
+      ],
+      "tags": ["stew", "national dish", "comfort food", "festive", "main course"],
+      "dietaryTags": ["dairy-free"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 180,
+      "servings": 8
+    },
+    {
+      "title": "Dulce de Leche",
+      "description": "Argentina's velvety milk caramel — slowly cooked sweetened milk that becomes thick, glossy, and amber.",
+      "ingredients": [
+        { "name": "whole milk", "quantity": 2, "unit": "l" },
+        { "name": "sugar", "quantity": 500, "unit": "g" },
+        { "name": "vanilla bean, split", "quantity": 1, "unit": "pc" },
+        { "name": "baking soda", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Combine milk, sugar, and split vanilla bean in a heavy, wide pot.",
+        "Bring to a gentle simmer over medium heat, stirring until sugar dissolves.",
+        "Once simmering, stir in baking soda — it will foam, which helps develop the caramel color.",
+        "Reduce heat to low and cook uncovered, stirring occasionally, for about 1.5 hours.",
+        "After the first hour, stir more frequently to prevent sticking as the mixture thickens.",
+        "Continue until the dulce de leche is thick, glossy, and a deep amber color, and coats the back of a spoon.",
+        "Remove vanilla bean and transfer to a clean jar. Cool completely; it will thicken further on cooling."
+      ],
+      "tags": ["dessert", "spread", "caramel", "iconic", "sweet"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 5,
+      "cookTime": 90,
+      "servings": 16
+    },
+    {
+      "title": "Alfajor",
+      "description": "Two delicate buttery cookies sandwiched with dulce de leche and rolled in coconut — Argentina's national sweet.",
+      "ingredients": [
+        { "name": "cornstarch", "quantity": 240, "unit": "g" },
+        { "name": "all-purpose flour", "quantity": 160, "unit": "g" },
+        { "name": "powdered sugar", "quantity": 100, "unit": "g" },
+        { "name": "butter, softened", "quantity": 200, "unit": "g" },
+        { "name": "egg yolks", "quantity": 3, "unit": "pc" },
+        { "name": "lemon zest", "quantity": 1, "unit": "tsp" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "baking powder", "quantity": 1, "unit": "tsp" },
+        { "name": "dulce de leche", "quantity": 400, "unit": "g" },
+        { "name": "shredded coconut", "quantity": 100, "unit": "g" }
+      ],
+      "steps": [
+        "Cream butter with powdered sugar until pale and fluffy.",
+        "Beat in egg yolks one at a time, then lemon zest and vanilla.",
+        "Sift cornstarch, flour, and baking powder, then fold into the butter mixture into a soft dough.",
+        "Wrap and chill 30 minutes. Roll dough on a floured surface to 5 mm thick and cut 4 cm rounds.",
+        "Bake at 170°C (340°F) for 10–12 minutes — they should remain pale, not brown.",
+        "Cool fully on a rack.",
+        "Sandwich with a generous dollop of dulce de leche, then roll the exposed edges in shredded coconut."
+      ],
+      "tags": ["cookie", "dessert", "sweet", "iconic", "snack"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 12,
+      "servings": 12
+    },
+    {
+      "title": "Matambre",
+      "description": "Argentine flank steak roll stuffed with carrots, peppers, eggs, and herbs, then braised or grilled and sliced into pinwheels.",
+      "ingredients": [
+        { "name": "matambre (flank or skirt steak), butterflied thin", "quantity": 1.2, "unit": "kg" },
+        { "name": "garlic cloves, minced", "quantity": 5, "unit": "pc" },
+        { "name": "parsley, chopped", "quantity": 1, "unit": "bunch" },
+        { "name": "carrots, peeled and halved lengthwise", "quantity": 3, "unit": "pc" },
+        { "name": "red bell pepper, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "boiled eggs", "quantity": 4, "unit": "pc" },
+        { "name": "spinach leaves", "quantity": 100, "unit": "g" },
+        { "name": "dried oregano", "quantity": 1, "unit": "tbsp" },
+        { "name": "red pepper flakes", "quantity": 1, "unit": "tsp" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "beef broth", "quantity": 500, "unit": "ml" },
+        { "name": "kitchen twine", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Lay the butterflied steak flat. Rub with garlic, oregano, pepper flakes, salt, and olive oil.",
+        "Layer spinach across the meat, then arrange carrots and red pepper strips lengthwise.",
+        "Place whole boiled eggs in a row down the center, scatter parsley over everything.",
+        "Roll the steak tightly, starting from the long edge, and tie firmly with kitchen twine at intervals.",
+        "Sear the roll in a heavy pot until browned all over.",
+        "Pour in beef broth, cover, and braise at 160°C (320°F) for 90 minutes until tender.",
+        "Rest 15 minutes, snip twine, and slice into 2 cm pinwheels. Serve warm or chilled."
+      ],
+      "tags": ["beef", "rolled", "stuffed", "main course", "festive"],
+      "dietaryTags": ["dairy-free", "gluten-free"],
+      "difficulty": "hard",
+      "prepTime": 40,
+      "cookTime": 100,
+      "servings": 8
+    },
+    {
+      "title": "Bife de Chorizo",
+      "description": "Argentina's prized strip-loin steak, thick-cut and grilled to a perfect crust over charcoal embers.",
+      "ingredients": [
+        { "name": "bife de chorizo (strip loin steaks), 4 cm thick", "quantity": 4, "unit": "pc" },
+        { "name": "coarse rock salt", "quantity": 2, "unit": "tbsp" },
+        { "name": "parsley, chopped", "quantity": 1, "unit": "bunch" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "red wine vinegar", "quantity": 60, "unit": "ml" },
+        { "name": "olive oil", "quantity": 100, "unit": "ml" },
+        { "name": "dried oregano", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Bring steaks to room temperature 30 minutes before grilling.",
+        "Build a hot charcoal fire and let it burn down to glowing embers.",
+        "Make chimichurri by combining parsley, garlic, vinegar, olive oil, oregano, and a pinch of salt.",
+        "Salt the steaks generously with coarse rock salt right before grilling.",
+        "Place over high heat and grill 5–6 minutes per side for medium-rare, turning once for clean grill marks.",
+        "Rest steaks loosely tented 8 minutes — this is essential for juicy meat.",
+        "Slice thick or serve whole with chimichurri and grilled vegetables."
+      ],
+      "tags": ["beef", "steak", "grilled", "main course", "iconic"],
+      "dietaryTags": ["gluten-free", "dairy-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Pastel de Papas",
+      "description": "Argentine shepherd's pie with seasoned ground beef, olives, and boiled eggs blanketed in creamy mashed potatoes.",
+      "ingredients": [
+        { "name": "potatoes, peeled", "quantity": 1.2, "unit": "kg" },
+        { "name": "milk", "quantity": 150, "unit": "ml" },
+        { "name": "butter", "quantity": 80, "unit": "g" },
+        { "name": "ground beef", "quantity": 600, "unit": "g" },
+        { "name": "onion, chopped", "quantity": 2, "unit": "pc" },
+        { "name": "red bell pepper, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "sweet paprika", "quantity": 1, "unit": "tbsp" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "boiled eggs, sliced", "quantity": 3, "unit": "pc" },
+        { "name": "green olives, chopped", "quantity": 50, "unit": "g" },
+        { "name": "grated parmesan", "quantity": 50, "unit": "g" }
+      ],
+      "steps": [
+        "Boil potatoes until tender, then mash with butter, milk, salt, and pepper into a smooth puree.",
+        "Sauté onion and pepper until soft, add garlic, cumin, paprika, and tomato paste; cook 2 minutes.",
+        "Brown ground beef with the aromatics until cooked, season generously with salt, then cool slightly.",
+        "Stir olives into the meat mixture.",
+        "Spread the meat in a baking dish, layer sliced boiled eggs over the top.",
+        "Cover completely with mashed potatoes, dragging a fork over the surface for texture, and dust with parmesan.",
+        "Bake at 200°C (400°F) for 25 minutes until golden and bubbling at the edges."
+      ],
+      "tags": ["casserole", "beef", "comfort food", "weeknight", "main course"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 30,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Carbonada",
+      "description": "Argentine winter stew of beef, sweet corn, peaches, and butternut squash, traditionally served inside a hollowed pumpkin.",
+      "ingredients": [
+        { "name": "beef chuck, cubed", "quantity": 700, "unit": "g" },
+        { "name": "butternut squash, cubed", "quantity": 500, "unit": "g" },
+        { "name": "potatoes, cubed", "quantity": 400, "unit": "g" },
+        { "name": "sweet potato, cubed", "quantity": 300, "unit": "g" },
+        { "name": "fresh corn kernels", "quantity": 200, "unit": "g" },
+        { "name": "ripe peaches or pears, cubed", "quantity": 2, "unit": "pc" },
+        { "name": "tomatoes, chopped", "quantity": 3, "unit": "pc" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "red bell pepper, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "beef broth", "quantity": 1, "unit": "l" },
+        { "name": "sweet paprika", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Brown beef cubes in olive oil in a large pot until deeply caramelized, then remove.",
+        "Sauté onion and bell pepper until soft, add garlic, paprika, and cumin, then tomatoes.",
+        "Cook the sofrito 5 minutes until rich and reduced.",
+        "Return beef and pour in broth. Simmer covered for 45 minutes until beef begins to tenderize.",
+        "Add potatoes, sweet potato, and squash; simmer 20 more minutes.",
+        "Add corn and chopped peaches; simmer a final 10 minutes until everything is tender and the broth thick and slightly sweet.",
+        "Adjust seasoning and serve hot, ideally inside a roasted hollowed pumpkin for celebrations."
+      ],
+      "tags": ["stew", "winter", "beef", "main course", "festive"],
+      "dietaryTags": ["dairy-free", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 90,
+      "servings": 6
+    }
+  ]
+}

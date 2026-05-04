@@ -38,11 +38,16 @@ function utcMondayOf(d: Date): Date {
   return stripTime(m);
 }
 
-/** Last schedulable calendar day for free tier: Sunday of next week (UTC). */
+/**
+ * Last schedulable calendar day for the free tier: a rolling window of
+ * (today + 6) UTC days, i.e. 7 days inclusive of today. Chosen over an
+ * ISO-week boundary so Sunday-night meal planners aren't locked out of
+ * scheduling tomorrow.
+ */
 function freeTierMaxScheduleDateUtc(): Date {
-  const mon = utcMondayOf(new Date());
-  const end = new Date(mon);
-  end.setUTCDate(end.getUTCDate() + 13);
+  const today = stripTime(new Date());
+  const end = new Date(today);
+  end.setUTCDate(end.getUTCDate() + 6);
   return end;
 }
 
@@ -50,6 +55,9 @@ function isBeyondFreeTierScheduleLimit(date: Date): boolean {
   const max = freeTierMaxScheduleDateUtc();
   return stripTime(date) > max;
 }
+
+const FREE_TIER_SCHEDULE_LIMIT_MESSAGE =
+  "Free tier users can plan up to 7 days ahead. Upgrade to premium for full calendar scheduling.";
 
 interface AddEntryData {
   date: Date;
@@ -96,7 +104,7 @@ export async function addEntry(
 
   if (!hasActivePremium(user) && isBeyondFreeTierScheduleLimit(entryDate)) {
     throw createError(
-      "Free tier users can plan through the end of next week only. Upgrade to premium for monthly scheduling.",
+      FREE_TIER_SCHEDULE_LIMIT_MESSAGE,
       403
     );
   }
@@ -333,7 +341,7 @@ export async function updateEntry(
     const newDate = stripTime(updates.date);
     if (!hasActivePremium(user) && isBeyondFreeTierScheduleLimit(newDate)) {
       throw createError(
-        "Free tier users can plan through the end of next week only. Upgrade to premium for monthly scheduling.",
+        FREE_TIER_SCHEDULE_LIMIT_MESSAGE,
         403
       );
     }
@@ -579,7 +587,7 @@ export async function importToKitchen(
   // Enforce on the end date so imports past the cutoff are rejected cleanly.
   if (!hasActivePremium(user) && isBeyondFreeTierScheduleLimit(end)) {
     throw createError(
-      "Free tier users can plan through the end of next week only. Upgrade to premium for monthly scheduling.",
+      FREE_TIER_SCHEDULE_LIMIT_MESSAGE,
       403
     );
   }

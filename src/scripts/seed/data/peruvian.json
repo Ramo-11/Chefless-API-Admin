@@ -1,0 +1,520 @@
+{
+  "cuisine": "Peruvian",
+  "names": {
+    "first": ["Mateo", "Sebastián", "Diego", "Joaquín", "Alejandro", "Andrés", "Valentina", "Camila", "Lucía", "Sofía", "Isabella", "Daniela"],
+    "last": ["Quispe", "Mamani", "Huamán", "Flores", "Vargas", "Castillo", "Rojas", "Paredes", "Salazar", "Benavides"]
+  },
+  "recipes": [
+    {
+      "title": "Ceviche",
+      "description": "Peru's national dish: fresh white fish cured in lime juice with red onion, ají, and cilantro, served with sweet potato and corn.",
+      "ingredients": [
+        { "name": "fresh sea bass or sole fillets", "quantity": 600, "unit": "g" },
+        { "name": "lime juice, freshly squeezed", "quantity": 200, "unit": "ml" },
+        { "name": "red onion, thinly sliced", "quantity": 1, "unit": "pc" },
+        { "name": "ají limo or habanero, minced", "quantity": 1, "unit": "pc" },
+        { "name": "cilantro, chopped", "quantity": 1, "unit": "bunch" },
+        { "name": "garlic clove, minced", "quantity": 1, "unit": "pc" },
+        { "name": "sweet potato, boiled and sliced", "quantity": 1, "unit": "pc" },
+        { "name": "choclo (large-kernel corn), boiled", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Cut the fish into 2 cm cubes and place in a glass bowl.",
+        "Soak red onion slices in ice water for 5 minutes, then drain — this removes harshness.",
+        "Season the fish with salt, garlic, and ají, then pour over the lime juice (the leche de tigre).",
+        "Toss gently and let cure for 3–5 minutes — the fish should turn opaque on the outside.",
+        "Add red onion and cilantro, mixing once.",
+        "Plate immediately, spooning leche de tigre over the top.",
+        "Serve at once with boiled sweet potato slices and choclo on the side."
+      ],
+      "tags": ["national dish", "raw fish", "seafood", "appetizer", "iconic"],
+      "dietaryTags": ["gluten-free", "dairy-free"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 0,
+      "servings": 4
+    },
+    {
+      "title": "Lomo Saltado",
+      "description": "Iconic Peruvian Chinese-Creole stir-fry of beef, onions, tomatoes, and ají in soy sauce, served with rice and fries.",
+      "ingredients": [
+        { "name": "beef tenderloin, sliced into strips", "quantity": 500, "unit": "g" },
+        { "name": "red onion, sliced into wedges", "quantity": 1, "unit": "pc" },
+        { "name": "tomatoes, sliced into wedges", "quantity": 2, "unit": "pc" },
+        { "name": "ají amarillo paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "soy sauce", "quantity": 3, "unit": "tbsp" },
+        { "name": "red wine vinegar", "quantity": 2, "unit": "tbsp" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "potatoes, fried as French fries", "quantity": 500, "unit": "g" },
+        { "name": "cilantro, chopped", "quantity": 0.5, "unit": "bunch" },
+        { "name": "cooked white rice", "quantity": 4, "unit": "cup" }
+      ],
+      "steps": [
+        "Season beef strips with salt and pepper.",
+        "Heat oil in a wok over very high heat until almost smoking.",
+        "Sear beef in batches for about 1 minute until browned but rare. Remove and set aside.",
+        "In the same wok, sauté garlic, then add onion and tomato; stir-fry 2 minutes — they should remain crunchy.",
+        "Add ají amarillo paste, soy sauce, and vinegar; toss 30 seconds.",
+        "Return beef and any juices, add fried potatoes, and toss everything for 30 seconds.",
+        "Sprinkle with cilantro and serve immediately over white rice."
+      ],
+      "tags": ["stir-fry", "beef", "chifa", "main course", "iconic"],
+      "dietaryTags": ["dairy-free"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Ají de Gallina",
+      "description": "Creamy shredded chicken stew thickened with bread and walnuts, perfumed with ají amarillo — a Limeño classic.",
+      "ingredients": [
+        { "name": "chicken breasts", "quantity": 600, "unit": "g" },
+        { "name": "ají amarillo paste", "quantity": 4, "unit": "tbsp" },
+        { "name": "white bread, crusts removed", "quantity": 4, "unit": "pc" },
+        { "name": "evaporated milk", "quantity": 200, "unit": "ml" },
+        { "name": "chicken broth", "quantity": 500, "unit": "ml" },
+        { "name": "onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "walnuts", "quantity": 50, "unit": "g" },
+        { "name": "parmesan, grated", "quantity": 50, "unit": "g" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "boiled potatoes, sliced", "quantity": 4, "unit": "pc" },
+        { "name": "boiled eggs, halved", "quantity": 2, "unit": "pc" },
+        { "name": "black olives", "quantity": 8, "unit": "pc" }
+      ],
+      "steps": [
+        "Poach chicken in broth for 20 minutes, reserve broth, and shred meat finely.",
+        "Soak bread in evaporated milk until softened.",
+        "Sauté onion in oil until golden, add garlic and ají amarillo paste, cook 5 minutes.",
+        "Blend the onion mixture with soaked bread, walnuts, and 200 ml broth until smooth.",
+        "Return mixture to pot, add shredded chicken, parmesan, and more broth as needed.",
+        "Simmer gently 10 minutes until creamy and thickened. Season with salt.",
+        "Serve over boiled potato slices, garnished with halved boiled eggs and black olives."
+      ],
+      "tags": ["chicken", "stew", "Lima", "creamy", "main course"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 35,
+      "servings": 6
+    },
+    {
+      "title": "Anticuchos",
+      "description": "Peruvian beef-heart skewers marinated in ají panca, vinegar, and cumin, then grilled over charcoal until charred and juicy.",
+      "ingredients": [
+        { "name": "beef heart, trimmed and cubed", "quantity": 800, "unit": "g" },
+        { "name": "ají panca paste", "quantity": 4, "unit": "tbsp" },
+        { "name": "red wine vinegar", "quantity": 100, "unit": "ml" },
+        { "name": "garlic cloves, minced", "quantity": 5, "unit": "pc" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tbsp" },
+        { "name": "dried oregano", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" },
+        { "name": "boiled potatoes, sliced", "quantity": 4, "unit": "pc" },
+        { "name": "choclo, boiled", "quantity": 2, "unit": "pc" }
+      ],
+      "steps": [
+        "Mix ají panca, vinegar, garlic, cumin, oregano, oil, and salt to make a marinade.",
+        "Toss beef heart cubes in the marinade and refrigerate at least 4 hours, ideally overnight.",
+        "Soak wooden skewers in water 30 minutes (or use metal skewers).",
+        "Thread 4–5 cubes onto each skewer.",
+        "Grill over very hot charcoal for 2–3 minutes per side, basting with leftover marinade.",
+        "Boil potato slices and choclo until tender.",
+        "Serve skewers immediately with potato, choclo, and a side of ají sauce."
+      ],
+      "tags": ["street food", "grilled", "skewer", "beef heart", "iconic"],
+      "dietaryTags": ["dairy-free", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 12,
+      "servings": 4
+    },
+    {
+      "title": "Causa",
+      "description": "Cold layered Peruvian potato terrine with ají amarillo, lime, and a savory filling of chicken, tuna, or shrimp.",
+      "ingredients": [
+        { "name": "yellow potatoes", "quantity": 1, "unit": "kg" },
+        { "name": "ají amarillo paste", "quantity": 3, "unit": "tbsp" },
+        { "name": "lime juice", "quantity": 60, "unit": "ml" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "cooked shredded chicken", "quantity": 300, "unit": "g" },
+        { "name": "mayonnaise", "quantity": 4, "unit": "tbsp" },
+        { "name": "avocado, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "boiled egg, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "black olives", "quantity": 6, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Boil potatoes in their skins until very tender, about 25 minutes. Peel while warm and pass through a ricer.",
+        "Knead potato puree with ají amarillo, lime juice, oil, and salt until smooth and bright yellow.",
+        "Mix shredded chicken with mayonnaise and a pinch of salt.",
+        "Line a loaf pan or ring mold with plastic wrap. Press in a layer of potato.",
+        "Add a layer of avocado slices, then a layer of chicken filling, repeating to fill.",
+        "Finish with a final potato layer, smoothing the top.",
+        "Chill at least 1 hour, unmold, and garnish with boiled egg slices and olives."
+      ],
+      "tags": ["cold", "potato", "appetizer", "layered", "Lima"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 40,
+      "cookTime": 25,
+      "servings": 6
+    },
+    {
+      "title": "Rocoto Relleno",
+      "description": "Arequipa specialty: spicy red rocoto peppers stuffed with seasoned beef, baked under melted cheese.",
+      "ingredients": [
+        { "name": "rocoto peppers", "quantity": 6, "unit": "pc" },
+        { "name": "ground beef", "quantity": 500, "unit": "g" },
+        { "name": "onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "ají panca paste", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "raisins", "quantity": 30, "unit": "g" },
+        { "name": "peanuts, chopped", "quantity": 30, "unit": "g" },
+        { "name": "boiled egg, chopped", "quantity": 2, "unit": "pc" },
+        { "name": "queso fresco, sliced", "quantity": 200, "unit": "g" },
+        { "name": "milk", "quantity": 250, "unit": "ml" },
+        { "name": "sugar", "quantity": 2, "unit": "tbsp" },
+        { "name": "vinegar", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Slice the tops off the rocotos, remove seeds and veins, and reserve the caps.",
+        "Boil rocotos in water with sugar and vinegar for 5 minutes, then drain. Repeat 3 times to tame the heat.",
+        "Brown beef with onion, garlic, ají panca, and cumin until cooked through.",
+        "Stir in raisins, peanuts, and chopped boiled egg, then cool the filling.",
+        "Stuff each rocoto with the meat mixture, top with a slice of queso fresco, and replace the caps.",
+        "Arrange in a baking dish, pour milk around the base, and bake at 180°C for 25 minutes.",
+        "Serve hot with a side of pastel de papa or boiled potatoes."
+      ],
+      "tags": ["Arequipa", "spicy", "stuffed pepper", "baked", "regional"],
+      "difficulty": "hard",
+      "prepTime": 40,
+      "cookTime": 35,
+      "servings": 6
+    },
+    {
+      "title": "Pollo a la Brasa",
+      "description": "Peruvian rotisserie chicken marinated in soy, vinegar, and spices, roasted until crisp-skinned and juicy.",
+      "ingredients": [
+        { "name": "whole chicken", "quantity": 1.8, "unit": "kg" },
+        { "name": "soy sauce", "quantity": 60, "unit": "ml" },
+        { "name": "red wine vinegar", "quantity": 60, "unit": "ml" },
+        { "name": "ají panca paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "garlic cloves, minced", "quantity": 6, "unit": "pc" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tbsp" },
+        { "name": "dried oregano", "quantity": 1, "unit": "tbsp" },
+        { "name": "smoked paprika", "quantity": 1, "unit": "tbsp" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 2, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Whisk soy, vinegar, ají panca, garlic, cumin, oregano, paprika, oil, salt, and pepper into a marinade.",
+        "Pat chicken dry, then rub marinade all over and under the skin. Refrigerate at least 6 hours, preferably overnight.",
+        "Preheat oven to 200°C (400°F). Place chicken breast-side up on a rack over a roasting pan.",
+        "Roast 50–60 minutes, basting once or twice, until skin is deep mahogany and juices run clear.",
+        "Internal temperature should reach 75°C in the thickest part of the thigh.",
+        "Rest 10 minutes loosely tented with foil.",
+        "Carve and serve with French fries, salad, and ají verde sauce."
+      ],
+      "tags": ["chicken", "roasted", "marinated", "main course", "iconic"],
+      "dietaryTags": ["dairy-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 60,
+      "servings": 4
+    },
+    {
+      "title": "Papas a la Huancaína",
+      "description": "Boiled potatoes blanketed in a creamy ají amarillo and queso fresco sauce — a refreshing Andean appetizer.",
+      "ingredients": [
+        { "name": "yellow potatoes", "quantity": 1, "unit": "kg" },
+        { "name": "queso fresco", "quantity": 250, "unit": "g" },
+        { "name": "ají amarillo paste", "quantity": 4, "unit": "tbsp" },
+        { "name": "evaporated milk", "quantity": 200, "unit": "ml" },
+        { "name": "saltine crackers", "quantity": 6, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 60, "unit": "ml" },
+        { "name": "garlic cloves", "quantity": 2, "unit": "pc" },
+        { "name": "lime juice", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" },
+        { "name": "boiled eggs, halved", "quantity": 3, "unit": "pc" },
+        { "name": "black olives", "quantity": 8, "unit": "pc" },
+        { "name": "lettuce leaves", "quantity": 6, "unit": "pc" }
+      ],
+      "steps": [
+        "Boil potatoes in their skins until tender, then peel and slice into thick rounds.",
+        "Sauté garlic in a little oil until fragrant; cool.",
+        "Blend queso fresco, ají amarillo, evaporated milk, crackers, oil, garlic, lime juice, and salt until silky.",
+        "Adjust consistency with more milk if too thick — it should coat a spoon.",
+        "Line plates with lettuce leaves and arrange potato slices on top.",
+        "Pour the warm Huancaína sauce generously over the potatoes.",
+        "Garnish with halved boiled eggs and black olives. Serve immediately."
+      ],
+      "tags": ["appetizer", "potato", "creamy", "cheese", "iconic"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 6
+    },
+    {
+      "title": "Tacu Tacu",
+      "description": "Peruvian comfort dish of leftover rice and beans pan-fried into a crispy patty, often topped with a steak and fried egg.",
+      "ingredients": [
+        { "name": "cooked white rice", "quantity": 400, "unit": "g" },
+        { "name": "cooked canary or pinto beans, drained", "quantity": 400, "unit": "g" },
+        { "name": "onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "ají amarillo paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "vegetable oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cumin", "quantity": 0.5, "unit": "tsp" },
+        { "name": "eggs", "quantity": 4, "unit": "pc" },
+        { "name": "fried plantains, for serving", "quantity": 2, "unit": "pc" }
+      ],
+      "steps": [
+        "Sauté onion in oil until golden, then add garlic and ají amarillo paste; cook 3 minutes.",
+        "Mash beans into the aderezo with a wooden spoon, season with cumin and salt.",
+        "Stir in the cooked rice, mixing until everything is well combined.",
+        "Heat more oil in a non-stick skillet and press a portion of the rice-bean mixture into a thick oval patty.",
+        "Fry over medium-high heat for 4–5 minutes until a deep golden crust forms.",
+        "Carefully flip and crisp the other side. Repeat with remaining mixture.",
+        "Top each tacu tacu with a fried egg and serve with fried plantains."
+      ],
+      "tags": ["rice", "beans", "comfort food", "fried", "main course"],
+      "dietaryTags": ["dairy-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Arroz con Pollo",
+      "description": "Peruvian green-tinted rice and chicken cooked together with cilantro, beer, and ají amarillo.",
+      "ingredients": [
+        { "name": "chicken thighs and drumsticks", "quantity": 1, "unit": "kg" },
+        { "name": "long-grain white rice", "quantity": 400, "unit": "g" },
+        { "name": "cilantro, packed", "quantity": 1, "unit": "bunch" },
+        { "name": "spinach leaves", "quantity": 50, "unit": "g" },
+        { "name": "ají amarillo paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "dark beer", "quantity": 250, "unit": "ml" },
+        { "name": "chicken broth", "quantity": 600, "unit": "ml" },
+        { "name": "frozen peas", "quantity": 100, "unit": "g" },
+        { "name": "carrot, diced", "quantity": 1, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Season chicken pieces with salt and pepper, then brown in oil on all sides. Remove and reserve.",
+        "Blend cilantro and spinach with a little broth into a smooth green puree.",
+        "In the same pot, sauté onion, garlic, and ají amarillo paste for 4 minutes.",
+        "Add cilantro puree and cook 2 minutes until fragrant and oil starts to separate.",
+        "Stir in rice to coat, then pour in beer and remaining broth. Add chicken pieces, peas, and carrot.",
+        "Bring to a boil, reduce to low, cover, and cook 25 minutes until rice is tender and liquid absorbed.",
+        "Rest covered 5 minutes, fluff, and serve with salsa criolla."
+      ],
+      "tags": ["rice", "chicken", "main course", "one-pot", "comfort food"],
+      "dietaryTags": ["dairy-free"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 45,
+      "servings": 6
+    },
+    {
+      "title": "Suspiro a la Limeña",
+      "description": "Limeño dessert of rich dulce de leche custard topped with cinnamon-port meringue.",
+      "ingredients": [
+        { "name": "sweetened condensed milk", "quantity": 395, "unit": "g" },
+        { "name": "evaporated milk", "quantity": 410, "unit": "ml" },
+        { "name": "egg yolks", "quantity": 4, "unit": "pc" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "egg whites", "quantity": 3, "unit": "pc" },
+        { "name": "sugar", "quantity": 200, "unit": "g" },
+        { "name": "port wine", "quantity": 80, "unit": "ml" },
+        { "name": "ground cinnamon", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Combine condensed milk and evaporated milk in a saucepan over medium-low heat.",
+        "Cook, stirring constantly, for about 30 minutes until thick, golden, and dulce-de-leche-like.",
+        "Off heat, whisk in egg yolks and vanilla, then return to low heat for 2 minutes to thicken.",
+        "Divide manjar blanco among glasses and chill until set.",
+        "Make Italian meringue: heat sugar with port to 118°C (soft-ball stage).",
+        "Whip egg whites to stiff peaks, then slowly pour in hot syrup while beating until glossy and cool.",
+        "Pipe meringue over each suspiro and dust generously with cinnamon."
+      ],
+      "tags": ["dessert", "Lima", "custard", "meringue", "sweet"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 35,
+      "servings": 6
+    },
+    {
+      "title": "Picarones",
+      "description": "Peruvian sweet potato and squash doughnut rings, deep-fried golden and drizzled with chancaca syrup.",
+      "ingredients": [
+        { "name": "sweet potato, cooked and mashed", "quantity": 250, "unit": "g" },
+        { "name": "butternut squash, cooked and mashed", "quantity": 250, "unit": "g" },
+        { "name": "all-purpose flour", "quantity": 400, "unit": "g" },
+        { "name": "active dry yeast", "quantity": 7, "unit": "g" },
+        { "name": "warm water", "quantity": 150, "unit": "ml" },
+        { "name": "anise seeds", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil for frying", "quantity": 1, "unit": "l" },
+        { "name": "chancaca (panela)", "quantity": 250, "unit": "g" },
+        { "name": "orange peel", "quantity": 1, "unit": "pc" },
+        { "name": "cinnamon stick", "quantity": 1, "unit": "pc" },
+        { "name": "cloves", "quantity": 3, "unit": "pc" }
+      ],
+      "steps": [
+        "Steep anise seeds in warm water 5 minutes, then strain. Activate yeast in this water with a pinch of sugar.",
+        "Combine mashed sweet potato, squash, salt, and yeast water with flour, mixing into a soft, sticky dough.",
+        "Cover and let rise 1 hour until doubled.",
+        "For the syrup, simmer chancaca with 250 ml water, orange peel, cinnamon, and cloves for 20 minutes until syrupy. Strain.",
+        "Heat oil to 180°C. Wet your hands, grab a small portion of dough, and shape into a ring with a hole in the center.",
+        "Slide rings into hot oil and fry 2 minutes per side until golden and puffed.",
+        "Drain briefly on paper towels and serve hot with chancaca syrup poured over."
+      ],
+      "tags": ["dessert", "doughnut", "fried", "street food", "sweet"],
+      "dietaryTags": ["vegan", "dairy-free"],
+      "difficulty": "medium",
+      "prepTime": 90,
+      "cookTime": 25,
+      "servings": 6
+    },
+    {
+      "title": "Seco de Cordero",
+      "description": "Slow-braised lamb in a fragrant cilantro and ají sauce, paired with white rice and canary beans.",
+      "ingredients": [
+        { "name": "lamb shoulder, cubed", "quantity": 1, "unit": "kg" },
+        { "name": "cilantro, packed", "quantity": 2, "unit": "bunch" },
+        { "name": "spinach leaves", "quantity": 50, "unit": "g" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 5, "unit": "pc" },
+        { "name": "ají amarillo paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "ají panca paste", "quantity": 1, "unit": "tbsp" },
+        { "name": "dark beer", "quantity": 250, "unit": "ml" },
+        { "name": "lamb or beef broth", "quantity": 500, "unit": "ml" },
+        { "name": "carrot, diced", "quantity": 1, "unit": "pc" },
+        { "name": "potatoes, halved", "quantity": 4, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Season lamb with salt and pepper. Sear in hot oil in a heavy pot until deeply browned. Remove.",
+        "In the same pot, sauté onion, garlic, and both ají pastes for 5 minutes.",
+        "Blend cilantro, spinach, and a little broth into a vivid green puree, then add to the pot.",
+        "Cook puree until oil starts to separate, about 4 minutes.",
+        "Return lamb, pour in beer and broth, bring to a simmer, cover, and braise 90 minutes.",
+        "Add potatoes and carrot, simmer 30 more minutes until lamb is fork-tender.",
+        "Adjust seasoning, rest 5 minutes, and serve with white rice and canary beans."
+      ],
+      "tags": ["lamb", "stew", "braised", "main course", "northern Peru"],
+      "dietaryTags": ["dairy-free"],
+      "difficulty": "hard",
+      "prepTime": 25,
+      "cookTime": 130,
+      "servings": 6
+    },
+    {
+      "title": "Arroz con Mariscos",
+      "description": "Peruvian seafood rice loaded with shrimp, squid, and mussels in a vibrant ají amarillo broth.",
+      "ingredients": [
+        { "name": "long-grain white rice", "quantity": 400, "unit": "g" },
+        { "name": "mixed seafood (shrimp, squid, mussels)", "quantity": 700, "unit": "g" },
+        { "name": "fish broth", "quantity": 800, "unit": "ml" },
+        { "name": "ají amarillo paste", "quantity": 3, "unit": "tbsp" },
+        { "name": "ají panca paste", "quantity": 1, "unit": "tbsp" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "tomato, chopped", "quantity": 2, "unit": "pc" },
+        { "name": "white wine", "quantity": 100, "unit": "ml" },
+        { "name": "frozen peas", "quantity": 100, "unit": "g" },
+        { "name": "red bell pepper, diced", "quantity": 1, "unit": "pc" },
+        { "name": "cilantro, chopped", "quantity": 0.5, "unit": "bunch" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Sauté onion in oil until golden, add garlic, ají pastes, and cook 3 minutes.",
+        "Stir in tomato and bell pepper; cook another 3 minutes until softened.",
+        "Add rice, toasting briefly, then pour in white wine and let it evaporate.",
+        "Add fish broth, season with salt, and bring to a boil.",
+        "Reduce heat, cover, and simmer 12 minutes.",
+        "Scatter seafood and peas over the rice, cover, and steam 5–6 more minutes until shrimp are pink and mussels open.",
+        "Rest 3 minutes off heat, sprinkle with cilantro, and serve with lime wedges."
+      ],
+      "tags": ["seafood", "rice", "main course", "coastal", "one-pot"],
+      "dietaryTags": ["dairy-free"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Tiradito",
+      "description": "Peruvian sashimi-style fish in a vibrant ají leche de tigre — a Nikkei fusion of ceviche and Japanese technique.",
+      "ingredients": [
+        { "name": "very fresh sea bass or tuna", "quantity": 400, "unit": "g" },
+        { "name": "lime juice", "quantity": 100, "unit": "ml" },
+        { "name": "ají amarillo paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "garlic clove, minced", "quantity": 1, "unit": "pc" },
+        { "name": "ginger, grated", "quantity": 1, "unit": "tsp" },
+        { "name": "soy sauce", "quantity": 1, "unit": "tsp" },
+        { "name": "cilantro leaves", "quantity": 0.5, "unit": "bunch" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" },
+        { "name": "ají limo, thinly sliced", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Slice fish very thinly, like sashimi, against the grain.",
+        "Arrange slices in a single layer on a chilled plate.",
+        "Blend lime juice, ají amarillo paste, garlic, ginger, soy sauce, salt, and a few cilantro leaves until smooth.",
+        "Strain the leche de tigre for an ultra-clean sauce, if desired.",
+        "Spoon the sauce evenly over the fish slices just before serving.",
+        "Garnish with thinly sliced ají limo and cilantro leaves.",
+        "Serve immediately, well chilled."
+      ],
+      "tags": ["raw fish", "Nikkei", "appetizer", "ceviche-style", "elegant"],
+      "dietaryTags": ["gluten-free", "dairy-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 0,
+      "servings": 4
+    },
+    {
+      "title": "Sopa Criolla",
+      "description": "Comforting Peruvian beef noodle soup with ají panca, milk, and a poached egg, finished with fried bread.",
+      "ingredients": [
+        { "name": "beef tenderloin, sliced thin", "quantity": 300, "unit": "g" },
+        { "name": "angel hair pasta", "quantity": 150, "unit": "g" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "ají panca paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "tomato paste", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "dried oregano", "quantity": 1, "unit": "tsp" },
+        { "name": "beef broth", "quantity": 1.2, "unit": "l" },
+        { "name": "evaporated milk", "quantity": 200, "unit": "ml" },
+        { "name": "eggs", "quantity": 4, "unit": "pc" },
+        { "name": "bread slices, fried", "quantity": 4, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Heat oil and quickly sear beef strips for 1 minute. Remove and reserve.",
+        "Sauté onion until golden, add garlic, ají panca, tomato paste, cumin, and oregano; cook 4 minutes.",
+        "Pour in beef broth, bring to a boil, and simmer 5 minutes for flavors to meld.",
+        "Add pasta and cook 3 minutes until almost tender.",
+        "Return beef, then stir in evaporated milk and adjust seasoning.",
+        "Crack eggs gently into the simmering broth and poach 3 minutes until whites set.",
+        "Ladle into bowls with one egg per portion and float a slice of fried bread on top."
+      ],
+      "tags": ["soup", "beef", "comfort food", "main course", "weeknight"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 4
+    }
+  ]
+}

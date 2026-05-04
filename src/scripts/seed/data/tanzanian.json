@@ -1,0 +1,291 @@
+{
+  "cuisine": "Tanzanian",
+  "names": {
+    "first": ["Neema", "Juma", "Zawadi", "Baraka", "Asha", "Salim", "Amina", "Hamisi", "Tumaini", "Rashid", "Furaha", "Mwajuma"],
+    "last": ["Mwakasege", "Mussa", "Kimaro", "Mtui", "Shabani", "Mwakyembe", "Kileo", "Lyimo", "Mhina", "Said", "Bakari", "Mlay"]
+  },
+  "recipes": [
+    {
+      "title": "Tanzanian Pilau",
+      "description": "Aromatic Swahili coast rice with beef, whole spices, and caramelised onions, central to Tanzanian celebrations.",
+      "ingredients": [
+        { "name": "basmati rice", "quantity": 500, "unit": "g" },
+        { "name": "beef chuck, cubed", "quantity": 600, "unit": "g" },
+        { "name": "red onions, sliced", "quantity": 3, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 5, "unit": "pc" },
+        { "name": "ginger, grated", "quantity": 1, "unit": "tbsp" },
+        { "name": "cumin seeds", "quantity": 1, "unit": "tbsp" },
+        { "name": "cardamom pods", "quantity": 6, "unit": "pc" },
+        { "name": "cinnamon stick", "quantity": 1, "unit": "pc" },
+        { "name": "cloves", "quantity": 6, "unit": "pc" },
+        { "name": "black peppercorns", "quantity": 1, "unit": "tsp" },
+        { "name": "potatoes, cubed", "quantity": 2, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 80, "unit": "ml" },
+        { "name": "beef stock", "quantity": 1, "unit": "l" },
+        { "name": "salt", "quantity": 2, "unit": "tsp" }
+      ],
+      "steps": [
+        "Rinse the rice, soak for 20 minutes, and drain.",
+        "Heat the oil in a heavy pot and fry the onions over medium heat until very deeply caramelised, about 18 minutes.",
+        "Add the cumin seeds, cardamom, cinnamon, cloves, and peppercorns and toast for 1 minute.",
+        "Stir in the garlic and ginger, then add the beef and brown all over.",
+        "Add the potatoes and salt, stir, and pour in the beef stock.",
+        "Cover and simmer until the meat is tender, about 45 minutes.",
+        "Stir in the rice, ensuring the liquid sits 2 cm above the grains.",
+        "Cover tightly, lower the heat to minimum, and steam undisturbed for 20 minutes.",
+        "Rest off heat for 10 minutes, then fluff with a fork and serve with kachumbari."
+      ],
+      "tags": ["rice", "swahili", "celebration", "spiced"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Mishkaki",
+      "description": "Tanzanian charcoal-grilled meat skewers marinated in lemon, garlic, and warm spices, sold at every coastal night market.",
+      "ingredients": [
+        { "name": "beef sirloin, cubed", "quantity": 800, "unit": "g" },
+        { "name": "garlic, minced", "quantity": 5, "unit": "pc" },
+        { "name": "ginger, grated", "quantity": 1, "unit": "tbsp" },
+        { "name": "lemon juice", "quantity": 60, "unit": "ml" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "paprika", "quantity": 1, "unit": "tsp" },
+        { "name": "ground coriander", "quantity": 1, "unit": "tsp" },
+        { "name": "chilli powder", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Whisk garlic, ginger, lemon juice, oil, cumin, paprika, coriander, chilli powder, and salt into a marinade.",
+        "Toss the beef cubes in the marinade and refrigerate for at least 4 hours, ideally overnight.",
+        "Soak wooden skewers in water for 30 minutes if using.",
+        "Thread 4-5 cubes of beef onto each skewer, packed snugly.",
+        "Prepare a charcoal grill with hot embers.",
+        "Grill the skewers over direct heat for 3 minutes per side, turning twice, until charred outside and just pink inside.",
+        "Rest the skewers for 3 minutes off the heat.",
+        "Serve hot with kachumbari, chapati, or roasted cassava."
+      ],
+      "tags": ["grilled", "skewers", "street-food", "swahili"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 250,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Mtori",
+      "description": "Kilimanjaro region soup of green bananas simmered with beef into a creamy, comforting broth.",
+      "ingredients": [
+        { "name": "green cooking bananas, peeled and chopped", "quantity": 1, "unit": "kg" },
+        { "name": "beef shank, cubed", "quantity": 500, "unit": "g" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 3, "unit": "pc" },
+        { "name": "tomato, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "water", "quantity": 1.5, "unit": "l" },
+        { "name": "fresh coriander, chopped", "quantity": 0.5, "unit": "bunch" },
+        { "name": "salt", "quantity": 1.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Place the beef in a heavy pot with the water and bring to a gentle boil.",
+        "Skim the surface and simmer covered for 45 minutes until the beef is tender.",
+        "In a separate pan, heat the oil and sauté the onion until soft.",
+        "Add the garlic and cumin and cook briefly, then stir in the tomato and cook into a paste.",
+        "Tip the onion mixture into the beef pot.",
+        "Add the green bananas and salt, top up with water if needed to cover, and simmer for 25 minutes until the bananas are very soft.",
+        "Use a wooden masher or stick blender briefly to break down half of the bananas, leaving some chunks for texture.",
+        "Stir in the coriander and adjust salt before serving in deep bowls."
+      ],
+      "tags": ["soup", "chagga", "comfort", "banana"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 80,
+      "servings": 6
+    },
+    {
+      "title": "Wali wa Nazi",
+      "description": "Coastal Tanzanian coconut rice cooked in fresh coconut milk for a fragrant, slightly sweet side.",
+      "ingredients": [
+        { "name": "long-grain white rice", "quantity": 400, "unit": "g" },
+        { "name": "coconut milk", "quantity": 400, "unit": "ml" },
+        { "name": "water", "quantity": 300, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Rinse the rice in cold water until the water runs clear, then drain.",
+        "Combine the coconut milk and water in a pot and bring to a gentle boil.",
+        "Stir in the salt and oil.",
+        "Add the drained rice and stir once.",
+        "Lower the heat to minimum, cover tightly, and steam for 18 minutes without lifting the lid.",
+        "Turn off the heat and let stand covered for 10 minutes.",
+        "Fluff with a fork and serve with fish curry, beans, or grilled meats."
+      ],
+      "tags": ["rice", "coconut", "side", "swahili"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Ndizi Kaanga",
+      "description": "Tanzanian fried plantains, golden and caramelised, served as a side or snack.",
+      "ingredients": [
+        { "name": "ripe plantains", "quantity": 4, "unit": "pc" },
+        { "name": "vegetable oil for frying", "quantity": 300, "unit": "ml" },
+        { "name": "salt", "quantity": 0.25, "unit": "tsp" }
+      ],
+      "steps": [
+        "Choose plantains with deep yellow skins flecked with black for natural sweetness.",
+        "Peel the plantains and slice them on a sharp diagonal into 1 cm thick ovals.",
+        "Heat the oil in a wide pan over medium heat to about 170°C.",
+        "Fry the plantain slices in a single layer for 2-3 minutes per side until deeply golden and caramelised at the edges.",
+        "Work in batches to avoid crowding the pan.",
+        "Remove with a slotted spoon and drain on paper towels.",
+        "Sprinkle very lightly with salt while still hot.",
+        "Serve warm with beans, rice, or stew."
+      ],
+      "tags": ["fried", "side", "snack", "plantain"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Supu ya Ndizi",
+      "description": "Tanzanian green banana soup with beef, similar to mtori but lighter and brothier, popular in the north.",
+      "ingredients": [
+        { "name": "green bananas, peeled and sliced", "quantity": 800, "unit": "g" },
+        { "name": "beef bones with meat", "quantity": 500, "unit": "g" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 3, "unit": "pc" },
+        { "name": "tomato, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "carrot, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "lemon juice", "quantity": 2, "unit": "tbsp" },
+        { "name": "ground black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "water", "quantity": 2, "unit": "l" },
+        { "name": "fresh coriander, chopped", "quantity": 0.5, "unit": "bunch" },
+        { "name": "salt", "quantity": 1.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Place the beef bones in a large pot with the water and bring to a boil.",
+        "Skim the foam and simmer gently for 75 minutes to make a rich broth.",
+        "Lift out the bones, strip the meat, and return the meat to the pot.",
+        "In a small pan, heat the oil and sauté the onion, garlic, and tomato into a paste, then stir into the broth.",
+        "Add the green bananas and carrot.",
+        "Season with salt and black pepper and simmer for 25 minutes until the bananas are tender.",
+        "Stir in the lemon juice and coriander.",
+        "Serve hot in deep bowls with bread on the side."
+      ],
+      "tags": ["soup", "comfort", "north", "everyday"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 110,
+      "servings": 6
+    },
+    {
+      "title": "Mchicha",
+      "description": "Tanzanian braised amaranth greens with onion, tomato, peanut, and coconut milk.",
+      "ingredients": [
+        { "name": "amaranth leaves, washed and chopped", "quantity": 500, "unit": "g" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "tomatoes, chopped", "quantity": 2, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 3, "unit": "pc" },
+        { "name": "smooth peanut butter", "quantity": 2, "unit": "tbsp" },
+        { "name": "coconut milk", "quantity": 200, "unit": "ml" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Heat the oil in a wide pan and sauté the onion until soft and translucent.",
+        "Add the garlic and cook for 1 minute.",
+        "Stir in the tomatoes and cook until they break down into a sauce, about 5 minutes.",
+        "Whisk the peanut butter into the coconut milk until smooth, then add to the pan.",
+        "Bring to a simmer and cook for 3 minutes to thicken slightly.",
+        "Add the amaranth leaves a handful at a time, tossing to wilt.",
+        "Season with salt, cover, and steam for 5 minutes.",
+        "Uncover, stir, and simmer for another 3 minutes to bind the sauce. Serve with ugali or rice."
+      ],
+      "tags": ["greens", "vegetable", "side", "coconut"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Zanzibar Mix",
+      "description": "Iconic Zanzibari street food: a tangy chickpea and potato soup topped with fried bhajia, crisps, and chutney.",
+      "ingredients": [
+        { "name": "cooked chickpeas", "quantity": 400, "unit": "g" },
+        { "name": "potatoes, cubed", "quantity": 3, "unit": "pc" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 3, "unit": "pc" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "tamarind paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "lemon juice", "quantity": 2, "unit": "tbsp" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "water", "quantity": 1, "unit": "l" },
+        { "name": "potato crisps", "quantity": 100, "unit": "g" },
+        { "name": "fried potato bhajia", "quantity": 12, "unit": "pc" },
+        { "name": "fresh coriander, chopped", "quantity": 0.5, "unit": "bunch" },
+        { "name": "green chilli chutney", "quantity": 4, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Heat the oil in a pot and sauté the onion until soft.",
+        "Add the garlic, turmeric, and cumin and stir for 1 minute.",
+        "Add the cubed potatoes and water and bring to a boil.",
+        "Simmer for 15 minutes until the potatoes are tender.",
+        "Stir in the chickpeas and tamarind paste, season with salt, and simmer for another 10 minutes until the broth thickens slightly.",
+        "Lightly mash a few potatoes against the side of the pot to thicken the soup.",
+        "Stir in the lemon juice and adjust salt.",
+        "Ladle into bowls and top each with bhajia, crushed crisps, coriander, and a spoonful of green chutney just before serving."
+      ],
+      "tags": ["street-food", "zanzibar", "soup", "iconic"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Vitumbua",
+      "description": "Coconut and cardamom rice cakes from the Swahili coast, fried in special domed pans and eaten with chai.",
+      "ingredients": [
+        { "name": "rice flour", "quantity": 300, "unit": "g" },
+        { "name": "coconut milk", "quantity": 300, "unit": "ml" },
+        { "name": "sugar", "quantity": 100, "unit": "g" },
+        { "name": "active dry yeast", "quantity": 1, "unit": "tsp" },
+        { "name": "warm water", "quantity": 100, "unit": "ml" },
+        { "name": "ground cardamom", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 0.25, "unit": "tsp" },
+        { "name": "vegetable oil for frying", "quantity": 100, "unit": "ml" }
+      ],
+      "steps": [
+        "Dissolve the yeast and 1 tsp of the sugar in the warm water and rest for 10 minutes until foamy.",
+        "In a bowl, whisk the rice flour, remaining sugar, cardamom, and salt.",
+        "Pour in the coconut milk and yeast mixture and whisk to a smooth, lump-free batter.",
+        "Cover and rest in a warm place for 1 hour until bubbly on the surface.",
+        "Heat a vitumbua pan or a small ebelskiver pan over medium heat and brush each well with oil.",
+        "Pour batter into each well to about three-quarters full.",
+        "Cook for 2-3 minutes until the bottoms are golden and lacy, then flip with a skewer and cook the other side for 2 minutes.",
+        "Lift out, drain briefly, and serve warm with spiced chai."
+      ],
+      "tags": ["snack", "swahili", "fried", "sweet"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 75,
+      "cookTime": 25,
+      "servings": 6
+    }
+  ]
+}

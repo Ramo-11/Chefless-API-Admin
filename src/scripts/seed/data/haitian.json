@@ -1,0 +1,272 @@
+{
+  "cuisine": "Haitian",
+  "names": {
+    "first": ["Jean", "Marie", "Pierre", "Nadège", "Wisly", "Fabienne", "Edwidge", "Marjorie", "Gerald", "Yvrose", "Jacques", "Sabine"],
+    "last": ["Pierre", "Joseph", "Louis", "Charles", "Saint-Fleur", "Jean-Baptiste", "Augustin", "Toussaint", "Beauvais", "Cadet", "Étienne", "Désir"]
+  },
+  "recipes": [
+    {
+      "title": "Griot",
+      "description": "Haitian fried pork shoulder marinated in epis and sour orange, then braised and crisped, served with pikliz.",
+      "ingredients": [
+        { "name": "pork shoulder, cubed", "quantity": 1.5, "unit": "kg" },
+        { "name": "sour orange juice (or 50/50 lime and orange)", "quantity": 200, "unit": "ml" },
+        { "name": "epis (Haitian seasoning)", "quantity": 4, "unit": "tbsp" },
+        { "name": "garlic cloves, minced", "quantity": 6, "unit": "pc" },
+        { "name": "scotch bonnet, minced", "quantity": 1, "unit": "pc" },
+        { "name": "fresh thyme", "quantity": 1, "unit": "bunch" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "oil for frying", "quantity": 750, "unit": "ml" }
+      ],
+      "steps": [
+        "Wash pork with sour orange and rub with epis, garlic, thyme, scotch bonnet, salt and pepper; marinate overnight.",
+        "Place the marinated pork and its juices in a heavy pot with a little water, cover and braise 1 hour until tender.",
+        "Uncover and cook off all liquid; reserve the pan juices for sauce.",
+        "Heat oil to 180°C and fry the pork in batches until deeply caramelised on all sides.",
+        "Drain on paper, drizzle with reduced pan juices and serve with pikliz, banan peze and rice."
+      ],
+      "tags": ["pork", "fried", "national-dish"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Diri ak Pwa",
+      "description": "Haitian rice and beans (red kidney beans) cooked together with epis, thyme and coconut milk for a creamy finish.",
+      "ingredients": [
+        { "name": "long-grain rice", "quantity": 500, "unit": "g" },
+        { "name": "dried red kidney beans, soaked overnight", "quantity": 250, "unit": "g" },
+        { "name": "coconut milk", "quantity": 250, "unit": "ml" },
+        { "name": "water", "quantity": 750, "unit": "ml" },
+        { "name": "epis", "quantity": 2, "unit": "tbsp" },
+        { "name": "fresh thyme", "quantity": 1, "unit": "bunch" },
+        { "name": "scotch bonnet, whole", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "neutral oil", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Cook soaked beans in water until tender, about 60 minutes; reserve beans and cooking liquid.",
+        "Sauté garlic and epis in oil, add the beans and a little of their liquid.",
+        "Add coconut milk, thyme, whole scotch bonnet, salt and enough water to reach 750 ml total liquid.",
+        "Stir in the rice, bring to a simmer, cover and cook on low for 25 minutes.",
+        "Remove the scotch bonnet (intact) and thyme stems; fluff and serve."
+      ],
+      "tags": ["rice", "beans", "national-dish"],
+      "dietaryTags": ["vegan", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Soup Joumou",
+      "description": "Haitian Independence Day pumpkin and beef soup with pasta and root vegetables, a UNESCO heritage dish.",
+      "ingredients": [
+        { "name": "calabaza or kabocha pumpkin, peeled", "quantity": 1, "unit": "kg" },
+        { "name": "beef chuck, cubed", "quantity": 600, "unit": "g" },
+        { "name": "epis", "quantity": 3, "unit": "tbsp" },
+        { "name": "potatoes, chunked", "quantity": 2, "unit": "pc" },
+        { "name": "carrots, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "turnip, chunked", "quantity": 1, "unit": "pc" },
+        { "name": "cabbage, chopped", "quantity": 200, "unit": "g" },
+        { "name": "celery stalk, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "rigatoni or other short pasta", "quantity": 150, "unit": "g" },
+        { "name": "scotch bonnet, whole", "quantity": 1, "unit": "pc" },
+        { "name": "fresh thyme", "quantity": 1, "unit": "bunch" },
+        { "name": "lime", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Marinate beef in epis, lime juice, salt and pepper for at least 1 hour.",
+        "Brown beef in a pot, add water and simmer 60 minutes until tender.",
+        "Boil the pumpkin in salted water until soft, then blend smooth and add to the beef pot.",
+        "Add potatoes, carrots, turnip, celery and the whole scotch bonnet; simmer 20 minutes.",
+        "Add cabbage and pasta and cook 10 minutes more.",
+        "Finish with thyme and a squeeze of lime, remove the chilli, and serve hot."
+      ],
+      "tags": ["soup", "holiday", "tradition", "unesco"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 120,
+      "servings": 8
+    },
+    {
+      "title": "Pikliz",
+      "description": "Haitian fiery pickled cabbage, carrot and scotch bonnet relish, the indispensable companion to fried foods.",
+      "ingredients": [
+        { "name": "green cabbage, shredded", "quantity": 500, "unit": "g" },
+        { "name": "carrots, julienned", "quantity": 2, "unit": "pc" },
+        { "name": "shallots, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "bell pepper, julienned", "quantity": 1, "unit": "pc" },
+        { "name": "scotch bonnets, sliced", "quantity": 4, "unit": "pc" },
+        { "name": "garlic cloves, sliced", "quantity": 4, "unit": "pc" },
+        { "name": "whole cloves", "quantity": 4, "unit": "pc" },
+        { "name": "white vinegar", "quantity": 500, "unit": "ml" },
+        { "name": "lime juice", "quantity": 60, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Pack cabbage, carrot, shallot, bell pepper, scotch bonnet, garlic and cloves into a clean glass jar.",
+        "Stir salt into the vinegar and lime juice until dissolved.",
+        "Pour the brine over the vegetables to cover.",
+        "Seal and refrigerate at least 3 days for flavours to develop; pikliz keeps for months."
+      ],
+      "tags": ["pickle", "condiment", "spicy"],
+      "dietaryTags": ["vegan", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 0,
+      "servings": 12
+    },
+    {
+      "title": "Akra",
+      "description": "Haitian malanga (taro root) fritters seasoned with garlic, scotch bonnet and parsley, fried until crisp.",
+      "ingredients": [
+        { "name": "malanga (taro), peeled", "quantity": 800, "unit": "g" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "scotch bonnet, minced", "quantity": 1, "unit": "pc" },
+        { "name": "fresh parsley, chopped", "quantity": 1, "unit": "bunch" },
+        { "name": "shallot, finely diced", "quantity": 1, "unit": "pc" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "oil for frying", "quantity": 750, "unit": "ml" }
+      ],
+      "steps": [
+        "Finely grate the malanga to a thick, slightly stringy paste.",
+        "Stir in garlic, scotch bonnet, shallot, parsley, egg, salt and pepper.",
+        "Heat oil to 180°C.",
+        "Drop heaping tablespoons of batter into the oil and fry 3-4 minutes until deep golden and crisp.",
+        "Drain on paper and serve immediately with pikliz."
+      ],
+      "tags": ["fried", "fritter", "street-food"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 15,
+      "servings": 6
+    },
+    {
+      "title": "Lambi",
+      "description": "Haitian conch braised in tomato, onion, bell pepper and scotch bonnet sauce, a coastal speciality.",
+      "ingredients": [
+        { "name": "cleaned conch meat", "quantity": 800, "unit": "g" },
+        { "name": "lime juice", "quantity": 100, "unit": "ml" },
+        { "name": "epis", "quantity": 3, "unit": "tbsp" },
+        { "name": "onion, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "bell peppers, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "tomatoes, diced", "quantity": 3, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "scotch bonnet, whole", "quantity": 1, "unit": "pc" },
+        { "name": "fresh thyme", "quantity": 1, "unit": "bunch" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Pound the conch with a meat mallet to tenderise, then wash with lime juice.",
+        "Boil in salted water for 30-40 minutes until tender, then slice into bite pieces.",
+        "Sauté onion, bell pepper and garlic in oil, add tomato paste and tomatoes.",
+        "Stir in epis, thyme and the whole scotch bonnet; simmer 10 minutes.",
+        "Add the conch and a cup of its cooking liquid; simmer 15 minutes until the sauce coats the conch.",
+        "Adjust seasoning and serve with rice."
+      ],
+      "tags": ["seafood", "stew", "coastal"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 60,
+      "servings": 4
+    },
+    {
+      "title": "Tassot",
+      "description": "Haitian crispy fried beef, marinated in epis and citrus, twice-cooked until deeply browned and chewy-crisp.",
+      "ingredients": [
+        { "name": "beef chuck or top round, cubed", "quantity": 1, "unit": "kg" },
+        { "name": "lime juice", "quantity": 100, "unit": "ml" },
+        { "name": "epis", "quantity": 3, "unit": "tbsp" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "fresh thyme", "quantity": 1, "unit": "bunch" },
+        { "name": "scotch bonnet, minced", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "oil for frying", "quantity": 750, "unit": "ml" }
+      ],
+      "steps": [
+        "Wash beef with lime juice and rub with epis, garlic, thyme, scotch bonnet, salt and pepper; marinate 4 hours.",
+        "Place beef and its marinade in a pot with a little water; cover and braise 60 minutes until tender.",
+        "Uncover and cook off all liquid; the beef should be dry but moist inside.",
+        "Heat oil to 180°C and fry the beef in batches 5-6 minutes until deeply browned on all sides.",
+        "Drain on paper and serve with pikliz, banan peze and rice."
+      ],
+      "tags": ["beef", "fried", "tradition"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Diri Djon Djon",
+      "description": "Haitian black-rice dish stained and perfumed by djon djon mushrooms, often served with shrimp or lima beans.",
+      "ingredients": [
+        { "name": "long-grain rice", "quantity": 500, "unit": "g" },
+        { "name": "dried djon djon mushrooms", "quantity": 30, "unit": "g" },
+        { "name": "hot water", "quantity": 750, "unit": "ml" },
+        { "name": "lima beans, cooked", "quantity": 200, "unit": "g" },
+        { "name": "epis", "quantity": 2, "unit": "tbsp" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "shallot, diced", "quantity": 1, "unit": "pc" },
+        { "name": "scotch bonnet, whole", "quantity": 1, "unit": "pc" },
+        { "name": "fresh thyme", "quantity": 1, "unit": "bunch" },
+        { "name": "neutral oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Steep djon djon in hot water for 20 minutes, then strain and reserve the inky liquid (discard or chop the mushrooms).",
+        "Sauté shallot, garlic and epis in oil, then add lima beans and rinsed rice and toast 1 minute.",
+        "Pour in the strained djon djon water, add salt, thyme and the whole scotch bonnet.",
+        "Bring to a boil, cover, lower heat and cook 25 minutes.",
+        "Rest 10 minutes off the heat, fluff with a fork and serve."
+      ],
+      "tags": ["rice", "mushroom", "tradition"],
+      "dietaryTags": ["vegan", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 35,
+      "servings": 6
+    },
+    {
+      "title": "Poul Nan Sòs",
+      "description": "Haitian stewed chicken in a tomato, bell pepper and onion sauce seasoned with epis, the everyday Sunday plate.",
+      "ingredients": [
+        { "name": "chicken pieces", "quantity": 1.5, "unit": "kg" },
+        { "name": "lime juice", "quantity": 60, "unit": "ml" },
+        { "name": "epis", "quantity": 3, "unit": "tbsp" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "tomatoes, diced", "quantity": 3, "unit": "pc" },
+        { "name": "onion, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "bell peppers, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "fresh thyme", "quantity": 1, "unit": "bunch" },
+        { "name": "scotch bonnet, whole", "quantity": 1, "unit": "pc" },
+        { "name": "neutral oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "water", "quantity": 250, "unit": "ml" }
+      ],
+      "steps": [
+        "Wash chicken with lime juice and water and pat dry, then rub with epis, salt and pepper; marinate 1 hour.",
+        "Brown chicken in oil on all sides; remove.",
+        "Sauté onion, bell pepper and garlic in the same pot, then add tomato paste and tomatoes.",
+        "Return the chicken, add water, thyme and the whole scotch bonnet; cover and simmer 30 minutes.",
+        "Uncover and reduce the sauce until thick and glossy; remove the chilli intact and serve with rice."
+      ],
+      "tags": ["chicken", "stew", "tradition"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 45,
+      "servings": 6
+    }
+  ]
+}

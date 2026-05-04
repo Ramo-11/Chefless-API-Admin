@@ -1,0 +1,385 @@
+{
+  "cuisine": "Russian",
+  "names": {
+    "first": ["Aleksei", "Anastasia", "Dmitri", "Ekaterina", "Ivan", "Olga", "Mikhail", "Tatiana", "Sergei", "Natalia", "Nikolai", "Yulia"],
+    "last": ["Ivanov", "Petrov", "Smirnov", "Volkov", "Sokolov", "Popov", "Lebedev", "Kozlov", "Novikov", "Morozov", "Fedorov", "Mikhailov"]
+  },
+  "recipes": [
+    {
+      "title": "Borscht",
+      "description": "Iconic Eastern Slavic beetroot soup with beef, cabbage and root vegetables, served with sour cream and dill.",
+      "ingredients": [
+        { "name": "beef chuck", "quantity": 500, "unit": "g" },
+        { "name": "beetroots, peeled and grated", "quantity": 500, "unit": "g" },
+        { "name": "white cabbage, shredded", "quantity": 300, "unit": "g" },
+        { "name": "potatoes, cubed", "quantity": 3, "unit": "pc" },
+        { "name": "carrot, grated", "quantity": 1, "unit": "pc" },
+        { "name": "onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "garlic cloves", "quantity": 3, "unit": "pc" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "white wine vinegar", "quantity": 1, "unit": "tbsp" },
+        { "name": "sour cream", "quantity": 4, "unit": "tbsp" },
+        { "name": "dill, chopped", "quantity": 2, "unit": "tbsp" },
+        { "name": "water", "quantity": 2.5, "unit": "l" }
+      ],
+      "steps": [
+        "Simmer the beef in salted water with bay leaves for 90 minutes, skimming any foam.",
+        "Sauté the onion and carrot in oil until soft, then add the beetroot, tomato paste and vinegar and cook for 10 minutes.",
+        "Lift the beef from the broth, dice it, and return it to the pot.",
+        "Add the potatoes to the broth and simmer for 10 minutes.",
+        "Add the cabbage and the beetroot mixture and cook for another 15 minutes.",
+        "Stir in the crushed garlic, season well, and let the soup rest off heat for 10 minutes.",
+        "Serve hot with a generous spoonful of sour cream and chopped dill on each bowl."
+      ],
+      "tags": ["soup", "beetroot", "winter", "comfort"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 120,
+      "servings": 6
+    },
+    {
+      "title": "Beef Stroganoff",
+      "description": "Tender strips of beef in a creamy mushroom and sour cream sauce, traditionally served over noodles or with potatoes.",
+      "ingredients": [
+        { "name": "beef tenderloin or sirloin", "quantity": 600, "unit": "g" },
+        { "name": "button mushrooms, sliced", "quantity": 300, "unit": "g" },
+        { "name": "onion, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "sour cream", "quantity": 250, "unit": "ml" },
+        { "name": "beef stock", "quantity": 200, "unit": "ml" },
+        { "name": "Dijon mustard", "quantity": 1, "unit": "tbsp" },
+        { "name": "flour", "quantity": 2, "unit": "tbsp" },
+        { "name": "butter", "quantity": 50, "unit": "g" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" },
+        { "name": "parsley, chopped", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Slice the beef into thin strips against the grain and toss with flour, salt and pepper.",
+        "Heat the oil in a large skillet and sear the beef in batches over high heat for 1 to 2 minutes per batch.",
+        "Remove the beef, lower the heat, and add the butter, onions and mushrooms; cook until golden.",
+        "Pour in the beef stock and Dijon mustard, scraping the pan, and simmer until slightly reduced.",
+        "Stir in the sour cream and warm through without boiling.",
+        "Return the beef and any juices to the pan and warm for 2 minutes.",
+        "Adjust seasoning, sprinkle with parsley, and serve over buttered noodles or with mashed potatoes."
+      ],
+      "tags": ["beef", "mushroom", "sour cream"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Pelmeni",
+      "description": "Russian dumplings of thin unleavened dough wrapped around a seasoned meat filling, served with sour cream or butter.",
+      "ingredients": [
+        { "name": "flour", "quantity": 500, "unit": "g" },
+        { "name": "eggs", "quantity": 2, "unit": "pc" },
+        { "name": "water", "quantity": 200, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "ground beef", "quantity": 250, "unit": "g" },
+        { "name": "ground pork", "quantity": 250, "unit": "g" },
+        { "name": "onion, finely grated", "quantity": 1, "unit": "pc" },
+        { "name": "garlic clove, minced", "quantity": 1, "unit": "pc" },
+        { "name": "ice water", "quantity": 3, "unit": "tbsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "butter", "quantity": 50, "unit": "g" },
+        { "name": "sour cream", "quantity": 200, "unit": "ml" }
+      ],
+      "steps": [
+        "Mix the flour, eggs, water and salt to a firm dough, knead for 10 minutes, wrap and rest for 30 minutes.",
+        "Combine both meats with the onion, garlic, ice water, salt and pepper until sticky.",
+        "Roll the dough very thin and cut into 6 cm rounds with a cutter.",
+        "Place a teaspoon of filling on each round, fold in half and pinch the edges, then bring the two corners together.",
+        "Boil the pelmeni in salted water for 5 to 7 minutes until they float and the filling is cooked.",
+        "Drain and toss with butter, then serve with sour cream and freshly cracked pepper."
+      ],
+      "tags": ["dumpling", "beef", "pork", "comfort"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 10,
+      "servings": 6
+    },
+    {
+      "title": "Solyanka",
+      "description": "Tangy Russian soup with smoked meats or fish, pickles, capers, olives and lemon, served with sour cream.",
+      "ingredients": [
+        { "name": "beef stock", "quantity": 2, "unit": "l" },
+        { "name": "smoked sausage, sliced", "quantity": 200, "unit": "g" },
+        { "name": "ham, diced", "quantity": 150, "unit": "g" },
+        { "name": "cooked beef, diced", "quantity": 150, "unit": "g" },
+        { "name": "pickled cucumbers, diced", "quantity": 200, "unit": "g" },
+        { "name": "pickle brine", "quantity": 100, "unit": "ml" },
+        { "name": "onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 3, "unit": "tbsp" },
+        { "name": "capers", "quantity": 2, "unit": "tbsp" },
+        { "name": "black olives, pitted", "quantity": 100, "unit": "g" },
+        { "name": "butter", "quantity": 30, "unit": "g" },
+        { "name": "lemon, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "sour cream", "quantity": 4, "unit": "tbsp" },
+        { "name": "dill, chopped", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Sauté the onion in butter until soft, add the tomato paste and cook for 3 minutes until darkened.",
+        "Add the diced pickles and brine and simmer for 5 minutes.",
+        "Pour in the beef stock and bring to a simmer.",
+        "Add all of the smoked sausage, ham and cooked beef and simmer for 15 minutes.",
+        "Stir in the capers and olives and let the soup rest off heat for 10 minutes.",
+        "Ladle into bowls and finish each with a slice of lemon, a spoon of sour cream and chopped dill."
+      ],
+      "tags": ["soup", "pickle", "smoked", "tangy"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 40,
+      "servings": 6
+    },
+    {
+      "title": "Olivier Salad",
+      "description": "Russian potato salad with chicken, peas, pickles and eggs in a creamy mayonnaise dressing, a New Year staple.",
+      "ingredients": [
+        { "name": "potatoes, boiled and diced", "quantity": 500, "unit": "g" },
+        { "name": "carrots, boiled and diced", "quantity": 2, "unit": "pc" },
+        { "name": "eggs, hard-boiled and diced", "quantity": 4, "unit": "pc" },
+        { "name": "cooked chicken breast, diced", "quantity": 300, "unit": "g" },
+        { "name": "pickled cucumbers, diced", "quantity": 200, "unit": "g" },
+        { "name": "green peas, cooked", "quantity": 200, "unit": "g" },
+        { "name": "onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "mayonnaise", "quantity": 250, "unit": "ml" },
+        { "name": "Dijon mustard", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" },
+        { "name": "dill, chopped", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Make sure the potatoes, carrots, eggs and chicken are fully cooked and cooled before dicing into 1 cm cubes.",
+        "Combine all of the diced ingredients with the peas and onion in a large bowl.",
+        "Whisk the mayonnaise with the Dijon mustard, salt and pepper.",
+        "Fold the dressing through the salad until everything is evenly coated.",
+        "Refrigerate for at least 1 hour to let the flavours meld.",
+        "Stir through the dill and adjust seasoning before serving."
+      ],
+      "tags": ["salad", "celebration", "new year", "potato"],
+      "difficulty": "easy",
+      "prepTime": 30,
+      "cookTime": 20,
+      "servings": 6
+    },
+    {
+      "title": "Blini",
+      "description": "Thin yeasted Russian pancakes traditionally served with sour cream, smoked salmon, caviar or jam.",
+      "ingredients": [
+        { "name": "flour", "quantity": 250, "unit": "g" },
+        { "name": "buckwheat flour", "quantity": 100, "unit": "g" },
+        { "name": "warm milk", "quantity": 500, "unit": "ml" },
+        { "name": "eggs, separated", "quantity": 2, "unit": "pc" },
+        { "name": "active dry yeast", "quantity": 1, "unit": "tsp" },
+        { "name": "sugar", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" },
+        { "name": "butter, melted", "quantity": 50, "unit": "g" },
+        { "name": "butter for cooking", "quantity": 50, "unit": "g" },
+        { "name": "sour cream", "quantity": 200, "unit": "ml" }
+      ],
+      "steps": [
+        "Stir the yeast and sugar into the warm milk and let bloom for 10 minutes.",
+        "Whisk in both flours, the salt and the egg yolks, then the melted butter, to a smooth batter.",
+        "Cover and leave to rise in a warm place for 1 hour until bubbly.",
+        "Whip the egg whites to soft peaks and fold into the risen batter.",
+        "Heat a small skillet, brush with butter, and pour in a thin layer of batter.",
+        "Cook for about 1 minute per side until golden, transferring to a warm plate.",
+        "Serve warm topped with sour cream and your choice of smoked salmon, caviar or jam."
+      ],
+      "tags": ["pancake", "breakfast", "buckwheat", "celebration"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 75,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Pirozhki",
+      "description": "Hand-sized Russian baked or fried buns stuffed with savory or sweet fillings, ideal as a snack or lunch.",
+      "ingredients": [
+        { "name": "flour", "quantity": 500, "unit": "g" },
+        { "name": "warm milk", "quantity": 250, "unit": "ml" },
+        { "name": "active dry yeast", "quantity": 2, "unit": "tsp" },
+        { "name": "sugar", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "butter, melted", "quantity": 50, "unit": "g" },
+        { "name": "ground beef", "quantity": 400, "unit": "g" },
+        { "name": "onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "egg, hard-boiled and chopped", "quantity": 2, "unit": "pc" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "egg wash", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Bloom the yeast and sugar in warm milk, then mix with the flour, salt, egg and melted butter.",
+        "Knead to a soft dough and let rise covered for 1 hour until doubled.",
+        "Brown the ground beef with the chopped onion, season with salt and pepper, and stir in the chopped boiled eggs.",
+        "Knock back the dough and divide into 16 pieces. Flatten each into a disc.",
+        "Place a heaped tablespoon of filling on each disc, fold in the edges and pinch to seal, then place seam-side down.",
+        "Let the pirozhki rise for 20 minutes, brush with egg wash, and bake at 200°C for 20 to 25 minutes until golden."
+      ],
+      "tags": ["bread", "beef", "snack", "baked"],
+      "difficulty": "medium",
+      "prepTime": 120,
+      "cookTime": 25,
+      "servings": 8
+    },
+    {
+      "title": "Shchi",
+      "description": "Traditional Russian cabbage soup with beef, root vegetables and dill, often eaten with rye bread and sour cream.",
+      "ingredients": [
+        { "name": "beef chuck", "quantity": 500, "unit": "g" },
+        { "name": "white cabbage, shredded", "quantity": 500, "unit": "g" },
+        { "name": "potatoes, cubed", "quantity": 3, "unit": "pc" },
+        { "name": "carrot, grated", "quantity": 1, "unit": "pc" },
+        { "name": "onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "tomatoes, diced", "quantity": 2, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 2, "unit": "pc" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "sour cream", "quantity": 4, "unit": "tbsp" },
+        { "name": "dill, chopped", "quantity": 2, "unit": "tbsp" },
+        { "name": "water", "quantity": 2.5, "unit": "l" }
+      ],
+      "steps": [
+        "Simmer the beef in salted water with bay leaves for 90 minutes, skimming any foam.",
+        "Lift out the beef, dice it and reserve, keeping the broth.",
+        "Sauté the onion and carrot in oil, then add the diced tomato and cook for 5 minutes.",
+        "Add the cabbage to the broth and simmer for 15 minutes.",
+        "Add the potatoes and the sautéed vegetables and simmer for 15 more minutes.",
+        "Return the diced beef, stir in the crushed garlic, season well, and rest off heat for 10 minutes.",
+        "Serve hot topped with sour cream and chopped dill."
+      ],
+      "tags": ["soup", "cabbage", "beef", "winter"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 130,
+      "servings": 6
+    },
+    {
+      "title": "Kasha",
+      "description": "Russian buckwheat porridge cooked in stock or milk, served as a savory side or sweet breakfast.",
+      "ingredients": [
+        { "name": "buckwheat groats", "quantity": 250, "unit": "g" },
+        { "name": "water", "quantity": 500, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "butter", "quantity": 50, "unit": "g" },
+        { "name": "onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "carrot, grated", "quantity": 1, "unit": "pc" },
+        { "name": "mushrooms, sliced", "quantity": 200, "unit": "g" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" },
+        { "name": "parsley, chopped", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Rinse the buckwheat groats under cold water and drain.",
+        "Toast the buckwheat in a dry pot for 2 minutes until aromatic.",
+        "Add the water and salt, bring to a boil, then cover and simmer over low heat for 15 minutes until the water is absorbed.",
+        "Meanwhile, sauté the onion, carrot and mushrooms in butter until golden.",
+        "Stir the vegetables through the cooked buckwheat with the remaining butter.",
+        "Season with black pepper, sprinkle with parsley, and serve as a side or main."
+      ],
+      "tags": ["porridge", "buckwheat", "side", "vegetarian"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Ukha",
+      "description": "Clear Russian fish soup made with freshwater fish, root vegetables, and herbs, kept light and unthickened.",
+      "ingredients": [
+        { "name": "white fish fillet (perch or pike)", "quantity": 600, "unit": "g" },
+        { "name": "fish heads and bones", "quantity": 400, "unit": "g" },
+        { "name": "potatoes, cubed", "quantity": 3, "unit": "pc" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "carrot, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "black peppercorns", "quantity": 8, "unit": "pc" },
+        { "name": "dill, chopped", "quantity": 3, "unit": "tbsp" },
+        { "name": "parsley, chopped", "quantity": 2, "unit": "tbsp" },
+        { "name": "lemon, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "vodka", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" },
+        { "name": "water", "quantity": 2.5, "unit": "l" }
+      ],
+      "steps": [
+        "Simmer the fish heads and bones with the whole onion, bay leaves, peppercorns and salt in the water for 40 minutes.",
+        "Strain the broth carefully back into a clean pot, discarding the solids.",
+        "Add the potatoes and sliced carrot and simmer for 10 minutes.",
+        "Add the fish fillets cut into large chunks and simmer for 8 to 10 minutes until just cooked.",
+        "Pour in the vodka and stir gently to retain the broth's clarity.",
+        "Stir in most of the dill and parsley, taste for salt, and let rest off heat for 5 minutes.",
+        "Serve in bowls with a slice of lemon and the remaining herbs."
+      ],
+      "tags": ["soup", "fish", "broth"],
+      "dietaryTags": ["pescatarian"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 60,
+      "servings": 4
+    },
+    {
+      "title": "Kvas",
+      "description": "Lightly fermented Russian beverage made from rye bread, water, sugar and yeast, mildly tangy and refreshing.",
+      "ingredients": [
+        { "name": "stale rye bread", "quantity": 400, "unit": "g" },
+        { "name": "boiling water", "quantity": 3, "unit": "l" },
+        { "name": "sugar", "quantity": 200, "unit": "g" },
+        { "name": "active dry yeast", "quantity": 1, "unit": "tsp" },
+        { "name": "raisins", "quantity": 50, "unit": "g" },
+        { "name": "mint leaves", "quantity": 1, "unit": "bunch" }
+      ],
+      "steps": [
+        "Toast the rye bread in a 180°C oven for 15 minutes until very dark, almost burnt.",
+        "Place the toasted bread in a large jar and pour over the boiling water.",
+        "Cover loosely with a clean cloth and leave to infuse for 8 hours at room temperature.",
+        "Strain the liquid through a fine sieve back into the jar, pressing the bread to extract flavor.",
+        "Stir in the sugar and the yeast, then add the raisins and a few mint leaves.",
+        "Cover with cloth and ferment at room temperature for 12 to 16 hours until lightly bubbly.",
+        "Strain into bottles, refrigerate, and serve very cold."
+      ],
+      "tags": ["drink", "fermented", "rye"],
+      "dietaryTags": ["vegan"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 0,
+      "servings": 8
+    },
+    {
+      "title": "Kotleta po-pozharsky",
+      "description": "Classical Russian fried chicken cutlet of minced chicken bound with cream, breadcrumbs and butter, golden and juicy.",
+      "ingredients": [
+        { "name": "chicken breast, minced", "quantity": 600, "unit": "g" },
+        { "name": "white bread, crusts removed", "quantity": 100, "unit": "g" },
+        { "name": "heavy cream", "quantity": 100, "unit": "ml" },
+        { "name": "butter, very cold and cubed", "quantity": 75, "unit": "g" },
+        { "name": "onion, finely grated", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" },
+        { "name": "egg, beaten", "quantity": 1, "unit": "pc" },
+        { "name": "white breadcrumbs (panko)", "quantity": 200, "unit": "g" },
+        { "name": "butter for frying", "quantity": 75, "unit": "g" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Soak the white bread in the cream until softened, then squeeze gently and add to the minced chicken.",
+        "Mix in the grated onion, salt, pepper and cold butter cubes, working briefly so the butter stays in chunks.",
+        "Chill the mixture for 30 minutes for the butter to firm.",
+        "Shape into oval cutlets about 2 cm thick.",
+        "Dip each cutlet in beaten egg and coat thickly in breadcrumbs.",
+        "Heat butter and oil in a large skillet and fry the cutlets over medium heat for 4 to 5 minutes per side until deep golden and cooked through.",
+        "Rest for 3 minutes and serve with mashed potatoes or kasha."
+      ],
+      "tags": ["chicken", "fried", "cutlet"],
+      "difficulty": "medium",
+      "prepTime": 45,
+      "cookTime": 15,
+      "servings": 4
+    }
+  ]
+}

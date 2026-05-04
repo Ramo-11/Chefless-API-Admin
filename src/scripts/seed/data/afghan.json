@@ -1,0 +1,274 @@
+{
+  "cuisine": "Afghan",
+  "names": {
+    "first": ["Ahmad", "Khalid", "Farid", "Yousuf", "Najib", "Massoud", "Omar", "Wais", "Zarmina", "Laila", "Rabia", "Mariam", "Roya", "Frozan", "Nadia", "Shukria"],
+    "last": ["Karzai", "Ahmadi", "Wardak", "Ghani", "Noori", "Hashimi", "Yousufzai", "Stanikzai", "Rahimi", "Azizi", "Sadat", "Daudzai"]
+  },
+  "recipes": [
+    {
+      "title": "Kabuli Pulao",
+      "description": "Afghanistan's national dish — long-grain rice steamed with lamb, caramelised carrots, and raisins.",
+      "ingredients": [
+        {"name": "basmati rice", "quantity": 500, "unit": "g"},
+        {"name": "bone-in lamb", "quantity": 800, "unit": "g"},
+        {"name": "onions", "quantity": 2, "unit": "pc"},
+        {"name": "carrots", "quantity": 4, "unit": "pc"},
+        {"name": "raisins", "quantity": 100, "unit": "g"},
+        {"name": "almonds", "quantity": 50, "unit": "g"},
+        {"name": "char masala", "quantity": 2, "unit": "tsp"},
+        {"name": "sugar", "quantity": 2, "unit": "tbsp"},
+        {"name": "vegetable oil", "quantity": 100, "unit": "ml"},
+        {"name": "cumin seeds", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Brown lamb in oil with sliced onions until deeply colored.",
+        "Add water to cover, salt, and char masala; simmer 1 hour until tender. Reserve broth.",
+        "Julienne carrots and saute with sugar in oil until caramelised; remove.",
+        "Plump raisins and slivered almonds briefly in the same oil.",
+        "Soak rice 30 minutes, then parboil in salted water to 70 percent done; drain.",
+        "Layer parboiled rice over the lamb in a heavy pot, scatter carrots, raisins, almonds, and cumin.",
+        "Drizzle with reserved broth and oil, cover tightly, and steam on lowest heat 25 minutes."
+      ],
+      "tags": ["afghan", "rice", "lamb", "festive"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 100,
+      "servings": 6
+    },
+    {
+      "title": "Mantu",
+      "description": "Afghan steamed dumplings filled with spiced beef and onion, topped with yogurt and tomato lentil sauce.",
+      "ingredients": [
+        {"name": "all purpose flour", "quantity": 400, "unit": "g"},
+        {"name": "minced beef", "quantity": 400, "unit": "g"},
+        {"name": "onions", "quantity": 2, "unit": "pc"},
+        {"name": "yogurt", "quantity": 250, "unit": "g"},
+        {"name": "garlic", "quantity": 4, "unit": "pc"},
+        {"name": "split peas", "quantity": 100, "unit": "g"},
+        {"name": "tomato puree", "quantity": 200, "unit": "ml"},
+        {"name": "dried mint", "quantity": 1, "unit": "tbsp"},
+        {"name": "vegetable oil", "quantity": 4, "unit": "tbsp"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Knead flour with water and salt into a firm dough; rest 30 minutes.",
+        "Mix minced beef with finely chopped onion, salt, and pepper.",
+        "Cook split peas with tomato puree, oil, salt, and water into a thick lentil sauce.",
+        "Whisk yogurt with crushed garlic and salt.",
+        "Roll dough thinly and cut into squares.",
+        "Place a spoon of filling in each square and pinch into a small parcel; steam 25 minutes.",
+        "Plate with garlic yogurt below, dumplings on top, lentil sauce around, and a sprinkle of dried mint."
+      ],
+      "tags": ["afghan", "dumpling", "beef", "steamed"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 35,
+      "servings": 5
+    },
+    {
+      "title": "Bolani",
+      "description": "Crisp pan-fried Afghan flatbread stuffed with mashed potatoes, leeks, or pumpkin and herbs.",
+      "ingredients": [
+        {"name": "all purpose flour", "quantity": 400, "unit": "g"},
+        {"name": "potatoes", "quantity": 500, "unit": "g"},
+        {"name": "leeks", "quantity": 200, "unit": "g"},
+        {"name": "scallions", "quantity": 1, "unit": "bunch"},
+        {"name": "coriander leaves", "quantity": 1, "unit": "bunch"},
+        {"name": "red chili powder", "quantity": 1, "unit": "tsp"},
+        {"name": "vegetable oil", "quantity": 100, "unit": "ml"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Knead flour, salt, water, and 1 tablespoon oil into a soft dough; rest 30 minutes.",
+        "Boil and mash potatoes; mix with finely chopped leeks, scallions, coriander, salt, and chili.",
+        "Divide dough into balls and roll each into a thin round.",
+        "Spread filling on half the round and fold over to form a half-moon.",
+        "Press the edges to seal, removing trapped air.",
+        "Pan fry in oil over medium heat until both sides are golden and crisp.",
+        "Slice and serve hot with garlic yogurt sauce."
+      ],
+      "tags": ["afghan", "flatbread", "vegetarian", "stuffed"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 45,
+      "cookTime": 30,
+      "servings": 5
+    },
+    {
+      "title": "Aushak",
+      "description": "Afghan leek-filled dumplings topped with garlic yogurt and a spiced minced meat tomato sauce.",
+      "ingredients": [
+        {"name": "all purpose flour", "quantity": 400, "unit": "g"},
+        {"name": "leeks", "quantity": 400, "unit": "g"},
+        {"name": "scallions", "quantity": 1, "unit": "bunch"},
+        {"name": "minced beef", "quantity": 250, "unit": "g"},
+        {"name": "tomato puree", "quantity": 200, "unit": "ml"},
+        {"name": "yogurt", "quantity": 250, "unit": "g"},
+        {"name": "garlic", "quantity": 4, "unit": "pc"},
+        {"name": "dried mint", "quantity": 1, "unit": "tbsp"},
+        {"name": "vegetable oil", "quantity": 3, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Knead flour with water and salt into a firm dough; rest 30 minutes.",
+        "Finely chop leeks and scallions, salt them, and squeeze out excess moisture.",
+        "Brown minced beef with onion and tomato puree until thickened into a meat sauce.",
+        "Whisk yogurt with crushed garlic and salt.",
+        "Roll dough thinly and cut into rounds.",
+        "Place leek filling in each round, fold and seal into half-moons or circles.",
+        "Boil dumplings 5 minutes, drain, and plate with yogurt under, dumplings, meat sauce, and dried mint."
+      ],
+      "tags": ["afghan", "dumpling", "leek", "boiled"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 30,
+      "servings": 5
+    },
+    {
+      "title": "Korma E Murgh",
+      "description": "Afghan chicken korma with caramelised onions, yogurt, and tomato, lightly spiced with char masala.",
+      "ingredients": [
+        {"name": "bone-in chicken", "quantity": 1, "unit": "kg"},
+        {"name": "onions", "quantity": 3, "unit": "pc"},
+        {"name": "tomato", "quantity": 3, "unit": "pc"},
+        {"name": "yogurt", "quantity": 150, "unit": "g"},
+        {"name": "garlic", "quantity": 4, "unit": "pc"},
+        {"name": "ginger", "quantity": 30, "unit": "g"},
+        {"name": "char masala", "quantity": 1, "unit": "tbsp"},
+        {"name": "turmeric", "quantity": 1, "unit": "tsp"},
+        {"name": "vegetable oil", "quantity": 4, "unit": "tbsp"},
+        {"name": "coriander leaves", "quantity": 1, "unit": "bunch"}
+      ],
+      "steps": [
+        "Slice onions thinly and fry in oil until deep brown; reserve some for garnish.",
+        "Add minced garlic and ginger and saute briefly.",
+        "Add chicken pieces and brown lightly.",
+        "Stir in chopped tomato, turmeric, char masala, and salt; cook until tomato breaks down.",
+        "Whisk yogurt and stir into the pot over low heat.",
+        "Cover and simmer 30 minutes until chicken is tender.",
+        "Garnish with reserved onions and coriander; serve with naan."
+      ],
+      "tags": ["afghan", "korma", "chicken", "curry"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 50,
+      "servings": 5
+    },
+    {
+      "title": "Qabili Palau",
+      "description": "Festive Afghan rice dish with lamb, raisins, and julienned carrots layered and steamed dum-style.",
+      "ingredients": [
+        {"name": "basmati rice", "quantity": 500, "unit": "g"},
+        {"name": "lamb shoulder", "quantity": 800, "unit": "g"},
+        {"name": "onion", "quantity": 2, "unit": "pc"},
+        {"name": "carrots", "quantity": 4, "unit": "pc"},
+        {"name": "raisins", "quantity": 100, "unit": "g"},
+        {"name": "pistachios", "quantity": 50, "unit": "g"},
+        {"name": "almonds", "quantity": 50, "unit": "g"},
+        {"name": "char masala", "quantity": 2, "unit": "tsp"},
+        {"name": "sugar", "quantity": 2, "unit": "tbsp"},
+        {"name": "vegetable oil", "quantity": 100, "unit": "ml"}
+      ],
+      "steps": [
+        "Brown lamb pieces with onions in oil until deeply colored.",
+        "Cover with water, add salt and char masala, and simmer 1 hour until tender. Reserve broth.",
+        "Caramelise julienned carrots in oil with sugar until glossy.",
+        "Plump raisins and toast nuts briefly in the same oil.",
+        "Parboil rice in salted water until 70 percent done; drain.",
+        "Layer rice over the lamb, top with carrots, raisins, and nuts; drizzle reserved broth and oil.",
+        "Cover tightly and steam on lowest heat for 30 minutes; serve mounded on a platter."
+      ],
+      "tags": ["afghan", "rice", "lamb", "wedding"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 110,
+      "servings": 6
+    },
+    {
+      "title": "Ashak",
+      "description": "Spring Afghan dish of boiled gandana-stuffed pasta squares topped with garlic yogurt and meat sauce.",
+      "ingredients": [
+        {"name": "all purpose flour", "quantity": 400, "unit": "g"},
+        {"name": "gandana", "quantity": 400, "unit": "g"},
+        {"name": "minced lamb", "quantity": 250, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "tomato puree", "quantity": 200, "unit": "ml"},
+        {"name": "yogurt", "quantity": 300, "unit": "g"},
+        {"name": "garlic", "quantity": 4, "unit": "pc"},
+        {"name": "dried mint", "quantity": 1, "unit": "tbsp"},
+        {"name": "vegetable oil", "quantity": 4, "unit": "tbsp"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Knead flour, water, and salt to a smooth dough; rest 30 minutes.",
+        "Saute chopped onion in oil, add minced lamb, brown, then add tomato puree and salt; simmer 20 minutes.",
+        "Finely chop gandana and salt to draw out moisture, then squeeze dry.",
+        "Roll dough very thin and cut into rounds; fill with gandana, fold, and crimp into half-moons.",
+        "Boil dumplings in salted water for 5 minutes; drain.",
+        "Whisk yogurt with crushed garlic and salt.",
+        "Plate yogurt below, ashak on top, meat sauce around, and a generous sprinkle of dried mint."
+      ],
+      "tags": ["afghan", "dumpling", "lamb", "spring"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 35,
+      "servings": 5
+    },
+    {
+      "title": "Sheer Yakh",
+      "description": "Afghan rosewater and cardamom ice cream churned with pistachios, made traditionally with a salt-ice bucket.",
+      "ingredients": [
+        {"name": "whole milk", "quantity": 1, "unit": "l"},
+        {"name": "heavy cream", "quantity": 250, "unit": "ml"},
+        {"name": "sugar", "quantity": 200, "unit": "g"},
+        {"name": "rose water", "quantity": 2, "unit": "tbsp"},
+        {"name": "cardamom powder", "quantity": 1, "unit": "tsp"},
+        {"name": "pistachios", "quantity": 50, "unit": "g"},
+        {"name": "salep powder", "quantity": 1, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Whisk salep powder with a little cold milk to a smooth slurry.",
+        "Heat remaining milk and sugar until just steaming.",
+        "Whisk in the salep slurry and cook 10 minutes until thickened.",
+        "Stir in cream, rose water, and cardamom; cool completely.",
+        "Pour into an ice cream maker and churn until thick.",
+        "Fold in chopped pistachios.",
+        "Freeze at least 4 hours before serving in scoops."
+      ],
+      "tags": ["afghan", "dessert", "ice cream", "rose"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 15,
+      "servings": 6
+    },
+    {
+      "title": "Chapli Kebab",
+      "description": "Pashtun-Afghan flat ground beef patties spiced with coriander seeds, pomegranate seeds, and tomato.",
+      "ingredients": [
+        {"name": "minced beef", "quantity": 700, "unit": "g"},
+        {"name": "tomato", "quantity": 2, "unit": "pc"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "coriander seeds", "quantity": 2, "unit": "tbsp"},
+        {"name": "pomegranate seeds", "quantity": 2, "unit": "tbsp"},
+        {"name": "egg", "quantity": 1, "unit": "pc"},
+        {"name": "cornmeal", "quantity": 3, "unit": "tbsp"},
+        {"name": "green chili", "quantity": 3, "unit": "pc"},
+        {"name": "vegetable oil", "quantity": 200, "unit": "ml"}
+      ],
+      "steps": [
+        "Crush coriander and pomegranate seeds coarsely.",
+        "Mix minced beef with chopped onion, tomato, chilies, crushed seeds, salt, egg, and cornmeal.",
+        "Knead 5 minutes and rest the mixture for 20 minutes.",
+        "Shape into thin flat patties about a palm in size.",
+        "Heat oil in a wide pan over medium heat.",
+        "Fry patties 4 minutes per side, pressing lightly so they stay flat.",
+        "Drain on paper and serve with naan, sliced tomato, and lemon."
+      ],
+      "tags": ["pashtun", "afghan", "beef", "kebab"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 20,
+      "servings": 5
+    }
+  ]
+}

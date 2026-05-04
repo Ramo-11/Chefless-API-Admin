@@ -1,0 +1,268 @@
+{
+  "cuisine": "Polynesian",
+  "names": {
+    "first": ["Tane", "Moana", "Sina", "Tama", "Vaea", "Tui", "Mareta", "Tevita", "Manaia", "Lani"],
+    "last": ["Tupou", "Faleolo", "Mareko", "Taufa", "Tualima", "Tagaloa", "Vainikolo", "Aleki", "Sefo", "Hekili"]
+  },
+  "recipes": [
+    {
+      "title": "Poisson Cru",
+      "description": "Tahitian raw tuna salad cured in lime juice and tossed with coconut milk, cucumber and tomato.",
+      "ingredients": [
+        { "name": "sashimi grade tuna", "quantity": 500, "unit": "g" },
+        { "name": "lime juice", "quantity": 120, "unit": "ml" },
+        { "name": "coconut milk", "quantity": 250, "unit": "ml" },
+        { "name": "cucumber", "quantity": 1, "unit": "pc" },
+        { "name": "tomato", "quantity": 2, "unit": "pc" },
+        { "name": "red onion", "quantity": 0.5, "unit": "pc" },
+        { "name": "carrot", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Cut the tuna into clean 1.5 cm cubes and place in a glass bowl.",
+        "Pour over the lime juice, season with salt and gently toss to coat every piece.",
+        "Refrigerate for 10 minutes only, just to lightly cure the surface of the fish.",
+        "Drain off most of the lime juice and discard.",
+        "Dice the cucumber and tomato, finely slice the red onion and grate the carrot.",
+        "Combine vegetables with the fish and pour over the coconut milk.",
+        "Season with pepper and a little more salt, fold gently and serve at once."
+      ],
+      "tags": ["seafood", "raw", "salad", "Tahitian"],
+      "dietaryTags": ["pescatarian", "gluten-free", "dairy-free"],
+      "difficulty": "easy",
+      "prepTime": 25,
+      "cookTime": 0,
+      "servings": 4
+    },
+    {
+      "title": "Palusami",
+      "description": "Samoan parcels of taro leaves wrapped around coconut cream and onion, baked or steamed until silky.",
+      "ingredients": [
+        { "name": "taro leaves", "quantity": 500, "unit": "g" },
+        { "name": "coconut cream", "quantity": 400, "unit": "ml" },
+        { "name": "brown onion", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "banana leaves", "quantity": 4, "unit": "pc" }
+      ],
+      "steps": [
+        "Wash the taro leaves and remove the thick central stems.",
+        "Stack five or six leaves in your palm, dipping each one slightly so they cup.",
+        "Mix coconut cream with finely chopped onion and salt.",
+        "Spoon a generous amount of the coconut cream mixture into the centre of each leaf stack.",
+        "Gather the edges of the leaves up to form a parcel that traps the cream inside.",
+        "Wrap each parcel in a square of banana leaf and tie with twine.",
+        "Bake at 180 C or steam for one hour until the leaves are dark green and meltingly tender."
+      ],
+      "tags": ["Samoan", "vegetable", "side", "coconut"],
+      "dietaryTags": ["vegan", "gluten-free", "dairy-free"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 60,
+      "servings": 4
+    },
+    {
+      "title": "Sapasui",
+      "description": "Samoan version of chop suey: glass noodles braised with soy, ginger and minced beef or chicken.",
+      "ingredients": [
+        { "name": "glass noodles", "quantity": 250, "unit": "g" },
+        { "name": "minced beef", "quantity": 500, "unit": "g" },
+        { "name": "brown onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic", "quantity": 4, "unit": "pc" },
+        { "name": "ginger", "quantity": 1, "unit": "tbsp" },
+        { "name": "soy sauce", "quantity": 60, "unit": "ml" },
+        { "name": "beef stock", "quantity": 500, "unit": "ml" },
+        { "name": "spring onion", "quantity": 4, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Soak the glass noodles in warm water for 15 minutes, then drain and snip into shorter lengths.",
+        "Heat oil in a large pan and saute diced onion, garlic and grated ginger until fragrant.",
+        "Add the minced beef and brown well, breaking up clumps with a spoon.",
+        "Pour in soy sauce and beef stock and bring to a simmer.",
+        "Add the drained noodles and stir to coat in the sauce.",
+        "Simmer uncovered for 10 minutes until the noodles are tender and most of the liquid is absorbed.",
+        "Stir through sliced spring onion and serve hot."
+      ],
+      "tags": ["Samoan", "noodle", "beef", "comfort food"],
+      "dietaryTags": ["dairy-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 20,
+      "servings": 6
+    },
+    {
+      "title": "Oka I'a",
+      "description": "Samoan ceviche of raw fish cubes marinated in lemon juice and dressed with coconut cream and chili.",
+      "ingredients": [
+        { "name": "white fish fillet", "quantity": 500, "unit": "g" },
+        { "name": "lemon juice", "quantity": 100, "unit": "ml" },
+        { "name": "coconut cream", "quantity": 250, "unit": "ml" },
+        { "name": "tomato", "quantity": 2, "unit": "pc" },
+        { "name": "cucumber", "quantity": 1, "unit": "pc" },
+        { "name": "red onion", "quantity": 0.5, "unit": "pc" },
+        { "name": "red chili", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Cut the fish into 1.5 cm dice and place in a glass bowl.",
+        "Pour over lemon juice and salt and chill for 15 minutes until the surface turns opaque.",
+        "Drain off about half the lemon juice.",
+        "Dice the tomato, cucumber, onion and finely chop the chili.",
+        "Add the vegetables to the fish and stir gently.",
+        "Pour over the coconut cream and fold to coat everything in the dressing.",
+        "Taste, adjust salt and chili to your liking and serve immediately."
+      ],
+      "tags": ["Samoan", "seafood", "raw", "salad"],
+      "dietaryTags": ["pescatarian", "gluten-free", "dairy-free"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 0,
+      "servings": 4
+    },
+    {
+      "title": "Faraoa Coco",
+      "description": "Tahitian coconut bread baked in a low oven, faintly sweet with a tender white crumb.",
+      "ingredients": [
+        { "name": "plain flour", "quantity": 500, "unit": "g" },
+        { "name": "instant yeast", "quantity": 7, "unit": "g" },
+        { "name": "caster sugar", "quantity": 80, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "coconut milk", "quantity": 350, "unit": "ml" },
+        { "name": "desiccated coconut", "quantity": 80, "unit": "g" },
+        { "name": "butter", "quantity": 40, "unit": "g" }
+      ],
+      "steps": [
+        "Warm the coconut milk gently with the butter until just melted.",
+        "Whisk yeast and sugar into the warm coconut milk and stand for 10 minutes until foamy.",
+        "Combine flour, salt and desiccated coconut in a large bowl.",
+        "Pour in the wet ingredients and mix to a soft dough, kneading for 8 minutes.",
+        "Cover and rise in a warm spot for 90 minutes until doubled.",
+        "Knock back, shape into a small loaf and place in a lined tin.",
+        "Prove for 30 minutes, then bake at 180 C for 35 minutes until golden and hollow when tapped."
+      ],
+      "tags": ["Tahitian", "bread", "coconut", "breakfast"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 35,
+      "servings": 8
+    },
+    {
+      "title": "Lu'au Stew",
+      "description": "Polynesian stew of tender chicken simmered with cooked taro leaves and creamy coconut milk.",
+      "ingredients": [
+        { "name": "chicken thigh", "quantity": 800, "unit": "g" },
+        { "name": "taro leaves", "quantity": 500, "unit": "g" },
+        { "name": "coconut milk", "quantity": 400, "unit": "ml" },
+        { "name": "brown onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic", "quantity": 3, "unit": "pc" },
+        { "name": "chicken stock", "quantity": 500, "unit": "ml" },
+        { "name": "salt", "quantity": 2, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Wash the taro leaves carefully, remove tough stems and chop coarsely.",
+        "Boil the leaves in plenty of water for 45 minutes, then drain and rinse.",
+        "Heat oil in a heavy pot and brown the chicken thighs on both sides.",
+        "Remove the chicken and saute the diced onion and garlic until soft.",
+        "Return the chicken with chicken stock and simmer covered for 30 minutes.",
+        "Stir in the cooked taro leaves and coconut milk and simmer 20 minutes more.",
+        "Season with salt and serve over steamed rice."
+      ],
+      "tags": ["Polynesian", "chicken", "stew", "coconut"],
+      "dietaryTags": ["gluten-free", "dairy-free"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Panipopo",
+      "description": "Samoan sweet rolls baked sitting in a sea of sweetened coconut sauce that soaks the bottoms.",
+      "ingredients": [
+        { "name": "plain flour", "quantity": 500, "unit": "g" },
+        { "name": "caster sugar", "quantity": 80, "unit": "g" },
+        { "name": "instant yeast", "quantity": 7, "unit": "g" },
+        { "name": "warm milk", "quantity": 250, "unit": "ml" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "coconut milk", "quantity": 400, "unit": "ml" },
+        { "name": "brown sugar", "quantity": 100, "unit": "g" }
+      ],
+      "steps": [
+        "Whisk yeast with caster sugar and warm milk and stand for 10 minutes until foamy.",
+        "Combine flour and salt in a bowl, add the yeast mixture, egg and melted butter.",
+        "Knead for 10 minutes to a soft elastic dough, cover and rise for 90 minutes.",
+        "Knock back and divide into 12 even balls, arranging snugly in a greased baking dish.",
+        "Cover and prove for 30 minutes until pillowy.",
+        "Whisk coconut milk with brown sugar and pour evenly over and around the rolls.",
+        "Bake at 180 C for 30 minutes until golden on top and the sauce has thickened around the bases."
+      ],
+      "tags": ["Samoan", "sweet bread", "dessert", "coconut"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 30,
+      "servings": 12
+    },
+    {
+      "title": "'Ota 'Ika",
+      "description": "Tongan raw fish salad cured in lemon juice and finished with coconut cream and crisp vegetables.",
+      "ingredients": [
+        { "name": "white fish fillet", "quantity": 500, "unit": "g" },
+        { "name": "lemon juice", "quantity": 120, "unit": "ml" },
+        { "name": "coconut cream", "quantity": 250, "unit": "ml" },
+        { "name": "tomato", "quantity": 2, "unit": "pc" },
+        { "name": "cucumber", "quantity": 1, "unit": "pc" },
+        { "name": "spring onion", "quantity": 3, "unit": "pc" },
+        { "name": "red chili", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Dice the fish into 1.5 cm cubes and combine with lemon juice and salt.",
+        "Refrigerate for 20 minutes until the fish turns opaque on the outside.",
+        "Drain off about half of the lemon juice and discard.",
+        "Dice the tomato and cucumber and slice spring onion finely.",
+        "Add the vegetables and finely chopped chili to the fish.",
+        "Pour over the coconut cream and fold gently to combine.",
+        "Chill for 10 minutes more and serve cold as a starter or side."
+      ],
+      "tags": ["Tongan", "seafood", "raw", "salad"],
+      "dietaryTags": ["pescatarian", "gluten-free", "dairy-free"],
+      "difficulty": "easy",
+      "prepTime": 30,
+      "cookTime": 0,
+      "servings": 4
+    },
+    {
+      "title": "Fa'apapa",
+      "description": "Dense Samoan coconut bread baked into a flat round, sweetened lightly and served torn warm.",
+      "ingredients": [
+        { "name": "plain flour", "quantity": 400, "unit": "g" },
+        { "name": "baking powder", "quantity": 2, "unit": "tsp" },
+        { "name": "caster sugar", "quantity": 80, "unit": "g" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" },
+        { "name": "desiccated coconut", "quantity": 100, "unit": "g" },
+        { "name": "coconut cream", "quantity": 300, "unit": "ml" },
+        { "name": "butter", "quantity": 30, "unit": "g" }
+      ],
+      "steps": [
+        "Preheat oven to 180 C and grease a round baking tray with butter.",
+        "Combine flour, baking powder, sugar, salt and desiccated coconut in a bowl.",
+        "Pour in the coconut cream and stir to a stiff but workable dough.",
+        "Turn out onto a floured surface and knead briefly until smooth.",
+        "Press the dough into a flat disc about 3 cm thick on the prepared tray.",
+        "Score the top into wedges and brush with melted butter.",
+        "Bake for 35 minutes until golden brown on top and cooked through."
+      ],
+      "tags": ["Samoan", "bread", "coconut", "breakfast"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 35,
+      "servings": 8
+    }
+  ]
+}

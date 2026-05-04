@@ -1,0 +1,476 @@
+{
+  "cuisine": "Pakistani",
+  "names": {
+    "first": ["Ahmed", "Bilal", "Hamza", "Usman", "Ali", "Imran", "Faisal", "Zain", "Fatima", "Ayesha", "Hira", "Sana", "Maryam", "Zara", "Iqra", "Saba"],
+    "last": ["Khan", "Malik", "Ahmed", "Hussain", "Raza", "Iqbal", "Qureshi", "Siddiqui", "Sheikh", "Bhatti", "Chaudhry", "Awan"]
+  },
+  "recipes": [
+    {
+      "title": "Nihari",
+      "description": "Slow-cooked spiced beef shank stew thickened with wheat flour and finished with ginger and chilies.",
+      "ingredients": [
+        {"name": "beef shank", "quantity": 1, "unit": "kg"},
+        {"name": "ghee", "quantity": 100, "unit": "g"},
+        {"name": "onion", "quantity": 2, "unit": "pc"},
+        {"name": "ginger garlic paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "nihari masala", "quantity": 4, "unit": "tbsp"},
+        {"name": "whole wheat flour", "quantity": 4, "unit": "tbsp"},
+        {"name": "ginger", "quantity": 50, "unit": "g"},
+        {"name": "green chilies", "quantity": 4, "unit": "pc"},
+        {"name": "lemon", "quantity": 2, "unit": "pc"}
+      ],
+      "steps": [
+        "Heat ghee and fry sliced onions until deep golden, then add ginger garlic paste.",
+        "Add beef shank and brown on all sides.",
+        "Stir in nihari masala and salt, cooking 2 minutes.",
+        "Add 2 liters of water, bring to a boil, then simmer covered for 4 hours until meat is fork tender.",
+        "Whisk wheat flour with cold water and stir into the stew to thicken.",
+        "Simmer another 30 minutes, stirring occasionally so it does not stick.",
+        "Serve garnished with julienned ginger, green chilies, lemon juice, and naan."
+      ],
+      "tags": ["beef", "stew", "slow cook", "punjabi"],
+      "difficulty": "hard",
+      "prepTime": 20,
+      "cookTime": 270,
+      "servings": 6
+    },
+    {
+      "title": "Haleem",
+      "description": "Hearty pounded stew of meat, lentils, and wheat slow-cooked to a rich, thick porridge consistency.",
+      "ingredients": [
+        {"name": "beef", "quantity": 500, "unit": "g"},
+        {"name": "cracked wheat", "quantity": 200, "unit": "g"},
+        {"name": "mixed lentils", "quantity": 200, "unit": "g"},
+        {"name": "onions", "quantity": 3, "unit": "pc"},
+        {"name": "ginger garlic paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "haleem masala", "quantity": 3, "unit": "tbsp"},
+        {"name": "ghee", "quantity": 100, "unit": "g"},
+        {"name": "ginger", "quantity": 30, "unit": "g"},
+        {"name": "green chili", "quantity": 4, "unit": "pc"},
+        {"name": "lemon", "quantity": 2, "unit": "pc"}
+      ],
+      "steps": [
+        "Soak cracked wheat and mixed lentils for 4 hours.",
+        "Cook beef with one onion and ginger garlic paste in water until tender, then shred.",
+        "Cook the wheat and lentils together with salt until completely soft and broken down.",
+        "Combine the meat broth, shredded meat, and lentil mixture in a large pot.",
+        "Add haleem masala and pound or whisk vigorously to create a thick, blended texture.",
+        "Simmer 30 minutes, stirring constantly so the bottom does not catch.",
+        "Top with fried onions, ghee tarka, ginger, chilies, lemon, and chopped coriander."
+      ],
+      "tags": ["stew", "beef", "lentils", "ramadan"],
+      "difficulty": "hard",
+      "prepTime": 240,
+      "cookTime": 180,
+      "servings": 8
+    },
+    {
+      "title": "Chicken Karahi",
+      "description": "Quick-cooked chicken in a wok with tomatoes, ginger, green chili, and crushed black pepper.",
+      "ingredients": [
+        {"name": "bone-in chicken", "quantity": 1, "unit": "kg"},
+        {"name": "tomatoes", "quantity": 4, "unit": "pc"},
+        {"name": "ghee", "quantity": 80, "unit": "g"},
+        {"name": "ginger garlic paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "green chili", "quantity": 6, "unit": "pc"},
+        {"name": "ginger", "quantity": 30, "unit": "g"},
+        {"name": "black pepper", "quantity": 1, "unit": "tbsp"},
+        {"name": "coriander seeds", "quantity": 1, "unit": "tbsp"},
+        {"name": "kasuri methi", "quantity": 1, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Heat ghee in a karahi or wok over high heat.",
+        "Add chicken pieces and sear until lightly browned.",
+        "Add ginger garlic paste and saute briefly.",
+        "Add chopped tomatoes, salt, crushed coriander seeds, and black pepper.",
+        "Cover and cook 20 minutes until tomatoes break down and oil rises.",
+        "Uncover and stir-fry on high heat to reduce the gravy.",
+        "Top with julienned ginger, slit green chilies, and kasuri methi; serve with naan."
+      ],
+      "tags": ["chicken", "wok", "punjabi", "spicy"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 35,
+      "servings": 4
+    },
+    {
+      "title": "Sindhi Biryani",
+      "description": "Spicy, tangy layered rice dish from Sindh with potatoes, prunes, yogurt, and aromatic biryani masala.",
+      "ingredients": [
+        {"name": "basmati rice", "quantity": 500, "unit": "g"},
+        {"name": "bone-in mutton", "quantity": 1, "unit": "kg"},
+        {"name": "yogurt", "quantity": 250, "unit": "g"},
+        {"name": "potatoes", "quantity": 3, "unit": "pc"},
+        {"name": "prunes", "quantity": 50, "unit": "g"},
+        {"name": "tomatoes", "quantity": 3, "unit": "pc"},
+        {"name": "fried onions", "quantity": 200, "unit": "g"},
+        {"name": "sindhi biryani masala", "quantity": 3, "unit": "tbsp"},
+        {"name": "ghee", "quantity": 100, "unit": "g"},
+        {"name": "mint", "quantity": 1, "unit": "bunch"}
+      ],
+      "steps": [
+        "Marinate mutton in yogurt, biryani masala, fried onions, and salt for 1 hour.",
+        "Cook the marinated mutton with chopped tomatoes and ghee until tender and oil separates.",
+        "Fry potato chunks until lightly golden and add to the meat.",
+        "Soak rice 30 minutes, then parboil with whole spices and salt to 70 percent done.",
+        "Layer rice over the meat, scatter prunes, mint, and remaining fried onions.",
+        "Drizzle with saffron water and ghee, then seal the pot and steam (dum) on lowest heat for 25 minutes.",
+        "Rest 10 minutes and gently toss before serving with raita."
+      ],
+      "tags": ["rice", "biryani", "sindhi", "mutton"],
+      "difficulty": "hard",
+      "prepTime": 90,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Seekh Kebab",
+      "description": "Spiced minced meat shaped onto skewers and grilled over coals until smoky and juicy.",
+      "ingredients": [
+        {"name": "minced beef", "quantity": 700, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "ginger garlic paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "green chili", "quantity": 3, "unit": "pc"},
+        {"name": "coriander leaves", "quantity": 1, "unit": "bunch"},
+        {"name": "garam masala", "quantity": 1, "unit": "tbsp"},
+        {"name": "red chili powder", "quantity": 1, "unit": "tsp"},
+        {"name": "roasted gram flour", "quantity": 2, "unit": "tbsp"},
+        {"name": "egg", "quantity": 1, "unit": "pc"}
+      ],
+      "steps": [
+        "Combine minced meat with grated onion, ginger garlic paste, chopped chili, coriander, and spices.",
+        "Add roasted gram flour and an egg to bind, then knead 5 minutes until tacky.",
+        "Refrigerate the mixture for 30 minutes.",
+        "Wet hands and shape the mixture around metal skewers into long sausages.",
+        "Cook on a hot grill or charcoal, turning every 2 minutes for even color.",
+        "Brush with oil halfway through to prevent sticking.",
+        "Serve with naan, sliced onion, and mint chutney."
+      ],
+      "tags": ["grilled", "kebab", "beef", "bbq"],
+      "difficulty": "medium",
+      "prepTime": 40,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Chapli Kebab",
+      "description": "Pashtun-style flat patties of minced beef studded with pomegranate seeds, tomato, and coriander.",
+      "ingredients": [
+        {"name": "minced beef", "quantity": 700, "unit": "g"},
+        {"name": "tomato", "quantity": 2, "unit": "pc"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "coriander seeds", "quantity": 2, "unit": "tbsp"},
+        {"name": "pomegranate seeds", "quantity": 2, "unit": "tbsp"},
+        {"name": "egg", "quantity": 1, "unit": "pc"},
+        {"name": "cornmeal", "quantity": 3, "unit": "tbsp"},
+        {"name": "green chili", "quantity": 3, "unit": "pc"},
+        {"name": "vegetable oil", "quantity": 200, "unit": "ml"}
+      ],
+      "steps": [
+        "Crush coriander seeds and pomegranate seeds coarsely.",
+        "Mix minced beef with chopped onion, tomato, chilies, crushed seeds, salt, egg, and cornmeal.",
+        "Knead the mixture for 5 minutes until well combined and slightly sticky.",
+        "Shape into thin flat patties about the size of a palm.",
+        "Heat oil in a wide pan and fry patties on medium heat for 4 minutes per side.",
+        "Press lightly with a spatula to keep them flat as they cook.",
+        "Serve hot with naan, sliced onion, and lemon."
+      ],
+      "tags": ["pashtun", "beef", "kebab", "fried"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 20,
+      "servings": 5
+    },
+    {
+      "title": "Chicken Pulao",
+      "description": "One-pot rice pilaf with bone-in chicken, whole spices, and a clear, fragrant broth.",
+      "ingredients": [
+        {"name": "basmati rice", "quantity": 500, "unit": "g"},
+        {"name": "bone-in chicken", "quantity": 800, "unit": "g"},
+        {"name": "onions", "quantity": 2, "unit": "pc"},
+        {"name": "ginger garlic paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "yogurt", "quantity": 100, "unit": "g"},
+        {"name": "cinnamon stick", "quantity": 1, "unit": "pc"},
+        {"name": "black cardamom", "quantity": 2, "unit": "pc"},
+        {"name": "cloves", "quantity": 6, "unit": "pc"},
+        {"name": "cumin seeds", "quantity": 1, "unit": "tsp"},
+        {"name": "ghee", "quantity": 80, "unit": "g"}
+      ],
+      "steps": [
+        "Soak rice for 30 minutes.",
+        "Boil chicken with one onion, whole spices, salt, and water to make a flavorful yakhni; strain.",
+        "Heat ghee, fry sliced onions until golden, then add ginger garlic paste.",
+        "Add the cooked chicken and yogurt and saute until oil separates.",
+        "Measure the strained yakhni so you have twice the volume of the rice; add to the pot.",
+        "Add drained rice and cumin seeds and bring to a boil.",
+        "Cover, reduce to lowest heat, and cook 15 minutes; rest 10 minutes off the heat before fluffing."
+      ],
+      "tags": ["rice", "pulao", "chicken", "one pot"],
+      "difficulty": "medium",
+      "prepTime": 40,
+      "cookTime": 45,
+      "servings": 5
+    },
+    {
+      "title": "Sajji",
+      "description": "Balochi whole roasted chicken stuffed with rice, marinated only in salt and lemon, slow cooked over coals.",
+      "ingredients": [
+        {"name": "whole chicken", "quantity": 1.5, "unit": "kg"},
+        {"name": "lemon juice", "quantity": 4, "unit": "tbsp"},
+        {"name": "papaya paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "salt", "quantity": 2, "unit": "tbsp"},
+        {"name": "basmati rice", "quantity": 200, "unit": "g"},
+        {"name": "cumin seeds", "quantity": 1, "unit": "tsp"},
+        {"name": "vegetable oil", "quantity": 4, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Pierce chicken all over with a knife and rub deeply with lemon, papaya paste, and salt.",
+        "Marinate at room temperature 1 hour, then refrigerate 4 hours.",
+        "Soak and parboil rice with cumin seeds and salt; toss with oil.",
+        "Stuff chicken cavity loosely with the parboiled rice.",
+        "Truss legs together and skewer the chicken on a long spit.",
+        "Roast over moderate coals for about 1 hour, turning constantly until skin crisps and meat is cooked through.",
+        "Serve sliced over the rice with lemon and chaat masala."
+      ],
+      "tags": ["balochi", "roasted", "chicken", "celebration"],
+      "difficulty": "hard",
+      "prepTime": 300,
+      "cookTime": 75,
+      "servings": 5
+    },
+    {
+      "title": "Sarson Ka Saag",
+      "description": "Slow-cooked Punjabi mash of mustard greens and spinach finished with butter and ghee tempering.",
+      "ingredients": [
+        {"name": "mustard greens", "quantity": 600, "unit": "g"},
+        {"name": "spinach", "quantity": 200, "unit": "g"},
+        {"name": "bathua", "quantity": 100, "unit": "g"},
+        {"name": "green chilies", "quantity": 3, "unit": "pc"},
+        {"name": "ginger", "quantity": 30, "unit": "g"},
+        {"name": "cornmeal", "quantity": 4, "unit": "tbsp"},
+        {"name": "ghee", "quantity": 60, "unit": "g"},
+        {"name": "butter", "quantity": 30, "unit": "g"},
+        {"name": "garlic", "quantity": 6, "unit": "pc"}
+      ],
+      "steps": [
+        "Wash and chop mustard greens, spinach, and bathua.",
+        "Pressure cook the greens with chilies, ginger, salt, and a little water for 15 minutes.",
+        "Mash the cooked greens with a wooden masher or hand blender until coarse.",
+        "Stir in cornmeal slurry and simmer 20 minutes, stirring often.",
+        "In a separate pan, heat ghee and fry sliced garlic until golden.",
+        "Pour the garlic tempering over the saag.",
+        "Top with butter and serve with makki di roti."
+      ],
+      "tags": ["punjabi", "vegetarian", "winter", "greens"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Aloo Keema",
+      "description": "Spiced minced meat and potato curry, a hearty Pakistani everyday meal eaten with chapati.",
+      "ingredients": [
+        {"name": "minced beef", "quantity": 500, "unit": "g"},
+        {"name": "potatoes", "quantity": 400, "unit": "g"},
+        {"name": "onions", "quantity": 2, "unit": "pc"},
+        {"name": "tomatoes", "quantity": 3, "unit": "pc"},
+        {"name": "ginger garlic paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "garam masala", "quantity": 1, "unit": "tsp"},
+        {"name": "red chili powder", "quantity": 1, "unit": "tbsp"},
+        {"name": "turmeric", "quantity": 1, "unit": "tsp"},
+        {"name": "vegetable oil", "quantity": 4, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Heat oil and fry sliced onions until light golden.",
+        "Add ginger garlic paste and cook 1 minute.",
+        "Add minced beef and brown, breaking up clumps with a spoon.",
+        "Stir in tomatoes, turmeric, chili powder, and salt; cook until tomatoes break down.",
+        "Add diced potatoes and a cup of water and simmer covered for 20 minutes.",
+        "Uncover and reduce until the masala clings to the meat and potatoes are tender.",
+        "Sprinkle garam masala and serve with chapati."
+      ],
+      "tags": ["beef", "potato", "everyday", "curry"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 35,
+      "servings": 4
+    },
+    {
+      "title": "Paya",
+      "description": "Slow-cooked trotter stew with rich, gelatinous broth flavoured with whole spices and ginger.",
+      "ingredients": [
+        {"name": "goat trotters", "quantity": 1.2, "unit": "kg"},
+        {"name": "onions", "quantity": 2, "unit": "pc"},
+        {"name": "ginger garlic paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "yogurt", "quantity": 150, "unit": "g"},
+        {"name": "paya masala", "quantity": 3, "unit": "tbsp"},
+        {"name": "ghee", "quantity": 80, "unit": "g"},
+        {"name": "ginger", "quantity": 30, "unit": "g"},
+        {"name": "green chili", "quantity": 4, "unit": "pc"},
+        {"name": "coriander leaves", "quantity": 1, "unit": "bunch"}
+      ],
+      "steps": [
+        "Clean and singe trotters thoroughly, then rinse well.",
+        "Heat ghee and fry sliced onions until deep golden, then add ginger garlic paste.",
+        "Add trotters and saute 5 minutes, then stir in yogurt and paya masala.",
+        "Add 2.5 liters of water and salt, bring to a boil, then simmer 5 hours until completely tender.",
+        "Pressure cook for 1 hour as a faster alternative.",
+        "Reduce uncovered if needed to thicken the broth.",
+        "Garnish with ginger, chilies, and coriander; serve with naan."
+      ],
+      "tags": ["trotters", "stew", "breakfast", "slow cook"],
+      "difficulty": "hard",
+      "prepTime": 20,
+      "cookTime": 300,
+      "servings": 6
+    },
+    {
+      "title": "Bihari Kebab",
+      "description": "Thinly sliced beef marinated in papaya, mustard oil, and roasted spices, then grilled over coals.",
+      "ingredients": [
+        {"name": "beef undercut", "quantity": 700, "unit": "g"},
+        {"name": "raw papaya paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "yogurt", "quantity": 100, "unit": "g"},
+        {"name": "mustard oil", "quantity": 4, "unit": "tbsp"},
+        {"name": "fried onions", "quantity": 100, "unit": "g"},
+        {"name": "ginger garlic paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "bihari kebab masala", "quantity": 3, "unit": "tbsp"},
+        {"name": "red chili powder", "quantity": 1, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Slice beef thinly against the grain into long strips.",
+        "Crush fried onions and combine with papaya paste, yogurt, mustard oil, and spices.",
+        "Marinate the beef thoroughly and refrigerate 6 hours.",
+        "Thread the meat onto skewers in a flat ribbon shape.",
+        "Grill over hot charcoal for 3 minutes per side until edges char and meat is just cooked.",
+        "Brush with melted butter halfway through.",
+        "Serve with paratha, sliced onion, and lemon."
+      ],
+      "tags": ["bbq", "beef", "kebab", "grilled"],
+      "difficulty": "medium",
+      "prepTime": 360,
+      "cookTime": 15,
+      "servings": 5
+    },
+    {
+      "title": "Chicken Handi",
+      "description": "Chicken simmered in a clay pot with cream, cashews, and aromatic spices for a smooth, mild gravy.",
+      "ingredients": [
+        {"name": "boneless chicken", "quantity": 700, "unit": "g"},
+        {"name": "yogurt", "quantity": 150, "unit": "g"},
+        {"name": "cream", "quantity": 100, "unit": "ml"},
+        {"name": "cashew paste", "quantity": 3, "unit": "tbsp"},
+        {"name": "tomato puree", "quantity": 200, "unit": "ml"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "ginger garlic paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "white pepper", "quantity": 1, "unit": "tsp"},
+        {"name": "green cardamom", "quantity": 4, "unit": "pc"},
+        {"name": "ghee", "quantity": 4, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Heat ghee in a handi and bloom cardamoms.",
+        "Add finely chopped onion and saute until soft.",
+        "Add ginger garlic paste and cook 1 minute.",
+        "Stir in tomato puree and cashew paste and cook until oil separates.",
+        "Add chicken and cook until lightly browned.",
+        "Whisk yogurt with white pepper and salt and add to the handi over low heat.",
+        "Stir in cream, cover, and simmer 15 minutes; serve with tandoori roti."
+      ],
+      "tags": ["chicken", "creamy", "handi", "mughlai"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 35,
+      "servings": 4
+    },
+    {
+      "title": "Falooda",
+      "description": "Chilled rose-flavoured dessert drink with vermicelli, basil seeds, jelly, and a scoop of kulfi or ice cream.",
+      "ingredients": [
+        {"name": "milk", "quantity": 500, "unit": "ml"},
+        {"name": "rose syrup", "quantity": 4, "unit": "tbsp"},
+        {"name": "falooda vermicelli", "quantity": 50, "unit": "g"},
+        {"name": "basil seeds", "quantity": 2, "unit": "tbsp"},
+        {"name": "china grass jelly", "quantity": 100, "unit": "g"},
+        {"name": "kulfi", "quantity": 4, "unit": "pc"},
+        {"name": "pistachios", "quantity": 30, "unit": "g"},
+        {"name": "sugar", "quantity": 4, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Soak basil seeds in water for 15 minutes until they swell.",
+        "Boil falooda vermicelli for 5 minutes, drain, and rinse with cold water.",
+        "Chop the prepared china grass jelly into small cubes.",
+        "Sweeten cold milk with sugar.",
+        "In a tall glass, layer rose syrup, basil seeds, vermicelli, and jelly cubes.",
+        "Pour cold milk over the layers.",
+        "Top with kulfi and chopped pistachios; serve immediately with a long spoon."
+      ],
+      "tags": ["dessert", "drink", "summer", "vegetarian"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 5,
+      "servings": 4
+    },
+    {
+      "title": "Shami Kebab",
+      "description": "Pan-fried patties of minced meat and chana dal pounded smooth and bound with egg.",
+      "ingredients": [
+        {"name": "minced beef", "quantity": 500, "unit": "g"},
+        {"name": "chana dal", "quantity": 150, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "ginger", "quantity": 30, "unit": "g"},
+        {"name": "garlic", "quantity": 6, "unit": "pc"},
+        {"name": "whole spices", "quantity": 2, "unit": "tbsp"},
+        {"name": "red chili powder", "quantity": 1, "unit": "tbsp"},
+        {"name": "egg", "quantity": 1, "unit": "pc"},
+        {"name": "vegetable oil", "quantity": 4, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Combine minced beef, soaked chana dal, ginger, garlic, whole spices, chili, and salt with a little water.",
+        "Cook covered until meat is fully tender and the water has evaporated.",
+        "Cool the mixture, then grind to a smooth paste with chopped onion.",
+        "Add egg and knead well; rest for 30 minutes.",
+        "Shape into round flat patties.",
+        "Pan fry in oil over medium heat until deep golden on both sides.",
+        "Serve with mint chutney and paratha."
+      ],
+      "tags": ["beef", "kebab", "fried", "patty"],
+      "difficulty": "medium",
+      "prepTime": 60,
+      "cookTime": 20,
+      "servings": 5
+    },
+    {
+      "title": "Chicken Biryani",
+      "description": "Pakistani layered rice classic with bone-in chicken, fragrant biryani masala, and slow dum cooking.",
+      "ingredients": [
+        {"name": "basmati rice", "quantity": 500, "unit": "g"},
+        {"name": "bone-in chicken", "quantity": 1, "unit": "kg"},
+        {"name": "yogurt", "quantity": 200, "unit": "g"},
+        {"name": "biryani masala", "quantity": 3, "unit": "tbsp"},
+        {"name": "tomatoes", "quantity": 2, "unit": "pc"},
+        {"name": "fried onions", "quantity": 200, "unit": "g"},
+        {"name": "ginger garlic paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "ghee", "quantity": 80, "unit": "g"},
+        {"name": "saffron", "quantity": 1, "unit": "pinch"},
+        {"name": "mint leaves", "quantity": 1, "unit": "bunch"}
+      ],
+      "steps": [
+        "Marinate chicken with yogurt, biryani masala, ginger garlic paste, and half the fried onions for 1 hour.",
+        "Soak rice for 30 minutes, then parboil with whole spices and salt to 70 percent done.",
+        "Cook the marinated chicken with chopped tomatoes and ghee until tender and oil separates.",
+        "Layer parboiled rice over the chicken; scatter mint, remaining fried onions, and saffron milk.",
+        "Drizzle ghee, then seal the pot and steam (dum) on lowest heat for 25 minutes.",
+        "Rest 10 minutes off the heat.",
+        "Gently toss before serving with raita and salad."
+      ],
+      "tags": ["rice", "biryani", "chicken", "festive"],
+      "difficulty": "hard",
+      "prepTime": 90,
+      "cookTime": 75,
+      "servings": 6
+    }
+  ]
+}

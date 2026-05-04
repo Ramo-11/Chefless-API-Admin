@@ -1,0 +1,296 @@
+{
+  "cuisine": "Emirati",
+  "names": {
+    "first": ["Mohammed", "Mariam", "Hamad", "Shamma", "Saif", "Moza", "Rashid", "Hessa", "Khalifa", "Alia", "Zayed", "Salama"],
+    "last": ["Al-Maktoum", "Al-Nahyan", "Al-Falasi", "Al-Marri", "Al-Mansoori", "Al-Suwaidi", "Al-Shamsi", "Al-Ketbi", "Al-Mazrouei", "Al-Dhaheri"]
+  },
+  "recipes": [
+    {
+      "title": "Machboos",
+      "description": "Emirati national rice dish of basmati spiced with loomi, cardamom, and saffron, layered with chicken or lamb.",
+      "ingredients": [
+        { "name": "chicken thighs", "quantity": 1, "unit": "kg" },
+        { "name": "basmati rice", "quantity": 500, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "tomato", "quantity": 3, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "dried lime", "quantity": 3, "unit": "pc" },
+        { "name": "bezar spice mix", "quantity": 2, "unit": "tbsp" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "saffron threads", "quantity": 1, "unit": "pinch" },
+        { "name": "garlic clove", "quantity": 4, "unit": "pc" },
+        { "name": "ginger", "quantity": 30, "unit": "g" },
+        { "name": "cilantro", "quantity": 1, "unit": "bunch" },
+        { "name": "vegetable oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Brown chicken pieces in oil with chopped onions until golden.",
+        "Stir in tomato paste, bezar, turmeric, garlic, and grated ginger; cook 2 minutes.",
+        "Add chopped tomatoes, dried limes pierced with a knife, salt, and 1.2 liters water.",
+        "Simmer covered for 35 minutes until chicken is tender; remove chicken and broil 8 minutes to crisp.",
+        "Soak rice 20 minutes, then add to the broth and simmer covered on low heat for 18 minutes.",
+        "Bloom saffron in 2 tablespoons hot water and drizzle over the rice in the last 5 minutes.",
+        "Mound rice on a platter, top with chicken and chopped cilantro."
+      ],
+      "tags": ["emirati", "rice", "chicken", "national dish"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 75,
+      "servings": 6
+    },
+    {
+      "title": "Harees",
+      "description": "Emirati Ramadan staple of pounded wheat berries slow-cooked with chicken or lamb into a creamy savory porridge.",
+      "ingredients": [
+        { "name": "wheat berries", "quantity": 300, "unit": "g" },
+        { "name": "chicken thighs", "quantity": 600, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "ghee", "quantity": 80, "unit": "g" },
+        { "name": "ground cinnamon", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cardamom", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak wheat berries overnight in plenty of water.",
+        "Simmer drained wheat with chicken, chopped onion, cardamom, salt, and 2.5 liters water for 3 hours.",
+        "Remove the bones and shred the chicken back into the pot.",
+        "Beat the mixture with a wooden spoon for 20 minutes until very smooth and stringy.",
+        "Stir in cinnamon and adjust salt; the texture should be like a thick porridge.",
+        "Spoon into bowls and pour melted ghee generously over the top.",
+        "Serve hot for iftar."
+      ],
+      "tags": ["emirati", "ramadan", "wheat", "porridge"],
+      "difficulty": "medium",
+      "prepTime": 720,
+      "cookTime": 200,
+      "servings": 6
+    },
+    {
+      "title": "Luqaimat",
+      "description": "Emirati golden yeast-risen dumplings deep fried crisp and drizzled with date syrup; a Ramadan favorite.",
+      "ingredients": [
+        { "name": "all purpose flour", "quantity": 300, "unit": "g" },
+        { "name": "warm water", "quantity": 250, "unit": "ml" },
+        { "name": "instant yeast", "quantity": 1, "unit": "tsp" },
+        { "name": "sugar", "quantity": 1, "unit": "tbsp" },
+        { "name": "yogurt", "quantity": 60, "unit": "g" },
+        { "name": "ground cardamom", "quantity": 1, "unit": "tsp" },
+        { "name": "saffron threads", "quantity": 1, "unit": "pinch" },
+        { "name": "vegetable oil", "quantity": 1, "unit": "l" },
+        { "name": "date syrup", "quantity": 200, "unit": "ml" },
+        { "name": "sesame seeds", "quantity": 30, "unit": "g" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Bloom saffron in 2 tablespoons of hot water.",
+        "Mix flour, salt, cardamom, yeast, sugar, yogurt, saffron water, and warm water into a thick batter.",
+        "Cover and rest 1.5 hours until bubbly and doubled.",
+        "Heat oil to 170C in a deep pot.",
+        "Pinch small balls of batter from a wet hand and drop into the oil.",
+        "Fry for 4 minutes, turning often, until deep golden and hollow inside.",
+        "Drain on paper and immediately drizzle with date syrup and shower with sesame seeds.",
+        "Serve hot."
+      ],
+      "tags": ["emirati", "dessert", "ramadan", "fried"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 100,
+      "cookTime": 20,
+      "servings": 6
+    },
+    {
+      "title": "Balaleet",
+      "description": "Emirati sweet-savory breakfast of saffron-cardamom vermicelli noodles topped with a thin omelette and rosewater.",
+      "ingredients": [
+        { "name": "vermicelli", "quantity": 250, "unit": "g" },
+        { "name": "egg", "quantity": 4, "unit": "pc" },
+        { "name": "sugar", "quantity": 80, "unit": "g" },
+        { "name": "saffron threads", "quantity": 1, "unit": "pinch" },
+        { "name": "ground cardamom", "quantity": 1, "unit": "tsp" },
+        { "name": "rosewater", "quantity": 1, "unit": "tbsp" },
+        { "name": "ghee", "quantity": 60, "unit": "g" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Bloom saffron in 3 tablespoons hot water.",
+        "Toast the vermicelli in 30 g ghee in a wide skillet until deep golden, breaking into shorter pieces.",
+        "Add 600 ml water, sugar, cardamom, and saffron water; bring to a boil and cover.",
+        "Simmer on lowest heat for 8 minutes until water is absorbed and noodles are tender.",
+        "Stir in rosewater and the remaining ghee.",
+        "Beat eggs with a pinch of salt; cook in a buttered skillet as a thin flat omelette and slice into ribbons.",
+        "Mound the saffron noodles on a plate and top with the egg ribbons.",
+        "Serve warm with extra date syrup if desired."
+      ],
+      "tags": ["emirati", "breakfast", "noodles", "sweet-savory"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Khabeesa",
+      "description": "Emirati pudding of toasted flour cooked with sugar, saffron, cardamom, and rosewater into a fragrant fudgy dessert.",
+      "ingredients": [
+        { "name": "all purpose flour", "quantity": 250, "unit": "g" },
+        { "name": "sugar", "quantity": 200, "unit": "g" },
+        { "name": "ghee", "quantity": 150, "unit": "g" },
+        { "name": "saffron threads", "quantity": 1, "unit": "pinch" },
+        { "name": "ground cardamom", "quantity": 1, "unit": "tsp" },
+        { "name": "rosewater", "quantity": 1, "unit": "tbsp" },
+        { "name": "water", "quantity": 500, "unit": "ml" },
+        { "name": "almonds", "quantity": 30, "unit": "g" },
+        { "name": "pistachio", "quantity": 30, "unit": "g" }
+      ],
+      "steps": [
+        "Toast the flour in a dry pan over medium heat for 12 minutes, stirring constantly, until deep golden and nutty.",
+        "Heat sugar with water, saffron, and cardamom until dissolved into a fragrant syrup.",
+        "Melt ghee in the pan with the toasted flour over low heat and stir to combine.",
+        "Slowly stream in the hot syrup while stirring vigorously to prevent lumps.",
+        "Cook for 8 minutes, stirring, until the mixture is glossy, thick, and pulling away from the pan.",
+        "Stir in rosewater off the heat.",
+        "Spread on a serving plate and decorate with chopped almonds and pistachios.",
+        "Serve warm with Arabic coffee."
+      ],
+      "tags": ["emirati", "dessert", "pudding"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 5,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Madrouba",
+      "description": "Emirati savory porridge of rice and chicken slow-cooked with milk and butter until very smooth and flavorful.",
+      "ingredients": [
+        { "name": "basmati rice", "quantity": 400, "unit": "g" },
+        { "name": "chicken thighs", "quantity": 700, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "tomato", "quantity": 2, "unit": "pc" },
+        { "name": "milk", "quantity": 500, "unit": "ml" },
+        { "name": "butter", "quantity": 80, "unit": "g" },
+        { "name": "bezar spice mix", "quantity": 1, "unit": "tbsp" },
+        { "name": "dried lime", "quantity": 2, "unit": "pc" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Brown chicken with chopped onion in oil; stir in bezar, turmeric, and dried limes.",
+        "Add chopped tomatoes, salt, and 1.5 liters water; simmer 30 minutes.",
+        "Remove chicken and shred; discard bones and dried limes.",
+        "Add washed rice to the broth and simmer 25 minutes until very soft.",
+        "Stir in the milk and shredded chicken; continue cooking, beating with a spoon, until smooth and porridge-like.",
+        "Stir in butter and adjust salt.",
+        "Serve hot with extra ghee on top."
+      ],
+      "tags": ["emirati", "rice", "chicken", "porridge"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Thareed",
+      "description": "Emirati Ramadan stew of lamb, vegetables, and dried lime ladled over crisp regag bread to soak up the broth.",
+      "ingredients": [
+        { "name": "lamb shoulder", "quantity": 700, "unit": "g" },
+        { "name": "regag bread", "quantity": 6, "unit": "pc" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "tomato", "quantity": 3, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "carrot", "quantity": 2, "unit": "pc" },
+        { "name": "potato", "quantity": 2, "unit": "pc" },
+        { "name": "courgette", "quantity": 2, "unit": "pc" },
+        { "name": "pumpkin", "quantity": 200, "unit": "g" },
+        { "name": "dried lime", "quantity": 2, "unit": "pc" },
+        { "name": "bezar spice mix", "quantity": 1, "unit": "tbsp" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Brown cubed lamb with chopped onions in oil.",
+        "Stir in tomato paste, bezar, and pierced dried limes.",
+        "Add chopped tomatoes, salt, and 1.5 liters water; simmer 1 hour.",
+        "Add cubed carrots, potatoes, courgettes, and pumpkin; simmer 25 minutes more.",
+        "Tear regag bread into rough pieces and pile in a deep serving bowl.",
+        "Ladle the stew with vegetables over the bread and let soak 5 minutes.",
+        "Serve hot for iftar."
+      ],
+      "tags": ["emirati", "ramadan", "stew", "bread"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 100,
+      "servings": 6
+    },
+    {
+      "title": "Khanfaroosh",
+      "description": "Emirati cardamom-saffron yeasted donuts with a slightly chewy crumb, fried golden and dusted with sesame.",
+      "ingredients": [
+        { "name": "all purpose flour", "quantity": 250, "unit": "g" },
+        { "name": "rice flour", "quantity": 100, "unit": "g" },
+        { "name": "sugar", "quantity": 100, "unit": "g" },
+        { "name": "egg", "quantity": 2, "unit": "pc" },
+        { "name": "instant yeast", "quantity": 1, "unit": "tsp" },
+        { "name": "milk", "quantity": 250, "unit": "ml" },
+        { "name": "ground cardamom", "quantity": 1, "unit": "tsp" },
+        { "name": "saffron threads", "quantity": 1, "unit": "pinch" },
+        { "name": "rosewater", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 1, "unit": "l" },
+        { "name": "sesame seeds", "quantity": 30, "unit": "g" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Bloom saffron in 2 tablespoons hot water.",
+        "Warm milk with sugar to dissolve, add yeast, and let foam for 10 minutes.",
+        "Whisk eggs, cardamom, salt, saffron water, rosewater, and the milk mixture.",
+        "Stir in both flours to make a thick smooth batter.",
+        "Cover and rest in a warm place for 1 hour until bubbly and risen.",
+        "Heat oil to 170C.",
+        "Drop heaped tablespoons of batter into the oil and fry for 4 minutes until deep golden and cooked through.",
+        "Drain on paper and toss with sesame seeds while warm."
+      ],
+      "tags": ["emirati", "dessert", "fried", "saffron"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 75,
+      "cookTime": 20,
+      "servings": 8
+    },
+    {
+      "title": "Chebab",
+      "description": "Emirati saffron and cardamom pancakes with date syrup and fresh cheese, a beloved breakfast across the UAE.",
+      "ingredients": [
+        { "name": "all purpose flour", "quantity": 300, "unit": "g" },
+        { "name": "egg", "quantity": 2, "unit": "pc" },
+        { "name": "sugar", "quantity": 60, "unit": "g" },
+        { "name": "milk", "quantity": 350, "unit": "ml" },
+        { "name": "instant yeast", "quantity": 1, "unit": "tsp" },
+        { "name": "saffron threads", "quantity": 1, "unit": "pinch" },
+        { "name": "ground cardamom", "quantity": 1, "unit": "tsp" },
+        { "name": "rosewater", "quantity": 1, "unit": "tsp" },
+        { "name": "ghee", "quantity": 30, "unit": "g" },
+        { "name": "date syrup", "quantity": 100, "unit": "ml" },
+        { "name": "cream cheese", "quantity": 100, "unit": "g" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Bloom saffron in 2 tablespoons hot water.",
+        "Warm milk slightly and dissolve sugar and yeast; let foam for 10 minutes.",
+        "Whisk eggs, cardamom, rosewater, salt, saffron water, and the milk mixture.",
+        "Stir in flour to a smooth pourable batter.",
+        "Rest covered for 45 minutes.",
+        "Heat a non-stick pan with a thin smear of ghee.",
+        "Pour 60 ml batter and cook for 90 seconds until bubbles set, then flip for 30 seconds.",
+        "Serve warm with date syrup and cream cheese."
+      ],
+      "tags": ["emirati", "breakfast", "pancakes"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 60,
+      "cookTime": 20,
+      "servings": 4
+    }
+  ]
+}

@@ -1,0 +1,374 @@
+{
+  "cuisine": "Ghanaian",
+  "names": {
+    "first": ["Kwame", "Akosua", "Kofi", "Abena", "Yaw", "Adwoa", "Kwesi", "Esi", "Nana", "Ama", "Kojo", "Akua"],
+    "last": ["Mensah", "Asante", "Owusu", "Boateng", "Acheampong", "Annan", "Adu", "Ofori", "Darko", "Agyeman", "Nkrumah", "Sarpong"]
+  },
+  "recipes": [
+    {
+      "title": "Waakye",
+      "description": "Ghanaian breakfast and street-food classic of rice and beans cooked with sorghum leaves for a deep red hue.",
+      "ingredients": [
+        { "name": "long-grain rice", "quantity": 400, "unit": "g" },
+        { "name": "black-eyed beans, soaked", "quantity": 250, "unit": "g" },
+        { "name": "dried sorghum (waakye) leaves", "quantity": 5, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "water", "quantity": 1.5, "unit": "l" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Drain the soaked beans and place in a pot with water and waakye leaves.",
+        "Boil for 25 minutes until beans are about three-quarters cooked.",
+        "Remove and discard the leaves; the water should now be a deep red.",
+        "Add the rinsed rice, salt, and oil to the pot.",
+        "Top up with hot water if needed so the rice is just covered.",
+        "Reduce heat to low, cover tightly, and steam for 25 minutes.",
+        "Turn off the heat and let it rest covered for 10 minutes.",
+        "Fluff with a fork and serve with shito, gari, fried plantain, and stew."
+      ],
+      "tags": ["rice-and-beans", "breakfast", "street-food", "iconic"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 480,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Kelewele",
+      "description": "Ghanaian fried plantain cubes spiced with ginger, chili, and aniseed, sold as a popular evening snack.",
+      "ingredients": [
+        { "name": "ripe plantains", "quantity": 4, "unit": "pc" },
+        { "name": "ginger, grated", "quantity": 2, "unit": "tbsp" },
+        { "name": "garlic, minced", "quantity": 3, "unit": "pc" },
+        { "name": "ground chili", "quantity": 1, "unit": "tsp" },
+        { "name": "aniseed, ground", "quantity": 1, "unit": "tsp" },
+        { "name": "ground nutmeg", "quantity": 0.5, "unit": "tsp" },
+        { "name": "ground cloves", "quantity": 0.25, "unit": "tsp" },
+        { "name": "salt", "quantity": 0.75, "unit": "tsp" },
+        { "name": "water", "quantity": 60, "unit": "ml" },
+        { "name": "vegetable oil for frying", "quantity": 600, "unit": "ml" }
+      ],
+      "steps": [
+        "Peel plantains and cut into 2 cm cubes or angled chunks.",
+        "Pound the ginger, garlic, chili, aniseed, nutmeg, cloves, and salt with the water into a wet paste.",
+        "Toss the plantain cubes thoroughly in the spice paste.",
+        "Marinate for 10 minutes.",
+        "Heat oil to 175°C in a deep pan.",
+        "Fry the plantains in batches for 3-4 minutes, turning, until edges caramelize and centers are tender.",
+        "Drain on paper towels.",
+        "Serve hot with roasted peanuts."
+      ],
+      "tags": ["plantain", "snack", "spicy", "vegan"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Banku",
+      "description": "Ghanaian fermented corn and cassava dough boiled into a smooth, tangy ball eaten with okra stew or grilled fish.",
+      "ingredients": [
+        { "name": "fermented corn dough", "quantity": 400, "unit": "g" },
+        { "name": "fermented cassava dough", "quantity": 200, "unit": "g" },
+        { "name": "water", "quantity": 700, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "In a heavy pot, mix the corn dough, cassava dough, water, and salt until smooth.",
+        "Place over medium heat and stir continuously with a wooden spoon.",
+        "As it heats, it will start to thicken — keep stirring vigorously to prevent lumps.",
+        "After 10 minutes the mixture will become very thick and pull from the sides.",
+        "Splash in 100 ml hot water, cover, and steam on low heat for 5 minutes.",
+        "Uncover and beat with the wooden spoon for 5 more minutes until glossy and elastic.",
+        "Wet a bowl, scoop in portions, and shape into smooth balls.",
+        "Serve immediately with okro stew, grilled tilapia, and pepper sauce."
+      ],
+      "tags": ["staple", "fermented", "swallow", "tangy"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 5,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Fufu",
+      "description": "Ghanaian smooth, stretchy swallow made from pounded cassava and plantain or yam, eaten with light soup.",
+      "ingredients": [
+        { "name": "cassava, peeled and cubed", "quantity": 700, "unit": "g" },
+        { "name": "green plantain, peeled", "quantity": 2, "unit": "pc" },
+        { "name": "water", "quantity": 1, "unit": "l" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Boil the cassava in salted water for 20 minutes.",
+        "Add the plantain pieces and continue boiling for 12 more minutes until everything is very soft.",
+        "Drain, reserving 1 cup of the cooking water.",
+        "Transfer hot cassava and plantain to a large mortar (or a sturdy bowl with a wooden masher).",
+        "Pound rhythmically until completely smooth, adding small splashes of warm cooking water.",
+        "Continue until the dough is glossy, very stretchy, and lump-free.",
+        "Wet hands with cool water and shape into round balls.",
+        "Serve immediately submerged in light soup or groundnut soup."
+      ],
+      "tags": ["swallow", "cassava", "traditional", "side"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "hard",
+      "prepTime": 15,
+      "cookTime": 35,
+      "servings": 4
+    },
+    {
+      "title": "Light Soup",
+      "description": "Ghanaian clear, peppery tomato soup with chicken or goat, ginger, and aromatics, served with fufu.",
+      "ingredients": [
+        { "name": "goat meat, chunked", "quantity": 800, "unit": "g" },
+        { "name": "tomatoes", "quantity": 5, "unit": "pc" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "scotch bonnet pepper", "quantity": 2, "unit": "pc" },
+        { "name": "ginger, sliced", "quantity": 30, "unit": "g" },
+        { "name": "garlic, minced", "quantity": 4, "unit": "pc" },
+        { "name": "garden eggs (small eggplant)", "quantity": 4, "unit": "pc" },
+        { "name": "kpakpo shito (Ghanaian pepper)", "quantity": 2, "unit": "pc" },
+        { "name": "stock cubes", "quantity": 2, "unit": "pc" },
+        { "name": "water", "quantity": 1.5, "unit": "l" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Wash the goat meat with salt and rinse. Place in a pot with chopped onion, half the ginger, garlic, and stock cubes.",
+        "Add water and simmer covered for 60 minutes until tender.",
+        "Boil 3 tomatoes, scotch bonnet, and remaining ginger in some of the broth for 8 minutes.",
+        "Blend the boiled tomatoes, scotch bonnet, and ginger until smooth.",
+        "Add the blend back to the meat pot and stir.",
+        "Quarter the remaining tomatoes, add garden eggs whole, and simmer for 15 minutes.",
+        "Remove the garden eggs, mash, and return to the pot for body.",
+        "Add kpakpo shito for aroma, season with salt, and simmer 5 more minutes.",
+        "Serve hot with fufu."
+      ],
+      "tags": ["soup", "broth", "traditional", "spicy"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Red Red",
+      "description": "Ghanaian black-eyed bean stew cooked in red palm oil with tomatoes, served with fried plantain.",
+      "ingredients": [
+        { "name": "black-eyed beans, soaked", "quantity": 400, "unit": "g" },
+        { "name": "palm oil", "quantity": 120, "unit": "ml" },
+        { "name": "onion, chopped", "quantity": 2, "unit": "pc" },
+        { "name": "tomatoes, blended", "quantity": 4, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "scotch bonnet, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 3, "unit": "pc" },
+        { "name": "ginger, grated", "quantity": 1, "unit": "tbsp" },
+        { "name": "stock cubes", "quantity": 2, "unit": "pc" },
+        { "name": "water", "quantity": 800, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Drain the soaked beans and boil in fresh water for 50 minutes until tender. Drain, reserving liquid.",
+        "Heat palm oil in a pot for 2 minutes (do not bleach).",
+        "Add chopped onion, garlic, ginger, and scotch bonnet. Sauté for 6 minutes.",
+        "Stir in tomato paste and cook 4 minutes until darkened.",
+        "Add the blended tomatoes and cook 12 minutes until pulpy and oil floats on top.",
+        "Add the cooked beans with some bean liquid and stock cubes.",
+        "Simmer 15 minutes, mashing some beans against the side for body.",
+        "Adjust salt and serve with fried ripe plantain."
+      ],
+      "tags": ["beans", "stew", "vegan", "comfort"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 480,
+      "cookTime": 80,
+      "servings": 4
+    },
+    {
+      "title": "Kontomire Stew",
+      "description": "Ghanaian palaver stew of cocoyam leaves cooked with palm oil, smoked fish, and egusi, eaten with boiled yam.",
+      "ingredients": [
+        { "name": "cocoyam (taro) leaves or spinach, chopped", "quantity": 700, "unit": "g" },
+        { "name": "palm oil", "quantity": 150, "unit": "ml" },
+        { "name": "ground egusi seeds", "quantity": 100, "unit": "g" },
+        { "name": "smoked fish, flaked", "quantity": 250, "unit": "g" },
+        { "name": "tomatoes, blended", "quantity": 3, "unit": "pc" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "scotch bonnet, blended", "quantity": 2, "unit": "pc" },
+        { "name": "ground crayfish", "quantity": 2, "unit": "tbsp" },
+        { "name": "stock cubes", "quantity": 2, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Boil chopped cocoyam leaves in salted water for 15 minutes, then drain and squeeze out liquid.",
+        "Heat palm oil for 2 minutes. Add onion and sauté 4 minutes.",
+        "Stir in blended tomatoes and scotch bonnet. Cook 10 minutes until oil floats.",
+        "Mix the egusi with a little water to a paste, drop spoonfuls into the sauce, and let fry undisturbed 5 minutes before stirring.",
+        "Add ground crayfish and stock cubes.",
+        "Stir in the cooked greens and smoked fish.",
+        "Simmer 10 minutes for the flavors to meld.",
+        "Adjust salt and serve with boiled yam, plantain, or rice."
+      ],
+      "tags": ["stew", "greens", "smoked-fish", "traditional"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 45,
+      "servings": 6
+    },
+    {
+      "title": "Tuo Zaafi",
+      "description": "Northern Ghanaian soft millet or maize porridge served with ayoyo (jute leaf) soup and meat stew.",
+      "ingredients": [
+        { "name": "maize flour", "quantity": 400, "unit": "g" },
+        { "name": "cassava flour", "quantity": 100, "unit": "g" },
+        { "name": "water", "quantity": 1.2, "unit": "l" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Bring water and salt to a boil in a heavy pot.",
+        "Mix half the maize flour with cold water to make a slurry.",
+        "Whisk the slurry into the boiling water and cook for 5 minutes.",
+        "Slowly add the remaining maize flour and the cassava flour, stirring with a wooden spoon.",
+        "Beat vigorously for 8 minutes until very thick and smooth.",
+        "Cover and steam on low heat for 5 minutes.",
+        "Beat once more, splashing in hot water if too stiff, until silky.",
+        "Scoop into wet bowls, invert onto plates, and serve with ayoyo soup and meat stew."
+      ],
+      "tags": ["staple", "porridge", "northern", "swallow"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 5,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Groundnut Soup",
+      "description": "Ghanaian peanut soup with chicken or goat, tomatoes, ginger, and chili, eaten with fufu or rice balls.",
+      "ingredients": [
+        { "name": "smooth peanut butter", "quantity": 250, "unit": "g" },
+        { "name": "chicken, cut up", "quantity": 1, "unit": "kg" },
+        { "name": "tomatoes, blended", "quantity": 4, "unit": "pc" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "scotch bonnet pepper", "quantity": 2, "unit": "pc" },
+        { "name": "ginger, sliced", "quantity": 30, "unit": "g" },
+        { "name": "garlic, minced", "quantity": 4, "unit": "pc" },
+        { "name": "stock cubes", "quantity": 2, "unit": "pc" },
+        { "name": "water", "quantity": 1.5, "unit": "l" },
+        { "name": "garden eggs (small eggplant)", "quantity": 3, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Season chicken with salt, half the onion, ginger, garlic, and stock cubes. Add water and simmer 30 minutes.",
+        "Whisk peanut butter with 250 ml of the hot broth in a bowl until smooth.",
+        "Pour the peanut mixture into the pot. Stir well.",
+        "Add the blended tomatoes and scotch bonnet.",
+        "Simmer uncovered for 30 minutes, stirring occasionally so the soup doesn't catch.",
+        "Skim off any oil that rises to the top.",
+        "Add garden eggs whole; cook 15 minutes until tender. Remove, mash, and return.",
+        "Adjust salt and serve hot with fufu or rice balls."
+      ],
+      "tags": ["soup", "peanut", "rich", "iconic"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Shito",
+      "description": "Ghanaian dark, intensely savory pepper sauce of dried fish, shrimp, ginger, and chili in oil — a national condiment.",
+      "ingredients": [
+        { "name": "vegetable oil", "quantity": 500, "unit": "ml" },
+        { "name": "onions, blended", "quantity": 4, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 100, "unit": "g" },
+        { "name": "ground dried chili", "quantity": 100, "unit": "g" },
+        { "name": "ground dried shrimp", "quantity": 80, "unit": "g" },
+        { "name": "smoked fish powder", "quantity": 80, "unit": "g" },
+        { "name": "ginger, grated", "quantity": 3, "unit": "tbsp" },
+        { "name": "garlic, minced", "quantity": 6, "unit": "pc" },
+        { "name": "stock cubes", "quantity": 2, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Heat the oil in a heavy pot over medium heat.",
+        "Add the blended onion and fry for 15 minutes, stirring, until very dark and reduced.",
+        "Add ginger and garlic, fry 5 minutes.",
+        "Stir in the tomato paste and cook 8 minutes until darkened.",
+        "Mix in the ground chili and toast for 5 minutes (open windows; it's potent).",
+        "Add ground shrimp and smoked fish powder, stir.",
+        "Reduce heat to low and cook for 25 minutes, stirring often, until oil floats clear on top and the paste is very dark.",
+        "Add stock cubes and salt. Cook 5 more minutes.",
+        "Cool completely, then store in sterilized jars; keeps for months."
+      ],
+      "tags": ["condiment", "spicy", "shelf-stable", "iconic"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 60,
+      "servings": 12
+    },
+    {
+      "title": "Ghanaian Jollof Rice",
+      "description": "Ghanaian variant of jollof rice cooked with jasmine rice, shito-tinged tomato base, and bay leaves for a smokier finish.",
+      "ingredients": [
+        { "name": "jasmine rice", "quantity": 500, "unit": "g" },
+        { "name": "tomatoes, blended", "quantity": 5, "unit": "pc" },
+        { "name": "red bell pepper, blended", "quantity": 1, "unit": "pc" },
+        { "name": "scotch bonnet, blended", "quantity": 1, "unit": "pc" },
+        { "name": "onion, chopped", "quantity": 2, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "vegetable oil", "quantity": 80, "unit": "ml" },
+        { "name": "stock", "quantity": 600, "unit": "ml" },
+        { "name": "shito", "quantity": 2, "unit": "tbsp" },
+        { "name": "ginger, grated", "quantity": 1, "unit": "tbsp" },
+        { "name": "garlic, minced", "quantity": 3, "unit": "pc" },
+        { "name": "bay leaves", "quantity": 3, "unit": "pc" },
+        { "name": "thyme", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Reduce the blended tomato, bell pepper, and scotch bonnet in a saucepan for 12 minutes until thick.",
+        "In a heavy pot, heat oil and sauté onion, ginger, and garlic for 5 minutes.",
+        "Add tomato paste and shito, fry 5 minutes.",
+        "Pour in the reduced pepper sauce and cook 8 minutes until oil separates.",
+        "Stir in thyme, bay leaves, and salt.",
+        "Add the rinsed rice and stir to coat in the sauce.",
+        "Pour in hot stock, cover with foil and a tight lid.",
+        "Cook on low heat for 25 minutes without stirring.",
+        "Increase the heat for 3 minutes at the end to develop the smoky bottom layer.",
+        "Fluff and serve with shito on the side."
+      ],
+      "tags": ["rice", "tomato", "smoky", "party"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Bofrot",
+      "description": "Ghanaian sweet round fried doughnuts with a crisp shell and soft, lightly spiced interior.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 500, "unit": "g" },
+        { "name": "instant yeast", "quantity": 2, "unit": "tsp" },
+        { "name": "sugar", "quantity": 100, "unit": "g" },
+        { "name": "warm water", "quantity": 350, "unit": "ml" },
+        { "name": "ground nutmeg", "quantity": 0.5, "unit": "tsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" },
+        { "name": "vegetable oil for frying", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "In a bowl, whisk warm water, sugar, and yeast. Let sit 5 minutes until foamy.",
+        "Add flour, nutmeg, and salt. Whisk into a thick, smooth, sticky batter.",
+        "Cover and rise in a warm spot for 60 minutes until bubbly and doubled.",
+        "Heat oil to 165°C in a deep pot.",
+        "Wet your hand and squeeze a portion of batter from your fist; let a ball drop into the oil.",
+        "Fry in batches for 5-6 minutes, turning, until deep golden brown all around.",
+        "Drain on paper towels.",
+        "Roll in extra sugar if desired and serve warm."
+      ],
+      "tags": ["snack", "fried", "sweet", "street-food"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 75,
+      "cookTime": 25,
+      "servings": 6
+    }
+  ]
+}

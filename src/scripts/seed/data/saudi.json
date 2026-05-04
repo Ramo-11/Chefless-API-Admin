@@ -1,0 +1,374 @@
+{
+  "cuisine": "Saudi",
+  "names": {
+    "first": ["Abdullah", "Norah", "Faisal", "Reem", "Saud", "Aisha", "Nasser", "Latifa", "Bandar", "Munira", "Sultan", "Hessa"],
+    "last": ["Al-Ghamdi", "Al-Otaibi", "Al-Harbi", "Al-Qahtani", "Al-Shehri", "Al-Dosari", "Al-Mutairi", "Al-Subaie", "Al-Zahrani", "Al-Saud"]
+  },
+  "recipes": [
+    {
+      "title": "Kabsa",
+      "description": "Saudi national rice dish of long-grain basmati spiced with dried lime and cardamom, topped with tender chicken or lamb.",
+      "ingredients": [
+        { "name": "chicken thighs", "quantity": 1, "unit": "kg" },
+        { "name": "basmati rice", "quantity": 500, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "tomato", "quantity": 3, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "garlic clove", "quantity": 4, "unit": "pc" },
+        { "name": "ground cardamom", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cinnamon", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "dried lime", "quantity": 2, "unit": "pc" },
+        { "name": "kabsa spice mix", "quantity": 2, "unit": "tbsp" },
+        { "name": "vegetable oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "almonds", "quantity": 60, "unit": "g" },
+        { "name": "raisins", "quantity": 50, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Brown chicken pieces in oil with chopped onions until golden.",
+        "Stir in tomato paste, garlic, cardamom, cinnamon, cumin, and kabsa spice; cook 2 minutes.",
+        "Add chopped tomatoes, dried limes pierced with a knife, salt, and 1.2 liters water.",
+        "Simmer covered for 35 minutes until chicken is tender; remove chicken and grill or roast 10 minutes to crisp.",
+        "Add washed rice to the broth and simmer covered on low heat for 18 minutes.",
+        "Toast almonds in oil until golden and plump raisins in a little water.",
+        "Mound rice on a platter, top with chicken, and scatter almonds and raisins."
+      ],
+      "tags": ["saudi", "rice", "chicken", "national dish"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 70,
+      "servings": 6
+    },
+    {
+      "title": "Mandi",
+      "description": "Yemeni-Saudi smoky rice and lamb cooked together in an underground tandoor, fragrant with cardamom and saffron.",
+      "ingredients": [
+        { "name": "lamb shoulder", "quantity": 1.5, "unit": "kg" },
+        { "name": "basmati rice", "quantity": 500, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "ground cardamom", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground black lime", "quantity": 1, "unit": "tsp" },
+        { "name": "saffron threads", "quantity": 1, "unit": "pinch" },
+        { "name": "ghee", "quantity": 60, "unit": "g" },
+        { "name": "raisins", "quantity": 50, "unit": "g" },
+        { "name": "almonds", "quantity": 50, "unit": "g" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Rub lamb with cardamom, black lime, salt, and oil; rest 1 hour.",
+        "Place lamb on a rack inside a deep covered roasting tray with 500 ml water in the base.",
+        "Roast at 160C for 3 hours until very tender, basting once.",
+        "Light a piece of charcoal until red, place in a small heatproof bowl in the tray, drizzle with oil, and seal foil tightly for 5 minutes to smoke; remove.",
+        "Soak rice 30 minutes; bloom saffron in 3 tablespoons hot water.",
+        "Bring 1 liter of the lamb roasting juices to a boil with ghee and salt; add drained rice and saffron.",
+        "Simmer covered on lowest heat for 20 minutes until rice is tender.",
+        "Plate the rice and arrange the smoked lamb on top with toasted almonds and plumped raisins."
+      ],
+      "tags": ["saudi", "lamb", "rice", "smoked"],
+      "difficulty": "hard",
+      "prepTime": 70,
+      "cookTime": 200,
+      "servings": 8
+    },
+    {
+      "title": "Saleeg",
+      "description": "Hejazi creamy white rice porridge cooked in chicken broth with milk and butter, traditionally served with whole chicken.",
+      "ingredients": [
+        { "name": "whole chicken", "quantity": 1.5, "unit": "kg" },
+        { "name": "short grain rice", "quantity": 400, "unit": "g" },
+        { "name": "milk", "quantity": 500, "unit": "ml" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "ground cardamom", "quantity": 1, "unit": "tsp" },
+        { "name": "ground black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "bay leaf", "quantity": 2, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Simmer chicken with onion, bay leaves, cardamom, salt, and black pepper in 2 liters water for 1 hour.",
+        "Strain the broth and reserve the chicken; brush chicken with butter and roast at 200C for 15 minutes to brown.",
+        "Add washed rice to 1.2 liters of the broth and simmer 25 minutes, stirring occasionally.",
+        "Pour in the milk and continue stirring for 15 more minutes until creamy and porridge-like.",
+        "Stir in butter and adjust salt.",
+        "Spread rice on a platter, set the roasted chicken on top, and serve with shatta sauce."
+      ],
+      "tags": ["saudi", "rice", "chicken", "hejazi"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 110,
+      "servings": 6
+    },
+    {
+      "title": "Jareesh",
+      "description": "Najdi crushed wheat porridge slow-cooked with lamb, yogurt, and onion until creamy and rich.",
+      "ingredients": [
+        { "name": "crushed wheat", "quantity": 300, "unit": "g" },
+        { "name": "lamb shoulder", "quantity": 500, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "yogurt", "quantity": 200, "unit": "g" },
+        { "name": "ghee", "quantity": 50, "unit": "g" },
+        { "name": "ground cinnamon", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cardamom", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Rinse crushed wheat thoroughly until the water runs clear.",
+        "Brown cubed lamb in ghee with chopped onion until caramelized.",
+        "Add cardamom, cinnamon, salt, pepper, and 2 liters water; simmer 1 hour until lamb is tender.",
+        "Stir in the rinsed wheat and simmer 1.5 hours, stirring often, until very thick and creamy.",
+        "Whisk in the yogurt and cook another 10 minutes.",
+        "Caramelize sliced onion in ghee until deep brown.",
+        "Spoon jareesh into bowls and top with the dark caramelized onions."
+      ],
+      "tags": ["saudi", "wheat", "lamb", "najdi"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 180,
+      "servings": 6
+    },
+    {
+      "title": "Mutabbaq",
+      "description": "Saudi stuffed pastry of thin dough filled with spiced minced meat, onion, and egg, fried crisp in golden squares.",
+      "ingredients": [
+        { "name": "all purpose flour", "quantity": 400, "unit": "g" },
+        { "name": "warm water", "quantity": 250, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "minced beef", "quantity": 400, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "spring onion", "quantity": 4, "unit": "pc" },
+        { "name": "egg", "quantity": 3, "unit": "pc" },
+        { "name": "leek", "quantity": 1, "unit": "pc" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "ground coriander", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 200, "unit": "ml" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Mix flour, salt, and water into a soft dough; knead 8 minutes and rest covered with oil for 1 hour.",
+        "Brown minced beef with chopped onion, cumin, coriander, salt, and pepper; cool.",
+        "Stir in chopped spring onions, leek, and beaten eggs.",
+        "Divide dough into 6 balls; oil generously and stretch each into a paper-thin square.",
+        "Spoon filling into the center, fold sides over to form a square parcel.",
+        "Pan-fry parcels in shallow oil for 3 minutes per side until deep golden and crisp.",
+        "Cut into pieces and serve hot with chili sauce."
+      ],
+      "tags": ["saudi", "pastry", "fried", "beef"],
+      "difficulty": "hard",
+      "prepTime": 80,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Tharid",
+      "description": "Saudi peasant dish of spiced lamb and vegetable stew ladled over torn discs of regag bread to soak up the broth.",
+      "ingredients": [
+        { "name": "lamb shoulder", "quantity": 600, "unit": "g" },
+        { "name": "regag bread", "quantity": 6, "unit": "pc" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "tomato", "quantity": 3, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "carrot", "quantity": 2, "unit": "pc" },
+        { "name": "potato", "quantity": 2, "unit": "pc" },
+        { "name": "courgette", "quantity": 2, "unit": "pc" },
+        { "name": "dried lime", "quantity": 2, "unit": "pc" },
+        { "name": "baharat", "quantity": 1, "unit": "tbsp" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Brown cubed lamb with chopped onions in oil.",
+        "Stir in tomato paste, baharat, and dried limes.",
+        "Add chopped tomatoes, salt, and 1.5 liters water; simmer 1 hour.",
+        "Add cubed carrots, potatoes, and courgettes and cook 25 minutes more until vegetables are tender.",
+        "Tear regag bread into rough pieces and pile in a deep serving bowl.",
+        "Ladle the stew over the bread and let it soak for 5 minutes before serving."
+      ],
+      "tags": ["saudi", "stew", "lamb", "bread"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 100,
+      "servings": 6
+    },
+    {
+      "title": "Areeka",
+      "description": "Saudi dessert of crumbled flatbread mixed with mashed dates and honey, drizzled with ghee for special occasions.",
+      "ingredients": [
+        { "name": "flatbread", "quantity": 4, "unit": "pc" },
+        { "name": "pitted dates", "quantity": 400, "unit": "g" },
+        { "name": "ghee", "quantity": 100, "unit": "g" },
+        { "name": "honey", "quantity": 60, "unit": "ml" },
+        { "name": "ground cardamom", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Tear flatbread into small pieces and toast in 60 g of ghee in a wide skillet until golden and crisp.",
+        "Crush the toasted bread to a coarse crumb in a food processor.",
+        "Warm dates with the remaining ghee and cardamom, mashing into a smooth paste.",
+        "Combine the bread crumb with the date paste and knead until evenly mixed and pliable.",
+        "Press into a serving bowl and drizzle generously with honey and extra warm ghee.",
+        "Serve warm with Arabic coffee."
+      ],
+      "tags": ["saudi", "dessert", "dates"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 20,
+      "servings": 6
+    },
+    {
+      "title": "Mathlouthah",
+      "description": "Saudi southern dish of three ingredients: rice, wheat, and lentils slow-simmered with lamb and warm spices.",
+      "ingredients": [
+        { "name": "basmati rice", "quantity": 200, "unit": "g" },
+        { "name": "crushed wheat", "quantity": 200, "unit": "g" },
+        { "name": "brown lentils", "quantity": 200, "unit": "g" },
+        { "name": "lamb shoulder", "quantity": 600, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "tomato", "quantity": 2, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cardamom", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cinnamon", "quantity": 0.5, "unit": "tsp" },
+        { "name": "ghee", "quantity": 60, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Brown cubed lamb in ghee with chopped onions.",
+        "Stir in tomato paste, cumin, cardamom, and cinnamon; cook 2 minutes.",
+        "Add chopped tomatoes, salt, and 2 liters water; simmer 45 minutes.",
+        "Stir in rinsed wheat and lentils; cook another 45 minutes.",
+        "Add washed rice and continue cooking 25 minutes until everything is tender and the texture is loose porridge.",
+        "Adjust salt and add hot water if needed; stir in extra ghee.",
+        "Serve hot with caramelized onions on top."
+      ],
+      "tags": ["saudi", "rice", "wheat", "lentils"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 130,
+      "servings": 6
+    },
+    {
+      "title": "Margoog",
+      "description": "Saudi Najdi stew of hand-rolled wheat dough discs simmered with lamb, vegetables, and warm spices.",
+      "ingredients": [
+        { "name": "all purpose flour", "quantity": 300, "unit": "g" },
+        { "name": "lamb shoulder", "quantity": 600, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "tomato", "quantity": 3, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "carrot", "quantity": 2, "unit": "pc" },
+        { "name": "potato", "quantity": 2, "unit": "pc" },
+        { "name": "pumpkin", "quantity": 200, "unit": "g" },
+        { "name": "dried lime", "quantity": 2, "unit": "pc" },
+        { "name": "baharat", "quantity": 1, "unit": "tbsp" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Mix flour with a pinch of salt and 150 ml water into a stiff dough; rest 30 minutes.",
+        "Brown cubed lamb in oil with chopped onions; stir in tomato paste, baharat, and dried limes.",
+        "Add chopped tomatoes, salt, and 2 liters water; simmer 45 minutes.",
+        "Add cubed carrots, potatoes, and pumpkin; simmer 15 minutes.",
+        "Roll the dough thinly and tear into rustic 5 cm discs.",
+        "Drop the dough discs into the simmering stew and cook 15 minutes until the dough is tender and the broth has thickened.",
+        "Adjust seasoning and serve in deep bowls."
+      ],
+      "tags": ["saudi", "stew", "lamb", "dumplings"],
+      "difficulty": "medium",
+      "prepTime": 50,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Shakshuka",
+      "description": "Eggs poached in spiced tomato and pepper sauce, a beloved breakfast across Saudi and the Levant.",
+      "ingredients": [
+        { "name": "tomato", "quantity": 6, "unit": "pc" },
+        { "name": "red bell pepper", "quantity": 2, "unit": "pc" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic clove", "quantity": 4, "unit": "pc" },
+        { "name": "egg", "quantity": 6, "unit": "pc" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "paprika", "quantity": 1, "unit": "tsp" },
+        { "name": "chili flakes", "quantity": 1, "unit": "tsp" },
+        { "name": "parsley", "quantity": 1, "unit": "bunch" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Sauté chopped onion and pepper in olive oil for 8 minutes until very soft.",
+        "Add minced garlic, cumin, paprika, and chili flakes; cook 30 seconds.",
+        "Stir in chopped tomatoes and salt and simmer 15 minutes until thickened.",
+        "Make 6 wells in the sauce and crack an egg into each.",
+        "Cover and cook on low heat for 6 minutes until whites are set but yolks remain runny.",
+        "Scatter chopped parsley and serve straight from the pan with bread."
+      ],
+      "tags": ["saudi", "breakfast", "eggs"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Harees",
+      "description": "Saudi Ramadan dish of wheat berries slow-cooked with chicken or lamb until smooth, beaten into a creamy porridge.",
+      "ingredients": [
+        { "name": "wheat berries", "quantity": 300, "unit": "g" },
+        { "name": "chicken thighs", "quantity": 600, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "ghee", "quantity": 80, "unit": "g" },
+        { "name": "ground cinnamon", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cardamom", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak wheat berries overnight in plenty of water.",
+        "Simmer drained wheat with chicken, onion, cardamom, salt, and 2.5 liters water for 3 hours, skimming foam.",
+        "Remove the bones and shred the chicken into the pot.",
+        "Beat the mixture with a wooden spoon for 20 minutes until smooth, stringy, and porridge-like.",
+        "Stir in cinnamon and adjust salt.",
+        "Spoon into a wide bowl and pour melted ghee generously over the top."
+      ],
+      "tags": ["saudi", "ramadan", "wheat", "chicken"],
+      "difficulty": "medium",
+      "prepTime": 720,
+      "cookTime": 200,
+      "servings": 6
+    },
+    {
+      "title": "Luqaimat",
+      "description": "Crispy Saudi yeast-risen dumplings deep fried until golden, drizzled with date syrup and sesame seeds.",
+      "ingredients": [
+        { "name": "all purpose flour", "quantity": 300, "unit": "g" },
+        { "name": "warm water", "quantity": 250, "unit": "ml" },
+        { "name": "instant yeast", "quantity": 1, "unit": "tsp" },
+        { "name": "sugar", "quantity": 1, "unit": "tbsp" },
+        { "name": "yogurt", "quantity": 60, "unit": "g" },
+        { "name": "ground cardamom", "quantity": 1, "unit": "tsp" },
+        { "name": "saffron threads", "quantity": 1, "unit": "pinch" },
+        { "name": "vegetable oil", "quantity": 1, "unit": "l" },
+        { "name": "date syrup", "quantity": 200, "unit": "ml" },
+        { "name": "sesame seeds", "quantity": 30, "unit": "g" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Bloom saffron in 2 tablespoons hot water.",
+        "Mix flour, salt, cardamom, yeast, sugar, yogurt, saffron water, and warm water into a thick batter.",
+        "Cover and rest 1.5 hours until bubbly and doubled.",
+        "Heat oil to 170C.",
+        "Pinch small balls of batter from a wet hand and drop into the oil; fry 4 minutes until deep golden, turning often.",
+        "Drain on paper, then immediately drizzle with date syrup and shower with sesame seeds.",
+        "Serve hot."
+      ],
+      "tags": ["saudi", "dessert", "fried", "ramadan"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 100,
+      "cookTime": 20,
+      "servings": 6
+    }
+  ]
+}

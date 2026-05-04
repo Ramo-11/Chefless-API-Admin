@@ -1,0 +1,286 @@
+{
+  "cuisine": "Hungarian",
+  "names": {
+    "first": ["László", "István", "Bence", "Ádám", "Máté", "Dávid", "Levente", "Gergő", "Eszter", "Anna", "Zsófia", "Réka", "Hanna", "Boglárka", "Lilla", "Petra"],
+    "last": ["Nagy", "Kovács", "Tóth", "Szabó", "Horváth", "Varga", "Kiss", "Molnár", "Németh", "Farkas", "Balogh", "Papp"]
+  },
+  "recipes": [
+    {
+      "title": "Goulash",
+      "description": "Hungarian beef and paprika soup-stew with potatoes, peppers and caraway.",
+      "ingredients": [
+        { "name": "beef chuck", "quantity": 800, "unit": "g" },
+        { "name": "onions", "quantity": 3, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 4, "unit": "pc" },
+        { "name": "sweet Hungarian paprika", "quantity": 3, "unit": "tbsp" },
+        { "name": "lard", "quantity": 3, "unit": "tbsp" },
+        { "name": "caraway seeds", "quantity": 1, "unit": "tsp" },
+        { "name": "tomatoes", "quantity": 2, "unit": "pc" },
+        { "name": "yellow bell peppers", "quantity": 2, "unit": "pc" },
+        { "name": "potatoes", "quantity": 600, "unit": "g" },
+        { "name": "carrots", "quantity": 2, "unit": "pc" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Cube beef into 3cm pieces.",
+        "Sauté finely chopped onions in lard until deep gold.",
+        "Off heat, stir in paprika, caraway and crushed garlic so they bloom but do not burn.",
+        "Return to low heat, add beef and 200ml water; simmer covered 60 minutes.",
+        "Add chopped tomatoes, peppers, carrots and bay; cover with water and simmer 60 minutes.",
+        "Add cubed potatoes and salt; cook 25 minutes until tender.",
+        "Adjust seasoning; the consistency should be soupy."
+      ],
+      "tags": ["soup", "stew", "beef", "hungarian-classic"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 150,
+      "servings": 6
+    },
+    {
+      "title": "Chicken Paprikash",
+      "description": "Hungarian braised chicken in a velvety paprika and sour cream sauce.",
+      "ingredients": [
+        { "name": "chicken thighs", "quantity": 8, "unit": "pc" },
+        { "name": "onions", "quantity": 2, "unit": "pc" },
+        { "name": "lard", "quantity": 3, "unit": "tbsp" },
+        { "name": "sweet Hungarian paprika", "quantity": 2, "unit": "tbsp" },
+        { "name": "yellow bell pepper", "quantity": 1, "unit": "pc" },
+        { "name": "tomato", "quantity": 1, "unit": "pc" },
+        { "name": "chicken stock", "quantity": 250, "unit": "ml" },
+        { "name": "sour cream", "quantity": 250, "unit": "ml" },
+        { "name": "flour", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Sauté finely chopped onions in lard until soft and golden.",
+        "Off heat, stir in paprika to bloom.",
+        "Return to low heat, add chicken thighs and brown lightly.",
+        "Add chopped pepper, tomato, salt and stock; cover and simmer 35 minutes.",
+        "Whisk flour into sour cream; temper with hot sauce, then stir back into pot.",
+        "Simmer gently 5 more minutes; do not boil hard.",
+        "Serve with nokedli or wide egg noodles."
+      ],
+      "tags": ["chicken", "braise", "creamy", "hungarian-classic"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 50,
+      "servings": 4
+    },
+    {
+      "title": "Lángos",
+      "description": "Hungarian fried flatbread topped with garlic, sour cream and grated cheese.",
+      "ingredients": [
+        { "name": "flour", "quantity": 500, "unit": "g" },
+        { "name": "warm milk", "quantity": 300, "unit": "ml" },
+        { "name": "active dry yeast", "quantity": 7, "unit": "g" },
+        { "name": "sugar", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "boiled potato", "quantity": 1, "unit": "pc" },
+        { "name": "vegetable oil for frying", "quantity": 1, "unit": "l" },
+        { "name": "garlic cloves", "quantity": 4, "unit": "pc" },
+        { "name": "sour cream", "quantity": 200, "unit": "ml" },
+        { "name": "grated cheese", "quantity": 200, "unit": "g" }
+      ],
+      "steps": [
+        "Stir yeast and sugar into warm milk; rest 10 minutes.",
+        "Mash potato finely; combine with flour, salt, milk-yeast mix and knead 8 minutes.",
+        "Cover and rise 90 minutes until doubled.",
+        "Divide into 8 pieces and stretch each thinly with floured hands.",
+        "Heat oil to 180°C in a wide pan.",
+        "Slip lángos into the oil and fry until puffed and golden, turning once.",
+        "Drain briefly, then rub with crushed garlic.",
+        "Top with sour cream and grated cheese; serve immediately."
+      ],
+      "tags": ["bread", "fried", "street-food", "hungarian-classic"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 110,
+      "cookTime": 20,
+      "servings": 8
+    },
+    {
+      "title": "Töltött Káposzta",
+      "description": "Hungarian stuffed cabbage rolls of pork and rice baked in paprika-tomato sauerkraut sauce.",
+      "ingredients": [
+        { "name": "sour cabbage leaves", "quantity": 16, "unit": "pc" },
+        { "name": "sauerkraut", "quantity": 500, "unit": "g" },
+        { "name": "ground pork", "quantity": 600, "unit": "g" },
+        { "name": "long grain rice", "quantity": 100, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 3, "unit": "pc" },
+        { "name": "smoked paprika", "quantity": 1, "unit": "tbsp" },
+        { "name": "sweet Hungarian paprika", "quantity": 1, "unit": "tbsp" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "tomato passata", "quantity": 400, "unit": "ml" },
+        { "name": "smoked sausage", "quantity": 200, "unit": "g" },
+        { "name": "lard", "quantity": 2, "unit": "tbsp" },
+        { "name": "sour cream", "quantity": 200, "unit": "ml" }
+      ],
+      "steps": [
+        "Sauté chopped onion in lard until soft; off heat, stir in paprikas.",
+        "Combine pork, half-cooked rice, onion-paprika mix, garlic, egg and salt.",
+        "Place 2 tablespoons filling on each leaf, fold and roll tightly.",
+        "Spread half the sauerkraut in a heavy pot; pack rolls seam-down on top.",
+        "Cover with remaining sauerkraut and sliced sausage.",
+        "Pour passata and 500ml water over; cover and simmer 90 minutes.",
+        "Serve rolls with sauerkraut, sausage and a generous spoon of sour cream."
+      ],
+      "tags": ["cabbage-rolls", "stuffed", "hungarian-classic", "winter"],
+      "difficulty": "medium",
+      "prepTime": 45,
+      "cookTime": 100,
+      "servings": 8
+    },
+    {
+      "title": "Halászlé",
+      "description": "Fiery Hungarian fisherman's soup of carp and other river fish in a paprika-rich broth.",
+      "ingredients": [
+        { "name": "carp or freshwater fish", "quantity": 1.5, "unit": "kg" },
+        { "name": "onions", "quantity": 3, "unit": "pc" },
+        { "name": "sweet Hungarian paprika", "quantity": 3, "unit": "tbsp" },
+        { "name": "hot Hungarian paprika", "quantity": 1, "unit": "tsp" },
+        { "name": "tomato", "quantity": 1, "unit": "pc" },
+        { "name": "yellow bell pepper", "quantity": 1, "unit": "pc" },
+        { "name": "cherry paprika peppers", "quantity": 2, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Fillet fish; reserve heads, bones and trimmings.",
+        "Place trimmings, sliced onions and 1.5L water in a wide pot; simmer 60 minutes.",
+        "Strain stock and discard solids; return to pot.",
+        "Add paprikas, chopped tomato, sliced pepper and cherry peppers; simmer 15 minutes.",
+        "Cut fish fillets into thick chunks and salt lightly.",
+        "Slip fish into the soup and simmer gently 10 minutes; do not stir.",
+        "Adjust seasoning and serve fiery hot with white bread."
+      ],
+      "tags": ["soup", "fish", "spicy", "hungarian-classic"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Pörkölt",
+      "description": "Hungarian thick paprika stew of beef or pork, deep red and onion-rich.",
+      "ingredients": [
+        { "name": "beef shin", "quantity": 1, "unit": "kg" },
+        { "name": "onions", "quantity": 4, "unit": "pc" },
+        { "name": "lard", "quantity": 4, "unit": "tbsp" },
+        { "name": "garlic cloves", "quantity": 4, "unit": "pc" },
+        { "name": "sweet Hungarian paprika", "quantity": 3, "unit": "tbsp" },
+        { "name": "tomato", "quantity": 1, "unit": "pc" },
+        { "name": "yellow bell pepper", "quantity": 1, "unit": "pc" },
+        { "name": "caraway seeds", "quantity": 1, "unit": "tsp" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Cube beef into 3cm pieces.",
+        "Sauté finely chopped onions in lard until very soft and deep gold.",
+        "Off heat, stir in paprika, caraway and crushed garlic.",
+        "Add beef, salt, chopped tomato, sliced pepper and bay; do not add water yet.",
+        "Cover and simmer on lowest heat 30 minutes until meat releases its juices.",
+        "Continue simmering 90 minutes, adding splashes of water only when needed.",
+        "Sauce should be thick and clinging; serve with nokedli."
+      ],
+      "tags": ["stew", "beef", "paprika", "hungarian-classic"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 130,
+      "servings": 6
+    },
+    {
+      "title": "Dobos Torte",
+      "description": "Hungarian layered sponge cake with chocolate buttercream and a glassy caramel top.",
+      "ingredients": [
+        { "name": "eggs", "quantity": 6, "unit": "pc" },
+        { "name": "sugar", "quantity": 150, "unit": "g" },
+        { "name": "flour", "quantity": 150, "unit": "g" },
+        { "name": "butter", "quantity": 250, "unit": "g" },
+        { "name": "icing sugar", "quantity": 200, "unit": "g" },
+        { "name": "dark chocolate", "quantity": 200, "unit": "g" },
+        { "name": "egg yolks for buttercream", "quantity": 4, "unit": "pc" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "extra sugar for caramel", "quantity": 200, "unit": "g" },
+        { "name": "lemon juice", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Whisk egg yolks with half the sugar until pale; whisk whites with rest of sugar to firm peaks.",
+        "Fold whites and sifted flour into yolks gently.",
+        "Spread thin discs (24cm) on parchment and bake 6 sponges at 200°C for 6 minutes each.",
+        "Trim discs to identical circles.",
+        "Beat softened butter with icing sugar; whisk in melted chocolate, yolks and vanilla.",
+        "Stack sponges with chocolate buttercream between each layer; reserve top sponge.",
+        "Cook extra sugar with lemon juice to deep amber caramel.",
+        "Pour caramel over the top sponge, score wedges with an oiled knife before it sets.",
+        "Place caramel disc on the cake and finish sides with buttercream; chill 2 hours."
+      ],
+      "tags": ["dessert", "cake", "chocolate", "hungarian-classic"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 90,
+      "cookTime": 40,
+      "servings": 12
+    },
+    {
+      "title": "Lecsó",
+      "description": "Hungarian summer stew of sweet peppers, tomato, onion and paprika, often with sausage or egg.",
+      "ingredients": [
+        { "name": "yellow Hungarian peppers", "quantity": 1, "unit": "kg" },
+        { "name": "tomatoes", "quantity": 600, "unit": "g" },
+        { "name": "onions", "quantity": 2, "unit": "pc" },
+        { "name": "smoked sausage", "quantity": 200, "unit": "g" },
+        { "name": "lard", "quantity": 2, "unit": "tbsp" },
+        { "name": "sweet Hungarian paprika", "quantity": 1, "unit": "tbsp" },
+        { "name": "garlic cloves", "quantity": 2, "unit": "pc" },
+        { "name": "eggs", "quantity": 4, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Slice peppers into rings and tomatoes into chunks.",
+        "Sauté chopped onions in lard until soft.",
+        "Add sliced sausage and cook 5 minutes until oil is rich red.",
+        "Off heat, stir in paprika and crushed garlic.",
+        "Return to heat, add peppers, tomatoes and salt.",
+        "Simmer uncovered 25 minutes until peppers are tender and sauce thick.",
+        "Crack eggs over the top and stir gently until just set.",
+        "Serve with crusty bread."
+      ],
+      "tags": ["stew", "vegetables", "summer", "hungarian-classic"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 35,
+      "servings": 4
+    },
+    {
+      "title": "Túrós Csusza",
+      "description": "Hungarian pasta with fresh curd cheese, sour cream and crispy bacon.",
+      "ingredients": [
+        { "name": "wide egg noodles", "quantity": 400, "unit": "g" },
+        { "name": "smoked bacon", "quantity": 200, "unit": "g" },
+        { "name": "túró cheese", "quantity": 400, "unit": "g" },
+        { "name": "sour cream", "quantity": 300, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Dice bacon and render slowly in a pan until very crisp; reserve fat.",
+        "Boil noodles in salted water until al dente; drain.",
+        "Toss hot noodles with the warm bacon fat.",
+        "Crumble túró over the pasta and add sour cream; toss gently.",
+        "Season with salt and pepper.",
+        "Top with the crispy bacon bits and serve immediately."
+      ],
+      "tags": ["pasta", "cheese", "comfort-food", "hungarian-classic"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 15,
+      "servings": 4
+    }
+  ]
+}

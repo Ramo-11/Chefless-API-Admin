@@ -1,0 +1,377 @@
+{
+  "cuisine": "Syrian",
+  "names": {
+    "first": ["Bashar", "Lina", "Ghassan", "Hala", "Faisal", "Rana", "Marwan", "Dina", "Samer", "Nada", "Wassim", "Lara"],
+    "last": ["Halabi", "Damashqi", "Al-Atassi", "Sabbagh", "Hourani", "Khaddam", "Tlass", "Al-Aswad", "Mardini", "Shami", "Asfour", "Tannous"]
+  },
+  "recipes": [
+    {
+      "title": "Muhammara",
+      "description": "Aleppine dip of charred red peppers, walnuts and pomegranate molasses, smoky-sweet with a fiery kick of Aleppo pepper.",
+      "ingredients": [
+        {"name": "red bell peppers", "quantity": 4, "unit": "pc"},
+        {"name": "shelled walnuts", "quantity": 200, "unit": "g"},
+        {"name": "fresh breadcrumbs", "quantity": 60, "unit": "g"},
+        {"name": "pomegranate molasses", "quantity": 3, "unit": "tbsp"},
+        {"name": "olive oil", "quantity": 80, "unit": "ml"},
+        {"name": "Aleppo pepper", "quantity": 2, "unit": "tsp"},
+        {"name": "ground cumin", "quantity": 1, "unit": "tsp"},
+        {"name": "garlic clove", "quantity": 2, "unit": "pc"},
+        {"name": "lemon juice", "quantity": 1, "unit": "tbsp"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Roast the peppers under a hot grill for 15 minutes, turning until blackened all over.",
+        "Steam them in a covered bowl for 10 minutes, then peel and seed.",
+        "Toast the walnuts in a dry pan until fragrant.",
+        "Pulse peppers, walnuts, breadcrumbs, garlic, molasses, spices and salt to a coarse paste.",
+        "Stream in olive oil and lemon juice while pulsing to a thick spread.",
+        "Spread on a plate, drizzle with extra olive oil and serve with warm flatbread."
+      ],
+      "tags": ["mezze", "dip", "Aleppo"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 20,
+      "servings": 6
+    },
+    {
+      "title": "Yalanji",
+      "description": "Cold meatless stuffed vine leaves filled with lemony rice, herbs and pomegranate molasses, eaten as a mezze.",
+      "ingredients": [
+        {"name": "vine leaves", "quantity": 50, "unit": "pc"},
+        {"name": "short-grain rice", "quantity": 250, "unit": "g"},
+        {"name": "tomato", "quantity": 2, "unit": "pc"},
+        {"name": "fresh parsley", "quantity": 1, "unit": "bunch"},
+        {"name": "fresh mint", "quantity": 0.5, "unit": "bunch"},
+        {"name": "spring onions", "quantity": 4, "unit": "pc"},
+        {"name": "pomegranate molasses", "quantity": 3, "unit": "tbsp"},
+        {"name": "lemon juice", "quantity": 80, "unit": "ml"},
+        {"name": "olive oil", "quantity": 100, "unit": "ml"},
+        {"name": "ground sumac", "quantity": 2, "unit": "tsp"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"},
+        {"name": "water", "quantity": 700, "unit": "ml"}
+      ],
+      "steps": [
+        "Soak rinsed rice for 20 minutes, then drain.",
+        "Mix rice with chopped tomato, herbs, spring onions, half the oil, half the molasses, sumac and salt.",
+        "Lay each leaf vein-side up, place a heaped teaspoon of filling and roll tightly.",
+        "Line a heavy pot with extra leaves and pack the rolls in tight layers.",
+        "Combine remaining oil, molasses, lemon juice and water and pour over.",
+        "Weight with a plate, cover and simmer 45 minutes; cool to room temperature before serving."
+      ],
+      "tags": ["mezze", "stuffed", "vegan"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 50,
+      "servings": 8
+    },
+    {
+      "title": "Kibbeh Bil Sanieh",
+      "description": "Aleppo's tray-baked kibbeh with a layer of spiced minced lamb and pine nuts sandwiched between bulgur dough.",
+      "ingredients": [
+        {"name": "fine bulgur", "quantity": 300, "unit": "g"},
+        {"name": "lean minced lamb", "quantity": 500, "unit": "g"},
+        {"name": "minced lamb for filling", "quantity": 400, "unit": "g"},
+        {"name": "onion", "quantity": 2, "unit": "pc"},
+        {"name": "pine nuts", "quantity": 60, "unit": "g"},
+        {"name": "ghee", "quantity": 4, "unit": "tbsp"},
+        {"name": "ground allspice", "quantity": 2, "unit": "tsp"},
+        {"name": "ground cinnamon", "quantity": 1, "unit": "tsp"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"},
+        {"name": "olive oil", "quantity": 3, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Soak bulgur 20 minutes and squeeze dry, then process with lean lamb, one onion, salt and 1 tsp allspice to a paste.",
+        "Brown the second chopped onion in ghee, add filling lamb, pine nuts and remaining spices and cook 8 minutes.",
+        "Press half the kibbeh dough firmly into a greased tray as an even layer.",
+        "Spread the cooled filling evenly across the base.",
+        "Top with remaining kibbeh, smoothed with wet hands; score into diamonds and brush with olive oil.",
+        "Bake at 200°C for 35 minutes until deep golden, then rest 10 minutes before cutting."
+      ],
+      "tags": ["lamb", "Aleppo", "baked"],
+      "dietaryTags": ["halal"],
+      "difficulty": "medium",
+      "prepTime": 40,
+      "cookTime": 40,
+      "servings": 8
+    },
+    {
+      "title": "Shish Barak",
+      "description": "Tiny dumplings of spiced lamb baked until golden, then floated in a warm garlicky yogurt sauce.",
+      "ingredients": [
+        {"name": "all-purpose flour", "quantity": 350, "unit": "g"},
+        {"name": "warm water", "quantity": 180, "unit": "ml"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"},
+        {"name": "minced lamb", "quantity": 250, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "ground allspice", "quantity": 1, "unit": "tsp"},
+        {"name": "Greek yogurt", "quantity": 1, "unit": "kg"},
+        {"name": "egg", "quantity": 1, "unit": "pc"},
+        {"name": "cornstarch", "quantity": 1, "unit": "tbsp"},
+        {"name": "garlic cloves", "quantity": 4, "unit": "pc"},
+        {"name": "fresh coriander", "quantity": 0.5, "unit": "bunch"},
+        {"name": "ghee", "quantity": 2, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Knead flour, water and 1 tsp salt to a smooth dough; rest 30 minutes.",
+        "Brown the lamb with chopped onion, allspice and salt for 6 minutes and cool.",
+        "Roll the dough thin, cut into 4 cm rounds, fill with lamb and pinch into tortellini shapes.",
+        "Bake the dumplings at 200°C for 12 minutes until pale gold.",
+        "Whisk yogurt with the egg and cornstarch in a heavy pot and cook over medium heat, stirring constantly until thickened.",
+        "Slip the dumplings into the yogurt; finish with garlic and coriander fried briefly in ghee."
+      ],
+      "tags": ["dumplings", "yogurt", "comfort food"],
+      "dietaryTags": ["halal"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Fattet Hummus",
+      "description": "Damascene breakfast bowl of toasted pita, warm chickpeas and garlicky tahini-yogurt sauce, finished with paprika butter.",
+      "ingredients": [
+        {"name": "cooked chickpeas", "quantity": 500, "unit": "g"},
+        {"name": "pita bread", "quantity": 2, "unit": "pc"},
+        {"name": "Greek yogurt", "quantity": 500, "unit": "g"},
+        {"name": "tahini", "quantity": 3, "unit": "tbsp"},
+        {"name": "garlic cloves", "quantity": 2, "unit": "pc"},
+        {"name": "lemon juice", "quantity": 2, "unit": "tbsp"},
+        {"name": "ghee", "quantity": 3, "unit": "tbsp"},
+        {"name": "paprika", "quantity": 1, "unit": "tsp"},
+        {"name": "pine nuts", "quantity": 40, "unit": "g"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"},
+        {"name": "fresh parsley", "quantity": 2, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Tear pita and toast at 200°C for 6 minutes until crisp.",
+        "Warm chickpeas in their cooking liquid with salt.",
+        "Whisk yogurt with tahini, crushed garlic, lemon and salt.",
+        "Layer pita in a deep dish, top with drained chickpeas, then yogurt sauce.",
+        "Toast pine nuts in ghee, stir in paprika and pour over the dish while sizzling.",
+        "Scatter parsley and serve immediately."
+      ],
+      "tags": ["breakfast", "yogurt", "Damascus"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Sheikh El Mahshi",
+      "description": "Aubergines stuffed with spiced minced lamb and pine nuts, simmered in a rich tomato sauce until silky.",
+      "ingredients": [
+        {"name": "small aubergines", "quantity": 8, "unit": "pc"},
+        {"name": "minced lamb", "quantity": 400, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "pine nuts", "quantity": 50, "unit": "g"},
+        {"name": "tomato paste", "quantity": 3, "unit": "tbsp"},
+        {"name": "ground allspice", "quantity": 1, "unit": "tsp"},
+        {"name": "ground cinnamon", "quantity": 0.5, "unit": "tsp"},
+        {"name": "ghee", "quantity": 3, "unit": "tbsp"},
+        {"name": "frying oil", "quantity": 500, "unit": "ml"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"},
+        {"name": "water", "quantity": 600, "unit": "ml"}
+      ],
+      "steps": [
+        "Slit each aubergine lengthwise without cutting through and salt for 20 minutes.",
+        "Pat dry and shallow-fry the aubergines in oil until tender; drain on paper.",
+        "Brown the lamb with chopped onion, pine nuts, allspice, cinnamon and salt.",
+        "Stuff each aubergine generously with the lamb mixture.",
+        "Lay them in a wide pot, whisk tomato paste with water and salt and pour around.",
+        "Cover and simmer 35 minutes until the sauce thickens; serve with rice."
+      ],
+      "tags": ["stuffed", "stew", "lamb"],
+      "dietaryTags": ["halal"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 50,
+      "servings": 6
+    },
+    {
+      "title": "Mahshi Malfouf",
+      "description": "Cabbage leaves wrapped tightly around lemony rice and lamb, simmered with garlic and dried mint until fragrant.",
+      "ingredients": [
+        {"name": "white cabbage", "quantity": 1, "unit": "pc"},
+        {"name": "short-grain rice", "quantity": 250, "unit": "g"},
+        {"name": "minced lamb", "quantity": 300, "unit": "g"},
+        {"name": "ground allspice", "quantity": 1, "unit": "tsp"},
+        {"name": "ground cinnamon", "quantity": 0.5, "unit": "tsp"},
+        {"name": "garlic cloves", "quantity": 8, "unit": "pc"},
+        {"name": "dried mint", "quantity": 1, "unit": "tbsp"},
+        {"name": "lemon juice", "quantity": 100, "unit": "ml"},
+        {"name": "olive oil", "quantity": 60, "unit": "ml"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"},
+        {"name": "water", "quantity": 800, "unit": "ml"}
+      ],
+      "steps": [
+        "Core the cabbage and blanch the whole head in boiling water, peeling off leaves as they soften.",
+        "Cut large leaves in half along the spine and trim thick ribs.",
+        "Mix rinsed rice with lamb, allspice, cinnamon, salt and a tablespoon of olive oil.",
+        "Place a finger of filling on each leaf and roll tightly into thin cigars.",
+        "Layer rolls in a heavy pot scattered with peeled garlic cloves; weight with a plate.",
+        "Pour water, lemon juice, dried mint and remaining oil over and simmer covered for 50 minutes."
+      ],
+      "tags": ["stuffed", "comfort food", "celebration"],
+      "dietaryTags": ["halal"],
+      "difficulty": "hard",
+      "prepTime": 45,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Kebab Halabi",
+      "description": "Aleppine kebabs of minced lamb baked over sliced tomato and Aleppo pepper sauce, sharp with pomegranate and chili.",
+      "ingredients": [
+        {"name": "minced lamb", "quantity": 700, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "fresh parsley", "quantity": 0.5, "unit": "bunch"},
+        {"name": "Aleppo pepper", "quantity": 2, "unit": "tsp"},
+        {"name": "ground allspice", "quantity": 1, "unit": "tsp"},
+        {"name": "tomatoes", "quantity": 4, "unit": "pc"},
+        {"name": "tomato paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "pomegranate molasses", "quantity": 2, "unit": "tbsp"},
+        {"name": "olive oil", "quantity": 3, "unit": "tbsp"},
+        {"name": "salt", "quantity": 1.5, "unit": "tsp"}
+      ],
+      "steps": [
+        "Grate the onion and squeeze dry, then mix with lamb, chopped parsley, allspice, half the Aleppo pepper and salt.",
+        "Knead the meat for 5 minutes until sticky and shape into 12 fat fingers.",
+        "Slice tomatoes and arrange them across the base of an oven dish.",
+        "Lay the kebabs over the tomatoes; whisk tomato paste, molasses, oil, remaining Aleppo pepper and 100 ml water and pour over.",
+        "Bake at 220°C for 25 minutes until the kebabs are cooked and the sauce is bubbling.",
+        "Rest 5 minutes and serve with rice or flatbread."
+      ],
+      "tags": ["kebab", "Aleppo", "baked"],
+      "dietaryTags": ["halal"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Mahshi Filfil",
+      "description": "Sweet bell peppers stuffed with rice, minced meat and tomato, simmered in a light tomato broth until tender.",
+      "ingredients": [
+        {"name": "bell peppers", "quantity": 8, "unit": "pc"},
+        {"name": "short-grain rice", "quantity": 250, "unit": "g"},
+        {"name": "minced lamb", "quantity": 250, "unit": "g"},
+        {"name": "tomato", "quantity": 2, "unit": "pc"},
+        {"name": "tomato paste", "quantity": 3, "unit": "tbsp"},
+        {"name": "ground allspice", "quantity": 1, "unit": "tsp"},
+        {"name": "ground cumin", "quantity": 0.5, "unit": "tsp"},
+        {"name": "olive oil", "quantity": 3, "unit": "tbsp"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"},
+        {"name": "water", "quantity": 800, "unit": "ml"}
+      ],
+      "steps": [
+        "Slice the tops off the peppers and remove the seeds, keeping the caps as lids.",
+        "Mix rinsed rice with lamb, diced tomato, 1 tablespoon tomato paste, spices and salt.",
+        "Stuff each pepper two-thirds full and replace the cap.",
+        "Stand them upright in a heavy pot.",
+        "Whisk remaining tomato paste, olive oil and water and pour around the peppers.",
+        "Cover and simmer 50 minutes until the rice is fluffy and the peppers are tender."
+      ],
+      "tags": ["stuffed", "stew", "comfort food"],
+      "dietaryTags": ["halal"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Fattoush bil Rumman",
+      "description": "Damascene autumn fattoush dressed with pomegranate molasses and fresh seeds, vibrant with sumac and herbs.",
+      "ingredients": [
+        {"name": "romaine lettuce", "quantity": 1, "unit": "pc"},
+        {"name": "cucumbers", "quantity": 2, "unit": "pc"},
+        {"name": "tomatoes", "quantity": 2, "unit": "pc"},
+        {"name": "radishes", "quantity": 5, "unit": "pc"},
+        {"name": "spring onions", "quantity": 3, "unit": "pc"},
+        {"name": "pita bread", "quantity": 1, "unit": "pc"},
+        {"name": "pomegranate seeds", "quantity": 100, "unit": "g"},
+        {"name": "pomegranate molasses", "quantity": 2, "unit": "tbsp"},
+        {"name": "lemon juice", "quantity": 2, "unit": "tbsp"},
+        {"name": "olive oil", "quantity": 80, "unit": "ml"},
+        {"name": "sumac", "quantity": 2, "unit": "tsp"},
+        {"name": "fresh mint", "quantity": 0.5, "unit": "bunch"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Tear the pita, brush with olive oil and toast at 200°C for 6 minutes until crisp.",
+        "Chop lettuce, cucumbers, tomatoes, radishes and spring onions to bite size.",
+        "Tear in the mint leaves and combine in a wide bowl.",
+        "Whisk olive oil, lemon juice, molasses, sumac and salt together.",
+        "Toss the salad with the dressing and pita chips just before serving.",
+        "Scatter the fresh pomegranate seeds generously over the top."
+      ],
+      "tags": ["salad", "autumn", "Damascus"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 6,
+      "servings": 4
+    },
+    {
+      "title": "Awameh",
+      "description": "Crisp fried dough puffs soaked in fragrant sugar syrup with lemon and orange blossom, eaten throughout the Levant.",
+      "ingredients": [
+        {"name": "all-purpose flour", "quantity": 250, "unit": "g"},
+        {"name": "cornstarch", "quantity": 30, "unit": "g"},
+        {"name": "instant yeast", "quantity": 5, "unit": "g"},
+        {"name": "sugar", "quantity": 1, "unit": "tsp"},
+        {"name": "warm water", "quantity": 300, "unit": "ml"},
+        {"name": "salt", "quantity": 0.25, "unit": "tsp"},
+        {"name": "frying oil", "quantity": 1, "unit": "l"},
+        {"name": "sugar for syrup", "quantity": 400, "unit": "g"},
+        {"name": "water for syrup", "quantity": 250, "unit": "ml"},
+        {"name": "lemon juice", "quantity": 1, "unit": "tbsp"},
+        {"name": "orange blossom water", "quantity": 1, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Whisk flour, cornstarch, yeast, sugar, salt and warm water to a thick batter; let rise 1 hour.",
+        "Make syrup by simmering sugar, water and lemon juice for 10 minutes, then add blossom water and cool.",
+        "Heat oil to 170°C and drop teaspoonfuls of batter into the oil with a wet spoon.",
+        "Fry for 4-5 minutes, turning often, until deep golden and crisp.",
+        "Drain briefly, then drop into the cool syrup for 1 minute.",
+        "Lift onto a plate and serve while still warm and crisp."
+      ],
+      "tags": ["dessert", "fried", "syrup-soaked"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 75,
+      "cookTime": 20,
+      "servings": 8
+    },
+    {
+      "title": "Mhalabieh",
+      "description": "Silky milk pudding set with cornstarch and rose water, topped with chopped pistachios and crushed dried rose.",
+      "ingredients": [
+        {"name": "whole milk", "quantity": 1, "unit": "l"},
+        {"name": "sugar", "quantity": 120, "unit": "g"},
+        {"name": "cornstarch", "quantity": 60, "unit": "g"},
+        {"name": "rose water", "quantity": 1, "unit": "tbsp"},
+        {"name": "orange blossom water", "quantity": 1, "unit": "tsp"},
+        {"name": "ground pistachios", "quantity": 30, "unit": "g"},
+        {"name": "dried rose petals", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Whisk cornstarch into 200 ml of cold milk until completely smooth.",
+        "Heat the rest of the milk with sugar in a heavy pot until just steaming.",
+        "Pour the cornstarch slurry into the warm milk, whisking constantly.",
+        "Cook over medium heat 6-8 minutes, stirring, until thickened to a custard.",
+        "Stir in rose and orange blossom waters, then divide between cups.",
+        "Chill 3 hours and top with pistachios and rose petals before serving."
+      ],
+      "tags": ["dessert", "milk pudding", "fragrant"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 6
+    }
+  ]
+}

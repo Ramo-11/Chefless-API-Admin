@@ -1,0 +1,339 @@
+{
+  "cuisine": "Chilean",
+  "names": {
+    "first": ["Matías", "Camila", "Sebastián", "Javiera", "Cristóbal", "Florencia", "Vicente", "Isidora", "Tomás", "Antonia", "Benjamín", "Catalina"],
+    "last": ["González", "Muñoz", "Rojas", "Díaz", "Pérez", "Soto", "Contreras", "Silva", "Martínez", "Sepúlveda", "Espinoza", "Tapia"]
+  },
+  "recipes": [
+    {
+      "title": "Empanadas de Pino",
+      "description": "Baked Chilean empanadas filled with seasoned ground beef, onions, hard-boiled egg, olives and raisins.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 500, "unit": "g" },
+        { "name": "lard or butter", "quantity": 150, "unit": "g" },
+        { "name": "warm water", "quantity": 200, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "ground beef", "quantity": 500, "unit": "g" },
+        { "name": "onions, finely diced", "quantity": 3, "unit": "pc" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "paprika", "quantity": 1, "unit": "tbsp" },
+        { "name": "black olives", "quantity": 12, "unit": "pc" },
+        { "name": "raisins", "quantity": 50, "unit": "g" },
+        { "name": "hard-boiled eggs, quartered", "quantity": 3, "unit": "pc" },
+        { "name": "egg yolk for brushing", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Mix flour and salt, rub in melted lard, then add warm water to form a smooth dough. Rest 30 minutes.",
+        "Sauté onions until translucent, add ground beef, cumin, paprika, salt and pepper, cook until browned.",
+        "Cool the pino filling completely and refrigerate so the fat sets and it's easy to handle.",
+        "Roll dough thin and cut 15 cm circles.",
+        "Place a spoonful of pino, an olive, a few raisins, and a quarter of egg on each circle.",
+        "Fold into a half-moon, seal edges with water, and tuck the corners to form the classic empanada shape.",
+        "Brush with egg yolk and bake at 200°C for 20-25 minutes until deep golden."
+      ],
+      "tags": ["pastry", "beef", "baked", "national-dish"],
+      "difficulty": "medium",
+      "prepTime": 60,
+      "cookTime": 25,
+      "servings": 12
+    },
+    {
+      "title": "Pastel de Choclo",
+      "description": "Chilean corn pie with a spiced beef pino base, chicken, olives and raisins, topped with a sweet ground corn crust.",
+      "ingredients": [
+        { "name": "fresh corn kernels", "quantity": 1, "unit": "kg" },
+        { "name": "milk", "quantity": 200, "unit": "ml" },
+        { "name": "fresh basil", "quantity": 1, "unit": "bunch" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "ground beef", "quantity": 500, "unit": "g" },
+        { "name": "onions, diced", "quantity": 2, "unit": "pc" },
+        { "name": "chicken thighs, cooked and shredded", "quantity": 300, "unit": "g" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "paprika", "quantity": 1, "unit": "tbsp" },
+        { "name": "black olives", "quantity": 8, "unit": "pc" },
+        { "name": "raisins", "quantity": 50, "unit": "g" },
+        { "name": "hard-boiled eggs, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "sugar for topping", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Blend corn kernels with milk and basil until smooth, then cook with butter until thickened. Season with salt.",
+        "Sauté onions, add ground beef, cumin and paprika, cook until browned.",
+        "Layer the pino in individual clay dishes, then add shredded chicken, olives, raisins and egg slices.",
+        "Cover with the corn purée and smooth the top.",
+        "Sprinkle with sugar and bake at 200°C for 25-30 minutes until the top is golden and caramelised."
+      ],
+      "tags": ["corn", "casserole", "baked", "national-dish"],
+      "difficulty": "medium",
+      "prepTime": 45,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Cazuela",
+      "description": "Hearty Chilean broth-based stew with beef or chicken, pumpkin, corn, potato and rice.",
+      "ingredients": [
+        { "name": "beef shank or chicken pieces", "quantity": 1, "unit": "kg" },
+        { "name": "potatoes, halved", "quantity": 4, "unit": "pc" },
+        { "name": "pumpkin, in chunks", "quantity": 500, "unit": "g" },
+        { "name": "fresh corn on the cob, in rounds", "quantity": 2, "unit": "pc" },
+        { "name": "carrot, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "long-grain rice", "quantity": 100, "unit": "g" },
+        { "name": "green beans", "quantity": 100, "unit": "g" },
+        { "name": "fresh cilantro", "quantity": 1, "unit": "bunch" },
+        { "name": "water", "quantity": 2.5, "unit": "l" }
+      ],
+      "steps": [
+        "Place meat, onion and water in a large pot, season with salt and simmer 45 minutes, skimming foam.",
+        "Add potatoes, pumpkin and carrot and cook 15 minutes.",
+        "Add corn rounds, green beans and rice and cook another 15 minutes until rice is tender.",
+        "Adjust seasoning, finish with chopped cilantro and serve a piece of meat with broth and vegetables in each bowl."
+      ],
+      "tags": ["soup", "stew", "comfort-food"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 75,
+      "servings": 6
+    },
+    {
+      "title": "Curanto",
+      "description": "Chiloé island feast of shellfish, meats, sausages, potatoes and milcao traditionally cooked over hot stones in an earth pit.",
+      "ingredients": [
+        { "name": "mussels", "quantity": 1, "unit": "kg" },
+        { "name": "clams", "quantity": 1, "unit": "kg" },
+        { "name": "smoked pork ribs", "quantity": 500, "unit": "g" },
+        { "name": "chicken pieces", "quantity": 500, "unit": "g" },
+        { "name": "longaniza sausages", "quantity": 4, "unit": "pc" },
+        { "name": "potatoes, peeled", "quantity": 6, "unit": "pc" },
+        { "name": "grated raw potato for milcao", "quantity": 500, "unit": "g" },
+        { "name": "mashed potato for chapaleles", "quantity": 500, "unit": "g" },
+        { "name": "wheat flour", "quantity": 200, "unit": "g" },
+        { "name": "white wine", "quantity": 250, "unit": "ml" },
+        { "name": "cabbage leaves", "quantity": 8, "unit": "pc" }
+      ],
+      "steps": [
+        "Mix grated and mashed potato with flour and salt to form milcao and chapalele dough patties.",
+        "In a large pot, layer chicken, ribs and sausages on the bottom, pour in wine and a little water.",
+        "Add potatoes and the milcao and chapalele patties on top of the meats.",
+        "Top with mussels and clams and cover everything with cabbage leaves to trap steam.",
+        "Cover tightly and steam for 45-60 minutes until shellfish open and meats are cooked through.",
+        "Serve in deep bowls with the resulting broth ladled over."
+      ],
+      "tags": ["seafood", "feast", "traditional", "chiloé"],
+      "difficulty": "hard",
+      "prepTime": 45,
+      "cookTime": 60,
+      "servings": 8
+    },
+    {
+      "title": "Completo",
+      "description": "Chilean-style hot dog loaded with diced tomato, mashed avocado, sauerkraut and mayonnaise.",
+      "ingredients": [
+        { "name": "hot dog buns", "quantity": 4, "unit": "pc" },
+        { "name": "frankfurter sausages", "quantity": 4, "unit": "pc" },
+        { "name": "ripe avocados, mashed", "quantity": 2, "unit": "pc" },
+        { "name": "tomatoes, finely diced", "quantity": 2, "unit": "pc" },
+        { "name": "sauerkraut, drained", "quantity": 150, "unit": "g" },
+        { "name": "mayonnaise", "quantity": 100, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "pinch" }
+      ],
+      "steps": [
+        "Boil the frankfurters in water for 5 minutes until heated through.",
+        "Warm the buns briefly in the oven or steamer.",
+        "Place a sausage in each bun and top with diced tomato, then sauerkraut.",
+        "Spread mashed avocado on top, season with salt, and finish with a generous swirl of mayonnaise."
+      ],
+      "tags": ["street-food", "sandwich", "quick"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 5,
+      "servings": 4
+    },
+    {
+      "title": "Humitas",
+      "description": "Chilean fresh corn parcels seasoned with basil and onion, wrapped in corn husks and steamed.",
+      "ingredients": [
+        { "name": "fresh corn kernels", "quantity": 1, "unit": "kg" },
+        { "name": "fresh basil leaves", "quantity": 1, "unit": "bunch" },
+        { "name": "onion, finely diced", "quantity": 1, "unit": "pc" },
+        { "name": "butter", "quantity": 50, "unit": "g" },
+        { "name": "paprika", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "corn husks", "quantity": 20, "unit": "pc" }
+      ],
+      "steps": [
+        "Sauté onion in butter with paprika until soft, then cool.",
+        "Blend corn kernels and basil into a thick paste; mix with the cooked onion and salt.",
+        "Place two overlapping husks, spoon corn mixture into the centre, fold sides over and tie with husk strips.",
+        "Steam the parcels upright for 45 minutes until firm.",
+        "Serve hot, traditionally with a sprinkle of sugar or fresh tomato salad."
+      ],
+      "tags": ["corn", "steamed", "vegetarian"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 45,
+      "servings": 8
+    },
+    {
+      "title": "Asado Chileno",
+      "description": "Chilean-style grilled meats including beef, pork ribs, longaniza and chicken cooked over wood embers.",
+      "ingredients": [
+        { "name": "beef short ribs", "quantity": 1, "unit": "kg" },
+        { "name": "pork ribs", "quantity": 1, "unit": "kg" },
+        { "name": "longaniza sausages", "quantity": 6, "unit": "pc" },
+        { "name": "chicken pieces", "quantity": 1, "unit": "kg" },
+        { "name": "coarse salt", "quantity": 3, "unit": "tbsp" },
+        { "name": "lemons, halved", "quantity": 2, "unit": "pc" }
+      ],
+      "steps": [
+        "Light a wood or charcoal fire and let it burn down to glowing embers.",
+        "Generously salt all the meats just before grilling.",
+        "Grill the slow pieces (ribs) first over medium heat, turning occasionally, for 60-90 minutes.",
+        "Add the chicken and sausages to the grill and cook for 25-35 minutes, turning until the skin is crisp and juices run clear.",
+        "Rest the meats briefly, slice and serve with lemon wedges, pebre and crusty bread."
+      ],
+      "tags": ["grill", "barbecue", "meat", "celebration"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 90,
+      "servings": 8
+    },
+    {
+      "title": "Sopaipillas",
+      "description": "Chilean fried pumpkin dough discs, often served with pebre or drenched in chancaca syrup in winter.",
+      "ingredients": [
+        { "name": "cooked mashed pumpkin", "quantity": 250, "unit": "g" },
+        { "name": "all-purpose flour", "quantity": 350, "unit": "g" },
+        { "name": "lard or butter, melted", "quantity": 60, "unit": "g" },
+        { "name": "baking powder", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "oil for frying", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "Mix warm mashed pumpkin with melted lard, then add flour, baking powder and salt to form a soft dough.",
+        "Rest the dough 20 minutes, then roll out 5 mm thick.",
+        "Cut 8 cm circles and prick each with a fork.",
+        "Heat oil to 180°C and fry sopaipillas in batches until puffed and golden, about 2 minutes per side.",
+        "Drain on paper and serve warm with pebre or with chancaca syrup for sopaipillas pasadas."
+      ],
+      "tags": ["fried", "snack", "street-food"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 25,
+      "cookTime": 20,
+      "servings": 12
+    },
+    {
+      "title": "Pebre",
+      "description": "Chilean fresh herb and chilli salsa with onion, tomato, cilantro and ají, served with bread or grilled meats.",
+      "ingredients": [
+        { "name": "tomatoes, finely diced", "quantity": 3, "unit": "pc" },
+        { "name": "red onion, finely diced", "quantity": 1, "unit": "pc" },
+        { "name": "fresh cilantro, chopped", "quantity": 1, "unit": "bunch" },
+        { "name": "ají verde or green chilli, minced", "quantity": 1, "unit": "pc" },
+        { "name": "garlic clove, minced", "quantity": 1, "unit": "pc" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "red wine vinegar", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak the diced onion in cold water for 5 minutes, then drain to mellow its bite.",
+        "Combine onion, tomato, cilantro, chilli and garlic in a bowl.",
+        "Stir in olive oil, vinegar and salt and let rest 15 minutes for flavours to meld.",
+        "Serve with crusty bread, sopaipillas or grilled meats."
+      ],
+      "tags": ["salsa", "condiment", "no-cook"],
+      "dietaryTags": ["vegan", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 0,
+      "servings": 6
+    },
+    {
+      "title": "Pollo a la Plancha",
+      "description": "Chilean-style griddled chicken breast marinated in garlic, lemon and oregano, served with salad or rice.",
+      "ingredients": [
+        { "name": "chicken breasts", "quantity": 4, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "lemon juice", "quantity": 60, "unit": "ml" },
+        { "name": "dried oregano", "quantity": 1, "unit": "tbsp" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Pound the chicken breasts to even thickness.",
+        "Mix garlic, lemon juice, oregano, oil, salt and pepper, and marinate the chicken for at least 30 minutes.",
+        "Heat a flat griddle or heavy pan over medium-high heat with a thin film of oil.",
+        "Sear the chicken 4-5 minutes per side until golden and cooked through.",
+        "Rest 3 minutes, then serve with rice, salad or pebre."
+      ],
+      "tags": ["chicken", "griddle", "weeknight"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 35,
+      "cookTime": 12,
+      "servings": 4
+    },
+    {
+      "title": "Charquicán",
+      "description": "Chilean mashed stew of beef, pumpkin, potato, corn and green beans, often topped with a fried egg.",
+      "ingredients": [
+        { "name": "beef chuck, diced", "quantity": 400, "unit": "g" },
+        { "name": "onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "garlic clove, minced", "quantity": 2, "unit": "pc" },
+        { "name": "pumpkin, diced", "quantity": 500, "unit": "g" },
+        { "name": "potatoes, diced", "quantity": 500, "unit": "g" },
+        { "name": "corn kernels", "quantity": 200, "unit": "g" },
+        { "name": "green beans, chopped", "quantity": 150, "unit": "g" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "paprika", "quantity": 1, "unit": "tbsp" },
+        { "name": "beef stock", "quantity": 500, "unit": "ml" },
+        { "name": "eggs (optional, for topping)", "quantity": 4, "unit": "pc" }
+      ],
+      "steps": [
+        "Brown the beef in a heavy pot, then remove.",
+        "Sauté onion and garlic with cumin and paprika until soft.",
+        "Return the beef and add pumpkin, potatoes and stock; simmer 25 minutes.",
+        "Add corn and green beans and cook 10 more minutes until everything is tender.",
+        "Mash roughly with a wooden spoon to a chunky purée and adjust seasoning.",
+        "Top each serving with a fried egg, if desired."
+      ],
+      "tags": ["stew", "comfort-food", "one-pot"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 45,
+      "servings": 4
+    },
+    {
+      "title": "Porotos Granados",
+      "description": "Chilean summer stew of fresh cranberry beans, pumpkin, corn and basil.",
+      "ingredients": [
+        { "name": "fresh cranberry beans (porotos granados)", "quantity": 500, "unit": "g" },
+        { "name": "pumpkin, diced", "quantity": 500, "unit": "g" },
+        { "name": "fresh corn kernels", "quantity": 300, "unit": "g" },
+        { "name": "onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "garlic clove, minced", "quantity": 2, "unit": "pc" },
+        { "name": "tomatoes, peeled and diced", "quantity": 2, "unit": "pc" },
+        { "name": "paprika", "quantity": 1, "unit": "tbsp" },
+        { "name": "fresh basil leaves", "quantity": 1, "unit": "bunch" },
+        { "name": "olive oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "water", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "Sauté onion and garlic in olive oil with paprika until soft.",
+        "Add tomatoes and cook 5 minutes until they break down.",
+        "Add beans, pumpkin and water and simmer 30 minutes until beans are tender.",
+        "Add corn and a handful of chopped basil and cook 10 more minutes; the pumpkin should partly dissolve to thicken the stew.",
+        "Adjust seasoning and serve with extra basil on top."
+      ],
+      "tags": ["stew", "beans", "summer", "vegetarian"],
+      "dietaryTags": ["vegetarian", "vegan"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 45,
+      "servings": 6
+    }
+  ]
+}

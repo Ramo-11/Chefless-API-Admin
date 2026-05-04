@@ -64,8 +64,6 @@
               <% if (user.isPremium) { %>
                 <% if (user.premiumPlan === 'admin') { %>
                   <span class="badge badge-premium" title="Granted by an admin"><i class="fas fa-crown"></i> Premium · Comp</span>
-                <% } else if (user.premiumPlan === 'promo') { %>
-                  <span class="badge badge-premium" title="Activated via promo code"><i class="fas fa-crown"></i> Premium · Promo</span>
                 <% } else { %>
                   <span class="badge badge-premium" title="Paid subscriber"><i class="fas fa-crown"></i> Premium · Paid</span>
                 <% } %>
@@ -300,7 +298,6 @@
                     : '';
                   return `Comp — granted by ${granter}${when}`;
                 }
-                if (plan === 'promo') return 'Promo code';
                 if (plan === 'monthly') return 'Paid · monthly';
                 if (plan === 'annual') return 'Paid · annual';
                 return 'Yes';

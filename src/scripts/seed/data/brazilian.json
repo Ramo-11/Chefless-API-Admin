@@ -1,0 +1,470 @@
+{
+  "cuisine": "Brazilian",
+  "names": {
+    "first": ["Lucas", "Mateus", "Gabriel", "Rafael", "Bruno", "Thiago", "Ana", "Mariana", "Beatriz", "Camila", "Juliana", "Luiza"],
+    "last": ["Silva", "Santos", "Oliveira", "Souza", "Pereira", "Costa", "Rodrigues", "Almeida", "Ferreira", "Carvalho"]
+  },
+  "recipes": [
+    {
+      "title": "Feijoada",
+      "description": "Brazil's national dish: a rich black bean stew slow-cooked with smoked pork, sausage, and beef, served with rice, farofa, and orange slices.",
+      "ingredients": [
+        { "name": "black beans", "quantity": 500, "unit": "g" },
+        { "name": "smoked pork ribs", "quantity": 400, "unit": "g" },
+        { "name": "carne seca (dried beef)", "quantity": 300, "unit": "g" },
+        { "name": "linguiça calabresa sausage", "quantity": 250, "unit": "g" },
+        { "name": "bacon", "quantity": 150, "unit": "g" },
+        { "name": "onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 5, "unit": "pc" },
+        { "name": "bay leaves", "quantity": 3, "unit": "pc" },
+        { "name": "olive oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "orange, sliced", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Soak black beans in cold water overnight, then drain.",
+        "Soak carne seca in cold water for 4 hours, changing the water twice, then cut into chunks.",
+        "In a large pot, cover beans with fresh water, add bay leaves, and simmer for 1 hour until starting to soften.",
+        "Add carne seca, smoked ribs, sausage, and bacon. Continue simmering for 1 hour more.",
+        "In a skillet, sauté onion and garlic in olive oil until golden, then stir into the bean pot.",
+        "Cook another 30 minutes uncovered until the broth is thick and beans are creamy.",
+        "Season with salt and pepper. Serve with white rice, farofa, sautéed collard greens, and orange slices."
+      ],
+      "tags": ["stew", "national dish", "pork", "beans", "comfort food"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 180,
+      "servings": 8
+    },
+    {
+      "title": "Pão de Queijo",
+      "description": "Iconic Brazilian cheese bread from Minas Gerais — chewy, gluten-free puffs made with tapioca flour and Minas cheese.",
+      "ingredients": [
+        { "name": "sour tapioca flour (polvilho azedo)", "quantity": 250, "unit": "g" },
+        { "name": "milk", "quantity": 120, "unit": "ml" },
+        { "name": "vegetable oil", "quantity": 60, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "eggs", "quantity": 2, "unit": "pc" },
+        { "name": "grated Minas or parmesan cheese", "quantity": 200, "unit": "g" }
+      ],
+      "steps": [
+        "Preheat oven to 200°C (400°F) and line a baking sheet with parchment.",
+        "In a saucepan, combine milk, oil, and salt. Bring to a gentle boil.",
+        "Pour the hot liquid over the tapioca flour in a bowl and stir vigorously until a sticky paste forms.",
+        "Let rest for 10 minutes until cool enough to handle.",
+        "Add eggs one at a time, mixing well, then knead in the grated cheese until smooth.",
+        "Roll dough into golf-ball-sized rounds with oiled hands and place on the tray.",
+        "Bake for 20–25 minutes until puffed and lightly golden. Serve warm."
+      ],
+      "tags": ["cheese bread", "snack", "gluten-free", "Minas Gerais", "breakfast"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 6
+    },
+    {
+      "title": "Moqueca",
+      "description": "Bahian seafood stew simmered in coconut milk, tomatoes, peppers, and dendê (palm) oil, perfumed with cilantro and lime.",
+      "ingredients": [
+        { "name": "white fish fillets (grouper or snapper)", "quantity": 700, "unit": "g" },
+        { "name": "lime juice", "quantity": 60, "unit": "ml" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "onion, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "red bell pepper, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "yellow bell pepper, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "tomatoes, sliced", "quantity": 3, "unit": "pc" },
+        { "name": "coconut milk", "quantity": 400, "unit": "ml" },
+        { "name": "dendê (palm) oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "cilantro, chopped", "quantity": 1, "unit": "bunch" }
+      ],
+      "steps": [
+        "Marinate fish with lime juice, garlic, salt, and pepper for 20 minutes.",
+        "In a wide clay or heavy pot, layer half the onions, peppers, and tomatoes on the bottom.",
+        "Place fish fillets on top, then layer the remaining vegetables over the fish.",
+        "Pour coconut milk and dendê oil over everything and scatter cilantro on top.",
+        "Cover and simmer over medium-low heat for 20–25 minutes until fish is cooked through.",
+        "Taste, adjust salt, and finish with more fresh cilantro.",
+        "Serve immediately with white rice and pirão (manioc flour porridge made from the broth)."
+      ],
+      "tags": ["seafood", "stew", "Bahia", "coconut", "fish"],
+      "dietaryTags": ["gluten-free", "dairy-free"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Brigadeiro",
+      "description": "Brazil's beloved chocolate fudge truffle made from condensed milk and cocoa, rolled in chocolate sprinkles.",
+      "ingredients": [
+        { "name": "sweetened condensed milk", "quantity": 395, "unit": "g" },
+        { "name": "unsweetened cocoa powder", "quantity": 3, "unit": "tbsp" },
+        { "name": "unsalted butter", "quantity": 1, "unit": "tbsp" },
+        { "name": "chocolate sprinkles", "quantity": 100, "unit": "g" }
+      ],
+      "steps": [
+        "In a non-stick saucepan, combine condensed milk, cocoa powder, and butter over medium-low heat.",
+        "Stir constantly with a wooden spoon for 10–12 minutes.",
+        "The mixture is ready when you tilt the pan and the brigadeiro slides off cleanly without leaving residue.",
+        "Pour onto a buttered plate and let cool to room temperature, then refrigerate 30 minutes.",
+        "With buttered hands, roll the mixture into small balls about 2 cm in diameter.",
+        "Roll each ball in chocolate sprinkles to coat completely.",
+        "Place in mini paper cups and serve at room temperature."
+      ],
+      "tags": ["dessert", "chocolate", "truffle", "party food", "sweet"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 20
+    },
+    {
+      "title": "Coxinha",
+      "description": "Teardrop-shaped fried pastries filled with shredded chicken and cream cheese, coated in breadcrumbs.",
+      "ingredients": [
+        { "name": "chicken breast", "quantity": 400, "unit": "g" },
+        { "name": "chicken broth", "quantity": 500, "unit": "ml" },
+        { "name": "all-purpose flour", "quantity": 350, "unit": "g" },
+        { "name": "milk", "quantity": 250, "unit": "ml" },
+        { "name": "butter", "quantity": 30, "unit": "g" },
+        { "name": "cream cheese", "quantity": 100, "unit": "g" },
+        { "name": "onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "eggs, beaten", "quantity": 2, "unit": "pc" },
+        { "name": "breadcrumbs", "quantity": 200, "unit": "g" },
+        { "name": "vegetable oil for frying", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "Poach chicken breast in broth for 20 minutes, then shred finely. Reserve 500 ml of the broth.",
+        "Sauté onion in butter until soft, add shredded chicken and cream cheese, season, and chill.",
+        "In a pot, bring reserved broth and milk to a boil with a pinch of salt.",
+        "Add flour all at once and stir vigorously over heat until a smooth dough forms and pulls from the pan.",
+        "Cool dough until handleable, then take a tablespoon, flatten in your palm, fill with chicken, and shape into a teardrop.",
+        "Dip each coxinha in beaten egg, then breadcrumbs to coat fully.",
+        "Deep fry at 175°C in batches until golden brown, about 4 minutes. Drain on paper towels and serve hot."
+      ],
+      "tags": ["snack", "fried", "chicken", "street food", "appetizer"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 30,
+      "servings": 12
+    },
+    {
+      "title": "Acarajé",
+      "description": "Bahian black-eyed pea fritters fried in dendê oil, traditionally split open and stuffed with vatapá and shrimp.",
+      "ingredients": [
+        { "name": "black-eyed peas", "quantity": 400, "unit": "g" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "dendê (palm) oil for frying", "quantity": 750, "unit": "ml" },
+        { "name": "dried shrimp", "quantity": 100, "unit": "g" }
+      ],
+      "steps": [
+        "Soak black-eyed peas in cold water for 8 hours, then rub between your hands to remove the skins.",
+        "Rinse repeatedly until skins float off and only the white peas remain.",
+        "Drain and blend peas with chopped onion and salt to a thick, fluffy paste — beat by hand for 5 minutes to incorporate air.",
+        "Heat dendê oil in a deep pan to about 175°C.",
+        "Using two soup spoons, scoop oval portions of paste and slide gently into the oil.",
+        "Fry for about 5 minutes, turning, until deep orange and crisp on the outside.",
+        "Drain on paper towels, slice open, and stuff with vatapá, caruru, and dried shrimp."
+      ],
+      "tags": ["street food", "Bahia", "fritter", "Afro-Brazilian", "snack"],
+      "dietaryTags": ["gluten-free", "dairy-free"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 25,
+      "servings": 6
+    },
+    {
+      "title": "Vatapá",
+      "description": "Bahian creamy paste of bread, shrimp, coconut milk, peanuts, and dendê oil — served with acarajé or rice.",
+      "ingredients": [
+        { "name": "stale bread, crusts removed", "quantity": 250, "unit": "g" },
+        { "name": "coconut milk", "quantity": 400, "unit": "ml" },
+        { "name": "milk", "quantity": 250, "unit": "ml" },
+        { "name": "fresh shrimp, peeled", "quantity": 250, "unit": "g" },
+        { "name": "dried shrimp", "quantity": 100, "unit": "g" },
+        { "name": "roasted peanuts", "quantity": 100, "unit": "g" },
+        { "name": "cashews", "quantity": 80, "unit": "g" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 3, "unit": "pc" },
+        { "name": "ginger, grated", "quantity": 1, "unit": "tbsp" },
+        { "name": "dendê (palm) oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "cilantro, chopped", "quantity": 1, "unit": "bunch" }
+      ],
+      "steps": [
+        "Soak bread in milk until softened, about 15 minutes.",
+        "Blend dried shrimp, peanuts, cashews, onion, garlic, and ginger to a fine paste.",
+        "Heat dendê oil in a heavy pot and sauté the nut-shrimp paste for 3 minutes.",
+        "Add the soaked bread mixture and coconut milk, stirring constantly over low heat.",
+        "Cook 15 minutes until thick, smooth, and creamy, stirring to prevent sticking.",
+        "Add fresh shrimp and cook 5 more minutes until pink and just cooked through.",
+        "Stir in cilantro, season with salt, and serve warm with rice or as filling for acarajé."
+      ],
+      "tags": ["Bahia", "shrimp", "coconut", "stew", "Afro-Brazilian"],
+      "dietaryTags": ["dairy-free"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Picanha",
+      "description": "Brazil's prized cut of top sirloin cap, salt-crusted and grilled over charcoal until charred outside and rosy within.",
+      "ingredients": [
+        { "name": "picanha (top sirloin cap)", "quantity": 1.2, "unit": "kg" },
+        { "name": "coarse rock salt", "quantity": 3, "unit": "tbsp" },
+        { "name": "garlic cloves, sliced", "quantity": 4, "unit": "pc" }
+      ],
+      "steps": [
+        "Bring picanha to room temperature 30 minutes before grilling, fat cap intact.",
+        "Score the fat cap in a diamond pattern, being careful not to cut into the meat.",
+        "Cut the picanha against the grain into thick C-shaped steaks (about 4 cm wide).",
+        "Generously coat each steak with coarse rock salt on all sides.",
+        "Skewer each steak in a U-shape, fat side up, on a long metal skewer.",
+        "Grill over hot charcoal, fat side up first for 5 minutes, turning every few minutes for 12–15 minutes total.",
+        "Brush off excess salt, slice thinly against the grain, and serve with farofa and chimichurri."
+      ],
+      "tags": ["beef", "grilled", "churrasco", "barbecue", "main course"],
+      "dietaryTags": ["gluten-free", "dairy-free"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Farofa",
+      "description": "Toasted cassava flour mixture seasoned with bacon, onions, and eggs — Brazil's classic side for grilled meats.",
+      "ingredients": [
+        { "name": "cassava flour (farinha de mandioca)", "quantity": 300, "unit": "g" },
+        { "name": "bacon, diced", "quantity": 150, "unit": "g" },
+        { "name": "butter", "quantity": 50, "unit": "g" },
+        { "name": "onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "eggs, beaten", "quantity": 2, "unit": "pc" },
+        { "name": "scallions, sliced", "quantity": 3, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "In a large skillet, render bacon over medium heat until crisp. Remove and reserve, leaving fat in pan.",
+        "Add butter to the bacon fat, then sauté onion until translucent and garlic until fragrant.",
+        "Pour in beaten eggs and scramble lightly until just set.",
+        "Reduce heat to low and gradually stir in the cassava flour, mixing constantly so it absorbs the fat evenly.",
+        "Toast the flour mixture for 5–7 minutes until golden and fragrant, stirring frequently.",
+        "Return crispy bacon to the pan, add scallions, and season with salt.",
+        "Serve warm as a side dish for feijoada, picanha, or any grilled meat."
+      ],
+      "tags": ["side dish", "cassava", "bacon", "churrasco accompaniment"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 6
+    },
+    {
+      "title": "Empadão de Frango",
+      "description": "Large Brazilian chicken pot pie with buttery crust and creamy chicken filling laced with hearts of palm and olives.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 400, "unit": "g" },
+        { "name": "cold butter, cubed", "quantity": 200, "unit": "g" },
+        { "name": "egg yolks", "quantity": 2, "unit": "pc" },
+        { "name": "ice water", "quantity": 60, "unit": "ml" },
+        { "name": "cooked shredded chicken", "quantity": 500, "unit": "g" },
+        { "name": "tomato sauce", "quantity": 200, "unit": "ml" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 2, "unit": "pc" },
+        { "name": "hearts of palm, sliced", "quantity": 150, "unit": "g" },
+        { "name": "green olives, sliced", "quantity": 80, "unit": "g" },
+        { "name": "cream cheese", "quantity": 100, "unit": "g" },
+        { "name": "egg, beaten (for wash)", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Make pastry: pulse flour, butter, salt, yolks, and ice water until dough forms. Chill 30 minutes.",
+        "Sauté onion and garlic, add chicken, tomato sauce, hearts of palm, and olives. Simmer 10 minutes.",
+        "Stir in cream cheese, season, and let cool to room temperature.",
+        "Roll out two-thirds of the dough and line a 24 cm pie pan, pressing into the corners.",
+        "Fill with chicken mixture, then roll out remaining dough and lay over the top, sealing edges.",
+        "Brush with beaten egg and prick the top to vent.",
+        "Bake at 180°C (350°F) for 40 minutes until deeply golden. Rest 10 minutes before slicing."
+      ],
+      "tags": ["pie", "chicken", "savory", "comfort food", "main course"],
+      "difficulty": "medium",
+      "prepTime": 45,
+      "cookTime": 45,
+      "servings": 8
+    },
+    {
+      "title": "Pamonha",
+      "description": "Sweet or savory fresh corn dumplings wrapped in their own husks and boiled — a classic from central Brazil.",
+      "ingredients": [
+        { "name": "fresh corn kernels (with husks reserved)", "quantity": 1, "unit": "kg" },
+        { "name": "milk", "quantity": 100, "unit": "ml" },
+        { "name": "sugar", "quantity": 80, "unit": "g" },
+        { "name": "butter, melted", "quantity": 50, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "kitchen twine", "quantity": 2, "unit": "pc" }
+      ],
+      "steps": [
+        "Carefully strip the husks from the corn cobs in whole pieces, then trim and reserve the largest leaves.",
+        "Cut the kernels off the cobs and blend with milk, sugar, butter, and salt until smooth but textured.",
+        "Form pouches with two overlapping husks, folding the bottom closed.",
+        "Spoon the corn paste into each pouch, fold over, and tie firmly with twine.",
+        "Bring a large pot of salted water to a boil and gently lower the parcels in.",
+        "Boil for 50–60 minutes, keeping the parcels submerged with a plate.",
+        "Drain, untie, and serve hot in their husks. Enjoy with butter or cheese."
+      ],
+      "tags": ["corn", "dumpling", "snack", "central Brazil", "festive"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Bobó de Camarão",
+      "description": "Bahian shrimp and cassava cream stew flavored with coconut milk, tomatoes, and dendê oil.",
+      "ingredients": [
+        { "name": "shrimp, peeled and deveined", "quantity": 500, "unit": "g" },
+        { "name": "cassava (yuca), peeled and cubed", "quantity": 700, "unit": "g" },
+        { "name": "coconut milk", "quantity": 400, "unit": "ml" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "tomatoes, chopped", "quantity": 3, "unit": "pc" },
+        { "name": "red bell pepper, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "dendê (palm) oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "lime juice", "quantity": 1, "unit": "tbsp" },
+        { "name": "cilantro, chopped", "quantity": 1, "unit": "bunch" }
+      ],
+      "steps": [
+        "Marinate shrimp in lime juice, half the garlic, and salt for 15 minutes.",
+        "Boil cassava chunks in salted water for 20 minutes until very soft. Drain, reserving some cooking liquid.",
+        "Blend cooked cassava with coconut milk and a little cooking liquid into a smooth, thick cream.",
+        "In a large pot, heat dendê oil and sauté onion, remaining garlic, peppers, and tomatoes for 8 minutes.",
+        "Stir in the cassava-coconut cream and simmer 10 minutes, adjusting consistency with cooking liquid.",
+        "Add shrimp and cook 4–5 minutes until pink and just cooked.",
+        "Finish with cilantro, season with salt, and serve over white rice."
+      ],
+      "tags": ["seafood", "stew", "Bahia", "cassava", "coconut"],
+      "dietaryTags": ["gluten-free", "dairy-free"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 40,
+      "servings": 6
+    },
+    {
+      "title": "Pastel",
+      "description": "Crisp deep-fried Brazilian street pastries with thin dough and assorted fillings like cheese, beef, or hearts of palm.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 500, "unit": "g" },
+        { "name": "warm water", "quantity": 220, "unit": "ml" },
+        { "name": "cachaça or vodka", "quantity": 1, "unit": "tbsp" },
+        { "name": "vegetable oil (for dough)", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "ground beef", "quantity": 300, "unit": "g" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 2, "unit": "pc" },
+        { "name": "green olives, chopped", "quantity": 50, "unit": "g" },
+        { "name": "vegetable oil for frying", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "Mix flour, salt, oil, cachaça, and warm water until a smooth dough forms. Knead 5 minutes, rest 30 minutes.",
+        "Brown ground beef with onion and garlic, season, stir in olives, and let cool.",
+        "Roll dough as thin as possible (almost see-through) on a floured surface.",
+        "Cut into 12 cm squares, place 1 tbsp of filling in the center of each.",
+        "Fold over to form rectangles, pressing edges and sealing with a fork or pastry wheel.",
+        "Heat oil to 180°C and fry pastéis 1–2 at a time for about 90 seconds per side, basting with oil to puff them.",
+        "Drain on paper towels and serve immediately with hot sauce or sugarcane juice."
+      ],
+      "tags": ["street food", "fried", "snack", "pastry", "appetizer"],
+      "difficulty": "medium",
+      "prepTime": 45,
+      "cookTime": 25,
+      "servings": 6
+    },
+    {
+      "title": "Caruru",
+      "description": "Bahian okra stew with shrimp, cashews, peanuts, and dendê oil — sacred dish in Candomblé tradition.",
+      "ingredients": [
+        { "name": "okra, sliced", "quantity": 500, "unit": "g" },
+        { "name": "dried shrimp", "quantity": 100, "unit": "g" },
+        { "name": "fresh shrimp, peeled", "quantity": 200, "unit": "g" },
+        { "name": "roasted peanuts", "quantity": 80, "unit": "g" },
+        { "name": "cashews", "quantity": 80, "unit": "g" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "ginger, grated", "quantity": 1, "unit": "tbsp" },
+        { "name": "dendê (palm) oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "lime juice", "quantity": 1, "unit": "tbsp" },
+        { "name": "cilantro, chopped", "quantity": 0.5, "unit": "bunch" }
+      ],
+      "steps": [
+        "Toss okra with lime juice and salt to reduce sliminess; rest 10 minutes.",
+        "Grind dried shrimp, peanuts, and cashews into a coarse powder.",
+        "Heat dendê oil and sauté onion, garlic, and ginger for 3 minutes.",
+        "Add okra and cook over medium heat, stirring constantly, for about 10 minutes.",
+        "Stir in the ground nut-shrimp mixture and 250 ml water, then simmer 10 minutes.",
+        "Add fresh shrimp and cook 4 minutes more until pink and just cooked.",
+        "Finish with cilantro, taste, and serve with rice or alongside acarajé."
+      ],
+      "tags": ["Bahia", "okra", "stew", "shrimp", "Afro-Brazilian"],
+      "dietaryTags": ["gluten-free", "dairy-free"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Mandioca Frita",
+      "description": "Crispy fried cassava sticks — Brazil's beloved bar snack, golden outside and fluffy inside.",
+      "ingredients": [
+        { "name": "cassava (yuca), peeled", "quantity": 1, "unit": "kg" },
+        { "name": "vegetable oil for frying", "quantity": 1, "unit": "l" },
+        { "name": "coarse salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Cut peeled cassava into 8 cm sticks, removing the woody central core.",
+        "Place in a large pot, cover with cold salted water, and bring to a boil.",
+        "Simmer 15–20 minutes until tender enough to pierce with a fork but not falling apart.",
+        "Drain carefully and let cool completely — cassava can absorb oil if still warm.",
+        "Heat oil to 180°C in a deep pan.",
+        "Fry cassava sticks in batches for 4–5 minutes until golden and crisp.",
+        "Drain on paper towels, sprinkle with coarse salt, and serve immediately with garlic mayo or hot sauce."
+      ],
+      "tags": ["snack", "side dish", "fried", "cassava", "vegetarian"],
+      "dietaryTags": ["vegetarian", "vegan", "gluten-free", "dairy-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Tropeiro",
+      "description": "Hearty bean and cassava-flour dish from Minas Gerais with sausage, bacon, eggs, and collard greens.",
+      "ingredients": [
+        { "name": "cooked pinto or carioca beans, drained", "quantity": 400, "unit": "g" },
+        { "name": "cassava flour (farinha de mandioca)", "quantity": 200, "unit": "g" },
+        { "name": "linguiça calabresa sausage, sliced", "quantity": 200, "unit": "g" },
+        { "name": "bacon, diced", "quantity": 150, "unit": "g" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "eggs, beaten", "quantity": 3, "unit": "pc" },
+        { "name": "collard greens, finely sliced", "quantity": 1, "unit": "bunch" },
+        { "name": "scallions, sliced", "quantity": 3, "unit": "pc" },
+        { "name": "olive oil", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "In a large skillet, render bacon until crisp, then add sausage and brown. Remove and reserve.",
+        "In the rendered fat, sauté onion until soft and garlic until fragrant.",
+        "Pour in beaten eggs and scramble until just set, breaking into small pieces.",
+        "Add drained beans and cooked meats, stirring gently to combine.",
+        "Reduce heat and gradually stir in cassava flour, toasting for 5 minutes until everything is coated.",
+        "In a separate pan with a little olive oil, quickly wilt collard greens with a pinch of salt.",
+        "Stir greens and scallions into the tropeiro and serve immediately."
+      ],
+      "tags": ["Minas Gerais", "beans", "comfort food", "main course", "rustic"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 25,
+      "servings": 6
+    }
+  ]
+}

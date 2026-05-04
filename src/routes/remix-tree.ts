@@ -2,6 +2,7 @@ import { Router, Request, Response, NextFunction } from "express";
 import mongoose from "mongoose";
 import { z } from "zod";
 import { requireAuth } from "../middleware/auth";
+import { requirePremium } from "../middleware/premium";
 import { validate } from "../middleware/validate";
 import User from "../models/User";
 import { getRemixTree } from "../services/remix-tree-service";
@@ -25,9 +26,13 @@ const objectIdParam = z.object({
 });
 
 // GET /api/remix-tree/:id — return the ancestor + descendant graph for a recipe.
+// Premium-only: the lineage view is a power-user surface, gated to drive
+// upgrades. Clients should pre-empt with a paywall sheet rather than letting
+// the request 403.
 router.get(
   "/:id",
   requireAuth,
+  requirePremium,
   validate({ params: objectIdParam }),
   asyncHandler(async (req: Request, res: Response) => {
     const firebaseUid = req.user!.uid;

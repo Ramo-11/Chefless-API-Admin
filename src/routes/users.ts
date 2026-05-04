@@ -92,7 +92,7 @@ router.get(
       { score: { $meta: "textScore" } }
     )
       .select(
-        "fullName profilePicture bio isPublic recipesCount originalRecipesCount followersCount"
+        "fullName profilePicture bio isPublic recipesCount originalRecipesCount followersCount isSeed"
       )
       .sort({ score: { $meta: "textScore" } })
       .limit(20)

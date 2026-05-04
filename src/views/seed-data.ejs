@@ -1,0 +1,286 @@
+<% var pageTitle = 'Seed Data'; %>
+<% var page = 'seed-data'; %>
+
+<div class="page-header">
+  <h1>Seed Data</h1>
+  <p class="page-subtitle">
+    <%= totals.users.toLocaleString() %> synthetic users · <%= totals.recipes.toLocaleString() %> seed recipes
+  </p>
+</div>
+
+<!-- Filter -->
+<div class="toolbar">
+  <form action="/admin/seed-data" method="GET" class="toolbar-search">
+    <select name="cuisine">
+      <option value="">All cuisines</option>
+      <% allCuisines.forEach(function(c) { %>
+        <option value="<%= c %>" <%= cuisineFilter === c ? 'selected' : '' %>><%= c %></option>
+      <% }); %>
+    </select>
+    <button type="submit" class="btn btn-primary btn-sm">Filter</button>
+    <% if (cuisineFilter) { %>
+      <a href="/admin/seed-data" class="btn btn-secondary btn-sm">Clear</a>
+    <% } %>
+  </form>
+
+  <div class="toolbar-actions">
+    <button class="btn btn-danger btn-sm" onclick="confirmWipeAll()">
+      <i class="fas fa-trash"></i> Wipe All Seed Data
+    </button>
+  </div>
+</div>
+
+<!-- Cuisine Groups -->
+<div class="card">
+  <div class="table-responsive">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Cuisine</th>
+          <th>Users</th>
+          <th>Recipes</th>
+          <th>Source</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% groups.forEach(function(g) { %>
+          <tr>
+            <td><strong><%= g._id || '(unset)' %></strong></td>
+            <td><%= g.users %></td>
+            <td><%= g.recipes %></td>
+            <td>
+              <% (g.sources || []).forEach(function(src) { %>
+                <span class="badge badge-default"><%= src %></span>
+              <% }); %>
+            </td>
+            <td>
+              <div class="action-buttons">
+                <button class="btn btn-sm btn-secondary" onclick="viewCuisine('<%= g._id %>')" aria-label="View users + recipes">
+                  <i class="fas fa-eye"></i> View
+                </button>
+                <button class="btn btn-sm btn-danger-outline" onclick="confirmWipeCuisine('<%= g._id %>')" aria-label="Delete cuisine">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        <% }); %>
+        <% if (groups.length === 0) { %>
+          <tr>
+            <td colspan="5" class="empty-state">
+              <i class="fas fa-seedling"></i>
+              <span>No seed data yet. Run <code>tsx src/scripts/seed/seed-real-recipes.ts</code> to populate.</span>
+            </td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Cuisine Detail Modal (shows users + recipes for selected cuisine) -->
+<div class="modal" id="cuisine-detail-modal">
+  <div class="modal-content modal-lg">
+    <div class="modal-header">
+      <h2 id="cuisine-detail-title">Seed cuisine</h2>
+      <button class="modal-close" onclick="closeModal('cuisine-detail-modal')" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="tabs" style="display: flex; gap: 0.5rem; border-bottom: 1px solid var(--border, #e2e8f0); margin-bottom: 1rem;">
+        <button class="tab-btn active" data-tab="users" onclick="switchSeedTab('users')" style="cursor: pointer; padding: 0.5rem 1rem; background: transparent; border: none; border-bottom: 2px solid var(--primary, #3b82f6);">Users</button>
+        <button class="tab-btn" data-tab="recipes" onclick="switchSeedTab('recipes')" style="cursor: pointer; padding: 0.5rem 1rem; background: transparent; border: none;">Recipes</button>
+      </div>
+
+      <div id="seed-users-pane" class="seed-pane">
+        <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i></div>
+      </div>
+      <div id="seed-recipes-pane" class="seed-pane" style="display: none;">
+        <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Wipe All Confirmation -->
+<div class="modal" id="wipe-all-modal">
+  <div class="modal-content modal-sm">
+    <div class="modal-header">
+      <h2>Wipe All Seed Data</h2>
+      <button class="modal-close" onclick="closeModal('wipe-all-modal')" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p>This deletes <strong>every seed user</strong> and their recipes, kitchens, follows, likes, and saves.</p>
+      <p class="text-error"><strong>This cannot be undone.</strong> Real users are unaffected.</p>
+      <div class="form-group">
+        <label for="wipe-all-confirm">Type <code>DELETE ALL SEED</code> to confirm</label>
+        <input type="text" id="wipe-all-confirm" placeholder="DELETE ALL SEED">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" onclick="closeModal('wipe-all-modal')">Cancel</button>
+      <button class="btn btn-danger" onclick="executeWipeAll()">Wipe Everything</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  let currentSeedCuisine = '';
+
+  function viewCuisine(cuisine) {
+    currentSeedCuisine = cuisine || '';
+    document.getElementById('cuisine-detail-title').textContent = cuisine ? cuisine + ' — seed accounts' : 'Seed accounts';
+    openModal('cuisine-detail-modal');
+    switchSeedTab('users');
+  }
+
+  function switchSeedTab(tab) {
+    document.querySelectorAll('#cuisine-detail-modal .tab-btn').forEach(btn => {
+      const active = btn.dataset.tab === tab;
+      btn.classList.toggle('active', active);
+      btn.style.borderBottom = active ? '2px solid var(--primary, #3b82f6)' : 'none';
+    });
+    document.getElementById('seed-users-pane').style.display = tab === 'users' ? 'block' : 'none';
+    document.getElementById('seed-recipes-pane').style.display = tab === 'recipes' ? 'block' : 'none';
+
+    if (tab === 'users') loadSeedUsers();
+    else loadSeedRecipes();
+  }
+
+  function loadSeedUsers() {
+    const pane = document.getElementById('seed-users-pane');
+    pane.innerHTML = '<div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i></div>';
+    const params = new URLSearchParams();
+    if (currentSeedCuisine) params.set('cuisine', currentSeedCuisine);
+    adminFetch('/admin/api/seed-data/users?' + params.toString())
+      .then(data => {
+        if (!data.users.length) {
+          pane.innerHTML = '<p class="text-muted">No seed users for this cuisine.</p>';
+          return;
+        }
+        pane.innerHTML = `
+          <table class="data-table">
+            <thead><tr><th>User</th><th>Email</th><th>Recipes</th><th>Source</th><th></th></tr></thead>
+            <tbody>
+              ${data.users.map(u => `
+                <tr>
+                  <td>
+                    <div class="user-cell">
+                      ${u.profilePicture
+                        ? `<img src="${esc(u.profilePicture)}" alt="" class="avatar-sm">`
+                        : `<div class="avatar-sm avatar-placeholder">${esc(u.fullName).charAt(0).toUpperCase()}</div>`}
+                      <span>${esc(u.fullName)}</span>
+                    </div>
+                  </td>
+                  <td class="text-muted">${esc(u.email)}</td>
+                  <td>${Number(u.recipesCount) || 0}</td>
+                  <td><span class="badge badge-default">${esc(u.seedSource || '')}</span></td>
+                  <td>
+                    <button class="btn btn-sm btn-danger-outline" onclick="deleteSeedUser('${u._id}', '${esc(u.fullName).replace(/'/g, "\\'")}')" aria-label="Delete user">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        `;
+      })
+      .catch(() => {
+        pane.innerHTML = '<p class="text-error">Failed to load users.</p>';
+      });
+  }
+
+  function loadSeedRecipes() {
+    const pane = document.getElementById('seed-recipes-pane');
+    pane.innerHTML = '<div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i></div>';
+    const params = new URLSearchParams();
+    if (currentSeedCuisine) params.set('cuisine', currentSeedCuisine);
+    adminFetch('/admin/api/seed-data/recipes?' + params.toString())
+      .then(data => {
+        if (!data.recipes.length) {
+          pane.innerHTML = '<p class="text-muted">No seed recipes for this cuisine.</p>';
+          return;
+        }
+        pane.innerHTML = `
+          <table class="data-table">
+            <thead><tr><th>Photo</th><th>Title</th><th>Author</th><th>Source</th><th></th></tr></thead>
+            <tbody>
+              ${data.recipes.map(r => `
+                <tr>
+                  <td>
+                    ${r.photos && r.photos.length
+                      ? `<img src="${esc(r.photos[0])}" alt="" style="width: 48px; height: 48px; object-fit: cover; border-radius: 6px;">`
+                      : '<div style="width:48px;height:48px;background:#eee;border-radius:6px;"></div>'}
+                  </td>
+                  <td><strong>${esc(r.title)}</strong></td>
+                  <td class="text-muted">${esc(r.authorId?.fullName || '—')}</td>
+                  <td><span class="badge badge-default">${esc(r.seedSource || '')}</span></td>
+                  <td>
+                    <button class="btn btn-sm btn-danger-outline" onclick="deleteSeedRecipe('${r._id}', '${esc(r.title).replace(/'/g, "\\'")}')" aria-label="Delete recipe">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        `;
+      })
+      .catch(() => {
+        pane.innerHTML = '<p class="text-error">Failed to load recipes.</p>';
+      });
+  }
+
+  function deleteSeedUser(id, name) {
+    if (!confirm('Delete seed user "' + name + '" and all their recipes? This cannot be undone.')) return;
+    adminFetch('/admin/api/seed-data/users/' + id, { method: 'DELETE' })
+      .then(() => {
+        showToast('User deleted', 'success');
+        loadSeedUsers();
+      })
+      .catch(() => showToast('Failed to delete user', 'error'));
+  }
+
+  function deleteSeedRecipe(id, title) {
+    if (!confirm('Delete seed recipe "' + title + '"?')) return;
+    adminFetch('/admin/api/seed-data/recipes/' + id, { method: 'DELETE' })
+      .then(() => {
+        showToast('Recipe deleted', 'success');
+        loadSeedRecipes();
+      })
+      .catch(() => showToast('Failed to delete recipe', 'error'));
+  }
+
+  function confirmWipeCuisine(cuisine) {
+    if (!cuisine) return;
+    if (!confirm('Wipe ALL seed data for "' + cuisine + '"? This deletes every seed user and recipe in that cuisine. Real users are unaffected.')) return;
+    adminFetch('/admin/api/seed-data/cuisines/' + encodeURIComponent(cuisine), { method: 'DELETE' })
+      .then(data => {
+        toastAndReload('Wiped ' + data.deletedUsers + ' users');
+      })
+      .catch(() => showToast('Failed to wipe cuisine', 'error'));
+  }
+
+  function confirmWipeAll() {
+    document.getElementById('wipe-all-confirm').value = '';
+    openModal('wipe-all-modal');
+  }
+
+  function executeWipeAll() {
+    const phrase = document.getElementById('wipe-all-confirm').value;
+    if (phrase !== 'DELETE ALL SEED') {
+      showToast('Confirmation phrase must be exactly: DELETE ALL SEED', 'error');
+      return;
+    }
+    adminFetch('/admin/api/seed-data/all', {
+      method: 'DELETE',
+      body: JSON.stringify({ confirm: phrase }),
+    })
+      .then(data => {
+        closeModal('wipe-all-modal');
+        toastAndReload('Wiped ' + data.deletedUsers + ' users');
+      })
+      .catch(() => showToast('Failed to wipe seed data', 'error'));
+  }
+</script>

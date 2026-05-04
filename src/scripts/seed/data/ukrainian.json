@@ -1,0 +1,390 @@
+{
+  "cuisine": "Ukrainian",
+  "names": {
+    "first": ["Oleksandr", "Kateryna", "Andriy", "Olena", "Volodymyr", "Iryna", "Taras", "Yuliya", "Mykola", "Svitlana", "Bohdan", "Nataliya"],
+    "last": ["Shevchenko", "Kovalenko", "Bondarenko", "Tkachenko", "Kravchenko", "Melnyk", "Boyko", "Honcharenko", "Marchenko", "Lysenko", "Ivanenko", "Pavlenko"]
+  },
+  "recipes": [
+    {
+      "title": "Borscht",
+      "description": "Ukrainian beetroot soup with beef, beans and cabbage, served with sour cream, dill and pampushky garlic buns.",
+      "ingredients": [
+        { "name": "beef short rib", "quantity": 600, "unit": "g" },
+        { "name": "beetroots, peeled and grated", "quantity": 500, "unit": "g" },
+        { "name": "white cabbage, shredded", "quantity": 300, "unit": "g" },
+        { "name": "potatoes, cubed", "quantity": 3, "unit": "pc" },
+        { "name": "carrot, grated", "quantity": 1, "unit": "pc" },
+        { "name": "onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "red bell pepper, diced", "quantity": 1, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "white beans, cooked", "quantity": 200, "unit": "g" },
+        { "name": "garlic cloves", "quantity": 4, "unit": "pc" },
+        { "name": "sunflower oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "white wine vinegar", "quantity": 1, "unit": "tbsp" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "sour cream", "quantity": 4, "unit": "tbsp" },
+        { "name": "dill, chopped", "quantity": 3, "unit": "tbsp" },
+        { "name": "water", "quantity": 3, "unit": "l" }
+      ],
+      "steps": [
+        "Simmer the beef short ribs in salted water with bay leaves for 90 minutes, skimming the foam.",
+        "Sauté the onion, carrot and bell pepper in oil until soft, then add the beetroot, tomato paste and vinegar; cook for 10 minutes.",
+        "Lift the beef from the broth, pull the meat off the bones, and return the meat to the pot.",
+        "Add the potatoes and simmer for 10 minutes, then add the cabbage and the beetroot mixture.",
+        "Simmer for another 15 minutes, then stir in the cooked white beans and the crushed garlic.",
+        "Season generously and let the soup rest off heat for at least 15 minutes.",
+        "Serve very hot with a spoon of sour cream, plenty of dill, and pampushky on the side."
+      ],
+      "tags": ["soup", "beetroot", "winter", "national dish"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 130,
+      "servings": 6
+    },
+    {
+      "title": "Varenyky",
+      "description": "Ukrainian filled dumplings of pillowy dough with potato, cheese, cabbage or fruit, served with butter and sour cream.",
+      "ingredients": [
+        { "name": "flour", "quantity": 500, "unit": "g" },
+        { "name": "warm water", "quantity": 200, "unit": "ml" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 1, "unit": "tbsp" },
+        { "name": "potatoes, peeled and boiled", "quantity": 600, "unit": "g" },
+        { "name": "onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "butter", "quantity": 75, "unit": "g" },
+        { "name": "farmer cheese (tvorog)", "quantity": 200, "unit": "g" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "sour cream", "quantity": 200, "unit": "ml" },
+        { "name": "dill, chopped", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Mix the flour, water, egg, salt and oil to a smooth elastic dough, knead for 10 minutes, then rest covered for 30 minutes.",
+        "Sauté the chopped onion in 50 g butter until golden.",
+        "Mash the potatoes with the farmer cheese, half of the onions, salt and pepper.",
+        "Roll the dough thin and cut into 8 cm rounds.",
+        "Place a tablespoon of filling on each round, fold in half and pinch the edges to seal.",
+        "Boil the varenyky in well-salted water for 4 minutes after they float.",
+        "Toss with the remaining butter and onions, then serve with sour cream and dill."
+      ],
+      "tags": ["dumpling", "potato", "comfort"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 60,
+      "cookTime": 15,
+      "servings": 6
+    },
+    {
+      "title": "Holubtsi",
+      "description": "Ukrainian cabbage rolls stuffed with rice and minced meat, simmered in tomato sauce until tender.",
+      "ingredients": [
+        { "name": "white cabbage, large head", "quantity": 1, "unit": "pc" },
+        { "name": "ground pork", "quantity": 400, "unit": "g" },
+        { "name": "ground beef", "quantity": 200, "unit": "g" },
+        { "name": "rice", "quantity": 150, "unit": "g" },
+        { "name": "onion, finely chopped", "quantity": 2, "unit": "pc" },
+        { "name": "carrot, grated", "quantity": 1, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 3, "unit": "tbsp" },
+        { "name": "tomato passata", "quantity": 500, "unit": "ml" },
+        { "name": "sour cream", "quantity": 200, "unit": "ml" },
+        { "name": "sunflower oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "salt", "quantity": 2, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "dill, chopped", "quantity": 3, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Core the cabbage and blanch the whole head in boiling salted water, peeling off softened leaves until you have 16.",
+        "Boil the rice for 8 minutes so it is part-cooked, then drain and cool.",
+        "Sauté the chopped onions and grated carrot in oil until soft.",
+        "Mix the meats with the rice, half the sautéed vegetables, salt and pepper.",
+        "Trim the thick rib from each cabbage leaf and place a heaped spoon of filling at the base, folding in the sides and rolling.",
+        "Combine the remaining sautéed vegetables with the tomato paste, passata and sour cream and pour into a wide pot.",
+        "Nestle the rolls in the sauce, add bay leaves, cover, and simmer for 90 minutes until very tender.",
+        "Sprinkle with dill and serve with extra sour cream."
+      ],
+      "tags": ["cabbage", "pork", "beef", "comfort"],
+      "difficulty": "medium",
+      "prepTime": 45,
+      "cookTime": 100,
+      "servings": 6
+    },
+    {
+      "title": "Salo",
+      "description": "Cured slab of pork fatback seasoned with garlic and black pepper, traditionally served thinly sliced with rye bread.",
+      "ingredients": [
+        { "name": "pork fatback, skin on", "quantity": 1, "unit": "kg" },
+        { "name": "coarse salt", "quantity": 200, "unit": "g" },
+        { "name": "garlic cloves", "quantity": 8, "unit": "pc" },
+        { "name": "black peppercorns, crushed", "quantity": 2, "unit": "tbsp" },
+        { "name": "bay leaves", "quantity": 4, "unit": "pc" },
+        { "name": "coriander seeds, crushed", "quantity": 1, "unit": "tbsp" },
+        { "name": "rye bread", "quantity": 300, "unit": "g" }
+      ],
+      "steps": [
+        "Pat the pork fatback dry and slice into two pieces if it is one large slab.",
+        "Make a paste from the crushed garlic, black pepper, coriander seeds and a pinch of the salt.",
+        "Score the skin lightly and rub the paste into the entire surface.",
+        "Bury the salo in the rest of the salt in a non-reactive container, with the bay leaves on top.",
+        "Refrigerate for 5 to 7 days, turning every other day, until the fat is firm.",
+        "Brush off excess salt, wrap in cheesecloth, and store in the freezer.",
+        "Slice paper-thin while still very cold and serve with rye bread."
+      ],
+      "tags": ["cured", "pork", "appetizer", "traditional"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 0,
+      "servings": 12
+    },
+    {
+      "title": "Kotleta po-kyivsky",
+      "description": "Ukrainian breaded chicken cutlet stuffed with herbed garlic butter that bursts when cut, deep-fried until golden.",
+      "ingredients": [
+        { "name": "chicken breasts, skinless and boneless", "quantity": 4, "unit": "pc" },
+        { "name": "butter, softened", "quantity": 100, "unit": "g" },
+        { "name": "garlic cloves, minced", "quantity": 2, "unit": "pc" },
+        { "name": "parsley, finely chopped", "quantity": 3, "unit": "tbsp" },
+        { "name": "dill, finely chopped", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" },
+        { "name": "flour", "quantity": 100, "unit": "g" },
+        { "name": "eggs, beaten", "quantity": 2, "unit": "pc" },
+        { "name": "white breadcrumbs (panko)", "quantity": 200, "unit": "g" },
+        { "name": "vegetable oil for deep frying", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "Mash the softened butter with the garlic, parsley, dill, salt and pepper, shape into 4 batons, and freeze until very firm.",
+        "Butterfly each chicken breast and pound between cling film to a 5 mm thickness.",
+        "Place a frozen butter baton at one short end, season the chicken, and roll up tightly to fully enclose the butter.",
+        "Tuck the ends in and freeze the rolls for 20 minutes so they hold shape.",
+        "Dredge each roll in flour, dip in egg, then coat in breadcrumbs, repeating the egg and crumb step for a thick crust.",
+        "Heat the oil to 180°C and fry the cutlets for 6 to 7 minutes until deep golden and cooked through.",
+        "Drain briefly and serve at once so the butter is still molten inside."
+      ],
+      "tags": ["chicken", "fried", "garlic butter"],
+      "difficulty": "hard",
+      "prepTime": 45,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Kasha",
+      "description": "Ukrainian buckwheat porridge cooked with mushrooms and onions in butter, served as a hearty side.",
+      "ingredients": [
+        { "name": "buckwheat groats", "quantity": 250, "unit": "g" },
+        { "name": "water", "quantity": 500, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "butter", "quantity": 75, "unit": "g" },
+        { "name": "onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "mushrooms, sliced", "quantity": 250, "unit": "g" },
+        { "name": "carrot, grated", "quantity": 1, "unit": "pc" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" },
+        { "name": "parsley, chopped", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Rinse the buckwheat under cold water and drain.",
+        "Toast the buckwheat in a dry pot for 2 minutes until aromatic.",
+        "Add the water and salt, bring to a boil, then cover and simmer over low heat for 15 minutes.",
+        "Meanwhile, sauté the onion, carrot and mushrooms in butter until golden and tender.",
+        "Stir the vegetables through the cooked buckwheat, season with pepper, and rest covered for 5 minutes.",
+        "Sprinkle with parsley and serve."
+      ],
+      "tags": ["porridge", "buckwheat", "side", "vegetarian"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Mlyntsi",
+      "description": "Ukrainian thin pancakes similar to crêpes, filled with sweet cheese, jam or savory fillings.",
+      "ingredients": [
+        { "name": "flour", "quantity": 250, "unit": "g" },
+        { "name": "milk", "quantity": 500, "unit": "ml" },
+        { "name": "eggs", "quantity": 3, "unit": "pc" },
+        { "name": "sugar", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" },
+        { "name": "butter, melted", "quantity": 50, "unit": "g" },
+        { "name": "vegetable oil for cooking", "quantity": 3, "unit": "tbsp" },
+        { "name": "farmer cheese (tvorog)", "quantity": 300, "unit": "g" },
+        { "name": "powdered sugar", "quantity": 2, "unit": "tbsp" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "sour cream", "quantity": 200, "unit": "ml" }
+      ],
+      "steps": [
+        "Whisk the flour, eggs, milk, sugar, salt and melted butter into a smooth thin batter and rest for 30 minutes.",
+        "Heat a small skillet, brush with oil, and ladle in a thin layer of batter, swirling to coat the pan.",
+        "Cook for 1 minute, flip and cook another 30 seconds, then transfer to a plate.",
+        "Repeat with the remaining batter, stacking the mlyntsi as you go.",
+        "Mash the farmer cheese with the powdered sugar and vanilla.",
+        "Place a spoon of cheese on each pancake, fold in the sides and roll up into a parcel.",
+        "Pan-fry briefly in butter until golden and serve with sour cream."
+      ],
+      "tags": ["pancake", "breakfast", "cheese"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 40,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Deruny",
+      "description": "Ukrainian crisp potato pancakes made from grated potatoes, served with sour cream and fried mushrooms.",
+      "ingredients": [
+        { "name": "potatoes, peeled", "quantity": 1, "unit": "kg" },
+        { "name": "onion, grated", "quantity": 1, "unit": "pc" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "flour", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" },
+        { "name": "sunflower oil for frying", "quantity": 100, "unit": "ml" },
+        { "name": "sour cream", "quantity": 200, "unit": "ml" },
+        { "name": "dill, chopped", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Coarsely grate the potatoes and the onion together into a colander.",
+        "Squeeze the grated mixture firmly to remove as much liquid as possible.",
+        "Mix in the egg, flour, salt and pepper to a thick batter.",
+        "Heat plenty of oil in a wide skillet over medium-high heat.",
+        "Drop heaped spoonfuls of batter into the pan, flatten lightly, and fry for 3 to 4 minutes per side until deep golden and crisp.",
+        "Drain on paper and serve hot with sour cream and dill."
+      ],
+      "tags": ["potato", "pancake", "fried"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Pampushky",
+      "description": "Soft Ukrainian garlic buns brushed with garlic and dill oil, traditionally served alongside borscht.",
+      "ingredients": [
+        { "name": "flour", "quantity": 500, "unit": "g" },
+        { "name": "warm milk", "quantity": 300, "unit": "ml" },
+        { "name": "active dry yeast", "quantity": 2, "unit": "tsp" },
+        { "name": "sugar", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "garlic cloves, crushed", "quantity": 5, "unit": "pc" },
+        { "name": "dill, chopped", "quantity": 3, "unit": "tbsp" },
+        { "name": "sunflower oil for brushing", "quantity": 60, "unit": "ml" },
+        { "name": "egg wash", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Bloom the yeast and sugar in warm milk, then stir in the flour, salt, egg and oil to a soft dough.",
+        "Knead for 10 minutes and let rise covered for 1 hour until doubled.",
+        "Knock back the dough and divide into 12 equal balls.",
+        "Pack the balls together in a greased round tin so they touch and let rise for 30 minutes.",
+        "Brush with egg wash and bake at 200°C for 20 to 25 minutes until deep golden.",
+        "Whisk the crushed garlic, dill and sunflower oil with a little salt.",
+        "Brush the warm pampushky generously with the garlic oil and serve."
+      ],
+      "tags": ["bread", "garlic", "side"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 105,
+      "cookTime": 25,
+      "servings": 6
+    },
+    {
+      "title": "Solyanka",
+      "description": "Ukrainian sour soup with assorted smoked meats, pickles, capers and olives, finished with sour cream and lemon.",
+      "ingredients": [
+        { "name": "beef stock", "quantity": 2, "unit": "l" },
+        { "name": "smoked sausage, sliced", "quantity": 200, "unit": "g" },
+        { "name": "ham, diced", "quantity": 150, "unit": "g" },
+        { "name": "cooked pork, diced", "quantity": 150, "unit": "g" },
+        { "name": "pickled cucumbers, diced", "quantity": 200, "unit": "g" },
+        { "name": "pickle brine", "quantity": 100, "unit": "ml" },
+        { "name": "onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 3, "unit": "tbsp" },
+        { "name": "capers", "quantity": 2, "unit": "tbsp" },
+        { "name": "black olives, pitted", "quantity": 100, "unit": "g" },
+        { "name": "butter", "quantity": 30, "unit": "g" },
+        { "name": "lemon, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "sour cream", "quantity": 4, "unit": "tbsp" },
+        { "name": "parsley, chopped", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Sauté the onion in butter, add the tomato paste and cook until darkened.",
+        "Add the diced pickles and brine and simmer for 5 minutes.",
+        "Pour in the beef stock and bring to a simmer.",
+        "Add all of the smoked sausage, ham and cooked pork and simmer for 15 minutes.",
+        "Stir in the capers and olives and let rest off heat for 10 minutes.",
+        "Serve in bowls with a slice of lemon, a spoon of sour cream and a sprinkle of parsley."
+      ],
+      "tags": ["soup", "smoked", "tangy"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 35,
+      "servings": 6
+    },
+    {
+      "title": "Holodets",
+      "description": "Ukrainian meat aspic of slow-cooked pork or chicken set in clear, naturally gelled broth, served cold with horseradish.",
+      "ingredients": [
+        { "name": "pork knuckles", "quantity": 1, "unit": "kg" },
+        { "name": "pork shoulder", "quantity": 500, "unit": "g" },
+        { "name": "chicken thighs", "quantity": 500, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "carrot, peeled", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, crushed", "quantity": 5, "unit": "pc" },
+        { "name": "bay leaves", "quantity": 3, "unit": "pc" },
+        { "name": "black peppercorns", "quantity": 10, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" },
+        { "name": "water", "quantity": 3, "unit": "l" },
+        { "name": "horseradish", "quantity": 4, "unit": "tbsp" },
+        { "name": "parsley, chopped", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Place all of the meats in a large pot, cover with cold water, bring to a boil and skim thoroughly.",
+        "Add the whole onion, carrot, peppercorns and bay leaves and simmer very gently for 5 hours, topping up with hot water if needed.",
+        "Add the salt and simmer for 30 more minutes.",
+        "Lift out the meats, strain the broth through cheesecloth into a clean pot, and return to a boil; reduce slightly if not strongly gelatinous.",
+        "Pull the meat from the bones, discard skin and fat, and chop finely.",
+        "Stir the crushed garlic into the broth and let infuse for 10 minutes, then strain again.",
+        "Distribute the meat into shallow dishes, ladle the broth over to cover, and chill for at least 8 hours until set.",
+        "Serve cold with horseradish and parsley."
+      ],
+      "tags": ["aspic", "cold", "celebration", "pork"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 360,
+      "servings": 8
+    },
+    {
+      "title": "Syrniki",
+      "description": "Pan-fried Ukrainian farmer cheese pancakes, lightly sweet and golden, served with sour cream, jam or honey.",
+      "ingredients": [
+        { "name": "farmer cheese (tvorog)", "quantity": 500, "unit": "g" },
+        { "name": "eggs", "quantity": 2, "unit": "pc" },
+        { "name": "flour", "quantity": 75, "unit": "g" },
+        { "name": "sugar", "quantity": 3, "unit": "tbsp" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "pinch" },
+        { "name": "butter for frying", "quantity": 50, "unit": "g" },
+        { "name": "vegetable oil for frying", "quantity": 2, "unit": "tbsp" },
+        { "name": "sour cream", "quantity": 200, "unit": "ml" },
+        { "name": "raisins", "quantity": 50, "unit": "g" },
+        { "name": "powdered sugar", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Press the farmer cheese through a sieve so it is smooth and free of lumps.",
+        "Mix in the eggs, sugar, vanilla, salt and raisins.",
+        "Add the flour and stir gently to a soft pliable dough; do not over-mix.",
+        "Shape the dough into small flat patties about 7 cm wide, dusting with flour.",
+        "Heat the butter and oil in a skillet and fry the syrniki over medium heat for 3 to 4 minutes per side until deep golden.",
+        "Dust with powdered sugar and serve hot with sour cream."
+      ],
+      "tags": ["pancake", "cheese", "breakfast", "sweet"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 4
+    }
+  ]
+}

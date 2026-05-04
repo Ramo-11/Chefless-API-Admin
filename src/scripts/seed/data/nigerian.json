@@ -1,0 +1,371 @@
+{
+  "cuisine": "Nigerian",
+  "names": {
+    "first": ["Adebayo", "Chioma", "Emeka", "Folake", "Ngozi", "Tunde", "Yemisi", "Obinna", "Funmilayo", "Chinedu", "Aisha", "Babatunde"],
+    "last": ["Adeyemi", "Okafor", "Eze", "Adeleke", "Nwosu", "Ogunleye", "Balogun", "Okonkwo", "Adesanya", "Olawale", "Achebe", "Obi"]
+  },
+  "recipes": [
+    {
+      "title": "Jollof Rice",
+      "description": "Nigerian one-pot tomato-pepper rice, smoky and richly spiced, the centerpiece of every party.",
+      "ingredients": [
+        { "name": "long-grain parboiled rice", "quantity": 500, "unit": "g" },
+        { "name": "plum tomatoes", "quantity": 6, "unit": "pc" },
+        { "name": "red bell peppers", "quantity": 2, "unit": "pc" },
+        { "name": "scotch bonnet pepper", "quantity": 1, "unit": "pc" },
+        { "name": "onion, chopped", "quantity": 2, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 3, "unit": "tbsp" },
+        { "name": "vegetable oil", "quantity": 100, "unit": "ml" },
+        { "name": "chicken stock", "quantity": 600, "unit": "ml" },
+        { "name": "curry powder", "quantity": 1, "unit": "tbsp" },
+        { "name": "thyme", "quantity": 1, "unit": "tsp" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Blend tomatoes, bell peppers, scotch bonnet, and one onion until smooth.",
+        "Reduce the puree in a saucepan over medium heat for 15 minutes until thickened.",
+        "In a heavy pot, heat oil and sauté the second onion for 4 minutes.",
+        "Add tomato paste and fry for 5 minutes until darkened.",
+        "Pour in the reduced pepper mix, curry, thyme, bay leaves, and salt. Cook for 10 minutes.",
+        "Stir in the rinsed rice to coat in the sauce.",
+        "Add stock, cover tightly with foil and a lid. Cook on low for 25 minutes without stirring.",
+        "Increase heat for the last 3 minutes to develop the smoky bottom (party jollof).",
+        "Fluff and serve hot."
+      ],
+      "tags": ["rice", "party", "tomato", "iconic"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Egusi Soup",
+      "description": "Nigerian thick soup of ground melon seeds, leafy greens, and assorted meats, eaten with swallow.",
+      "ingredients": [
+        { "name": "ground egusi (melon seeds)", "quantity": 250, "unit": "g" },
+        { "name": "assorted meat (beef, tripe)", "quantity": 600, "unit": "g" },
+        { "name": "smoked fish, flaked", "quantity": 200, "unit": "g" },
+        { "name": "spinach or ugu, chopped", "quantity": 300, "unit": "g" },
+        { "name": "palm oil", "quantity": 150, "unit": "ml" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "ground crayfish", "quantity": 2, "unit": "tbsp" },
+        { "name": "scotch bonnet, blended", "quantity": 2, "unit": "pc" },
+        { "name": "stock cubes", "quantity": 2, "unit": "pc" },
+        { "name": "water", "quantity": 1, "unit": "l" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Season and boil the assorted meat with onion and stock cubes for 30 minutes until tender.",
+        "Mix the ground egusi with a little water to form a paste.",
+        "Heat palm oil in a pot for 2 minutes (do not bleach).",
+        "Add chopped onion and the blended scotch bonnet, fry for 3 minutes.",
+        "Drop spoonfuls of the egusi paste into the oil and let them fry for 6 minutes without stirring, then break apart.",
+        "Pour in the meat and its stock plus enough water. Add crayfish and salt.",
+        "Simmer for 15 minutes, stirring occasionally.",
+        "Add smoked fish and chopped greens. Cook for another 5 minutes.",
+        "Serve with pounded yam, fufu, or eba."
+      ],
+      "tags": ["soup", "stew", "rich", "iconic"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Pounded Yam",
+      "description": "Smooth, stretchy Nigerian yam swallow traditionally pounded with mortar and pestle to eat with soups.",
+      "ingredients": [
+        { "name": "white yam, peeled and cubed", "quantity": 1.5, "unit": "kg" },
+        { "name": "water", "quantity": 1.5, "unit": "l" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Place yam cubes in a pot with enough water to cover.",
+        "Add salt and bring to a boil.",
+        "Cook for 20-25 minutes until very soft when pierced with a knife.",
+        "Drain the yam, reserving a cup of cooking water.",
+        "Transfer hot yam to a mortar (or sturdy bowl).",
+        "Pound or beat with a wooden pestle, adding small splashes of cooking water, until smooth and stretchy.",
+        "Wet hands and shape into round mounds.",
+        "Serve immediately alongside egusi or ogbono soup."
+      ],
+      "tags": ["swallow", "yam", "traditional", "side"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 10,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Ogbono Soup",
+      "description": "Nigerian draw soup made from ground wild mango seeds, with rich palm oil and assorted meats.",
+      "ingredients": [
+        { "name": "ground ogbono seeds", "quantity": 150, "unit": "g" },
+        { "name": "assorted meat", "quantity": 600, "unit": "g" },
+        { "name": "smoked fish, flaked", "quantity": 200, "unit": "g" },
+        { "name": "palm oil", "quantity": 150, "unit": "ml" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "scotch bonnet, blended", "quantity": 2, "unit": "pc" },
+        { "name": "ground crayfish", "quantity": 2, "unit": "tbsp" },
+        { "name": "spinach, chopped", "quantity": 200, "unit": "g" },
+        { "name": "stock cubes", "quantity": 2, "unit": "pc" },
+        { "name": "water", "quantity": 800, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Boil meat with onion, stock cubes, and salt for 30 minutes until tender.",
+        "Heat palm oil in a separate pot for 2 minutes.",
+        "Whisk the ground ogbono into the warm oil to form a smooth paste.",
+        "Slowly stir in the meat stock and water to loosen the soup.",
+        "Add the cooked meat, smoked fish, crayfish, and blended scotch bonnet.",
+        "Simmer covered for 15 minutes until thick and drawing.",
+        "Add the chopped spinach and cook for 4 minutes more.",
+        "Adjust salt and serve with fufu or eba."
+      ],
+      "tags": ["soup", "draw", "traditional", "rich"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 50,
+      "servings": 6
+    },
+    {
+      "title": "Suya",
+      "description": "Nigerian street-food beef skewers crusted in spicy peanut yaji rub and grilled over open flame.",
+      "ingredients": [
+        { "name": "beef sirloin, sliced thin", "quantity": 700, "unit": "g" },
+        { "name": "yaji spice (suya rub)", "quantity": 4, "unit": "tbsp" },
+        { "name": "groundnut oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "onion, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "tomato, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "cabbage, shredded", "quantity": 100, "unit": "g" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Slice beef thinly against the grain and pat dry.",
+        "Coat the beef in groundnut oil, then dredge thoroughly in the yaji rub and salt.",
+        "Thread onto soaked wooden skewers, leaving small gaps.",
+        "Let the skewers rest for 30 minutes.",
+        "Grill over hot charcoal for 3 minutes per side until edges char.",
+        "Sprinkle a final dusting of yaji over the cooked skewers.",
+        "Serve hot with raw onion, tomato, and cabbage on the side."
+      ],
+      "tags": ["grilled", "street-food", "spicy", "skewers"],
+      "difficulty": "easy",
+      "prepTime": 40,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Akara",
+      "description": "Crispy Nigerian fritters made of peeled black-eyed beans, onions, and chili, deep-fried golden.",
+      "ingredients": [
+        { "name": "black-eyed beans", "quantity": 400, "unit": "g" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "scotch bonnet, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "red bell pepper, chopped", "quantity": 0.5, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil for frying", "quantity": 600, "unit": "ml" }
+      ],
+      "steps": [
+        "Soak the black-eyed beans in cold water for 1 hour.",
+        "Rub the beans between your hands to remove the skins, then rinse them away.",
+        "Blend the peeled beans with onion, scotch bonnet, bell pepper, and just enough water for a thick paste.",
+        "Whisk the batter vigorously for 5 minutes to incorporate air.",
+        "Stir in the salt right before frying.",
+        "Heat oil to 170°C and drop tablespoons of batter in.",
+        "Fry for 4-5 minutes, turning, until deeply golden and puffed.",
+        "Drain on paper towels and serve hot with bread or pap."
+      ],
+      "tags": ["fritters", "breakfast", "street-food", "vegan"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 75,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Moin Moin",
+      "description": "Steamed Nigerian bean pudding of blended black-eyed peas, peppers, and palm oil, often with egg and fish.",
+      "ingredients": [
+        { "name": "black-eyed beans", "quantity": 400, "unit": "g" },
+        { "name": "red bell peppers", "quantity": 2, "unit": "pc" },
+        { "name": "scotch bonnet", "quantity": 1, "unit": "pc" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "palm oil", "quantity": 100, "unit": "ml" },
+        { "name": "ground crayfish", "quantity": 2, "unit": "tbsp" },
+        { "name": "stock cubes", "quantity": 2, "unit": "pc" },
+        { "name": "boiled eggs, sliced", "quantity": 3, "unit": "pc" },
+        { "name": "smoked fish, flaked", "quantity": 100, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak beans in water for 1 hour, then peel them by rubbing.",
+        "Blend the peeled beans with peppers, scotch bonnet, and onion until very smooth.",
+        "Transfer to a bowl and whisk in palm oil, crayfish, stock cubes, and salt.",
+        "Stir in flaked smoked fish.",
+        "Pour into greased ramekins or banana leaf bowls, adding a slice of egg to each.",
+        "Arrange in a steamer with simmering water below.",
+        "Cover and steam for 50-60 minutes until firm and set.",
+        "Cool slightly before unmolding and serving with pap or bread."
+      ],
+      "tags": ["steamed", "beans", "savory", "protein-rich"],
+      "difficulty": "medium",
+      "prepTime": 80,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Pepper Soup",
+      "description": "Nigerian aromatic broth of catfish or goat meat with calabash nutmeg and uziza, intensely peppery.",
+      "ingredients": [
+        { "name": "catfish, cut into rounds", "quantity": 800, "unit": "g" },
+        { "name": "pepper soup spice mix", "quantity": 2, "unit": "tbsp" },
+        { "name": "scotch bonnet, blended", "quantity": 2, "unit": "pc" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "ginger, grated", "quantity": 1, "unit": "tbsp" },
+        { "name": "garlic, minced", "quantity": 3, "unit": "pc" },
+        { "name": "uziza leaves", "quantity": 1, "unit": "bunch" },
+        { "name": "stock cubes", "quantity": 2, "unit": "pc" },
+        { "name": "water", "quantity": 1.2, "unit": "l" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Rinse the catfish in salted hot water and drain (this firms the flesh).",
+        "Bring water to a boil with onion, ginger, garlic, and stock cubes.",
+        "Add the pepper soup spice mix and scotch bonnet. Simmer for 10 minutes.",
+        "Carefully add the catfish pieces.",
+        "Simmer gently for 12-15 minutes without stirring, just shaking the pot.",
+        "Adjust salt and add the uziza leaves in the last 2 minutes.",
+        "Serve hot in bowls with white rice or as a starter."
+      ],
+      "tags": ["soup", "spicy", "fish", "comforting"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Efo Riro",
+      "description": "Yoruba stew of sautéed leafy greens with peppers, locust beans, and assorted meats in palm oil.",
+      "ingredients": [
+        { "name": "spinach or amaranth, chopped", "quantity": 700, "unit": "g" },
+        { "name": "red bell peppers", "quantity": 2, "unit": "pc" },
+        { "name": "scotch bonnet", "quantity": 2, "unit": "pc" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "palm oil", "quantity": 120, "unit": "ml" },
+        { "name": "assorted meat, cooked", "quantity": 400, "unit": "g" },
+        { "name": "smoked fish, flaked", "quantity": 150, "unit": "g" },
+        { "name": "iru (locust beans)", "quantity": 2, "unit": "tbsp" },
+        { "name": "ground crayfish", "quantity": 2, "unit": "tbsp" },
+        { "name": "stock cubes", "quantity": 2, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Blend the bell peppers and scotch bonnet to a coarse paste.",
+        "Heat palm oil in a pot and sauté onion for 4 minutes.",
+        "Pour in the pepper blend and fry for 10 minutes until oil floats on top.",
+        "Stir in iru, crayfish, and stock cubes. Cook for 3 minutes.",
+        "Add the cooked assorted meat and smoked fish, simmer for 8 minutes.",
+        "Fold in the chopped greens and cook for 5 minutes until just wilted.",
+        "Adjust salt and serve hot with pounded yam or rice."
+      ],
+      "tags": ["stew", "greens", "yoruba", "rich"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 40,
+      "servings": 6
+    },
+    {
+      "title": "Puff Puff",
+      "description": "Sweet, soft Nigerian fried dough balls with a crisp golden exterior and pillowy center.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 500, "unit": "g" },
+        { "name": "active dry yeast", "quantity": 2, "unit": "tsp" },
+        { "name": "sugar", "quantity": 100, "unit": "g" },
+        { "name": "warm water", "quantity": 350, "unit": "ml" },
+        { "name": "nutmeg, grated", "quantity": 0.5, "unit": "tsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" },
+        { "name": "vegetable oil for frying", "quantity": 800, "unit": "ml" }
+      ],
+      "steps": [
+        "In a bowl, whisk warm water, sugar, and yeast. Let bloom for 5 minutes.",
+        "Add flour, nutmeg, and salt. Whisk into a smooth, sticky batter.",
+        "Cover and let rise in a warm place for 1 hour until bubbly and doubled.",
+        "Heat oil to 170°C in a deep pot.",
+        "Scoop balls of batter using a wet hand or ice cream scoop and drop into the oil.",
+        "Fry in batches for 4-5 minutes, turning, until deep golden brown all around.",
+        "Drain on paper towels.",
+        "Dust with sugar and serve warm."
+      ],
+      "tags": ["dessert", "fried", "snack", "sweet"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 75,
+      "cookTime": 20,
+      "servings": 6
+    },
+    {
+      "title": "Chin Chin",
+      "description": "Crunchy Nigerian fried dough snack cut into small cubes, lightly sweet and shelf-stable.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 500, "unit": "g" },
+        { "name": "sugar", "quantity": 120, "unit": "g" },
+        { "name": "butter, softened", "quantity": 100, "unit": "g" },
+        { "name": "milk", "quantity": 150, "unit": "ml" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "baking powder", "quantity": 1, "unit": "tsp" },
+        { "name": "nutmeg, grated", "quantity": 0.5, "unit": "tsp" },
+        { "name": "salt", "quantity": 0.25, "unit": "tsp" },
+        { "name": "vegetable oil for frying", "quantity": 800, "unit": "ml" }
+      ],
+      "steps": [
+        "In a bowl mix flour, sugar, baking powder, nutmeg, and salt.",
+        "Rub in the butter until the mixture resembles breadcrumbs.",
+        "Whisk milk and egg together and add to the dry ingredients.",
+        "Knead briefly into a stiff but pliable dough.",
+        "Roll out 5 mm thick on a floured surface and cut into small cubes.",
+        "Heat oil to 170°C and fry the cubes in batches for 4-5 minutes until deep golden.",
+        "Stir constantly so they brown evenly.",
+        "Drain and cool completely before storing in an airtight jar."
+      ],
+      "tags": ["snack", "fried", "sweet", "shelf-stable"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 25,
+      "cookTime": 25,
+      "servings": 8
+    },
+    {
+      "title": "Ofada Stew",
+      "description": "Yoruba ayamase stew of green bell peppers and locust beans cooked in bleached palm oil, served with ofada rice.",
+      "ingredients": [
+        { "name": "green bell peppers", "quantity": 6, "unit": "pc" },
+        { "name": "scotch bonnet peppers", "quantity": 4, "unit": "pc" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "palm oil", "quantity": 250, "unit": "ml" },
+        { "name": "assorted meat, cooked", "quantity": 500, "unit": "g" },
+        { "name": "iru (locust beans)", "quantity": 3, "unit": "tbsp" },
+        { "name": "ground crayfish", "quantity": 2, "unit": "tbsp" },
+        { "name": "stock cubes", "quantity": 2, "unit": "pc" },
+        { "name": "boiled eggs, peeled", "quantity": 4, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Blend the green peppers, scotch bonnet, and half the onion to a coarse paste.",
+        "Reduce the pepper blend in a dry pot for 15 minutes until almost dry.",
+        "In a separate pot, bleach palm oil over medium heat for 8-10 minutes until light, then turn off and cool slightly.",
+        "Slice the remaining onion and fry in the bleached oil for 3 minutes.",
+        "Add iru, crayfish, and stock cubes. Stir for 2 minutes.",
+        "Pour in the reduced pepper paste and fry for 10 minutes.",
+        "Add the cooked meat and a little stock, simmer for 10 minutes.",
+        "Add boiled eggs and salt, simmer 3 more minutes. Serve over ofada rice."
+      ],
+      "tags": ["stew", "yoruba", "spicy", "festive"],
+      "difficulty": "hard",
+      "prepTime": 25,
+      "cookTime": 50,
+      "servings": 6
+    }
+  ]
+}

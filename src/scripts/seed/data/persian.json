@@ -1,0 +1,499 @@
+{
+  "cuisine": "Persian",
+  "names": {
+    "first": ["Reza", "Maryam", "Ali", "Niloofar", "Hossein", "Sara", "Amir", "Roya", "Farshid", "Leila", "Kian", "Shirin"],
+    "last": ["Karimi", "Hosseini", "Moradi", "Tehrani", "Sadeghi", "Rezaei", "Ahmadi", "Shirazi", "Mohammadi", "Ebrahimi"]
+  },
+  "recipes": [
+    {
+      "title": "Ghormeh Sabzi",
+      "description": "Iconic Persian herb stew of slow-cooked lamb, kidney beans, fenugreek, and dried limes served over saffron rice.",
+      "ingredients": [
+        { "name": "lamb shoulder", "quantity": 600, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "parsley", "quantity": 2, "unit": "bunch" },
+        { "name": "cilantro", "quantity": 2, "unit": "bunch" },
+        { "name": "chives", "quantity": 1, "unit": "bunch" },
+        { "name": "fenugreek leaves", "quantity": 30, "unit": "g" },
+        { "name": "kidney beans", "quantity": 200, "unit": "g" },
+        { "name": "dried lime", "quantity": 4, "unit": "pc" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak kidney beans overnight, then drain and simmer until tender.",
+        "Sauté chopped onion in oil until golden, then add cubed lamb and turmeric and brown thoroughly.",
+        "Finely chop parsley, cilantro, and chives, then fry in 3 tablespoons of oil for 15 minutes until very dark and fragrant.",
+        "Add the herbs to the lamb along with crumbled fenugreek leaves, dried limes pierced with a knife, salt, and pepper.",
+        "Cover with water and simmer gently for 1.5 hours.",
+        "Stir in the cooked beans and continue simmering for another 45 minutes until the stew is dark and thick.",
+        "Adjust salt and serve with steamed Persian rice."
+      ],
+      "tags": ["persian", "stew", "lamb", "herbs"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 180,
+      "servings": 6
+    },
+    {
+      "title": "Fesenjan",
+      "description": "Rich Persian stew of chicken simmered in ground walnut and pomegranate molasses sauce until deep mahogany and tangy-sweet.",
+      "ingredients": [
+        { "name": "chicken thighs", "quantity": 800, "unit": "g" },
+        { "name": "walnut", "quantity": 350, "unit": "g" },
+        { "name": "pomegranate molasses", "quantity": 150, "unit": "ml" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cinnamon", "quantity": 0.5, "unit": "tsp" },
+        { "name": "sugar", "quantity": 1, "unit": "tbsp" },
+        { "name": "water", "quantity": 750, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Toast walnuts in a dry pan, then grind to a fine paste in a food processor.",
+        "Sauté finely chopped onions in oil until golden, then add the chicken and turmeric and brown.",
+        "Add the walnut paste and water, then simmer covered for 45 minutes, stirring often.",
+        "Stir in pomegranate molasses, cinnamon, sugar, and salt.",
+        "Continue simmering uncovered for another 45 minutes until the sauce darkens and the oil rises to the surface.",
+        "Adjust the balance with extra molasses or sugar to taste.",
+        "Serve hot with steamed Persian rice."
+      ],
+      "tags": ["persian", "stew", "chicken", "walnut"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 120,
+      "servings": 6
+    },
+    {
+      "title": "Tahdig",
+      "description": "Crispy golden crust of Persian rice formed at the bottom of the pot, the most prized layer at any table.",
+      "ingredients": [
+        { "name": "basmati rice", "quantity": 500, "unit": "g" },
+        { "name": "salt", "quantity": 2, "unit": "tbsp" },
+        { "name": "vegetable oil", "quantity": 60, "unit": "ml" },
+        { "name": "butter", "quantity": 30, "unit": "g" },
+        { "name": "saffron threads", "quantity": 1, "unit": "pinch" },
+        { "name": "yogurt", "quantity": 2, "unit": "tbsp" },
+        { "name": "egg yolk", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Rinse rice 5 times then soak with 2 tablespoons salt in plenty of water for at least 1 hour.",
+        "Bloom saffron in 3 tablespoons hot water and set aside.",
+        "Boil rice in salted water for 6 to 8 minutes until just al dente, then drain and rinse with cool water.",
+        "Mix one cup of par-boiled rice with yogurt, egg yolk, and 2 tablespoons of saffron water.",
+        "Heat oil and butter in a heavy non-stick pot, then spread the yogurt rice in an even layer for the tahdig.",
+        "Mound the remaining rice on top in a pyramid, then poke holes through with the handle of a spoon to release steam.",
+        "Wrap the lid in a clean tea towel and clamp on tight; cook on low heat for 50 minutes.",
+        "Drizzle the remaining saffron water over the surface, invert the pot onto a platter, and reveal the golden crust."
+      ],
+      "tags": ["persian", "rice", "side"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 70,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Chelo Kabab",
+      "description": "Persian skewered ground lamb kababs grilled over charcoal, served with saffron-buttered rice and grilled tomato.",
+      "ingredients": [
+        { "name": "minced lamb", "quantity": 700, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "saffron threads", "quantity": 1, "unit": "pinch" },
+        { "name": "basmati rice", "quantity": 500, "unit": "g" },
+        { "name": "butter", "quantity": 50, "unit": "g" },
+        { "name": "tomato", "quantity": 4, "unit": "pc" },
+        { "name": "sumac", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "egg yolk", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Grate the onion and squeeze through a cloth, keeping only the pulp; mix with lamb, salt, pepper, and egg yolk.",
+        "Knead the meat for 10 minutes until very tacky, then refrigerate 1 hour.",
+        "Cook the basmati rice using the chelo method until fluffy with crispy tahdig at the base.",
+        "Bloom saffron in 2 tablespoons hot water.",
+        "Form the meat firmly around flat metal skewers, pressing it into long ridged sausages.",
+        "Grill over hot charcoal for 3 to 4 minutes per side until well charred but juicy.",
+        "Grill whole tomatoes alongside until blistered.",
+        "Serve the kababs over saffron-buttered rice with grilled tomatoes, butter, and sumac."
+      ],
+      "tags": ["persian", "kebab", "lamb", "rice"],
+      "difficulty": "medium",
+      "prepTime": 70,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Ash Reshteh",
+      "description": "Hearty Persian noodle soup of beans, lentils, herbs, and reshteh noodles topped with kashk, fried onions, and mint.",
+      "ingredients": [
+        { "name": "kidney beans", "quantity": 100, "unit": "g" },
+        { "name": "chickpeas", "quantity": 100, "unit": "g" },
+        { "name": "green lentils", "quantity": 100, "unit": "g" },
+        { "name": "spinach", "quantity": 200, "unit": "g" },
+        { "name": "parsley", "quantity": 1, "unit": "bunch" },
+        { "name": "cilantro", "quantity": 1, "unit": "bunch" },
+        { "name": "chives", "quantity": 1, "unit": "bunch" },
+        { "name": "reshteh noodles", "quantity": 200, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "garlic clove", "quantity": 4, "unit": "pc" },
+        { "name": "kashk", "quantity": 100, "unit": "g" },
+        { "name": "dried mint", "quantity": 2, "unit": "tbsp" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak kidney beans and chickpeas overnight, then drain.",
+        "Simmer the soaked beans with 2 liters of water for 1 hour, then add lentils and cook 20 minutes.",
+        "Sauté half the chopped onion in oil with turmeric, then add to the pot.",
+        "Stir in chopped spinach, parsley, cilantro, and chives and simmer 30 minutes.",
+        "Add reshteh noodles and salt and cook 10 minutes until the noodles are soft and the soup is creamy.",
+        "Fry the remaining onion until deep brown for the topping.",
+        "Bloom dried mint in a few tablespoons of hot oil with sliced garlic.",
+        "Ladle soup into bowls, swirl with kashk, and top with fried onions, mint oil, and a drizzle more kashk."
+      ],
+      "tags": ["persian", "soup", "noodles", "beans"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 130,
+      "servings": 6
+    },
+    {
+      "title": "Khoresh-e Bademjan",
+      "description": "Persian eggplant and lamb stew with tomato, dried lime, and tart verjuice, simmered until silky and rich.",
+      "ingredients": [
+        { "name": "eggplant", "quantity": 4, "unit": "pc" },
+        { "name": "lamb shoulder", "quantity": 500, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "tomato", "quantity": 3, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "dried lime", "quantity": 3, "unit": "pc" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 100, "unit": "ml" },
+        { "name": "verjuice", "quantity": 60, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Peel eggplants in stripes, salt them, and rest for 30 minutes; pat dry.",
+        "Fry the eggplants in oil on all sides until deep golden, then drain.",
+        "Sauté chopped onion in the same oil with turmeric, then add cubed lamb and brown well.",
+        "Stir in tomato paste and cook 2 minutes, then add chopped tomatoes and 500 ml water.",
+        "Drop in pierced dried limes, salt, and pepper, and simmer 1 hour.",
+        "Lay the fried eggplants on top, pour over verjuice, and simmer another 30 minutes uncovered.",
+        "Serve with steamed Persian rice and a spoonful of the dark sauce."
+      ],
+      "tags": ["persian", "stew", "eggplant", "lamb"],
+      "difficulty": "medium",
+      "prepTime": 45,
+      "cookTime": 100,
+      "servings": 4
+    },
+    {
+      "title": "Joojeh Kabab",
+      "description": "Saffron-marinated chicken skewers grilled until charred and juicy, brushed with saffron butter and lemon.",
+      "ingredients": [
+        { "name": "chicken thighs", "quantity": 800, "unit": "g" },
+        { "name": "yogurt", "quantity": 200, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "saffron threads", "quantity": 1, "unit": "pinch" },
+        { "name": "lemon juice", "quantity": 60, "unit": "ml" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "butter", "quantity": 40, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Bloom saffron in 3 tablespoons hot water.",
+        "Grate the onion and squeeze through a cloth to extract its juice.",
+        "Whisk yogurt, onion juice, half the saffron water, lemon juice, oil, salt, and pepper.",
+        "Cube the chicken thighs and toss with the marinade; refrigerate at least 4 hours.",
+        "Thread chicken onto skewers and grill over hot charcoal for 12 minutes, turning often.",
+        "Brush the cooked kababs with melted butter mixed with the remaining saffron water.",
+        "Serve with grilled tomato, sumac, and saffron rice."
+      ],
+      "tags": ["persian", "chicken", "kebab", "saffron"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 270,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Mirza Ghasemi",
+      "description": "Smoky Persian dip of fire-roasted eggplant mashed with garlic, tomato, turmeric, and eggs.",
+      "ingredients": [
+        { "name": "eggplant", "quantity": 4, "unit": "pc" },
+        { "name": "tomato", "quantity": 4, "unit": "pc" },
+        { "name": "garlic clove", "quantity": 6, "unit": "pc" },
+        { "name": "egg", "quantity": 3, "unit": "pc" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Char eggplants directly over a flame until the skin is blackened and the flesh is collapsed.",
+        "Cool, peel, and mash the smoked eggplant flesh roughly.",
+        "Sauté thinly sliced garlic in oil with turmeric until very fragrant and just beginning to brown.",
+        "Add chopped tomatoes and cook until reduced and jammy.",
+        "Stir the mashed eggplant into the pan and cook 10 minutes to dry it out.",
+        "Make a well in the center, crack in the eggs, and stir gently until just set.",
+        "Season with salt and pepper and serve hot with flatbread."
+      ],
+      "tags": ["persian", "eggplant", "dip", "smoky"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 40,
+      "servings": 4
+    },
+    {
+      "title": "Sabzi Polo",
+      "description": "Persian herbed rice with parsley, dill, cilantro, and chives, traditionally served with grilled fish at Nowruz.",
+      "ingredients": [
+        { "name": "basmati rice", "quantity": 500, "unit": "g" },
+        { "name": "parsley", "quantity": 1, "unit": "bunch" },
+        { "name": "dill", "quantity": 1, "unit": "bunch" },
+        { "name": "cilantro", "quantity": 1, "unit": "bunch" },
+        { "name": "chives", "quantity": 1, "unit": "bunch" },
+        { "name": "fenugreek leaves", "quantity": 10, "unit": "g" },
+        { "name": "garlic clove", "quantity": 2, "unit": "pc" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "vegetable oil", "quantity": 60, "unit": "ml" },
+        { "name": "salt", "quantity": 2, "unit": "tbsp" },
+        { "name": "saffron threads", "quantity": 1, "unit": "pinch" }
+      ],
+      "steps": [
+        "Rinse rice repeatedly then soak in salted water for 1 hour.",
+        "Finely chop parsley, dill, cilantro, and chives and toss with crumbled fenugreek and grated garlic.",
+        "Boil rice in salted water for 6 minutes until al dente, then drain and rinse.",
+        "Heat oil and butter in a non-stick pot and lay the first layer of rice on the bottom.",
+        "Layer the herbs and rice alternately, mounding into a dome.",
+        "Wrap the lid in a tea towel, clamp on, and cook on low heat for 50 minutes.",
+        "Bloom saffron in hot water and drizzle over the surface before serving.",
+        "Invert onto a platter to display the crisp tahdig and bright green herbed rice."
+      ],
+      "tags": ["persian", "rice", "herbs", "nowruz"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 70,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Halim",
+      "description": "Slow-cooked Persian breakfast porridge of wheat berries and shredded lamb or turkey, topped with sugar, cinnamon, and butter.",
+      "ingredients": [
+        { "name": "wheat berries", "quantity": 250, "unit": "g" },
+        { "name": "lamb shank", "quantity": 600, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "sugar", "quantity": 50, "unit": "g" },
+        { "name": "ground cinnamon", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "water", "quantity": 2, "unit": "l" }
+      ],
+      "steps": [
+        "Soak wheat berries overnight in plenty of water.",
+        "Simmer the lamb shank with onion in 2 liters of water for 2 hours until very tender.",
+        "Remove the lamb, shred the meat off the bone, and discard the onion.",
+        "Add the soaked wheat to the broth and simmer for 2 hours until very soft.",
+        "Return the shredded lamb and continue cooking, beating with a wooden spoon, until the texture is smooth and stringy.",
+        "Season with salt and adjust thickness with hot water if needed.",
+        "Spoon into bowls, top with melted butter, sugar, and a generous dusting of cinnamon."
+      ],
+      "tags": ["persian", "breakfast", "porridge", "lamb"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 240,
+      "servings": 6
+    },
+    {
+      "title": "Tachin",
+      "description": "Pressed saffron rice cake layered with chicken, yogurt, and barberries, baked into a golden crust.",
+      "ingredients": [
+        { "name": "basmati rice", "quantity": 500, "unit": "g" },
+        { "name": "chicken thighs", "quantity": 500, "unit": "g" },
+        { "name": "yogurt", "quantity": 250, "unit": "g" },
+        { "name": "egg yolk", "quantity": 4, "unit": "pc" },
+        { "name": "saffron threads", "quantity": 1, "unit": "pinch" },
+        { "name": "butter", "quantity": 80, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "barberries", "quantity": 60, "unit": "g" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Simmer chicken with sliced onion, turmeric, and salt in just enough water for 25 minutes; reserve broth.",
+        "Boil washed rice in salted water for 6 minutes until al dente, then drain.",
+        "Bloom saffron in 3 tablespoons of hot broth.",
+        "Whisk yogurt, egg yolks, half the saffron water, and 30 g melted butter.",
+        "Fold the par-cooked rice into the yogurt mixture until evenly coated.",
+        "Press half the rice into a buttered baking dish, lay shredded chicken on top, then cover with the remaining rice.",
+        "Drizzle with remaining butter and the rest of the saffron water and cover tightly with foil.",
+        "Bake at 180C for 1 hour, then uncover and bake another 15 minutes; invert and top with barberries sautéed in butter."
+      ],
+      "tags": ["persian", "rice", "chicken", "baked"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Kashk-e Bademjan",
+      "description": "Persian eggplant dip of smoky fried eggplant, garlic, mint oil, and tangy whey kashk, served warm with bread.",
+      "ingredients": [
+        { "name": "eggplant", "quantity": 4, "unit": "pc" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "garlic clove", "quantity": 4, "unit": "pc" },
+        { "name": "kashk", "quantity": 120, "unit": "g" },
+        { "name": "walnut", "quantity": 50, "unit": "g" },
+        { "name": "dried mint", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 80, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Slice eggplants lengthwise, salt them, and rest 30 minutes; pat dry.",
+        "Fry the eggplants in oil until deep golden, then drain.",
+        "Sauté thinly sliced onions in the same oil with turmeric until caramelized.",
+        "Add minced garlic and chopped walnuts and cook 2 minutes more.",
+        "Mash the fried eggplants roughly into the pan and stir to combine.",
+        "Bloom dried mint briefly in a few tablespoons of hot oil for the garnish.",
+        "Spoon the eggplant onto a platter, swirl with kashk, and drizzle with mint oil and reserved fried onions."
+      ],
+      "tags": ["persian", "eggplant", "dip", "appetizer"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 40,
+      "cookTime": 35,
+      "servings": 4
+    },
+    {
+      "title": "Khoresh-e Gheymeh",
+      "description": "Persian split pea and lamb stew flavored with dried lime and tomato, topped with crispy fried potatoes.",
+      "ingredients": [
+        { "name": "lamb shoulder", "quantity": 500, "unit": "g" },
+        { "name": "yellow split peas", "quantity": 200, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 3, "unit": "tbsp" },
+        { "name": "dried lime", "quantity": 3, "unit": "pc" },
+        { "name": "potato", "quantity": 3, "unit": "pc" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cinnamon", "quantity": 0.5, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 100, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Sauté chopped onion in oil with turmeric, then add cubed lamb and brown.",
+        "Stir in tomato paste, cook 2 minutes, then add 750 ml water and dried limes pierced with a knife.",
+        "Simmer covered for 1 hour until the lamb is tender.",
+        "Add the rinsed split peas and cook another 30 minutes until tender but holding shape.",
+        "Stir in cinnamon, salt, and pepper, then simmer uncovered to thicken.",
+        "Cut potatoes into thin batons and fry in hot oil until crisp and golden.",
+        "Serve the stew over Persian rice topped with the crispy potatoes."
+      ],
+      "tags": ["persian", "stew", "lamb", "split peas"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 120,
+      "servings": 6
+    },
+    {
+      "title": "Zereshk Polo",
+      "description": "Saffron rice with tart barberries, slivered pistachios, and butter, traditionally served with tender chicken.",
+      "ingredients": [
+        { "name": "basmati rice", "quantity": 500, "unit": "g" },
+        { "name": "barberries", "quantity": 80, "unit": "g" },
+        { "name": "saffron threads", "quantity": 1, "unit": "pinch" },
+        { "name": "butter", "quantity": 100, "unit": "g" },
+        { "name": "sugar", "quantity": 1, "unit": "tbsp" },
+        { "name": "pistachio", "quantity": 30, "unit": "g" },
+        { "name": "almonds", "quantity": 30, "unit": "g" },
+        { "name": "salt", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Rinse rice and soak in salted water for 1 hour.",
+        "Boil the rice in plenty of salted water for 6 minutes until al dente, then drain.",
+        "Bloom saffron in 3 tablespoons hot water.",
+        "Heat 50 g butter in a non-stick pot and layer the rice into a mound; cook 50 minutes wrapped in a tea towel.",
+        "Rinse barberries and drain well.",
+        "Melt remaining butter with sugar in a small pan and toss the barberries for 2 minutes until shiny.",
+        "Drizzle saffron water over the cooked rice, then top with the buttered barberries and slivered pistachios and almonds."
+      ],
+      "tags": ["persian", "rice", "saffron", "barberries"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 70,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Kuku Sabzi",
+      "description": "Persian herb frittata packed with parsley, dill, cilantro, and walnut, baked until set and bright green.",
+      "ingredients": [
+        { "name": "egg", "quantity": 8, "unit": "pc" },
+        { "name": "parsley", "quantity": 2, "unit": "bunch" },
+        { "name": "dill", "quantity": 1, "unit": "bunch" },
+        { "name": "cilantro", "quantity": 1, "unit": "bunch" },
+        { "name": "chives", "quantity": 1, "unit": "bunch" },
+        { "name": "spring onion", "quantity": 4, "unit": "pc" },
+        { "name": "walnut", "quantity": 50, "unit": "g" },
+        { "name": "barberries", "quantity": 30, "unit": "g" },
+        { "name": "all purpose flour", "quantity": 2, "unit": "tbsp" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Finely chop all the herbs and spring onions.",
+        "Beat eggs with flour, turmeric, salt, and pepper until smooth.",
+        "Stir in herbs, chopped walnuts, and barberries.",
+        "Heat oil in a non-stick skillet, pour in the mixture, and smooth the top.",
+        "Cook covered on low heat for 20 minutes until the bottom is set and golden.",
+        "Slide onto a plate and flip back into the pan to cook the second side for 8 minutes.",
+        "Cut into wedges and serve warm or at room temperature with bread and yogurt."
+      ],
+      "tags": ["persian", "herbs", "eggs", "nowruz"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 25,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Mast-o Khiar",
+      "description": "Cool Persian yogurt and cucumber dip with mint, walnuts, and rose petals, served with rice or bread.",
+      "ingredients": [
+        { "name": "yogurt", "quantity": 500, "unit": "g" },
+        { "name": "cucumber", "quantity": 2, "unit": "pc" },
+        { "name": "walnut", "quantity": 40, "unit": "g" },
+        { "name": "raisins", "quantity": 30, "unit": "g" },
+        { "name": "dried mint", "quantity": 1, "unit": "tbsp" },
+        { "name": "dried rose petals", "quantity": 1, "unit": "tsp" },
+        { "name": "garlic clove", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Grate cucumbers, salt them, and let drain for 10 minutes; squeeze out excess water.",
+        "Whisk yogurt with grated garlic and a pinch of salt.",
+        "Stir in the drained cucumber, chopped walnuts, raisins, and dried mint.",
+        "Chill at least 30 minutes for the flavors to meld.",
+        "Sprinkle dried rose petals over the top and serve cold."
+      ],
+      "tags": ["persian", "yogurt", "side", "cucumber"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 0,
+      "servings": 4
+    }
+  ]
+}

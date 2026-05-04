@@ -1,0 +1,697 @@
+{
+  "cuisine": "Japanese",
+  "names": {
+    "first": ["Hiroshi", "Yuki", "Sakura", "Takeshi", "Akiko", "Kenji", "Naomi", "Ryo", "Haruki", "Emiko", "Daisuke", "Mei"],
+    "last": ["Tanaka", "Suzuki", "Sato", "Watanabe", "Yamamoto", "Nakamura", "Kobayashi", "Yoshida", "Ito", "Takahashi"]
+  },
+  "recipes": [
+    {
+      "title": "Tonkotsu Ramen",
+      "description": "Rich, milky pork bone broth ramen topped with chashu, soft-boiled egg, scallions and nori.",
+      "ingredients": [
+        {"name": "Pork bones", "quantity": 1.5, "unit": "kg"},
+        {"name": "Ramen noodles", "quantity": 400, "unit": "g"},
+        {"name": "Pork belly", "quantity": 500, "unit": "g"},
+        {"name": "Soy sauce", "quantity": 60, "unit": "ml"},
+        {"name": "Mirin", "quantity": 30, "unit": "ml"},
+        {"name": "Garlic", "quantity": 6, "unit": "pc"},
+        {"name": "Ginger", "quantity": 30, "unit": "g"},
+        {"name": "Eggs", "quantity": 4, "unit": "pc"},
+        {"name": "Scallions", "quantity": 2, "unit": "bunch"},
+        {"name": "Nori sheets", "quantity": 4, "unit": "pc"}
+      ],
+      "steps": [
+        "Blanch pork bones in boiling water for 10 minutes, drain and rinse thoroughly.",
+        "Simmer bones in fresh water with crushed garlic and ginger for at least 8 hours, replenishing water as needed.",
+        "Roll the pork belly tightly, tie with string and braise in soy sauce and mirin for 90 minutes to make chashu.",
+        "Soft-boil eggs for 6 minutes 30 seconds, peel and marinate in soy sauce mixture for 1 hour.",
+        "Cook ramen noodles in boiling water for 90 seconds, drain and divide into bowls.",
+        "Pour strained tonkotsu broth over noodles, top with sliced chashu, halved egg, scallions and nori."
+      ],
+      "tags": ["noodles", "soup", "comfort food"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 480,
+      "servings": 4
+    },
+    {
+      "title": "Tempura",
+      "description": "Light, crispy battered shrimp and assorted vegetables served with tentsuyu dipping sauce.",
+      "ingredients": [
+        {"name": "Large shrimp", "quantity": 12, "unit": "pc"},
+        {"name": "Sweet potato", "quantity": 1, "unit": "pc"},
+        {"name": "Eggplant", "quantity": 1, "unit": "pc"},
+        {"name": "Shiitake mushrooms", "quantity": 6, "unit": "pc"},
+        {"name": "Cake flour", "quantity": 200, "unit": "g"},
+        {"name": "Egg yolk", "quantity": 1, "unit": "pc"},
+        {"name": "Ice water", "quantity": 250, "unit": "ml"},
+        {"name": "Vegetable oil", "quantity": 1, "unit": "l"},
+        {"name": "Dashi", "quantity": 200, "unit": "ml"},
+        {"name": "Soy sauce", "quantity": 50, "unit": "ml"},
+        {"name": "Mirin", "quantity": 50, "unit": "ml"}
+      ],
+      "steps": [
+        "Devein and butterfly the shrimp, making small cuts on the underside to prevent curling.",
+        "Slice sweet potato and eggplant into thin pieces, trim shiitake stems.",
+        "Whisk egg yolk with ice water, then gently fold in flour leaving lumps for a light batter.",
+        "Heat oil to 175C in a deep pan.",
+        "Dip ingredients in batter and fry in small batches for 2-3 minutes until pale golden.",
+        "Drain on a wire rack and serve immediately with tentsuyu made by simmering dashi, soy sauce and mirin."
+      ],
+      "tags": ["fried", "seafood", "appetizer"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Tonkatsu",
+      "description": "Panko-breaded deep-fried pork cutlet served with shredded cabbage and tangy tonkatsu sauce.",
+      "ingredients": [
+        {"name": "Pork loin chops", "quantity": 4, "unit": "pc"},
+        {"name": "Salt", "quantity": 1, "unit": "tsp"},
+        {"name": "Black pepper", "quantity": 0.5, "unit": "tsp"},
+        {"name": "Flour", "quantity": 100, "unit": "g"},
+        {"name": "Eggs", "quantity": 2, "unit": "pc"},
+        {"name": "Panko breadcrumbs", "quantity": 200, "unit": "g"},
+        {"name": "Vegetable oil", "quantity": 1, "unit": "l"},
+        {"name": "Cabbage", "quantity": 0.25, "unit": "pc"},
+        {"name": "Tonkatsu sauce", "quantity": 60, "unit": "ml"}
+      ],
+      "steps": [
+        "Score the fat edges of pork chops and pound lightly to even thickness.",
+        "Season pork with salt and pepper on both sides.",
+        "Dredge each chop in flour, dip in beaten egg, then coat thoroughly in panko.",
+        "Heat oil to 170C and fry cutlets for 6-8 minutes, turning once, until deep golden.",
+        "Rest on a wire rack for 3 minutes, then slice into strips.",
+        "Serve over finely shredded cabbage with tonkatsu sauce drizzled on top."
+      ],
+      "tags": ["fried", "pork", "comfort food"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Okonomiyaki",
+      "description": "Savoury Osaka-style cabbage pancake topped with sauce, mayo, bonito flakes and aonori.",
+      "ingredients": [
+        {"name": "Cabbage", "quantity": 0.5, "unit": "pc"},
+        {"name": "Flour", "quantity": 200, "unit": "g"},
+        {"name": "Dashi", "quantity": 200, "unit": "ml"},
+        {"name": "Eggs", "quantity": 4, "unit": "pc"},
+        {"name": "Pork belly slices", "quantity": 200, "unit": "g"},
+        {"name": "Scallions", "quantity": 1, "unit": "bunch"},
+        {"name": "Okonomiyaki sauce", "quantity": 60, "unit": "ml"},
+        {"name": "Japanese mayonnaise", "quantity": 40, "unit": "ml"},
+        {"name": "Bonito flakes", "quantity": 10, "unit": "g"},
+        {"name": "Aonori", "quantity": 1, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Finely shred cabbage and chop scallions.",
+        "Whisk flour with dashi until smooth, then add eggs and combine.",
+        "Fold in cabbage and scallions until evenly coated in batter.",
+        "Heat a non-stick pan, lay pork belly slices and ladle batter over them in a thick disc.",
+        "Cook 5 minutes, flip carefully and cook another 5 minutes until cooked through.",
+        "Top with okonomiyaki sauce, mayonnaise zigzag, bonito flakes and aonori."
+      ],
+      "tags": ["pancake", "street food", "savoury"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Yakitori",
+      "description": "Charcoal-grilled chicken skewers basted with sweet-savoury tare sauce.",
+      "ingredients": [
+        {"name": "Boneless chicken thighs", "quantity": 600, "unit": "g"},
+        {"name": "Scallions", "quantity": 2, "unit": "bunch"},
+        {"name": "Soy sauce", "quantity": 120, "unit": "ml"},
+        {"name": "Mirin", "quantity": 120, "unit": "ml"},
+        {"name": "Sake", "quantity": 60, "unit": "ml"},
+        {"name": "Sugar", "quantity": 30, "unit": "g"},
+        {"name": "Bamboo skewers", "quantity": 12, "unit": "pc"}
+      ],
+      "steps": [
+        "Soak bamboo skewers in water for 30 minutes.",
+        "Cut chicken thighs into 2 cm cubes and slice scallions into 3 cm pieces.",
+        "Thread chicken and scallions alternately onto skewers.",
+        "Simmer soy sauce, mirin, sake and sugar until reduced by a third to make tare.",
+        "Grill skewers over hot charcoal for 4 minutes per side.",
+        "Brush generously with tare during the final minute and serve immediately."
+      ],
+      "tags": ["grilled", "chicken", "skewers"],
+      "difficulty": "easy",
+      "prepTime": 30,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Miso Soup",
+      "description": "Classic Japanese soup of dashi, miso paste, tofu and wakame seaweed.",
+      "ingredients": [
+        {"name": "Dashi", "quantity": 800, "unit": "ml"},
+        {"name": "Miso paste", "quantity": 60, "unit": "g"},
+        {"name": "Silken tofu", "quantity": 200, "unit": "g"},
+        {"name": "Dried wakame", "quantity": 5, "unit": "g"},
+        {"name": "Scallions", "quantity": 2, "unit": "pc"}
+      ],
+      "steps": [
+        "Bring dashi to a gentle simmer in a saucepan.",
+        "Rehydrate wakame in cold water for 5 minutes, then drain.",
+        "Cube tofu into small pieces and add to the dashi with the wakame.",
+        "Reduce heat to low, then whisk miso paste through a fine strainer into the broth.",
+        "Heat through without boiling and finish with sliced scallions."
+      ],
+      "tags": ["soup", "vegetarian-friendly", "quick"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Onigiri",
+      "description": "Hand-shaped salted rice balls wrapped in nori, often filled with umeboshi or salmon.",
+      "ingredients": [
+        {"name": "Japanese short-grain rice", "quantity": 400, "unit": "g"},
+        {"name": "Water", "quantity": 480, "unit": "ml"},
+        {"name": "Salt", "quantity": 1, "unit": "tsp"},
+        {"name": "Salted salmon fillet", "quantity": 150, "unit": "g"},
+        {"name": "Umeboshi", "quantity": 4, "unit": "pc"},
+        {"name": "Nori sheets", "quantity": 2, "unit": "pc"}
+      ],
+      "steps": [
+        "Rinse rice until water runs clear, then cook with measured water in a rice cooker.",
+        "Grill the salted salmon until cooked through, then flake into pieces.",
+        "Wet hands with water and rub with a pinch of salt.",
+        "Scoop a handful of rice, press a piece of salmon or one umeboshi into the centre.",
+        "Form firmly into a triangle, pressing the edges to seal the filling inside.",
+        "Wrap a strip of nori around the base just before serving."
+      ],
+      "tags": ["rice", "lunchbox", "snack"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Chawanmushi",
+      "description": "Silky steamed savoury egg custard with chicken, shrimp and mushrooms in dashi.",
+      "ingredients": [
+        {"name": "Eggs", "quantity": 3, "unit": "pc"},
+        {"name": "Dashi", "quantity": 450, "unit": "ml"},
+        {"name": "Soy sauce", "quantity": 1, "unit": "tsp"},
+        {"name": "Mirin", "quantity": 1, "unit": "tsp"},
+        {"name": "Salt", "quantity": 0.5, "unit": "tsp"},
+        {"name": "Chicken thigh", "quantity": 100, "unit": "g"},
+        {"name": "Shrimp", "quantity": 4, "unit": "pc"},
+        {"name": "Shiitake mushrooms", "quantity": 4, "unit": "pc"},
+        {"name": "Mitsuba", "quantity": 1, "unit": "bunch"}
+      ],
+      "steps": [
+        "Beat eggs gently without creating foam, then mix with cooled dashi, soy sauce, mirin and salt.",
+        "Strain the egg mixture through a fine sieve for the smoothest texture.",
+        "Place small pieces of chicken, shrimp and mushroom in 4 cups.",
+        "Pour egg mixture over the ingredients and skim any bubbles from the surface.",
+        "Cover cups with foil and steam over low heat for 12-15 minutes until just set.",
+        "Garnish with mitsuba and serve warm."
+      ],
+      "tags": ["steamed", "egg", "elegant"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Sukiyaki",
+      "description": "Tabletop hot pot of thinly sliced beef simmered in a sweet soy broth with vegetables and tofu.",
+      "ingredients": [
+        {"name": "Thinly sliced beef", "quantity": 500, "unit": "g"},
+        {"name": "Napa cabbage", "quantity": 0.5, "unit": "pc"},
+        {"name": "Shungiku", "quantity": 1, "unit": "bunch"},
+        {"name": "Shirataki noodles", "quantity": 200, "unit": "g"},
+        {"name": "Firm tofu", "quantity": 200, "unit": "g"},
+        {"name": "Leek", "quantity": 1, "unit": "pc"},
+        {"name": "Shiitake mushrooms", "quantity": 6, "unit": "pc"},
+        {"name": "Soy sauce", "quantity": 120, "unit": "ml"},
+        {"name": "Mirin", "quantity": 120, "unit": "ml"},
+        {"name": "Sugar", "quantity": 60, "unit": "g"},
+        {"name": "Eggs", "quantity": 4, "unit": "pc"}
+      ],
+      "steps": [
+        "Combine soy sauce, mirin and sugar to make warishita sauce.",
+        "Heat a sukiyaki pan and lightly grease with beef fat trimmings.",
+        "Sear a few slices of beef quickly, then add a portion of warishita.",
+        "Add cabbage, leek, mushrooms, tofu and shirataki, simmering gently.",
+        "Continue adding ingredients gradually, replenishing sauce as needed.",
+        "Each diner dips cooked pieces in a bowl of beaten raw egg before eating."
+      ],
+      "tags": ["hot pot", "beef", "communal"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Gyudon",
+      "description": "Beef and onion bowl simmered in sweet soy dashi served over steamed rice.",
+      "ingredients": [
+        {"name": "Thinly sliced beef", "quantity": 500, "unit": "g"},
+        {"name": "Onion", "quantity": 1, "unit": "pc"},
+        {"name": "Dashi", "quantity": 200, "unit": "ml"},
+        {"name": "Soy sauce", "quantity": 60, "unit": "ml"},
+        {"name": "Mirin", "quantity": 60, "unit": "ml"},
+        {"name": "Sake", "quantity": 30, "unit": "ml"},
+        {"name": "Sugar", "quantity": 2, "unit": "tbsp"},
+        {"name": "Cooked rice", "quantity": 4, "unit": "cup"},
+        {"name": "Pickled red ginger", "quantity": 30, "unit": "g"}
+      ],
+      "steps": [
+        "Slice the onion thinly along the grain.",
+        "Combine dashi, soy sauce, mirin, sake and sugar in a wide pan and bring to a simmer.",
+        "Add the onions and cook for 5 minutes until softened.",
+        "Add the beef in a single layer and simmer for 5-7 minutes, skimming foam.",
+        "Spoon beef and sauce over hot rice and top with pickled red ginger."
+      ],
+      "tags": ["rice bowl", "beef", "weeknight"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Katsudon",
+      "description": "Tonkatsu simmered briefly with onion and beaten egg, served over rice.",
+      "ingredients": [
+        {"name": "Pork tonkatsu", "quantity": 4, "unit": "pc"},
+        {"name": "Onion", "quantity": 1, "unit": "pc"},
+        {"name": "Eggs", "quantity": 6, "unit": "pc"},
+        {"name": "Dashi", "quantity": 240, "unit": "ml"},
+        {"name": "Soy sauce", "quantity": 60, "unit": "ml"},
+        {"name": "Mirin", "quantity": 60, "unit": "ml"},
+        {"name": "Sugar", "quantity": 1, "unit": "tbsp"},
+        {"name": "Cooked rice", "quantity": 4, "unit": "cup"},
+        {"name": "Scallions", "quantity": 2, "unit": "pc"}
+      ],
+      "steps": [
+        "Slice tonkatsu cutlets into strips.",
+        "Slice onion thinly and place in a small skillet with dashi, soy sauce, mirin and sugar.",
+        "Simmer onions for 4 minutes until tender.",
+        "Lay tonkatsu strips over the onions and pour beaten eggs around them.",
+        "Cover and cook 1-2 minutes until eggs are just set but still soft.",
+        "Slide onto a bowl of hot rice and garnish with scallions."
+      ],
+      "tags": ["rice bowl", "pork", "comfort food"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Oyakodon",
+      "description": "Chicken and egg simmered together over rice in a sweet dashi sauce.",
+      "ingredients": [
+        {"name": "Boneless chicken thighs", "quantity": 500, "unit": "g"},
+        {"name": "Onion", "quantity": 1, "unit": "pc"},
+        {"name": "Eggs", "quantity": 6, "unit": "pc"},
+        {"name": "Dashi", "quantity": 240, "unit": "ml"},
+        {"name": "Soy sauce", "quantity": 60, "unit": "ml"},
+        {"name": "Mirin", "quantity": 60, "unit": "ml"},
+        {"name": "Sugar", "quantity": 1, "unit": "tbsp"},
+        {"name": "Cooked rice", "quantity": 4, "unit": "cup"},
+        {"name": "Mitsuba", "quantity": 1, "unit": "bunch"}
+      ],
+      "steps": [
+        "Cut chicken into bite-sized pieces and slice the onion thinly.",
+        "Combine dashi, soy sauce, mirin and sugar in a small skillet and bring to a simmer.",
+        "Add the onions and cook for 3 minutes.",
+        "Add chicken and simmer for 5 minutes until cooked through.",
+        "Pour beaten eggs over the chicken in a circular motion, cover and cook 1 minute.",
+        "Slide gently onto bowls of hot rice and top with mitsuba."
+      ],
+      "tags": ["rice bowl", "chicken", "comfort food"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 12,
+      "servings": 4
+    },
+    {
+      "title": "Karaage",
+      "description": "Marinated Japanese fried chicken with crisp potato starch coating.",
+      "ingredients": [
+        {"name": "Boneless chicken thighs", "quantity": 700, "unit": "g"},
+        {"name": "Soy sauce", "quantity": 60, "unit": "ml"},
+        {"name": "Sake", "quantity": 30, "unit": "ml"},
+        {"name": "Mirin", "quantity": 30, "unit": "ml"},
+        {"name": "Ginger", "quantity": 20, "unit": "g"},
+        {"name": "Garlic", "quantity": 3, "unit": "pc"},
+        {"name": "Potato starch", "quantity": 150, "unit": "g"},
+        {"name": "Vegetable oil", "quantity": 1, "unit": "l"},
+        {"name": "Lemon", "quantity": 1, "unit": "pc"}
+      ],
+      "steps": [
+        "Cut chicken into bite-sized pieces.",
+        "Marinate chicken in soy sauce, sake, mirin, grated ginger and crushed garlic for 30 minutes.",
+        "Drain chicken and dredge thoroughly in potato starch.",
+        "Heat oil to 160C and fry chicken for 90 seconds, then remove.",
+        "Increase oil to 180C and fry a second time for 90 seconds until deep golden.",
+        "Drain and serve with lemon wedges."
+      ],
+      "tags": ["fried", "chicken", "izakaya"],
+      "difficulty": "medium",
+      "prepTime": 35,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Takoyaki",
+      "description": "Round Osaka snack of wheat batter filled with octopus, topped with sauce and bonito.",
+      "ingredients": [
+        {"name": "Flour", "quantity": 200, "unit": "g"},
+        {"name": "Dashi", "quantity": 700, "unit": "ml"},
+        {"name": "Eggs", "quantity": 2, "unit": "pc"},
+        {"name": "Cooked octopus", "quantity": 200, "unit": "g"},
+        {"name": "Scallions", "quantity": 2, "unit": "bunch"},
+        {"name": "Pickled red ginger", "quantity": 30, "unit": "g"},
+        {"name": "Tenkasu", "quantity": 30, "unit": "g"},
+        {"name": "Takoyaki sauce", "quantity": 60, "unit": "ml"},
+        {"name": "Japanese mayonnaise", "quantity": 30, "unit": "ml"},
+        {"name": "Bonito flakes", "quantity": 10, "unit": "g"}
+      ],
+      "steps": [
+        "Whisk flour, dashi and eggs into a thin batter.",
+        "Heat and oil a takoyaki pan thoroughly.",
+        "Pour batter to overflow each well, drop in a cube of octopus, scallion, ginger and tenkasu.",
+        "After 2 minutes, use a pick to turn each ball 90 degrees, tucking in the overflow.",
+        "Continue rotating every minute until balls are spherical and golden.",
+        "Drizzle with takoyaki sauce and mayo, top with bonito flakes."
+      ],
+      "tags": ["street food", "octopus", "Osaka"],
+      "difficulty": "hard",
+      "prepTime": 15,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Soba",
+      "description": "Cold buckwheat noodles served with tsuyu dipping sauce, scallions and wasabi.",
+      "ingredients": [
+        {"name": "Dried soba noodles", "quantity": 400, "unit": "g"},
+        {"name": "Dashi", "quantity": 400, "unit": "ml"},
+        {"name": "Soy sauce", "quantity": 100, "unit": "ml"},
+        {"name": "Mirin", "quantity": 100, "unit": "ml"},
+        {"name": "Scallions", "quantity": 2, "unit": "pc"},
+        {"name": "Wasabi", "quantity": 2, "unit": "tsp"},
+        {"name": "Nori sheets", "quantity": 1, "unit": "pc"}
+      ],
+      "steps": [
+        "Combine dashi, soy sauce and mirin and bring to a boil, then cool to make tsuyu.",
+        "Cook soba in plenty of boiling water for 4-5 minutes until just tender.",
+        "Drain and rinse under cold running water, rubbing to remove starch.",
+        "Drain thoroughly and arrange noodles on a bamboo mat or plate.",
+        "Top with shredded nori and serve with cups of cold tsuyu, sliced scallions and wasabi."
+      ],
+      "tags": ["noodles", "cold", "summer"],
+      "dietaryTags": ["vegan"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Udon",
+      "description": "Thick wheat noodles in a hot dashi broth topped with scallions and tempura crumbs.",
+      "ingredients": [
+        {"name": "Udon noodles", "quantity": 600, "unit": "g"},
+        {"name": "Dashi", "quantity": 1.2, "unit": "l"},
+        {"name": "Soy sauce", "quantity": 60, "unit": "ml"},
+        {"name": "Mirin", "quantity": 60, "unit": "ml"},
+        {"name": "Salt", "quantity": 0.5, "unit": "tsp"},
+        {"name": "Scallions", "quantity": 2, "unit": "pc"},
+        {"name": "Tenkasu", "quantity": 30, "unit": "g"},
+        {"name": "Kamaboko", "quantity": 4, "unit": "pc"}
+      ],
+      "steps": [
+        "Bring dashi to a simmer with soy sauce, mirin and salt to make kake-jiru broth.",
+        "Cook udon according to package instructions, then drain.",
+        "Divide noodles among bowls and pour hot broth over them.",
+        "Top with sliced scallions, tenkasu and slices of kamaboko."
+      ],
+      "tags": ["noodles", "soup", "comfort food"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Tamagoyaki",
+      "description": "Layered Japanese rolled omelette, lightly sweetened and seasoned with dashi.",
+      "ingredients": [
+        {"name": "Eggs", "quantity": 5, "unit": "pc"},
+        {"name": "Dashi", "quantity": 60, "unit": "ml"},
+        {"name": "Sugar", "quantity": 1, "unit": "tbsp"},
+        {"name": "Soy sauce", "quantity": 1, "unit": "tsp"},
+        {"name": "Mirin", "quantity": 1, "unit": "tsp"},
+        {"name": "Salt", "quantity": 1, "unit": "pinch"},
+        {"name": "Vegetable oil", "quantity": 2, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Whisk eggs gently with dashi, sugar, soy sauce, mirin and salt.",
+        "Heat a rectangular tamagoyaki pan over medium heat and lightly oil.",
+        "Pour a thin layer of egg, pop any bubbles, and once nearly set roll it toward you.",
+        "Push the roll to the back of the pan, oil again and pour another thin layer.",
+        "Lift the existing roll so the new layer flows underneath, then roll again.",
+        "Repeat until all egg is used, shape on a bamboo mat and slice into pieces."
+      ],
+      "tags": ["egg", "breakfast", "lunchbox"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 5,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Gyoza",
+      "description": "Pan-fried pork and cabbage dumplings with crispy bottoms and steamed tops.",
+      "ingredients": [
+        {"name": "Gyoza wrappers", "quantity": 30, "unit": "pc"},
+        {"name": "Ground pork", "quantity": 300, "unit": "g"},
+        {"name": "Napa cabbage", "quantity": 200, "unit": "g"},
+        {"name": "Garlic chives", "quantity": 50, "unit": "g"},
+        {"name": "Garlic", "quantity": 2, "unit": "pc"},
+        {"name": "Ginger", "quantity": 15, "unit": "g"},
+        {"name": "Soy sauce", "quantity": 1, "unit": "tbsp"},
+        {"name": "Sesame oil", "quantity": 1, "unit": "tbsp"},
+        {"name": "Vegetable oil", "quantity": 2, "unit": "tbsp"},
+        {"name": "Water", "quantity": 60, "unit": "ml"}
+      ],
+      "steps": [
+        "Salt the chopped cabbage, rest 10 minutes, then squeeze out water.",
+        "Mix pork with cabbage, chopped chives, grated garlic, ginger, soy sauce and sesame oil.",
+        "Place a teaspoon of filling on each wrapper, wet the edge and pleat into half-moons.",
+        "Heat oil in a non-stick pan and arrange dumplings flat-side down.",
+        "Fry 2 minutes until bases are golden, then add water and cover immediately.",
+        "Steam 6 minutes until water evaporates and bottoms are crisp."
+      ],
+      "tags": ["dumplings", "pork", "izakaya"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Yakisoba",
+      "description": "Stir-fried wheat noodles with pork, cabbage and tangy yakisoba sauce.",
+      "ingredients": [
+        {"name": "Yakisoba noodles", "quantity": 400, "unit": "g"},
+        {"name": "Pork belly slices", "quantity": 200, "unit": "g"},
+        {"name": "Cabbage", "quantity": 0.25, "unit": "pc"},
+        {"name": "Carrot", "quantity": 1, "unit": "pc"},
+        {"name": "Onion", "quantity": 1, "unit": "pc"},
+        {"name": "Yakisoba sauce", "quantity": 80, "unit": "ml"},
+        {"name": "Vegetable oil", "quantity": 2, "unit": "tbsp"},
+        {"name": "Pickled red ginger", "quantity": 30, "unit": "g"},
+        {"name": "Aonori", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Loosen the yakisoba noodles under warm water and drain.",
+        "Slice pork into bite-sized pieces, shred cabbage, julienne carrot and slice onion.",
+        "Heat oil in a wok and stir-fry pork until cooked through.",
+        "Add onion, carrot and cabbage and stir-fry for 3 minutes.",
+        "Add noodles and yakisoba sauce and toss for 2 minutes until coated and hot.",
+        "Top with pickled red ginger and aonori before serving."
+      ],
+      "tags": ["noodles", "stir-fry", "street food"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Curry Rice",
+      "description": "Japanese-style thick curry with beef, potatoes and carrots served over rice.",
+      "ingredients": [
+        {"name": "Beef chuck", "quantity": 500, "unit": "g"},
+        {"name": "Onion", "quantity": 2, "unit": "pc"},
+        {"name": "Carrot", "quantity": 2, "unit": "pc"},
+        {"name": "Potato", "quantity": 3, "unit": "pc"},
+        {"name": "Japanese curry roux", "quantity": 100, "unit": "g"},
+        {"name": "Water", "quantity": 1, "unit": "l"},
+        {"name": "Vegetable oil", "quantity": 2, "unit": "tbsp"},
+        {"name": "Cooked rice", "quantity": 4, "unit": "cup"},
+        {"name": "Fukujinzuke", "quantity": 60, "unit": "g"}
+      ],
+      "steps": [
+        "Cube beef and chunk vegetables.",
+        "Heat oil in a heavy pot and brown the beef on all sides.",
+        "Add onions and cook until translucent, then add carrots and potatoes.",
+        "Pour in water, bring to a boil and skim foam.",
+        "Simmer covered for 30 minutes until vegetables are tender.",
+        "Turn off heat, break in curry roux pieces and stir to dissolve, then simmer 5 more minutes.",
+        "Serve over rice with fukujinzuke pickles."
+      ],
+      "tags": ["curry", "comfort food", "weeknight"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 50,
+      "servings": 4
+    },
+    {
+      "title": "Nikujaga",
+      "description": "Homestyle Japanese stew of beef, potatoes and onions in sweet soy dashi.",
+      "ingredients": [
+        {"name": "Thinly sliced beef", "quantity": 300, "unit": "g"},
+        {"name": "Potato", "quantity": 4, "unit": "pc"},
+        {"name": "Onion", "quantity": 2, "unit": "pc"},
+        {"name": "Carrot", "quantity": 1, "unit": "pc"},
+        {"name": "Dashi", "quantity": 500, "unit": "ml"},
+        {"name": "Soy sauce", "quantity": 80, "unit": "ml"},
+        {"name": "Mirin", "quantity": 60, "unit": "ml"},
+        {"name": "Sugar", "quantity": 2, "unit": "tbsp"},
+        {"name": "Sake", "quantity": 30, "unit": "ml"},
+        {"name": "Snow peas", "quantity": 50, "unit": "g"},
+        {"name": "Vegetable oil", "quantity": 1, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Cut potatoes into wedges, onions into thick slices and carrots into chunks.",
+        "Heat oil in a pot and stir-fry beef briefly until colour changes.",
+        "Add onions, potatoes and carrots and stir to coat.",
+        "Pour in dashi, sake, sugar, mirin and soy sauce.",
+        "Cover with a drop lid and simmer 20-25 minutes until potatoes are tender.",
+        "Stir in blanched snow peas at the end."
+      ],
+      "tags": ["stew", "beef", "homestyle"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Teriyaki Chicken",
+      "description": "Pan-seared chicken thighs glazed with a glossy sweet soy teriyaki sauce.",
+      "ingredients": [
+        {"name": "Boneless chicken thighs", "quantity": 600, "unit": "g"},
+        {"name": "Soy sauce", "quantity": 60, "unit": "ml"},
+        {"name": "Mirin", "quantity": 60, "unit": "ml"},
+        {"name": "Sake", "quantity": 30, "unit": "ml"},
+        {"name": "Sugar", "quantity": 2, "unit": "tbsp"},
+        {"name": "Vegetable oil", "quantity": 1, "unit": "tbsp"},
+        {"name": "Sesame seeds", "quantity": 1, "unit": "tsp"},
+        {"name": "Scallions", "quantity": 2, "unit": "pc"}
+      ],
+      "steps": [
+        "Pat chicken dry and prick the skin with a fork.",
+        "Heat oil in a skillet and place chicken skin-side down, weighting to keep flat.",
+        "Cook 6 minutes until skin is crisp, then flip and cook 4 more minutes.",
+        "Drain excess oil and add soy sauce, mirin, sake and sugar.",
+        "Reduce sauce, basting chicken until it forms a glossy glaze.",
+        "Slice and top with sesame seeds and scallions."
+      ],
+      "tags": ["chicken", "glazed", "weeknight"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Shoyu Ramen",
+      "description": "Tokyo-style soy sauce ramen with chicken broth, chashu, bamboo shoots and egg.",
+      "ingredients": [
+        {"name": "Chicken bones", "quantity": 1, "unit": "kg"},
+        {"name": "Ramen noodles", "quantity": 400, "unit": "g"},
+        {"name": "Pork belly", "quantity": 400, "unit": "g"},
+        {"name": "Soy sauce", "quantity": 120, "unit": "ml"},
+        {"name": "Mirin", "quantity": 60, "unit": "ml"},
+        {"name": "Sake", "quantity": 60, "unit": "ml"},
+        {"name": "Kombu", "quantity": 10, "unit": "g"},
+        {"name": "Bamboo shoots", "quantity": 100, "unit": "g"},
+        {"name": "Eggs", "quantity": 4, "unit": "pc"},
+        {"name": "Scallions", "quantity": 2, "unit": "pc"},
+        {"name": "Nori sheets", "quantity": 4, "unit": "pc"}
+      ],
+      "steps": [
+        "Simmer chicken bones with kombu in water for 4 hours, then strain.",
+        "Braise pork belly in soy sauce, mirin and sake for 90 minutes for chashu.",
+        "Reserve 200 ml of the chashu liquid as shoyu tare.",
+        "Soft-boil and marinate eggs in shoyu tare for 1 hour.",
+        "Cook noodles in boiling water for 90 seconds.",
+        "Place 3 tablespoons of tare in each bowl, add hot broth, then noodles.",
+        "Top with sliced chashu, bamboo shoots, halved egg, scallions and nori."
+      ],
+      "tags": ["noodles", "soup", "Tokyo"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 240,
+      "servings": 4
+    },
+    {
+      "title": "Saba Shioyaki",
+      "description": "Salt-grilled mackerel with crisp skin, served with grated daikon and lemon.",
+      "ingredients": [
+        {"name": "Mackerel fillets", "quantity": 4, "unit": "pc"},
+        {"name": "Salt", "quantity": 2, "unit": "tsp"},
+        {"name": "Sake", "quantity": 1, "unit": "tbsp"},
+        {"name": "Daikon", "quantity": 200, "unit": "g"},
+        {"name": "Lemon", "quantity": 1, "unit": "pc"},
+        {"name": "Soy sauce", "quantity": 1, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Score the skin of each mackerel fillet in a shallow cross pattern.",
+        "Sprinkle generously with salt and let sit for 20 minutes.",
+        "Pat dry and brush lightly with sake.",
+        "Grill skin-side up for 4 minutes, then flip and grill 5 minutes more until skin is blistered.",
+        "Serve with grated daikon, a lemon wedge and a few drops of soy sauce."
+      ],
+      "tags": ["fish", "grilled", "healthy"],
+      "difficulty": "easy",
+      "prepTime": 25,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Hiyayakko",
+      "description": "Chilled silken tofu topped with bonito, scallions, ginger and soy sauce.",
+      "ingredients": [
+        {"name": "Silken tofu", "quantity": 400, "unit": "g"},
+        {"name": "Scallions", "quantity": 2, "unit": "pc"},
+        {"name": "Ginger", "quantity": 15, "unit": "g"},
+        {"name": "Bonito flakes", "quantity": 5, "unit": "g"},
+        {"name": "Soy sauce", "quantity": 2, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Drain the tofu and cut into 4 blocks.",
+        "Place each block on a small plate.",
+        "Top with finely chopped scallions and grated ginger.",
+        "Sprinkle bonito flakes generously on top.",
+        "Drizzle with soy sauce just before serving."
+      ],
+      "tags": ["tofu", "cold", "summer"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 0,
+      "servings": 4
+    }
+  ]
+}

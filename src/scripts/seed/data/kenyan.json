@@ -1,0 +1,361 @@
+{
+  "cuisine": "Kenyan",
+  "names": {
+    "first": ["Wanjiru", "Kamau", "Achieng", "Otieno", "Njeri", "Mwangi", "Akinyi", "Kiprop", "Naliaka", "Chebet", "Kipchoge", "Wambui"],
+    "last": ["Otieno", "Kamau", "Mwangi", "Wanjiku", "Kiprono", "Odhiambo", "Njoroge", "Kariuki", "Owino", "Kipngeno", "Kimani", "Maina"]
+  },
+  "recipes": [
+    {
+      "title": "Ugali",
+      "description": "Kenya's staple stiff cornmeal porridge, eaten by hand alongside stews and vegetables.",
+      "ingredients": [
+        { "name": "white maize flour", "quantity": 500, "unit": "g" },
+        { "name": "water", "quantity": 1, "unit": "l" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Bring the water to a rolling boil in a heavy-bottomed pot and add the salt.",
+        "Reduce the heat to medium and gradually rain in the maize flour with one hand while stirring constantly with a wooden spoon (mwiko) in the other.",
+        "Keep stirring vigorously to break up any lumps as the mixture thickens.",
+        "Once the dough pulls away from the sides of the pot, lower the heat and press it against the sides to cook the steam pockets out.",
+        "Cover and let it steam for 3-4 minutes, then turn and cook the other side for another 3 minutes.",
+        "Wet a round bowl, scoop the ugali into it, and invert onto a plate to form a smooth dome.",
+        "Serve hot, torn by hand, with sukuma wiki, nyama choma, or stews."
+      ],
+      "tags": ["staple", "side", "cornmeal", "national-dish"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Sukuma Wiki",
+      "description": "Quick-braised collard greens with onions and tomatoes, the everyday vegetable side of Kenyan tables.",
+      "ingredients": [
+        { "name": "collard greens, shredded", "quantity": 600, "unit": "g" },
+        { "name": "red onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "tomatoes, chopped", "quantity": 2, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 3, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "ground coriander", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Wash the collard greens, stack the leaves, roll tightly, and slice into thin ribbons.",
+        "Heat the oil in a wide pan over medium heat and sauté the onion until translucent, about 4 minutes.",
+        "Add the garlic and ground coriander and cook for 1 minute until fragrant.",
+        "Stir in the chopped tomatoes and cook until they break down into a soft sauce, about 5 minutes.",
+        "Add the shredded collards a handful at a time, tossing to wilt before adding more.",
+        "Season with salt and pepper, splash in 60 ml water, cover, and steam for 5 minutes.",
+        "Uncover, toss to combine, and serve immediately alongside ugali."
+      ],
+      "tags": ["vegetable", "side", "everyday", "quick"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Nyama Choma",
+      "description": "Kenya's signature roasted goat meat, charcoal-grilled over open fire and served with kachumbari.",
+      "ingredients": [
+        { "name": "goat ribs and leg, bone-in", "quantity": 1.5, "unit": "kg" },
+        { "name": "garlic, minced", "quantity": 6, "unit": "pc" },
+        { "name": "ginger, grated", "quantity": 2, "unit": "tbsp" },
+        { "name": "lemon juice", "quantity": 4, "unit": "tbsp" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 2, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Cut the goat into large bone-in pieces suitable for grilling.",
+        "Combine garlic, ginger, lemon juice, oil, salt, and pepper into a paste and rub all over the meat.",
+        "Marinate for at least 2 hours, ideally overnight, in the refrigerator.",
+        "Prepare a charcoal grill with the coals banked to one side for indirect heat.",
+        "Sear the meat over direct heat for 3-4 minutes per side to brown.",
+        "Move the pieces to the cooler side of the grill, cover loosely with foil, and slow-roast for 45-60 minutes, turning occasionally.",
+        "Brush with the leftover marinade halfway through cooking.",
+        "Rest the meat for 10 minutes, then chop into bite-sized pieces and serve with kachumbari and ugali."
+      ],
+      "tags": ["grilled", "meat", "celebration", "weekend"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 130,
+      "cookTime": 70,
+      "servings": 6
+    },
+    {
+      "title": "Mukimo",
+      "description": "Central Kenyan mash of potatoes, maize, beans, and pumpkin leaves from the Kikuyu community.",
+      "ingredients": [
+        { "name": "potatoes, peeled and cubed", "quantity": 800, "unit": "g" },
+        { "name": "fresh green maize kernels", "quantity": 250, "unit": "g" },
+        { "name": "cooked red beans", "quantity": 250, "unit": "g" },
+        { "name": "pumpkin leaves, chopped", "quantity": 200, "unit": "g" },
+        { "name": "spinach, chopped", "quantity": 100, "unit": "g" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Boil the potatoes and maize kernels together in salted water until the potatoes are fork-tender, about 20 minutes.",
+        "In a separate pan, heat the oil and sauté the onion until soft.",
+        "Add the pumpkin leaves and spinach and cook until fully wilted, about 4 minutes.",
+        "Drain most of the water from the potatoes, leaving just a little.",
+        "Add the cooked beans and the wilted greens to the potato pot.",
+        "Mash everything together with a wooden masher until the mixture is rustic and chunky, with the maize kernels still whole.",
+        "Season with salt, fold in the onion mixture, and serve warm alongside roasted meat or stew."
+      ],
+      "tags": ["mash", "kikuyu", "side", "hearty"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Kenyan Pilau",
+      "description": "Coastal Swahili spiced rice cooked with beef, onions, and pilau masala for celebrations.",
+      "ingredients": [
+        { "name": "basmati rice", "quantity": 500, "unit": "g" },
+        { "name": "beef stew meat, cubed", "quantity": 600, "unit": "g" },
+        { "name": "red onions, thinly sliced", "quantity": 3, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 5, "unit": "pc" },
+        { "name": "ginger, grated", "quantity": 1, "unit": "tbsp" },
+        { "name": "pilau masala", "quantity": 2, "unit": "tbsp" },
+        { "name": "tomatoes, chopped", "quantity": 2, "unit": "pc" },
+        { "name": "potatoes, cubed", "quantity": 2, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 80, "unit": "ml" },
+        { "name": "beef stock", "quantity": 1, "unit": "l" },
+        { "name": "salt", "quantity": 2, "unit": "tsp" }
+      ],
+      "steps": [
+        "Rinse the rice in cold water until it runs clear, then soak for 20 minutes and drain.",
+        "Heat the oil in a heavy pot and fry the sliced onions over medium heat until deeply caramelised, about 15 minutes.",
+        "Add the garlic, ginger, and pilau masala and cook for 1 minute until aromatic.",
+        "Stir in the beef and brown on all sides, about 8 minutes.",
+        "Add the tomatoes and potatoes, season with salt, and cook for 5 minutes.",
+        "Pour in the beef stock, cover, and simmer until the meat is tender, about 40 minutes.",
+        "Add the drained rice, stir gently once, and ensure the liquid sits 2 cm above the rice.",
+        "Cover tightly, lower the heat to minimum, and steam for 20 minutes without lifting the lid.",
+        "Rest off the heat for 10 minutes, then fluff with a fork and serve with kachumbari."
+      ],
+      "tags": ["rice", "swahili", "celebration", "spiced"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Mandazi",
+      "description": "East African slightly sweet fried dough triangles flavored with cardamom and coconut milk.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 500, "unit": "g" },
+        { "name": "sugar", "quantity": 80, "unit": "g" },
+        { "name": "ground cardamom", "quantity": 1, "unit": "tsp" },
+        { "name": "baking powder", "quantity": 2, "unit": "tsp" },
+        { "name": "coconut milk", "quantity": 250, "unit": "ml" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 0.25, "unit": "tsp" },
+        { "name": "vegetable oil for frying", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "Whisk the flour, sugar, cardamom, baking powder, and salt in a large bowl.",
+        "In a separate bowl, beat the egg into the coconut milk.",
+        "Pour the wet mixture into the dry ingredients and mix to a soft, slightly sticky dough.",
+        "Knead briefly until smooth, then cover and rest for 30 minutes.",
+        "Divide the dough into four pieces. Roll each into a 1 cm thick circle and cut into 6 wedges.",
+        "Heat the oil in a deep pan to 170°C.",
+        "Fry the wedges in batches, turning once, for about 3 minutes total until puffed and golden.",
+        "Drain on paper towels and serve warm with chai."
+      ],
+      "tags": ["fried", "sweet", "breakfast", "snack"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 40,
+      "cookTime": 20,
+      "servings": 6
+    },
+    {
+      "title": "Githeri",
+      "description": "Traditional Kikuyu one-pot stew of boiled maize and beans, often enriched with vegetables and spices.",
+      "ingredients": [
+        { "name": "dried maize kernels", "quantity": 300, "unit": "g" },
+        { "name": "dried red kidney beans", "quantity": 300, "unit": "g" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "tomatoes, chopped", "quantity": 3, "unit": "pc" },
+        { "name": "carrot, diced", "quantity": 1, "unit": "pc" },
+        { "name": "potatoes, cubed", "quantity": 2, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 3, "unit": "pc" },
+        { "name": "ground coriander", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak the maize and beans separately overnight in plenty of cold water.",
+        "Drain, combine in a large pot, cover with fresh water, and boil until very tender, about 90 minutes, topping up water as needed.",
+        "In a separate pan, heat the oil and sauté the onion until golden.",
+        "Add the garlic and ground coriander and cook briefly.",
+        "Stir in the tomatoes and cook into a soft sauce, about 6 minutes.",
+        "Add the carrot and potatoes and cook for 5 minutes.",
+        "Tip the cooked maize and beans (with about 250 ml of their cooking liquid) into the pan.",
+        "Season with salt and simmer uncovered for 15 minutes until the potatoes are tender and the stew thickens.",
+        "Taste, adjust salt, and serve hot."
+      ],
+      "tags": ["stew", "beans", "kikuyu", "one-pot"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 720,
+      "cookTime": 120,
+      "servings": 6
+    },
+    {
+      "title": "Irio",
+      "description": "Kikuyu green mash of potatoes, peas, and maize, traditionally served with grilled meats.",
+      "ingredients": [
+        { "name": "potatoes, peeled and cubed", "quantity": 1, "unit": "kg" },
+        { "name": "fresh green peas", "quantity": 250, "unit": "g" },
+        { "name": "fresh maize kernels", "quantity": 250, "unit": "g" },
+        { "name": "spinach, chopped", "quantity": 150, "unit": "g" },
+        { "name": "butter", "quantity": 30, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Boil the potatoes in salted water until completely tender, about 20 minutes.",
+        "In a separate pot, simmer the peas and maize kernels together until soft, about 15 minutes, then drain.",
+        "Briefly blanch the spinach in boiling water for 1 minute and drain well.",
+        "Drain the potatoes and return to the pot.",
+        "Add the spinach and mash everything together until smooth and pale green.",
+        "Fold in the cooked peas and maize, keeping them mostly whole for texture.",
+        "Stir in the butter, season with salt, and serve warm next to nyama choma."
+      ],
+      "tags": ["mash", "kikuyu", "side", "vegetable"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 6
+    },
+    {
+      "title": "Chapati",
+      "description": "Soft, layered Kenyan-style flatbread enriched and pan-fried with oil, served with stews.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 500, "unit": "g" },
+        { "name": "warm water", "quantity": 280, "unit": "ml" },
+        { "name": "vegetable oil", "quantity": 100, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "sugar", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "In a bowl, whisk the flour, salt, and sugar together.",
+        "Drizzle in 2 tablespoons of the oil and rub it into the flour with your fingertips.",
+        "Add the warm water gradually, mixing to form a soft dough.",
+        "Knead on a floured surface for 10 minutes until smooth and elastic, then rest covered for 30 minutes.",
+        "Divide into 8 balls. Roll one out into a thin disc, brush with oil, and roll up tightly into a rope.",
+        "Coil the rope into a snail shape, flatten, and rest while shaping the others.",
+        "Roll each coil into a 20 cm round disc.",
+        "Heat a flat skillet over medium-high heat. Cook each chapati for 1 minute per side, then brush both sides with oil and cook 30 seconds more per side until golden with brown spots.",
+        "Stack wrapped in a clean towel to keep soft and serve warm."
+      ],
+      "tags": ["flatbread", "side", "everyday", "swahili"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 50,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Maharagwe",
+      "description": "Coastal Kenyan red kidney beans simmered in spiced coconut milk with tomatoes.",
+      "ingredients": [
+        { "name": "dried red kidney beans", "quantity": 400, "unit": "g" },
+        { "name": "coconut milk", "quantity": 400, "unit": "ml" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "tomatoes, chopped", "quantity": 2, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 3, "unit": "pc" },
+        { "name": "ginger, grated", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak the beans overnight in plenty of cold water, then drain.",
+        "Boil the beans in fresh water until tender, about 60-70 minutes, and drain, reserving 200 ml of the cooking liquid.",
+        "In a wide pot, heat the oil and sauté the onion until soft and golden.",
+        "Add the garlic, ginger, turmeric, and cumin and cook for 1 minute.",
+        "Stir in the tomatoes and cook until they break down, about 5 minutes.",
+        "Add the cooked beans and the reserved cooking liquid, then pour in the coconut milk.",
+        "Season with salt and simmer uncovered for 15 minutes until creamy and slightly thickened.",
+        "Taste, adjust salt, and serve with chapati or rice."
+      ],
+      "tags": ["beans", "coconut", "swahili", "stew"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 720,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Mbuzi Choma",
+      "description": "Charcoal-roasted goat ribs and leg, the centrepiece of Kenyan weekend gatherings.",
+      "ingredients": [
+        { "name": "goat ribs", "quantity": 1.2, "unit": "kg" },
+        { "name": "garlic, minced", "quantity": 6, "unit": "pc" },
+        { "name": "ginger, grated", "quantity": 2, "unit": "tbsp" },
+        { "name": "lemon juice", "quantity": 60, "unit": "ml" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "ground coriander", "quantity": 1, "unit": "tsp" },
+        { "name": "paprika", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 2, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Pat the goat ribs dry and score the meat lightly between the bones.",
+        "Whisk garlic, ginger, lemon juice, oil, coriander, paprika, salt, and pepper into a paste.",
+        "Rub the paste over the meat and marinate for at least 4 hours, ideally overnight.",
+        "Light a charcoal grill and let it burn down to medium-low embers, with one side cooler than the other.",
+        "Sear the ribs over the hot side for 2-3 minutes per side to develop colour.",
+        "Move to the cooler side and roast slowly, turning every 10 minutes, for about 50 minutes until tender.",
+        "Brush occasionally with the leftover marinade thinned with a splash of oil.",
+        "Rest the ribs for 10 minutes, then chop between the bones and serve with kachumbari and ugali."
+      ],
+      "tags": ["grilled", "goat", "weekend", "celebration"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 250,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Kachumbari",
+      "description": "Fresh East African salad of tomatoes, onions, chilli, and coriander, served with grilled meats.",
+      "ingredients": [
+        { "name": "ripe tomatoes, diced", "quantity": 4, "unit": "pc" },
+        { "name": "red onion, finely sliced", "quantity": 1, "unit": "pc" },
+        { "name": "green chilli, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "fresh coriander, chopped", "quantity": 1, "unit": "bunch" },
+        { "name": "lemon juice", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.25, "unit": "tsp" }
+      ],
+      "steps": [
+        "Slice the red onion very thinly and soak in cold water for 10 minutes to mellow its bite, then drain.",
+        "Combine the diced tomatoes, drained onion, and chilli in a serving bowl.",
+        "Drizzle with the lemon juice and season with salt and pepper.",
+        "Toss gently and let stand for 5 minutes for the flavours to mingle.",
+        "Fold in the chopped coriander just before serving.",
+        "Serve cold alongside nyama choma, pilau, or ugali."
+      ],
+      "tags": ["salad", "fresh", "side", "no-cook"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 0,
+      "servings": 4
+    }
+  ]
+}

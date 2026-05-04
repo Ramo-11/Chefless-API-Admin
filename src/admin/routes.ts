@@ -30,13 +30,6 @@ import {
   untagRecipe,
 } from "./controllers/seasonal";
 import {
-  promoCodesPage,
-  createPromoCode,
-  updatePromoCode,
-  deletePromoCode,
-  promoCodeDetail,
-} from "./controllers/promo-codes";
-import {
   kitchensPage,
   kitchenDetail,
   kitchenSuggestions,
@@ -67,6 +60,15 @@ import {
   addWrappedTestUser,
   removeWrappedTestUser,
 } from "./controllers/app-config";
+import {
+  seedDataPage,
+  seedUsersList,
+  seedRecipesList,
+  deleteSeedUser,
+  deleteSeedRecipe,
+  deleteSeedCuisine,
+  deleteAllSeed,
+} from "./controllers/seed-data";
 
 const router = Router();
 
@@ -100,10 +102,6 @@ router.post("/api/seasonal/tags/:id/toggle", csrfProtection, toggleTag);
 router.delete("/api/seasonal/tags/:id", csrfProtection, deleteTag);
 router.post("/api/seasonal/tag-recipe", csrfProtection, tagRecipe);
 router.post("/api/seasonal/untag-recipe", csrfProtection, untagRecipe);
-router.get("/api/promo-codes/:id", promoCodeDetail);
-router.post("/api/promo-codes", csrfProtection, createPromoCode);
-router.put("/api/promo-codes/:id", csrfProtection, updatePromoCode);
-router.delete("/api/promo-codes/:id", csrfProtection, deletePromoCode);
 router.get("/api/kitchens/:id", kitchenDetail);
 router.get("/api/kitchens/:id/suggestions", kitchenSuggestions);
 router.put("/api/kitchens/:id", csrfProtection, updateKitchen);
@@ -122,6 +120,18 @@ router.post("/api/admins", requireSuperAdmin, csrfProtection, createAdmin);
 router.put("/api/admins/:id", requireSuperAdmin, csrfProtection, updateAdmin);
 router.post("/api/admins/:id/toggle-active", requireSuperAdmin, csrfProtection, toggleAdminActive);
 router.post("/api/admins/:id/reset-password", requireSuperAdmin, csrfProtection, resetAdminPassword);
+
+// ── Seed data (synthetic discovery accounts) ──────────────────────
+router.get("/api/seed-data/users", seedUsersList);
+router.get("/api/seed-data/recipes", seedRecipesList);
+router.delete("/api/seed-data/users/:id", csrfProtection, deleteSeedUser);
+router.delete("/api/seed-data/recipes/:id", csrfProtection, deleteSeedRecipe);
+router.delete(
+  "/api/seed-data/cuisines/:cuisine",
+  csrfProtection,
+  deleteSeedCuisine
+);
+router.delete("/api/seed-data/all", csrfProtection, deleteAllSeed);
 
 // ── App config (runtime feature flags) ─────────────────────────────
 router.post("/api/app-config", csrfProtection, updateAppConfig);
@@ -146,11 +156,11 @@ router.get("/moderated-posts", moderatedPostsPage);
 router.get("/reports", reportsPage);
 router.get("/labels", labelsPage);
 router.get("/seasonal", seasonalPage);
-router.get("/promo-codes", promoCodesPage);
 router.get("/kitchens", kitchensPage);
 router.get("/feedback", feedbackPage);
 router.get("/feedback/:id", feedbackDetail);
 router.get("/admins", requireSuperAdmin, adminsPage);
 router.get("/app-config", appConfigPage);
+router.get("/seed-data", seedDataPage);
 
 export default router;

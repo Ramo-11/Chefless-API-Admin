@@ -1,0 +1,258 @@
+{
+  "cuisine": "Puerto Rican",
+  "names": {
+    "first": ["Javier", "Yarelis", "Héctor", "Glorimar", "Ricardo", "Marisol", "Iván", "Yolanda", "Edgardo", "Damaris", "Ángel", "Wanda"],
+    "last": ["Rivera", "Torres", "Santiago", "Vázquez", "Cruz", "Ortiz", "Ramos", "Burgos", "Colón", "Figueroa", "Quiñones", "Maldonado"]
+  },
+  "recipes": [
+    {
+      "title": "Mofongo",
+      "description": "Puerto Rican mash of fried green plantains pounded with garlic, olive oil and chicharrón, served as a dome with broth.",
+      "ingredients": [
+        { "name": "green plantains", "quantity": 4, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 6, "unit": "pc" },
+        { "name": "olive oil", "quantity": 60, "unit": "ml" },
+        { "name": "chicharrón (pork crackling), crushed", "quantity": 150, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "chicken broth, warm", "quantity": 250, "unit": "ml" },
+        { "name": "oil for frying", "quantity": 500, "unit": "ml" }
+      ],
+      "steps": [
+        "Peel plantains and slice into 2 cm rounds.",
+        "Fry rounds in oil at 170°C for 6 minutes until tender but not browned; drain.",
+        "In a pilón (mortar), mash garlic with olive oil and salt.",
+        "Add hot plantain pieces in batches and pound, mixing in chicharrón as you go.",
+        "Pack the mash into a small bowl and invert onto a plate to form a dome; serve with warm broth on the side."
+      ],
+      "tags": ["plantain", "national-dish", "fried"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Arroz con Gandules",
+      "description": "Puerto Rican rice cooked with sofrito, pigeon peas and pork in achiote-tinted broth, the island's signature side.",
+      "ingredients": [
+        { "name": "long-grain rice", "quantity": 500, "unit": "g" },
+        { "name": "pigeon peas (gandules), drained", "quantity": 400, "unit": "g" },
+        { "name": "sofrito", "quantity": 4, "unit": "tbsp" },
+        { "name": "tomato sauce", "quantity": 100, "unit": "ml" },
+        { "name": "achiote oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt pork or bacon, diced", "quantity": 80, "unit": "g" },
+        { "name": "alcaparrado (olives and capers)", "quantity": 60, "unit": "g" },
+        { "name": "ham, diced", "quantity": 100, "unit": "g" },
+        { "name": "chicken broth", "quantity": 850, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Render salt pork in a caldero, then add ham and brown lightly.",
+        "Stir in sofrito, achiote oil and tomato sauce; cook 2 minutes.",
+        "Add gandules and alcaparrado, then the rice and toast 1 minute.",
+        "Pour in broth, season with salt, bring to a boil and stir once.",
+        "Cover, lower heat and cook 25 minutes until liquid is absorbed; fluff with a fork before serving."
+      ],
+      "tags": ["rice", "side", "national-dish"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Pernil",
+      "description": "Puerto Rican garlic-marinated roast pork shoulder with crackling skin (cuerito), the centrepiece of holiday meals.",
+      "ingredients": [
+        { "name": "bone-in pork shoulder", "quantity": 4, "unit": "kg" },
+        { "name": "garlic cloves", "quantity": 12, "unit": "pc" },
+        { "name": "dried oregano", "quantity": 1, "unit": "tbsp" },
+        { "name": "olive oil", "quantity": 60, "unit": "ml" },
+        { "name": "white vinegar", "quantity": 60, "unit": "ml" },
+        { "name": "salt", "quantity": 3, "unit": "tbsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Crush garlic with salt, oregano, pepper, cumin, oil and vinegar to make adobo.",
+        "Loosen the pork skin and pierce the meat all over; rub adobo deep into every cut and under the skin.",
+        "Wrap and refrigerate at least 24 hours.",
+        "Roast skin-side up at 160°C, uncovered, for 4 hours, basting with pan juices.",
+        "Increase to 230°C and roast 30 minutes until the skin (cuerito) is crackling.",
+        "Rest 20 minutes, then carve, breaking the cuerito into shards to serve on top."
+      ],
+      "tags": ["pork", "roast", "holiday"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 270,
+      "servings": 10
+    },
+    {
+      "title": "Pasteles",
+      "description": "Puerto Rican green-banana and root masa stuffed with seasoned pork, wrapped in plantain leaves and boiled.",
+      "ingredients": [
+        { "name": "green bananas, peeled", "quantity": 8, "unit": "pc" },
+        { "name": "yautía (taro), peeled", "quantity": 500, "unit": "g" },
+        { "name": "green plantains, peeled", "quantity": 2, "unit": "pc" },
+        { "name": "calabaza pumpkin, peeled", "quantity": 250, "unit": "g" },
+        { "name": "milk", "quantity": 250, "unit": "ml" },
+        { "name": "achiote oil", "quantity": 60, "unit": "ml" },
+        { "name": "pork shoulder, diced", "quantity": 1, "unit": "kg" },
+        { "name": "sofrito", "quantity": 100, "unit": "g" },
+        { "name": "tomato sauce", "quantity": 200, "unit": "ml" },
+        { "name": "alcaparrado", "quantity": 80, "unit": "g" },
+        { "name": "plantain leaves, cleaned", "quantity": 16, "unit": "pc" },
+        { "name": "kitchen twine", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Stew pork with sofrito, tomato sauce, alcaparrado and a little water for 45 minutes; cool.",
+        "Grate green bananas, yautía, plantain and pumpkin, then beat in milk, achiote oil and salt to a creamy masa.",
+        "Soften plantain leaves over a flame and cut into 25 cm rectangles, lightly oiled.",
+        "Spread masa on each leaf, top with a spoon of pork stew, fold into a flat rectangular parcel.",
+        "Tie pasteles in pairs with twine and boil in salted water for 60 minutes.",
+        "Drain, unwrap and serve with rice and beans."
+      ],
+      "tags": ["holiday", "tamale", "tradition"],
+      "difficulty": "hard",
+      "prepTime": 180,
+      "cookTime": 60,
+      "servings": 12
+    },
+    {
+      "title": "Alcapurria",
+      "description": "Puerto Rican fritter of grated green banana and yautía masa stuffed with picadillo and deep-fried.",
+      "ingredients": [
+        { "name": "green bananas, peeled", "quantity": 6, "unit": "pc" },
+        { "name": "yautía, peeled", "quantity": 500, "unit": "g" },
+        { "name": "achiote oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "ground beef", "quantity": 400, "unit": "g" },
+        { "name": "sofrito", "quantity": 3, "unit": "tbsp" },
+        { "name": "tomato sauce", "quantity": 100, "unit": "ml" },
+        { "name": "alcaparrado", "quantity": 50, "unit": "g" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "oil for frying", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "Cook ground beef with sofrito, cumin, tomato sauce and alcaparrado for 15 minutes; cool.",
+        "Grate green bananas and yautía finely, mix with achiote oil and salt to a smooth orange masa.",
+        "Spread a strip of masa on a square of greased plastic, top with picadillo, then fold into a torpedo shape.",
+        "Heat oil to 170°C and fry alcapurrias 6-8 minutes until deeply golden and crisp.",
+        "Drain on paper and serve hot."
+      ],
+      "tags": ["fried", "street-food", "fritter"],
+      "difficulty": "medium",
+      "prepTime": 45,
+      "cookTime": 20,
+      "servings": 8
+    },
+    {
+      "title": "Tostones",
+      "description": "Puerto Rican twice-fried green plantain rounds smashed flat and salted, served with mojo or as a side.",
+      "ingredients": [
+        { "name": "green plantains", "quantity": 3, "unit": "pc" },
+        { "name": "oil for frying", "quantity": 500, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "garlic cloves, smashed", "quantity": 3, "unit": "pc" },
+        { "name": "water", "quantity": 250, "unit": "ml" }
+      ],
+      "steps": [
+        "Peel plantains and slice into 3 cm rounds.",
+        "Fry rounds at 160°C for 4 minutes until tender but pale; drain.",
+        "Smash each round flat with a tostonera or the bottom of a glass.",
+        "Dip flattened rounds briefly in salted garlic water, then drain.",
+        "Fry again at 180°C for 2-3 minutes until crisp and deep gold.",
+        "Sprinkle with salt and serve immediately."
+      ],
+      "tags": ["plantain", "side", "fried"],
+      "dietaryTags": ["vegan", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Bacalaítos",
+      "description": "Puerto Rican thin, crispy salt cod fritters from beachside kioskos in Piñones.",
+      "ingredients": [
+        { "name": "salt cod (bacalao)", "quantity": 250, "unit": "g" },
+        { "name": "all-purpose flour", "quantity": 200, "unit": "g" },
+        { "name": "baking powder", "quantity": 1, "unit": "tsp" },
+        { "name": "water", "quantity": 350, "unit": "ml" },
+        { "name": "sofrito", "quantity": 2, "unit": "tbsp" },
+        { "name": "fresh cilantro, chopped", "quantity": 1, "unit": "bunch" },
+        { "name": "garlic cloves, minced", "quantity": 2, "unit": "pc" },
+        { "name": "ground black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "oil for frying", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "Soak cod in cold water 24 hours, changing the water several times; drain, simmer 10 minutes, cool and flake, removing bones.",
+        "Whisk flour, baking powder, pepper and water into a thin pancake-like batter.",
+        "Stir in sofrito, garlic, cilantro and the flaked cod.",
+        "Heat oil to 180°C and ladle thin disks of batter into the oil.",
+        "Fry 2-3 minutes per side until lacy and crisp; drain and serve immediately."
+      ],
+      "tags": ["fish", "fried", "street-food"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 20,
+      "servings": 6
+    },
+    {
+      "title": "Sancocho",
+      "description": "Puerto Rican rich beef and root-vegetable stew with corn, plantain and yautía.",
+      "ingredients": [
+        { "name": "beef chuck, cubed", "quantity": 800, "unit": "g" },
+        { "name": "sofrito", "quantity": 4, "unit": "tbsp" },
+        { "name": "tomato sauce", "quantity": 100, "unit": "ml" },
+        { "name": "yautía, peeled and chunked", "quantity": 400, "unit": "g" },
+        { "name": "yuca, peeled and chunked", "quantity": 400, "unit": "g" },
+        { "name": "potatoes, chunked", "quantity": 2, "unit": "pc" },
+        { "name": "calabaza pumpkin, chunked", "quantity": 300, "unit": "g" },
+        { "name": "green plantain, in rounds", "quantity": 1, "unit": "pc" },
+        { "name": "corn on the cob, in rounds", "quantity": 2, "unit": "pc" },
+        { "name": "fresh cilantro", "quantity": 1, "unit": "bunch" },
+        { "name": "water", "quantity": 2.5, "unit": "l" }
+      ],
+      "steps": [
+        "Brown the beef in oil with sofrito until aromatic, then add tomato sauce.",
+        "Add water and salt and simmer 60 minutes until beef is becoming tender.",
+        "Add yautía, yuca, potato and pumpkin; cook 20 minutes.",
+        "Add plantain rounds and corn and cook 15 minutes more until everything is fork-tender.",
+        "Finish with cilantro, taste and adjust salt, and serve in deep bowls with white rice."
+      ],
+      "tags": ["soup", "stew", "comfort-food"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 100,
+      "servings": 8
+    },
+    {
+      "title": "Tembleque",
+      "description": "Puerto Rican silky coconut milk pudding set with cornstarch, dusted with cinnamon for Christmas.",
+      "ingredients": [
+        { "name": "coconut milk", "quantity": 800, "unit": "ml" },
+        { "name": "sugar", "quantity": 150, "unit": "g" },
+        { "name": "cornstarch", "quantity": 80, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "pinch" },
+        { "name": "cinnamon stick", "quantity": 1, "unit": "pc" },
+        { "name": "ground cinnamon for dusting", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Whisk cornstarch with 200 ml of coconut milk until smooth.",
+        "In a saucepan, combine remaining coconut milk, sugar, salt and cinnamon stick; warm until sugar dissolves.",
+        "Whisk in the cornstarch slurry and cook over medium heat, stirring constantly, until thick like pudding, about 8 minutes.",
+        "Remove the cinnamon stick and pour into a mould or individual cups.",
+        "Chill at least 4 hours, then unmould and dust with ground cinnamon."
+      ],
+      "tags": ["dessert", "coconut", "holiday"],
+      "dietaryTags": ["vegan", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 6
+    }
+  ]
+}

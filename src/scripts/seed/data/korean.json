@@ -1,0 +1,497 @@
+{
+  "cuisine": "Korean",
+  "names": {
+    "first": ["Min-jun", "Seo-yeon", "Ji-hoon", "Ha-eun", "Joon-ho", "Yu-na", "Tae-hyung", "Soo-min", "Hyun-woo", "Eun-ji"],
+    "last": ["Kim", "Lee", "Park", "Choi", "Jung", "Kang", "Cho", "Yoon", "Jang", "Lim"]
+  },
+  "recipes": [
+    {
+      "title": "Bibimbap",
+      "description": "Mixed rice bowl with seasoned vegetables, marinated beef, fried egg and gochujang sauce.",
+      "ingredients": [
+        {"name": "Cooked rice", "quantity": 4, "unit": "cup"},
+        {"name": "Beef sirloin", "quantity": 300, "unit": "g"},
+        {"name": "Spinach", "quantity": 200, "unit": "g"},
+        {"name": "Bean sprouts", "quantity": 200, "unit": "g"},
+        {"name": "Carrot", "quantity": 1, "unit": "pc"},
+        {"name": "Zucchini", "quantity": 1, "unit": "pc"},
+        {"name": "Shiitake mushrooms", "quantity": 6, "unit": "pc"},
+        {"name": "Eggs", "quantity": 4, "unit": "pc"},
+        {"name": "Gochujang", "quantity": 4, "unit": "tbsp"},
+        {"name": "Sesame oil", "quantity": 4, "unit": "tbsp"},
+        {"name": "Soy sauce", "quantity": 3, "unit": "tbsp"},
+        {"name": "Sesame seeds", "quantity": 2, "unit": "tbsp"},
+        {"name": "Garlic", "quantity": 4, "unit": "pc"}
+      ],
+      "steps": [
+        "Slice beef thinly and marinate with soy sauce, garlic and a teaspoon of sesame oil for 20 minutes.",
+        "Blanch spinach, squeeze and season with sesame oil, garlic and salt.",
+        "Blanch bean sprouts and dress with sesame oil, garlic and salt.",
+        "Saute julienned carrot, zucchini and sliced mushrooms separately with a pinch of salt.",
+        "Stir-fry the beef in a hot pan until just cooked.",
+        "Fry an egg sunny-side up for each serving.",
+        "Pile rice in bowls, arrange vegetables and beef in sections, top with egg and gochujang."
+      ],
+      "tags": ["rice bowl", "vegetables", "iconic"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Bulgogi",
+      "description": "Thinly sliced beef marinated in sweet soy sauce with pear, garlic and sesame, then grilled.",
+      "ingredients": [
+        {"name": "Ribeye", "quantity": 600, "unit": "g"},
+        {"name": "Asian pear", "quantity": 0.5, "unit": "pc"},
+        {"name": "Onion", "quantity": 1, "unit": "pc"},
+        {"name": "Soy sauce", "quantity": 80, "unit": "ml"},
+        {"name": "Brown sugar", "quantity": 3, "unit": "tbsp"},
+        {"name": "Sesame oil", "quantity": 2, "unit": "tbsp"},
+        {"name": "Garlic", "quantity": 5, "unit": "pc"},
+        {"name": "Ginger", "quantity": 10, "unit": "g"},
+        {"name": "Black pepper", "quantity": 0.5, "unit": "tsp"},
+        {"name": "Scallions", "quantity": 4, "unit": "pc"},
+        {"name": "Sesame seeds", "quantity": 1, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Slice beef paper-thin against the grain, ideally partially frozen.",
+        "Grate pear and onion, mix with soy sauce, brown sugar, sesame oil, garlic, ginger and pepper.",
+        "Marinate beef with the mixture for at least 2 hours.",
+        "Heat a heavy skillet or grill plate until smoking.",
+        "Cook beef in single-layer batches for 2 minutes, tossing once.",
+        "Finish with sliced scallions and sesame seeds."
+      ],
+      "tags": ["grilled", "beef", "marinated"],
+      "difficulty": "easy",
+      "prepTime": 130,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Kimchi Jjigae",
+      "description": "Hearty Korean stew of aged kimchi, pork belly and tofu in a spicy umami broth.",
+      "ingredients": [
+        {"name": "Aged kimchi", "quantity": 500, "unit": "g"},
+        {"name": "Pork belly", "quantity": 300, "unit": "g"},
+        {"name": "Firm tofu", "quantity": 300, "unit": "g"},
+        {"name": "Onion", "quantity": 1, "unit": "pc"},
+        {"name": "Gochugaru", "quantity": 2, "unit": "tbsp"},
+        {"name": "Gochujang", "quantity": 1, "unit": "tbsp"},
+        {"name": "Garlic", "quantity": 4, "unit": "pc"},
+        {"name": "Anchovy stock", "quantity": 800, "unit": "ml"},
+        {"name": "Scallions", "quantity": 3, "unit": "pc"},
+        {"name": "Sesame oil", "quantity": 1, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Cut pork belly into bite-sized pieces and chop kimchi into 3 cm pieces.",
+        "Saute pork in a heavy pot until edges crisp.",
+        "Add kimchi, gochugaru and gochujang and stir-fry 5 minutes.",
+        "Pour in anchovy stock with sliced onion and crushed garlic.",
+        "Simmer 25 minutes, then add cubed tofu and cook 5 minutes more.",
+        "Finish with scallions and sesame oil."
+      ],
+      "tags": ["stew", "spicy", "comfort food"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 35,
+      "servings": 4
+    },
+    {
+      "title": "Tteokbokki",
+      "description": "Chewy rice cakes simmered in a sweet and spicy gochujang sauce with fish cakes.",
+      "ingredients": [
+        {"name": "Tteokbokki rice cakes", "quantity": 600, "unit": "g"},
+        {"name": "Fish cakes", "quantity": 200, "unit": "g"},
+        {"name": "Anchovy stock", "quantity": 700, "unit": "ml"},
+        {"name": "Gochujang", "quantity": 3, "unit": "tbsp"},
+        {"name": "Gochugaru", "quantity": 1, "unit": "tbsp"},
+        {"name": "Sugar", "quantity": 2, "unit": "tbsp"},
+        {"name": "Soy sauce", "quantity": 1, "unit": "tbsp"},
+        {"name": "Garlic", "quantity": 3, "unit": "pc"},
+        {"name": "Cabbage", "quantity": 200, "unit": "g"},
+        {"name": "Scallions", "quantity": 3, "unit": "pc"},
+        {"name": "Boiled eggs", "quantity": 4, "unit": "pc"}
+      ],
+      "steps": [
+        "Soak rice cakes in cold water for 20 minutes.",
+        "Combine stock with gochujang, gochugaru, sugar, soy sauce and minced garlic in a wide pan.",
+        "Bring to a boil and add rice cakes, fish cake slices and shredded cabbage.",
+        "Simmer 10 minutes, stirring often, until sauce reduces and thickens.",
+        "Add boiled eggs and scallions in the last minute.",
+        "Serve hot from the pan."
+      ],
+      "tags": ["street food", "spicy", "rice cakes"],
+      "difficulty": "easy",
+      "prepTime": 25,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Japchae",
+      "description": "Sweet potato glass noodles stir-fried with beef, mushrooms and rainbow vegetables.",
+      "ingredients": [
+        {"name": "Sweet potato glass noodles", "quantity": 400, "unit": "g"},
+        {"name": "Beef sirloin", "quantity": 200, "unit": "g"},
+        {"name": "Spinach", "quantity": 150, "unit": "g"},
+        {"name": "Carrot", "quantity": 1, "unit": "pc"},
+        {"name": "Onion", "quantity": 1, "unit": "pc"},
+        {"name": "Shiitake mushrooms", "quantity": 6, "unit": "pc"},
+        {"name": "Bell pepper", "quantity": 1, "unit": "pc"},
+        {"name": "Soy sauce", "quantity": 80, "unit": "ml"},
+        {"name": "Sesame oil", "quantity": 3, "unit": "tbsp"},
+        {"name": "Sugar", "quantity": 2, "unit": "tbsp"},
+        {"name": "Garlic", "quantity": 4, "unit": "pc"},
+        {"name": "Sesame seeds", "quantity": 1, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Soak glass noodles in warm water for 30 minutes, then boil for 5 minutes and drain.",
+        "Slice beef thinly and marinate with soy sauce, sugar and garlic.",
+        "Stir-fry vegetables separately in sesame oil with a pinch of salt to keep colours bright.",
+        "Stir-fry beef and mushrooms together until cooked.",
+        "Toss noodles in a wok with soy sauce, sugar and remaining sesame oil until glossy.",
+        "Combine all components and finish with sesame seeds."
+      ],
+      "tags": ["noodles", "vegetables", "celebration"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Samgyeopsal",
+      "description": "Korean grilled pork belly served with lettuce wraps, ssamjang and garlic.",
+      "ingredients": [
+        {"name": "Pork belly", "quantity": 1, "unit": "kg"},
+        {"name": "Lettuce leaves", "quantity": 1, "unit": "bunch"},
+        {"name": "Perilla leaves", "quantity": 20, "unit": "pc"},
+        {"name": "Garlic", "quantity": 8, "unit": "pc"},
+        {"name": "Green chillies", "quantity": 4, "unit": "pc"},
+        {"name": "Doenjang", "quantity": 2, "unit": "tbsp"},
+        {"name": "Gochujang", "quantity": 1, "unit": "tbsp"},
+        {"name": "Sesame oil", "quantity": 1, "unit": "tbsp"},
+        {"name": "Cooked rice", "quantity": 4, "unit": "cup"},
+        {"name": "Kimchi", "quantity": 200, "unit": "g"}
+      ],
+      "steps": [
+        "Slice pork belly into 1 cm thick strips.",
+        "Mix doenjang, gochujang, sesame oil and a little water to make ssamjang.",
+        "Heat a grill plate at the table or a heavy skillet.",
+        "Grill pork belly until both sides are crisp and golden.",
+        "Slice into bite-sized pieces with kitchen scissors.",
+        "Wrap pork in lettuce with rice, ssamjang, garlic, chilli and kimchi."
+      ],
+      "tags": ["grilled", "pork", "communal"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Sundubu Jjigae",
+      "description": "Bubbling stew of soft silken tofu, seafood and gochugaru in a fiery red broth.",
+      "ingredients": [
+        {"name": "Soft tofu", "quantity": 500, "unit": "g"},
+        {"name": "Clams", "quantity": 200, "unit": "g"},
+        {"name": "Shrimp", "quantity": 150, "unit": "g"},
+        {"name": "Pork belly", "quantity": 100, "unit": "g"},
+        {"name": "Gochugaru", "quantity": 2, "unit": "tbsp"},
+        {"name": "Garlic", "quantity": 4, "unit": "pc"},
+        {"name": "Anchovy stock", "quantity": 700, "unit": "ml"},
+        {"name": "Onion", "quantity": 0.5, "unit": "pc"},
+        {"name": "Scallions", "quantity": 2, "unit": "pc"},
+        {"name": "Eggs", "quantity": 2, "unit": "pc"},
+        {"name": "Soy sauce", "quantity": 1, "unit": "tbsp"},
+        {"name": "Sesame oil", "quantity": 1, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Saute pork belly in sesame oil in an earthenware pot.",
+        "Add gochugaru, garlic and chopped onion and stir-fry until fragrant.",
+        "Pour in anchovy stock and bring to a boil.",
+        "Add clams and shrimp and simmer 4 minutes until clams open.",
+        "Spoon in soft tofu in large chunks and season with soy sauce.",
+        "Crack eggs into the bubbling stew, top with scallions and serve immediately."
+      ],
+      "tags": ["stew", "seafood", "spicy"],
+      "difficulty": "medium",
+      "prepTime": 10,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Galbi",
+      "description": "Korean-style marinated short ribs grilled until caramelised at the edges.",
+      "ingredients": [
+        {"name": "Beef short ribs", "quantity": 1.2, "unit": "kg"},
+        {"name": "Asian pear", "quantity": 1, "unit": "pc"},
+        {"name": "Onion", "quantity": 1, "unit": "pc"},
+        {"name": "Soy sauce", "quantity": 150, "unit": "ml"},
+        {"name": "Brown sugar", "quantity": 4, "unit": "tbsp"},
+        {"name": "Mirin", "quantity": 60, "unit": "ml"},
+        {"name": "Sesame oil", "quantity": 2, "unit": "tbsp"},
+        {"name": "Garlic", "quantity": 6, "unit": "pc"},
+        {"name": "Ginger", "quantity": 15, "unit": "g"},
+        {"name": "Black pepper", "quantity": 1, "unit": "tsp"},
+        {"name": "Scallions", "quantity": 4, "unit": "pc"},
+        {"name": "Sesame seeds", "quantity": 1, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Soak short ribs in cold water for 30 minutes to remove blood, then drain.",
+        "Blend pear, onion, garlic and ginger with soy sauce, sugar, mirin and sesame oil.",
+        "Marinate ribs in the mixture for at least 4 hours.",
+        "Heat a grill or heavy pan until very hot.",
+        "Grill ribs for 3 minutes per side until caramelised.",
+        "Garnish with scallions and sesame seeds."
+      ],
+      "tags": ["grilled", "beef", "marinated"],
+      "difficulty": "medium",
+      "prepTime": 270,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Haemul Pajeon",
+      "description": "Crispy Korean seafood and scallion pancake served with a soy-vinegar dipping sauce.",
+      "ingredients": [
+        {"name": "All-purpose flour", "quantity": 200, "unit": "g"},
+        {"name": "Rice flour", "quantity": 50, "unit": "g"},
+        {"name": "Cold water", "quantity": 280, "unit": "ml"},
+        {"name": "Egg", "quantity": 1, "unit": "pc"},
+        {"name": "Scallions", "quantity": 12, "unit": "pc"},
+        {"name": "Squid", "quantity": 150, "unit": "g"},
+        {"name": "Shrimp", "quantity": 150, "unit": "g"},
+        {"name": "Mussels", "quantity": 100, "unit": "g"},
+        {"name": "Vegetable oil", "quantity": 4, "unit": "tbsp"},
+        {"name": "Soy sauce", "quantity": 3, "unit": "tbsp"},
+        {"name": "Rice vinegar", "quantity": 1, "unit": "tbsp"},
+        {"name": "Gochugaru", "quantity": 0.5, "unit": "tsp"}
+      ],
+      "steps": [
+        "Whisk flours with cold water and egg until smooth.",
+        "Trim and halve the scallions, slice squid into rings, chop shrimp.",
+        "Heat oil in a wide skillet over medium-high heat.",
+        "Lay scallions flat, pour batter over them, top with seafood.",
+        "Cook 4 minutes, then flip and press down, cooking 4 more minutes until crisp.",
+        "Mix soy sauce, vinegar and gochugaru for dipping."
+      ],
+      "tags": ["pancake", "seafood", "appetizer"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Dakgalbi",
+      "description": "Spicy stir-fried chicken with cabbage, sweet potato and rice cakes in gochujang sauce.",
+      "ingredients": [
+        {"name": "Boneless chicken thighs", "quantity": 700, "unit": "g"},
+        {"name": "Cabbage", "quantity": 0.5, "unit": "pc"},
+        {"name": "Sweet potato", "quantity": 1, "unit": "pc"},
+        {"name": "Rice cakes", "quantity": 200, "unit": "g"},
+        {"name": "Onion", "quantity": 1, "unit": "pc"},
+        {"name": "Perilla leaves", "quantity": 10, "unit": "pc"},
+        {"name": "Gochujang", "quantity": 4, "unit": "tbsp"},
+        {"name": "Gochugaru", "quantity": 2, "unit": "tbsp"},
+        {"name": "Soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Sugar", "quantity": 2, "unit": "tbsp"},
+        {"name": "Garlic", "quantity": 5, "unit": "pc"},
+        {"name": "Vegetable oil", "quantity": 2, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Cut chicken into bite-sized pieces.",
+        "Mix gochujang, gochugaru, soy sauce, sugar and minced garlic into a marinade.",
+        "Combine chicken with marinade and rest 30 minutes.",
+        "Heat a wide skillet with oil over medium-high heat.",
+        "Add chicken with sliced sweet potato, cabbage and onion.",
+        "Stir-fry 12 minutes until chicken is cooked and cabbage softens.",
+        "Add rice cakes, cook 5 more minutes and finish with shredded perilla."
+      ],
+      "tags": ["stir-fry", "chicken", "spicy"],
+      "difficulty": "medium",
+      "prepTime": 40,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Naengmyeon",
+      "description": "Cold Korean buckwheat noodles in an icy beef broth with cucumber, pear and boiled egg.",
+      "ingredients": [
+        {"name": "Naengmyeon noodles", "quantity": 400, "unit": "g"},
+        {"name": "Beef brisket", "quantity": 400, "unit": "g"},
+        {"name": "Cucumber", "quantity": 1, "unit": "pc"},
+        {"name": "Asian pear", "quantity": 0.5, "unit": "pc"},
+        {"name": "Eggs", "quantity": 2, "unit": "pc"},
+        {"name": "Rice vinegar", "quantity": 3, "unit": "tbsp"},
+        {"name": "Sugar", "quantity": 2, "unit": "tbsp"},
+        {"name": "Mustard paste", "quantity": 1, "unit": "tsp"},
+        {"name": "Salt", "quantity": 1, "unit": "tsp"},
+        {"name": "Water", "quantity": 1.5, "unit": "l"},
+        {"name": "Onion", "quantity": 1, "unit": "pc"}
+      ],
+      "steps": [
+        "Simmer brisket with onion in water for 90 minutes, season with salt and chill broth overnight.",
+        "Skim solidified fat and stir vinegar and sugar into the broth, then freeze partially to slush.",
+        "Cook naengmyeon noodles for 3 minutes and rinse thoroughly under cold water.",
+        "Slice cucumber and pear into matchsticks.",
+        "Hard-boil and halve the eggs.",
+        "Pile noodles in chilled bowls, top with brisket, cucumber, pear and egg, then pour over icy broth.",
+        "Serve with mustard paste on the side."
+      ],
+      "tags": ["noodles", "cold", "summer"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 100,
+      "servings": 4
+    },
+    {
+      "title": "Kimbap",
+      "description": "Korean seaweed rice rolls filled with vegetables, egg and seasoned beef or fish.",
+      "ingredients": [
+        {"name": "Cooked rice", "quantity": 4, "unit": "cup"},
+        {"name": "Nori sheets", "quantity": 6, "unit": "pc"},
+        {"name": "Carrot", "quantity": 2, "unit": "pc"},
+        {"name": "Spinach", "quantity": 200, "unit": "g"},
+        {"name": "Pickled radish", "quantity": 200, "unit": "g"},
+        {"name": "Eggs", "quantity": 4, "unit": "pc"},
+        {"name": "Cooked ham", "quantity": 200, "unit": "g"},
+        {"name": "Sesame oil", "quantity": 3, "unit": "tbsp"},
+        {"name": "Salt", "quantity": 1, "unit": "tsp"},
+        {"name": "Sesame seeds", "quantity": 1, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Season warm rice with sesame oil, salt and sesame seeds.",
+        "Julienne and stir-fry the carrots until tender, then season lightly.",
+        "Blanch and squeeze spinach, dress with sesame oil and salt.",
+        "Beat eggs, cook into a thin omelette and slice into strips.",
+        "On a bamboo mat with nori, spread a thin layer of rice leaving a border.",
+        "Lay vegetable, egg and ham strips across the centre and roll tightly.",
+        "Brush roll with sesame oil and slice into 1.5 cm pieces."
+      ],
+      "tags": ["rice rolls", "lunchbox", "picnic"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Yangnyeom Chicken",
+      "description": "Korean fried chicken double-fried for crispness then tossed in a sweet-spicy gochujang glaze.",
+      "ingredients": [
+        {"name": "Chicken wings", "quantity": 1, "unit": "kg"},
+        {"name": "Potato starch", "quantity": 200, "unit": "g"},
+        {"name": "Salt", "quantity": 2, "unit": "tsp"},
+        {"name": "Black pepper", "quantity": 1, "unit": "tsp"},
+        {"name": "Vegetable oil", "quantity": 1, "unit": "l"},
+        {"name": "Gochujang", "quantity": 4, "unit": "tbsp"},
+        {"name": "Ketchup", "quantity": 3, "unit": "tbsp"},
+        {"name": "Honey", "quantity": 3, "unit": "tbsp"},
+        {"name": "Soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Garlic", "quantity": 5, "unit": "pc"},
+        {"name": "Sesame seeds", "quantity": 1, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Pat wings dry and toss with salt, pepper and potato starch.",
+        "Heat oil to 160C and fry wings 8 minutes, then drain.",
+        "Reheat oil to 190C and fry wings 5 minutes until deep golden, then drain.",
+        "Simmer gochujang, ketchup, honey, soy sauce and minced garlic until syrupy.",
+        "Toss wings in the warm sauce until evenly coated.",
+        "Sprinkle with sesame seeds and serve immediately."
+      ],
+      "tags": ["fried", "chicken", "spicy"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Doenjang Jjigae",
+      "description": "Rustic fermented soybean paste stew with zucchini, tofu, mushrooms and anchovy stock.",
+      "ingredients": [
+        {"name": "Doenjang", "quantity": 4, "unit": "tbsp"},
+        {"name": "Gochugaru", "quantity": 1, "unit": "tbsp"},
+        {"name": "Anchovy stock", "quantity": 700, "unit": "ml"},
+        {"name": "Zucchini", "quantity": 1, "unit": "pc"},
+        {"name": "Potato", "quantity": 1, "unit": "pc"},
+        {"name": "Onion", "quantity": 0.5, "unit": "pc"},
+        {"name": "Firm tofu", "quantity": 200, "unit": "g"},
+        {"name": "Mushrooms", "quantity": 100, "unit": "g"},
+        {"name": "Beef chuck", "quantity": 150, "unit": "g"},
+        {"name": "Garlic", "quantity": 3, "unit": "pc"},
+        {"name": "Scallions", "quantity": 2, "unit": "pc"}
+      ],
+      "steps": [
+        "Cube beef and saute in an earthenware pot until browned.",
+        "Add gochugaru and minced garlic and stir 30 seconds.",
+        "Pour in anchovy stock and whisk in doenjang.",
+        "Add diced potato, onion and zucchini and simmer 10 minutes.",
+        "Add cubed tofu and sliced mushrooms and cook 5 more minutes.",
+        "Top with scallions and serve bubbling hot."
+      ],
+      "tags": ["stew", "fermented", "comfort food"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Hotteok",
+      "description": "Korean street pancakes with chewy yeast dough and a melted brown sugar cinnamon walnut filling.",
+      "ingredients": [
+        {"name": "All-purpose flour", "quantity": 250, "unit": "g"},
+        {"name": "Glutinous rice flour", "quantity": 50, "unit": "g"},
+        {"name": "Warm water", "quantity": 200, "unit": "ml"},
+        {"name": "Sugar", "quantity": 1, "unit": "tbsp"},
+        {"name": "Active dry yeast", "quantity": 1, "unit": "tsp"},
+        {"name": "Salt", "quantity": 0.5, "unit": "tsp"},
+        {"name": "Brown sugar", "quantity": 80, "unit": "g"},
+        {"name": "Cinnamon", "quantity": 1, "unit": "tsp"},
+        {"name": "Walnuts", "quantity": 50, "unit": "g"},
+        {"name": "Vegetable oil", "quantity": 4, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Mix yeast and sugar with warm water and rest 10 minutes until foamy.",
+        "Combine flours and salt, add yeast mixture and knead into a sticky dough.",
+        "Cover and rise in a warm place for 1 hour until doubled.",
+        "Mix brown sugar, cinnamon and chopped walnuts for the filling.",
+        "Oil hands and divide dough into 8 pieces, flatten and stuff with filling, sealing edges.",
+        "Pan-fry in oil over medium heat, pressing flat with a spatula, 2 minutes per side."
+      ],
+      "tags": ["street food", "dessert", "sweet"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 80,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Mandu",
+      "description": "Korean dumplings filled with pork, tofu and kimchi, steamed or pan-fried.",
+      "ingredients": [
+        {"name": "Mandu wrappers", "quantity": 30, "unit": "pc"},
+        {"name": "Ground pork", "quantity": 250, "unit": "g"},
+        {"name": "Firm tofu", "quantity": 200, "unit": "g"},
+        {"name": "Kimchi", "quantity": 200, "unit": "g"},
+        {"name": "Onion", "quantity": 0.5, "unit": "pc"},
+        {"name": "Scallions", "quantity": 3, "unit": "pc"},
+        {"name": "Garlic", "quantity": 3, "unit": "pc"},
+        {"name": "Soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Sesame oil", "quantity": 1, "unit": "tbsp"},
+        {"name": "Black pepper", "quantity": 0.5, "unit": "tsp"},
+        {"name": "Vegetable oil", "quantity": 3, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Squeeze tofu and chopped kimchi to remove excess liquid.",
+        "Mix pork, tofu, kimchi, finely chopped onion, scallion, garlic, soy sauce, sesame oil and pepper.",
+        "Place a teaspoon of filling on each wrapper, wet edges and pleat into half-moons.",
+        "Heat oil in a non-stick pan and lay mandu flat-side down.",
+        "Fry 2 minutes until golden, add 60 ml water and cover.",
+        "Steam 6 minutes until water evaporates and bottoms are crisp."
+      ],
+      "tags": ["dumplings", "pork", "kimchi"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 10,
+      "servings": 4
+    }
+  ]
+}

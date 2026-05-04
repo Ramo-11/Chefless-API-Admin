@@ -1,0 +1,741 @@
+{
+  "cuisine": "Indian",
+  "names": {
+    "first": ["Aarav", "Vihaan", "Arjun", "Rohan", "Kabir", "Aditya", "Ishaan", "Reyansh", "Priya", "Ananya", "Diya", "Aisha", "Kavya", "Meera", "Saanvi", "Riya"],
+    "last": ["Sharma", "Patel", "Kumar", "Singh", "Gupta", "Mehta", "Iyer", "Reddy", "Nair", "Chowdhury", "Verma", "Joshi"]
+  },
+  "recipes": [
+    {
+      "title": "Butter Chicken",
+      "description": "Creamy tomato-based curry with tender tandoori-style chicken pieces simmered in a rich, buttery sauce.",
+      "ingredients": [
+        {"name": "boneless chicken thighs", "quantity": 700, "unit": "g"},
+        {"name": "yogurt", "quantity": 200, "unit": "g"},
+        {"name": "ginger garlic paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "garam masala", "quantity": 2, "unit": "tsp"},
+        {"name": "tomato puree", "quantity": 400, "unit": "ml"},
+        {"name": "butter", "quantity": 80, "unit": "g"},
+        {"name": "heavy cream", "quantity": 150, "unit": "ml"},
+        {"name": "kasuri methi", "quantity": 1, "unit": "tbsp"},
+        {"name": "kashmiri red chili powder", "quantity": 2, "unit": "tsp"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Marinate chicken in yogurt, half the ginger garlic paste, chili powder, and salt for at least 1 hour.",
+        "Sear marinated chicken in a hot pan or under the grill until lightly charred on the edges.",
+        "In a separate pan, melt butter and saute remaining ginger garlic paste for one minute.",
+        "Add tomato puree and simmer for 10 minutes until oil separates and the sauce deepens in color.",
+        "Add the grilled chicken pieces and cook for 5 minutes to absorb the sauce.",
+        "Stir in cream, garam masala, and crushed kasuri methi, then simmer 3 more minutes.",
+        "Adjust salt and finish with a knob of butter before serving with naan or basmati rice."
+      ],
+      "tags": ["curry", "north indian", "creamy", "chicken"],
+      "difficulty": "medium",
+      "prepTime": 75,
+      "cookTime": 35,
+      "servings": 4
+    },
+    {
+      "title": "Chicken Biryani",
+      "description": "Fragrant layered rice dish with marinated chicken, saffron, and aromatic whole spices, slow-cooked dum style.",
+      "ingredients": [
+        {"name": "basmati rice", "quantity": 500, "unit": "g"},
+        {"name": "bone-in chicken", "quantity": 1, "unit": "kg"},
+        {"name": "yogurt", "quantity": 250, "unit": "g"},
+        {"name": "fried onions", "quantity": 200, "unit": "g"},
+        {"name": "ginger garlic paste", "quantity": 3, "unit": "tbsp"},
+        {"name": "biryani masala", "quantity": 3, "unit": "tbsp"},
+        {"name": "saffron", "quantity": 1, "unit": "pinch"},
+        {"name": "warm milk", "quantity": 60, "unit": "ml"},
+        {"name": "ghee", "quantity": 4, "unit": "tbsp"},
+        {"name": "mint leaves", "quantity": 1, "unit": "bunch"},
+        {"name": "coriander leaves", "quantity": 1, "unit": "bunch"}
+      ],
+      "steps": [
+        "Marinate chicken with yogurt, ginger garlic paste, biryani masala, half the fried onions, and salt for 2 hours.",
+        "Soak basmati rice for 30 minutes, then parboil with whole spices and salt until 70 percent cooked.",
+        "Bloom saffron in warm milk and set aside.",
+        "Cook the marinated chicken in a heavy pot over medium heat until partially tender.",
+        "Layer parboiled rice over the chicken, top with mint, coriander, fried onions, ghee, and saffron milk.",
+        "Seal the pot with a tight lid or dough and cook on the lowest heat (dum) for 25 minutes.",
+        "Rest 10 minutes, then gently fluff to mix layers and serve with raita."
+      ],
+      "tags": ["rice", "biryani", "festive", "chicken"],
+      "difficulty": "hard",
+      "prepTime": 150,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Chana Masala",
+      "description": "Spiced chickpea curry with tomatoes, onions, and a punchy blend of dry-roasted Punjabi spices.",
+      "ingredients": [
+        {"name": "dried chickpeas", "quantity": 300, "unit": "g"},
+        {"name": "onions", "quantity": 2, "unit": "pc"},
+        {"name": "tomatoes", "quantity": 3, "unit": "pc"},
+        {"name": "ginger garlic paste", "quantity": 1, "unit": "tbsp"},
+        {"name": "chana masala powder", "quantity": 2, "unit": "tbsp"},
+        {"name": "cumin seeds", "quantity": 1, "unit": "tsp"},
+        {"name": "vegetable oil", "quantity": 3, "unit": "tbsp"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Soak chickpeas overnight, then pressure cook with salt and a tea bag until soft.",
+        "Heat oil and crackle cumin seeds, then add finely chopped onions and saute until deeply golden.",
+        "Add ginger garlic paste and cook 1 minute until fragrant.",
+        "Stir in pureed tomatoes and chana masala, cooking until oil separates from the masala.",
+        "Add cooked chickpeas with some cooking liquid and simmer 15 minutes to thicken.",
+        "Adjust salt and finish with a squeeze of lemon and chopped coriander."
+      ],
+      "tags": ["vegan", "curry", "punjabi", "chickpeas"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 480,
+      "cookTime": 40,
+      "servings": 4
+    },
+    {
+      "title": "Rogan Josh",
+      "description": "Aromatic Kashmiri lamb curry coloured with kashmiri chillies and ratan jot, finished with fennel and ginger.",
+      "ingredients": [
+        {"name": "bone-in lamb", "quantity": 1, "unit": "kg"},
+        {"name": "yogurt", "quantity": 200, "unit": "g"},
+        {"name": "kashmiri red chili powder", "quantity": 2, "unit": "tbsp"},
+        {"name": "fennel powder", "quantity": 1, "unit": "tbsp"},
+        {"name": "dry ginger powder", "quantity": 2, "unit": "tsp"},
+        {"name": "ghee", "quantity": 4, "unit": "tbsp"},
+        {"name": "cloves", "quantity": 4, "unit": "pc"},
+        {"name": "green cardamom", "quantity": 4, "unit": "pc"},
+        {"name": "black cardamom", "quantity": 2, "unit": "pc"},
+        {"name": "asafoetida", "quantity": 1, "unit": "pinch"}
+      ],
+      "steps": [
+        "Heat ghee and bloom whole cloves, cardamoms, and asafoetida.",
+        "Brown the lamb pieces in batches over high heat, then return all to the pot.",
+        "Mix kashmiri chili with a little water to a paste and add to the pot, cooking 2 minutes.",
+        "Whisk yogurt with fennel and ginger powder, then add gradually while stirring to prevent splitting.",
+        "Pour in enough hot water to almost cover the lamb and bring to a simmer.",
+        "Cover and cook on low for 90 minutes until lamb is fork tender and the sauce is glossy red.",
+        "Adjust salt and serve with steamed rice."
+      ],
+      "tags": ["kashmiri", "lamb", "curry", "spicy"],
+      "difficulty": "hard",
+      "prepTime": 20,
+      "cookTime": 110,
+      "servings": 5
+    },
+    {
+      "title": "Dal Makhani",
+      "description": "Slow-cooked black lentils and kidney beans simmered with butter and cream for a deeply silky finish.",
+      "ingredients": [
+        {"name": "whole black urad dal", "quantity": 250, "unit": "g"},
+        {"name": "kidney beans", "quantity": 50, "unit": "g"},
+        {"name": "tomato puree", "quantity": 300, "unit": "ml"},
+        {"name": "ginger garlic paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "butter", "quantity": 100, "unit": "g"},
+        {"name": "heavy cream", "quantity": 100, "unit": "ml"},
+        {"name": "kashmiri red chili powder", "quantity": 1, "unit": "tbsp"},
+        {"name": "garam masala", "quantity": 1, "unit": "tsp"},
+        {"name": "kasuri methi", "quantity": 1, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Soak urad dal and kidney beans overnight in plenty of water.",
+        "Pressure cook the soaked legumes with salt for 30 minutes until completely soft.",
+        "In a heavy pot, melt half the butter, add ginger garlic paste and saute briefly.",
+        "Add tomato puree and chili powder, cooking until oil separates.",
+        "Add the cooked dal with its liquid and simmer on the lowest heat for 1 hour, mashing occasionally.",
+        "Stir in cream, garam masala, kasuri methi, and the remaining butter.",
+        "Simmer 10 more minutes and finish with a swirl of cream."
+      ],
+      "tags": ["lentils", "punjabi", "creamy", "vegetarian"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 480,
+      "cookTime": 120,
+      "servings": 6
+    },
+    {
+      "title": "Aloo Gobi",
+      "description": "Dry-style Punjabi stir-fry of potatoes and cauliflower spiced with turmeric, cumin, and ginger.",
+      "ingredients": [
+        {"name": "cauliflower florets", "quantity": 500, "unit": "g"},
+        {"name": "potatoes", "quantity": 300, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "tomato", "quantity": 1, "unit": "pc"},
+        {"name": "ginger", "quantity": 1, "unit": "tbsp"},
+        {"name": "cumin seeds", "quantity": 1, "unit": "tsp"},
+        {"name": "turmeric", "quantity": 1, "unit": "tsp"},
+        {"name": "coriander powder", "quantity": 2, "unit": "tsp"},
+        {"name": "vegetable oil", "quantity": 3, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Heat oil in a wide pan and crackle cumin seeds.",
+        "Add chopped onion and saute until light golden, then add grated ginger.",
+        "Stir in chopped tomato, turmeric, coriander, and salt and cook until pulpy.",
+        "Add diced potatoes and cauliflower florets and toss to coat with the masala.",
+        "Cover and cook on low heat for 20 minutes, stirring occasionally so vegetables steam through.",
+        "Uncover and stir-fry 5 minutes to dry out and crisp the edges.",
+        "Garnish with fresh coriander and serve with roti."
+      ],
+      "tags": ["vegan", "punjabi", "dry curry", "potato"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Samosa",
+      "description": "Crisp golden pastry triangles stuffed with spiced potatoes, peas, and roasted cumin.",
+      "ingredients": [
+        {"name": "all purpose flour", "quantity": 300, "unit": "g"},
+        {"name": "ghee", "quantity": 60, "unit": "g"},
+        {"name": "potatoes", "quantity": 500, "unit": "g"},
+        {"name": "green peas", "quantity": 100, "unit": "g"},
+        {"name": "cumin seeds", "quantity": 1, "unit": "tsp"},
+        {"name": "garam masala", "quantity": 1, "unit": "tsp"},
+        {"name": "amchur", "quantity": 1, "unit": "tsp"},
+        {"name": "green chili", "quantity": 2, "unit": "pc"},
+        {"name": "vegetable oil", "quantity": 500, "unit": "ml"}
+      ],
+      "steps": [
+        "Rub ghee into flour with salt, then add a little water at a time to form a stiff dough; rest 30 minutes.",
+        "Boil and roughly mash potatoes, then mix with peas, chopped chili, cumin, garam masala, and amchur.",
+        "Divide dough into balls, roll each into an oval, and cut in half to create cones.",
+        "Fill each cone with the potato mixture and seal the edges with water.",
+        "Heat oil to 140 C and fry samosas on low for 12 minutes until they begin to blister.",
+        "Increase oil temperature to 180 C and fry again until deep golden brown.",
+        "Drain on paper and serve with tamarind and mint chutneys."
+      ],
+      "tags": ["snack", "fried", "street food", "vegetarian"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 45,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Masala Dosa",
+      "description": "Crisp fermented rice and lentil crepe filled with spiced potato masala, served with chutney and sambar.",
+      "ingredients": [
+        {"name": "dosa rice", "quantity": 300, "unit": "g"},
+        {"name": "urad dal", "quantity": 100, "unit": "g"},
+        {"name": "fenugreek seeds", "quantity": 1, "unit": "tsp"},
+        {"name": "potatoes", "quantity": 500, "unit": "g"},
+        {"name": "onions", "quantity": 2, "unit": "pc"},
+        {"name": "mustard seeds", "quantity": 1, "unit": "tsp"},
+        {"name": "curry leaves", "quantity": 1, "unit": "bunch"},
+        {"name": "turmeric", "quantity": 1, "unit": "tsp"},
+        {"name": "ghee", "quantity": 4, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Soak rice, urad dal, and fenugreek separately for 6 hours.",
+        "Grind to a smooth batter, combine, salt lightly, and ferment overnight in a warm place.",
+        "Boil potatoes and roughly mash. Temper mustard seeds and curry leaves in oil, add onions and turmeric.",
+        "Mix mashed potato into the tempered onions to make the masala filling.",
+        "Heat a flat griddle, ladle batter and spread thin in a circle.",
+        "Drizzle ghee, place a portion of potato masala in the center, fold and crisp until golden.",
+        "Serve immediately with coconut chutney and sambar."
+      ],
+      "tags": ["south indian", "breakfast", "fermented", "vegetarian"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 720,
+      "cookTime": 30,
+      "servings": 5
+    },
+    {
+      "title": "Idli",
+      "description": "Soft steamed cakes of fermented rice and urad dal, a beloved South Indian breakfast staple.",
+      "ingredients": [
+        {"name": "idli rice", "quantity": 400, "unit": "g"},
+        {"name": "urad dal", "quantity": 100, "unit": "g"},
+        {"name": "fenugreek seeds", "quantity": 1, "unit": "tsp"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Soak rice and fenugreek seeds together; soak urad dal separately, both for 6 hours.",
+        "Grind urad dal to a fluffy paste, then grind rice to a slightly grainy paste.",
+        "Combine, add salt, and ferment in a warm spot for 8 to 12 hours until doubled.",
+        "Grease idli plates and ladle batter into the molds.",
+        "Steam for 12 minutes until a toothpick comes out clean.",
+        "Cool slightly, unmold, and serve with sambar and coconut chutney."
+      ],
+      "tags": ["south indian", "breakfast", "steamed", "vegan"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 720,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Vada Pav",
+      "description": "Mumbai street snack of a spiced potato fritter sandwiched in a soft pav with green and garlic chutneys.",
+      "ingredients": [
+        {"name": "potatoes", "quantity": 500, "unit": "g"},
+        {"name": "chickpea flour", "quantity": 150, "unit": "g"},
+        {"name": "ginger garlic paste", "quantity": 1, "unit": "tbsp"},
+        {"name": "mustard seeds", "quantity": 1, "unit": "tsp"},
+        {"name": "curry leaves", "quantity": 1, "unit": "bunch"},
+        {"name": "turmeric", "quantity": 1, "unit": "tsp"},
+        {"name": "green chilies", "quantity": 3, "unit": "pc"},
+        {"name": "pav buns", "quantity": 6, "unit": "pc"},
+        {"name": "vegetable oil", "quantity": 500, "unit": "ml"}
+      ],
+      "steps": [
+        "Boil and mash potatoes. Temper mustard seeds and curry leaves in oil with ginger garlic paste.",
+        "Add chopped chilies and turmeric, then mix in mashed potato and salt.",
+        "Cool the mixture and shape into balls.",
+        "Whisk chickpea flour with water, salt, and a pinch of turmeric to a thick coating batter.",
+        "Dip potato balls in batter and deep fry at 180 C until crisp and golden.",
+        "Slice pav, smear with green chutney and garlic chutney, and sandwich a hot vada inside.",
+        "Serve immediately with fried chilies."
+      ],
+      "tags": ["mumbai", "street food", "snack", "vegetarian"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 25,
+      "servings": 6
+    },
+    {
+      "title": "Pav Bhaji",
+      "description": "Spiced mashed vegetable curry served with toasted buttered pav buns, a Mumbai street icon.",
+      "ingredients": [
+        {"name": "potatoes", "quantity": 400, "unit": "g"},
+        {"name": "cauliflower", "quantity": 200, "unit": "g"},
+        {"name": "green peas", "quantity": 150, "unit": "g"},
+        {"name": "tomatoes", "quantity": 4, "unit": "pc"},
+        {"name": "onions", "quantity": 2, "unit": "pc"},
+        {"name": "capsicum", "quantity": 1, "unit": "pc"},
+        {"name": "pav bhaji masala", "quantity": 3, "unit": "tbsp"},
+        {"name": "butter", "quantity": 100, "unit": "g"},
+        {"name": "pav buns", "quantity": 8, "unit": "pc"}
+      ],
+      "steps": [
+        "Pressure cook potatoes, cauliflower, and peas with salt until soft, then mash.",
+        "On a tawa, melt butter and saute chopped onions until translucent, then add capsicum.",
+        "Add chopped tomatoes and pav bhaji masala, cooking until pulpy and oil separates.",
+        "Add the mashed vegetables with a little water and cook 10 minutes, mashing further on the tawa.",
+        "Slit pav buns, butter both sides, and toast on a hot tawa until crisp and golden.",
+        "Top bhaji with chopped onion, coriander, lemon, and a knob of butter.",
+        "Serve hot with the toasted pav."
+      ],
+      "tags": ["mumbai", "street food", "vegetarian", "curry"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Palak Paneer",
+      "description": "Fresh paneer cubes simmered in a smooth, vibrant spinach gravy with garlic, ginger, and warm spices.",
+      "ingredients": [
+        {"name": "spinach", "quantity": 500, "unit": "g"},
+        {"name": "paneer", "quantity": 300, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "tomato", "quantity": 1, "unit": "pc"},
+        {"name": "ginger garlic paste", "quantity": 1, "unit": "tbsp"},
+        {"name": "green chili", "quantity": 2, "unit": "pc"},
+        {"name": "cumin seeds", "quantity": 1, "unit": "tsp"},
+        {"name": "garam masala", "quantity": 1, "unit": "tsp"},
+        {"name": "cream", "quantity": 50, "unit": "ml"},
+        {"name": "ghee", "quantity": 2, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Blanch spinach and chilies in boiling water for 2 minutes, then plunge into ice water.",
+        "Blend spinach and chilies into a smooth puree.",
+        "Heat ghee and crackle cumin seeds, then add chopped onions and cook until soft.",
+        "Add ginger garlic paste and chopped tomato; cook until tomato breaks down.",
+        "Pour in spinach puree with a splash of water and simmer 8 minutes.",
+        "Add cubed paneer, garam masala, salt, and cream; simmer 5 more minutes.",
+        "Finish with a drizzle of cream and serve with naan or jeera rice."
+      ],
+      "tags": ["vegetarian", "north indian", "paneer", "spinach"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Tandoori Chicken",
+      "description": "Yogurt and spice marinated chicken charred in a tandoor or oven for smoky, juicy results.",
+      "ingredients": [
+        {"name": "bone-in chicken legs", "quantity": 1, "unit": "kg"},
+        {"name": "yogurt", "quantity": 200, "unit": "g"},
+        {"name": "ginger garlic paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "kashmiri red chili powder", "quantity": 2, "unit": "tbsp"},
+        {"name": "garam masala", "quantity": 1, "unit": "tbsp"},
+        {"name": "lemon juice", "quantity": 2, "unit": "tbsp"},
+        {"name": "mustard oil", "quantity": 2, "unit": "tbsp"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"}
+      ],
+      "steps": [
+        "Make deep slashes in the chicken legs and rub with lemon juice, salt, and half the chili powder.",
+        "Whisk yogurt with ginger garlic paste, garam masala, remaining chili, and mustard oil.",
+        "Coat chicken thoroughly with the marinade and refrigerate at least 6 hours.",
+        "Preheat oven to 220 C with a wire rack over a tray.",
+        "Roast chicken for 25 minutes, basting once with melted butter halfway through.",
+        "Switch to grill mode for the final 5 minutes for char.",
+        "Rest 5 minutes and serve with onion rings, mint chutney, and lemon wedges."
+      ],
+      "tags": ["grilled", "north indian", "chicken", "tandoor"],
+      "difficulty": "medium",
+      "prepTime": 360,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Chicken Tikka Masala",
+      "description": "Grilled chicken tikka simmered in a creamy tomato curry seasoned with fenugreek and garam masala.",
+      "ingredients": [
+        {"name": "boneless chicken", "quantity": 700, "unit": "g"},
+        {"name": "yogurt", "quantity": 150, "unit": "g"},
+        {"name": "tikka masala paste", "quantity": 3, "unit": "tbsp"},
+        {"name": "tomato puree", "quantity": 400, "unit": "ml"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "ginger garlic paste", "quantity": 1, "unit": "tbsp"},
+        {"name": "heavy cream", "quantity": 150, "unit": "ml"},
+        {"name": "kasuri methi", "quantity": 1, "unit": "tbsp"},
+        {"name": "ghee", "quantity": 3, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Marinate diced chicken in yogurt and 2 tbsp tikka paste for 1 hour.",
+        "Skewer the chicken and grill or pan sear until charred and just cooked through.",
+        "Heat ghee and saute finely chopped onion until golden, then add ginger garlic paste.",
+        "Add remaining tikka paste and tomato puree; simmer until the oil separates.",
+        "Stir in cream and a splash of water and bring to a gentle simmer.",
+        "Add the grilled chicken and cook 5 minutes to absorb the gravy.",
+        "Crush kasuri methi over the top and serve with naan."
+      ],
+      "tags": ["british indian", "curry", "creamy", "chicken"],
+      "difficulty": "medium",
+      "prepTime": 75,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Pakora",
+      "description": "Crisp chickpea flour fritters loaded with onions, potatoes, and spices, eaten with chutney.",
+      "ingredients": [
+        {"name": "chickpea flour", "quantity": 250, "unit": "g"},
+        {"name": "onions", "quantity": 2, "unit": "pc"},
+        {"name": "potato", "quantity": 1, "unit": "pc"},
+        {"name": "spinach leaves", "quantity": 50, "unit": "g"},
+        {"name": "green chili", "quantity": 2, "unit": "pc"},
+        {"name": "ajwain", "quantity": 1, "unit": "tsp"},
+        {"name": "red chili powder", "quantity": 1, "unit": "tsp"},
+        {"name": "vegetable oil", "quantity": 500, "unit": "ml"}
+      ],
+      "steps": [
+        "Slice onions thinly and grate the potato; chop chilies and spinach.",
+        "Combine chickpea flour, ajwain, chili powder, and salt in a bowl.",
+        "Add the vegetables and mix without water; the moisture from onions binds the batter.",
+        "Add a few tablespoons of water only if needed to form thick clumps.",
+        "Heat oil to 170 C and drop in spoonfuls of the mixture.",
+        "Fry until deep golden and crisp, about 4 minutes, turning once.",
+        "Drain and serve hot with mint chutney and masala chai."
+      ],
+      "tags": ["snack", "fried", "monsoon", "vegan"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Chole Bhature",
+      "description": "Punjabi feast of spicy chickpea curry served with deep-fried, fluffy leavened bread.",
+      "ingredients": [
+        {"name": "chickpeas", "quantity": 300, "unit": "g"},
+        {"name": "all purpose flour", "quantity": 300, "unit": "g"},
+        {"name": "yogurt", "quantity": 100, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "tomato", "quantity": 2, "unit": "pc"},
+        {"name": "chana masala", "quantity": 2, "unit": "tbsp"},
+        {"name": "ginger garlic paste", "quantity": 1, "unit": "tbsp"},
+        {"name": "vegetable oil", "quantity": 500, "unit": "ml"}
+      ],
+      "steps": [
+        "Soak chickpeas overnight, then pressure cook with a tea bag and salt until soft.",
+        "Make bhatura dough with flour, yogurt, salt, a pinch of baking soda, and water; rest 2 hours.",
+        "For chole, saute onion in oil, add ginger garlic paste, then tomatoes and chana masala.",
+        "Add cooked chickpeas with liquid and simmer until thick and dark.",
+        "Roll bhatura dough into ovals and deep fry in 190 C oil until puffed and golden.",
+        "Drain bhatura on paper towels.",
+        "Serve hot chole with bhature, sliced onions, and pickle."
+      ],
+      "tags": ["punjabi", "fried bread", "chickpeas", "vegetarian"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 480,
+      "cookTime": 45,
+      "servings": 5
+    },
+    {
+      "title": "Pani Puri",
+      "description": "Crisp hollow puris filled with spicy tamarind water, potato, and chickpeas — India's iconic chaat.",
+      "ingredients": [
+        {"name": "puri shells", "quantity": 30, "unit": "pc"},
+        {"name": "boiled potatoes", "quantity": 200, "unit": "g"},
+        {"name": "boiled chickpeas", "quantity": 100, "unit": "g"},
+        {"name": "mint leaves", "quantity": 1, "unit": "bunch"},
+        {"name": "coriander leaves", "quantity": 1, "unit": "bunch"},
+        {"name": "tamarind paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "chaat masala", "quantity": 1, "unit": "tbsp"},
+        {"name": "black salt", "quantity": 1, "unit": "tsp"},
+        {"name": "green chili", "quantity": 2, "unit": "pc"}
+      ],
+      "steps": [
+        "Mash potatoes lightly and mix with chickpeas, chaat masala, and salt.",
+        "Blend mint, coriander, chili, tamarind, and black salt with cold water for the pani.",
+        "Strain the pani and chill until ready to serve.",
+        "Tap a small hole in the top of each puri shell.",
+        "Fill each puri with a spoon of potato mixture.",
+        "Dip filled puri into the chilled pani and eat immediately, one bite at a time."
+      ],
+      "tags": ["chaat", "street food", "snack", "vegetarian"],
+      "dietaryTags": ["vegetarian", "vegan"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 0,
+      "servings": 5
+    },
+    {
+      "title": "Chicken Korma",
+      "description": "Mughal-style mild curry with chicken simmered in a creamy cashew, yogurt, and aromatic spice gravy.",
+      "ingredients": [
+        {"name": "chicken pieces", "quantity": 800, "unit": "g"},
+        {"name": "yogurt", "quantity": 200, "unit": "g"},
+        {"name": "fried onions", "quantity": 150, "unit": "g"},
+        {"name": "cashews", "quantity": 50, "unit": "g"},
+        {"name": "ginger garlic paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "green cardamom", "quantity": 4, "unit": "pc"},
+        {"name": "cinnamon stick", "quantity": 1, "unit": "pc"},
+        {"name": "ghee", "quantity": 4, "unit": "tbsp"},
+        {"name": "garam masala", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Soak cashews in warm water and grind to a smooth paste with the fried onions.",
+        "Heat ghee and bloom cardamom and cinnamon, then add ginger garlic paste.",
+        "Add chicken and brown lightly on all sides.",
+        "Whisk yogurt with the cashew onion paste and stir into the pan over low heat.",
+        "Cover and simmer 25 minutes until chicken is tender and gravy is glossy.",
+        "Sprinkle garam masala and rest 5 minutes off the heat.",
+        "Serve with sheermal or pulao."
+      ],
+      "tags": ["mughlai", "curry", "creamy", "chicken"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 40,
+      "servings": 5
+    },
+    {
+      "title": "Rasgulla",
+      "description": "Soft, spongy chhena dumplings poached in light cardamom-scented sugar syrup, a Bengali classic.",
+      "ingredients": [
+        {"name": "whole milk", "quantity": 2, "unit": "l"},
+        {"name": "lemon juice", "quantity": 4, "unit": "tbsp"},
+        {"name": "sugar", "quantity": 400, "unit": "g"},
+        {"name": "water", "quantity": 1, "unit": "l"},
+        {"name": "cardamom pods", "quantity": 4, "unit": "pc"}
+      ],
+      "steps": [
+        "Boil milk, then turn off heat and stir in lemon juice until it curdles cleanly.",
+        "Strain through muslin and rinse with cold water to remove any sourness.",
+        "Hang the chhena for 30 minutes to drain, then knead until smooth and pliable.",
+        "Roll into 12 small smooth balls without cracks.",
+        "Boil sugar with water and cardamom in a wide pan until the syrup is thin.",
+        "Drop chhena balls into the simmering syrup, cover, and cook 18 minutes; they will double in size.",
+        "Cool in the syrup for several hours before serving chilled."
+      ],
+      "tags": ["bengali", "dessert", "sweet", "vegetarian"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 60,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Gulab Jamun",
+      "description": "Golden milk-solid dumplings deep fried and soaked in rose and cardamom-scented sugar syrup.",
+      "ingredients": [
+        {"name": "milk powder", "quantity": 200, "unit": "g"},
+        {"name": "all purpose flour", "quantity": 60, "unit": "g"},
+        {"name": "ghee", "quantity": 2, "unit": "tbsp"},
+        {"name": "milk", "quantity": 80, "unit": "ml"},
+        {"name": "baking soda", "quantity": 1, "unit": "pinch"},
+        {"name": "sugar", "quantity": 500, "unit": "g"},
+        {"name": "water", "quantity": 600, "unit": "ml"},
+        {"name": "rose water", "quantity": 1, "unit": "tsp"},
+        {"name": "cardamom powder", "quantity": 1, "unit": "tsp"},
+        {"name": "vegetable oil", "quantity": 500, "unit": "ml"}
+      ],
+      "steps": [
+        "Combine milk powder, flour, baking soda, and ghee, then add milk gradually to form a soft dough.",
+        "Rest dough 10 minutes, then divide and roll into smooth crack-free balls.",
+        "Make syrup by simmering sugar, water, cardamom, and rose water for 5 minutes.",
+        "Heat oil to 130 C — low temperature is critical for even cooking.",
+        "Fry the balls slowly, swirling oil over them, until evenly deep brown.",
+        "Drain briefly and immediately drop into the warm syrup.",
+        "Soak at least 1 hour before serving warm or at room temperature."
+      ],
+      "tags": ["dessert", "sweet", "festive", "vegetarian"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Jalebi",
+      "description": "Crispy fermented batter swirls deep fried until crunchy, then soaked in saffron sugar syrup.",
+      "ingredients": [
+        {"name": "all purpose flour", "quantity": 200, "unit": "g"},
+        {"name": "yogurt", "quantity": 50, "unit": "g"},
+        {"name": "water", "quantity": 200, "unit": "ml"},
+        {"name": "sugar", "quantity": 400, "unit": "g"},
+        {"name": "saffron", "quantity": 1, "unit": "pinch"},
+        {"name": "cardamom powder", "quantity": 1, "unit": "tsp"},
+        {"name": "lemon juice", "quantity": 1, "unit": "tsp"},
+        {"name": "ghee", "quantity": 500, "unit": "ml"}
+      ],
+      "steps": [
+        "Whisk flour, yogurt, and water into a smooth thick batter and ferment overnight.",
+        "Make syrup by simmering sugar, water, saffron, cardamom, and lemon juice to one-string consistency.",
+        "Pour batter into a piping bottle or cone with a fine tip.",
+        "Heat ghee in a wide shallow pan to 180 C.",
+        "Pipe batter directly into the ghee in small spiral shapes.",
+        "Fry until crisp and golden, then transfer immediately into the warm syrup for 30 seconds.",
+        "Lift out, drain, and serve hot."
+      ],
+      "tags": ["dessert", "fried", "festive", "vegetarian"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 600,
+      "cookTime": 25,
+      "servings": 6
+    },
+    {
+      "title": "Malai Kofta",
+      "description": "Soft paneer and potato dumplings simmered in a rich, mildly sweet creamy tomato cashew gravy.",
+      "ingredients": [
+        {"name": "paneer", "quantity": 250, "unit": "g"},
+        {"name": "potato", "quantity": 200, "unit": "g"},
+        {"name": "cornflour", "quantity": 3, "unit": "tbsp"},
+        {"name": "cashews", "quantity": 50, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "tomato", "quantity": 3, "unit": "pc"},
+        {"name": "ginger garlic paste", "quantity": 1, "unit": "tbsp"},
+        {"name": "cream", "quantity": 100, "unit": "ml"},
+        {"name": "kasuri methi", "quantity": 1, "unit": "tbsp"},
+        {"name": "vegetable oil", "quantity": 500, "unit": "ml"}
+      ],
+      "steps": [
+        "Grate paneer and boiled potato together, mix with cornflour and salt to form a smooth dough.",
+        "Shape into small balls and deep fry in oil at 170 C until golden; set aside.",
+        "Boil onion, tomato, and cashews together, then blend to a smooth puree.",
+        "Cook the puree with ginger garlic paste in a little oil until thick and oil separates.",
+        "Add cream, water, salt, and kasuri methi; simmer 5 minutes.",
+        "Add koftas just before serving so they remain soft.",
+        "Garnish with cream and serve with naan."
+      ],
+      "tags": ["vegetarian", "north indian", "creamy", "paneer"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 40,
+      "servings": 4
+    },
+    {
+      "title": "Naan",
+      "description": "Soft, leavened tandoor-baked flatbread with yogurt and a charred surface, the classic Indian bread.",
+      "ingredients": [
+        {"name": "all purpose flour", "quantity": 500, "unit": "g"},
+        {"name": "yogurt", "quantity": 100, "unit": "g"},
+        {"name": "milk", "quantity": 150, "unit": "ml"},
+        {"name": "instant yeast", "quantity": 1, "unit": "tsp"},
+        {"name": "sugar", "quantity": 1, "unit": "tsp"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"},
+        {"name": "ghee", "quantity": 4, "unit": "tbsp"},
+        {"name": "nigella seeds", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Combine flour, salt, sugar, yeast, yogurt, and milk; knead to a soft dough.",
+        "Cover and let rise 1 hour until doubled.",
+        "Divide into 8 balls and roll each into a teardrop shape.",
+        "Heat a cast iron tawa or skillet on high until smoking hot.",
+        "Brush one side of the naan with water and stick to the hot pan.",
+        "Flip the pan upside down over a flame to char the top, or finish under a hot grill.",
+        "Brush with ghee, sprinkle nigella seeds, and serve hot."
+      ],
+      "tags": ["bread", "tandoor", "vegetarian", "north indian"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 75,
+      "cookTime": 20,
+      "servings": 8
+    },
+    {
+      "title": "Kheer",
+      "description": "Slow-simmered rice pudding with milk, sugar, cardamom, saffron, and toasted nuts.",
+      "ingredients": [
+        {"name": "basmati rice", "quantity": 80, "unit": "g"},
+        {"name": "whole milk", "quantity": 1, "unit": "l"},
+        {"name": "sugar", "quantity": 120, "unit": "g"},
+        {"name": "cardamom powder", "quantity": 1, "unit": "tsp"},
+        {"name": "saffron", "quantity": 1, "unit": "pinch"},
+        {"name": "almonds", "quantity": 30, "unit": "g"},
+        {"name": "pistachios", "quantity": 20, "unit": "g"},
+        {"name": "ghee", "quantity": 1, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Wash and soak rice for 20 minutes, then drain.",
+        "Toast rice briefly in ghee in a heavy pot.",
+        "Add milk and bring to a boil, then reduce to a gentle simmer.",
+        "Cook 40 minutes, stirring frequently, until rice is soft and milk has thickened.",
+        "Add sugar, cardamom, and saffron and simmer 5 more minutes.",
+        "Stir in slivered almonds and chopped pistachios.",
+        "Serve warm or chilled, garnished with extra nuts."
+      ],
+      "tags": ["dessert", "rice", "vegetarian", "festive"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 25,
+      "cookTime": 50,
+      "servings": 5
+    },
+    {
+      "title": "Aloo Paratha",
+      "description": "Whole wheat flatbread stuffed with spiced potato filling, pan-cooked with ghee until golden and flaky.",
+      "ingredients": [
+        {"name": "whole wheat flour", "quantity": 400, "unit": "g"},
+        {"name": "potatoes", "quantity": 500, "unit": "g"},
+        {"name": "green chili", "quantity": 2, "unit": "pc"},
+        {"name": "ginger", "quantity": 1, "unit": "tbsp"},
+        {"name": "coriander leaves", "quantity": 1, "unit": "bunch"},
+        {"name": "amchur", "quantity": 1, "unit": "tsp"},
+        {"name": "garam masala", "quantity": 1, "unit": "tsp"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"},
+        {"name": "ghee", "quantity": 4, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Knead flour with water and salt into a soft dough; rest 20 minutes.",
+        "Boil and mash potatoes, then mix with chili, ginger, coriander, amchur, garam masala, and salt.",
+        "Take a ball of dough, flatten it, and place a generous portion of filling in the center.",
+        "Pinch dough closed around the filling and roll out gently into a round paratha.",
+        "Cook on a hot tawa, drizzling ghee on both sides, until golden brown spots appear.",
+        "Press lightly with a spatula so the paratha cooks evenly.",
+        "Serve hot with yogurt, butter, and pickle."
+      ],
+      "tags": ["punjabi", "breakfast", "bread", "vegetarian"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 25,
+      "servings": 4
+    }
+  ]
+}

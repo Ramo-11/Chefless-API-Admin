@@ -1,0 +1,702 @@
+{
+  "cuisine": "French",
+  "names": {
+    "first": ["Antoine", "Camille", "Julien", "Élodie", "Mathieu", "Margaux", "Nicolas", "Léa", "Pierre", "Chloé", "Vincent", "Amélie"],
+    "last": ["Dubois", "Laurent", "Moreau", "Bernard", "Lefèvre", "Rousseau", "Girard", "Mercier", "Fontaine", "Chevalier", "Garnier", "Lambert"]
+  },
+  "recipes": [
+    {
+      "title": "Coq au Vin",
+      "description": "Burgundian chicken braised in red wine with bacon, mushrooms and pearl onions.",
+      "ingredients": [
+        { "name": "chicken pieces, bone-in", "quantity": 1.5, "unit": "kg" },
+        { "name": "smoked bacon, lardons", "quantity": 200, "unit": "g" },
+        { "name": "pearl onions", "quantity": 250, "unit": "g" },
+        { "name": "button mushrooms", "quantity": 250, "unit": "g" },
+        { "name": "red Burgundy wine", "quantity": 750, "unit": "ml" },
+        { "name": "chicken stock", "quantity": 250, "unit": "ml" },
+        { "name": "tomato paste", "quantity": 1, "unit": "tbsp" },
+        { "name": "garlic cloves", "quantity": 3, "unit": "pc" },
+        { "name": "thyme sprigs", "quantity": 4, "unit": "pc" },
+        { "name": "bay leaf", "quantity": 1, "unit": "pc" },
+        { "name": "butter", "quantity": 40, "unit": "g" },
+        { "name": "flour", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Marinate the chicken in the wine with herbs and garlic for several hours, then drain and pat dry.",
+        "Render the bacon lardons in a Dutch oven, remove and reserve.",
+        "Brown the chicken pieces in the bacon fat, season and dust with flour.",
+        "Pour over the marinade and stock, add tomato paste, and braise covered for 60 minutes.",
+        "Sauté the pearl onions and mushrooms in butter until golden, then add to the pot for the last 15 minutes.",
+        "Reduce the sauce if needed, return the bacon, and serve with potatoes or noodles."
+      ],
+      "tags": ["chicken", "burgundy", "wine", "braise"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Boeuf Bourguignon",
+      "description": "Slow-braised beef in red wine with bacon, mushrooms and pearl onions.",
+      "ingredients": [
+        { "name": "beef chuck, cubed", "quantity": 1.5, "unit": "kg" },
+        { "name": "smoked bacon lardons", "quantity": 200, "unit": "g" },
+        { "name": "red Burgundy wine", "quantity": 750, "unit": "ml" },
+        { "name": "beef stock", "quantity": 500, "unit": "ml" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "carrots, sliced", "quantity": 3, "unit": "pc" },
+        { "name": "onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 4, "unit": "pc" },
+        { "name": "pearl onions", "quantity": 250, "unit": "g" },
+        { "name": "button mushrooms", "quantity": 300, "unit": "g" },
+        { "name": "thyme", "quantity": 4, "unit": "pc" },
+        { "name": "flour", "quantity": 3, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Render the bacon in a heavy pot, remove and reserve.",
+        "Brown the seasoned beef in batches in the bacon fat.",
+        "Sauté the diced onion, carrot and garlic, then dust with flour.",
+        "Pour in the wine and stock, add tomato paste and thyme, return the beef and bacon.",
+        "Cover and braise at 160°C for 2.5 hours until the beef is fork tender.",
+        "Sauté the pearl onions and mushrooms separately and stir into the stew before serving."
+      ],
+      "tags": ["beef", "burgundy", "winter"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 180,
+      "servings": 6
+    },
+    {
+      "title": "Ratatouille",
+      "description": "Provençal stew of summer vegetables: aubergine, courgette, pepper and tomato.",
+      "ingredients": [
+        { "name": "aubergine", "quantity": 1, "unit": "pc" },
+        { "name": "courgette", "quantity": 2, "unit": "pc" },
+        { "name": "red bell pepper", "quantity": 1, "unit": "pc" },
+        { "name": "yellow bell pepper", "quantity": 1, "unit": "pc" },
+        { "name": "tomatoes", "quantity": 4, "unit": "pc" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 3, "unit": "pc" },
+        { "name": "olive oil", "quantity": 80, "unit": "ml" },
+        { "name": "thyme", "quantity": 1, "unit": "tbsp" },
+        { "name": "basil", "quantity": 1, "unit": "bunch" }
+      ],
+      "steps": [
+        "Dice the aubergine, courgette, peppers and onion into bite-size pieces.",
+        "Sauté each vegetable separately in olive oil until lightly coloured, then combine.",
+        "Add chopped tomatoes, garlic and thyme, season and simmer 30 minutes.",
+        "The vegetables should be tender but still hold their shape.",
+        "Stir in torn basil and a final drizzle of olive oil.",
+        "Serve warm or at room temperature with crusty bread."
+      ],
+      "tags": ["provence", "vegetable", "summer"],
+      "dietaryTags": ["vegetarian", "vegan", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 40,
+      "servings": 6
+    },
+    {
+      "title": "Cassoulet",
+      "description": "Languedoc bean stew with duck confit, sausage and pork, baked under a crust.",
+      "ingredients": [
+        { "name": "dried white beans", "quantity": 500, "unit": "g" },
+        { "name": "duck confit legs", "quantity": 4, "unit": "pc" },
+        { "name": "Toulouse sausage", "quantity": 400, "unit": "g" },
+        { "name": "pork shoulder, cubed", "quantity": 500, "unit": "g" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "carrot, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "garlic cloves", "quantity": 4, "unit": "pc" },
+        { "name": "chicken stock", "quantity": 1, "unit": "l" },
+        { "name": "breadcrumbs", "quantity": 50, "unit": "g" }
+      ],
+      "steps": [
+        "Soak the beans overnight, then cook in fresh water with aromatics until just tender.",
+        "Brown the pork and sausages in duck fat, then sauté the onion, carrot and garlic.",
+        "Combine pork, beans, tomato paste, herbs and stock in a large casserole.",
+        "Tuck in the duck legs and sausages and simmer 90 minutes.",
+        "Top with breadcrumbs and bake at 160°C for 1 hour, breaking the crust into the stew twice.",
+        "Rest 10 minutes and serve with red wine."
+      ],
+      "tags": ["languedoc", "beans", "stew"],
+      "difficulty": "hard",
+      "prepTime": 40,
+      "cookTime": 240,
+      "servings": 8
+    },
+    {
+      "title": "Quiche Lorraine",
+      "description": "Buttery pastry filled with smoky lardons, cream and egg custard.",
+      "ingredients": [
+        { "name": "shortcrust pastry", "quantity": 300, "unit": "g" },
+        { "name": "smoked bacon lardons", "quantity": 200, "unit": "g" },
+        { "name": "eggs", "quantity": 4, "unit": "pc" },
+        { "name": "double cream", "quantity": 300, "unit": "ml" },
+        { "name": "whole milk", "quantity": 100, "unit": "ml" },
+        { "name": "nutmeg", "quantity": 1, "unit": "pinch" },
+        { "name": "Gruyère, grated (optional)", "quantity": 80, "unit": "g" }
+      ],
+      "steps": [
+        "Roll out the pastry and line a tart tin, then chill 30 minutes.",
+        "Blind-bake at 190°C for 15 minutes with weights, then 5 minutes uncovered.",
+        "Render the lardons until golden and scatter over the base.",
+        "Whisk eggs, cream, milk, nutmeg and seasoning, then pour into the case.",
+        "Sprinkle with Gruyère if using and bake at 170°C for 30 minutes until just set.",
+        "Cool slightly before slicing so the custard sets."
+      ],
+      "tags": ["pastry", "lorraine", "savoury"],
+      "difficulty": "medium",
+      "prepTime": 45,
+      "cookTime": 50,
+      "servings": 6
+    },
+    {
+      "title": "Bouillabaisse",
+      "description": "Marseille fish stew with rascasse, conger, fennel, saffron and rouille.",
+      "ingredients": [
+        { "name": "mixed white fish (rascasse, monkfish, gurnard)", "quantity": 1.5, "unit": "kg" },
+        { "name": "fish stock", "quantity": 1.5, "unit": "l" },
+        { "name": "fennel bulb, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "leek, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "tomatoes, chopped", "quantity": 4, "unit": "pc" },
+        { "name": "saffron threads", "quantity": 1, "unit": "pinch" },
+        { "name": "garlic cloves", "quantity": 4, "unit": "pc" },
+        { "name": "orange peel strip", "quantity": 1, "unit": "pc" },
+        { "name": "Pernod", "quantity": 50, "unit": "ml" },
+        { "name": "olive oil", "quantity": 4, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Sweat the fennel, leek and garlic in olive oil until soft.",
+        "Add tomatoes, orange peel, saffron and Pernod and cook 10 minutes.",
+        "Pour in the fish stock and simmer 20 minutes, then strain if you want a refined broth.",
+        "Add firm-fleshed fish first and simmer 5 minutes, then add delicate fish for 4 minutes more.",
+        "Season carefully and serve with toasted baguette and a spoonful of rouille on top.",
+        "Pass extra rouille and grated Gruyère at the table."
+      ],
+      "tags": ["marseille", "seafood", "stew"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 45,
+      "servings": 6
+    },
+    {
+      "title": "Crème Brûlée",
+      "description": "Vanilla custard topped with a thin shell of caramelised sugar.",
+      "ingredients": [
+        { "name": "double cream", "quantity": 500, "unit": "ml" },
+        { "name": "vanilla pod", "quantity": 1, "unit": "pc" },
+        { "name": "egg yolks", "quantity": 5, "unit": "pc" },
+        { "name": "caster sugar", "quantity": 80, "unit": "g" },
+        { "name": "demerara sugar", "quantity": 4, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Heat the cream with the split vanilla pod until just steaming and infuse 10 minutes.",
+        "Whisk yolks with caster sugar until pale, then pour the warm cream over, whisking.",
+        "Strain into ramekins and place in a roasting tin filled with hot water halfway up.",
+        "Bake at 140°C for about 35 minutes until just set with a slight wobble.",
+        "Chill at least 4 hours, then sprinkle with demerara sugar.",
+        "Caramelise with a torch until deep amber and serve immediately."
+      ],
+      "tags": ["dessert", "custard", "classic"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 35,
+      "servings": 6
+    },
+    {
+      "title": "Tarte Tatin",
+      "description": "Upside-down caramelised apple tart on buttery puff pastry.",
+      "ingredients": [
+        { "name": "puff pastry", "quantity": 300, "unit": "g" },
+        { "name": "apples (Reinette or similar)", "quantity": 8, "unit": "pc" },
+        { "name": "butter", "quantity": 100, "unit": "g" },
+        { "name": "caster sugar", "quantity": 200, "unit": "g" },
+        { "name": "lemon juice", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Peel, core and halve the apples; toss with lemon juice.",
+        "Make a dry caramel with the sugar in an oven-safe pan, then stir in the butter.",
+        "Pack the apple halves cut-side up into the caramel.",
+        "Cook on the stove 15 minutes until the apples soften.",
+        "Cover with the pastry, tucking the edges down, and bake at 200°C for 25 minutes.",
+        "Rest 5 minutes, then carefully invert onto a plate so the caramel coats the apples."
+      ],
+      "tags": ["dessert", "apple", "pastry"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 45,
+      "servings": 8
+    },
+    {
+      "title": "Croque Monsieur",
+      "description": "Grilled ham and Gruyère sandwich smothered in béchamel.",
+      "ingredients": [
+        { "name": "white sandwich bread", "quantity": 8, "unit": "pc" },
+        { "name": "ham slices", "quantity": 8, "unit": "pc" },
+        { "name": "Gruyère, grated", "quantity": 200, "unit": "g" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "flour", "quantity": 30, "unit": "g" },
+        { "name": "milk", "quantity": 300, "unit": "ml" },
+        { "name": "Dijon mustard", "quantity": 2, "unit": "tsp" },
+        { "name": "nutmeg", "quantity": 1, "unit": "pinch" }
+      ],
+      "steps": [
+        "Make a thick béchamel with butter, flour and milk; finish with mustard and nutmeg.",
+        "Spread mustard on the bread, layer ham and a little Gruyère, and close the sandwiches.",
+        "Top each sandwich with béchamel and a generous handful of cheese.",
+        "Bake at 200°C for 12 minutes, then grill 2 minutes until bubbling and golden.",
+        "Serve hot, ideally with a small green salad."
+      ],
+      "tags": ["sandwich", "café", "comfort"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Salade Niçoise",
+      "description": "Provençal composed salad with tuna, eggs, olives, anchovies and beans.",
+      "ingredients": [
+        { "name": "tuna in olive oil, drained", "quantity": 200, "unit": "g" },
+        { "name": "boiled eggs, halved", "quantity": 4, "unit": "pc" },
+        { "name": "green beans, blanched", "quantity": 200, "unit": "g" },
+        { "name": "new potatoes, boiled", "quantity": 400, "unit": "g" },
+        { "name": "tomatoes, wedged", "quantity": 4, "unit": "pc" },
+        { "name": "Niçoise olives", "quantity": 100, "unit": "g" },
+        { "name": "anchovy fillets", "quantity": 8, "unit": "pc" },
+        { "name": "red onion, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "extra virgin olive oil", "quantity": 80, "unit": "ml" },
+        { "name": "red wine vinegar", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Whisk the olive oil, vinegar and seasoning into a vinaigrette.",
+        "Arrange potatoes, beans and tomatoes on a wide platter.",
+        "Top with flaked tuna, halved eggs, olives and anchovies.",
+        "Scatter sliced red onion over the top.",
+        "Drizzle generously with the vinaigrette and serve with crusty bread."
+      ],
+      "tags": ["provence", "salad", "summer"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 25,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Sole Meunière",
+      "description": "Whole sole dredged in flour, panfried in foaming butter with lemon.",
+      "ingredients": [
+        { "name": "whole Dover sole, skinned", "quantity": 4, "unit": "pc" },
+        { "name": "flour for dusting", "quantity": 60, "unit": "g" },
+        { "name": "butter", "quantity": 120, "unit": "g" },
+        { "name": "lemon", "quantity": 2, "unit": "pc" },
+        { "name": "parsley, chopped", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt and pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Season the soles and dredge in flour, shaking off the excess.",
+        "Melt half the butter in a large pan until foaming.",
+        "Cook the soles 3 minutes per side until golden and just cooked through.",
+        "Transfer the fish to warm plates.",
+        "Add the remaining butter to the pan and cook to a nut-brown beurre noisette, then add lemon juice and parsley.",
+        "Pour the sauce over the fish and serve at once."
+      ],
+      "tags": ["fish", "classic", "quick"],
+      "difficulty": "medium",
+      "prepTime": 10,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Confit de Canard",
+      "description": "Duck legs slow-cooked in their own fat until tender, then crisped.",
+      "ingredients": [
+        { "name": "duck legs", "quantity": 6, "unit": "pc" },
+        { "name": "coarse salt", "quantity": 60, "unit": "g" },
+        { "name": "garlic cloves", "quantity": 4, "unit": "pc" },
+        { "name": "thyme sprigs", "quantity": 6, "unit": "pc" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "duck fat", "quantity": 1, "unit": "kg" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Rub the duck legs with salt, garlic, thyme and pepper and refrigerate overnight.",
+        "Rinse the legs and pat dry, then place in a deep pan with bay leaves.",
+        "Cover completely with melted duck fat and warm to a bare simmer.",
+        "Cook at 90°C for 3 hours until the meat almost falls from the bone.",
+        "Cool the legs in the fat for storage; before serving crisp the skin in a hot pan.",
+        "Serve with sautéed potatoes cooked in a little of the duck fat."
+      ],
+      "tags": ["gascony", "duck", "preserved"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "hard",
+      "prepTime": 720,
+      "cookTime": 180,
+      "servings": 6
+    },
+    {
+      "title": "Soufflé au Fromage",
+      "description": "Cheese soufflé that rises tall and golden from a Gruyère béchamel base.",
+      "ingredients": [
+        { "name": "butter", "quantity": 50, "unit": "g" },
+        { "name": "flour", "quantity": 50, "unit": "g" },
+        { "name": "milk", "quantity": 300, "unit": "ml" },
+        { "name": "Gruyère, grated", "quantity": 150, "unit": "g" },
+        { "name": "egg yolks", "quantity": 4, "unit": "pc" },
+        { "name": "egg whites", "quantity": 5, "unit": "pc" },
+        { "name": "Parmigiano, grated", "quantity": 30, "unit": "g" },
+        { "name": "nutmeg", "quantity": 1, "unit": "pinch" }
+      ],
+      "steps": [
+        "Butter a soufflé dish and dust with Parmigiano.",
+        "Make a thick béchamel with butter, flour and milk and season with nutmeg.",
+        "Off the heat stir in Gruyère and the egg yolks one by one.",
+        "Whip the egg whites to stiff peaks and fold into the warm base in three additions.",
+        "Pour into the dish and bake at 190°C for 25 minutes without opening the oven.",
+        "Serve immediately while puffed and golden."
+      ],
+      "tags": ["soufflé", "cheese", "classic"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 20,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Pot-au-Feu",
+      "description": "French boiled beef and vegetables in a clear, savoury broth.",
+      "ingredients": [
+        { "name": "beef shin", "quantity": 1, "unit": "kg" },
+        { "name": "beef short rib", "quantity": 800, "unit": "g" },
+        { "name": "marrow bones", "quantity": 2, "unit": "pc" },
+        { "name": "carrots", "quantity": 4, "unit": "pc" },
+        { "name": "leeks", "quantity": 3, "unit": "pc" },
+        { "name": "turnips", "quantity": 3, "unit": "pc" },
+        { "name": "onion studded with cloves", "quantity": 1, "unit": "pc" },
+        { "name": "celery", "quantity": 2, "unit": "pc" },
+        { "name": "bouquet garni", "quantity": 1, "unit": "pc" },
+        { "name": "coarse sea salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Place the beef and bones in a large pot, cover with cold water and bring to a boil; skim carefully.",
+        "Add the studded onion, bouquet garni and salt, then simmer gently 2 hours.",
+        "Add the carrots, leeks, turnips and celery and cook another hour until tender.",
+        "Slice the meat and arrange with the vegetables on a warm platter.",
+        "Strain the broth, skim the fat, and serve in a bowl alongside.",
+        "Pass mustard, gherkins and coarse salt at the table."
+      ],
+      "tags": ["beef", "boiled", "winter"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 180,
+      "servings": 8
+    },
+    {
+      "title": "Blanquette de Veau",
+      "description": "Veal stew in a creamy white sauce with mushrooms and pearl onions.",
+      "ingredients": [
+        { "name": "veal shoulder, cubed", "quantity": 1.2, "unit": "kg" },
+        { "name": "carrots", "quantity": 2, "unit": "pc" },
+        { "name": "leek, white part", "quantity": 1, "unit": "pc" },
+        { "name": "onion studded with cloves", "quantity": 1, "unit": "pc" },
+        { "name": "bouquet garni", "quantity": 1, "unit": "pc" },
+        { "name": "pearl onions", "quantity": 200, "unit": "g" },
+        { "name": "button mushrooms", "quantity": 250, "unit": "g" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "flour", "quantity": 40, "unit": "g" },
+        { "name": "egg yolk", "quantity": 1, "unit": "pc" },
+        { "name": "double cream", "quantity": 150, "unit": "ml" },
+        { "name": "lemon juice", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Blanch the veal in boiling water 5 minutes, drain and rinse.",
+        "Place the veal back in the pot with carrots, leek, studded onion and bouquet garni; cover with water.",
+        "Simmer 90 minutes until tender, skimming as needed.",
+        "Cook the pearl onions and mushrooms in butter separately.",
+        "Make a roux with butter and flour, then whisk in the strained cooking liquid.",
+        "Off the heat, finish with cream, yolk and lemon juice; combine with veal and vegetables and warm gently."
+      ],
+      "tags": ["veal", "white-stew", "classic"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 120,
+      "servings": 6
+    },
+    {
+      "title": "Moules Marinière",
+      "description": "Mussels steamed open in white wine with shallot, parsley and butter.",
+      "ingredients": [
+        { "name": "mussels, cleaned", "quantity": 2, "unit": "kg" },
+        { "name": "shallots, finely chopped", "quantity": 3, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 3, "unit": "pc" },
+        { "name": "dry white wine", "quantity": 300, "unit": "ml" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "parsley, chopped", "quantity": 1, "unit": "bunch" },
+        { "name": "thyme sprig", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Discard any open mussels that don't close when tapped.",
+        "Sweat shallots, garlic and thyme in butter without colour.",
+        "Pour in the wine and bring to a vigorous boil.",
+        "Add the mussels, cover and cook 4-5 minutes, shaking the pot until they open.",
+        "Discard any unopened mussels, scatter with parsley and serve in deep bowls with frites."
+      ],
+      "tags": ["seafood", "shellfish", "quick"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Steak Frites",
+      "description": "Pan-seared steak with crisp double-cooked fries and herb butter.",
+      "ingredients": [
+        { "name": "rib-eye steaks", "quantity": 4, "unit": "pc" },
+        { "name": "Maris Piper potatoes", "quantity": 1, "unit": "kg" },
+        { "name": "vegetable oil for frying", "quantity": 1, "unit": "l" },
+        { "name": "butter", "quantity": 100, "unit": "g" },
+        { "name": "shallot, minced", "quantity": 1, "unit": "pc" },
+        { "name": "parsley, chopped", "quantity": 2, "unit": "tbsp" },
+        { "name": "thyme", "quantity": 1, "unit": "tsp" },
+        { "name": "salt and pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Cut the potatoes into thick fries, soak in water, then dry well.",
+        "Blanch the fries at 140°C until soft, drain and cool.",
+        "Sear the steaks in a smoking hot pan 3 minutes per side, basting with butter.",
+        "Rest the steaks 5 minutes while you fry the chips at 180°C until golden and crisp.",
+        "Make a quick herb butter with the shallot, parsley and thyme.",
+        "Serve the steaks topped with herb butter and a generous pile of frites."
+      ],
+      "tags": ["beef", "bistro", "frites"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Soupe à l'Oignon",
+      "description": "Caramelised onion soup topped with toasted baguette and Gruyère.",
+      "ingredients": [
+        { "name": "yellow onions, sliced", "quantity": 1, "unit": "kg" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "olive oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "sugar", "quantity": 1, "unit": "tsp" },
+        { "name": "dry white wine", "quantity": 200, "unit": "ml" },
+        { "name": "beef stock", "quantity": 1.5, "unit": "l" },
+        { "name": "baguette slices", "quantity": 8, "unit": "pc" },
+        { "name": "Gruyère, grated", "quantity": 200, "unit": "g" },
+        { "name": "thyme", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Cook the onions in butter and oil over low heat with the sugar for 45 minutes until deeply caramelised.",
+        "Deglaze with white wine and let it reduce.",
+        "Add the stock and thyme and simmer 30 minutes.",
+        "Toast the baguette slices until golden.",
+        "Ladle the soup into bowls, top with baguette and a generous handful of Gruyère.",
+        "Grill until the cheese is bubbling and golden, then serve at once."
+      ],
+      "tags": ["soup", "bistro", "winter"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 80,
+      "servings": 4
+    },
+    {
+      "title": "Madeleines",
+      "description": "Shell-shaped sponge cakes with a humped middle, made famous by Proust.",
+      "ingredients": [
+        { "name": "eggs", "quantity": 3, "unit": "pc" },
+        { "name": "caster sugar", "quantity": 130, "unit": "g" },
+        { "name": "flour", "quantity": 150, "unit": "g" },
+        { "name": "baking powder", "quantity": 1, "unit": "tsp" },
+        { "name": "butter, melted", "quantity": 130, "unit": "g" },
+        { "name": "lemon zest", "quantity": 1, "unit": "tbsp" },
+        { "name": "honey", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Whisk eggs and sugar until pale and ribbon-like.",
+        "Sift in flour and baking powder and fold gently.",
+        "Mix in the melted butter, lemon zest and honey.",
+        "Rest the batter in the fridge for at least 1 hour.",
+        "Spoon into a buttered madeleine mould and bake at 220°C for 4 minutes, then 180°C for 5 minutes.",
+        "Unmould while warm so the shell is crisp."
+      ],
+      "tags": ["dessert", "tea-cake", "classic"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 75,
+      "cookTime": 10,
+      "servings": 12
+    },
+    {
+      "title": "Pain Perdu",
+      "description": "French toast made with brioche, soaked in egg custard and fried in butter.",
+      "ingredients": [
+        { "name": "stale brioche slices", "quantity": 8, "unit": "pc" },
+        { "name": "eggs", "quantity": 3, "unit": "pc" },
+        { "name": "milk", "quantity": 250, "unit": "ml" },
+        { "name": "double cream", "quantity": 100, "unit": "ml" },
+        { "name": "caster sugar", "quantity": 50, "unit": "g" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "icing sugar", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Whisk eggs, milk, cream, sugar and vanilla in a wide dish.",
+        "Soak the brioche slices in the custard for a minute on each side.",
+        "Melt butter in a frying pan over medium heat.",
+        "Fry the soaked slices 2 minutes per side until golden and just set inside.",
+        "Dust with icing sugar and serve immediately with fresh berries or maple syrup."
+      ],
+      "tags": ["breakfast", "brioche", "sweet"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Choucroute Garnie",
+      "description": "Alsatian sauerkraut braised with Riesling, sausages and smoked pork.",
+      "ingredients": [
+        { "name": "sauerkraut", "quantity": 1.5, "unit": "kg" },
+        { "name": "smoked pork shoulder", "quantity": 600, "unit": "g" },
+        { "name": "smoked sausages (Strasbourg)", "quantity": 6, "unit": "pc" },
+        { "name": "Toulouse sausages", "quantity": 3, "unit": "pc" },
+        { "name": "onion, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "juniper berries", "quantity": 1, "unit": "tbsp" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "Riesling wine", "quantity": 400, "unit": "ml" },
+        { "name": "duck fat or lard", "quantity": 60, "unit": "g" },
+        { "name": "potatoes, peeled", "quantity": 8, "unit": "pc" }
+      ],
+      "steps": [
+        "Rinse the sauerkraut and squeeze dry.",
+        "Soften the onion in duck fat in a large pot.",
+        "Add the sauerkraut, juniper, bay, wine and water to cover.",
+        "Bury the smoked pork in the kraut and simmer covered for 90 minutes.",
+        "Add sausages and potatoes and cook another 40 minutes.",
+        "Pile the sauerkraut on a platter and arrange the meats and potatoes around it."
+      ],
+      "tags": ["alsace", "pork", "winter"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 130,
+      "servings": 8
+    },
+    {
+      "title": "Pissaladière",
+      "description": "Niçoise onion tart with anchovies and black olives on a thin base.",
+      "ingredients": [
+        { "name": "bread dough", "quantity": 500, "unit": "g" },
+        { "name": "yellow onions, thinly sliced", "quantity": 1.5, "unit": "kg" },
+        { "name": "olive oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "thyme", "quantity": 1, "unit": "tbsp" },
+        { "name": "garlic clove", "quantity": 1, "unit": "pc" },
+        { "name": "anchovy fillets", "quantity": 16, "unit": "pc" },
+        { "name": "Niçoise olives", "quantity": 100, "unit": "g" }
+      ],
+      "steps": [
+        "Cook the onions slowly in olive oil with thyme and garlic for an hour until very soft and golden.",
+        "Roll the bread dough into a thin rectangle on an oiled tray.",
+        "Spread the cooked onions over the base.",
+        "Make a lattice of anchovy fillets and tuck olives into the diamonds.",
+        "Bake at 220°C for 18 minutes until the base is crisp and golden.",
+        "Serve warm or at room temperature, sliced into squares."
+      ],
+      "tags": ["niçoise", "tart", "appetizer"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 80,
+      "servings": 6
+    },
+    {
+      "title": "Gratin Dauphinois",
+      "description": "Sliced potatoes baked slowly in cream and garlic until silky.",
+      "ingredients": [
+        { "name": "waxy potatoes", "quantity": 1.5, "unit": "kg" },
+        { "name": "garlic clove", "quantity": 2, "unit": "pc" },
+        { "name": "double cream", "quantity": 500, "unit": "ml" },
+        { "name": "whole milk", "quantity": 250, "unit": "ml" },
+        { "name": "butter", "quantity": 30, "unit": "g" },
+        { "name": "nutmeg", "quantity": 1, "unit": "pinch" },
+        { "name": "salt and pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Rub a baking dish with garlic and butter.",
+        "Slice the potatoes thinly on a mandoline.",
+        "Layer the potatoes in the dish, seasoning each layer with salt, pepper and nutmeg.",
+        "Warm the cream and milk and pour over the potatoes.",
+        "Bake at 160°C for 75 minutes until tender and golden, pressing down occasionally.",
+        "Rest 10 minutes so the cream sets, then serve."
+      ],
+      "tags": ["potato", "side", "gratin"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 75,
+      "servings": 6
+    },
+    {
+      "title": "Croissant",
+      "description": "Buttery laminated pastry with crisp shell and tender, layered crumb.",
+      "ingredients": [
+        { "name": "strong bread flour", "quantity": 500, "unit": "g" },
+        { "name": "milk", "quantity": 250, "unit": "ml" },
+        { "name": "fresh yeast", "quantity": 12, "unit": "g" },
+        { "name": "sugar", "quantity": 60, "unit": "g" },
+        { "name": "salt", "quantity": 10, "unit": "g" },
+        { "name": "butter for laminating", "quantity": 280, "unit": "g" },
+        { "name": "egg for glaze", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Mix flour, milk, yeast, sugar and salt to a smooth dough; chill 1 hour.",
+        "Pound the cold butter into a thin square between sheets of parchment.",
+        "Roll the dough out, encase the butter, and complete three letter folds with rests in between.",
+        "Roll the laminated dough out, cut into long triangles and roll into croissants.",
+        "Prove for 2 hours until visibly puffed, then brush with egg.",
+        "Bake at 200°C for 18 minutes until deeply golden and shatteringly crisp."
+      ],
+      "tags": ["pastry", "viennoiserie", "breakfast"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 240,
+      "cookTime": 18,
+      "servings": 12
+    },
+    {
+      "title": "Macarons",
+      "description": "Delicate almond meringue sandwiches with smooth ganache or buttercream.",
+      "ingredients": [
+        { "name": "ground almonds", "quantity": 150, "unit": "g" },
+        { "name": "icing sugar", "quantity": 150, "unit": "g" },
+        { "name": "egg whites", "quantity": 110, "unit": "g" },
+        { "name": "caster sugar", "quantity": 150, "unit": "g" },
+        { "name": "water", "quantity": 50, "unit": "ml" },
+        { "name": "dark chocolate", "quantity": 150, "unit": "g" },
+        { "name": "double cream", "quantity": 150, "unit": "ml" }
+      ],
+      "steps": [
+        "Sift ground almonds and icing sugar together; combine with half the egg whites to form a paste.",
+        "Cook caster sugar and water to 118°C, then pour into the remaining whites whipped to soft peaks.",
+        "Whisk the meringue until cool and glossy, then fold into the almond paste in three additions.",
+        "Pipe small rounds onto trays and rest 30 minutes until a skin forms.",
+        "Bake at 150°C for 14 minutes; cool completely.",
+        "Sandwich with chocolate ganache made from melted chocolate and warm cream; mature 24 hours before serving."
+      ],
+      "tags": ["dessert", "patisserie", "almond"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 14,
+      "servings": 12
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "cuisine": "Trinidadian",
+  "names": {
+    "first": ["Anand", "Shivani", "Kemar", "Kishana", "Devon", "Anastasia", "Rohan", "Aaliyah", "Jevon", "Reshma", "Dwayne", "Indira"],
+    "last": ["Maharaj", "Ramdass", "Mohammed", "Persad", "Williams", "Ramnarine", "Ali", "Boodhoo", "Singh", "Sookdeo", "Bhola", "Joseph"]
+  },
+  "recipes": [
+    {
+      "title": "Doubles",
+      "description": "Trinidad's iconic street breakfast: two soft turmeric flatbreads (bara) wrapped around curried channa with tamarind and pepper sauce.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 400, "unit": "g" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cumin (geera)", "quantity": 1, "unit": "tsp" },
+        { "name": "instant yeast", "quantity": 1, "unit": "tsp" },
+        { "name": "sugar", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "warm water", "quantity": 250, "unit": "ml" },
+        { "name": "cooked chickpeas", "quantity": 500, "unit": "g" },
+        { "name": "Trinidadian curry powder", "quantity": 2, "unit": "tbsp" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "ground roasted geera", "quantity": 1, "unit": "tbsp" },
+        { "name": "scotch bonnet, minced", "quantity": 1, "unit": "pc" },
+        { "name": "tamarind sauce", "quantity": 100, "unit": "ml" },
+        { "name": "oil for frying", "quantity": 750, "unit": "ml" }
+      ],
+      "steps": [
+        "Mix flour, turmeric, cumin, yeast, sugar, salt and warm water into a sticky dough; cover and rise 1 hour.",
+        "Bloom curry powder in oil with garlic, add chickpeas, roasted geera and water to cover; simmer 25 minutes until creamy and thick.",
+        "Heat oil to 180°C and pat oiled hands to flatten balls of dough into 12 cm discs.",
+        "Fry baras one at a time, 30 seconds per side, until puffed and pale gold; drain on paper.",
+        "Place a bara on parchment, top with channa, drizzle tamarind and pepper sauce, cap with another bara and fold."
+      ],
+      "tags": ["street-food", "breakfast", "national-dish"],
+      "dietaryTags": ["vegan"],
+      "difficulty": "medium",
+      "prepTime": 80,
+      "cookTime": 40,
+      "servings": 8
+    },
+    {
+      "title": "Roti",
+      "description": "Trinidadian buss-up-shut (paratha) roti, a flaky layered flatbread torn into pieces to scoop curries.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 500, "unit": "g" },
+        { "name": "baking powder", "quantity": 2, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "warm water", "quantity": 280, "unit": "ml" },
+        { "name": "ghee or melted butter", "quantity": 150, "unit": "g" }
+      ],
+      "steps": [
+        "Mix flour, baking powder and salt, then add water to form a soft dough; rest 30 minutes.",
+        "Divide into 6 balls and roll each into a thin disc.",
+        "Brush with melted ghee, dust with flour, cut a slit from centre to edge and roll into a cone, then press into a ball; rest 20 minutes.",
+        "Roll each ball into a 25 cm round.",
+        "Cook on a hot tawa, brushing with ghee on both sides, for 1-2 minutes per side.",
+        "While still hot, beat the roti with a wooden spatula or clap it between hands so it 'bursses up' into flaky shreds."
+      ],
+      "tags": ["bread", "flatbread", "tradition"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 60,
+      "cookTime": 20,
+      "servings": 6
+    },
+    {
+      "title": "Pelau",
+      "description": "Trinidadian one-pot rice with browned chicken, pigeon peas and pumpkin, lifted by burnt-sugar caramel.",
+      "ingredients": [
+        { "name": "chicken, cut into pieces", "quantity": 1, "unit": "kg" },
+        { "name": "green seasoning", "quantity": 4, "unit": "tbsp" },
+        { "name": "brown sugar", "quantity": 3, "unit": "tbsp" },
+        { "name": "long-grain rice", "quantity": 500, "unit": "g" },
+        { "name": "pigeon peas, cooked", "quantity": 300, "unit": "g" },
+        { "name": "calabaza pumpkin, diced", "quantity": 250, "unit": "g" },
+        { "name": "onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "coconut milk", "quantity": 400, "unit": "ml" },
+        { "name": "chicken stock or water", "quantity": 500, "unit": "ml" },
+        { "name": "scotch bonnet, whole", "quantity": 1, "unit": "pc" },
+        { "name": "fresh thyme", "quantity": 1, "unit": "bunch" },
+        { "name": "neutral oil", "quantity": 3, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Marinate chicken in green seasoning and salt for at least 1 hour.",
+        "Heat oil in a heavy pot, add brown sugar and let it caramelise to a dark amber.",
+        "Add chicken and toss to coat in the burnt sugar until deeply browned.",
+        "Add onion, garlic, pigeon peas, pumpkin and thyme; stir 2 minutes.",
+        "Stir in rice, then pour in coconut milk and stock; nestle in the whole scotch bonnet.",
+        "Cover and cook on low for 25 minutes; rest 10 minutes off heat, remove the chilli, and fluff before serving."
+      ],
+      "tags": ["rice", "chicken", "one-pot", "national-dish"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 50,
+      "servings": 6
+    },
+    {
+      "title": "Bake and Shark",
+      "description": "Trinidad beach classic from Maracas Bay: fried shark fillet in a fried bake bread topped with chadon beni and pineapple sauce.",
+      "ingredients": [
+        { "name": "shark or firm white fish fillets", "quantity": 600, "unit": "g" },
+        { "name": "lime juice", "quantity": 60, "unit": "ml" },
+        { "name": "green seasoning", "quantity": 3, "unit": "tbsp" },
+        { "name": "all-purpose flour for dredging", "quantity": 100, "unit": "g" },
+        { "name": "all-purpose flour for bake", "quantity": 400, "unit": "g" },
+        { "name": "instant yeast", "quantity": 1, "unit": "tsp" },
+        { "name": "sugar", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "warm water", "quantity": 240, "unit": "ml" },
+        { "name": "chadon beni (culantro), chopped", "quantity": 1, "unit": "bunch" },
+        { "name": "pineapple chutney", "quantity": 100, "unit": "ml" },
+        { "name": "shredded lettuce, tomato, cucumber", "quantity": 300, "unit": "g" },
+        { "name": "oil for frying", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "Wash fish with lime juice and water, then marinate in green seasoning and salt for 30 minutes.",
+        "Mix bake flour, yeast, sugar, salt and warm water into a soft dough; rise 1 hour, then divide and roll into 15 cm discs.",
+        "Heat oil to 180°C and fry the bakes 1 minute per side until puffed and golden; drain.",
+        "Dredge fish in flour and fry 3-4 minutes per side until crisp and cooked through.",
+        "Split each bake, fill with fish, lettuce, tomato and cucumber, top generously with chadon beni and pineapple sauce."
+      ],
+      "tags": ["sandwich", "fish", "beach"],
+      "difficulty": "medium",
+      "prepTime": 90,
+      "cookTime": 25,
+      "servings": 6
+    },
+    {
+      "title": "Callaloo",
+      "description": "Trinidadian creamy stew of dasheen leaves with okra, coconut milk and crab or salt meat.",
+      "ingredients": [
+        { "name": "dasheen leaves (or spinach), chopped", "quantity": 600, "unit": "g" },
+        { "name": "okra, sliced", "quantity": 12, "unit": "pc" },
+        { "name": "coconut milk", "quantity": 400, "unit": "ml" },
+        { "name": "onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "scotch bonnet, whole", "quantity": 1, "unit": "pc" },
+        { "name": "fresh thyme", "quantity": 1, "unit": "bunch" },
+        { "name": "blue crabs, cleaned (optional)", "quantity": 2, "unit": "pc" },
+        { "name": "pumpkin, diced", "quantity": 200, "unit": "g" },
+        { "name": "butter", "quantity": 30, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Sauté onion and garlic in butter, add pumpkin and cook 5 minutes.",
+        "Add dasheen leaves, okra, thyme, salt, scotch bonnet and coconut milk plus enough water to barely cover.",
+        "Simmer 30 minutes until vegetables are very soft.",
+        "Tuck in crabs (if using) and simmer 15 minutes more.",
+        "Remove the chilli, swizzle with a wooden swizzle stick (or blend lightly) until creamy and serve over rice."
+      ],
+      "tags": ["greens", "stew", "national-dish"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 50,
+      "servings": 6
+    },
+    {
+      "title": "Curry Channa and Aloo",
+      "description": "Trinidadian curried chickpeas and potato with bloomed curry powder and ground geera, the classic roti filling.",
+      "ingredients": [
+        { "name": "cooked chickpeas", "quantity": 500, "unit": "g" },
+        { "name": "potatoes, diced", "quantity": 500, "unit": "g" },
+        { "name": "Trinidadian curry powder", "quantity": 3, "unit": "tbsp" },
+        { "name": "ground roasted geera", "quantity": 1, "unit": "tbsp" },
+        { "name": "garlic cloves, minced", "quantity": 5, "unit": "pc" },
+        { "name": "onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "scotch bonnet, minced", "quantity": 1, "unit": "pc" },
+        { "name": "fresh thyme", "quantity": 1, "unit": "bunch" },
+        { "name": "chadon beni (or cilantro), chopped", "quantity": 1, "unit": "bunch" },
+        { "name": "neutral oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "water", "quantity": 750, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Make a curry slurry: mix curry powder with 50 ml water.",
+        "Heat oil in a heavy pot, add garlic, onion and scotch bonnet, then pour in the slurry and toast 2-3 minutes until darkened and fragrant.",
+        "Add chickpeas and potato and toss to coat.",
+        "Pour in water, add thyme and salt, and simmer 25 minutes until potatoes are tender and the gravy is thick.",
+        "Mash a few chickpeas to thicken further, finish with chadon beni and roasted geera, and serve with roti."
+      ],
+      "tags": ["curry", "chickpea", "vegetarian"],
+      "dietaryTags": ["vegan"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 35,
+      "servings": 4
+    },
+    {
+      "title": "Macaroni Pie",
+      "description": "Trinidadian baked macaroni custard with sharp cheddar, mustard and a slight pepper kick, served alongside Sunday lunch.",
+      "ingredients": [
+        { "name": "macaroni", "quantity": 500, "unit": "g" },
+        { "name": "sharp cheddar, grated", "quantity": 400, "unit": "g" },
+        { "name": "evaporated milk", "quantity": 400, "unit": "ml" },
+        { "name": "milk", "quantity": 200, "unit": "ml" },
+        { "name": "eggs", "quantity": 3, "unit": "pc" },
+        { "name": "yellow mustard", "quantity": 2, "unit": "tbsp" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "onion, finely diced", "quantity": 1, "unit": "pc" },
+        { "name": "scotch bonnet, minced", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Boil macaroni in salted water until just al dente, then drain.",
+        "Melt butter and toss with the hot macaroni so it doesn't stick.",
+        "Whisk eggs, evaporated milk, milk, mustard, onion, scotch bonnet, salt and pepper.",
+        "Stir in three-quarters of the cheese, then mix with the macaroni.",
+        "Pour into a greased baking dish, top with the remaining cheese.",
+        "Bake at 180°C for 35-40 minutes until set, golden and bubbling at the edges."
+      ],
+      "tags": ["pasta", "baked", "side"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 40,
+      "servings": 8
+    },
+    {
+      "title": "Pholourie",
+      "description": "Trinidadian Indo-Caribbean fried split-pea fritters seasoned with turmeric and cumin, served with tamarind sauce.",
+      "ingredients": [
+        { "name": "split pea flour", "quantity": 250, "unit": "g" },
+        { "name": "all-purpose flour", "quantity": 100, "unit": "g" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cumin (geera)", "quantity": 1, "unit": "tsp" },
+        { "name": "baking powder", "quantity": 1, "unit": "tsp" },
+        { "name": "instant yeast", "quantity": 1, "unit": "tsp" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "scotch bonnet, minced", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "warm water", "quantity": 350, "unit": "ml" },
+        { "name": "oil for frying", "quantity": 750, "unit": "ml" }
+      ],
+      "steps": [
+        "Whisk both flours, turmeric, cumin, baking powder, yeast, salt, garlic and scotch bonnet.",
+        "Add warm water gradually to form a thick, elastic batter; rest 1 hour until bubbly.",
+        "Heat oil to 180°C.",
+        "Drop teaspoon-size balls of batter into the oil and fry 3-4 minutes until puffed, golden and hollow inside.",
+        "Drain and serve hot with tamarind sauce or mango chutney."
+      ],
+      "tags": ["fried", "fritter", "street-food"],
+      "dietaryTags": ["vegan"],
+      "difficulty": "easy",
+      "prepTime": 75,
+      "cookTime": 20,
+      "servings": 6
+    },
+    {
+      "title": "Aloo Pie",
+      "description": "Trinidadian fried potato-stuffed pastry seasoned with cumin and chilli, a beloved street snack with tamarind sauce.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 400, "unit": "g" },
+        { "name": "baking powder", "quantity": 2, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "warm water", "quantity": 220, "unit": "ml" },
+        { "name": "potatoes, boiled and mashed", "quantity": 600, "unit": "g" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "ground roasted geera", "quantity": 1, "unit": "tbsp" },
+        { "name": "scotch bonnet, minced", "quantity": 1, "unit": "pc" },
+        { "name": "chadon beni, chopped", "quantity": 1, "unit": "bunch" },
+        { "name": "oil for frying", "quantity": 750, "unit": "ml" }
+      ],
+      "steps": [
+        "Mix flour, baking powder, salt and water into a soft dough; rest 30 minutes.",
+        "Mash potato with garlic, geera, scotch bonnet, chadon beni and salt.",
+        "Divide dough into 8 balls; roll each into a thin oval.",
+        "Place a heap of potato filling on one half, fold and seal the edges with a fork.",
+        "Heat oil to 180°C and fry pies 3-4 minutes per side until golden and puffed.",
+        "Drain and serve hot with tamarind sauce and pepper sauce."
+      ],
+      "tags": ["fried", "potato", "street-food"],
+      "dietaryTags": ["vegan"],
+      "difficulty": "medium",
+      "prepTime": 45,
+      "cookTime": 20,
+      "servings": 8
+    }
+  ]
+}

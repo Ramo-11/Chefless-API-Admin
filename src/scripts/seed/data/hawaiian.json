@@ -1,0 +1,262 @@
+{
+  "cuisine": "Hawaiian",
+  "names": {
+    "first": ["Kalani", "Leilani", "Kainoa", "Makoa", "Noelani", "Keanu", "Kekoa", "Mahina", "Iolana", "Kai"],
+    "last": ["Kahale", "Kealoha", "Kamaka", "Mahoe", "Kanaka", "Aiona", "Kapule", "Kahananui", "Mahi'ai", "Pukui"]
+  },
+  "recipes": [
+    {
+      "title": "Poke",
+      "description": "Diced raw ahi tuna marinated with shoyu, sesame oil, sweet onion and limu, a Hawaiian classic.",
+      "ingredients": [
+        { "name": "sashimi grade ahi tuna", "quantity": 500, "unit": "g" },
+        { "name": "soy sauce", "quantity": 3, "unit": "tbsp" },
+        { "name": "sesame oil", "quantity": 1, "unit": "tbsp" },
+        { "name": "sweet onion", "quantity": 0.5, "unit": "pc" },
+        { "name": "green onion", "quantity": 3, "unit": "pc" },
+        { "name": "limu", "quantity": 2, "unit": "tbsp" },
+        { "name": "Hawaiian sea salt", "quantity": 1, "unit": "tsp" },
+        { "name": "toasted sesame seeds", "quantity": 1, "unit": "tbsp" },
+        { "name": "chili flakes", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Cut the ahi into clean 2 cm cubes with a sharp knife and chill until needed.",
+        "Slice the sweet onion thinly and the green onion into fine rings.",
+        "Whisk soy sauce, sesame oil, salt and chili flakes in a bowl.",
+        "Add the tuna, onions and chopped limu to the bowl and fold gently.",
+        "Cover and refrigerate for 15 minutes to allow the flavours to mingle.",
+        "Taste for seasoning and add more soy or salt as needed.",
+        "Pile into bowls, sprinkle with sesame seeds and serve immediately over rice."
+      ],
+      "tags": ["seafood", "raw", "salad", "iconic"],
+      "dietaryTags": ["pescatarian", "dairy-free"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 0,
+      "servings": 4
+    },
+    {
+      "title": "Kālua Pig",
+      "description": "Salt-rubbed pork shoulder cooked low and slow until smoky and shreddable, a luau staple.",
+      "ingredients": [
+        { "name": "pork shoulder", "quantity": 2.5, "unit": "kg" },
+        { "name": "Hawaiian sea salt", "quantity": 2, "unit": "tbsp" },
+        { "name": "liquid smoke", "quantity": 1, "unit": "tbsp" },
+        { "name": "ti leaves", "quantity": 4, "unit": "pc" },
+        { "name": "water", "quantity": 100, "unit": "ml" }
+      ],
+      "steps": [
+        "Pierce the pork shoulder all over with a sharp knife.",
+        "Rub the meat thoroughly with Hawaiian sea salt and liquid smoke.",
+        "Line a roasting pan with the ti leaves and place the pork on top.",
+        "Pour water into the base of the pan, then wrap completely in more ti leaves.",
+        "Cover the pan tightly with foil and roast at 150 C for six hours.",
+        "Test that the meat shreds easily with two forks, returning it to the oven if not.",
+        "Rest the pork for 20 minutes, then shred and toss with the rendered juices."
+      ],
+      "tags": ["pork", "luau", "celebration", "slow-cooked"],
+      "dietaryTags": ["gluten-free", "dairy-free"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 360,
+      "servings": 10
+    },
+    {
+      "title": "Lomi-lomi Salmon",
+      "description": "Hawaiian side salad of cured salmon hand-massaged with tomato, sweet onion and green onion.",
+      "ingredients": [
+        { "name": "salted salmon", "quantity": 300, "unit": "g" },
+        { "name": "tomato", "quantity": 3, "unit": "pc" },
+        { "name": "sweet onion", "quantity": 1, "unit": "pc" },
+        { "name": "green onion", "quantity": 4, "unit": "pc" },
+        { "name": "ice cubes", "quantity": 4, "unit": "pc" },
+        { "name": "Hawaiian sea salt", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak the salted salmon in cold water for 30 minutes, then drain and pat dry.",
+        "Cut the salmon into very small dice.",
+        "Dice the tomatoes and finely chop the sweet onion and green onion.",
+        "Combine everything in a bowl and gently massage with your fingers, which is what lomi-lomi means.",
+        "Add the ice cubes to keep the mixture cold and crisp.",
+        "Season carefully with extra sea salt only if needed.",
+        "Chill for 30 minutes before serving on the side of kālua pig."
+      ],
+      "tags": ["seafood", "salad", "side", "luau"],
+      "dietaryTags": ["pescatarian", "gluten-free", "dairy-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 0,
+      "servings": 6
+    },
+    {
+      "title": "Loco Moco",
+      "description": "Hawaiian comfort plate of white rice topped with hamburger patty, fried egg and rich brown gravy.",
+      "ingredients": [
+        { "name": "minced beef", "quantity": 500, "unit": "g" },
+        { "name": "egg", "quantity": 4, "unit": "pc" },
+        { "name": "white rice", "quantity": 2, "unit": "cup" },
+        { "name": "beef stock", "quantity": 400, "unit": "ml" },
+        { "name": "brown onion", "quantity": 1, "unit": "pc" },
+        { "name": "soy sauce", "quantity": 1, "unit": "tbsp" },
+        { "name": "Worcestershire sauce", "quantity": 1, "unit": "tbsp" },
+        { "name": "plain flour", "quantity": 2, "unit": "tbsp" },
+        { "name": "butter", "quantity": 30, "unit": "g" }
+      ],
+      "steps": [
+        "Cook the rice and keep warm.",
+        "Shape the seasoned mince into four flat patties and fry in a hot pan for three minutes per side.",
+        "Remove the patties and saute the diced onion in the same pan until soft.",
+        "Sprinkle in the flour and cook for one minute, then whisk in the beef stock, soy and Worcestershire.",
+        "Simmer the gravy for five minutes until thickened, finishing with butter.",
+        "Fry the eggs in another pan keeping the yolks runny.",
+        "Pile rice into bowls, top with a patty, ladle over gravy and crown with a fried egg."
+      ],
+      "tags": ["beef", "rice", "comfort food", "breakfast"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Spam Musubi",
+      "description": "Slice of grilled Spam glazed with shoyu sugar sauce, pressed onto rice and wrapped with nori.",
+      "ingredients": [
+        { "name": "Spam", "quantity": 1, "unit": "pc" },
+        { "name": "white rice", "quantity": 3, "unit": "cup" },
+        { "name": "soy sauce", "quantity": 3, "unit": "tbsp" },
+        { "name": "brown sugar", "quantity": 2, "unit": "tbsp" },
+        { "name": "mirin", "quantity": 1, "unit": "tbsp" },
+        { "name": "nori sheet", "quantity": 4, "unit": "pc" },
+        { "name": "rice vinegar", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Cook the rice and stir through the rice vinegar while still warm.",
+        "Slice the Spam into eight 6 mm thick pieces.",
+        "Pan fry the slices over medium heat for two minutes per side until lightly crisped.",
+        "Combine soy sauce, brown sugar and mirin in the pan and toss the Spam to coat.",
+        "Cut nori sheets into strips wide enough to wrap a musubi.",
+        "Press warm rice into a musubi mould or rectangular form, top with a slice of Spam.",
+        "Wrap a nori strip around the middle, sealing the join with a dab of water."
+      ],
+      "tags": ["snack", "rice", "Spam", "lunchbox"],
+      "dietaryTags": ["dairy-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Haupia",
+      "description": "Firm Hawaiian coconut milk pudding, traditionally served as small chilled squares at luaus.",
+      "ingredients": [
+        { "name": "coconut milk", "quantity": 800, "unit": "ml" },
+        { "name": "caster sugar", "quantity": 100, "unit": "g" },
+        { "name": "cornflour", "quantity": 60, "unit": "g" },
+        { "name": "water", "quantity": 100, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "pinch" }
+      ],
+      "steps": [
+        "Combine coconut milk, sugar and salt in a saucepan over medium heat.",
+        "Whisk cornflour with the water until smooth in a small bowl.",
+        "Once the coconut mixture is hot but not boiling, whisk in the cornflour slurry.",
+        "Continue whisking constantly until thick and just bubbling, about five minutes.",
+        "Pour into a lined 20 cm square tin and smooth the surface.",
+        "Cool to room temperature, then chill for at least four hours until completely set.",
+        "Cut into small squares and serve cold."
+      ],
+      "tags": ["dessert", "coconut", "luau", "pudding"],
+      "dietaryTags": ["vegan", "gluten-free", "dairy-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 10,
+      "servings": 12
+    },
+    {
+      "title": "Laulau",
+      "description": "Pork and salted butterfish wrapped in young taro leaves and steamed for hours until silken.",
+      "ingredients": [
+        { "name": "pork shoulder", "quantity": 700, "unit": "g" },
+        { "name": "salted butterfish", "quantity": 200, "unit": "g" },
+        { "name": "taro leaves", "quantity": 600, "unit": "g" },
+        { "name": "ti leaves", "quantity": 8, "unit": "pc" },
+        { "name": "Hawaiian sea salt", "quantity": 2, "unit": "tsp" },
+        { "name": "water", "quantity": 200, "unit": "ml" }
+      ],
+      "steps": [
+        "Wash the taro leaves carefully and remove the tough stems.",
+        "Cut the pork into 4 cm chunks and rub with sea salt.",
+        "Cut the butterfish into small pieces.",
+        "Stack four to five taro leaves in a hand, place pork and a piece of butterfish in the centre.",
+        "Wrap the taro leaves up and around the filling, then wrap a ti leaf around to seal.",
+        "Tie each bundle with kitchen twine and arrange in a steamer.",
+        "Steam over simmering water for four hours, replenishing water as needed, until pork is tender."
+      ],
+      "tags": ["pork", "luau", "traditional", "steamed"],
+      "dietaryTags": ["gluten-free", "dairy-free"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 240,
+      "servings": 8
+    },
+    {
+      "title": "Manapua",
+      "description": "Large Hawaiian-Chinese steamed bun filled with sweet char siu pork in a glossy red sauce.",
+      "ingredients": [
+        { "name": "plain flour", "quantity": 500, "unit": "g" },
+        { "name": "caster sugar", "quantity": 60, "unit": "g" },
+        { "name": "instant yeast", "quantity": 7, "unit": "g" },
+        { "name": "warm water", "quantity": 250, "unit": "ml" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "char siu pork", "quantity": 350, "unit": "g" },
+        { "name": "hoisin sauce", "quantity": 3, "unit": "tbsp" },
+        { "name": "soy sauce", "quantity": 1, "unit": "tbsp" },
+        { "name": "cornflour", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Whisk yeast and sugar with warm water and stand for 10 minutes until foamy.",
+        "Combine flour with the yeast mixture and oil to a soft dough, knead for 10 minutes.",
+        "Cover and rise in a warm place for 90 minutes until doubled.",
+        "Dice the char siu and toss with hoisin, soy, cornflour and a splash of water until thickened in a pan.",
+        "Divide the dough into 12 pieces and flatten each into a 12 cm round.",
+        "Place a heaped tablespoon of filling in the centre, gather the edges and pinch firmly to seal.",
+        "Set seam side down on baking paper squares, prove 30 minutes, then steam for 15 minutes."
+      ],
+      "tags": ["bun", "pork", "snack", "Hawaiian-Chinese"],
+      "dietaryTags": ["dairy-free"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 30,
+      "servings": 12
+    },
+    {
+      "title": "Saimin",
+      "description": "Hawaiian noodle soup with springy egg noodles in a dashi broth topped with char siu and green onion.",
+      "ingredients": [
+        { "name": "saimin noodles", "quantity": 400, "unit": "g" },
+        { "name": "chicken stock", "quantity": 1.5, "unit": "l" },
+        { "name": "dashi powder", "quantity": 2, "unit": "tsp" },
+        { "name": "soy sauce", "quantity": 3, "unit": "tbsp" },
+        { "name": "char siu pork", "quantity": 200, "unit": "g" },
+        { "name": "egg", "quantity": 4, "unit": "pc" },
+        { "name": "green onion", "quantity": 4, "unit": "pc" },
+        { "name": "fish cake", "quantity": 100, "unit": "g" },
+        { "name": "ginger", "quantity": 2, "unit": "tsp" }
+      ],
+      "steps": [
+        "Bring chicken stock to a simmer and stir in dashi powder, soy sauce and grated ginger.",
+        "Simmer for 10 minutes for the broth to deepen, then taste and adjust seasoning.",
+        "Soft boil the eggs for six minutes, then peel and halve.",
+        "Cook the saimin noodles in plenty of boiling water until al dente, drain and divide between bowls.",
+        "Slice the char siu thinly and the fish cake into rounds.",
+        "Ladle the hot broth over the noodles, then top with char siu, fish cake and a halved egg.",
+        "Scatter with finely sliced green onion and serve immediately."
+      ],
+      "tags": ["noodle", "soup", "comfort food", "Hawaiian"],
+      "dietaryTags": ["dairy-free"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 4
+    }
+  ]
+}

@@ -1,0 +1,380 @@
+{
+  "cuisine": "Palestinian",
+  "names": {
+    "first": ["Yousef", "Salma", "Omar", "Dalia", "Khalil", "Lina", "Tareq", "Reem", "Ahmad", "Sara", "Mahmoud", "Aya"],
+    "last": ["Darwish", "Nashashibi", "Husseini", "Barghouti", "Tamimi", "Abbas", "Khalidi", "Odeh", "Shawa", "Masri", "Qassem", "Awad"]
+  },
+  "recipes": [
+    {
+      "title": "Maqluba",
+      "description": "Upside-down rice cake of layered lamb, fried aubergine, cauliflower and potatoes, flipped onto a platter at the table.",
+      "ingredients": [
+        {"name": "lamb shoulder", "quantity": 600, "unit": "g"},
+        {"name": "long-grain rice", "quantity": 500, "unit": "g"},
+        {"name": "aubergines", "quantity": 2, "unit": "pc"},
+        {"name": "cauliflower", "quantity": 1, "unit": "pc"},
+        {"name": "potatoes", "quantity": 2, "unit": "pc"},
+        {"name": "tomatoes", "quantity": 2, "unit": "pc"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "ground allspice", "quantity": 2, "unit": "tsp"},
+        {"name": "ground turmeric", "quantity": 1, "unit": "tsp"},
+        {"name": "cardamom pods", "quantity": 4, "unit": "pc"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"},
+        {"name": "frying oil", "quantity": 500, "unit": "ml"},
+        {"name": "water", "quantity": 1.2, "unit": "l"},
+        {"name": "pine nuts", "quantity": 50, "unit": "g"}
+      ],
+      "steps": [
+        "Brown the lamb with onion, cardamom and salt then simmer for 60 minutes; reserve the broth.",
+        "Slice aubergine, cauliflower and potatoes; salt the aubergine and pat dry.",
+        "Deep-fry each vegetable in turn until golden, draining on paper.",
+        "In a heavy pot layer tomatoes, then lamb, then fried vegetables in colorful tiers.",
+        "Top with rinsed rice, allspice and turmeric and pour in 1 liter of hot broth.",
+        "Cover and simmer 30 minutes, rest 15 minutes, invert onto a platter and scatter with toasted pine nuts."
+      ],
+      "tags": ["rice", "celebration", "one-pot"],
+      "dietaryTags": ["halal"],
+      "difficulty": "hard",
+      "prepTime": 45,
+      "cookTime": 90,
+      "servings": 8
+    },
+    {
+      "title": "Musakhan",
+      "description": "Sumac-roasted chicken on taboon bread soaked with caramelized onions and pine nuts, the national dish of Palestine.",
+      "ingredients": [
+        {"name": "whole chicken", "quantity": 1.6, "unit": "kg"},
+        {"name": "taboon bread", "quantity": 4, "unit": "pc"},
+        {"name": "onions", "quantity": 6, "unit": "pc"},
+        {"name": "olive oil", "quantity": 200, "unit": "ml"},
+        {"name": "sumac", "quantity": 5, "unit": "tbsp"},
+        {"name": "ground allspice", "quantity": 1, "unit": "tsp"},
+        {"name": "ground cinnamon", "quantity": 0.5, "unit": "tsp"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"},
+        {"name": "pine nuts", "quantity": 60, "unit": "g"},
+        {"name": "lemon juice", "quantity": 2, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Joint the chicken into 8 pieces and rub with allspice, cinnamon, lemon juice and salt.",
+        "Slice the onions thinly and sauté in olive oil for 25 minutes until very soft and just golden.",
+        "Stir in 4 tablespoons of sumac and cook another minute, then remove from heat.",
+        "Roast the chicken on a tray at 200°C for 35 minutes until cooked and crisp-skinned.",
+        "Lay the taboon bread on a platter, cover with the sumac onions and chicken pieces.",
+        "Toast pine nuts in a little olive oil, scatter on top and dust with the remaining sumac."
+      ],
+      "tags": ["national dish", "chicken", "sumac"],
+      "dietaryTags": ["halal"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Maftoul",
+      "description": "Hand-rolled Palestinian couscous tossed with tender chicken and chickpeas in a warmly spiced cinnamon broth.",
+      "ingredients": [
+        {"name": "maftoul couscous", "quantity": 400, "unit": "g"},
+        {"name": "whole chicken", "quantity": 1.4, "unit": "kg"},
+        {"name": "cooked chickpeas", "quantity": 250, "unit": "g"},
+        {"name": "onions", "quantity": 2, "unit": "pc"},
+        {"name": "olive oil", "quantity": 60, "unit": "ml"},
+        {"name": "ground turmeric", "quantity": 1, "unit": "tsp"},
+        {"name": "ground cumin", "quantity": 1, "unit": "tsp"},
+        {"name": "ground allspice", "quantity": 1, "unit": "tsp"},
+        {"name": "cinnamon stick", "quantity": 1, "unit": "pc"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"},
+        {"name": "water", "quantity": 1.5, "unit": "l"}
+      ],
+      "steps": [
+        "Brown the chicken pieces in olive oil with sliced onion, then add water and cinnamon stick.",
+        "Simmer for 50 minutes until tender, then strain and reserve 800 ml of broth.",
+        "Steam the maftoul over the gently simmering broth for 25 minutes until plump.",
+        "Toss the steamed maftoul with olive oil, allspice and salt.",
+        "Warm the chickpeas in some broth with cumin and turmeric.",
+        "Pile the maftoul on a platter, arrange the chicken and chickpeas on top and ladle hot broth around."
+      ],
+      "tags": ["couscous", "stew", "Friday lunch"],
+      "dietaryTags": ["halal"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Mansaf",
+      "description": "Slow-cooked lamb in a tangy fermented yogurt sauce, served on a bed of rice and shrak bread, eaten communally.",
+      "ingredients": [
+        {"name": "lamb shoulder on the bone", "quantity": 1.5, "unit": "kg"},
+        {"name": "long-grain rice", "quantity": 500, "unit": "g"},
+        {"name": "jameed (dried yogurt)", "quantity": 400, "unit": "g"},
+        {"name": "shrak bread", "quantity": 2, "unit": "pc"},
+        {"name": "ghee", "quantity": 3, "unit": "tbsp"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "ground turmeric", "quantity": 0.5, "unit": "tsp"},
+        {"name": "ground allspice", "quantity": 1, "unit": "tsp"},
+        {"name": "cardamom pods", "quantity": 4, "unit": "pc"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"},
+        {"name": "pine nuts", "quantity": 60, "unit": "g"},
+        {"name": "almonds", "quantity": 50, "unit": "g"},
+        {"name": "water", "quantity": 2, "unit": "l"}
+      ],
+      "steps": [
+        "Soak the jameed overnight in water, then blend smooth and reserve.",
+        "Brown the lamb pieces in ghee with onion and cardamom, then cover with water and simmer 1.5 hours.",
+        "Whisk the jameed slurry into the simmering broth, stirring constantly to prevent splitting.",
+        "Cook rinsed rice in some of the strained broth with allspice and turmeric until fluffy.",
+        "Lay the shrak bread on a wide platter, spoon over rice, then arrange lamb pieces and ladle yogurt sauce.",
+        "Toast pine nuts and almonds in ghee and scatter on top before serving with extra sauce on the side."
+      ],
+      "tags": ["national dish", "lamb", "celebration"],
+      "dietaryTags": ["halal"],
+      "difficulty": "hard",
+      "prepTime": 720,
+      "cookTime": 120,
+      "servings": 8
+    },
+    {
+      "title": "Qidra",
+      "description": "Hebron's celebrated rice and lamb dish, slow-cooked in a clay pot with chickpeas, garlic and warm spices.",
+      "ingredients": [
+        {"name": "lamb on the bone", "quantity": 1, "unit": "kg"},
+        {"name": "long-grain rice", "quantity": 500, "unit": "g"},
+        {"name": "cooked chickpeas", "quantity": 250, "unit": "g"},
+        {"name": "garlic cloves", "quantity": 8, "unit": "pc"},
+        {"name": "ground cardamom", "quantity": 1, "unit": "tsp"},
+        {"name": "ground allspice", "quantity": 1, "unit": "tsp"},
+        {"name": "ground turmeric", "quantity": 0.5, "unit": "tsp"},
+        {"name": "ghee", "quantity": 4, "unit": "tbsp"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"},
+        {"name": "water", "quantity": 1.2, "unit": "l"}
+      ],
+      "steps": [
+        "Layer the lamb at the bottom of a heavy clay or metal pot.",
+        "Scatter chickpeas and whole peeled garlic cloves around the lamb.",
+        "Add rinsed rice, spices, salt and ghee and pour over hot water.",
+        "Seal the pot tightly with foil and a lid and bake at 160°C for 2.5 hours.",
+        "Open the lid carefully and check the rice is fluffy and the lamb falling apart.",
+        "Tip onto a platter and serve with plain yogurt."
+      ],
+      "tags": ["rice", "lamb", "slow-cooked"],
+      "dietaryTags": ["halal"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 150,
+      "servings": 6
+    },
+    {
+      "title": "Knafeh Nabulsieh",
+      "description": "Nablus's signature golden cheese pastry, with a layer of stretchy white cheese under a crisp orange semolina crust.",
+      "ingredients": [
+        {"name": "kataifi pastry", "quantity": 400, "unit": "g"},
+        {"name": "akkawi cheese", "quantity": 500, "unit": "g"},
+        {"name": "fine semolina", "quantity": 100, "unit": "g"},
+        {"name": "ghee", "quantity": 200, "unit": "g"},
+        {"name": "sugar", "quantity": 400, "unit": "g"},
+        {"name": "water", "quantity": 250, "unit": "ml"},
+        {"name": "lemon juice", "quantity": 1, "unit": "tbsp"},
+        {"name": "orange blossom water", "quantity": 1, "unit": "tbsp"},
+        {"name": "natural orange food coloring", "quantity": 0.5, "unit": "tsp"},
+        {"name": "ground pistachios", "quantity": 40, "unit": "g"}
+      ],
+      "steps": [
+        "Soak the akkawi cheese in cold water for 6 hours, changing it every 2 hours.",
+        "Boil sugar, water and lemon juice for 8 minutes, stir in orange blossom water and chill.",
+        "Pulse the kataifi with semolina until fine, then mix with melted ghee and orange coloring.",
+        "Press the buttered pastry firmly into a 30 cm tray as a tight even base.",
+        "Cover with sliced cheese and bake at 200°C for 25 minutes until the bottom is deep gold.",
+        "Invert immediately onto a tray, douse with cold syrup and garnish with pistachios."
+      ],
+      "tags": ["dessert", "cheese", "celebration"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 30,
+      "servings": 10
+    },
+    {
+      "title": "Mloukhieh",
+      "description": "Soupy stew of finely chopped jute mallow leaves with chicken and garlic, served with rice and toasted bread.",
+      "ingredients": [
+        {"name": "fresh mloukhieh leaves", "quantity": 500, "unit": "g"},
+        {"name": "whole chicken", "quantity": 1.4, "unit": "kg"},
+        {"name": "garlic cloves", "quantity": 8, "unit": "pc"},
+        {"name": "fresh coriander", "quantity": 0.5, "unit": "bunch"},
+        {"name": "ground coriander", "quantity": 1, "unit": "tsp"},
+        {"name": "ground cumin", "quantity": 0.5, "unit": "tsp"},
+        {"name": "olive oil", "quantity": 3, "unit": "tbsp"},
+        {"name": "lemon juice", "quantity": 3, "unit": "tbsp"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"},
+        {"name": "water", "quantity": 1.5, "unit": "l"}
+      ],
+      "steps": [
+        "Simmer the chicken with salt and a peeled garlic clove for 60 minutes; strain the broth.",
+        "Chop the mloukhieh leaves very finely with a sharp knife.",
+        "Bring 1 liter of strained broth back to a simmer and add the leaves.",
+        "Mince the remaining garlic with the fresh coriander and fry in olive oil until fragrant.",
+        "Stir the garlic-coriander mixture (taqliya) into the simmering soup with cumin and lemon juice.",
+        "Cook gently for 15 minutes and serve with shredded chicken, rice and toasted pita."
+      ],
+      "tags": ["stew", "soup", "comfort food"],
+      "dietaryTags": ["halal"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 80,
+      "servings": 6
+    },
+    {
+      "title": "Rummaniyya",
+      "description": "Gazan lentil and aubergine stew brightened with sour pomegranate juice, tahini and a final tarka of garlic and chili.",
+      "ingredients": [
+        {"name": "brown lentils", "quantity": 250, "unit": "g"},
+        {"name": "aubergines", "quantity": 2, "unit": "pc"},
+        {"name": "sour pomegranate juice", "quantity": 250, "unit": "ml"},
+        {"name": "tahini", "quantity": 3, "unit": "tbsp"},
+        {"name": "garlic cloves", "quantity": 6, "unit": "pc"},
+        {"name": "ground cumin", "quantity": 1, "unit": "tsp"},
+        {"name": "Aleppo pepper", "quantity": 1, "unit": "tsp"},
+        {"name": "olive oil", "quantity": 4, "unit": "tbsp"},
+        {"name": "salt", "quantity": 1.5, "unit": "tsp"},
+        {"name": "water", "quantity": 800, "unit": "ml"},
+        {"name": "fresh dill", "quantity": 2, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Simmer the rinsed lentils in water with salt for 25 minutes until tender.",
+        "Cube the aubergines and fry in olive oil until deep gold; drain on paper.",
+        "Stir aubergines and pomegranate juice into the lentils and cook 15 minutes.",
+        "Whisk in the tahini and a little water to loosen if needed.",
+        "Crush the garlic, fry in olive oil with cumin and Aleppo pepper for 1 minute, then stir into the stew.",
+        "Finish with chopped dill and serve warm with bread."
+      ],
+      "tags": ["stew", "Gaza", "tangy"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 50,
+      "servings": 4
+    },
+    {
+      "title": "Zibdiyit Gambari",
+      "description": "Gazan clay-pot prawn stew of tomato, dill, chili and garlic, baked until bubbling and served straight from the dish.",
+      "ingredients": [
+        {"name": "raw prawns", "quantity": 600, "unit": "g"},
+        {"name": "ripe tomatoes", "quantity": 4, "unit": "pc"},
+        {"name": "garlic cloves", "quantity": 6, "unit": "pc"},
+        {"name": "green chili", "quantity": 2, "unit": "pc"},
+        {"name": "fresh dill", "quantity": 0.5, "unit": "bunch"},
+        {"name": "olive oil", "quantity": 60, "unit": "ml"},
+        {"name": "ground cumin", "quantity": 1, "unit": "tsp"},
+        {"name": "lemon juice", "quantity": 1, "unit": "tbsp"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Pound the garlic and chili with salt to a rough paste in a mortar.",
+        "Grate the tomatoes into a bowl, discarding the skins.",
+        "Heat olive oil in a clay pot, fry the garlic-chili paste for 1 minute.",
+        "Add tomato pulp, cumin and salt and simmer 10 minutes until thickened.",
+        "Stir in the prawns and cook 4-5 minutes until just pink.",
+        "Top with chopped dill and lemon juice and serve straight from the pot with bread."
+      ],
+      "tags": ["seafood", "Gaza", "clay pot"],
+      "dietaryTags": ["halal", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Sumagiyya",
+      "description": "Hearty Gazan stew of lamb, chard and chickpeas thickened with sumac juice, tahini and dill — eaten on holidays.",
+      "ingredients": [
+        {"name": "lamb shoulder", "quantity": 600, "unit": "g"},
+        {"name": "chard", "quantity": 400, "unit": "g"},
+        {"name": "cooked chickpeas", "quantity": 250, "unit": "g"},
+        {"name": "sumac", "quantity": 80, "unit": "g"},
+        {"name": "tahini", "quantity": 4, "unit": "tbsp"},
+        {"name": "garlic cloves", "quantity": 5, "unit": "pc"},
+        {"name": "fresh dill", "quantity": 0.5, "unit": "bunch"},
+        {"name": "olive oil", "quantity": 4, "unit": "tbsp"},
+        {"name": "ground cumin", "quantity": 1, "unit": "tsp"},
+        {"name": "Aleppo pepper", "quantity": 1, "unit": "tsp"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"},
+        {"name": "water", "quantity": 1.5, "unit": "l"}
+      ],
+      "steps": [
+        "Soak the sumac in 500 ml hot water for 1 hour, then strain to extract the tart red juice.",
+        "Brown the lamb in olive oil and simmer with water and salt for 75 minutes.",
+        "Add chickpeas and chopped chard stems and simmer 10 minutes more.",
+        "Stir in chard leaves, the sumac juice, tahini and Aleppo pepper.",
+        "Crush garlic with cumin, fry in olive oil for 1 minute and tip into the stew.",
+        "Finish with chopped dill and rest 10 minutes before serving with bread."
+      ],
+      "tags": ["stew", "Gaza", "celebration"],
+      "dietaryTags": ["halal"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 100,
+      "servings": 6
+    },
+    {
+      "title": "Shorabat Adas",
+      "description": "Velvety yellow lentil soup brightened with cumin and lemon, a Levantine staple at iftar tables.",
+      "ingredients": [
+        {"name": "red lentils", "quantity": 250, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "carrot", "quantity": 1, "unit": "pc"},
+        {"name": "garlic cloves", "quantity": 3, "unit": "pc"},
+        {"name": "ground cumin", "quantity": 1.5, "unit": "tsp"},
+        {"name": "ground turmeric", "quantity": 0.5, "unit": "tsp"},
+        {"name": "olive oil", "quantity": 3, "unit": "tbsp"},
+        {"name": "lemon juice", "quantity": 2, "unit": "tbsp"},
+        {"name": "salt", "quantity": 1.5, "unit": "tsp"},
+        {"name": "water", "quantity": 1.2, "unit": "l"}
+      ],
+      "steps": [
+        "Sauté chopped onion, carrot and garlic in olive oil for 5 minutes.",
+        "Stir in the rinsed lentils, cumin and turmeric and toast for 1 minute.",
+        "Pour in the water and salt and bring to a steady simmer.",
+        "Cook for 25 minutes until the lentils have completely broken down.",
+        "Blend the soup with an immersion blender until silky.",
+        "Stir in lemon juice and ladle into bowls with extra cumin and toasted bread."
+      ],
+      "tags": ["soup", "iftar", "comfort food"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 35,
+      "servings": 4
+    },
+    {
+      "title": "Mahashi Waraq Dawali",
+      "description": "Palestinian-style stuffed grape leaves, rolled tightly with rice, lamb and tomato and simmered in lemon broth.",
+      "ingredients": [
+        {"name": "vine leaves", "quantity": 50, "unit": "pc"},
+        {"name": "minced lamb", "quantity": 300, "unit": "g"},
+        {"name": "short-grain rice", "quantity": 250, "unit": "g"},
+        {"name": "tomato", "quantity": 1, "unit": "pc"},
+        {"name": "tomato paste", "quantity": 1, "unit": "tbsp"},
+        {"name": "ground allspice", "quantity": 1, "unit": "tsp"},
+        {"name": "ground cinnamon", "quantity": 0.5, "unit": "tsp"},
+        {"name": "lemon juice", "quantity": 100, "unit": "ml"},
+        {"name": "olive oil", "quantity": 80, "unit": "ml"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"},
+        {"name": "water", "quantity": 800, "unit": "ml"}
+      ],
+      "steps": [
+        "Blanch vine leaves briefly to soften, then drain and trim stems.",
+        "Mix rinsed rice with lamb, diced tomato, tomato paste, allspice, cinnamon and salt.",
+        "Place a teaspoon of filling on each leaf and roll tightly into thin cigars.",
+        "Layer rolls in a heavy pot lined with extra leaves; weight with a heatproof plate.",
+        "Pour over olive oil, lemon juice and water and bring to a gentle simmer.",
+        "Cover and cook for 50 minutes until the rice is tender and the broth is glossy."
+      ],
+      "tags": ["stuffed", "rolled", "celebration"],
+      "dietaryTags": ["halal"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 60,
+      "servings": 8
+    }
+  ]
+}

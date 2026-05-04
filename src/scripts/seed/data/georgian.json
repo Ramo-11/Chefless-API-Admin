@@ -1,0 +1,313 @@
+{
+  "cuisine": "Georgian",
+  "names": {
+    "first": ["Giorgi", "Nino", "Davit", "Tamar", "Levan", "Mariam", "Irakli", "Salome", "Nikoloz", "Ana", "Zurab", "Ketevan"],
+    "last": ["Beridze", "Kapanadze", "Lomidze", "Gelashvili", "Tsiklauri", "Mamulashvili", "Chkheidze", "Dzneladze", "Khorava", "Maisuradze", "Tabidze", "Saakashvili"]
+  },
+  "recipes": [
+    {
+      "title": "Khachapuri",
+      "description": "Georgian boat-shaped Adjarian cheese bread filled with molten sulguni and topped with a runny egg and butter.",
+      "ingredients": [
+        { "name": "flour", "quantity": 500, "unit": "g" },
+        { "name": "warm milk", "quantity": 250, "unit": "ml" },
+        { "name": "active dry yeast", "quantity": 2, "unit": "tsp" },
+        { "name": "sugar", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "sulguni cheese, grated", "quantity": 400, "unit": "g" },
+        { "name": "feta cheese, crumbled", "quantity": 200, "unit": "g" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "egg yolks (topping)", "quantity": 4, "unit": "pc" }
+      ],
+      "steps": [
+        "Bloom the yeast and sugar in the warm milk for 10 minutes until foamy.",
+        "Mix the flour, salt, egg, oil and milk mixture into a soft dough; knead for 10 minutes and rise covered for 1 hour until doubled.",
+        "Divide the dough into 4 pieces. Roll each into an oval, pile cheese along the centre and fold the long edges over to make a boat shape, pinching the ends.",
+        "Place the boats on a baking tray lined with parchment and rest for 15 minutes.",
+        "Preheat the oven to 230°C and bake the khachapuri for 12 to 14 minutes until the dough is golden and the cheese is bubbling.",
+        "Pull each boat from the oven, make a well in the middle of the cheese, and slip an egg yolk into each.",
+        "Return to the oven for 1 to 2 minutes, just until the yolk is barely set, then add a knob of butter to each.",
+        "Eat by tearing pieces of the crust and dipping into the molten cheese, butter and yolk."
+      ],
+      "tags": ["bread", "cheese", "egg", "national dish"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 90,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Khinkali",
+      "description": "Georgian soup-filled dumplings with a twisted topknot, eaten with the fingers and seasoned with black pepper.",
+      "ingredients": [
+        { "name": "flour", "quantity": 600, "unit": "g" },
+        { "name": "warm water", "quantity": 250, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "ground beef", "quantity": 300, "unit": "g" },
+        { "name": "ground pork", "quantity": 300, "unit": "g" },
+        { "name": "onion, finely grated", "quantity": 1, "unit": "pc" },
+        { "name": "garlic clove, minced", "quantity": 2, "unit": "pc" },
+        { "name": "ice water", "quantity": 100, "unit": "ml" },
+        { "name": "ground coriander", "quantity": 1, "unit": "tsp" },
+        { "name": "ground caraway", "quantity": 1, "unit": "tsp" },
+        { "name": "cilantro, finely chopped", "quantity": 3, "unit": "tbsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Mix the flour, water and salt to a firm dough, knead for 10 minutes, wrap and rest for 30 minutes.",
+        "Combine the meats, onion, garlic, ice water, cilantro, coriander, caraway, salt and pepper into a slack, sticky filling.",
+        "Roll the dough thinly and cut into 12 cm rounds.",
+        "Place a heaped tablespoon of filling in the centre of each round.",
+        "Hold the disc in your palm and pleat the edge upward into many folds, twisting the top into a topknot to seal.",
+        "Boil the khinkali in well-salted water for 8 to 10 minutes after they float.",
+        "Lift out and serve with cracked black pepper. Eat by holding the topknot, biting a small hole, sipping the soup, then eating the rest; leave the topknot on the plate."
+      ],
+      "tags": ["dumpling", "beef", "pork", "national dish"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 10,
+      "servings": 6
+    },
+    {
+      "title": "Chakhokhbili",
+      "description": "Georgian chicken stew braised with tomatoes, onions and a generous amount of fresh herbs and spices.",
+      "ingredients": [
+        { "name": "chicken pieces, bone-in", "quantity": 1.5, "unit": "kg" },
+        { "name": "onions, sliced", "quantity": 4, "unit": "pc" },
+        { "name": "tomatoes, peeled and diced", "quantity": 600, "unit": "g" },
+        { "name": "garlic cloves", "quantity": 5, "unit": "pc" },
+        { "name": "butter", "quantity": 50, "unit": "g" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "ground coriander", "quantity": 2, "unit": "tsp" },
+        { "name": "dried marigold (saffron)", "quantity": 1, "unit": "tsp" },
+        { "name": "dried fenugreek (utskho suneli)", "quantity": 1, "unit": "tsp" },
+        { "name": "cilantro, chopped", "quantity": 4, "unit": "tbsp" },
+        { "name": "parsley, chopped", "quantity": 3, "unit": "tbsp" },
+        { "name": "basil, chopped", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Brown the chicken pieces in oil in a wide pan; remove and set aside.",
+        "Add the butter and onions to the same pan and cook over medium heat for 20 minutes until very soft and golden.",
+        "Stir in the tomatoes and the spices and simmer for 10 minutes to a thick sauce.",
+        "Return the chicken to the pan, season, cover and braise gently for 35 to 40 minutes until very tender.",
+        "Stir in the crushed garlic and most of the herbs and rest off heat for 10 minutes.",
+        "Sprinkle with the remaining herbs and serve with crusty bread."
+      ],
+      "tags": ["chicken", "stew", "tomato", "herb"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 70,
+      "servings": 4
+    },
+    {
+      "title": "Lobio",
+      "description": "Georgian stewed red kidney beans cooked with onions, herbs and spices, served with cornbread and pickles.",
+      "ingredients": [
+        { "name": "dried red kidney beans, soaked overnight", "quantity": 400, "unit": "g" },
+        { "name": "onions, finely chopped", "quantity": 2, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 4, "unit": "pc" },
+        { "name": "walnuts", "quantity": 100, "unit": "g" },
+        { "name": "vegetable oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "ground coriander", "quantity": 2, "unit": "tsp" },
+        { "name": "ground blue fenugreek", "quantity": 1, "unit": "tsp" },
+        { "name": "dried marigold", "quantity": 1, "unit": "tsp" },
+        { "name": "red wine vinegar", "quantity": 1, "unit": "tbsp" },
+        { "name": "cilantro, chopped", "quantity": 4, "unit": "tbsp" },
+        { "name": "parsley, chopped", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "water", "quantity": 1.5, "unit": "l" }
+      ],
+      "steps": [
+        "Drain the soaked beans and place in a pot with the water; bring to a boil and skim foam.",
+        "Simmer covered for 90 minutes until the beans are very tender.",
+        "Meanwhile, sauté the onion in oil for 15 minutes until soft and golden.",
+        "Crush the walnuts, garlic and spices into a paste using a mortar.",
+        "Stir the tomato paste into the onions, then add the walnut paste and warm through.",
+        "Tip the onion mixture into the beans, lightly mash about a third of the beans, and simmer for 15 minutes.",
+        "Stir in the vinegar, salt and most of the herbs.",
+        "Serve hot in clay pots with the remaining herbs sprinkled on top."
+      ],
+      "tags": ["beans", "stew", "vegetarian"],
+      "dietaryTags": ["vegan"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 120,
+      "servings": 4
+    },
+    {
+      "title": "Pkhali",
+      "description": "Georgian cold appetizer of finely chopped vegetables bound with a walnut, garlic and herb paste, served as part of a supra.",
+      "ingredients": [
+        { "name": "spinach", "quantity": 500, "unit": "g" },
+        { "name": "beetroot, cooked", "quantity": 500, "unit": "g" },
+        { "name": "walnuts", "quantity": 200, "unit": "g" },
+        { "name": "garlic cloves", "quantity": 5, "unit": "pc" },
+        { "name": "red wine vinegar", "quantity": 2, "unit": "tbsp" },
+        { "name": "ground coriander", "quantity": 2, "unit": "tsp" },
+        { "name": "dried marigold", "quantity": 1, "unit": "tsp" },
+        { "name": "ground fenugreek", "quantity": 1, "unit": "tsp" },
+        { "name": "cilantro, chopped", "quantity": 4, "unit": "tbsp" },
+        { "name": "parsley, chopped", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" },
+        { "name": "pomegranate seeds", "quantity": 4, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Wilt the spinach in boiling water for 30 seconds, plunge into ice water, drain and squeeze very dry, then chop finely.",
+        "Grate the cooked beetroot finely and squeeze out the juice.",
+        "Pound the walnuts, garlic, salt and spices in a food processor or mortar to a thick paste.",
+        "Add the vinegar and most of the herbs to the walnut paste and pulse to combine.",
+        "Divide the paste into two and stir one half into the spinach and the other half into the beetroot.",
+        "Adjust the seasoning of each, then shape into small mounds or quenelles on a platter.",
+        "Top with pomegranate seeds and the remaining herbs and serve cold or at room temperature."
+      ],
+      "tags": ["vegetable", "walnut", "appetizer", "cold"],
+      "dietaryTags": ["vegan"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 5,
+      "servings": 6
+    },
+    {
+      "title": "Satsivi",
+      "description": "Georgian holiday dish of poached chicken or turkey in a velvety walnut and garlic sauce, served cold.",
+      "ingredients": [
+        { "name": "chicken thighs and drumsticks", "quantity": 1.2, "unit": "kg" },
+        { "name": "walnuts", "quantity": 400, "unit": "g" },
+        { "name": "garlic cloves", "quantity": 6, "unit": "pc" },
+        { "name": "onions, finely chopped", "quantity": 2, "unit": "pc" },
+        { "name": "butter", "quantity": 50, "unit": "g" },
+        { "name": "ground coriander", "quantity": 2, "unit": "tsp" },
+        { "name": "dried marigold", "quantity": 2, "unit": "tsp" },
+        { "name": "ground fenugreek", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cinnamon", "quantity": 0.5, "unit": "tsp" },
+        { "name": "ground cloves", "quantity": 0.25, "unit": "tsp" },
+        { "name": "white wine vinegar", "quantity": 2, "unit": "tbsp" },
+        { "name": "cilantro, chopped", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "water", "quantity": 1.5, "unit": "l" }
+      ],
+      "steps": [
+        "Simmer the chicken in salted water with a bay leaf for 35 minutes until cooked through; lift out, cool and reserve 600 ml of broth.",
+        "Sauté the chopped onions in butter over low heat for 20 minutes until very soft, not browned.",
+        "Pound the walnuts, garlic, salt and all of the spices into a thick paste.",
+        "Stir the walnut paste into the cooked onions, then thin out with the reserved broth a little at a time to a creamy consistency.",
+        "Simmer the sauce gently for 10 minutes; do not boil hard or the walnut oil will separate.",
+        "Stir in the vinegar and adjust seasoning. Cool to room temperature.",
+        "Pull the chicken into large chunks, fold into the cooled sauce, and refrigerate for at least 4 hours.",
+        "Sprinkle with cilantro and serve cold or at room temperature with bread."
+      ],
+      "tags": ["chicken", "walnut", "celebration", "cold"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Mtsvadi",
+      "description": "Georgian skewered grilled meat marinated simply with onion and pepper, cooked over grapevine embers.",
+      "ingredients": [
+        { "name": "pork neck, cubed", "quantity": 1.2, "unit": "kg" },
+        { "name": "onions, sliced", "quantity": 3, "unit": "pc" },
+        { "name": "salt", "quantity": 2, "unit": "tsp" },
+        { "name": "black pepper, coarsely ground", "quantity": 2, "unit": "tsp" },
+        { "name": "dry red wine or pomegranate juice", "quantity": 200, "unit": "ml" },
+        { "name": "lavash bread", "quantity": 4, "unit": "pc" },
+        { "name": "tkemali plum sauce", "quantity": 200, "unit": "ml" },
+        { "name": "cilantro, chopped", "quantity": 3, "unit": "tbsp" },
+        { "name": "pomegranate seeds", "quantity": 4, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Toss the cubed pork with the sliced onions, salt and pepper, then pour over the wine.",
+        "Marinate covered in the refrigerator for 4 to 12 hours, mixing occasionally.",
+        "Light a charcoal grill, ideally with grapevine cuttings, and let it burn down to glowing embers.",
+        "Thread the pork tightly onto long metal skewers, leaving the onion behind.",
+        "Grill the skewers about 15 cm above the embers for 12 to 15 minutes, turning every 2 minutes, until charred outside and just cooked through.",
+        "Slide the meat onto a sheet of lavash to rest for 3 minutes.",
+        "Top with raw onion, pomegranate seeds and cilantro and serve with tkemali sauce."
+      ],
+      "tags": ["pork", "grill", "skewer", "celebration"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Kharcho",
+      "description": "Georgian rich beef soup thickened with rice, walnuts and tkemali sour plum, perfumed with lots of fresh herbs.",
+      "ingredients": [
+        { "name": "beef chuck, cubed", "quantity": 700, "unit": "g" },
+        { "name": "long-grain rice", "quantity": 100, "unit": "g" },
+        { "name": "walnuts", "quantity": 100, "unit": "g" },
+        { "name": "onions, finely chopped", "quantity": 2, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 5, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "tkemali sour plum sauce", "quantity": 100, "unit": "ml" },
+        { "name": "ground coriander", "quantity": 2, "unit": "tsp" },
+        { "name": "dried marigold", "quantity": 1, "unit": "tsp" },
+        { "name": "ground fenugreek", "quantity": 1, "unit": "tsp" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "cilantro, chopped", "quantity": 4, "unit": "tbsp" },
+        { "name": "parsley, chopped", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "water", "quantity": 2.5, "unit": "l" }
+      ],
+      "steps": [
+        "Place the beef in a pot, cover with the water, bring to a boil and skim foam carefully.",
+        "Add bay leaves and 1 teaspoon of salt and simmer covered for 90 minutes.",
+        "Sauté the onions in oil until soft, then add the tomato paste and cook for 3 minutes.",
+        "Pound the walnuts, garlic and spices into a paste.",
+        "Add the rice, the onion mixture and the walnut paste to the pot and simmer for 20 minutes.",
+        "Stir in the tkemali sauce and most of the herbs and rest off heat for 10 minutes.",
+        "Adjust seasoning, sprinkle with the remaining herbs, and serve with bread."
+      ],
+      "tags": ["soup", "beef", "walnut", "spicy"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 130,
+      "servings": 6
+    },
+    {
+      "title": "Badrijani Nigvzit",
+      "description": "Georgian appetizer of pan-fried aubergine slices rolled around a garlicky walnut and pomegranate filling.",
+      "ingredients": [
+        { "name": "aubergines, sliced lengthwise", "quantity": 2, "unit": "pc" },
+        { "name": "vegetable oil for frying", "quantity": 100, "unit": "ml" },
+        { "name": "walnuts", "quantity": 200, "unit": "g" },
+        { "name": "garlic cloves", "quantity": 4, "unit": "pc" },
+        { "name": "ground coriander", "quantity": 1, "unit": "tsp" },
+        { "name": "dried marigold", "quantity": 1, "unit": "tsp" },
+        { "name": "ground fenugreek", "quantity": 0.5, "unit": "tsp" },
+        { "name": "red wine vinegar", "quantity": 1, "unit": "tbsp" },
+        { "name": "cilantro, chopped", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" },
+        { "name": "pomegranate seeds", "quantity": 4, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Slice the aubergines lengthwise into 5 mm strips, salt them, and rest for 30 minutes; pat dry.",
+        "Heat the oil in a wide skillet and fry the aubergine strips for 2 to 3 minutes per side until deep golden and tender.",
+        "Drain on paper towels and let cool to room temperature.",
+        "Pound the walnuts, garlic, salt, pepper and all of the spices into a thick paste.",
+        "Loosen the paste with the vinegar and a splash of water until spreadable but not runny.",
+        "Fold in most of the chopped cilantro.",
+        "Spread a tablespoon of the walnut paste along each aubergine strip and roll up tightly.",
+        "Arrange seam-down on a platter, top with pomegranate seeds and the remaining cilantro, and serve at room temperature."
+      ],
+      "tags": ["appetizer", "aubergine", "walnut", "vegetarian"],
+      "dietaryTags": ["vegan"],
+      "difficulty": "medium",
+      "prepTime": 45,
+      "cookTime": 15,
+      "servings": 4
+    }
+  ]
+}

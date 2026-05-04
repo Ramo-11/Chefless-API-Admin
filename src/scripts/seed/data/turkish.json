@@ -1,0 +1,487 @@
+{
+  "cuisine": "Turkish",
+  "names": {
+    "first": ["Mehmet", "Ayşe", "Emre", "Zeynep", "Mustafa", "Elif", "Hakan", "Selin", "Burak", "Deniz", "Cem", "Fatma"],
+    "last": ["Yılmaz", "Kaya", "Demir", "Şahin", "Çelik", "Yıldız", "Aydın", "Öztürk", "Arslan", "Doğan"]
+  },
+  "recipes": [
+    {
+      "title": "Lahmacun",
+      "description": "Thin Turkish flatbread topped with spiced minced lamb, tomatoes, peppers, and parsley, baked until crisp and rolled with lemon.",
+      "ingredients": [
+        { "name": "bread flour", "quantity": 500, "unit": "g" },
+        { "name": "warm water", "quantity": 300, "unit": "ml" },
+        { "name": "instant yeast", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "minced lamb", "quantity": 400, "unit": "g" },
+        { "name": "tomato", "quantity": 2, "unit": "pc" },
+        { "name": "red bell pepper", "quantity": 1, "unit": "pc" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic clove", "quantity": 3, "unit": "pc" },
+        { "name": "parsley", "quantity": 1, "unit": "bunch" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "Turkish red pepper paste", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "paprika", "quantity": 1, "unit": "tsp" },
+        { "name": "lemon", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Mix flour, yeast, salt, and warm water into a soft dough; knead 8 minutes and rest covered for 1 hour.",
+        "Pulse tomato, pepper, onion, garlic, and parsley in a food processor until finely chopped, then drain excess liquid.",
+        "Combine the chopped vegetables with minced lamb, tomato paste, pepper paste, cumin, paprika, and salt into a spreadable topping.",
+        "Divide the dough into 8 balls and roll each one paper-thin on a floured surface.",
+        "Spread a thin layer of the lamb mixture across each round, pressing it right to the edges.",
+        "Bake on a preheated stone or steel at 260C for 4 to 6 minutes until the edges crisp and the topping cooks through.",
+        "Squeeze fresh lemon over the top, scatter parsley, and roll up to serve hot."
+      ],
+      "tags": ["turkish", "flatbread", "lamb", "street food"],
+      "difficulty": "medium",
+      "prepTime": 90,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Iskender Kebab",
+      "description": "Sliced döner lamb served over cubes of pide bread, drenched in tomato sauce and browned butter with a side of yogurt.",
+      "ingredients": [
+        { "name": "lamb sirloin", "quantity": 600, "unit": "g" },
+        { "name": "yogurt", "quantity": 200, "unit": "g" },
+        { "name": "tomato passata", "quantity": 250, "unit": "ml" },
+        { "name": "butter", "quantity": 80, "unit": "g" },
+        { "name": "pide bread", "quantity": 2, "unit": "pc" },
+        { "name": "olive oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "garlic clove", "quantity": 2, "unit": "pc" },
+        { "name": "paprika", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Slice the lamb thinly and marinate with grated garlic, olive oil, paprika, salt, and pepper for at least 1 hour.",
+        "Sear the lamb slices in a hot pan for 2 to 3 minutes per side until just cooked, then rest.",
+        "Cut pide bread into bite-size cubes and toast lightly in a dry skillet.",
+        "Warm the tomato passata with a pinch of salt until heated through.",
+        "Melt the butter in a small saucepan until foaming and lightly browned.",
+        "Layer toasted bread on plates, top with sliced lamb, then pour tomato sauce and browned butter over everything.",
+        "Serve immediately with a generous spoonful of cold yogurt on the side."
+      ],
+      "tags": ["turkish", "lamb", "kebab", "yogurt"],
+      "difficulty": "medium",
+      "prepTime": 70,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Manti",
+      "description": "Tiny Turkish dumplings filled with spiced beef, boiled and topped with garlic yogurt, melted butter, and red pepper oil.",
+      "ingredients": [
+        { "name": "all purpose flour", "quantity": 400, "unit": "g" },
+        { "name": "egg", "quantity": 2, "unit": "pc" },
+        { "name": "water", "quantity": 100, "unit": "ml" },
+        { "name": "minced beef", "quantity": 250, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "yogurt", "quantity": 400, "unit": "g" },
+        { "name": "garlic clove", "quantity": 3, "unit": "pc" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "Turkish red pepper flakes", "quantity": 1, "unit": "tbsp" },
+        { "name": "dried mint", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Make a stiff dough from flour, eggs, water, and salt; knead 8 minutes and rest 30 minutes wrapped.",
+        "Grate onion and squeeze out the juice, then mix with minced beef, salt, and pepper.",
+        "Roll the dough paper-thin and cut into 2 cm squares.",
+        "Place a tiny pea-size portion of filling on each square, then pinch the four corners up to seal into a parcel.",
+        "Boil the manti in salted water for 8 to 10 minutes until the pasta is tender and the meat is cooked.",
+        "Whisk yogurt with grated garlic and a pinch of salt to make the sauce.",
+        "Brown butter with red pepper flakes in a small pan until aromatic.",
+        "Plate the dumplings, spoon over garlic yogurt, drizzle with red pepper butter, and dust with dried mint."
+      ],
+      "tags": ["turkish", "dumplings", "beef", "yogurt"],
+      "difficulty": "hard",
+      "prepTime": 90,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Pide",
+      "description": "Boat-shaped Turkish flatbread filled with spiced minced meat, peppers, and tomato, baked until golden and bubbling.",
+      "ingredients": [
+        { "name": "bread flour", "quantity": 500, "unit": "g" },
+        { "name": "warm water", "quantity": 300, "unit": "ml" },
+        { "name": "instant yeast", "quantity": 1, "unit": "tsp" },
+        { "name": "olive oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "minced lamb", "quantity": 400, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "tomato", "quantity": 1, "unit": "pc" },
+        { "name": "green pepper", "quantity": 1, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "egg yolk", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Combine flour, yeast, salt, oil, and warm water; knead into a soft dough and rise 1 hour.",
+        "Mix minced lamb with finely chopped onion, tomato, pepper, tomato paste, cumin, salt, and pepper.",
+        "Divide dough into 4 pieces and roll each into a long oval shape.",
+        "Spread the meat filling down the center, then fold the long edges up and pinch the ends into a boat shape.",
+        "Brush the dough edges with egg yolk thinned with water.",
+        "Bake on a hot stone at 240C for 12 to 15 minutes until the dough is golden and the filling is sizzling.",
+        "Slice across into pieces and serve hot with lemon wedges."
+      ],
+      "tags": ["turkish", "flatbread", "lamb", "baked"],
+      "difficulty": "medium",
+      "prepTime": 90,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Köfte",
+      "description": "Hand-shaped Turkish meatballs of seasoned minced lamb and beef, grilled until charred outside and juicy within.",
+      "ingredients": [
+        { "name": "minced lamb", "quantity": 300, "unit": "g" },
+        { "name": "minced beef", "quantity": 300, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "breadcrumbs", "quantity": 50, "unit": "g" },
+        { "name": "garlic clove", "quantity": 2, "unit": "pc" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "paprika", "quantity": 1, "unit": "tsp" },
+        { "name": "parsley", "quantity": 1, "unit": "bunch" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Grate the onion and squeeze out the liquid through a fine cloth.",
+        "Combine both meats with onion, garlic, breadcrumbs, egg, parsley, cumin, paprika, salt, and pepper.",
+        "Knead the mixture firmly for 5 minutes until tacky, then refrigerate 30 minutes.",
+        "Shape into oval patties about 8 cm long with damp hands.",
+        "Grill over hot charcoal or in a ridged pan for 4 minutes per side until well charred.",
+        "Rest the köfte 2 minutes, then serve with grilled peppers, onions, and warm flatbread."
+      ],
+      "tags": ["turkish", "meatballs", "grilled"],
+      "difficulty": "easy",
+      "prepTime": 45,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Dolma",
+      "description": "Grape leaves stuffed with seasoned rice, herbs, and pine nuts, simmered slowly in olive oil and lemon.",
+      "ingredients": [
+        { "name": "grape leaves in brine", "quantity": 250, "unit": "g" },
+        { "name": "short grain rice", "quantity": 250, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "pine nuts", "quantity": 50, "unit": "g" },
+        { "name": "currants", "quantity": 50, "unit": "g" },
+        { "name": "olive oil", "quantity": 120, "unit": "ml" },
+        { "name": "lemon", "quantity": 2, "unit": "pc" },
+        { "name": "fresh dill", "quantity": 1, "unit": "bunch" },
+        { "name": "fresh mint", "quantity": 1, "unit": "bunch" },
+        { "name": "ground cinnamon", "quantity": 1, "unit": "tsp" },
+        { "name": "ground allspice", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Rinse grape leaves and blanch briefly in hot water to remove brine.",
+        "Sauté finely chopped onion in olive oil until soft, then add pine nuts and toast lightly.",
+        "Stir in rinsed rice, currants, cinnamon, allspice, and salt; cook 2 minutes.",
+        "Add 200 ml water and simmer until just absorbed, then fold in chopped dill and mint.",
+        "Place a leaf vein-side up, spoon a teaspoon of filling near the stem, fold sides in, and roll tightly.",
+        "Pack the rolls seam-side down in a heavy pot, layered with extra leaves on the bottom.",
+        "Pour over the juice of 2 lemons, remaining olive oil, and enough water to barely cover.",
+        "Weight with a plate and simmer covered for 45 minutes; cool to room temperature before serving."
+      ],
+      "tags": ["turkish", "vegetarian", "appetizer", "rice"],
+      "dietaryTags": ["vegetarian", "vegan"],
+      "difficulty": "medium",
+      "prepTime": 45,
+      "cookTime": 50,
+      "servings": 6
+    },
+    {
+      "title": "Imam Bayildi",
+      "description": "Whole eggplants stuffed with onion, garlic, and tomato, slow-braised in olive oil until silky and sweet.",
+      "ingredients": [
+        { "name": "eggplant", "quantity": 4, "unit": "pc" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "tomato", "quantity": 3, "unit": "pc" },
+        { "name": "garlic clove", "quantity": 6, "unit": "pc" },
+        { "name": "parsley", "quantity": 1, "unit": "bunch" },
+        { "name": "olive oil", "quantity": 150, "unit": "ml" },
+        { "name": "sugar", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "lemon", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Peel eggplants in stripes and salt them; rest 30 minutes, then rinse and pat dry.",
+        "Fry the eggplants in olive oil on all sides until softened, then transfer to a baking dish.",
+        "Slice each eggplant lengthwise to create a deep pocket without cutting through.",
+        "Sauté sliced onions in the same oil until golden, then add chopped tomatoes, garlic, and parsley.",
+        "Season the filling with salt, sugar, and lemon juice and cook until the tomatoes break down.",
+        "Stuff each eggplant generously with the onion-tomato mixture.",
+        "Add 100 ml water to the dish, drizzle with extra olive oil, cover, and bake at 180C for 45 minutes.",
+        "Cool to room temperature and serve with crusty bread."
+      ],
+      "tags": ["turkish", "vegan", "eggplant"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 60,
+      "servings": 4
+    },
+    {
+      "title": "Menemen",
+      "description": "Soft scrambled eggs cooked into a skillet of tomatoes, peppers, and Turkish chili, served straight from the pan.",
+      "ingredients": [
+        { "name": "egg", "quantity": 6, "unit": "pc" },
+        { "name": "tomato", "quantity": 4, "unit": "pc" },
+        { "name": "green pepper", "quantity": 2, "unit": "pc" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "Turkish red pepper flakes", "quantity": 1, "unit": "tsp" },
+        { "name": "feta cheese", "quantity": 80, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soften finely chopped onion and green pepper in olive oil over medium heat for 5 minutes.",
+        "Add grated tomatoes, salt, and pepper flakes, then simmer until thickened, about 8 minutes.",
+        "Crack eggs directly into the pan and stir slowly with a spatula until just set but still glossy.",
+        "Crumble feta over the top and finish with cracked black pepper.",
+        "Serve immediately in the skillet with warm crusty bread for scooping."
+      ],
+      "tags": ["turkish", "breakfast", "eggs"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 3
+    },
+    {
+      "title": "Kuzu Tandır",
+      "description": "Slow-roasted Turkish lamb shoulder cooked until fork-tender, traditionally served on flatbread with rice pilaf.",
+      "ingredients": [
+        { "name": "lamb shoulder", "quantity": 2, "unit": "kg" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "garlic clove", "quantity": 6, "unit": "pc" },
+        { "name": "butter", "quantity": 50, "unit": "g" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tbsp" },
+        { "name": "paprika", "quantity": 1, "unit": "tbsp" },
+        { "name": "bay leaf", "quantity": 2, "unit": "pc" },
+        { "name": "salt", "quantity": 2, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Score the lamb shoulder and rub all over with cumin, paprika, salt, pepper, garlic, and olive oil.",
+        "Sit the lamb on sliced onions and bay leaves in a deep roasting tray, cover tightly with foil.",
+        "Pour 200 ml water into the base of the tray to create steam.",
+        "Roast at 150C for 4 hours, then uncover and roast another 30 minutes to brown the surface.",
+        "Brush with melted butter during the final 10 minutes for a glossy finish.",
+        "Rest the lamb 15 minutes, then pull apart with two forks.",
+        "Serve over Turkish flatbread with the rendered juices spooned over."
+      ],
+      "tags": ["turkish", "lamb", "slow cooked"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 270,
+      "servings": 8
+    },
+    {
+      "title": "Sucuk",
+      "description": "Spiced Turkish dry-cured beef sausage pan-fried until crisp and served with eggs, bread, or grilled tomato.",
+      "ingredients": [
+        { "name": "sucuk sausage", "quantity": 300, "unit": "g" },
+        { "name": "egg", "quantity": 4, "unit": "pc" },
+        { "name": "tomato", "quantity": 2, "unit": "pc" },
+        { "name": "olive oil", "quantity": 1, "unit": "tbsp" },
+        { "name": "Turkish red pepper flakes", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "pinch" },
+        { "name": "black pepper", "quantity": 1, "unit": "pinch" }
+      ],
+      "steps": [
+        "Slice sucuk on the diagonal into 5 mm rounds.",
+        "Heat a dry skillet and lay the sucuk slices flat; cook 2 minutes per side until crisp and the fat renders.",
+        "Add halved tomatoes cut-side down and cook 2 minutes until softened.",
+        "Crack eggs directly into the rendered sucuk fat and cook to taste.",
+        "Sprinkle with red pepper flakes and serve at once with toasted Turkish bread."
+      ],
+      "tags": ["turkish", "breakfast", "sausage"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 10,
+      "servings": 2
+    },
+    {
+      "title": "Künefe",
+      "description": "Crispy shredded kataifi pastry layered with stretchy unsalted cheese, baked golden, and soaked in rosewater syrup.",
+      "ingredients": [
+        { "name": "kataifi pastry", "quantity": 400, "unit": "g" },
+        { "name": "unsalted butter", "quantity": 200, "unit": "g" },
+        { "name": "fresh mozzarella", "quantity": 300, "unit": "g" },
+        { "name": "sugar", "quantity": 300, "unit": "g" },
+        { "name": "water", "quantity": 250, "unit": "ml" },
+        { "name": "lemon juice", "quantity": 1, "unit": "tbsp" },
+        { "name": "rosewater", "quantity": 1, "unit": "tsp" },
+        { "name": "pistachio", "quantity": 50, "unit": "g" }
+      ],
+      "steps": [
+        "Boil sugar, water, and lemon juice for 8 minutes, then stir in rosewater and chill the syrup.",
+        "Pull apart the kataifi and toss thoroughly with melted butter until every strand is coated.",
+        "Press half the buttered pastry into a round shallow pan to form a tight base.",
+        "Lay sliced mozzarella over the base, leaving a 1 cm border, then top with the remaining pastry, pressing down.",
+        "Cook over medium heat for 8 minutes until the bottom is deeply golden, then flip and cook the second side.",
+        "Pour the cold syrup over the hot künefe immediately so it sizzles and absorbs.",
+        "Top generously with crushed pistachios and serve hot while the cheese is still stretchy."
+      ],
+      "tags": ["turkish", "dessert", "cheese"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 20,
+      "servings": 6
+    },
+    {
+      "title": "Baklava",
+      "description": "Layered phyllo pastry packed with chopped pistachios and walnuts, baked crisp and saturated with lemon syrup.",
+      "ingredients": [
+        { "name": "phyllo pastry", "quantity": 500, "unit": "g" },
+        { "name": "pistachio", "quantity": 250, "unit": "g" },
+        { "name": "walnut", "quantity": 100, "unit": "g" },
+        { "name": "unsalted butter", "quantity": 300, "unit": "g" },
+        { "name": "sugar", "quantity": 400, "unit": "g" },
+        { "name": "water", "quantity": 350, "unit": "ml" },
+        { "name": "lemon juice", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground cinnamon", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Boil sugar, water, and lemon juice for 10 minutes to make a thin syrup, then cool completely.",
+        "Pulse pistachios and walnuts to a coarse crumb and mix with cinnamon.",
+        "Brush a 30 cm tray with melted butter and lay 8 sheets of phyllo, brushing each with butter.",
+        "Sprinkle a thin layer of nuts, then top with 2 buttered phyllo sheets; repeat the nut and pastry layers.",
+        "Finish with 8 buttered phyllo sheets on top and pour the remaining butter over the surface.",
+        "Cut into diamonds with a sharp knife all the way through to the bottom.",
+        "Bake at 170C for 50 minutes until uniformly deep golden.",
+        "Pour the cold syrup over the hot baklava, then rest for 4 hours so the layers absorb."
+      ],
+      "tags": ["turkish", "dessert", "pastry"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 45,
+      "cookTime": 50,
+      "servings": 12
+    },
+    {
+      "title": "Lokum",
+      "description": "Classic Turkish delight set from sugar syrup thickened with cornstarch, perfumed with rosewater and dusted with powdered sugar.",
+      "ingredients": [
+        { "name": "sugar", "quantity": 600, "unit": "g" },
+        { "name": "water", "quantity": 500, "unit": "ml" },
+        { "name": "cornstarch", "quantity": 120, "unit": "g" },
+        { "name": "lemon juice", "quantity": 1, "unit": "tbsp" },
+        { "name": "rosewater", "quantity": 2, "unit": "tbsp" },
+        { "name": "pistachio", "quantity": 80, "unit": "g" },
+        { "name": "powdered sugar", "quantity": 100, "unit": "g" }
+      ],
+      "steps": [
+        "Boil sugar, lemon juice, and 200 ml water to 115C, then remove from heat.",
+        "Whisk cornstarch with the remaining water until smooth, then bring to a low boil and cook to a thick paste.",
+        "Slowly stream the hot sugar syrup into the cornstarch paste, whisking constantly.",
+        "Cook the mixture over low heat for 50 minutes, stirring often, until deep golden and very thick.",
+        "Stir in rosewater and chopped pistachios off the heat.",
+        "Pour into an oiled and powdered-sugared 20 cm tray and chill overnight to set firm.",
+        "Cut into cubes and toss with powdered sugar to coat all sides."
+      ],
+      "tags": ["turkish", "dessert", "candy"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "hard",
+      "prepTime": 20,
+      "cookTime": 70,
+      "servings": 12
+    },
+    {
+      "title": "Ayran",
+      "description": "Salty, frothy Turkish yogurt drink whisked with cold water, the classic accompaniment to grilled kebabs.",
+      "ingredients": [
+        { "name": "yogurt", "quantity": 400, "unit": "g" },
+        { "name": "cold water", "quantity": 400, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "ice cube", "quantity": 6, "unit": "pc" }
+      ],
+      "steps": [
+        "Whisk yogurt and salt in a bowl until smooth.",
+        "Slowly add cold water while whisking briskly to develop a thick layer of foam.",
+        "Pour over ice into tall glasses and serve immediately."
+      ],
+      "tags": ["turkish", "drink", "yogurt"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 0,
+      "servings": 2
+    },
+    {
+      "title": "Çiğ Köfte",
+      "description": "Vegan Turkish bulgur balls kneaded with tomato paste, spices, and fresh herbs, served with lettuce leaves and lemon.",
+      "ingredients": [
+        { "name": "fine bulgur", "quantity": 300, "unit": "g" },
+        { "name": "tomato paste", "quantity": 4, "unit": "tbsp" },
+        { "name": "Turkish red pepper paste", "quantity": 3, "unit": "tbsp" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic clove", "quantity": 4, "unit": "pc" },
+        { "name": "parsley", "quantity": 1, "unit": "bunch" },
+        { "name": "spring onion", "quantity": 4, "unit": "pc" },
+        { "name": "ground cumin", "quantity": 2, "unit": "tsp" },
+        { "name": "Turkish red pepper flakes", "quantity": 2, "unit": "tsp" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "lemon", "quantity": 2, "unit": "pc" },
+        { "name": "lettuce leaves", "quantity": 12, "unit": "pc" }
+      ],
+      "steps": [
+        "Pour 250 ml hot water over fine bulgur and let it absorb for 15 minutes.",
+        "Grate onion and garlic to a paste and mix into the bulgur with both pastes, cumin, pepper flakes, and salt.",
+        "Knead the mixture firmly with damp hands for 10 minutes until very sticky and uniform.",
+        "Fold in finely chopped parsley, spring onions, and olive oil.",
+        "Squeeze a small handful in your fist to form an elongated finger-shape köfte and place on a plate.",
+        "Repeat until all the mixture is shaped, then chill 30 minutes.",
+        "Serve with lemon wedges and crisp lettuce leaves for wrapping."
+      ],
+      "tags": ["turkish", "vegan", "bulgur"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 45,
+      "cookTime": 0,
+      "servings": 4
+    },
+    {
+      "title": "Şakşuka",
+      "description": "Turkish meze of fried eggplant, courgette, and peppers smothered in a garlicky tomato sauce, served cold.",
+      "ingredients": [
+        { "name": "eggplant", "quantity": 2, "unit": "pc" },
+        { "name": "courgette", "quantity": 2, "unit": "pc" },
+        { "name": "green pepper", "quantity": 2, "unit": "pc" },
+        { "name": "tomato", "quantity": 4, "unit": "pc" },
+        { "name": "garlic clove", "quantity": 4, "unit": "pc" },
+        { "name": "olive oil", "quantity": 150, "unit": "ml" },
+        { "name": "tomato paste", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "Turkish red pepper flakes", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Cube eggplant and courgette and salt them; rest 30 minutes, then pat dry.",
+        "Fry the eggplant in olive oil until golden, then drain on paper towels.",
+        "Repeat with the courgette and roughly chopped peppers.",
+        "In the remaining oil, sauté grated garlic for 30 seconds, then add chopped tomatoes, tomato paste, and pepper flakes.",
+        "Simmer the sauce 10 minutes until thickened.",
+        "Combine the fried vegetables on a serving plate and pour the warm sauce over the top.",
+        "Cool to room temperature and serve as a meze with bread."
+      ],
+      "tags": ["turkish", "vegan", "meze"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 40,
+      "cookTime": 25,
+      "servings": 4
+    }
+  ]
+}

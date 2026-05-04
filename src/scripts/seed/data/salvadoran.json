@@ -1,0 +1,255 @@
+{
+  "cuisine": "Salvadoran",
+  "names": {
+    "first": ["Mauricio", "Karla", "Salvador", "Roxana", "Óscar", "Marisela", "Nelson", "Verónica", "Edwin", "Cecilia", "Roberto", "Patricia"],
+    "last": ["Hernández", "López", "Rivas", "Martínez", "Cruz", "Flores", "Bonilla", "Cáceres", "Argueta", "Méndez", "Portillo", "Alvarado"]
+  },
+  "recipes": [
+    {
+      "title": "Pupusas",
+      "description": "Salvadoran national dish: thick handmade corn tortillas stuffed with cheese, beans or chicharrón and griddled.",
+      "ingredients": [
+        { "name": "masa harina", "quantity": 500, "unit": "g" },
+        { "name": "warm water", "quantity": 600, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "quesillo or mozzarella, grated", "quantity": 250, "unit": "g" },
+        { "name": "refried red beans", "quantity": 200, "unit": "g" },
+        { "name": "ground pork chicharrón", "quantity": 200, "unit": "g" },
+        { "name": "loroco buds (optional)", "quantity": 50, "unit": "g" },
+        { "name": "neutral oil", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Mix masa harina, salt and warm water into a soft, pliable dough; rest 10 minutes.",
+        "Take a ball of dough, hollow it with your thumb, fill with cheese (and beans, chicharrón or loroco), and seal.",
+        "Flatten between oiled hands into a 1 cm thick disc.",
+        "Cook on a hot, lightly oiled comal for 3-4 minutes per side until golden and slightly puffed.",
+        "Serve immediately with curtido and salsa roja."
+      ],
+      "tags": ["national-dish", "corn", "griddle"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Curtido",
+      "description": "Salvadoran lightly fermented cabbage, carrot and onion slaw, the obligatory companion to pupusas.",
+      "ingredients": [
+        { "name": "green cabbage, shredded", "quantity": 1, "unit": "pc" },
+        { "name": "carrots, grated", "quantity": 2, "unit": "pc" },
+        { "name": "white onion, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "dried oregano", "quantity": 1, "unit": "tbsp" },
+        { "name": "white vinegar", "quantity": 250, "unit": "ml" },
+        { "name": "boiling water", "quantity": 250, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" },
+        { "name": "crushed red pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Place cabbage, carrot and onion in a heatproof bowl and pour boiling water over to wilt slightly; drain after 1 minute.",
+        "Stir in oregano, salt, crushed red pepper and vinegar.",
+        "Pack into a jar and press down so the brine covers the vegetables.",
+        "Cover loosely and rest at room temperature 24 hours, then refrigerate."
+      ],
+      "tags": ["pickle", "side", "no-cook"],
+      "dietaryTags": ["vegan", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 0,
+      "servings": 8
+    },
+    {
+      "title": "Yuca Frita",
+      "description": "Salvadoran fried cassava served with curtido and chicharrón or fried fish, a classic merendero plate.",
+      "ingredients": [
+        { "name": "yuca, peeled and chunked", "quantity": 1, "unit": "kg" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" },
+        { "name": "oil for frying", "quantity": 1, "unit": "l" },
+        { "name": "curtido", "quantity": 200, "unit": "g" },
+        { "name": "tomato sauce", "quantity": 200, "unit": "ml" },
+        { "name": "chicharrón", "quantity": 250, "unit": "g" }
+      ],
+      "steps": [
+        "Boil yuca in salted water for 25 minutes until just tender, then drain and remove the woody core.",
+        "Pat dry and let cool slightly.",
+        "Heat oil to 180°C and fry yuca chunks until golden and crisp.",
+        "Pile onto a banana leaf, top with chicharrón, blanket with curtido and finish with tomato sauce."
+      ],
+      "tags": ["cassava", "fried", "street-food"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 35,
+      "servings": 4
+    },
+    {
+      "title": "Sopa de Pata",
+      "description": "Salvadoran rich beef-foot and tripe soup with yuca, plantain and corn, a market-day favourite.",
+      "ingredients": [
+        { "name": "cow's foot, cleaned and chopped", "quantity": 1, "unit": "kg" },
+        { "name": "beef tripe, cleaned", "quantity": 500, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 4, "unit": "pc" },
+        { "name": "yuca, chunked", "quantity": 500, "unit": "g" },
+        { "name": "green plantains, in rounds", "quantity": 2, "unit": "pc" },
+        { "name": "corn on the cob, in rounds", "quantity": 2, "unit": "pc" },
+        { "name": "carrots, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "cabbage, chopped", "quantity": 200, "unit": "g" },
+        { "name": "fresh cilantro", "quantity": 1, "unit": "bunch" },
+        { "name": "water", "quantity": 3.5, "unit": "l" }
+      ],
+      "steps": [
+        "Place cow's foot and tripe in a large pot with onion, garlic and water; simmer 3 hours skimming foam.",
+        "Remove the meats, dice the tripe and return everything to the broth.",
+        "Add yuca, carrot and corn; cook 15 minutes.",
+        "Add plantain and cabbage and cook 10 minutes more until tender.",
+        "Season with salt and finish with cilantro just before serving with lime wedges."
+      ],
+      "tags": ["soup", "offal", "tradition"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 240,
+      "servings": 8
+    },
+    {
+      "title": "Tamales Pisques",
+      "description": "Salvadoran masa tamales with refried beans rolled into the centre, wrapped in plantain leaves.",
+      "ingredients": [
+        { "name": "masa harina", "quantity": 500, "unit": "g" },
+        { "name": "warm water or stock", "quantity": 700, "unit": "ml" },
+        { "name": "lard", "quantity": 100, "unit": "g" },
+        { "name": "salt", "quantity": 2, "unit": "tsp" },
+        { "name": "refried red beans", "quantity": 400, "unit": "g" },
+        { "name": "plantain leaves, cleaned", "quantity": 12, "unit": "pc" },
+        { "name": "kitchen twine", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Beat masa harina, lard, salt and warm liquid into a fluffy, spreadable masa.",
+        "Pass plantain leaves over a flame to soften, then cut into 25 cm squares.",
+        "Spread a generous layer of masa on each leaf, top with a strip of refried beans down the centre.",
+        "Fold the masa over the beans so they're enclosed, then fold the leaf into a flat parcel and tie.",
+        "Boil tamales upright in salted water for 60 minutes; rest 10 minutes before unwrapping."
+      ],
+      "tags": ["tamale", "vegetarian", "tradition"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 40,
+      "cookTime": 60,
+      "servings": 12
+    },
+    {
+      "title": "Pastelitos de Carne",
+      "description": "Salvadoran fried corn-masa half-moon pies stuffed with seasoned ground beef and potato, a beloved street snack.",
+      "ingredients": [
+        { "name": "masa harina", "quantity": 500, "unit": "g" },
+        { "name": "warm water", "quantity": 600, "unit": "ml" },
+        { "name": "achiote oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "ground beef", "quantity": 300, "unit": "g" },
+        { "name": "potato, finely diced", "quantity": 1, "unit": "pc" },
+        { "name": "onion, finely diced", "quantity": 1, "unit": "pc" },
+        { "name": "garlic clove, minced", "quantity": 2, "unit": "pc" },
+        { "name": "tomato sauce", "quantity": 100, "unit": "ml" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "oil for frying", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "Sauté onion, garlic and potato until soft, add beef, cumin, tomato sauce and salt; cook 10 minutes and cool.",
+        "Mix masa harina, salt, achiote oil and warm water into a soft dough; rest 10 minutes.",
+        "Press a ball of dough flat between plastic, fill with a spoon of picadillo, fold to a half-moon and seal edges.",
+        "Heat oil to 180°C and fry pastelitos 4-5 minutes until crisp and golden.",
+        "Drain and serve with curtido and tomato salsa."
+      ],
+      "tags": ["fried", "snack", "street-food"],
+      "difficulty": "medium",
+      "prepTime": 40,
+      "cookTime": 20,
+      "servings": 8
+    },
+    {
+      "title": "Pan con Pollo",
+      "description": "Salvadoran chicken sandwich with watercress, cucumber, radish and a tomato-pumpkin-seed sauce.",
+      "ingredients": [
+        { "name": "chicken thighs, bone-in", "quantity": 1, "unit": "kg" },
+        { "name": "tomatoes", "quantity": 6, "unit": "pc" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 4, "unit": "pc" },
+        { "name": "pumpkin seeds (pepitoria)", "quantity": 50, "unit": "g" },
+        { "name": "sesame seeds, toasted", "quantity": 30, "unit": "g" },
+        { "name": "achiote", "quantity": 1, "unit": "tsp" },
+        { "name": "Worcestershire sauce", "quantity": 2, "unit": "tbsp" },
+        { "name": "soft sandwich rolls (pan francés)", "quantity": 6, "unit": "pc" },
+        { "name": "watercress, lettuce, cucumber, radish for garnish", "quantity": 200, "unit": "g" }
+      ],
+      "steps": [
+        "Roast tomatoes, onion and garlic until charred, then blend with pumpkin seeds, sesame, achiote and a cup of water.",
+        "Brown chicken in oil, add the sauce and Worcestershire, cover and simmer 35 minutes.",
+        "Pull the chicken from the bone and return to the sauce; adjust seasoning.",
+        "Split the rolls, soak the inside lightly with the warm sauce, then fill with chicken and the fresh vegetables.",
+        "Serve immediately, the bread soft and saucy."
+      ],
+      "tags": ["sandwich", "chicken", "tradition"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 45,
+      "servings": 6
+    },
+    {
+      "title": "Sopa de Res",
+      "description": "Salvadoran beef soup with corn, plantain and root vegetables in a clear, herbaceous broth.",
+      "ingredients": [
+        { "name": "beef shank with bone", "quantity": 1, "unit": "kg" },
+        { "name": "yuca, chunked", "quantity": 400, "unit": "g" },
+        { "name": "potato, chunked", "quantity": 2, "unit": "pc" },
+        { "name": "carrot, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "chayote, chunked", "quantity": 1, "unit": "pc" },
+        { "name": "green plantain, in rounds", "quantity": 1, "unit": "pc" },
+        { "name": "corn on the cob, in rounds", "quantity": 2, "unit": "pc" },
+        { "name": "cabbage, chopped", "quantity": 200, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "fresh cilantro and mint", "quantity": 1, "unit": "bunch" },
+        { "name": "water", "quantity": 3, "unit": "l" }
+      ],
+      "steps": [
+        "Simmer beef shank with onion, salt and water for 90 minutes, skimming foam.",
+        "Add yuca, carrot and corn and cook 15 minutes.",
+        "Add chayote, plantain and potato and cook 10 minutes more.",
+        "Finish with cabbage and cook 5 minutes; stir in cilantro and mint and adjust seasoning.",
+        "Serve with rice, lime and chilli on the side."
+      ],
+      "tags": ["soup", "beef", "tradition"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 120,
+      "servings": 6
+    },
+    {
+      "title": "Salpicón",
+      "description": "Salvadoran finely chopped beef salad with mint, radish, onion and lime juice, served with rice and tortillas.",
+      "ingredients": [
+        { "name": "beef flank or skirt, cooked", "quantity": 600, "unit": "g" },
+        { "name": "radishes, finely diced", "quantity": 8, "unit": "pc" },
+        { "name": "white onion, finely diced", "quantity": 1, "unit": "pc" },
+        { "name": "fresh mint, chopped", "quantity": 1, "unit": "bunch" },
+        { "name": "fresh cilantro, chopped", "quantity": 1, "unit": "bunch" },
+        { "name": "lime juice", "quantity": 100, "unit": "ml" },
+        { "name": "olive oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Chop the cooked beef as finely as possible by hand.",
+        "Combine beef with radish, onion, mint and cilantro.",
+        "Dress with lime juice, olive oil, salt and pepper.",
+        "Rest 10 minutes for flavours to come together, then serve cool with rice, tortillas and lime wedges."
+      ],
+      "tags": ["salad", "beef", "no-cook"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 25,
+      "cookTime": 0,
+      "servings": 4
+    }
+  ]
+}

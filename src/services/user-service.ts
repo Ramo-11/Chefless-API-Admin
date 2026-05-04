@@ -13,7 +13,6 @@ import Cookbook from "../models/Cookbook";
 import KitchenInvite from "../models/KitchenInvite";
 import Report from "../models/Report";
 import Block from "../models/Block";
-import { PromoRedemption } from "../models/PromoCode";
 import admin from "firebase-admin";
 import { canViewProfile } from "./visibility-service";
 import {
@@ -195,13 +194,25 @@ export async function deleteAccount(userId: string): Promise<void> {
     await Like.deleteMany({ userId: objectId });
   }
 
-  // Drop the user's saved-recipe rows (no denormalised counter to adjust)
+  // Drop the user's saved-recipe rows. The user is being deleted, so their
+  // own savedRecipesCount is moot — no per-user adjustment needed here.
   await SavedRecipe.deleteMany({ userId: objectId });
 
   // Delete all recipes authored by this user (plus their likes/saves/shares)
   const userRecipes = await Recipe.find({ authorId: objectId }).select("_id").lean();
   if (userRecipes.length > 0) {
     const recipeIds = userRecipes.map((r) => r._id);
+
+    // Capture every OTHER user that had any of these recipes saved BEFORE we
+    // wipe the SavedRecipe rows. Each of those users must have their
+    // savedRecipesCount decremented by the count of this user's recipes they
+    // saved, so the free-tier combined cap stays consistent post-delete.
+    const cascadingSaves = await SavedRecipe.find({
+      recipeId: { $in: recipeIds },
+    })
+      .select("userId")
+      .lean();
+
     await Promise.all([
       Like.deleteMany({ recipeId: { $in: recipeIds } }),
       SavedRecipe.deleteMany({ recipeId: { $in: recipeIds } }),
@@ -212,6 +223,26 @@ export async function deleteAccount(userId: string): Promise<void> {
         { $set: { "forkedFrom.recipeId": null, "forkedFrom.authorId": null } }
       ),
     ]);
+
+    if (cascadingSaves.length > 0) {
+      const counts = new Map<string, number>();
+      for (const s of cascadingSaves) {
+        const key = s.userId.toString();
+        counts.set(key, (counts.get(key) ?? 0) + 1);
+      }
+      await User.bulkWrite(
+        Array.from(counts.entries()).map(([uid, n]) => ({
+          updateOne: {
+            filter: {
+              _id: new Types.ObjectId(uid),
+              savedRecipesCount: { $gte: n },
+            },
+            update: { $inc: { savedRecipesCount: -n } },
+          },
+        }))
+      );
+    }
+
     await Recipe.deleteMany({ authorId: objectId });
   }
 
@@ -236,9 +267,6 @@ export async function deleteAccount(userId: string): Promise<void> {
   await Block.deleteMany({
     $or: [{ blockerId: objectId }, { blockedId: objectId }],
   });
-
-  // Redemption history is no longer meaningful once the user is gone
-  await PromoRedemption.deleteMany({ userId: objectId });
 
   // Remove user from their kitchen member/permission arrays (lead transfer handled elsewhere)
   if (user.kitchenId) {

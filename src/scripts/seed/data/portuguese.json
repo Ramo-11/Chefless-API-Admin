@@ -1,0 +1,471 @@
+{
+  "cuisine": "Portuguese",
+  "names": {
+    "first": ["João", "Miguel", "Tiago", "Rui", "Pedro", "André", "Bruno", "Diogo", "Maria", "Ana", "Beatriz", "Catarina", "Inês", "Mariana", "Sofia", "Joana"],
+    "last": ["Silva", "Santos", "Ferreira", "Pereira", "Oliveira", "Costa", "Rodrigues", "Martins", "Sousa", "Carvalho", "Almeida", "Gonçalves"]
+  },
+  "recipes": [
+    {
+      "title": "Bacalhau à Brás",
+      "description": "Shredded salt cod scrambled with crisp matchstick potatoes, onions and eggs, finished with olives and parsley.",
+      "ingredients": [
+        { "name": "salt cod", "quantity": 500, "unit": "g" },
+        { "name": "potatoes", "quantity": 600, "unit": "g" },
+        { "name": "onions", "quantity": 2, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 3, "unit": "pc" },
+        { "name": "eggs", "quantity": 6, "unit": "pc" },
+        { "name": "olive oil", "quantity": 80, "unit": "ml" },
+        { "name": "black olives", "quantity": 60, "unit": "g" },
+        { "name": "fresh parsley", "quantity": 0.5, "unit": "bunch" },
+        { "name": "vegetable oil for frying", "quantity": 500, "unit": "ml" }
+      ],
+      "steps": [
+        "Soak salt cod 24 hours, changing water 3-4 times; drain, simmer 5 minutes, cool and flake.",
+        "Cut potatoes into thin matchsticks, rinse and pat dry.",
+        "Deep-fry potatoes in batches until golden and crisp; drain.",
+        "Sauté sliced onions and garlic in olive oil until soft.",
+        "Add flaked cod and stir 2 minutes until heated through.",
+        "Mix in fried potatoes, then pour over beaten eggs, stirring gently until just set.",
+        "Off heat, scatter olives and chopped parsley and serve immediately."
+      ],
+      "tags": ["fish", "salt-cod", "eggs", "comfort-food"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Caldo Verde",
+      "description": "Portuguese kale and potato soup enriched with olive oil and slices of chouriço.",
+      "ingredients": [
+        { "name": "potatoes", "quantity": 600, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 3, "unit": "pc" },
+        { "name": "kale", "quantity": 300, "unit": "g" },
+        { "name": "chouriço sausage", "quantity": 150, "unit": "g" },
+        { "name": "olive oil", "quantity": 80, "unit": "ml" },
+        { "name": "water", "quantity": 1.5, "unit": "l" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Sauté chopped onion and garlic in olive oil until soft.",
+        "Add peeled chopped potatoes, water and salt; simmer 20 minutes until tender.",
+        "Slice kale into very thin ribbons.",
+        "Slice chouriço and pan-fry briefly until oils are released.",
+        "Blend the potato mixture until smooth and return to the pot.",
+        "Add kale and simmer 5 minutes until just tender.",
+        "Stir in extra olive oil, ladle into bowls and top with chouriço slices."
+      ],
+      "tags": ["soup", "kale", "potato", "winter"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 35,
+      "servings": 6
+    },
+    {
+      "title": "Pastel de Nata",
+      "description": "Portuguese custard tarts with caramelised tops and shatteringly crisp puff pastry shells.",
+      "ingredients": [
+        { "name": "puff pastry", "quantity": 500, "unit": "g" },
+        { "name": "milk", "quantity": 500, "unit": "ml" },
+        { "name": "sugar", "quantity": 250, "unit": "g" },
+        { "name": "water", "quantity": 100, "unit": "ml" },
+        { "name": "egg yolks", "quantity": 6, "unit": "pc" },
+        { "name": "flour", "quantity": 35, "unit": "g" },
+        { "name": "lemon zest", "quantity": 1, "unit": "tsp" },
+        { "name": "cinnamon stick", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Make a syrup: simmer sugar, water, lemon zest and cinnamon to 110°C; cool slightly.",
+        "Whisk flour with a little cold milk to a smooth paste, then warm rest of milk and whisk together; cook until thick.",
+        "Off heat, slowly whisk in syrup (discard cinnamon), then yolks; strain.",
+        "Roll puff pastry, then roll tightly into a log and cut into 12 discs.",
+        "Press discs into muffin tin, working pastry up the sides.",
+        "Pour custard into shells, filling 3/4 full.",
+        "Bake at 250°C (highest setting) 12-15 minutes until tops are blistered black.",
+        "Cool briefly and serve with cinnamon and icing sugar."
+      ],
+      "tags": ["dessert", "custard", "pastry", "tart"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 20,
+      "servings": 12
+    },
+    {
+      "title": "Bifana",
+      "description": "Portuguese pork sandwich: thin pork cutlets simmered in garlicky white wine sauce, served on a roll.",
+      "ingredients": [
+        { "name": "pork loin", "quantity": 600, "unit": "g" },
+        { "name": "garlic cloves", "quantity": 6, "unit": "pc" },
+        { "name": "white wine", "quantity": 200, "unit": "ml" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "sweet paprika", "quantity": 1, "unit": "tsp" },
+        { "name": "piri piri sauce", "quantity": 1, "unit": "tsp" },
+        { "name": "lard or olive oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "papo seco rolls", "quantity": 6, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Slice pork into very thin cutlets and pound lightly.",
+        "Marinate in crushed garlic, wine, bay, paprika, piri piri and salt for 4 hours.",
+        "Heat lard in a wide pan and sear pork in batches; remove.",
+        "Pour marinade into pan and reduce by half.",
+        "Return pork to the sauce and simmer 5 minutes.",
+        "Stuff hot pork into split rolls and spoon over the sauce."
+      ],
+      "tags": ["sandwich", "pork", "street-food"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 6
+    },
+    {
+      "title": "Cataplana",
+      "description": "Algarve seafood stew of clams, prawns, white fish, chouriço and tomato cooked in a clamshell pan.",
+      "ingredients": [
+        { "name": "clams", "quantity": 500, "unit": "g" },
+        { "name": "prawns", "quantity": 400, "unit": "g" },
+        { "name": "white fish fillets", "quantity": 400, "unit": "g" },
+        { "name": "chouriço sausage", "quantity": 100, "unit": "g" },
+        { "name": "onions", "quantity": 2, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 4, "unit": "pc" },
+        { "name": "red bell pepper", "quantity": 1, "unit": "pc" },
+        { "name": "tomatoes", "quantity": 4, "unit": "pc" },
+        { "name": "white wine", "quantity": 200, "unit": "ml" },
+        { "name": "olive oil", "quantity": 60, "unit": "ml" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "fresh coriander", "quantity": 0.5, "unit": "bunch" }
+      ],
+      "steps": [
+        "Soak clams in salted water 30 minutes to purge sand.",
+        "In a wide pot, sweat sliced onions, garlic, pepper and chouriço in olive oil.",
+        "Add chopped tomatoes, bay and wine; simmer 10 minutes.",
+        "Layer fish chunks, prawns and clams over the base.",
+        "Cover tightly and steam 12 minutes until clams open and prawns curl.",
+        "Discard any closed clams, scatter coriander and serve straight from the pot."
+      ],
+      "tags": ["seafood", "stew", "algarve"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Francesinha",
+      "description": "Porto's iconic layered sandwich of steak, ham and sausage smothered in spicy beer-tomato sauce and melted cheese.",
+      "ingredients": [
+        { "name": "thick white bread", "quantity": 8, "unit": "pc" },
+        { "name": "steak", "quantity": 400, "unit": "g" },
+        { "name": "linguiça sausage", "quantity": 200, "unit": "g" },
+        { "name": "fresh sausages", "quantity": 4, "unit": "pc" },
+        { "name": "cooked ham", "quantity": 200, "unit": "g" },
+        { "name": "sliced cheese", "quantity": 300, "unit": "g" },
+        { "name": "tomato passata", "quantity": 400, "unit": "ml" },
+        { "name": "beer", "quantity": 250, "unit": "ml" },
+        { "name": "beef stock", "quantity": 200, "unit": "ml" },
+        { "name": "piri piri sauce", "quantity": 1, "unit": "tsp" },
+        { "name": "butter", "quantity": 50, "unit": "g" },
+        { "name": "flour", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Pan-fry steaks, sausages and linguiça until cooked; slice as needed.",
+        "Make sauce: melt butter, whisk in flour, then add beer, stock and passata.",
+        "Stir in piri piri and simmer 15 minutes until thick.",
+        "Layer ham, steak, linguiça and sausage between two slices of bread.",
+        "Place sandwich on a baking dish, top with cheese slices and grill until melted.",
+        "Pour the hot sauce over the sandwich and serve with chips."
+      ],
+      "tags": ["sandwich", "comfort-food", "porto"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Açorda",
+      "description": "Portuguese bread soup flavoured with garlic, coriander and olive oil, finished with a poached egg.",
+      "ingredients": [
+        { "name": "stale country bread", "quantity": 400, "unit": "g" },
+        { "name": "garlic cloves", "quantity": 6, "unit": "pc" },
+        { "name": "fresh coriander", "quantity": 1, "unit": "bunch" },
+        { "name": "olive oil", "quantity": 80, "unit": "ml" },
+        { "name": "eggs", "quantity": 4, "unit": "pc" },
+        { "name": "boiling water", "quantity": 1, "unit": "l" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Pound garlic with salt and most of the coriander to a paste.",
+        "Stir paste with olive oil in a wide bowl.",
+        "Tear bread into chunks and add to the bowl.",
+        "Pour boiling water over and stir until bread softens to porridge consistency.",
+        "Poach eggs in simmering water until whites are set.",
+        "Ladle açorda into bowls, top each with a poached egg and remaining coriander."
+      ],
+      "tags": ["soup", "bread", "rustic", "vegetarian"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Arroz de Pato",
+      "description": "Portuguese duck rice baked with chouriço under a glossy crust.",
+      "ingredients": [
+        { "name": "duck legs", "quantity": 4, "unit": "pc" },
+        { "name": "chouriço sausage", "quantity": 150, "unit": "g" },
+        { "name": "long grain rice", "quantity": 400, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "carrot", "quantity": 1, "unit": "pc" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "white wine", "quantity": 150, "unit": "ml" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Simmer duck legs with onion, carrot, bay, wine and salt in 1.5L water for 75 minutes.",
+        "Remove duck, reserve stock; shred meat from bones.",
+        "Sauté finely chopped onion in olive oil; add rice and toast briefly.",
+        "Add 800ml of strained duck stock, season and simmer 12 minutes.",
+        "Stir in shredded duck and transfer to a baking dish.",
+        "Top with chouriço slices and bake at 200°C for 15 minutes until top is crisp."
+      ],
+      "tags": ["rice", "duck", "baked", "feast"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 105,
+      "servings": 6
+    },
+    {
+      "title": "Cozido à Portuguesa",
+      "description": "Hearty Portuguese boiled dinner of mixed meats, sausages and vegetables.",
+      "ingredients": [
+        { "name": "beef shin", "quantity": 500, "unit": "g" },
+        { "name": "pork belly", "quantity": 400, "unit": "g" },
+        { "name": "chicken thighs", "quantity": 4, "unit": "pc" },
+        { "name": "chouriço sausage", "quantity": 200, "unit": "g" },
+        { "name": "morcela blood sausage", "quantity": 200, "unit": "g" },
+        { "name": "potatoes", "quantity": 6, "unit": "pc" },
+        { "name": "carrots", "quantity": 4, "unit": "pc" },
+        { "name": "cabbage", "quantity": 0.5, "unit": "pc" },
+        { "name": "turnips", "quantity": 2, "unit": "pc" },
+        { "name": "rice", "quantity": 200, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Place beef and pork in a large pot, cover with water and simmer 60 minutes; skim foam.",
+        "Add chicken and simmer 30 more minutes.",
+        "Add carrots, turnips and potatoes; cook 20 minutes.",
+        "Add chouriço, morcela and quartered cabbage; cook 15 minutes.",
+        "Cook rice separately using some of the broth.",
+        "Slice meats and arrange on a platter with vegetables, sausages and rice."
+      ],
+      "tags": ["stew", "meats", "feast", "winter"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 135,
+      "servings": 8
+    },
+    {
+      "title": "Carne de Porco à Alentejana",
+      "description": "Alentejo dish of marinated pork cubes pan-fried with clams, served with crisp potatoes.",
+      "ingredients": [
+        { "name": "pork shoulder", "quantity": 700, "unit": "g" },
+        { "name": "clams", "quantity": 500, "unit": "g" },
+        { "name": "garlic cloves", "quantity": 6, "unit": "pc" },
+        { "name": "white wine", "quantity": 150, "unit": "ml" },
+        { "name": "sweet paprika", "quantity": 1, "unit": "tbsp" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "potatoes", "quantity": 600, "unit": "g" },
+        { "name": "olive oil", "quantity": 80, "unit": "ml" },
+        { "name": "fresh coriander", "quantity": 0.5, "unit": "bunch" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Cube pork and marinate with garlic paste, wine, paprika, bay and salt for 4 hours.",
+        "Soak clams in salted water 30 minutes.",
+        "Cube potatoes and shallow-fry until golden; keep warm.",
+        "Remove pork from marinade and brown in olive oil.",
+        "Add reserved marinade and simmer 15 minutes until pork is tender.",
+        "Add clams, cover and cook 5 minutes until they open.",
+        "Stir in chopped coriander and serve over the fried potatoes."
+      ],
+      "tags": ["pork", "seafood", "alentejo"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 35,
+      "servings": 4
+    },
+    {
+      "title": "Sardinhas Assadas",
+      "description": "Charcoal-grilled fresh sardines, the heart of Portuguese summer festivals.",
+      "ingredients": [
+        { "name": "fresh sardines", "quantity": 1.2, "unit": "kg" },
+        { "name": "coarse sea salt", "quantity": 3, "unit": "tbsp" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "lemon", "quantity": 2, "unit": "pc" },
+        { "name": "country bread", "quantity": 6, "unit": "pc" }
+      ],
+      "steps": [
+        "Rinse sardines and pat dry; do not gut small ones.",
+        "Cover sardines generously with coarse salt and rest 1 hour.",
+        "Light charcoal and let it burn down to glowing embers.",
+        "Brush off excess salt and grill sardines 3 minutes per side until skin is blistered.",
+        "Serve immediately on slices of country bread with lemon and a drizzle of olive oil."
+      ],
+      "tags": ["fish", "grill", "summer", "simple"],
+      "difficulty": "easy",
+      "prepTime": 70,
+      "cookTime": 10,
+      "servings": 6
+    },
+    {
+      "title": "Pão de Ló",
+      "description": "Portuguese sponge cake with a soft moist centre, made with little more than eggs and sugar.",
+      "ingredients": [
+        { "name": "eggs", "quantity": 8, "unit": "pc" },
+        { "name": "sugar", "quantity": 250, "unit": "g" },
+        { "name": "flour", "quantity": 80, "unit": "g" },
+        { "name": "lemon zest", "quantity": 1, "unit": "tsp" },
+        { "name": "icing sugar for dusting", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Whisk eggs and sugar over a pot of warm water until tripled in volume and very pale.",
+        "Off heat, whisk 5 more minutes until thick and ribbony.",
+        "Sift flour and zest over the foam and fold gently with a spatula.",
+        "Pour into a parchment-lined deep tin.",
+        "Bake at 180°C for 25 minutes; the centre should still wobble slightly.",
+        "Cool in the tin and dust with icing sugar before serving."
+      ],
+      "tags": ["dessert", "cake", "sponge"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 25,
+      "servings": 8
+    },
+    {
+      "title": "Polvo à Lagareiro",
+      "description": "Roasted octopus drowned in olive oil and garlic, served with smashed potatoes.",
+      "ingredients": [
+        { "name": "octopus", "quantity": 1.5, "unit": "kg" },
+        { "name": "small potatoes", "quantity": 1, "unit": "kg" },
+        { "name": "garlic cloves", "quantity": 8, "unit": "pc" },
+        { "name": "olive oil", "quantity": 200, "unit": "ml" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "fresh parsley", "quantity": 0.5, "unit": "bunch" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Simmer octopus with bay and an onion 50 minutes until tender; drain.",
+        "Boil potatoes whole in salted water until just tender; peel.",
+        "Place octopus and potatoes in a roasting tin and smash potatoes lightly with the heel of your hand.",
+        "Slice garlic and scatter over the top.",
+        "Pour olive oil generously over everything and season.",
+        "Roast at 200°C for 25 minutes until edges crisp and garlic is golden.",
+        "Sprinkle with parsley and serve with the pan oils spooned over."
+      ],
+      "tags": ["seafood", "octopus", "roasted", "potatoes"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 90,
+      "servings": 4
+    },
+    {
+      "title": "Bacalhau à Gomes de Sá",
+      "description": "Salt cod baked with potatoes, onions, olives and hard-boiled eggs from Porto.",
+      "ingredients": [
+        { "name": "salt cod", "quantity": 600, "unit": "g" },
+        { "name": "potatoes", "quantity": 800, "unit": "g" },
+        { "name": "onions", "quantity": 3, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 4, "unit": "pc" },
+        { "name": "milk", "quantity": 300, "unit": "ml" },
+        { "name": "olive oil", "quantity": 120, "unit": "ml" },
+        { "name": "black olives", "quantity": 80, "unit": "g" },
+        { "name": "eggs", "quantity": 4, "unit": "pc" },
+        { "name": "fresh parsley", "quantity": 0.5, "unit": "bunch" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" }
+      ],
+      "steps": [
+        "Soak cod 24 hours, changing water 3-4 times, then poach in milk + 300ml water 10 minutes; flake.",
+        "Boil potatoes in their skins until just tender, peel and slice thickly.",
+        "Hard-boil eggs, peel and quarter.",
+        "Sauté sliced onions and garlic with bay in olive oil until soft.",
+        "Layer potatoes, cod and onions in a baking dish.",
+        "Drizzle with olive oil and bake at 200°C for 25 minutes.",
+        "Top with olives, eggs and chopped parsley before serving."
+      ],
+      "tags": ["fish", "salt-cod", "baked", "porto"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 50,
+      "servings": 6
+    },
+    {
+      "title": "Feijoada à Transmontana",
+      "description": "Hearty northern Portuguese bean stew with pork, sausages and cabbage.",
+      "ingredients": [
+        { "name": "dried red kidney beans", "quantity": 500, "unit": "g" },
+        { "name": "pork shoulder", "quantity": 400, "unit": "g" },
+        { "name": "smoked pork ribs", "quantity": 400, "unit": "g" },
+        { "name": "chouriço sausage", "quantity": 200, "unit": "g" },
+        { "name": "morcela blood sausage", "quantity": 150, "unit": "g" },
+        { "name": "onions", "quantity": 2, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 4, "unit": "pc" },
+        { "name": "carrots", "quantity": 2, "unit": "pc" },
+        { "name": "cabbage", "quantity": 0.25, "unit": "pc" },
+        { "name": "tomato passata", "quantity": 200, "unit": "ml" },
+        { "name": "olive oil", "quantity": 60, "unit": "ml" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" }
+      ],
+      "steps": [
+        "Soak beans overnight; drain.",
+        "Simmer beans with bay in fresh water 60 minutes until almost tender.",
+        "In another pot, sauté chopped onions and garlic in olive oil.",
+        "Add pork, ribs, passata and cook 30 minutes with a little bean liquid.",
+        "Combine beans and meats with sliced carrots; simmer 30 minutes.",
+        "Add sliced sausages and shredded cabbage; cook 15 more minutes.",
+        "Serve with rice and crusty bread."
+      ],
+      "tags": ["stew", "beans", "pork", "winter"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 150,
+      "servings": 8
+    },
+    {
+      "title": "Pastéis de Bacalhau",
+      "description": "Crisp Portuguese salt cod fritters bound with potato, onion and parsley.",
+      "ingredients": [
+        { "name": "salt cod", "quantity": 400, "unit": "g" },
+        { "name": "potatoes", "quantity": 500, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 2, "unit": "pc" },
+        { "name": "fresh parsley", "quantity": 0.5, "unit": "bunch" },
+        { "name": "eggs", "quantity": 3, "unit": "pc" },
+        { "name": "vegetable oil for frying", "quantity": 1, "unit": "l" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak cod 24 hours, changing water 3-4 times.",
+        "Simmer cod 10 minutes; cool, remove bones and skin and shred finely.",
+        "Boil potatoes whole; peel and mash dry.",
+        "Combine cod, mashed potato, finely chopped onion, garlic, parsley, eggs and pepper.",
+        "Knead until well combined; the texture should be firm but moist.",
+        "Heat oil to 180°C; shape mixture into quenelles using two spoons and drop into oil.",
+        "Fry until deeply golden, drain and serve hot."
+      ],
+      "tags": ["fritters", "salt-cod", "fried", "appetizer"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 25,
+      "servings": 6
+    }
+  ]
+}

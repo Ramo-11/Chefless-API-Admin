@@ -1,0 +1,745 @@
+{
+  "cuisine": "Lebanese",
+  "names": {
+    "first": ["Rami", "Layla", "Karim", "Nour", "Ziad", "Maya", "Bassam", "Rania", "Walid", "Hala", "Tarek", "Yasmine"],
+    "last": ["Khoury", "Hajj", "Saade", "Aoun", "Geagea", "Nasrallah", "Chamoun", "Mansour", "Salloum", "Daher", "Faraj", "Issa"]
+  },
+  "recipes": [
+    {
+      "title": "Tabbouleh",
+      "description": "A bright Levantine salad of finely chopped parsley, tomatoes, mint and bulgur, dressed with lemon juice and olive oil.",
+      "ingredients": [
+        {"name": "flat-leaf parsley", "quantity": 4, "unit": "bunch"},
+        {"name": "fine bulgur", "quantity": 60, "unit": "g"},
+        {"name": "tomatoes", "quantity": 3, "unit": "pc"},
+        {"name": "fresh mint", "quantity": 1, "unit": "bunch"},
+        {"name": "spring onions", "quantity": 4, "unit": "pc"},
+        {"name": "lemon juice", "quantity": 60, "unit": "ml"},
+        {"name": "extra virgin olive oil", "quantity": 80, "unit": "ml"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"},
+        {"name": "ground black pepper", "quantity": 0.25, "unit": "tsp"}
+      ],
+      "steps": [
+        "Rinse the bulgur and soak it in cold water for 10 minutes, then drain and squeeze dry.",
+        "Wash and thoroughly dry the parsley and mint, then finely chop the leaves with a sharp knife.",
+        "Dice the tomatoes very small and finely slice the spring onions.",
+        "Combine the herbs, tomatoes, onions and bulgur in a large bowl.",
+        "Whisk lemon juice, olive oil, salt and pepper together and pour over the salad.",
+        "Toss gently and serve immediately with romaine leaves for scooping."
+      ],
+      "tags": ["salad", "mezze", "herby", "summer"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 25,
+      "cookTime": 0,
+      "servings": 6
+    },
+    {
+      "title": "Fattoush",
+      "description": "Crisp Lebanese chopped salad of seasonal vegetables, herbs and toasted pita brightened with sumac and pomegranate molasses.",
+      "ingredients": [
+        {"name": "romaine lettuce", "quantity": 1, "unit": "pc"},
+        {"name": "cucumbers", "quantity": 2, "unit": "pc"},
+        {"name": "tomatoes", "quantity": 3, "unit": "pc"},
+        {"name": "radishes", "quantity": 6, "unit": "pc"},
+        {"name": "pita bread", "quantity": 2, "unit": "pc"},
+        {"name": "sumac", "quantity": 2, "unit": "tsp"},
+        {"name": "pomegranate molasses", "quantity": 2, "unit": "tbsp"},
+        {"name": "lemon juice", "quantity": 3, "unit": "tbsp"},
+        {"name": "olive oil", "quantity": 80, "unit": "ml"},
+        {"name": "fresh mint", "quantity": 0.5, "unit": "bunch"},
+        {"name": "garlic clove", "quantity": 1, "unit": "pc"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Tear the pita into pieces, brush with olive oil and toast until golden and crisp.",
+        "Chop the lettuce, cucumbers, tomatoes and radishes into bite-size pieces.",
+        "Mince the garlic and whisk it with lemon juice, pomegranate molasses, olive oil, sumac and salt.",
+        "Combine the vegetables and torn mint leaves in a large bowl.",
+        "Pour over the dressing and toss to coat just before serving.",
+        "Top with the crisp pita chips and an extra dusting of sumac."
+      ],
+      "tags": ["salad", "mezze", "summer", "crunchy"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 5,
+      "servings": 4
+    },
+    {
+      "title": "Kibbeh",
+      "description": "Football-shaped croquettes of bulgur and minced lamb stuffed with spiced ground meat, pine nuts and onions, then deep-fried until crisp.",
+      "ingredients": [
+        {"name": "fine bulgur", "quantity": 250, "unit": "g"},
+        {"name": "lean minced lamb", "quantity": 500, "unit": "g"},
+        {"name": "minced lamb for filling", "quantity": 300, "unit": "g"},
+        {"name": "onion", "quantity": 2, "unit": "pc"},
+        {"name": "pine nuts", "quantity": 50, "unit": "g"},
+        {"name": "ground allspice", "quantity": 1, "unit": "tsp"},
+        {"name": "ground cinnamon", "quantity": 0.5, "unit": "tsp"},
+        {"name": "salt", "quantity": 1.5, "unit": "tsp"},
+        {"name": "ghee", "quantity": 2, "unit": "tbsp"},
+        {"name": "vegetable oil for frying", "quantity": 1, "unit": "l"}
+      ],
+      "steps": [
+        "Soak bulgur in cold water for 20 minutes then squeeze out the excess moisture.",
+        "Process the lean lamb, one onion and bulgur in a food processor with salt and half the spices to a smooth paste.",
+        "Sauté the second chopped onion in ghee, add the filling lamb, pine nuts and remaining spices, and cook until browned.",
+        "Wet your hands and shape the kibbeh shell into ovals with a hollow center.",
+        "Stuff each shell with cooled filling and pinch the ends into a football shape.",
+        "Deep-fry the kibbeh in 180°C oil for 4-5 minutes until deep golden, then drain on paper towels."
+      ],
+      "tags": ["mezze", "fried", "lamb", "stuffed"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 20,
+      "servings": 6
+    },
+    {
+      "title": "Manakish",
+      "description": "Round flatbreads topped with za'atar and olive oil, baked until the edges are blistered and the bread is fragrant.",
+      "ingredients": [
+        {"name": "all-purpose flour", "quantity": 500, "unit": "g"},
+        {"name": "instant yeast", "quantity": 7, "unit": "g"},
+        {"name": "warm water", "quantity": 300, "unit": "ml"},
+        {"name": "olive oil", "quantity": 60, "unit": "ml"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"},
+        {"name": "sugar", "quantity": 1, "unit": "tsp"},
+        {"name": "za'atar", "quantity": 100, "unit": "g"},
+        {"name": "extra olive oil for topping", "quantity": 120, "unit": "ml"}
+      ],
+      "steps": [
+        "Mix flour, yeast, salt and sugar, then add water and olive oil to form a soft dough.",
+        "Knead for 10 minutes until smooth and elastic, then cover and let rise for 1 hour.",
+        "Stir the za'atar with the topping olive oil to a thick paste.",
+        "Divide the dough into 8 balls, roll each into a 15 cm disc and place on a tray.",
+        "Spread a generous layer of za'atar paste over each disc, leaving a small rim.",
+        "Bake at 230°C for 7-9 minutes until the bottoms are pale gold and the topping is fragrant."
+      ],
+      "tags": ["breakfast", "flatbread", "za'atar"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 90,
+      "cookTime": 10,
+      "servings": 8
+    },
+    {
+      "title": "Mujaddara",
+      "description": "Humble pilaf of lentils and rice crowned with deeply caramelized fried onions, served with a dollop of yogurt.",
+      "ingredients": [
+        {"name": "brown lentils", "quantity": 250, "unit": "g"},
+        {"name": "long-grain rice", "quantity": 200, "unit": "g"},
+        {"name": "onions", "quantity": 4, "unit": "pc"},
+        {"name": "olive oil", "quantity": 120, "unit": "ml"},
+        {"name": "ground cumin", "quantity": 1, "unit": "tsp"},
+        {"name": "ground coriander", "quantity": 0.5, "unit": "tsp"},
+        {"name": "salt", "quantity": 1.5, "unit": "tsp"},
+        {"name": "black pepper", "quantity": 0.5, "unit": "tsp"},
+        {"name": "water", "quantity": 1, "unit": "l"}
+      ],
+      "steps": [
+        "Rinse the lentils, cover with water and simmer 15 minutes until just tender, then drain.",
+        "Slice the onions thinly and fry in olive oil over medium heat for 20 minutes until deep brown and crisp.",
+        "Reserve half the onions for garnish and leave the rest with their oil in the pan.",
+        "Add rinsed rice, cumin, coriander, salt and pepper to the pan and toast for 2 minutes.",
+        "Stir in the lentils and 600 ml of water, bring to a boil, then cover and simmer for 18 minutes on low.",
+        "Rest off the heat for 10 minutes, fluff with a fork and top with the reserved crisp onions."
+      ],
+      "tags": ["pilaf", "comfort food", "weeknight"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 50,
+      "servings": 4
+    },
+    {
+      "title": "Shish Taouk",
+      "description": "Marinated chicken skewers grilled over charcoal until smoky and juicy, traditionally served with garlic toum and pita.",
+      "ingredients": [
+        {"name": "chicken breast", "quantity": 1, "unit": "kg"},
+        {"name": "Greek yogurt", "quantity": 200, "unit": "g"},
+        {"name": "lemon juice", "quantity": 60, "unit": "ml"},
+        {"name": "garlic cloves", "quantity": 6, "unit": "pc"},
+        {"name": "tomato paste", "quantity": 1, "unit": "tbsp"},
+        {"name": "paprika", "quantity": 1, "unit": "tsp"},
+        {"name": "ground coriander", "quantity": 0.5, "unit": "tsp"},
+        {"name": "olive oil", "quantity": 60, "unit": "ml"},
+        {"name": "salt", "quantity": 1.5, "unit": "tsp"}
+      ],
+      "steps": [
+        "Cut the chicken into 3 cm cubes and place in a large bowl.",
+        "Crush the garlic and whisk with yogurt, lemon juice, tomato paste, spices, oil and salt.",
+        "Toss the chicken in the marinade, cover and refrigerate for at least 4 hours.",
+        "Thread the chicken onto metal skewers, leaving small gaps between pieces.",
+        "Grill over hot charcoal or a high griddle for 4 minutes per side until char-marked and cooked through.",
+        "Rest for 5 minutes and serve with toum, pita and pickled turnips."
+      ],
+      "tags": ["grill", "skewers", "chicken"],
+      "dietaryTags": ["halal", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 240,
+      "cookTime": 12,
+      "servings": 6
+    },
+    {
+      "title": "Sayadieh",
+      "description": "Levantine fisherman's dish of spiced rice cooked with caramelized onion stock, topped with golden-fried fish and toasted pine nuts.",
+      "ingredients": [
+        {"name": "white fish fillets", "quantity": 800, "unit": "g"},
+        {"name": "long-grain rice", "quantity": 400, "unit": "g"},
+        {"name": "onions", "quantity": 4, "unit": "pc"},
+        {"name": "ground cumin", "quantity": 2, "unit": "tsp"},
+        {"name": "ground caraway", "quantity": 1, "unit": "tsp"},
+        {"name": "ground turmeric", "quantity": 1, "unit": "tsp"},
+        {"name": "pine nuts", "quantity": 60, "unit": "g"},
+        {"name": "fish stock", "quantity": 800, "unit": "ml"},
+        {"name": "olive oil", "quantity": 80, "unit": "ml"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"},
+        {"name": "lemon", "quantity": 1, "unit": "pc"}
+      ],
+      "steps": [
+        "Slice the onions and fry in olive oil for 25 minutes until very dark, then blend half with stock.",
+        "Season the fish with cumin, salt and lemon zest, then pan-fry until just cooked and set aside.",
+        "Toast rice in oil with caraway and turmeric, then pour in the dark onion stock.",
+        "Cover and simmer for 18 minutes until the rice is tender and amber-colored.",
+        "Toast pine nuts in a dry pan until golden.",
+        "Mound the rice on a platter, top with fish and pine nuts and serve with lemon wedges."
+      ],
+      "tags": ["fish", "rice", "coastal"],
+      "dietaryTags": ["halal"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 50,
+      "servings": 6
+    },
+    {
+      "title": "Knafeh",
+      "description": "Hot cheese pastry layered with shredded phyllo and soaked in orange-blossom syrup, a celebrated Levantine dessert.",
+      "ingredients": [
+        {"name": "kataifi pastry", "quantity": 500, "unit": "g"},
+        {"name": "akkawi cheese", "quantity": 500, "unit": "g"},
+        {"name": "unsalted butter", "quantity": 200, "unit": "g"},
+        {"name": "sugar", "quantity": 400, "unit": "g"},
+        {"name": "water", "quantity": 250, "unit": "ml"},
+        {"name": "lemon juice", "quantity": 1, "unit": "tbsp"},
+        {"name": "orange blossom water", "quantity": 1, "unit": "tbsp"},
+        {"name": "rose water", "quantity": 1, "unit": "tsp"},
+        {"name": "ground pistachios", "quantity": 50, "unit": "g"}
+      ],
+      "steps": [
+        "Soak the akkawi cheese in cold water for 4 hours, changing the water twice to reduce salt.",
+        "Make syrup by simmering sugar, water and lemon juice for 10 minutes, then stir in blossom and rose waters and cool.",
+        "Shred the kataifi finely and mix with melted butter until fully coated.",
+        "Press half the buttered pastry into a 30 cm tray, top with sliced cheese, then cover with remaining pastry.",
+        "Bake at 200°C for 30-35 minutes until the bottom is deep golden, flipping halfway if possible.",
+        "Pour cool syrup over the hot knafeh, scatter with pistachios and serve immediately."
+      ],
+      "tags": ["dessert", "syrup-soaked", "celebration"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 40,
+      "servings": 10
+    },
+    {
+      "title": "Baba Ghanoush",
+      "description": "Smoky charred eggplant dip blended with tahini, garlic and lemon, drizzled with olive oil and pomegranate seeds.",
+      "ingredients": [
+        {"name": "large eggplants", "quantity": 3, "unit": "pc"},
+        {"name": "tahini", "quantity": 4, "unit": "tbsp"},
+        {"name": "garlic clove", "quantity": 2, "unit": "pc"},
+        {"name": "lemon juice", "quantity": 3, "unit": "tbsp"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"},
+        {"name": "olive oil", "quantity": 3, "unit": "tbsp"},
+        {"name": "pomegranate seeds", "quantity": 2, "unit": "tbsp"},
+        {"name": "fresh parsley", "quantity": 2, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Char the whole eggplants over an open flame, turning often for 12-15 minutes until the skins blister and collapse.",
+        "Place charred eggplants in a colander and let them drain for 20 minutes.",
+        "Peel away the burnt skin and discard, keeping the smoky flesh.",
+        "Mash the flesh with crushed garlic, tahini, lemon juice and salt to a chunky purée.",
+        "Spread on a plate, drizzle with olive oil, and scatter with parsley and pomegranate seeds.",
+        "Serve at room temperature with warm pita."
+      ],
+      "tags": ["mezze", "dip", "smoky"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 6
+    },
+    {
+      "title": "Hummus",
+      "description": "Silky purée of chickpeas, tahini, lemon and garlic, finished with olive oil and a sprinkle of paprika.",
+      "ingredients": [
+        {"name": "dried chickpeas", "quantity": 250, "unit": "g"},
+        {"name": "baking soda", "quantity": 1, "unit": "tsp"},
+        {"name": "tahini", "quantity": 150, "unit": "g"},
+        {"name": "garlic clove", "quantity": 2, "unit": "pc"},
+        {"name": "lemon juice", "quantity": 60, "unit": "ml"},
+        {"name": "ice water", "quantity": 60, "unit": "ml"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"},
+        {"name": "olive oil", "quantity": 3, "unit": "tbsp"},
+        {"name": "paprika", "quantity": 0.5, "unit": "tsp"}
+      ],
+      "steps": [
+        "Soak chickpeas overnight with baking soda, then drain and rinse.",
+        "Cover with fresh water and simmer for 60-90 minutes until very soft, skimming foam.",
+        "Drain the chickpeas, reserving a cup of cooking liquid.",
+        "Blend chickpeas with garlic, lemon juice, tahini and salt for 4 minutes until ultra-smooth.",
+        "Stream in ice water with the motor running until light and creamy.",
+        "Spread on a plate, swirl with olive oil and dust with paprika before serving."
+      ],
+      "tags": ["mezze", "dip", "classic"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 720,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Falafel",
+      "description": "Crisp herb-flecked fritters of soaked chickpeas and fava beans deep-fried until shatteringly crisp outside and fluffy within.",
+      "ingredients": [
+        {"name": "dried chickpeas", "quantity": 300, "unit": "g"},
+        {"name": "dried split fava beans", "quantity": 100, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "garlic cloves", "quantity": 4, "unit": "pc"},
+        {"name": "fresh parsley", "quantity": 1, "unit": "bunch"},
+        {"name": "fresh coriander", "quantity": 0.5, "unit": "bunch"},
+        {"name": "ground cumin", "quantity": 2, "unit": "tsp"},
+        {"name": "ground coriander", "quantity": 1, "unit": "tsp"},
+        {"name": "baking soda", "quantity": 1, "unit": "tsp"},
+        {"name": "salt", "quantity": 1.5, "unit": "tsp"},
+        {"name": "sesame seeds", "quantity": 2, "unit": "tbsp"},
+        {"name": "frying oil", "quantity": 1, "unit": "l"}
+      ],
+      "steps": [
+        "Soak chickpeas and fava beans in plenty of cold water for 24 hours, then drain very well.",
+        "Pulse the legumes with onion, garlic, herbs, cumin, coriander and salt to a coarse, sandy texture.",
+        "Stir in baking soda and refrigerate the mixture for 30 minutes.",
+        "Shape into walnut-sized balls or patties, pressing sesame seeds onto the surface.",
+        "Fry in 175°C oil for 3-4 minutes until deep mahogany and crisp.",
+        "Drain and serve in pita with tahini, tomato and pickles."
+      ],
+      "tags": ["street food", "fried", "mezze"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 1440,
+      "cookTime": 15,
+      "servings": 6
+    },
+    {
+      "title": "Baklava",
+      "description": "Layered phyllo pastry packed with chopped pistachios and walnuts, baked golden then drenched in fragrant sugar syrup.",
+      "ingredients": [
+        {"name": "phyllo pastry", "quantity": 500, "unit": "g"},
+        {"name": "shelled pistachios", "quantity": 250, "unit": "g"},
+        {"name": "walnuts", "quantity": 150, "unit": "g"},
+        {"name": "unsalted butter", "quantity": 300, "unit": "g"},
+        {"name": "sugar", "quantity": 500, "unit": "g"},
+        {"name": "water", "quantity": 350, "unit": "ml"},
+        {"name": "lemon juice", "quantity": 1, "unit": "tbsp"},
+        {"name": "rose water", "quantity": 1, "unit": "tbsp"},
+        {"name": "orange blossom water", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Simmer sugar, water and lemon juice for 12 minutes, then add the floral waters and chill the syrup.",
+        "Pulse pistachios and walnuts to a coarse crumb.",
+        "Brush a baking tray with melted butter, layer 10 sheets of phyllo, brushing each with butter.",
+        "Spread the nut mixture evenly, then layer 10 more buttered sheets on top.",
+        "Cut into diamonds, pour the remaining butter over and bake at 170°C for 50 minutes until deep gold.",
+        "Pour cold syrup over the hot baklava and let it absorb for at least 4 hours before serving."
+      ],
+      "tags": ["dessert", "pastry", "celebration"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 45,
+      "cookTime": 50,
+      "servings": 16
+    },
+    {
+      "title": "Warak Enab",
+      "description": "Tender vine leaves rolled around lemony rice and herbs, simmered slowly in a citrus broth until silky.",
+      "ingredients": [
+        {"name": "vine leaves in brine", "quantity": 50, "unit": "pc"},
+        {"name": "short-grain rice", "quantity": 250, "unit": "g"},
+        {"name": "tomatoes", "quantity": 2, "unit": "pc"},
+        {"name": "fresh parsley", "quantity": 1, "unit": "bunch"},
+        {"name": "fresh mint", "quantity": 0.5, "unit": "bunch"},
+        {"name": "lemon juice", "quantity": 100, "unit": "ml"},
+        {"name": "olive oil", "quantity": 100, "unit": "ml"},
+        {"name": "ground allspice", "quantity": 1, "unit": "tsp"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"},
+        {"name": "water", "quantity": 700, "unit": "ml"}
+      ],
+      "steps": [
+        "Rinse vine leaves under cold water and pat dry, trimming the stems.",
+        "Mix rinsed rice with chopped tomatoes, herbs, half the oil, lemon juice, allspice and salt.",
+        "Place a leaf vein-side up, add a teaspoon of filling, fold the sides and roll tightly.",
+        "Line a heavy pot with extra leaves and pack the rolls in tight, snug layers.",
+        "Pour over remaining oil, lemon juice and water, weight with a plate, cover and simmer gently for 50 minutes.",
+        "Rest 10 minutes off the heat and serve warm or at room temperature."
+      ],
+      "tags": ["mezze", "vegetarian", "rolled"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 60,
+      "servings": 8
+    },
+    {
+      "title": "Sfiha",
+      "description": "Open-faced flatbreads from Baalbek topped with spiced minced lamb, tomato and a hit of pomegranate molasses.",
+      "ingredients": [
+        {"name": "all-purpose flour", "quantity": 400, "unit": "g"},
+        {"name": "instant yeast", "quantity": 5, "unit": "g"},
+        {"name": "warm water", "quantity": 240, "unit": "ml"},
+        {"name": "olive oil", "quantity": 30, "unit": "ml"},
+        {"name": "minced lamb", "quantity": 400, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "tomatoes", "quantity": 2, "unit": "pc"},
+        {"name": "tahini", "quantity": 1, "unit": "tbsp"},
+        {"name": "pomegranate molasses", "quantity": 1, "unit": "tbsp"},
+        {"name": "ground allspice", "quantity": 1, "unit": "tsp"},
+        {"name": "salt", "quantity": 1.5, "unit": "tsp"}
+      ],
+      "steps": [
+        "Mix flour, yeast, salt, water and oil into a soft dough, knead 8 minutes and let rise 1 hour.",
+        "Finely chop the onion and tomato and squeeze out their excess juice.",
+        "Combine lamb, onion, tomato, tahini, molasses, allspice and salt and mix well.",
+        "Divide the dough into 24 small balls and roll each into a 10 cm round.",
+        "Top each round with a generous tablespoon of meat mixture, leaving a thin border.",
+        "Bake at 240°C for 8-10 minutes until the dough is set and the meat is sizzling."
+      ],
+      "tags": ["flatbread", "lamb", "snack"],
+      "dietaryTags": ["halal"],
+      "difficulty": "medium",
+      "prepTime": 90,
+      "cookTime": 12,
+      "servings": 6
+    },
+    {
+      "title": "Fatteh",
+      "description": "Layered dish of toasted pita, warm chickpeas and garlicky yogurt, finished with butter-toasted pine nuts.",
+      "ingredients": [
+        {"name": "cooked chickpeas", "quantity": 500, "unit": "g"},
+        {"name": "pita bread", "quantity": 2, "unit": "pc"},
+        {"name": "Greek yogurt", "quantity": 500, "unit": "g"},
+        {"name": "tahini", "quantity": 2, "unit": "tbsp"},
+        {"name": "garlic clove", "quantity": 2, "unit": "pc"},
+        {"name": "lemon juice", "quantity": 2, "unit": "tbsp"},
+        {"name": "ghee", "quantity": 3, "unit": "tbsp"},
+        {"name": "pine nuts", "quantity": 40, "unit": "g"},
+        {"name": "ground cumin", "quantity": 1, "unit": "tsp"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Tear pita into pieces, toast at 200°C for 6 minutes until shatteringly crisp.",
+        "Warm the chickpeas in their cooking liquid with a pinch of salt and the cumin.",
+        "Whisk yogurt with tahini, crushed garlic, lemon juice and salt.",
+        "Toast pine nuts in ghee until golden brown, then remove from heat.",
+        "Layer pita in a serving bowl, top with drained warm chickpeas, then spoon over the yogurt sauce.",
+        "Pour the buttery pine nuts over and serve at once while still warm."
+      ],
+      "tags": ["mezze", "yogurt", "comfort food"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Lahmacun",
+      "description": "Paper-thin flatbread spread with seasoned minced lamb, tomatoes and peppers and baked at high heat to a crisp.",
+      "ingredients": [
+        {"name": "all-purpose flour", "quantity": 500, "unit": "g"},
+        {"name": "instant yeast", "quantity": 5, "unit": "g"},
+        {"name": "warm water", "quantity": 320, "unit": "ml"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"},
+        {"name": "minced lamb", "quantity": 400, "unit": "g"},
+        {"name": "red bell pepper", "quantity": 1, "unit": "pc"},
+        {"name": "tomato", "quantity": 1, "unit": "pc"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "tomato paste", "quantity": 1, "unit": "tbsp"},
+        {"name": "ground sumac", "quantity": 1, "unit": "tsp"},
+        {"name": "Aleppo pepper", "quantity": 1, "unit": "tsp"},
+        {"name": "fresh parsley", "quantity": 0.5, "unit": "bunch"},
+        {"name": "lemon", "quantity": 1, "unit": "pc"}
+      ],
+      "steps": [
+        "Combine flour, yeast, salt and water into a smooth dough; let rest 1 hour.",
+        "Pulse pepper, tomato, onion, parsley, lamb, tomato paste, sumac, Aleppo pepper and salt to a wet paste.",
+        "Divide dough into 8 balls and roll each as thinly as possible into a 25 cm round.",
+        "Spread a thin layer of meat paste over each round, almost to the edge.",
+        "Bake on a preheated stone or tray at 260°C for 5-7 minutes until the edges curl and crisp.",
+        "Squeeze with lemon, scatter parsley and roll up to eat."
+      ],
+      "tags": ["flatbread", "street food", "lamb"],
+      "dietaryTags": ["halal"],
+      "difficulty": "medium",
+      "prepTime": 75,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Toum",
+      "description": "Fluffy emulsified Lebanese garlic sauce, snowy white and sharp, traditionally served with charcoal-grilled meats.",
+      "ingredients": [
+        {"name": "garlic cloves", "quantity": 250, "unit": "g"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"},
+        {"name": "lemon juice", "quantity": 120, "unit": "ml"},
+        {"name": "neutral oil", "quantity": 750, "unit": "ml"},
+        {"name": "ice water", "quantity": 2, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Peel the garlic and pat the cloves completely dry.",
+        "Place garlic and salt in a tall food processor and blitz to a fine paste, scraping the sides.",
+        "With the motor running, drizzle a thin stream of oil for 2 minutes until pale and thick.",
+        "Add a teaspoon of lemon juice, then continue alternating oil and lemon for 12-15 minutes total.",
+        "If the sauce loosens, drop in a teaspoon of ice water to bring it back together.",
+        "Transfer to a jar, seal and refrigerate; the flavor mellows after a day."
+      ],
+      "tags": ["sauce", "condiment", "garlic"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 0,
+      "servings": 20
+    },
+    {
+      "title": "Kafta",
+      "description": "Hand-mixed minced lamb skewers laced with parsley, onion and warm spices, charcoal-grilled until smoky.",
+      "ingredients": [
+        {"name": "minced lamb", "quantity": 800, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "fresh parsley", "quantity": 1, "unit": "bunch"},
+        {"name": "ground allspice", "quantity": 1, "unit": "tsp"},
+        {"name": "ground cinnamon", "quantity": 0.5, "unit": "tsp"},
+        {"name": "salt", "quantity": 1.5, "unit": "tsp"},
+        {"name": "black pepper", "quantity": 0.5, "unit": "tsp"},
+        {"name": "olive oil", "quantity": 1, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Grate the onion and squeeze out as much liquid as possible.",
+        "Finely chop the parsley and combine with the lamb, onion and spices.",
+        "Knead the mixture for 5 minutes until sticky and elastic.",
+        "Wet your hands and shape the meat onto flat metal skewers in long oblongs.",
+        "Brush with oil and grill over hot charcoal for 3-4 minutes per side.",
+        "Rest briefly and serve with grilled tomato, onion and pita."
+      ],
+      "tags": ["grill", "skewers", "lamb"],
+      "dietaryTags": ["halal", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 10,
+      "servings": 6
+    },
+    {
+      "title": "Kousa Mahshi",
+      "description": "Tender courgettes hollowed and stuffed with rice and minced meat, simmered in a tomato broth until meltingly soft.",
+      "ingredients": [
+        {"name": "small courgettes", "quantity": 12, "unit": "pc"},
+        {"name": "short-grain rice", "quantity": 250, "unit": "g"},
+        {"name": "minced lamb", "quantity": 250, "unit": "g"},
+        {"name": "tomato paste", "quantity": 3, "unit": "tbsp"},
+        {"name": "tomatoes", "quantity": 2, "unit": "pc"},
+        {"name": "ground allspice", "quantity": 1, "unit": "tsp"},
+        {"name": "ground cinnamon", "quantity": 0.5, "unit": "tsp"},
+        {"name": "dried mint", "quantity": 1, "unit": "tsp"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"},
+        {"name": "water", "quantity": 1, "unit": "l"},
+        {"name": "olive oil", "quantity": 2, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Slice the tops off the courgettes and core them with a long thin scoop, leaving a thin shell.",
+        "Combine rinsed rice, lamb, 1 tablespoon tomato paste, half the spices and salt.",
+        "Stuff each courgette two-thirds full to leave room for the rice to expand.",
+        "Lay them snugly in a heavy pot, scattered with chopped tomatoes.",
+        "Whisk remaining tomato paste, water, dried mint and salt; pour over the courgettes.",
+        "Cover and simmer gently for 45 minutes until the rice is fluffy and the courgettes are tender."
+      ],
+      "tags": ["stuffed", "comfort food", "stew"],
+      "dietaryTags": ["halal"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 50,
+      "servings": 6
+    },
+    {
+      "title": "Moutabal",
+      "description": "Creamy charred eggplant dip whipped with tahini, yogurt and lemon, smokier and richer than baba ghanoush.",
+      "ingredients": [
+        {"name": "large eggplants", "quantity": 3, "unit": "pc"},
+        {"name": "tahini", "quantity": 5, "unit": "tbsp"},
+        {"name": "Greek yogurt", "quantity": 3, "unit": "tbsp"},
+        {"name": "garlic clove", "quantity": 1, "unit": "pc"},
+        {"name": "lemon juice", "quantity": 3, "unit": "tbsp"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"},
+        {"name": "olive oil", "quantity": 2, "unit": "tbsp"},
+        {"name": "fresh mint", "quantity": 1, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Char the eggplants over an open flame for 12-15 minutes, turning until evenly blackened and collapsing.",
+        "Cool slightly, then peel and drain in a sieve for 20 minutes.",
+        "Mash the flesh with the side of a knife until creamy but still textured.",
+        "Whisk in tahini, yogurt, crushed garlic, lemon and salt to taste.",
+        "Spread on a plate, drizzle with olive oil and scatter with chopped mint.",
+        "Serve at room temperature with warm flatbread."
+      ],
+      "tags": ["mezze", "dip", "smoky"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 6
+    },
+    {
+      "title": "Maamoul",
+      "description": "Buttery semolina shortbread cookies stamped in wooden molds and filled with date paste or nuts, eaten on Easter and Eid.",
+      "ingredients": [
+        {"name": "fine semolina", "quantity": 400, "unit": "g"},
+        {"name": "all-purpose flour", "quantity": 100, "unit": "g"},
+        {"name": "unsalted butter", "quantity": 250, "unit": "g"},
+        {"name": "powdered sugar", "quantity": 60, "unit": "g"},
+        {"name": "milk", "quantity": 80, "unit": "ml"},
+        {"name": "rose water", "quantity": 1, "unit": "tbsp"},
+        {"name": "orange blossom water", "quantity": 1, "unit": "tbsp"},
+        {"name": "instant yeast", "quantity": 0.5, "unit": "tsp"},
+        {"name": "date paste", "quantity": 250, "unit": "g"},
+        {"name": "ground walnuts", "quantity": 100, "unit": "g"},
+        {"name": "ground cinnamon", "quantity": 0.5, "unit": "tsp"}
+      ],
+      "steps": [
+        "Combine semolina and flour with melted butter and rest overnight at room temperature.",
+        "Dissolve yeast and sugar in warm milk with the floral waters and knead into the semolina mixture.",
+        "Mix date paste with cinnamon and roll into walnut-sized balls; do the same with the ground walnuts mixed with sugar.",
+        "Take a piece of dough, flatten, place a filling ball in the center and seal completely.",
+        "Press into a maamoul mold to imprint the pattern, then tap out onto a baking sheet.",
+        "Bake at 170°C for 18-20 minutes until just set but still pale, then cool and dust with powdered sugar."
+      ],
+      "tags": ["dessert", "cookies", "celebration"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 720,
+      "cookTime": 20,
+      "servings": 24
+    },
+    {
+      "title": "Shanklish",
+      "description": "Aged spiced cheese balls rolled in za'atar and chili, crumbled over tomato, onion and olive oil for a piquant mezze.",
+      "ingredients": [
+        {"name": "shanklish cheese balls", "quantity": 3, "unit": "pc"},
+        {"name": "tomato", "quantity": 2, "unit": "pc"},
+        {"name": "red onion", "quantity": 1, "unit": "pc"},
+        {"name": "olive oil", "quantity": 4, "unit": "tbsp"},
+        {"name": "fresh parsley", "quantity": 0.25, "unit": "bunch"},
+        {"name": "fresh mint", "quantity": 0.25, "unit": "bunch"},
+        {"name": "lemon juice", "quantity": 1, "unit": "tbsp"},
+        {"name": "Aleppo pepper", "quantity": 0.5, "unit": "tsp"}
+      ],
+      "steps": [
+        "Crumble the shanklish balls coarsely into a shallow bowl.",
+        "Finely dice the tomato and onion and chop the herbs.",
+        "Add the tomato, onion, parsley and mint to the cheese.",
+        "Drizzle with olive oil, lemon juice and Aleppo pepper.",
+        "Toss gently so the cheese stays in chunky pieces.",
+        "Serve at room temperature with warm pita to scoop."
+      ],
+      "tags": ["mezze", "cheese", "salad"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 0,
+      "servings": 4
+    },
+    {
+      "title": "Riz a Djej",
+      "description": "Festive Lebanese spiced rice studded with toasted nuts and shredded chicken, perfumed with cinnamon and allspice.",
+      "ingredients": [
+        {"name": "whole chicken", "quantity": 1.5, "unit": "kg"},
+        {"name": "long-grain rice", "quantity": 400, "unit": "g"},
+        {"name": "minced lamb", "quantity": 300, "unit": "g"},
+        {"name": "ground allspice", "quantity": 1, "unit": "tsp"},
+        {"name": "ground cinnamon", "quantity": 1, "unit": "tsp"},
+        {"name": "cardamom pods", "quantity": 4, "unit": "pc"},
+        {"name": "bay leaves", "quantity": 2, "unit": "pc"},
+        {"name": "pine nuts", "quantity": 60, "unit": "g"},
+        {"name": "blanched almonds", "quantity": 60, "unit": "g"},
+        {"name": "ghee", "quantity": 3, "unit": "tbsp"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"},
+        {"name": "water", "quantity": 1.5, "unit": "l"}
+      ],
+      "steps": [
+        "Simmer the chicken with whole spices and salt for 60 minutes, then strain and reserve the broth.",
+        "Shred the chicken meat from the bones and discard the skin.",
+        "Brown the minced lamb in ghee with allspice and cinnamon for 8 minutes.",
+        "Stir in rinsed rice, toast 2 minutes, then pour over 800 ml hot broth.",
+        "Cover and simmer 18 minutes until the rice is tender, then rest 10 minutes.",
+        "Toast pine nuts and almonds in a little ghee, mound rice on a platter and top with shredded chicken and nuts."
+      ],
+      "tags": ["rice", "celebration", "chicken"],
+      "dietaryTags": ["halal"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Labneh",
+      "description": "Strained yogurt cheese with the tang of fresh dairy, drizzled with olive oil and dusted with za'atar to scoop with pita.",
+      "ingredients": [
+        {"name": "full-fat yogurt", "quantity": 1, "unit": "kg"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"},
+        {"name": "olive oil", "quantity": 3, "unit": "tbsp"},
+        {"name": "za'atar", "quantity": 1, "unit": "tbsp"},
+        {"name": "kalamata olives", "quantity": 6, "unit": "pc"}
+      ],
+      "steps": [
+        "Stir the salt thoroughly into the yogurt.",
+        "Line a sieve with a clean cheesecloth set over a bowl.",
+        "Tip in the yogurt, fold the cloth over and weight with a small plate.",
+        "Refrigerate for 24 hours, draining off the whey occasionally.",
+        "Spread the thick labneh into a swooped layer on a plate.",
+        "Pour over olive oil, sprinkle with za'atar and garnish with olives."
+      ],
+      "tags": ["mezze", "breakfast", "yogurt"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 1440,
+      "cookTime": 0,
+      "servings": 6
+    },
+    {
+      "title": "Kibbeh Nayyeh",
+      "description": "Raw lamb pounded with fine bulgur and spices to a silky pâté, dressed with olive oil and torn mint to scoop with bread.",
+      "ingredients": [
+        {"name": "lean lamb leg", "quantity": 500, "unit": "g"},
+        {"name": "fine bulgur", "quantity": 150, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "ground allspice", "quantity": 1, "unit": "tsp"},
+        {"name": "ground cinnamon", "quantity": 0.5, "unit": "tsp"},
+        {"name": "Aleppo pepper", "quantity": 0.5, "unit": "tsp"},
+        {"name": "salt", "quantity": 1.5, "unit": "tsp"},
+        {"name": "ice water", "quantity": 60, "unit": "ml"},
+        {"name": "olive oil", "quantity": 3, "unit": "tbsp"},
+        {"name": "fresh mint", "quantity": 0.25, "unit": "bunch"}
+      ],
+      "steps": [
+        "Soak bulgur in cold water for 15 minutes, then drain and squeeze dry.",
+        "Trim every trace of fat and sinew from the very fresh lamb and dice it.",
+        "Pulse lamb, onion, spices and salt in a food processor with ice water until silky.",
+        "Pulse in the bulgur until it forms a smooth, cohesive paste.",
+        "Spread on a chilled plate and score the surface with a fork.",
+        "Drizzle generously with olive oil and scatter with mint, serving immediately with cold pita."
+      ],
+      "tags": ["mezze", "raw", "celebration"],
+      "dietaryTags": ["halal"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 0,
+      "servings": 4
+    }
+  ]
+}

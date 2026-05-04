@@ -1,0 +1,787 @@
+{
+  "cuisine": "Thai",
+  "names": {
+    "first": ["Somchai", "Suda", "Anan", "Malee", "Niran", "Pim", "Kanya", "Chai", "Apinya", "Thaksin", "Ploy", "Arthit"],
+    "last": ["Saetang", "Chaiyasit", "Suwannakhot", "Phongpaichit", "Wattana", "Srisai", "Boonmee", "Charoen", "Rattanakorn", "Pongpanit"]
+  },
+  "recipes": [
+    {
+      "title": "Pad Thai",
+      "description": "Stir-fried rice noodles with shrimp, tofu, egg, bean sprouts and tamarind sauce, topped with peanuts.",
+      "ingredients": [
+        {"name": "Rice stick noodles", "quantity": 300, "unit": "g"},
+        {"name": "Shrimp", "quantity": 200, "unit": "g"},
+        {"name": "Firm tofu", "quantity": 150, "unit": "g"},
+        {"name": "Eggs", "quantity": 2, "unit": "pc"},
+        {"name": "Bean sprouts", "quantity": 200, "unit": "g"},
+        {"name": "Garlic chives", "quantity": 50, "unit": "g"},
+        {"name": "Tamarind paste", "quantity": 3, "unit": "tbsp"},
+        {"name": "Fish sauce", "quantity": 3, "unit": "tbsp"},
+        {"name": "Palm sugar", "quantity": 3, "unit": "tbsp"},
+        {"name": "Roasted peanuts", "quantity": 60, "unit": "g"},
+        {"name": "Garlic", "quantity": 4, "unit": "pc"},
+        {"name": "Lime", "quantity": 2, "unit": "pc"},
+        {"name": "Vegetable oil", "quantity": 3, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Soak noodles in warm water for 20 minutes until pliable, then drain.",
+        "Whisk tamarind, fish sauce and palm sugar to make pad thai sauce.",
+        "Heat oil in a wok and fry diced tofu until golden, then add chopped garlic and shrimp.",
+        "Push to the side and crack eggs in, scramble briefly.",
+        "Add noodles and sauce, tossing for 2 minutes until absorbed.",
+        "Add bean sprouts and chives, toss 30 seconds and serve with crushed peanuts and lime."
+      ],
+      "tags": ["noodles", "stir-fry", "iconic"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Tom Yum Goong",
+      "description": "Hot and sour Thai shrimp soup fragrant with lemongrass, kaffir lime, galangal and chilli.",
+      "ingredients": [
+        {"name": "Whole shrimp", "quantity": 500, "unit": "g"},
+        {"name": "Lemongrass", "quantity": 3, "unit": "pc"},
+        {"name": "Galangal", "quantity": 30, "unit": "g"},
+        {"name": "Kaffir lime leaves", "quantity": 6, "unit": "pc"},
+        {"name": "Thai bird chillies", "quantity": 5, "unit": "pc"},
+        {"name": "Straw mushrooms", "quantity": 200, "unit": "g"},
+        {"name": "Tomatoes", "quantity": 2, "unit": "pc"},
+        {"name": "Fish sauce", "quantity": 3, "unit": "tbsp"},
+        {"name": "Lime juice", "quantity": 4, "unit": "tbsp"},
+        {"name": "Nam prik pao", "quantity": 2, "unit": "tbsp"},
+        {"name": "Cilantro", "quantity": 1, "unit": "bunch"},
+        {"name": "Water", "quantity": 1.2, "unit": "l"}
+      ],
+      "steps": [
+        "Peel shrimp keeping the heads and shells, simmer shells with water for 15 minutes for stock, then strain.",
+        "Smash lemongrass, galangal and lime leaves and add to the stock.",
+        "Bring to a boil and add halved mushrooms and tomato wedges.",
+        "Add shrimp and cook 2 minutes until just opaque.",
+        "Off heat, stir in fish sauce, nam prik pao, lime juice and crushed chillies.",
+        "Garnish with cilantro and serve immediately."
+      ],
+      "tags": ["soup", "spicy", "sour"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Som Tum",
+      "description": "Spicy green papaya salad pounded with chilli, lime, fish sauce, peanuts and tomatoes.",
+      "ingredients": [
+        {"name": "Green papaya", "quantity": 500, "unit": "g"},
+        {"name": "Cherry tomatoes", "quantity": 150, "unit": "g"},
+        {"name": "Long beans", "quantity": 100, "unit": "g"},
+        {"name": "Garlic", "quantity": 3, "unit": "pc"},
+        {"name": "Thai bird chillies", "quantity": 4, "unit": "pc"},
+        {"name": "Roasted peanuts", "quantity": 50, "unit": "g"},
+        {"name": "Dried shrimp", "quantity": 1, "unit": "tbsp"},
+        {"name": "Palm sugar", "quantity": 2, "unit": "tbsp"},
+        {"name": "Fish sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Lime juice", "quantity": 3, "unit": "tbsp"},
+        {"name": "Tamarind paste", "quantity": 1, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Peel papaya and shred into thin strips.",
+        "Pound garlic and chillies in a mortar until coarse.",
+        "Add palm sugar, fish sauce, lime juice and tamarind, pounding to dissolve.",
+        "Add dried shrimp and peanuts and pound briefly.",
+        "Add long beans cut into 3 cm pieces and tomatoes, bruise gently.",
+        "Add papaya and use a spoon to fold and pound lightly until dressed."
+      ],
+      "tags": ["salad", "spicy", "Isan"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 0,
+      "servings": 4
+    },
+    {
+      "title": "Massaman Curry",
+      "description": "Rich southern Thai curry of beef, potatoes and peanuts in coconut milk with warm spices.",
+      "ingredients": [
+        {"name": "Beef chuck", "quantity": 800, "unit": "g"},
+        {"name": "Massaman curry paste", "quantity": 80, "unit": "g"},
+        {"name": "Coconut milk", "quantity": 800, "unit": "ml"},
+        {"name": "Potato", "quantity": 4, "unit": "pc"},
+        {"name": "Onion", "quantity": 2, "unit": "pc"},
+        {"name": "Roasted peanuts", "quantity": 80, "unit": "g"},
+        {"name": "Tamarind paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "Palm sugar", "quantity": 3, "unit": "tbsp"},
+        {"name": "Fish sauce", "quantity": 3, "unit": "tbsp"},
+        {"name": "Cinnamon stick", "quantity": 1, "unit": "pc"},
+        {"name": "Star anise", "quantity": 2, "unit": "pc"},
+        {"name": "Cardamom pods", "quantity": 4, "unit": "pc"}
+      ],
+      "steps": [
+        "Cube beef and brown in a heavy pot.",
+        "Crack open coconut cream from the top of the can and fry curry paste in it for 5 minutes.",
+        "Add beef, remaining coconut milk, cinnamon, star anise and cardamom.",
+        "Simmer covered for 90 minutes until beef is tender.",
+        "Add potatoes, onions and peanuts and simmer 25 minutes more.",
+        "Season with tamarind, palm sugar and fish sauce to balance."
+      ],
+      "tags": ["curry", "beef", "rich"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 130,
+      "servings": 6
+    },
+    {
+      "title": "Khao Pad",
+      "description": "Thai-style fried rice with shrimp, egg, garlic, scallions and a squeeze of lime.",
+      "ingredients": [
+        {"name": "Cooked jasmine rice", "quantity": 4, "unit": "cup"},
+        {"name": "Shrimp", "quantity": 250, "unit": "g"},
+        {"name": "Eggs", "quantity": 3, "unit": "pc"},
+        {"name": "Garlic", "quantity": 4, "unit": "pc"},
+        {"name": "Scallions", "quantity": 4, "unit": "pc"},
+        {"name": "Onion", "quantity": 1, "unit": "pc"},
+        {"name": "Fish sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Soy sauce", "quantity": 1, "unit": "tbsp"},
+        {"name": "Sugar", "quantity": 1, "unit": "tsp"},
+        {"name": "Lime", "quantity": 2, "unit": "pc"},
+        {"name": "Vegetable oil", "quantity": 3, "unit": "tbsp"},
+        {"name": "Cucumber", "quantity": 1, "unit": "pc"}
+      ],
+      "steps": [
+        "Use day-old chilled rice, breaking up clumps by hand.",
+        "Heat oil in a wok over high heat and stir-fry chopped garlic and onion 30 seconds.",
+        "Add shrimp and cook 1 minute, push aside and scramble eggs into curds.",
+        "Add rice and toss for 2 minutes.",
+        "Season with fish sauce, soy sauce and sugar, tossing to coat.",
+        "Finish with scallions and serve with lime wedges and cucumber slices."
+      ],
+      "tags": ["rice", "stir-fry", "weeknight"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Pad See Ew",
+      "description": "Wide rice noodles charred with chicken, Chinese broccoli and sweet dark soy sauce.",
+      "ingredients": [
+        {"name": "Fresh wide rice noodles", "quantity": 500, "unit": "g"},
+        {"name": "Boneless chicken thighs", "quantity": 400, "unit": "g"},
+        {"name": "Chinese broccoli", "quantity": 300, "unit": "g"},
+        {"name": "Eggs", "quantity": 2, "unit": "pc"},
+        {"name": "Garlic", "quantity": 4, "unit": "pc"},
+        {"name": "Dark soy sauce", "quantity": 3, "unit": "tbsp"},
+        {"name": "Soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Oyster sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Sugar", "quantity": 1, "unit": "tbsp"},
+        {"name": "White pepper", "quantity": 0.5, "unit": "tsp"},
+        {"name": "Vegetable oil", "quantity": 3, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Slice chicken and noodles into bite-sized pieces, separating the noodles by hand.",
+        "Heat oil in a wok over high heat and stir-fry garlic and chicken 2 minutes.",
+        "Push to one side, crack in eggs and scramble briefly.",
+        "Add Chinese broccoli stems first, then leaves, stirring 1 minute.",
+        "Add noodles and sauces, allowing them to char on the wok bottom.",
+        "Toss everything together, finish with white pepper."
+      ],
+      "tags": ["noodles", "stir-fry", "Thai street food"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Tom Kha Gai",
+      "description": "Coconut and galangal chicken soup balanced with lime, lemongrass and chilli.",
+      "ingredients": [
+        {"name": "Boneless chicken thighs", "quantity": 500, "unit": "g"},
+        {"name": "Coconut milk", "quantity": 800, "unit": "ml"},
+        {"name": "Chicken stock", "quantity": 400, "unit": "ml"},
+        {"name": "Galangal", "quantity": 40, "unit": "g"},
+        {"name": "Lemongrass", "quantity": 3, "unit": "pc"},
+        {"name": "Kaffir lime leaves", "quantity": 6, "unit": "pc"},
+        {"name": "Thai bird chillies", "quantity": 4, "unit": "pc"},
+        {"name": "Straw mushrooms", "quantity": 200, "unit": "g"},
+        {"name": "Fish sauce", "quantity": 3, "unit": "tbsp"},
+        {"name": "Lime juice", "quantity": 4, "unit": "tbsp"},
+        {"name": "Palm sugar", "quantity": 1, "unit": "tbsp"},
+        {"name": "Cilantro", "quantity": 1, "unit": "bunch"}
+      ],
+      "steps": [
+        "Slice galangal thinly and bruise lemongrass and lime leaves.",
+        "Combine coconut milk and stock with the aromatics and bring to a gentle simmer.",
+        "Simmer 10 minutes to infuse.",
+        "Add sliced chicken and mushrooms, simmer 8 minutes until cooked.",
+        "Off heat, season with fish sauce, palm sugar, lime juice and crushed chillies.",
+        "Top with cilantro and serve."
+      ],
+      "tags": ["soup", "coconut", "fragrant"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Larb",
+      "description": "Northeastern Thai minced meat salad with toasted rice powder, herbs, lime and chilli.",
+      "ingredients": [
+        {"name": "Ground chicken", "quantity": 500, "unit": "g"},
+        {"name": "Glutinous rice", "quantity": 2, "unit": "tbsp"},
+        {"name": "Shallots", "quantity": 4, "unit": "pc"},
+        {"name": "Scallions", "quantity": 4, "unit": "pc"},
+        {"name": "Mint leaves", "quantity": 1, "unit": "bunch"},
+        {"name": "Cilantro", "quantity": 1, "unit": "bunch"},
+        {"name": "Fish sauce", "quantity": 3, "unit": "tbsp"},
+        {"name": "Lime juice", "quantity": 4, "unit": "tbsp"},
+        {"name": "Dried chilli flakes", "quantity": 1, "unit": "tbsp"},
+        {"name": "Palm sugar", "quantity": 1, "unit": "tsp"},
+        {"name": "Lettuce leaves", "quantity": 1, "unit": "bunch"}
+      ],
+      "steps": [
+        "Toast glutinous rice in a dry pan until deep golden, then grind to a coarse powder.",
+        "In a wok, cook chicken with a splash of water, breaking it up.",
+        "Off heat, season chicken with fish sauce, lime juice, sugar and chilli flakes.",
+        "Stir in sliced shallots, scallions and toasted rice powder.",
+        "Fold through mint and cilantro just before serving.",
+        "Serve with lettuce leaves and steamed sticky rice."
+      ],
+      "tags": ["salad", "Isan", "spicy"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Khao Soi",
+      "description": "Northern Thai coconut curry noodle soup topped with crispy egg noodles, pickles and lime.",
+      "ingredients": [
+        {"name": "Egg noodles", "quantity": 500, "unit": "g"},
+        {"name": "Boneless chicken thighs", "quantity": 600, "unit": "g"},
+        {"name": "Coconut milk", "quantity": 800, "unit": "ml"},
+        {"name": "Khao soi paste", "quantity": 80, "unit": "g"},
+        {"name": "Chicken stock", "quantity": 500, "unit": "ml"},
+        {"name": "Fish sauce", "quantity": 3, "unit": "tbsp"},
+        {"name": "Palm sugar", "quantity": 2, "unit": "tbsp"},
+        {"name": "Pickled mustard greens", "quantity": 100, "unit": "g"},
+        {"name": "Shallots", "quantity": 3, "unit": "pc"},
+        {"name": "Lime", "quantity": 2, "unit": "pc"},
+        {"name": "Cilantro", "quantity": 1, "unit": "bunch"},
+        {"name": "Vegetable oil", "quantity": 4, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Fry curry paste in 2 tablespoons oil until fragrant.",
+        "Add coconut milk and stock, bring to a simmer.",
+        "Add chicken pieces and simmer 25 minutes until cooked through.",
+        "Season with fish sauce and palm sugar.",
+        "Cook two-thirds of the noodles in boiling water, then divide among bowls.",
+        "Deep-fry remaining noodles in hot oil for 30 seconds until crisp.",
+        "Ladle curry over noodles, top with crispy noodles, shallots, pickles, cilantro and lime."
+      ],
+      "tags": ["noodles", "curry", "northern Thai"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 35,
+      "servings": 4
+    },
+    {
+      "title": "Green Curry",
+      "description": "Fragrant Thai green curry with chicken, Thai eggplant, basil and coconut milk.",
+      "ingredients": [
+        {"name": "Boneless chicken thighs", "quantity": 600, "unit": "g"},
+        {"name": "Green curry paste", "quantity": 80, "unit": "g"},
+        {"name": "Coconut milk", "quantity": 800, "unit": "ml"},
+        {"name": "Thai eggplant", "quantity": 200, "unit": "g"},
+        {"name": "Bamboo shoots", "quantity": 200, "unit": "g"},
+        {"name": "Kaffir lime leaves", "quantity": 6, "unit": "pc"},
+        {"name": "Fish sauce", "quantity": 3, "unit": "tbsp"},
+        {"name": "Palm sugar", "quantity": 2, "unit": "tbsp"},
+        {"name": "Thai basil", "quantity": 1, "unit": "bunch"},
+        {"name": "Red chillies", "quantity": 2, "unit": "pc"}
+      ],
+      "steps": [
+        "Crack open coconut cream from the top of the can and simmer in a wok until oil separates.",
+        "Add curry paste and fry until very fragrant, 3 minutes.",
+        "Add sliced chicken and toss to coat with paste.",
+        "Pour in remaining coconut milk and lime leaves, simmer 8 minutes.",
+        "Add quartered eggplant and bamboo shoots, simmer 8 more minutes.",
+        "Season with fish sauce and palm sugar, finish with Thai basil and chilli slices."
+      ],
+      "tags": ["curry", "chicken", "fragrant"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Pad Krapow",
+      "description": "Stir-fried minced pork with holy basil, chilli and garlic, served over rice with a fried egg.",
+      "ingredients": [
+        {"name": "Ground pork", "quantity": 500, "unit": "g"},
+        {"name": "Holy basil leaves", "quantity": 1, "unit": "bunch"},
+        {"name": "Garlic", "quantity": 6, "unit": "pc"},
+        {"name": "Thai bird chillies", "quantity": 6, "unit": "pc"},
+        {"name": "Long beans", "quantity": 100, "unit": "g"},
+        {"name": "Oyster sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Fish sauce", "quantity": 1, "unit": "tbsp"},
+        {"name": "Soy sauce", "quantity": 1, "unit": "tbsp"},
+        {"name": "Sugar", "quantity": 1, "unit": "tsp"},
+        {"name": "Eggs", "quantity": 4, "unit": "pc"},
+        {"name": "Vegetable oil", "quantity": 4, "unit": "tbsp"},
+        {"name": "Cooked jasmine rice", "quantity": 4, "unit": "cup"}
+      ],
+      "steps": [
+        "Pound garlic and chillies into a coarse paste.",
+        "Heat 2 tablespoons oil in a wok and fry the paste 30 seconds.",
+        "Add pork and stir-fry 4 minutes, breaking up.",
+        "Add chopped long beans and stir-fry 1 minute.",
+        "Season with oyster sauce, fish sauce, soy sauce and sugar.",
+        "Toss in holy basil leaves until just wilted.",
+        "In a separate pan, fry eggs in hot oil until edges are crisp.",
+        "Serve pork over rice topped with the fried egg."
+      ],
+      "tags": ["stir-fry", "spicy", "weeknight"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Mango Sticky Rice",
+      "description": "Sweet coconut-soaked sticky rice served with ripe mango and toasted mung beans.",
+      "ingredients": [
+        {"name": "Glutinous rice", "quantity": 400, "unit": "g"},
+        {"name": "Coconut milk", "quantity": 400, "unit": "ml"},
+        {"name": "Sugar", "quantity": 100, "unit": "g"},
+        {"name": "Salt", "quantity": 1, "unit": "tsp"},
+        {"name": "Ripe mangoes", "quantity": 3, "unit": "pc"},
+        {"name": "Toasted mung beans", "quantity": 2, "unit": "tbsp"},
+        {"name": "Pandan leaf", "quantity": 1, "unit": "pc"}
+      ],
+      "steps": [
+        "Soak glutinous rice in water for at least 4 hours.",
+        "Drain rice and steam in a bamboo basket lined with cloth for 25 minutes.",
+        "Warm coconut milk with sugar, salt and pandan leaf until dissolved.",
+        "Pour two-thirds of the coconut mixture over the hot rice and let it absorb 20 minutes.",
+        "Slice the mango cheeks.",
+        "Plate rice with mango, drizzle with the remaining coconut sauce and sprinkle mung beans."
+      ],
+      "tags": ["dessert", "coconut", "sweet"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 240,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Panang Curry",
+      "description": "Thick, peanut-rich Thai curry with beef, kaffir lime and coconut cream.",
+      "ingredients": [
+        {"name": "Beef sirloin", "quantity": 600, "unit": "g"},
+        {"name": "Panang curry paste", "quantity": 80, "unit": "g"},
+        {"name": "Coconut milk", "quantity": 600, "unit": "ml"},
+        {"name": "Kaffir lime leaves", "quantity": 6, "unit": "pc"},
+        {"name": "Roasted peanuts", "quantity": 50, "unit": "g"},
+        {"name": "Fish sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Palm sugar", "quantity": 2, "unit": "tbsp"},
+        {"name": "Red chillies", "quantity": 2, "unit": "pc"},
+        {"name": "Thai basil", "quantity": 1, "unit": "bunch"}
+      ],
+      "steps": [
+        "Slice beef thinly against the grain.",
+        "Simmer the cream from the top of the coconut milk in a wok until oil separates.",
+        "Add curry paste and ground peanuts, fry 3 minutes.",
+        "Add beef and toss to coat.",
+        "Pour in remaining coconut milk and shredded lime leaves, simmer 8 minutes.",
+        "Season with fish sauce and palm sugar, garnish with sliced chilli and basil."
+      ],
+      "tags": ["curry", "beef", "rich"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Yam Nua",
+      "description": "Spicy Thai grilled beef salad with cucumber, tomato, mint and a tangy lime dressing.",
+      "ingredients": [
+        {"name": "Sirloin steak", "quantity": 500, "unit": "g"},
+        {"name": "Cucumber", "quantity": 1, "unit": "pc"},
+        {"name": "Cherry tomatoes", "quantity": 200, "unit": "g"},
+        {"name": "Shallots", "quantity": 3, "unit": "pc"},
+        {"name": "Mint leaves", "quantity": 1, "unit": "bunch"},
+        {"name": "Cilantro", "quantity": 1, "unit": "bunch"},
+        {"name": "Lime juice", "quantity": 4, "unit": "tbsp"},
+        {"name": "Fish sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Palm sugar", "quantity": 1, "unit": "tbsp"},
+        {"name": "Thai bird chillies", "quantity": 3, "unit": "pc"},
+        {"name": "Garlic", "quantity": 3, "unit": "pc"}
+      ],
+      "steps": [
+        "Season steak with salt and pepper and grill to medium-rare.",
+        "Rest 5 minutes, then slice thinly against the grain.",
+        "Whisk lime juice, fish sauce, palm sugar, minced garlic and crushed chillies for the dressing.",
+        "Combine sliced steak with halved tomatoes, sliced cucumber and shallots.",
+        "Pour over dressing and toss gently.",
+        "Fold through mint and cilantro just before serving."
+      ],
+      "tags": ["salad", "beef", "spicy"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Pad Woon Sen",
+      "description": "Glass noodle stir-fry with shrimp, chicken, eggs and vegetables in a savoury sauce.",
+      "ingredients": [
+        {"name": "Glass noodles", "quantity": 250, "unit": "g"},
+        {"name": "Shrimp", "quantity": 200, "unit": "g"},
+        {"name": "Chicken thigh", "quantity": 200, "unit": "g"},
+        {"name": "Eggs", "quantity": 2, "unit": "pc"},
+        {"name": "Garlic", "quantity": 4, "unit": "pc"},
+        {"name": "Carrot", "quantity": 1, "unit": "pc"},
+        {"name": "Cabbage", "quantity": 200, "unit": "g"},
+        {"name": "Scallions", "quantity": 4, "unit": "pc"},
+        {"name": "Oyster sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Fish sauce", "quantity": 1, "unit": "tbsp"},
+        {"name": "Sugar", "quantity": 1, "unit": "tsp"},
+        {"name": "Vegetable oil", "quantity": 3, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Soak glass noodles in warm water for 10 minutes, then drain.",
+        "Heat oil in a wok and stir-fry chopped garlic with sliced chicken for 2 minutes.",
+        "Add shrimp and cook 1 minute, push aside and scramble eggs.",
+        "Add julienned carrot and shredded cabbage and stir 1 minute.",
+        "Add noodles, oyster sauce, soy sauce, fish sauce and sugar with 80 ml water.",
+        "Toss until noodles are translucent and tender, finish with scallions."
+      ],
+      "tags": ["noodles", "stir-fry", "weeknight"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Khao Man Gai",
+      "description": "Thai-style Hainanese chicken rice with poached chicken and fragrant chicken-fat rice.",
+      "ingredients": [
+        {"name": "Whole chicken", "quantity": 1.5, "unit": "kg"},
+        {"name": "Jasmine rice", "quantity": 500, "unit": "g"},
+        {"name": "Garlic", "quantity": 8, "unit": "pc"},
+        {"name": "Ginger", "quantity": 60, "unit": "g"},
+        {"name": "Pandan leaf", "quantity": 1, "unit": "pc"},
+        {"name": "Cilantro roots", "quantity": 4, "unit": "pc"},
+        {"name": "Fermented soybean paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "Chillies", "quantity": 4, "unit": "pc"},
+        {"name": "Soy sauce", "quantity": 3, "unit": "tbsp"},
+        {"name": "Vinegar", "quantity": 2, "unit": "tbsp"},
+        {"name": "Cucumber", "quantity": 1, "unit": "pc"},
+        {"name": "Salt", "quantity": 1, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Poach the whole chicken with smashed ginger, garlic and cilantro roots for 35 minutes; rest in stock.",
+        "Reserve 1 litre stock and cool, slice cooled chicken.",
+        "Saute crushed garlic and ginger in chicken fat, add rinsed rice and toss 2 minutes.",
+        "Cook rice with chicken stock, pandan leaf and salt until fluffy.",
+        "Pound chillies, garlic and ginger, then mix with soybean paste, soy sauce and vinegar for sauce.",
+        "Serve sliced chicken over rice with cucumber, sauce and a bowl of broth."
+      ],
+      "tags": ["rice", "chicken", "comfort food"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 60,
+      "servings": 4
+    },
+    {
+      "title": "Pad Kee Mao",
+      "description": "Drunken stir-fried wide rice noodles with shrimp, holy basil, chillies and garlic.",
+      "ingredients": [
+        {"name": "Fresh wide rice noodles", "quantity": 500, "unit": "g"},
+        {"name": "Shrimp", "quantity": 300, "unit": "g"},
+        {"name": "Holy basil leaves", "quantity": 1, "unit": "bunch"},
+        {"name": "Garlic", "quantity": 6, "unit": "pc"},
+        {"name": "Thai bird chillies", "quantity": 5, "unit": "pc"},
+        {"name": "Long beans", "quantity": 100, "unit": "g"},
+        {"name": "Bell pepper", "quantity": 1, "unit": "pc"},
+        {"name": "Oyster sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Dark soy sauce", "quantity": 1, "unit": "tbsp"},
+        {"name": "Fish sauce", "quantity": 1, "unit": "tbsp"},
+        {"name": "Sugar", "quantity": 1, "unit": "tsp"},
+        {"name": "Vegetable oil", "quantity": 3, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Pound garlic and chillies into a paste.",
+        "Heat oil in a wok over high heat and fry the paste 30 seconds.",
+        "Add shrimp and stir-fry 1 minute, then push aside.",
+        "Add long beans and bell pepper and stir 1 minute.",
+        "Add noodles, oyster sauce, soy sauces, fish sauce and sugar, tossing to char.",
+        "Finish with handfuls of holy basil and serve immediately."
+      ],
+      "tags": ["noodles", "spicy", "stir-fry"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Satay",
+      "description": "Thai-style grilled marinated chicken skewers served with creamy peanut sauce.",
+      "ingredients": [
+        {"name": "Boneless chicken thighs", "quantity": 700, "unit": "g"},
+        {"name": "Coconut milk", "quantity": 200, "unit": "ml"},
+        {"name": "Lemongrass", "quantity": 2, "unit": "pc"},
+        {"name": "Turmeric", "quantity": 1, "unit": "tsp"},
+        {"name": "Cumin", "quantity": 1, "unit": "tsp"},
+        {"name": "Coriander", "quantity": 1, "unit": "tsp"},
+        {"name": "Garlic", "quantity": 3, "unit": "pc"},
+        {"name": "Fish sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Palm sugar", "quantity": 2, "unit": "tbsp"},
+        {"name": "Roasted peanuts", "quantity": 150, "unit": "g"},
+        {"name": "Red curry paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "Tamarind paste", "quantity": 1, "unit": "tbsp"},
+        {"name": "Bamboo skewers", "quantity": 16, "unit": "pc"}
+      ],
+      "steps": [
+        "Soak skewers in water for 30 minutes.",
+        "Slice chicken into thin strips and marinate with half the coconut milk, lemongrass, spices, garlic and fish sauce.",
+        "Thread chicken onto skewers and grill over hot coals 3 minutes per side, basting with coconut milk.",
+        "For peanut sauce, fry curry paste in remaining coconut milk in a saucepan.",
+        "Add ground peanuts, palm sugar, tamarind and a splash of water and simmer to thick sauce.",
+        "Serve skewers with peanut sauce."
+      ],
+      "tags": ["grilled", "skewers", "chicken"],
+      "difficulty": "medium",
+      "prepTime": 50,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Yum Woon Sen",
+      "description": "Glass noodle salad tossed with shrimp, ground pork, peanuts and a tart lime dressing.",
+      "ingredients": [
+        {"name": "Glass noodles", "quantity": 200, "unit": "g"},
+        {"name": "Shrimp", "quantity": 200, "unit": "g"},
+        {"name": "Ground pork", "quantity": 200, "unit": "g"},
+        {"name": "Tomatoes", "quantity": 2, "unit": "pc"},
+        {"name": "Shallots", "quantity": 3, "unit": "pc"},
+        {"name": "Celery", "quantity": 2, "unit": "pc"},
+        {"name": "Roasted peanuts", "quantity": 50, "unit": "g"},
+        {"name": "Lime juice", "quantity": 4, "unit": "tbsp"},
+        {"name": "Fish sauce", "quantity": 3, "unit": "tbsp"},
+        {"name": "Palm sugar", "quantity": 1, "unit": "tbsp"},
+        {"name": "Thai bird chillies", "quantity": 4, "unit": "pc"},
+        {"name": "Garlic", "quantity": 3, "unit": "pc"},
+        {"name": "Cilantro", "quantity": 1, "unit": "bunch"}
+      ],
+      "steps": [
+        "Soak glass noodles in warm water for 8 minutes, then blanch briefly and drain.",
+        "Boil pork briefly in water, add shrimp and cook until just done, drain.",
+        "Pound chillies and garlic in a mortar.",
+        "Mix with lime juice, fish sauce and palm sugar to make dressing.",
+        "Toss noodles, pork, shrimp, sliced shallots, celery, tomato wedges and dressing.",
+        "Top with peanuts and cilantro."
+      ],
+      "tags": ["salad", "noodles", "spicy"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Khao Niao",
+      "description": "Steamed Thai sticky rice, the staple accompaniment to northern and Isan dishes.",
+      "ingredients": [
+        {"name": "Glutinous rice", "quantity": 500, "unit": "g"},
+        {"name": "Water", "quantity": 1, "unit": "l"}
+      ],
+      "steps": [
+        "Rinse rice and soak in water for at least 4 hours or overnight.",
+        "Drain the rice and place in a bamboo steamer basket lined with cloth.",
+        "Set basket over a pot of boiling water.",
+        "Steam for 20 minutes, then flip the rice over.",
+        "Steam another 10 minutes until rice is glossy and chewy.",
+        "Transfer to a covered basket to keep warm and serve with mains."
+      ],
+      "tags": ["rice", "side", "Isan"],
+      "dietaryTags": ["vegan", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 240,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Gai Yang",
+      "description": "Thai grilled marinated chicken with garlic, cilantro root, fish sauce and white pepper.",
+      "ingredients": [
+        {"name": "Whole chicken", "quantity": 1.5, "unit": "kg"},
+        {"name": "Garlic", "quantity": 8, "unit": "pc"},
+        {"name": "Cilantro roots", "quantity": 6, "unit": "pc"},
+        {"name": "White peppercorns", "quantity": 1, "unit": "tbsp"},
+        {"name": "Fish sauce", "quantity": 4, "unit": "tbsp"},
+        {"name": "Soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Palm sugar", "quantity": 2, "unit": "tbsp"},
+        {"name": "Lemongrass", "quantity": 2, "unit": "pc"},
+        {"name": "Coconut milk", "quantity": 100, "unit": "ml"}
+      ],
+      "steps": [
+        "Butterfly the chicken by removing the backbone and pressing flat.",
+        "Pound garlic, cilantro roots, peppercorns and lemongrass to a paste.",
+        "Mix paste with fish sauce, soy sauce, palm sugar and coconut milk.",
+        "Rub marinade thoroughly into the chicken and refrigerate at least 4 hours.",
+        "Grill skin-side up over medium coals for 35 minutes, turning often and basting.",
+        "Rest 10 minutes, chop into pieces and serve with sticky rice."
+      ],
+      "tags": ["grilled", "chicken", "Isan"],
+      "difficulty": "medium",
+      "prepTime": 250,
+      "cookTime": 40,
+      "servings": 4
+    },
+    {
+      "title": "Pad Prik King",
+      "description": "Stir-fried green beans and pork with red curry paste and kaffir lime leaves.",
+      "ingredients": [
+        {"name": "Pork loin", "quantity": 400, "unit": "g"},
+        {"name": "Long beans", "quantity": 300, "unit": "g"},
+        {"name": "Red curry paste", "quantity": 3, "unit": "tbsp"},
+        {"name": "Kaffir lime leaves", "quantity": 6, "unit": "pc"},
+        {"name": "Fish sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Palm sugar", "quantity": 1, "unit": "tbsp"},
+        {"name": "Soy sauce", "quantity": 1, "unit": "tbsp"},
+        {"name": "Vegetable oil", "quantity": 3, "unit": "tbsp"},
+        {"name": "Red chillies", "quantity": 2, "unit": "pc"}
+      ],
+      "steps": [
+        "Slice pork thinly against the grain and cut beans into 4 cm pieces.",
+        "Heat oil in a wok and fry curry paste until fragrant, 2 minutes.",
+        "Add pork and stir-fry 3 minutes until cooked.",
+        "Add beans and toss 3 minutes until just tender-crisp.",
+        "Season with fish sauce, soy sauce and palm sugar.",
+        "Finish with shredded lime leaves and sliced chilli."
+      ],
+      "tags": ["stir-fry", "spicy", "weeknight"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Khanom Krok",
+      "description": "Thai coconut pancakes cooked in a special pan with crisp edges and creamy custard centres.",
+      "ingredients": [
+        {"name": "Rice flour", "quantity": 200, "unit": "g"},
+        {"name": "Cooked rice", "quantity": 50, "unit": "g"},
+        {"name": "Coconut milk", "quantity": 400, "unit": "ml"},
+        {"name": "Sugar", "quantity": 60, "unit": "g"},
+        {"name": "Salt", "quantity": 1, "unit": "tsp"},
+        {"name": "Scallions", "quantity": 3, "unit": "pc"},
+        {"name": "Sweet corn", "quantity": 80, "unit": "g"},
+        {"name": "Vegetable oil", "quantity": 2, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Blend rice flour, cooked rice, half the coconut milk and a pinch of salt into a smooth batter; rest 1 hour.",
+        "Mix remaining coconut milk with sugar and remaining salt for the topping.",
+        "Heat a khanom krok pan and brush each well with oil.",
+        "Fill each well two-thirds with batter and cook 2 minutes until edges set.",
+        "Top with sweet topping and add corn or scallion to each.",
+        "Cover briefly until tops are creamy, then scoop out two pancakes joined together."
+      ],
+      "tags": ["snack", "coconut", "street food"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 70,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Hoy Tod",
+      "description": "Thai crispy oyster omelette with a chewy batter, bean sprouts and chilli sauce.",
+      "ingredients": [
+        {"name": "Fresh oysters", "quantity": 300, "unit": "g"},
+        {"name": "Eggs", "quantity": 4, "unit": "pc"},
+        {"name": "Rice flour", "quantity": 60, "unit": "g"},
+        {"name": "Tapioca starch", "quantity": 40, "unit": "g"},
+        {"name": "Water", "quantity": 200, "unit": "ml"},
+        {"name": "Bean sprouts", "quantity": 200, "unit": "g"},
+        {"name": "Scallions", "quantity": 3, "unit": "pc"},
+        {"name": "Soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Sriracha", "quantity": 60, "unit": "ml"},
+        {"name": "Vegetable oil", "quantity": 4, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Whisk rice flour, tapioca starch and water into a smooth batter.",
+        "Heat 2 tablespoons oil on a flat griddle and pour batter to form a thin pancake.",
+        "Scatter oysters across the batter and cook until edges are crisp.",
+        "Pour beaten eggs over the top and cook 2 minutes.",
+        "Top with bean sprouts and scallions, drizzle with soy sauce.",
+        "Slide onto a plate and serve with sriracha."
+      ],
+      "tags": ["seafood", "egg", "street food"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Nam Tok",
+      "description": "Thai grilled beef salad with toasted rice powder, lime, fish sauce, mint and chilli.",
+      "ingredients": [
+        {"name": "Sirloin steak", "quantity": 500, "unit": "g"},
+        {"name": "Glutinous rice", "quantity": 2, "unit": "tbsp"},
+        {"name": "Shallots", "quantity": 4, "unit": "pc"},
+        {"name": "Scallions", "quantity": 4, "unit": "pc"},
+        {"name": "Mint leaves", "quantity": 1, "unit": "bunch"},
+        {"name": "Cilantro", "quantity": 1, "unit": "bunch"},
+        {"name": "Lime juice", "quantity": 4, "unit": "tbsp"},
+        {"name": "Fish sauce", "quantity": 3, "unit": "tbsp"},
+        {"name": "Dried chilli flakes", "quantity": 1, "unit": "tbsp"},
+        {"name": "Palm sugar", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Toast glutinous rice in a dry pan until golden, then grind to powder.",
+        "Grill steak to medium-rare and rest 5 minutes.",
+        "Slice steak thinly against the grain.",
+        "Whisk lime juice, fish sauce, palm sugar and chilli flakes into a dressing.",
+        "Toss steak with dressing, sliced shallots and toasted rice powder.",
+        "Fold in mint, cilantro and scallions and serve with sticky rice."
+      ],
+      "tags": ["salad", "beef", "Isan"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Pla Rad Prik",
+      "description": "Whole crispy fish topped with a sweet, tart and spicy tamarind chilli sauce.",
+      "ingredients": [
+        {"name": "Whole sea bass", "quantity": 1, "unit": "pc"},
+        {"name": "Tapioca starch", "quantity": 60, "unit": "g"},
+        {"name": "Vegetable oil", "quantity": 1, "unit": "l"},
+        {"name": "Garlic", "quantity": 6, "unit": "pc"},
+        {"name": "Red chillies", "quantity": 4, "unit": "pc"},
+        {"name": "Cilantro roots", "quantity": 3, "unit": "pc"},
+        {"name": "Tamarind paste", "quantity": 3, "unit": "tbsp"},
+        {"name": "Palm sugar", "quantity": 3, "unit": "tbsp"},
+        {"name": "Fish sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Lime juice", "quantity": 2, "unit": "tbsp"},
+        {"name": "Cilantro", "quantity": 1, "unit": "bunch"}
+      ],
+      "steps": [
+        "Score the fish on both sides and dust thoroughly with tapioca starch.",
+        "Heat oil to 180C and deep-fry the fish 6-7 minutes per side until crisp.",
+        "Pound garlic, chillies and cilantro roots into a paste.",
+        "Fry the paste in 2 tablespoons oil for 1 minute.",
+        "Add tamarind, palm sugar, fish sauce and 60 ml water and simmer to a syrup.",
+        "Stir in lime juice, pour over the fried fish and garnish with cilantro."
+      ],
+      "tags": ["fish", "fried", "spicy"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 20,
+      "servings": 4
+    }
+  ]
+}

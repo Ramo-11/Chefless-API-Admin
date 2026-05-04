@@ -1,0 +1,784 @@
+{
+  "cuisine": "Mexican",
+  "names": {
+    "first": ["Sofía", "Mateo", "Valentina", "Diego", "Camila", "Santiago", "Isabella", "Miguel", "Lucía", "Alejandro", "Renata", "Emiliano"],
+    "last": ["García", "Hernández", "Martínez", "López", "González", "Rodríguez", "Pérez", "Sánchez", "Ramírez", "Torres", "Flores", "Vázquez"]
+  },
+  "recipes": [
+    {
+      "title": "Tacos al Pastor",
+      "description": "Marinated pork shaved off a vertical spit and served on small corn tortillas with pineapple, onion, and cilantro.",
+      "ingredients": [
+        { "name": "pork shoulder, sliced thin", "quantity": 1, "unit": "kg" },
+        { "name": "guajillo chiles, stemmed and seeded", "quantity": 4, "unit": "pc" },
+        { "name": "ancho chiles, stemmed and seeded", "quantity": 2, "unit": "pc" },
+        { "name": "achiote paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "white vinegar", "quantity": 60, "unit": "ml" },
+        { "name": "pineapple juice", "quantity": 120, "unit": "ml" },
+        { "name": "garlic cloves", "quantity": 4, "unit": "pc" },
+        { "name": "cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "oregano", "quantity": 1, "unit": "tsp" },
+        { "name": "small corn tortillas", "quantity": 16, "unit": "pc" },
+        { "name": "fresh pineapple, finely diced", "quantity": 200, "unit": "g" },
+        { "name": "white onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "fresh cilantro, chopped", "quantity": 1, "unit": "bunch" },
+        { "name": "lime", "quantity": 2, "unit": "pc" }
+      ],
+      "steps": [
+        "Toast the dried chiles briefly in a dry skillet, then soak in hot water for 15 minutes until soft.",
+        "Blend the chiles with achiote, vinegar, pineapple juice, garlic, cumin, oregano, and 1 tsp salt to a smooth marinade.",
+        "Coat the pork slices in the marinade and refrigerate at least 4 hours, ideally overnight.",
+        "Cook the marinated pork on a very hot griddle or grill in batches until charred at the edges, about 3 minutes per side, then chop finely.",
+        "On the same surface, char the diced pineapple briefly until lightly caramelized.",
+        "Warm the tortillas on a dry skillet until pliable.",
+        "Build each taco with chopped pork, a spoon of pineapple, onion, cilantro, and a squeeze of lime."
+      ],
+      "tags": ["tacos", "pork", "street food", "marinated"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 20,
+      "servings": 6
+    },
+    {
+      "title": "Enchiladas Rojas",
+      "description": "Corn tortillas filled with shredded chicken, rolled, and bathed in red chile sauce, baked with cheese and crema.",
+      "ingredients": [
+        { "name": "cooked chicken, shredded", "quantity": 600, "unit": "g" },
+        { "name": "corn tortillas", "quantity": 12, "unit": "pc" },
+        { "name": "guajillo chiles", "quantity": 6, "unit": "pc" },
+        { "name": "ancho chiles", "quantity": 3, "unit": "pc" },
+        { "name": "Roma tomatoes", "quantity": 3, "unit": "pc" },
+        { "name": "white onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 3, "unit": "pc" },
+        { "name": "cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "Mexican oregano", "quantity": 1, "unit": "tsp" },
+        { "name": "queso fresco, crumbled", "quantity": 200, "unit": "g" },
+        { "name": "Mexican crema", "quantity": 150, "unit": "ml" },
+        { "name": "neutral oil", "quantity": 60, "unit": "ml" },
+        { "name": "fresh cilantro", "quantity": 1, "unit": "bunch" }
+      ],
+      "steps": [
+        "Toast the chiles in a dry pan, then simmer with tomatoes, half the onion, and garlic in water for 10 minutes.",
+        "Drain and blend with cumin, oregano, and 1 tsp salt to a smooth red sauce; strain.",
+        "Pour the sauce into a wide skillet and warm over low heat.",
+        "Lightly fry each tortilla in oil for 5 seconds per side to soften, then dip into the warm sauce.",
+        "Fill each sauced tortilla with shredded chicken, roll up, and place seam-side down in a baking dish.",
+        "Pour any remaining sauce over the top and bake at 190°C for 10 minutes until heated through.",
+        "Top with queso fresco, crema, finely chopped onion, and cilantro before serving."
+      ],
+      "tags": ["enchiladas", "chicken", "baked", "comfort food"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 35,
+      "servings": 4
+    },
+    {
+      "title": "Chiles Rellenos",
+      "description": "Roasted poblano peppers stuffed with cheese, dipped in fluffy egg batter, fried, and served in tomato broth.",
+      "ingredients": [
+        { "name": "poblano chiles", "quantity": 6, "unit": "pc" },
+        { "name": "queso Oaxaca", "quantity": 400, "unit": "g" },
+        { "name": "eggs, separated", "quantity": 4, "unit": "pc" },
+        { "name": "all-purpose flour", "quantity": 60, "unit": "g" },
+        { "name": "Roma tomatoes", "quantity": 5, "unit": "pc" },
+        { "name": "white onion", "quantity": 0.5, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 2, "unit": "pc" },
+        { "name": "chicken stock", "quantity": 240, "unit": "ml" },
+        { "name": "neutral oil for frying", "quantity": 500, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Roast the poblanos directly over a flame until blackened all over, then steam in a covered bowl for 10 minutes; peel carefully, leaving stems intact.",
+        "Cut a slit lengthwise in each chile, remove seeds, and stuff with strips of queso Oaxaca.",
+        "Blend tomatoes, onion, and garlic, then simmer in a saucepan with stock and salt for 10 minutes for the broth.",
+        "Beat egg whites to stiff peaks, then gently fold in the yolks and a pinch of salt.",
+        "Heat 5 cm of oil to 175°C, dust each stuffed chile with flour, dip in the egg batter, and fry until deep golden, turning once, about 3 minutes total.",
+        "Drain on paper towels.",
+        "Serve each chile in a shallow bowl with the warm tomato broth ladled around it."
+      ],
+      "tags": ["chiles", "vegetarian", "fried", "main course"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Mole Poblano",
+      "description": "Complex Pueblan sauce of chiles, chocolate, spices, and seeds, traditionally served over turkey or chicken.",
+      "ingredients": [
+        { "name": "bone-in chicken pieces", "quantity": 1.5, "unit": "kg" },
+        { "name": "ancho chiles", "quantity": 6, "unit": "pc" },
+        { "name": "mulato chiles", "quantity": 4, "unit": "pc" },
+        { "name": "pasilla chiles", "quantity": 4, "unit": "pc" },
+        { "name": "Mexican chocolate, chopped", "quantity": 90, "unit": "g" },
+        { "name": "sesame seeds", "quantity": 30, "unit": "g" },
+        { "name": "almonds", "quantity": 60, "unit": "g" },
+        { "name": "raisins", "quantity": 60, "unit": "g" },
+        { "name": "Roma tomatoes", "quantity": 3, "unit": "pc" },
+        { "name": "white onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 4, "unit": "pc" },
+        { "name": "cinnamon stick", "quantity": 1, "unit": "pc" },
+        { "name": "cloves", "quantity": 3, "unit": "pc" },
+        { "name": "corn tortilla, torn", "quantity": 1, "unit": "pc" },
+        { "name": "lard or oil", "quantity": 80, "unit": "ml" },
+        { "name": "chicken stock", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "Simmer the chicken in salted water with half the onion until just cooked, then reserve the broth.",
+        "Toast each variety of chile in a dry pan briefly, then soak in hot water 15 minutes.",
+        "In oil, separately toast sesame seeds, almonds, raisins, cinnamon, and cloves until fragrant.",
+        "Fry the torn tortilla until crisp.",
+        "Char tomatoes, remaining onion, and garlic on a comal until blistered.",
+        "Blend chiles, vegetables, toasted seeds and nuts, raisins, spices, tortilla, and chocolate with reserved broth in batches until very smooth.",
+        "Strain the mole into a heavy pot, simmer 30–40 minutes until thick and glossy, season, and serve ladled over the chicken with sesame seeds."
+      ],
+      "tags": ["mole", "chicken", "Pueblan", "celebration"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 90,
+      "servings": 8
+    },
+    {
+      "title": "Tamales",
+      "description": "Steamed corn masa parcels wrapped in corn husks, traditionally filled with red chile pork or chicken.",
+      "ingredients": [
+        { "name": "masa harina", "quantity": 500, "unit": "g" },
+        { "name": "lard", "quantity": 250, "unit": "g" },
+        { "name": "chicken stock, warm", "quantity": 600, "unit": "ml" },
+        { "name": "baking powder", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1.5, "unit": "tsp" },
+        { "name": "dried corn husks", "quantity": 30, "unit": "pc" },
+        { "name": "pork shoulder, cooked and shredded", "quantity": 600, "unit": "g" },
+        { "name": "guajillo chiles", "quantity": 6, "unit": "pc" },
+        { "name": "ancho chiles", "quantity": 3, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 3, "unit": "pc" },
+        { "name": "cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "Mexican oregano", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak corn husks in hot water for 1 hour until pliable.",
+        "Toast and soak the chiles, then blend with garlic, cumin, oregano, and salt to a thick sauce; mix with shredded pork.",
+        "Beat the lard until fluffy, then beat in masa harina, baking powder, salt, and warm stock until a soft, spreadable dough forms.",
+        "Spread 3 tbsp of masa down the center of a husk, top with 2 tbsp filling, and fold the husk over to enclose, then fold up the bottom.",
+        "Stand tamales upright in a steamer with the open ends up.",
+        "Steam over simmering water for 75–90 minutes, replenishing water as needed, until the masa easily separates from the husk.",
+        "Rest 10 minutes before unwrapping."
+      ],
+      "tags": ["tamales", "masa", "pork", "celebration"],
+      "difficulty": "hard",
+      "prepTime": 90,
+      "cookTime": 90,
+      "servings": 12
+    },
+    {
+      "title": "Pozole Rojo",
+      "description": "Hominy stew in a deep red chile broth with pork, garnished with cabbage, radish, lime, and oregano.",
+      "ingredients": [
+        { "name": "pork shoulder, cubed", "quantity": 1, "unit": "kg" },
+        { "name": "canned hominy, drained", "quantity": 800, "unit": "g" },
+        { "name": "guajillo chiles", "quantity": 6, "unit": "pc" },
+        { "name": "ancho chiles", "quantity": 3, "unit": "pc" },
+        { "name": "white onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 5, "unit": "pc" },
+        { "name": "Mexican oregano", "quantity": 1, "unit": "tbsp" },
+        { "name": "cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "shredded cabbage", "quantity": 200, "unit": "g" },
+        { "name": "radishes, sliced", "quantity": 8, "unit": "pc" },
+        { "name": "lime", "quantity": 3, "unit": "pc" },
+        { "name": "tostadas", "quantity": 8, "unit": "pc" }
+      ],
+      "steps": [
+        "Simmer pork with half the onion, 2 garlic cloves, bay leaves, and salt in 2 l water for 90 minutes until tender.",
+        "Toast the chiles, then soak in hot water 15 minutes.",
+        "Blend the soaked chiles with remaining onion and garlic, cumin, oregano, and a ladle of pork broth until smooth.",
+        "Strain the chile sauce into the pork pot.",
+        "Add hominy and simmer everything together 30 minutes; adjust salt.",
+        "Ladle into bowls and serve with cabbage, radish slices, lime wedges, oregano, and tostadas at the table.",
+        "Diners build their own bowls with the toppings."
+      ],
+      "tags": ["soup", "pork", "hominy", "celebration"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 150,
+      "servings": 8
+    },
+    {
+      "title": "Guacamole",
+      "description": "Bright dip of mashed avocado with lime, white onion, jalapeño, cilantro, and salt.",
+      "ingredients": [
+        { "name": "ripe avocados", "quantity": 4, "unit": "pc" },
+        { "name": "white onion, finely chopped", "quantity": 0.5, "unit": "pc" },
+        { "name": "jalapeño, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "fresh cilantro, chopped", "quantity": 0.5, "unit": "bunch" },
+        { "name": "lime juice", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "Roma tomato, diced (optional)", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "In a molcajete or sturdy bowl, mash a small portion of the onion, jalapeño, cilantro, and salt to a paste.",
+        "Halve the avocados, scoop the flesh into the bowl, and mash to your preferred chunky texture.",
+        "Stir in lime juice, the rest of the onion and jalapeño, and the tomato if using.",
+        "Taste and adjust salt and lime.",
+        "Serve immediately, ideally with warm tortilla chips."
+      ],
+      "tags": ["dip", "avocado", "vegan", "appetizer"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 0,
+      "servings": 4
+    },
+    {
+      "title": "Salsa Roja",
+      "description": "Smoky charred-tomato salsa with chiles, garlic, and onion, perfect for tacos, eggs, or chips.",
+      "ingredients": [
+        { "name": "Roma tomatoes", "quantity": 6, "unit": "pc" },
+        { "name": "serrano chiles", "quantity": 2, "unit": "pc" },
+        { "name": "white onion", "quantity": 0.5, "unit": "pc" },
+        { "name": "garlic cloves, unpeeled", "quantity": 3, "unit": "pc" },
+        { "name": "fresh cilantro", "quantity": 0.5, "unit": "bunch" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "lime juice", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Heat a comal or heavy skillet over medium-high heat.",
+        "Char the tomatoes, chiles, onion, and unpeeled garlic, turning until blistered and soft, 8–10 minutes.",
+        "Peel the garlic.",
+        "Blend the charred vegetables with cilantro and salt to your preferred texture, pulse for chunky or run smooth.",
+        "Stir in lime juice and adjust salt.",
+        "Serve at room temperature or warm slightly in a pan."
+      ],
+      "tags": ["salsa", "spicy", "vegan", "condiment"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 10,
+      "servings": 6
+    },
+    {
+      "title": "Chilaquiles Verdes",
+      "description": "Crispy tortilla chips simmered briefly in green tomatillo salsa, topped with crema, onion, and queso fresco.",
+      "ingredients": [
+        { "name": "stale corn tortillas, cut into wedges", "quantity": 12, "unit": "pc" },
+        { "name": "tomatillos, husked", "quantity": 600, "unit": "g" },
+        { "name": "serrano chiles", "quantity": 2, "unit": "pc" },
+        { "name": "white onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 2, "unit": "pc" },
+        { "name": "fresh cilantro", "quantity": 0.5, "unit": "bunch" },
+        { "name": "chicken stock", "quantity": 240, "unit": "ml" },
+        { "name": "neutral oil", "quantity": 240, "unit": "ml" },
+        { "name": "queso fresco, crumbled", "quantity": 100, "unit": "g" },
+        { "name": "Mexican crema", "quantity": 120, "unit": "ml" },
+        { "name": "eggs, fried", "quantity": 4, "unit": "pc" }
+      ],
+      "steps": [
+        "Heat oil and fry the tortilla wedges in batches until crisp and golden; drain on paper towels and salt lightly.",
+        "Boil tomatillos, chiles, half the onion, and garlic in water for 8 minutes until soft.",
+        "Drain and blend with cilantro, stock, and salt to a smooth green salsa.",
+        "Pour the salsa into a wide skillet and simmer for 5 minutes, adjusting consistency.",
+        "Add the fried tortillas and toss for 1–2 minutes so they soak up the salsa but stay slightly crisp.",
+        "Plate immediately and top with crema, queso fresco, finely chopped onion, and cilantro.",
+        "Crown each plate with a fried egg."
+      ],
+      "tags": ["breakfast", "tortillas", "tomatillo", "comfort food"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Carnitas",
+      "description": "Michoacán-style pork shoulder slow-cooked in lard until tender, then crisped at the edges; served on tortillas.",
+      "ingredients": [
+        { "name": "pork shoulder, cut into 5 cm chunks", "quantity": 1.5, "unit": "kg" },
+        { "name": "lard", "quantity": 250, "unit": "g" },
+        { "name": "orange, halved", "quantity": 1, "unit": "pc" },
+        { "name": "white onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 5, "unit": "pc" },
+        { "name": "Mexican oregano", "quantity": 1, "unit": "tsp" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "milk", "quantity": 240, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" },
+        { "name": "small corn tortillas", "quantity": 24, "unit": "pc" },
+        { "name": "fresh cilantro, chopped", "quantity": 1, "unit": "bunch" }
+      ],
+      "steps": [
+        "Place pork, lard, onion, garlic, oregano, bay leaves, and salt in a heavy pot.",
+        "Squeeze in the orange juice and add the spent halves; pour in the milk.",
+        "Add water to barely cover, bring to a simmer, then cook gently uncovered for 2.5 hours.",
+        "When the liquid has nearly evaporated, increase heat slightly and let the pork fry in its own rendered fat, turning to crisp the edges, 15–20 minutes.",
+        "Remove pork with a slotted spoon and shred coarsely.",
+        "Warm the tortillas on a comal.",
+        "Serve carnitas piled on tortillas with chopped onion, cilantro, salsa, and lime."
+      ],
+      "tags": ["pork", "tacos", "Michoacán", "main course"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 180,
+      "servings": 8
+    },
+    {
+      "title": "Tortilla Soup",
+      "description": "Tomato and chicken broth-based soup topped with crispy tortilla strips, avocado, lime, and queso fresco.",
+      "ingredients": [
+        { "name": "Roma tomatoes", "quantity": 5, "unit": "pc" },
+        { "name": "white onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 3, "unit": "pc" },
+        { "name": "guajillo chile", "quantity": 1, "unit": "pc" },
+        { "name": "chipotle in adobo", "quantity": 1, "unit": "pc" },
+        { "name": "chicken stock", "quantity": 1.5, "unit": "l" },
+        { "name": "cooked chicken, shredded", "quantity": 300, "unit": "g" },
+        { "name": "corn tortillas, cut into thin strips", "quantity": 6, "unit": "pc" },
+        { "name": "neutral oil", "quantity": 120, "unit": "ml" },
+        { "name": "avocado, diced", "quantity": 1, "unit": "pc" },
+        { "name": "queso fresco", "quantity": 80, "unit": "g" },
+        { "name": "Mexican crema", "quantity": 80, "unit": "ml" },
+        { "name": "lime", "quantity": 2, "unit": "pc" }
+      ],
+      "steps": [
+        "Char the tomatoes, half the onion, and garlic on a comal until blistered.",
+        "Toast and soak the guajillo chile briefly.",
+        "Blend the charred vegetables with the chiles and 240 ml stock until very smooth.",
+        "Heat 2 tbsp oil in a pot, pour in the puree, and fry for 5 minutes until darkened.",
+        "Add remaining stock, simmer 15 minutes, and season.",
+        "Meanwhile, fry the tortilla strips in the remaining oil until crisp; drain.",
+        "Add chicken to the soup to warm through and ladle into bowls topped with tortilla strips, avocado, queso fresco, crema, and lime."
+      ],
+      "tags": ["soup", "chicken", "tomato", "weeknight"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Sopes",
+      "description": "Thick masa cakes with pinched edges, topped with refried beans, meat, lettuce, salsa, crema, and cheese.",
+      "ingredients": [
+        { "name": "masa harina", "quantity": 400, "unit": "g" },
+        { "name": "warm water", "quantity": 320, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "refried pinto beans", "quantity": 400, "unit": "g" },
+        { "name": "cooked shredded chicken or beef", "quantity": 400, "unit": "g" },
+        { "name": "iceberg lettuce, shredded", "quantity": 100, "unit": "g" },
+        { "name": "salsa verde or roja", "quantity": 240, "unit": "ml" },
+        { "name": "queso fresco, crumbled", "quantity": 120, "unit": "g" },
+        { "name": "Mexican crema", "quantity": 120, "unit": "ml" },
+        { "name": "neutral oil", "quantity": 60, "unit": "ml" }
+      ],
+      "steps": [
+        "Knead masa harina, warm water, and salt to a smooth dough; rest 10 minutes covered.",
+        "Divide into 12 balls and press each between plastic into 8 cm rounds about 6 mm thick.",
+        "Cook on a dry comal over medium heat for 1 minute per side until set but not browned.",
+        "While still warm, pinch the edges up to form a small rim like a low boat.",
+        "Brush or shallow-fry sopes briefly in oil until lightly golden and slightly crisp.",
+        "Spread each with refried beans and top with shredded meat.",
+        "Finish with lettuce, salsa, crumbled queso fresco, and a drizzle of crema."
+      ],
+      "tags": ["masa", "antojito", "street food", "snack"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 25,
+      "servings": 6
+    },
+    {
+      "title": "Cochinita Pibil",
+      "description": "Yucatecan slow-roasted pork marinated in achiote and sour orange, wrapped in banana leaves until meltingly tender.",
+      "ingredients": [
+        { "name": "pork shoulder, cut into chunks", "quantity": 1.5, "unit": "kg" },
+        { "name": "achiote paste", "quantity": 90, "unit": "g" },
+        { "name": "sour orange juice (or 50/50 orange and lime juice)", "quantity": 240, "unit": "ml" },
+        { "name": "garlic cloves", "quantity": 6, "unit": "pc" },
+        { "name": "cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "Mexican oregano", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 2, "unit": "tsp" },
+        { "name": "banana leaves", "quantity": 2, "unit": "pc" },
+        { "name": "red onion, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "habanero, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "lime juice", "quantity": 60, "unit": "ml" },
+        { "name": "corn tortillas", "quantity": 18, "unit": "pc" }
+      ],
+      "steps": [
+        "Blend achiote paste, sour orange juice, garlic, cumin, oregano, and salt to a thick marinade.",
+        "Toss the pork with the marinade and refrigerate at least 4 hours, ideally overnight.",
+        "Pass the banana leaves over an open flame briefly to make them pliable, then line a Dutch oven, leaving long overhang.",
+        "Add the pork and marinade, fold the leaves over to enclose, and cover tightly.",
+        "Bake at 150°C for 4 hours until the pork shreds easily.",
+        "While it cooks, mix sliced red onion, habanero, lime juice, and salt for a quick pickle and rest 30 minutes.",
+        "Shred the pork and serve with warm tortillas and pickled onions."
+      ],
+      "tags": ["pork", "Yucatán", "slow-cooked", "celebration"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 240,
+      "servings": 8
+    },
+    {
+      "title": "Tinga de Pollo",
+      "description": "Smoky shredded chicken simmered with tomato and chipotle, served on tostadas or in tacos.",
+      "ingredients": [
+        { "name": "boneless chicken breast", "quantity": 700, "unit": "g" },
+        { "name": "Roma tomatoes", "quantity": 5, "unit": "pc" },
+        { "name": "white onion, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 3, "unit": "pc" },
+        { "name": "chipotle in adobo", "quantity": 3, "unit": "pc" },
+        { "name": "Mexican oregano", "quantity": 1, "unit": "tsp" },
+        { "name": "neutral oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "chicken stock", "quantity": 240, "unit": "ml" },
+        { "name": "tostadas", "quantity": 12, "unit": "pc" },
+        { "name": "refried beans", "quantity": 300, "unit": "g" },
+        { "name": "iceberg lettuce, shredded", "quantity": 100, "unit": "g" },
+        { "name": "queso fresco", "quantity": 100, "unit": "g" },
+        { "name": "Mexican crema", "quantity": 120, "unit": "ml" }
+      ],
+      "steps": [
+        "Simmer chicken in salted water with garlic and a piece of onion for 18 minutes; cool and shred.",
+        "Char tomatoes on a comal until blistered, then blend with chipotles and 2 cloves garlic until smooth.",
+        "Heat oil in a pan and sauté the sliced onion until soft.",
+        "Pour in the tomato-chipotle puree and oregano and fry 5 minutes.",
+        "Add the shredded chicken and stock and simmer 12 minutes until the sauce coats the meat thickly.",
+        "Spread tostadas with refried beans, top with tinga, lettuce, queso fresco, and crema.",
+        "Serve immediately while crispy."
+      ],
+      "tags": ["chicken", "chipotle", "tostadas", "weeknight"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 35,
+      "servings": 6
+    },
+    {
+      "title": "Birria",
+      "description": "Jalisco-style braised meat in a deep red chile broth, served as stew or in cheese-stuffed quesabirria tacos.",
+      "ingredients": [
+        { "name": "beef chuck, cubed", "quantity": 1.5, "unit": "kg" },
+        { "name": "guajillo chiles", "quantity": 8, "unit": "pc" },
+        { "name": "ancho chiles", "quantity": 3, "unit": "pc" },
+        { "name": "chiles de árbol", "quantity": 3, "unit": "pc" },
+        { "name": "Roma tomatoes", "quantity": 3, "unit": "pc" },
+        { "name": "white onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 6, "unit": "pc" },
+        { "name": "cinnamon stick", "quantity": 1, "unit": "pc" },
+        { "name": "cloves", "quantity": 3, "unit": "pc" },
+        { "name": "cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "Mexican oregano", "quantity": 1, "unit": "tbsp" },
+        { "name": "white vinegar", "quantity": 60, "unit": "ml" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "beef stock", "quantity": 1.5, "unit": "l" },
+        { "name": "corn tortillas", "quantity": 18, "unit": "pc" },
+        { "name": "Oaxaca cheese, grated", "quantity": 300, "unit": "g" },
+        { "name": "fresh cilantro and lime", "quantity": 1, "unit": "bunch" }
+      ],
+      "steps": [
+        "Toast and soak all chiles in hot water 15 minutes.",
+        "Char tomatoes, half the onion, and garlic on a comal until soft.",
+        "Blend chiles, charred vegetables, vinegar, cumin, oregano, cinnamon, and cloves with a little soaking water until very smooth; strain.",
+        "Toss the beef with the chile sauce in a Dutch oven, add bay leaves and stock, and bring to a simmer.",
+        "Cover and cook in a 160°C oven for 3 hours until the meat shreds easily.",
+        "Shred meat and skim the bright red consommé.",
+        "For quesabirria, dip tortillas in the consommé fat, place on a hot griddle, fill with meat and cheese, fold, and crisp on both sides; serve tacos with a small bowl of consommé for dipping."
+      ],
+      "tags": ["birria", "beef", "tacos", "Jalisco", "celebration"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 210,
+      "servings": 8
+    },
+    {
+      "title": "Chicharrón en Salsa Verde",
+      "description": "Crispy pork rinds simmered briefly in tangy green tomatillo salsa until tender; served with tortillas.",
+      "ingredients": [
+        { "name": "tomatillos, husked", "quantity": 700, "unit": "g" },
+        { "name": "serrano chiles", "quantity": 3, "unit": "pc" },
+        { "name": "white onion", "quantity": 0.5, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 2, "unit": "pc" },
+        { "name": "fresh cilantro", "quantity": 0.5, "unit": "bunch" },
+        { "name": "chicharrón (pork rinds)", "quantity": 250, "unit": "g" },
+        { "name": "neutral oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "corn tortillas", "quantity": 12, "unit": "pc" }
+      ],
+      "steps": [
+        "Boil tomatillos, chiles, onion, and garlic until soft, about 8 minutes.",
+        "Drain and blend with cilantro and salt to a smooth salsa.",
+        "Heat oil in a deep skillet, pour in the salsa, and fry for 5 minutes until darker green.",
+        "Break the chicharrón into bite-sized pieces and add to the salsa.",
+        "Simmer gently 8–10 minutes until the chicharrón is just softened but not mushy.",
+        "Adjust salt.",
+        "Serve immediately with hot corn tortillas."
+      ],
+      "tags": ["pork", "salsa verde", "comfort food", "breakfast"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Quesadilla",
+      "description": "Folded corn or flour tortilla filled with melted cheese and optional fillings like squash blossom or huitlacoche.",
+      "ingredients": [
+        { "name": "flour tortillas", "quantity": 8, "unit": "pc" },
+        { "name": "Oaxaca cheese, shredded", "quantity": 400, "unit": "g" },
+        { "name": "epazote leaves (optional)", "quantity": 8, "unit": "pc" },
+        { "name": "sautéed mushrooms or chicken (optional)", "quantity": 200, "unit": "g" },
+        { "name": "neutral oil", "quantity": 1, "unit": "tbsp" },
+        { "name": "salsa verde", "quantity": 240, "unit": "ml" }
+      ],
+      "steps": [
+        "Heat a comal or non-stick skillet over medium heat.",
+        "Warm one tortilla, sprinkle one half generously with cheese, and add a leaf of epazote or other filling.",
+        "Fold the tortilla over and press lightly with a spatula.",
+        "Cook 1–2 minutes per side until the tortilla is lightly toasted and the cheese is fully melted.",
+        "Repeat with remaining tortillas, brushing the pan with a little oil only if needed.",
+        "Cut in half and serve hot with salsa verde."
+      ],
+      "tags": ["quesadilla", "cheese", "snack", "vegetarian"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Elote",
+      "description": "Mexican grilled corn on the cob slathered with mayo, crema, cotija cheese, lime, and chile powder.",
+      "ingredients": [
+        { "name": "corn on the cob, husked", "quantity": 4, "unit": "pc" },
+        { "name": "mayonnaise", "quantity": 60, "unit": "ml" },
+        { "name": "Mexican crema", "quantity": 60, "unit": "ml" },
+        { "name": "cotija cheese, finely crumbled", "quantity": 80, "unit": "g" },
+        { "name": "lime", "quantity": 2, "unit": "pc" },
+        { "name": "chile powder (Tajín or guajillo)", "quantity": 1, "unit": "tsp" },
+        { "name": "fresh cilantro, chopped", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Heat a grill to high or use a stovetop grill pan.",
+        "Grill the corn, turning often, until charred in spots all around, about 8–10 minutes.",
+        "Mix mayo and crema in a small bowl.",
+        "Brush the hot corn generously with the mayo mixture, coating all sides.",
+        "Roll each cob in cotija to coat thickly.",
+        "Sprinkle with chile powder and cilantro and squeeze lime over the top.",
+        "Serve immediately on sticks or as is."
+      ],
+      "tags": ["corn", "street food", "side", "vegetarian"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Esquites",
+      "description": "Mexican corn salad with the same flavors as elote, served warm in a cup with mayo, lime, cotija, and chile.",
+      "ingredients": [
+        { "name": "corn kernels, fresh or frozen", "quantity": 600, "unit": "g" },
+        { "name": "unsalted butter", "quantity": 30, "unit": "g" },
+        { "name": "white onion, finely chopped", "quantity": 0.5, "unit": "pc" },
+        { "name": "epazote (optional)", "quantity": 4, "unit": "pc" },
+        { "name": "mayonnaise", "quantity": 80, "unit": "ml" },
+        { "name": "lime juice", "quantity": 2, "unit": "tbsp" },
+        { "name": "cotija cheese, crumbled", "quantity": 80, "unit": "g" },
+        { "name": "chile powder", "quantity": 1, "unit": "tsp" },
+        { "name": "fresh cilantro, chopped", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Melt butter in a wide skillet over high heat.",
+        "Add the corn and onion in a single layer and cook undisturbed for 4 minutes to char.",
+        "Stir and cook another 3 minutes until kernels are tender and browned in spots.",
+        "Stir in epazote and remove from heat.",
+        "In a bowl, fold the corn with mayo, lime juice, half the cotija, salt, and chile powder.",
+        "Spoon into cups, top with remaining cotija, more chile powder, and cilantro.",
+        "Serve warm."
+      ],
+      "tags": ["corn", "street food", "salad", "vegetarian"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Sopa de Fideo",
+      "description": "Mexican comfort soup of toasted thin noodles in a tomato-chicken broth, often topped with avocado and queso fresco.",
+      "ingredients": [
+        { "name": "fideo (thin pasta) noodles", "quantity": 200, "unit": "g" },
+        { "name": "Roma tomatoes", "quantity": 4, "unit": "pc" },
+        { "name": "white onion", "quantity": 0.5, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 2, "unit": "pc" },
+        { "name": "chicken stock", "quantity": 1.2, "unit": "l" },
+        { "name": "neutral oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "avocado, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "queso fresco, crumbled", "quantity": 60, "unit": "g" },
+        { "name": "lime", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Blend tomatoes, onion, and garlic with a little water until smooth.",
+        "Heat oil in a pot and toast the fideo, stirring constantly until evenly golden brown, about 4 minutes.",
+        "Pour in the tomato puree and fry for 3 minutes until slightly darkened.",
+        "Add chicken stock and salt and bring to a simmer.",
+        "Cook 8 minutes until the noodles are tender and the soup has thickened slightly.",
+        "Adjust salt and ladle into bowls.",
+        "Top with avocado, queso fresco, and a squeeze of lime."
+      ],
+      "tags": ["soup", "noodles", "weeknight", "comfort food"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Arroz Rojo",
+      "description": "Classic Mexican red rice gently fried then simmered in tomato broth with carrots and peas.",
+      "ingredients": [
+        { "name": "long-grain white rice", "quantity": 400, "unit": "g" },
+        { "name": "Roma tomatoes", "quantity": 3, "unit": "pc" },
+        { "name": "white onion", "quantity": 0.5, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 2, "unit": "pc" },
+        { "name": "neutral oil", "quantity": 60, "unit": "ml" },
+        { "name": "carrot, diced", "quantity": 1, "unit": "pc" },
+        { "name": "frozen peas", "quantity": 100, "unit": "g" },
+        { "name": "chicken or vegetable stock", "quantity": 720, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Rinse the rice well in cool water and drain thoroughly.",
+        "Blend tomatoes, onion, and garlic with a splash of water until smooth.",
+        "Heat oil in a pot and fry the rice, stirring, until milky white and lightly toasted, about 6 minutes.",
+        "Pour in the tomato puree and fry 2 minutes.",
+        "Add stock, carrot, peas, and salt; bring to a boil.",
+        "Cover, reduce to low, and cook 18 minutes.",
+        "Rest covered 10 minutes, then fluff with a fork."
+      ],
+      "tags": ["rice", "side", "tomato", "weeknight"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Frijoles Charros",
+      "description": "Hearty 'cowboy beans' simmered with bacon, sausage, tomatoes, and chiles, served as a brothy side or light meal.",
+      "ingredients": [
+        { "name": "pinto beans, soaked overnight", "quantity": 400, "unit": "g" },
+        { "name": "bacon, diced", "quantity": 150, "unit": "g" },
+        { "name": "Mexican chorizo, casing removed", "quantity": 200, "unit": "g" },
+        { "name": "white onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "Roma tomatoes, diced", "quantity": 3, "unit": "pc" },
+        { "name": "jalapeños, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "fresh cilantro, chopped", "quantity": 0.5, "unit": "bunch" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Drain the soaked beans, cover with fresh water, and simmer 1.5 hours until tender; reserve cooking liquid.",
+        "In another pot, render the bacon until crisp.",
+        "Add chorizo and brown, breaking it up.",
+        "Add onion and cook 4 minutes until soft, then garlic and jalapeños for 1 minute.",
+        "Stir in tomatoes and cook 5 minutes until they break down.",
+        "Add the beans with enough cooking liquid to make a brothy stew and simmer 15 minutes.",
+        "Stir in cilantro, season, and serve in bowls."
+      ],
+      "tags": ["beans", "soup", "Norteño", "comfort food"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 120,
+      "servings": 6
+    },
+    {
+      "title": "Flan",
+      "description": "Silky baked Mexican custard with a layer of golden caramel sauce on top when unmolded.",
+      "ingredients": [
+        { "name": "granulated sugar (for caramel)", "quantity": 200, "unit": "g" },
+        { "name": "water", "quantity": 60, "unit": "ml" },
+        { "name": "whole milk", "quantity": 480, "unit": "ml" },
+        { "name": "sweetened condensed milk", "quantity": 397, "unit": "g" },
+        { "name": "evaporated milk", "quantity": 354, "unit": "g" },
+        { "name": "eggs", "quantity": 5, "unit": "pc" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "pinch" }
+      ],
+      "steps": [
+        "Heat sugar and water in a saucepan over medium heat without stirring until the sugar dissolves and turns a deep amber, about 8 minutes.",
+        "Quickly pour the caramel into a 23 cm round baking dish and tilt to coat the bottom; let cool to set.",
+        "Preheat the oven to 160°C.",
+        "Blend whole milk, condensed milk, evaporated milk, eggs, vanilla, and salt until smooth.",
+        "Strain through a fine sieve into the caramel-lined dish.",
+        "Place the dish in a roasting pan, pour hot water halfway up the sides, and bake 60–70 minutes until the center is set with a slight wobble.",
+        "Cool, then refrigerate at least 6 hours; run a knife around the edge and invert onto a plate so the caramel pools over the flan."
+      ],
+      "tags": ["dessert", "custard", "caramel", "celebration"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 70,
+      "servings": 8
+    },
+    {
+      "title": "Churros",
+      "description": "Fried dough sticks tossed in cinnamon sugar, often served with thick Mexican hot chocolate for dipping.",
+      "ingredients": [
+        { "name": "water", "quantity": 240, "unit": "ml" },
+        { "name": "unsalted butter", "quantity": 60, "unit": "g" },
+        { "name": "sugar (in dough)", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" },
+        { "name": "all-purpose flour", "quantity": 150, "unit": "g" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "neutral oil for frying", "quantity": 1, "unit": "l" },
+        { "name": "granulated sugar (for coating)", "quantity": 100, "unit": "g" },
+        { "name": "ground cinnamon", "quantity": 2, "unit": "tsp" }
+      ],
+      "steps": [
+        "Bring water, butter, sugar, and salt to a boil.",
+        "Add all the flour at once and stir vigorously until the dough pulls away from the sides; cool 5 minutes.",
+        "Beat in the egg and vanilla until smooth and shiny.",
+        "Transfer dough to a piping bag fitted with a large star tip.",
+        "Heat oil to 175°C and pipe 12 cm strips directly into the oil, snipping with kitchen shears.",
+        "Fry until deep golden, about 4 minutes, turning once.",
+        "Drain briefly and toss in cinnamon sugar while warm; serve immediately."
+      ],
+      "tags": ["dessert", "fried", "snack", "street food"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 20,
+      "servings": 6
+    },
+    {
+      "title": "Horchata",
+      "description": "Refreshing Mexican rice and almond drink flavored with cinnamon and vanilla, served over ice.",
+      "ingredients": [
+        { "name": "long-grain white rice", "quantity": 200, "unit": "g" },
+        { "name": "blanched almonds", "quantity": 60, "unit": "g" },
+        { "name": "cinnamon stick", "quantity": 1, "unit": "pc" },
+        { "name": "warm water (for soaking)", "quantity": 1, "unit": "l" },
+        { "name": "sweetened condensed milk", "quantity": 200, "unit": "g" },
+        { "name": "whole milk", "quantity": 480, "unit": "ml" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cinnamon (to garnish)", "quantity": 0.5, "unit": "tsp" },
+        { "name": "ice", "quantity": 1, "unit": "kg" }
+      ],
+      "steps": [
+        "Combine rice, almonds, and cinnamon stick in a bowl, cover with the warm water, and soak at least 4 hours or overnight.",
+        "Pour the entire mixture into a blender and blend on high for 2 minutes until very smooth.",
+        "Strain through a fine sieve or cheesecloth into a pitcher, pressing to extract liquid; discard solids.",
+        "Whisk in condensed milk, whole milk, and vanilla.",
+        "Taste and adjust sweetness.",
+        "Refrigerate at least 1 hour.",
+        "Pour over ice and dust with ground cinnamon to serve."
+      ],
+      "tags": ["drink", "rice", "vegetarian", "refreshing"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 0,
+      "servings": 6
+    }
+  ]
+}

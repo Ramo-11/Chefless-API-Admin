@@ -1,0 +1,307 @@
+{
+  "cuisine": "Belgian",
+  "names": {
+    "first": ["Lucas", "Emma", "Mathias", "Charlotte", "Wout", "Marie", "Jasper", "Camille", "Bram", "Louise", "Thibault", "Elise"],
+    "last": ["Janssens", "Peeters", "Maes", "Jacobs", "Mertens", "Willems", "Dubois", "Lambert", "Claes", "De Smet", "Hermans", "Wouters"]
+  },
+  "recipes": [
+    {
+      "title": "Moules-frites",
+      "description": "Belgian national dish of mussels steamed with white wine, shallots and herbs, served with crisp double-fried fries.",
+      "ingredients": [
+        { "name": "fresh mussels, scrubbed", "quantity": 2, "unit": "kg" },
+        { "name": "shallots, finely chopped", "quantity": 3, "unit": "pc" },
+        { "name": "celery, diced", "quantity": 2, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 3, "unit": "pc" },
+        { "name": "dry white wine", "quantity": 250, "unit": "ml" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "flat-leaf parsley, chopped", "quantity": 4, "unit": "tbsp" },
+        { "name": "thyme sprigs", "quantity": 4, "unit": "pc" },
+        { "name": "bay leaf", "quantity": 1, "unit": "pc" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "Bintje potatoes", "quantity": 1.2, "unit": "kg" },
+        { "name": "vegetable oil for frying", "quantity": 2, "unit": "l" },
+        { "name": "salt", "quantity": 2, "unit": "tsp" }
+      ],
+      "steps": [
+        "Cut the potatoes into 1 cm thick fries, soak in cold water for 30 minutes, then dry thoroughly.",
+        "Heat the oil to 160°C and fry the chips for 6 minutes until pale and tender; drain and rest.",
+        "Pick over the mussels, discarding any that are open and do not close when tapped.",
+        "Melt the butter in a wide pot, sweat the shallots, celery and garlic for 5 minutes without coloring.",
+        "Add the white wine, thyme, bay leaf and black pepper and bring to a boil.",
+        "Tip in the mussels, cover tightly, and cook over high heat for 4 to 5 minutes, shaking the pot occasionally, until all mussels open.",
+        "Heat the frying oil to 190°C and fry the chips a second time until deep golden and crisp; drain and salt heavily.",
+        "Stir parsley into the mussels and serve straight from the pot with the fries on the side."
+      ],
+      "tags": ["mussels", "fries", "national dish"],
+      "dietaryTags": ["pescatarian"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Carbonade Flamande",
+      "description": "Flemish beef and beer stew sweetened with brown sugar and finished with a mustard-coated bread crust.",
+      "ingredients": [
+        { "name": "beef chuck, cubed", "quantity": 1.2, "unit": "kg" },
+        { "name": "onions, sliced", "quantity": 3, "unit": "pc" },
+        { "name": "Belgian brown ale", "quantity": 500, "unit": "ml" },
+        { "name": "beef stock", "quantity": 250, "unit": "ml" },
+        { "name": "dark brown sugar", "quantity": 2, "unit": "tbsp" },
+        { "name": "red wine vinegar", "quantity": 2, "unit": "tbsp" },
+        { "name": "butter", "quantity": 50, "unit": "g" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "flour", "quantity": 3, "unit": "tbsp" },
+        { "name": "thyme sprigs", "quantity": 4, "unit": "pc" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "country bread, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "Dijon mustard", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Pat the beef dry, season, and dust with flour. Brown well in oil in batches in a Dutch oven.",
+        "Lower the heat, add the butter and onions, and cook gently for 15 minutes until deeply soft.",
+        "Stir in the brown sugar and vinegar and cook for 2 minutes.",
+        "Return the beef, pour in the beer and stock, and tuck in the thyme and bay leaves.",
+        "Spread the bread slices thickly with mustard and float them mustard-side down on top of the stew.",
+        "Cover and braise at 160°C for 2 hours, then uncover and cook another 30 minutes until the sauce is rich and the beef is fork-tender.",
+        "Stir the dissolved bread into the sauce, season to taste, and serve with frites."
+      ],
+      "tags": ["beef", "beer", "stew", "flanders"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 150,
+      "servings": 6
+    },
+    {
+      "title": "Waterzooi",
+      "description": "Ghent-style creamy chicken or fish stew with leeks, potatoes and root vegetables in an egg-yolk-thickened broth.",
+      "ingredients": [
+        { "name": "chicken thighs and drumsticks", "quantity": 1.2, "unit": "kg" },
+        { "name": "leeks, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "carrots, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "celery, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "potatoes, cubed", "quantity": 4, "unit": "pc" },
+        { "name": "onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "chicken stock", "quantity": 1, "unit": "l" },
+        { "name": "heavy cream", "quantity": 200, "unit": "ml" },
+        { "name": "egg yolks", "quantity": 3, "unit": "pc" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "lemon juice", "quantity": 1, "unit": "tbsp" },
+        { "name": "thyme", "quantity": 2, "unit": "pc" },
+        { "name": "bay leaf", "quantity": 1, "unit": "pc" },
+        { "name": "parsley, chopped", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Melt the butter in a Dutch oven, sweat the onion, leeks, carrots and celery for 10 minutes.",
+        "Add the chicken pieces, the thyme and bay leaf, pour in the stock, and simmer covered for 25 minutes.",
+        "Add the potatoes and continue simmering for 15 minutes until everything is tender.",
+        "Lift out the chicken, pull the meat from the bones, and return it to the pot.",
+        "Whisk the egg yolks with the cream and lemon juice in a bowl.",
+        "Temper the cream mixture with a ladle of hot broth, then stir into the pot off the heat.",
+        "Warm gently without boiling so the broth thickens and turns silky.",
+        "Adjust seasoning, sprinkle with parsley and serve immediately with crusty bread."
+      ],
+      "tags": ["chicken", "stew", "ghent", "creamy"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 50,
+      "servings": 4
+    },
+    {
+      "title": "Stoemp",
+      "description": "Brussels-style mash of potatoes blended with seasonal vegetables such as carrot, leek or savoy cabbage.",
+      "ingredients": [
+        { "name": "floury potatoes, peeled", "quantity": 1, "unit": "kg" },
+        { "name": "carrots, sliced", "quantity": 500, "unit": "g" },
+        { "name": "onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "smoked bacon lardons", "quantity": 150, "unit": "g" },
+        { "name": "butter", "quantity": 75, "unit": "g" },
+        { "name": "milk, warm", "quantity": 100, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" },
+        { "name": "nutmeg, ground", "quantity": 1, "unit": "pinch" },
+        { "name": "parsley, chopped", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Boil the potatoes and carrots together in salted water until tender, about 20 minutes; drain.",
+        "Meanwhile, fry the bacon lardons until crisp; lift out and reserve, leaving the fat behind.",
+        "Soften the chopped onion in the bacon fat for 5 minutes.",
+        "Mash the potatoes and carrots with the butter and warm milk until rough and rustic.",
+        "Stir in the onion, half the bacon, salt, pepper and nutmeg.",
+        "Pile onto plates, top with the remaining bacon and parsley, and serve with sausage or roast meats."
+      ],
+      "tags": ["potato", "side", "carrot"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Belgian Waffle",
+      "description": "Brussels-style yeasted waffle with a light crisp shell and fluffy interior, dusted with powdered sugar.",
+      "ingredients": [
+        { "name": "flour", "quantity": 350, "unit": "g" },
+        { "name": "warm milk", "quantity": 350, "unit": "ml" },
+        { "name": "eggs, separated", "quantity": 3, "unit": "pc" },
+        { "name": "active dry yeast", "quantity": 2, "unit": "tsp" },
+        { "name": "sugar", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" },
+        { "name": "butter, melted", "quantity": 100, "unit": "g" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "powdered sugar", "quantity": 4, "unit": "tbsp" },
+        { "name": "whipped cream", "quantity": 200, "unit": "ml" },
+        { "name": "strawberries, sliced", "quantity": 250, "unit": "g" }
+      ],
+      "steps": [
+        "Stir the yeast and sugar into the warm milk and let bloom for 10 minutes.",
+        "Whisk in the egg yolks, melted butter, vanilla and salt, then the flour to a smooth batter.",
+        "Cover and rest in a warm place for 1 hour until bubbly.",
+        "Whip the egg whites to stiff peaks and fold into the batter just before cooking.",
+        "Heat a Brussels-style waffle iron and brush with butter.",
+        "Pour in batter and cook for 4 to 5 minutes until deep golden and crisp on the outside.",
+        "Dust with powdered sugar and serve with whipped cream and sliced strawberries."
+      ],
+      "tags": ["waffle", "breakfast", "brussels"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 75,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Speculaas",
+      "description": "Belgian crisp spiced biscuit served around Sinterklaas, traditionally pressed in carved wooden moulds.",
+      "ingredients": [
+        { "name": "flour", "quantity": 300, "unit": "g" },
+        { "name": "dark brown sugar", "quantity": 150, "unit": "g" },
+        { "name": "butter, cold and cubed", "quantity": 175, "unit": "g" },
+        { "name": "speculaas spice mix", "quantity": 2, "unit": "tbsp" },
+        { "name": "baking powder", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "pinch" },
+        { "name": "milk", "quantity": 2, "unit": "tbsp" },
+        { "name": "sliced almonds", "quantity": 50, "unit": "g" }
+      ],
+      "steps": [
+        "Combine the flour, sugar, spice mix, baking powder and salt in a bowl.",
+        "Rub in the cold butter until the mixture resembles fine crumbs.",
+        "Add the milk and bring the dough together by hand, then wrap and refrigerate for at least 2 hours.",
+        "Preheat the oven to 175°C and line two trays with parchment.",
+        "Roll the dough to 5 mm thickness, press into a speculaas mould or cut into shapes, and place on the trays.",
+        "Press almonds on top if you like and bake for 12 to 15 minutes until firm and deep golden.",
+        "Cool on a rack so the biscuits crisp up fully."
+      ],
+      "tags": ["biscuit", "spice", "sinterklaas"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 130,
+      "cookTime": 15,
+      "servings": 24
+    },
+    {
+      "title": "Vol-au-vent",
+      "description": "Belgian classic of puff pastry shells filled with a creamy chicken, mushroom and meatball ragout.",
+      "ingredients": [
+        { "name": "chicken breast, cubed", "quantity": 600, "unit": "g" },
+        { "name": "ground veal", "quantity": 300, "unit": "g" },
+        { "name": "white mushrooms, sliced", "quantity": 300, "unit": "g" },
+        { "name": "shallots, finely chopped", "quantity": 2, "unit": "pc" },
+        { "name": "chicken stock", "quantity": 800, "unit": "ml" },
+        { "name": "heavy cream", "quantity": 200, "unit": "ml" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "flour", "quantity": 50, "unit": "g" },
+        { "name": "lemon juice", "quantity": 1, "unit": "tbsp" },
+        { "name": "egg yolk", "quantity": 1, "unit": "pc" },
+        { "name": "parsley, chopped", "quantity": 3, "unit": "tbsp" },
+        { "name": "nutmeg, ground", "quantity": 1, "unit": "pinch" },
+        { "name": "puff pastry shells", "quantity": 8, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Roll the ground veal into small meatballs and poach in the stock for 5 minutes; lift out and reserve.",
+        "Poach the chicken cubes in the same stock for 8 minutes until just cooked; lift out and reserve.",
+        "Sauté the shallots and mushrooms in 30 g butter until golden.",
+        "Make a roux with the remaining butter and flour, cook for 2 minutes, then whisk in the poaching stock to a smooth sauce.",
+        "Stir in the cream and reduce to a coating consistency.",
+        "Whisk the egg yolk with a splash of cream and stir into the sauce off the heat.",
+        "Add the chicken, meatballs, mushrooms, parsley, lemon juice and nutmeg and warm through.",
+        "Bake the puff pastry shells at 200°C for 8 minutes until crisp and hot, then fill with the ragout and serve immediately."
+      ],
+      "tags": ["chicken", "puff pastry", "creamy"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 35,
+      "servings": 4
+    },
+    {
+      "title": "Stoofvlees",
+      "description": "Flemish beef stew braised slowly in dark beer with onions and a touch of mustard-coated bread, served with frites.",
+      "ingredients": [
+        { "name": "beef chuck, cubed", "quantity": 1.2, "unit": "kg" },
+        { "name": "onions, sliced", "quantity": 4, "unit": "pc" },
+        { "name": "Belgian dark abbey beer", "quantity": 500, "unit": "ml" },
+        { "name": "beef stock", "quantity": 250, "unit": "ml" },
+        { "name": "dark brown sugar", "quantity": 2, "unit": "tbsp" },
+        { "name": "red wine vinegar", "quantity": 1, "unit": "tbsp" },
+        { "name": "butter", "quantity": 50, "unit": "g" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "flour", "quantity": 3, "unit": "tbsp" },
+        { "name": "thyme sprigs", "quantity": 4, "unit": "pc" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "country bread, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "Dijon mustard", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Pat the beef dry, season and dust with flour. Brown in oil in batches in a heavy pot.",
+        "Lower the heat, add the butter and onions and cook gently for 20 minutes until very soft and golden.",
+        "Stir in the brown sugar and vinegar and cook for 2 minutes.",
+        "Return the beef, pour in the beer and stock and tuck in the thyme and bay leaves.",
+        "Spread the bread thickly with mustard and lay it mustard-side down on top of the stew.",
+        "Cover and braise at 150°C for 2.5 hours until the beef is fork-tender and the sauce dark and glossy.",
+        "Stir the bread into the sauce, season to taste, and serve with frites and mayonnaise."
+      ],
+      "tags": ["beef", "beer", "stew", "flanders"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 170,
+      "servings": 6
+    },
+    {
+      "title": "Liège Waffle",
+      "description": "Liège-style yeasted waffle dough enriched with chunks of pearl sugar that caramelize to a crackling crust.",
+      "ingredients": [
+        { "name": "flour", "quantity": 400, "unit": "g" },
+        { "name": "warm milk", "quantity": 100, "unit": "ml" },
+        { "name": "active dry yeast", "quantity": 2, "unit": "tsp" },
+        { "name": "sugar", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" },
+        { "name": "eggs", "quantity": 2, "unit": "pc" },
+        { "name": "butter, softened", "quantity": 200, "unit": "g" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "honey", "quantity": 1, "unit": "tbsp" },
+        { "name": "Belgian pearl sugar", "quantity": 200, "unit": "g" }
+      ],
+      "steps": [
+        "Bloom the yeast and sugar in warm milk for 10 minutes until foamy.",
+        "Mix the flour and salt in a bowl, then stir in the yeast mixture, eggs, vanilla and honey to a sticky dough.",
+        "Knead in the soft butter a little at a time until fully incorporated and elastic.",
+        "Cover and let rise in a warm place for 1.5 hours until doubled.",
+        "Knock back the dough and gently knead in the pearl sugar; rest for 15 minutes.",
+        "Divide into 8 balls and press each into a hot waffle iron set to medium-high.",
+        "Cook for 4 to 5 minutes until deep golden with caramelized crackling sugar.",
+        "Cool slightly so the crust sets and serve plain or with toppings of your choice."
+      ],
+      "tags": ["waffle", "street food", "liege"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 120,
+      "cookTime": 25,
+      "servings": 8
+    }
+  ]
+}

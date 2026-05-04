@@ -1,0 +1,780 @@
+{
+  "cuisine": "American",
+  "names": {
+    "first": ["James", "Mary", "Robert", "Jennifer", "Michael", "Jessica", "William", "Ashley", "David", "Emily", "Christopher", "Sarah"],
+    "last": ["Smith", "Johnson", "Williams", "Brown", "Jones", "Miller", "Davis", "Wilson", "Anderson", "Taylor", "Thomas", "Moore"]
+  },
+  "recipes": [
+    {
+      "title": "Cheeseburger",
+      "description": "Classic American grilled beef patty with melted cheese on a soft bun, served with lettuce, tomato, and pickles.",
+      "ingredients": [
+        { "name": "ground beef (80/20)", "quantity": 680, "unit": "g" },
+        { "name": "cheddar cheese slices", "quantity": 4, "unit": "pc" },
+        { "name": "hamburger buns", "quantity": 4, "unit": "pc" },
+        { "name": "iceberg lettuce", "quantity": 4, "unit": "pc" },
+        { "name": "tomato", "quantity": 1, "unit": "pc" },
+        { "name": "dill pickle slices", "quantity": 12, "unit": "pc" },
+        { "name": "yellow onion", "quantity": 0.5, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" },
+        { "name": "neutral oil", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Divide the beef into 4 equal balls without overworking, then press into 1.5 cm patties slightly wider than the buns to allow for shrinkage.",
+        "Season both sides generously with salt and pepper just before cooking.",
+        "Heat a heavy skillet or grill over high heat until smoking, then add a thin film of oil.",
+        "Cook the patties for 3 minutes on the first side without moving, flip, and immediately top each with a slice of cheddar.",
+        "Cook 2 more minutes for medium, covering the pan briefly to melt the cheese.",
+        "Toast the cut sides of the buns in the same pan until golden.",
+        "Build each burger with bun, lettuce, tomato slice, patty, onion, pickles, and the top bun, and serve immediately."
+      ],
+      "tags": ["burger", "grill", "beef", "lunch", "dinner"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Buffalo Wings",
+      "description": "Crispy fried chicken wings tossed in a tangy butter and hot sauce, served with celery and blue cheese dressing.",
+      "ingredients": [
+        { "name": "chicken wings, split", "quantity": 1, "unit": "kg" },
+        { "name": "Frank's RedHot sauce", "quantity": 180, "unit": "ml" },
+        { "name": "unsalted butter", "quantity": 90, "unit": "g" },
+        { "name": "white vinegar", "quantity": 1, "unit": "tsp" },
+        { "name": "Worcestershire sauce", "quantity": 1, "unit": "tsp" },
+        { "name": "garlic powder", "quantity": 0.5, "unit": "tsp" },
+        { "name": "neutral oil for frying", "quantity": 1, "unit": "l" },
+        { "name": "celery sticks", "quantity": 8, "unit": "pc" },
+        { "name": "blue cheese dressing", "quantity": 120, "unit": "ml" }
+      ],
+      "steps": [
+        "Pat the wings completely dry with paper towels and let them air-dry, uncovered, in the fridge for at least 1 hour for the crispiest skin.",
+        "Heat the oil to 175°C in a deep heavy pot.",
+        "Fry the wings in batches for 10–12 minutes until deep golden and the internal temperature reaches 75°C.",
+        "Drain on a wire rack while you make the sauce.",
+        "In a small saucepan, melt the butter, then whisk in the hot sauce, vinegar, Worcestershire, and garlic powder until smooth.",
+        "Place the hot wings in a large bowl, pour over the sauce, and toss to coat every piece.",
+        "Serve immediately with celery sticks and blue cheese dressing for dipping."
+      ],
+      "tags": ["chicken", "spicy", "fried", "appetizer", "game day"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Macaroni and Cheese",
+      "description": "Creamy baked pasta with sharp cheddar cheese sauce and a crunchy buttered breadcrumb topping.",
+      "ingredients": [
+        { "name": "elbow macaroni", "quantity": 450, "unit": "g" },
+        { "name": "sharp cheddar cheese, grated", "quantity": 340, "unit": "g" },
+        { "name": "Gruyère cheese, grated", "quantity": 110, "unit": "g" },
+        { "name": "whole milk", "quantity": 750, "unit": "ml" },
+        { "name": "unsalted butter", "quantity": 60, "unit": "g" },
+        { "name": "all-purpose flour", "quantity": 45, "unit": "g" },
+        { "name": "Dijon mustard", "quantity": 1, "unit": "tsp" },
+        { "name": "panko breadcrumbs", "quantity": 60, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "nutmeg", "quantity": 1, "unit": "pinch" }
+      ],
+      "steps": [
+        "Preheat the oven to 190°C and butter a 23×33 cm baking dish.",
+        "Boil the macaroni in salted water for 1 minute less than package directions, then drain.",
+        "In a saucepan, melt 45 g butter, whisk in flour, and cook for 1 minute to make a blond roux.",
+        "Slowly whisk in the warm milk and simmer until the sauce thickens enough to coat the back of a spoon, about 5 minutes.",
+        "Off the heat, stir in mustard, nutmeg, salt, and three-quarters of both cheeses until smooth.",
+        "Fold in the macaroni, transfer to the baking dish, and top with the remaining cheese mixed with panko and the rest of the butter, melted.",
+        "Bake for 20–25 minutes until bubbling and golden brown on top, then rest for 5 minutes before serving."
+      ],
+      "tags": ["pasta", "cheese", "baked", "comfort food"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "New England Clam Chowder",
+      "description": "Rich, creamy white chowder with tender clams, potatoes, and bacon, originating from coastal New England.",
+      "ingredients": [
+        { "name": "fresh clams or canned chopped clams", "quantity": 600, "unit": "g" },
+        { "name": "bacon, diced", "quantity": 120, "unit": "g" },
+        { "name": "yellow onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "celery, diced", "quantity": 2, "unit": "pc" },
+        { "name": "Yukon Gold potatoes, diced", "quantity": 500, "unit": "g" },
+        { "name": "all-purpose flour", "quantity": 30, "unit": "g" },
+        { "name": "heavy cream", "quantity": 240, "unit": "ml" },
+        { "name": "whole milk", "quantity": 480, "unit": "ml" },
+        { "name": "clam juice", "quantity": 480, "unit": "ml" },
+        { "name": "bay leaf", "quantity": 1, "unit": "pc" },
+        { "name": "fresh thyme", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Render the bacon in a heavy pot over medium heat until crisp, then remove half for garnish.",
+        "Add onion and celery to the bacon fat and cook until softened, about 5 minutes.",
+        "Sprinkle in the flour and stir for 1 minute to cook off the raw taste.",
+        "Whisk in the clam juice and milk gradually, then add the potatoes, bay leaf, and thyme.",
+        "Simmer until the potatoes are fork-tender, about 15 minutes.",
+        "Stir in the clams and heavy cream and warm through for 3–4 minutes without boiling, or the clams will toughen.",
+        "Discard the bay leaf, season with salt and pepper, and serve topped with the reserved bacon."
+      ],
+      "tags": ["soup", "seafood", "creamy", "comfort food"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Cornbread",
+      "description": "Golden, slightly sweet Southern-style cornbread baked in a cast iron skillet with a crisp crust.",
+      "ingredients": [
+        { "name": "yellow cornmeal", "quantity": 240, "unit": "g" },
+        { "name": "all-purpose flour", "quantity": 120, "unit": "g" },
+        { "name": "sugar", "quantity": 50, "unit": "g" },
+        { "name": "baking powder", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "buttermilk", "quantity": 360, "unit": "ml" },
+        { "name": "eggs", "quantity": 2, "unit": "pc" },
+        { "name": "unsalted butter, melted", "quantity": 90, "unit": "g" }
+      ],
+      "steps": [
+        "Place a 25 cm cast iron skillet in the oven and preheat to 220°C.",
+        "Whisk cornmeal, flour, sugar, baking powder, and salt in a large bowl.",
+        "In another bowl, whisk buttermilk, eggs, and 60 g of the melted butter.",
+        "Pour the wet ingredients into the dry and stir just until combined; do not overmix.",
+        "Carefully remove the hot skillet, swirl the remaining butter around to coat, and pour in the batter.",
+        "Bake for 20–25 minutes until the top is golden and a toothpick inserted in the center comes out clean.",
+        "Cool 10 minutes before slicing into wedges."
+      ],
+      "tags": ["bread", "Southern", "side", "baking"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 25,
+      "servings": 8
+    },
+    {
+      "title": "Pecan Pie",
+      "description": "Iconic Southern dessert pie with a buttery crust filled with toasted pecans in a sweet, gooey caramel-like filling.",
+      "ingredients": [
+        { "name": "pie crust", "quantity": 1, "unit": "pc" },
+        { "name": "pecan halves", "quantity": 250, "unit": "g" },
+        { "name": "dark corn syrup", "quantity": 240, "unit": "ml" },
+        { "name": "brown sugar", "quantity": 150, "unit": "g" },
+        { "name": "unsalted butter, melted", "quantity": 60, "unit": "g" },
+        { "name": "eggs", "quantity": 3, "unit": "pc" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" },
+        { "name": "bourbon (optional)", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Preheat the oven to 175°C and place a baking sheet on the middle rack to catch drips.",
+        "Roll out the pie crust and fit into a 23 cm pie pan, crimping the edges.",
+        "Spread the pecans evenly over the crust.",
+        "Whisk corn syrup, brown sugar, melted butter, eggs, vanilla, salt, and bourbon if using until smooth.",
+        "Pour the filling over the pecans; the pecans will float to the top.",
+        "Bake on the preheated baking sheet for 50–60 minutes until the center is just set and only slightly jiggly.",
+        "Cool completely on a wire rack, at least 2 hours, before slicing."
+      ],
+      "tags": ["dessert", "pie", "Southern", "Thanksgiving"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 60,
+      "servings": 8
+    },
+    {
+      "title": "Apple Pie",
+      "description": "All-American double-crust pie filled with cinnamon-spiced apples in a buttery, flaky pastry.",
+      "ingredients": [
+        { "name": "pie crust (top and bottom)", "quantity": 2, "unit": "pc" },
+        { "name": "Granny Smith and Honeycrisp apples, peeled and sliced", "quantity": 1.2, "unit": "kg" },
+        { "name": "granulated sugar", "quantity": 100, "unit": "g" },
+        { "name": "brown sugar", "quantity": 50, "unit": "g" },
+        { "name": "all-purpose flour", "quantity": 30, "unit": "g" },
+        { "name": "ground cinnamon", "quantity": 1.5, "unit": "tsp" },
+        { "name": "ground nutmeg", "quantity": 0.25, "unit": "tsp" },
+        { "name": "lemon juice", "quantity": 1, "unit": "tbsp" },
+        { "name": "unsalted butter, cubed", "quantity": 30, "unit": "g" },
+        { "name": "egg, beaten", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Toss apples with sugars, flour, cinnamon, nutmeg, and lemon juice; let sit 15 minutes.",
+        "Roll out one crust and fit into a 23 cm pie pan.",
+        "Spoon apples and accumulated juices into the crust and dot with butter cubes.",
+        "Cover with the second rolled crust, trim, crimp the edges, and cut steam vents.",
+        "Brush the top with egg wash and sprinkle with a little extra sugar.",
+        "Bake at 220°C for 20 minutes, then reduce to 190°C and bake another 40 minutes until the filling bubbles thickly through the vents.",
+        "Cool at least 3 hours so the filling sets before slicing."
+      ],
+      "tags": ["dessert", "pie", "fall", "baking"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 60,
+      "servings": 8
+    },
+    {
+      "title": "Jambalaya",
+      "description": "Louisiana Creole one-pot rice dish with chicken, andouille sausage, shrimp, and the holy trinity of vegetables.",
+      "ingredients": [
+        { "name": "boneless chicken thighs, diced", "quantity": 450, "unit": "g" },
+        { "name": "andouille sausage, sliced", "quantity": 340, "unit": "g" },
+        { "name": "raw shrimp, peeled", "quantity": 340, "unit": "g" },
+        { "name": "long-grain white rice", "quantity": 400, "unit": "g" },
+        { "name": "yellow onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "green bell pepper, diced", "quantity": 1, "unit": "pc" },
+        { "name": "celery, diced", "quantity": 3, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "diced tomatoes", "quantity": 400, "unit": "g" },
+        { "name": "chicken stock", "quantity": 750, "unit": "ml" },
+        { "name": "Cajun seasoning", "quantity": 2, "unit": "tbsp" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" }
+      ],
+      "steps": [
+        "Brown the andouille sausage in a Dutch oven over medium-high heat, then remove with a slotted spoon.",
+        "Season chicken with half the Cajun seasoning and brown in the rendered fat; remove.",
+        "Add onion, bell pepper, and celery to the pot and cook until softened, about 6 minutes.",
+        "Stir in garlic, remaining Cajun seasoning, tomatoes, stock, bay leaves, sausage, and chicken.",
+        "Add the rice, stir once, bring to a boil, then cover and reduce to low for 20 minutes without stirring.",
+        "Stir in the shrimp, cover again, and cook another 5 minutes until the shrimp are pink and the rice is tender.",
+        "Discard the bay leaves and let rest 5 minutes before serving."
+      ],
+      "tags": ["Cajun", "Creole", "rice", "one-pot", "Southern"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 40,
+      "servings": 6
+    },
+    {
+      "title": "Gumbo",
+      "description": "Slow-cooked Louisiana stew built on a dark roux with chicken, andouille sausage, and the holy trinity, served over rice.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 120, "unit": "g" },
+        { "name": "vegetable oil", "quantity": 120, "unit": "ml" },
+        { "name": "andouille sausage, sliced", "quantity": 450, "unit": "g" },
+        { "name": "boneless chicken thighs", "quantity": 700, "unit": "g" },
+        { "name": "yellow onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "green bell pepper, diced", "quantity": 1, "unit": "pc" },
+        { "name": "celery, diced", "quantity": 3, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 5, "unit": "pc" },
+        { "name": "chicken stock", "quantity": 1.5, "unit": "l" },
+        { "name": "okra, sliced", "quantity": 200, "unit": "g" },
+        { "name": "Cajun seasoning", "quantity": 2, "unit": "tbsp" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "cooked white rice", "quantity": 400, "unit": "g" }
+      ],
+      "steps": [
+        "Whisk flour and oil in a heavy pot over medium-low heat and stir constantly for 30–45 minutes until the roux is the color of dark chocolate.",
+        "Add onion, bell pepper, and celery to the roux and cook 8 minutes until softened.",
+        "Stir in garlic and Cajun seasoning and cook 1 minute.",
+        "Slowly whisk in the warm chicken stock and bring to a simmer.",
+        "Add the chicken thighs, sausage, and bay leaves, and simmer uncovered for 1 hour until the chicken is tender.",
+        "Shred the chicken, return to the pot, add okra, and simmer another 20 minutes.",
+        "Adjust seasoning and serve in bowls over hot white rice."
+      ],
+      "tags": ["Cajun", "Creole", "stew", "Southern", "Louisiana"],
+      "difficulty": "hard",
+      "prepTime": 20,
+      "cookTime": 120,
+      "servings": 8
+    },
+    {
+      "title": "Po' Boy",
+      "description": "Louisiana sandwich on French bread filled with crispy fried shrimp, lettuce, tomato, pickles, and remoulade sauce.",
+      "ingredients": [
+        { "name": "French baguette or hoagie rolls", "quantity": 4, "unit": "pc" },
+        { "name": "raw shrimp, peeled", "quantity": 500, "unit": "g" },
+        { "name": "buttermilk", "quantity": 240, "unit": "ml" },
+        { "name": "yellow cornmeal", "quantity": 120, "unit": "g" },
+        { "name": "all-purpose flour", "quantity": 120, "unit": "g" },
+        { "name": "Cajun seasoning", "quantity": 2, "unit": "tbsp" },
+        { "name": "neutral oil for frying", "quantity": 1, "unit": "l" },
+        { "name": "mayonnaise", "quantity": 120, "unit": "ml" },
+        { "name": "Creole mustard", "quantity": 1, "unit": "tbsp" },
+        { "name": "hot sauce", "quantity": 1, "unit": "tsp" },
+        { "name": "iceberg lettuce, shredded", "quantity": 100, "unit": "g" },
+        { "name": "tomato, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "dill pickles, sliced", "quantity": 60, "unit": "g" }
+      ],
+      "steps": [
+        "Marinate shrimp in buttermilk with 1 tbsp Cajun seasoning for 15 minutes.",
+        "Whisk mayo, Creole mustard, hot sauce, and a pinch of Cajun seasoning to make the remoulade.",
+        "Combine cornmeal, flour, and remaining Cajun seasoning in a bowl.",
+        "Heat oil to 175°C, then dredge shrimp in the cornmeal mixture and fry in batches for 2–3 minutes until golden and crisp.",
+        "Drain on a wire rack.",
+        "Split the baguettes lengthwise, lightly toast cut sides, and spread generously with remoulade.",
+        "Layer in lettuce, tomato, pickles, and the hot fried shrimp, then cut and serve immediately."
+      ],
+      "tags": ["sandwich", "Louisiana", "shrimp", "fried", "Cajun"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Philly Cheesesteak",
+      "description": "Iconic Philadelphia sandwich of thinly sliced ribeye with melted cheese and onions on a soft hoagie roll.",
+      "ingredients": [
+        { "name": "ribeye steak, frozen briefly and shaved thin", "quantity": 700, "unit": "g" },
+        { "name": "hoagie rolls", "quantity": 4, "unit": "pc" },
+        { "name": "yellow onion, sliced thin", "quantity": 2, "unit": "pc" },
+        { "name": "provolone cheese slices", "quantity": 8, "unit": "pc" },
+        { "name": "Cheez Whiz (optional)", "quantity": 120, "unit": "g" },
+        { "name": "neutral oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Heat a large flat skillet or griddle over high heat with the oil.",
+        "Add the onions and cook, stirring often, until soft and golden, about 8 minutes; push to one side.",
+        "Add the shaved ribeye to the hot side and chop it with two spatulas while it cooks for 2–3 minutes until just no longer pink.",
+        "Mix the meat with the onions and season with salt and pepper.",
+        "Divide the meat into 4 portions on the griddle and lay 2 slices of provolone over each, letting them melt.",
+        "Open the hoagie rolls cut-side down on top of each portion to warm through, about 30 seconds.",
+        "Use the spatulas to scoop each portion into its roll, then close and serve immediately."
+      ],
+      "tags": ["sandwich", "beef", "Philadelphia", "cheese"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "BBQ Ribs",
+      "description": "Tender, smoky pork baby back ribs slow-cooked with a dry rub and finished with sticky barbecue sauce.",
+      "ingredients": [
+        { "name": "pork baby back ribs, racks", "quantity": 2, "unit": "pc" },
+        { "name": "brown sugar", "quantity": 60, "unit": "g" },
+        { "name": "paprika", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "garlic powder", "quantity": 1, "unit": "tbsp" },
+        { "name": "onion powder", "quantity": 1, "unit": "tbsp" },
+        { "name": "cayenne pepper", "quantity": 0.5, "unit": "tsp" },
+        { "name": "barbecue sauce", "quantity": 360, "unit": "ml" },
+        { "name": "apple cider vinegar", "quantity": 60, "unit": "ml" }
+      ],
+      "steps": [
+        "Preheat the oven to 135°C and remove the silver skin from the back of each rack.",
+        "Mix all dry spices and brown sugar to make the rub, then coat both sides of the ribs generously.",
+        "Wrap each rack tightly in foil with a splash of cider vinegar and place on a baking sheet.",
+        "Bake for 2.5 hours until the meat pulls back from the bones.",
+        "Open the foil, brush ribs with BBQ sauce on both sides, and broil or grill over medium heat for 6–8 minutes per side, basting with more sauce.",
+        "Rest the ribs 10 minutes before slicing between the bones.",
+        "Serve with extra warm BBQ sauce on the side."
+      ],
+      "tags": ["BBQ", "pork", "grill", "Southern"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 180,
+      "servings": 4
+    },
+    {
+      "title": "Pulled Pork",
+      "description": "Slow-cooked pork shoulder shredded and tossed in tangy barbecue sauce, perfect on buns with coleslaw.",
+      "ingredients": [
+        { "name": "pork shoulder (Boston butt)", "quantity": 2.5, "unit": "kg" },
+        { "name": "brown sugar", "quantity": 80, "unit": "g" },
+        { "name": "paprika", "quantity": 2, "unit": "tbsp" },
+        { "name": "smoked paprika", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 2, "unit": "tbsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tbsp" },
+        { "name": "garlic powder", "quantity": 1, "unit": "tbsp" },
+        { "name": "onion powder", "quantity": 1, "unit": "tbsp" },
+        { "name": "apple cider vinegar", "quantity": 120, "unit": "ml" },
+        { "name": "chicken stock", "quantity": 240, "unit": "ml" },
+        { "name": "barbecue sauce", "quantity": 360, "unit": "ml" }
+      ],
+      "steps": [
+        "Combine all dry spices and brown sugar to make the rub.",
+        "Pat the pork dry and rub the spice mixture over every surface; refrigerate uncovered for at least 4 hours or overnight.",
+        "Preheat the oven to 150°C and place the pork in a Dutch oven or roasting pan with the cider vinegar and stock.",
+        "Cover tightly and roast for 6–7 hours until a fork twists easily in the meat, about 95°C internal temperature.",
+        "Rest the pork 30 minutes, then shred with two forks, discarding large fat pieces.",
+        "Skim the fat off the pan juices and stir the juices back into the meat along with BBQ sauce.",
+        "Serve piled on soft buns with coleslaw and pickles."
+      ],
+      "tags": ["BBQ", "pork", "Southern", "slow-cooked"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 420,
+      "servings": 10
+    },
+    {
+      "title": "Reuben Sandwich",
+      "description": "Grilled rye sandwich layered with corned beef, Swiss cheese, sauerkraut, and Russian dressing.",
+      "ingredients": [
+        { "name": "rye bread slices", "quantity": 8, "unit": "pc" },
+        { "name": "corned beef, sliced", "quantity": 450, "unit": "g" },
+        { "name": "Swiss cheese slices", "quantity": 8, "unit": "pc" },
+        { "name": "sauerkraut, drained", "quantity": 200, "unit": "g" },
+        { "name": "mayonnaise", "quantity": 90, "unit": "ml" },
+        { "name": "ketchup", "quantity": 2, "unit": "tbsp" },
+        { "name": "sweet pickle relish", "quantity": 1, "unit": "tbsp" },
+        { "name": "Dijon mustard", "quantity": 1, "unit": "tsp" },
+        { "name": "unsalted butter, softened", "quantity": 60, "unit": "g" }
+      ],
+      "steps": [
+        "Whisk mayo, ketchup, relish, and mustard to make Russian dressing.",
+        "Squeeze the sauerkraut firmly to remove excess moisture, then warm gently in a pan to take off the chill.",
+        "Butter one side of every slice of rye bread.",
+        "On the unbuttered side of 4 slices, spread dressing, then layer Swiss cheese, warmed corned beef, sauerkraut, more cheese, and another spread of dressing.",
+        "Close with the remaining slices, butter side out.",
+        "Cook on a medium skillet for 3–4 minutes per side, pressing lightly, until the bread is deep golden and the cheese is fully melted.",
+        "Slice diagonally and serve with pickles."
+      ],
+      "tags": ["sandwich", "deli", "lunch", "comfort food"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Chicago-Style Deep Dish Pizza",
+      "description": "Thick-crusted Chicago pizza with a buttery crust, layers of cheese, sausage, and chunky tomato sauce on top.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 400, "unit": "g" },
+        { "name": "yellow cornmeal", "quantity": 60, "unit": "g" },
+        { "name": "instant yeast", "quantity": 7, "unit": "g" },
+        { "name": "warm water", "quantity": 240, "unit": "ml" },
+        { "name": "olive oil", "quantity": 60, "unit": "ml" },
+        { "name": "unsalted butter, melted", "quantity": 30, "unit": "g" },
+        { "name": "salt", "quantity": 1.5, "unit": "tsp" },
+        { "name": "low-moisture mozzarella, sliced", "quantity": 450, "unit": "g" },
+        { "name": "Italian sausage, casing removed", "quantity": 340, "unit": "g" },
+        { "name": "crushed San Marzano tomatoes", "quantity": 800, "unit": "g" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "dried oregano", "quantity": 1, "unit": "tsp" },
+        { "name": "Parmesan, grated", "quantity": 30, "unit": "g" }
+      ],
+      "steps": [
+        "Mix flour, cornmeal, yeast, salt, water, olive oil, and melted butter to form a dough; knead 6 minutes until smooth.",
+        "Cover and let rise 1 hour until doubled.",
+        "Simmer crushed tomatoes with garlic, oregano, and a pinch of salt for 15 minutes; cool.",
+        "Press the dough into a generously oiled 25 cm deep dish pan, pushing it up the sides about 5 cm.",
+        "Lay mozzarella slices to fully cover the bottom, scatter raw sausage in chunks over the cheese, and spoon the tomato sauce evenly on top.",
+        "Sprinkle Parmesan over the sauce and bake at 220°C for 30–35 minutes until the crust is deep golden.",
+        "Rest 10 minutes before slicing into thick wedges."
+      ],
+      "tags": ["pizza", "Chicago", "Italian-American", "baked"],
+      "difficulty": "hard",
+      "prepTime": 90,
+      "cookTime": 35,
+      "servings": 8
+    },
+    {
+      "title": "Cobb Salad",
+      "description": "Composed American salad with crisp greens, chicken, bacon, blue cheese, avocado, tomato, and hard-boiled egg.",
+      "ingredients": [
+        { "name": "romaine lettuce, chopped", "quantity": 300, "unit": "g" },
+        { "name": "cooked chicken breast, diced", "quantity": 300, "unit": "g" },
+        { "name": "bacon, cooked and crumbled", "quantity": 150, "unit": "g" },
+        { "name": "hard-boiled eggs, sliced", "quantity": 4, "unit": "pc" },
+        { "name": "avocado, diced", "quantity": 1, "unit": "pc" },
+        { "name": "cherry tomatoes, halved", "quantity": 250, "unit": "g" },
+        { "name": "blue cheese, crumbled", "quantity": 100, "unit": "g" },
+        { "name": "red wine vinegar", "quantity": 60, "unit": "ml" },
+        { "name": "Dijon mustard", "quantity": 1, "unit": "tsp" },
+        { "name": "olive oil", "quantity": 120, "unit": "ml" },
+        { "name": "garlic clove, minced", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Whisk vinegar, mustard, garlic, salt, and pepper, then slowly stream in olive oil to emulsify the dressing.",
+        "Spread the chopped romaine on a wide platter.",
+        "Arrange chicken, bacon, eggs, avocado, tomatoes, and blue cheese in distinct rows over the lettuce.",
+        "Drizzle the dressing over the top just before serving.",
+        "Toss tableside or have diners take their preferred mix of toppings."
+      ],
+      "tags": ["salad", "lunch", "main course"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 25,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Meatloaf",
+      "description": "Classic American comfort dish of seasoned ground beef baked in a loaf shape with a tangy ketchup glaze.",
+      "ingredients": [
+        { "name": "ground beef", "quantity": 900, "unit": "g" },
+        { "name": "breadcrumbs", "quantity": 60, "unit": "g" },
+        { "name": "whole milk", "quantity": 120, "unit": "ml" },
+        { "name": "yellow onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "eggs", "quantity": 2, "unit": "pc" },
+        { "name": "Worcestershire sauce", "quantity": 2, "unit": "tbsp" },
+        { "name": "Dijon mustard", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1.5, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "ketchup", "quantity": 120, "unit": "ml" },
+        { "name": "brown sugar", "quantity": 2, "unit": "tbsp" },
+        { "name": "apple cider vinegar", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Preheat the oven to 190°C and line a baking sheet with parchment.",
+        "Soak breadcrumbs in milk for 5 minutes.",
+        "Sauté onion and garlic in a little oil until soft, then cool slightly.",
+        "Combine beef, soaked breadcrumbs, onion mixture, eggs, Worcestershire, mustard, salt, and pepper, mixing gently with hands until just combined.",
+        "Shape into a loaf about 23 cm long on the baking sheet.",
+        "Whisk ketchup, brown sugar, and vinegar, then brush half over the loaf.",
+        "Bake for 45 minutes, brush with remaining glaze, and bake another 15 minutes until the internal temperature reaches 70°C; rest 10 minutes before slicing."
+      ],
+      "tags": ["beef", "comfort food", "dinner", "baked"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 60,
+      "servings": 8
+    },
+    {
+      "title": "Chicken Pot Pie",
+      "description": "Flaky-crusted savory pie filled with creamy chicken, peas, carrots, and potatoes in a rich gravy.",
+      "ingredients": [
+        { "name": "boneless chicken thighs, diced", "quantity": 700, "unit": "g" },
+        { "name": "unsalted butter", "quantity": 60, "unit": "g" },
+        { "name": "yellow onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "carrots, diced", "quantity": 2, "unit": "pc" },
+        { "name": "celery, diced", "quantity": 2, "unit": "pc" },
+        { "name": "all-purpose flour", "quantity": 45, "unit": "g" },
+        { "name": "chicken stock", "quantity": 480, "unit": "ml" },
+        { "name": "whole milk", "quantity": 240, "unit": "ml" },
+        { "name": "frozen peas", "quantity": 150, "unit": "g" },
+        { "name": "Yukon Gold potato, diced small", "quantity": 1, "unit": "pc" },
+        { "name": "fresh thyme", "quantity": 1, "unit": "tsp" },
+        { "name": "puff pastry sheet", "quantity": 1, "unit": "pc" },
+        { "name": "egg, beaten", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Preheat the oven to 200°C.",
+        "Melt butter in a large skillet, brown the chicken until just cooked through, then remove.",
+        "Add onion, carrots, celery, and potato to the pan and cook 8 minutes until softened.",
+        "Sprinkle in the flour and stir 1 minute.",
+        "Whisk in stock and milk gradually, then simmer until the sauce thickens and the potato is tender, about 8 minutes.",
+        "Stir in peas, thyme, and chicken; season well and pour into a 23 cm pie dish.",
+        "Top with the puff pastry, trim the edges, cut steam vents, brush with egg wash, and bake 25–30 minutes until the pastry is deep golden and the filling bubbles."
+      ],
+      "tags": ["pie", "chicken", "comfort food", "dinner"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 35,
+      "servings": 6
+    },
+    {
+      "title": "Chocolate Chip Cookies",
+      "description": "Classic American chewy cookies with crisp edges and pockets of melted chocolate chips.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 280, "unit": "g" },
+        { "name": "baking soda", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "unsalted butter, melted and cooled", "quantity": 225, "unit": "g" },
+        { "name": "brown sugar", "quantity": 200, "unit": "g" },
+        { "name": "granulated sugar", "quantity": 100, "unit": "g" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "egg yolk", "quantity": 1, "unit": "pc" },
+        { "name": "vanilla extract", "quantity": 2, "unit": "tsp" },
+        { "name": "semi-sweet chocolate chips", "quantity": 300, "unit": "g" }
+      ],
+      "steps": [
+        "Whisk flour, baking soda, and salt in a bowl.",
+        "In another bowl, whisk melted butter with both sugars until smooth.",
+        "Whisk in the whole egg, yolk, and vanilla until thick and ribbony.",
+        "Fold in the dry ingredients with a spatula just until no flour remains.",
+        "Stir in the chocolate chips, then chill the dough for at least 30 minutes.",
+        "Scoop 50 g balls onto parchment-lined sheets, leaving space to spread.",
+        "Bake at 175°C for 12–14 minutes until edges are golden but centers still look underdone; cool on the pan 5 minutes."
+      ],
+      "tags": ["dessert", "cookies", "baking", "kid-friendly"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 12,
+      "servings": 24
+    },
+    {
+      "title": "Caesar Salad",
+      "description": "Crisp romaine tossed in a creamy garlic-anchovy dressing with Parmesan cheese and crunchy croutons.",
+      "ingredients": [
+        { "name": "romaine lettuce hearts", "quantity": 2, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 2, "unit": "pc" },
+        { "name": "anchovy fillets", "quantity": 4, "unit": "pc" },
+        { "name": "egg yolks", "quantity": 2, "unit": "pc" },
+        { "name": "lemon juice", "quantity": 2, "unit": "tbsp" },
+        { "name": "Dijon mustard", "quantity": 1, "unit": "tsp" },
+        { "name": "Worcestershire sauce", "quantity": 1, "unit": "tsp" },
+        { "name": "olive oil", "quantity": 180, "unit": "ml" },
+        { "name": "Parmesan cheese, grated", "quantity": 60, "unit": "g" },
+        { "name": "rustic bread, cubed", "quantity": 200, "unit": "g" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Toss bread cubes with 2 tbsp olive oil and a pinch of salt and toast at 190°C for 10 minutes until golden, shaking the pan halfway.",
+        "Mash garlic and anchovies into a paste with the side of a knife.",
+        "Whisk the paste with yolks, lemon juice, mustard, and Worcestershire.",
+        "Slowly whisk in remaining olive oil to emulsify into a creamy dressing.",
+        "Stir in half the Parmesan and season with pepper.",
+        "Toss torn romaine with the dressing until evenly coated.",
+        "Top with croutons and the remaining Parmesan and serve right away."
+      ],
+      "tags": ["salad", "Italian-American", "side", "lunch"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "New York Cheesecake",
+      "description": "Dense, ultra-creamy New York-style cheesecake with a buttery graham cracker crust.",
+      "ingredients": [
+        { "name": "graham cracker crumbs", "quantity": 200, "unit": "g" },
+        { "name": "unsalted butter, melted", "quantity": 90, "unit": "g" },
+        { "name": "sugar (for crust)", "quantity": 30, "unit": "g" },
+        { "name": "cream cheese, room temperature", "quantity": 900, "unit": "g" },
+        { "name": "granulated sugar", "quantity": 250, "unit": "g" },
+        { "name": "sour cream", "quantity": 240, "unit": "ml" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tbsp" },
+        { "name": "lemon zest", "quantity": 1, "unit": "tsp" },
+        { "name": "eggs", "quantity": 4, "unit": "pc" },
+        { "name": "all-purpose flour", "quantity": 30, "unit": "g" }
+      ],
+      "steps": [
+        "Preheat the oven to 160°C and tightly wrap the outside of a 23 cm springform pan in foil.",
+        "Mix graham crumbs, melted butter, and 30 g sugar; press firmly into the bottom of the pan and bake 10 minutes; cool.",
+        "Beat cream cheese on medium until smooth, scraping down the bowl.",
+        "Add sugar and flour and beat to combine, then mix in sour cream, vanilla, and lemon zest.",
+        "Beat in eggs one at a time on low speed, just until incorporated.",
+        "Pour the batter onto the crust and place the pan in a roasting tray; pour hot water halfway up the sides.",
+        "Bake 60–70 minutes until edges are set but the center wobbles slightly; turn off oven and let cool inside 1 hour, then refrigerate at least 6 hours before slicing."
+      ],
+      "tags": ["dessert", "cheesecake", "New York", "baked"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 80,
+      "servings": 12
+    },
+    {
+      "title": "Sloppy Joe",
+      "description": "Saucy ground beef simmered with onions, peppers, and a tangy tomato sauce, served piled on soft hamburger buns.",
+      "ingredients": [
+        { "name": "ground beef", "quantity": 700, "unit": "g" },
+        { "name": "yellow onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "green bell pepper, diced", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "tomato sauce", "quantity": 240, "unit": "ml" },
+        { "name": "ketchup", "quantity": 60, "unit": "ml" },
+        { "name": "brown sugar", "quantity": 1, "unit": "tbsp" },
+        { "name": "Worcestershire sauce", "quantity": 1, "unit": "tbsp" },
+        { "name": "yellow mustard", "quantity": 1, "unit": "tsp" },
+        { "name": "chili powder", "quantity": 1, "unit": "tsp" },
+        { "name": "smoked paprika", "quantity": 0.5, "unit": "tsp" },
+        { "name": "hamburger buns", "quantity": 6, "unit": "pc" }
+      ],
+      "steps": [
+        "Brown the ground beef in a large skillet over medium-high heat, breaking it apart, until no pink remains; drain excess fat.",
+        "Add onion, bell pepper, and garlic and cook 5 minutes until softened.",
+        "Stir in tomato sauce, ketchup, brown sugar, Worcestershire, mustard, chili powder, and smoked paprika.",
+        "Simmer uncovered for 12–15 minutes until thick enough to mound on a spoon.",
+        "Season with salt and pepper.",
+        "Toast the buns and spoon the meat mixture generously over the bottom halves.",
+        "Cap with the top bun and serve immediately, ideally with pickles."
+      ],
+      "tags": ["sandwich", "beef", "comfort food", "weeknight"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 25,
+      "servings": 6
+    },
+    {
+      "title": "Buffalo Chicken Dip",
+      "description": "Creamy, cheesy, spicy baked dip loaded with shredded chicken and Buffalo hot sauce, served warm with chips.",
+      "ingredients": [
+        { "name": "cream cheese, room temperature", "quantity": 450, "unit": "g" },
+        { "name": "cooked chicken, shredded", "quantity": 450, "unit": "g" },
+        { "name": "Buffalo-style hot sauce", "quantity": 180, "unit": "ml" },
+        { "name": "ranch dressing", "quantity": 120, "unit": "ml" },
+        { "name": "shredded cheddar cheese", "quantity": 200, "unit": "g" },
+        { "name": "blue cheese, crumbled", "quantity": 60, "unit": "g" },
+        { "name": "green onions, sliced", "quantity": 3, "unit": "pc" },
+        { "name": "tortilla chips", "quantity": 300, "unit": "g" }
+      ],
+      "steps": [
+        "Preheat the oven to 175°C.",
+        "Beat the cream cheese in a bowl until smooth and easy to spread.",
+        "Stir in hot sauce and ranch dressing until evenly combined.",
+        "Fold in the shredded chicken and half the cheddar.",
+        "Spread into a 23 cm baking dish and top with the remaining cheddar and the blue cheese.",
+        "Bake for 20–25 minutes until bubbling and lightly browned on top.",
+        "Sprinkle with green onions and serve hot with tortilla chips and celery sticks."
+      ],
+      "tags": ["dip", "appetizer", "spicy", "game day", "cheese"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 25,
+      "servings": 8
+    },
+    {
+      "title": "Banana Bread",
+      "description": "Moist American quick bread made with very ripe bananas, brown sugar, and warm spices.",
+      "ingredients": [
+        { "name": "very ripe bananas, mashed", "quantity": 3, "unit": "pc" },
+        { "name": "all-purpose flour", "quantity": 240, "unit": "g" },
+        { "name": "brown sugar", "quantity": 150, "unit": "g" },
+        { "name": "unsalted butter, melted", "quantity": 110, "unit": "g" },
+        { "name": "eggs", "quantity": 2, "unit": "pc" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "baking soda", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" },
+        { "name": "ground cinnamon", "quantity": 1, "unit": "tsp" },
+        { "name": "walnuts, chopped (optional)", "quantity": 80, "unit": "g" }
+      ],
+      "steps": [
+        "Preheat the oven to 175°C and grease a 23×13 cm loaf pan.",
+        "Whisk mashed bananas with melted butter, brown sugar, eggs, and vanilla.",
+        "In another bowl whisk flour, baking soda, salt, and cinnamon.",
+        "Fold the dry ingredients into the wet just until no streaks of flour remain.",
+        "Stir in walnuts if using.",
+        "Pour into the prepared pan and smooth the top.",
+        "Bake 55–65 minutes until a toothpick inserted in the center comes out clean; cool 15 minutes before slicing."
+      ],
+      "tags": ["bread", "dessert", "baking", "breakfast"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 60,
+      "servings": 10
+    },
+    {
+      "title": "Buttermilk Pancakes",
+      "description": "Fluffy, golden American breakfast pancakes made with tangy buttermilk, served with butter and maple syrup.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 250, "unit": "g" },
+        { "name": "sugar", "quantity": 30, "unit": "g" },
+        { "name": "baking powder", "quantity": 2, "unit": "tsp" },
+        { "name": "baking soda", "quantity": 0.5, "unit": "tsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" },
+        { "name": "buttermilk", "quantity": 480, "unit": "ml" },
+        { "name": "eggs", "quantity": 2, "unit": "pc" },
+        { "name": "unsalted butter, melted", "quantity": 60, "unit": "g" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "maple syrup", "quantity": 240, "unit": "ml" }
+      ],
+      "steps": [
+        "Whisk flour, sugar, baking powder, baking soda, and salt in a bowl.",
+        "In another bowl, whisk buttermilk, eggs, melted butter, and vanilla.",
+        "Pour wet into dry and stir just until combined; lumps are fine and overmixing makes pancakes tough.",
+        "Heat a non-stick skillet or griddle over medium heat and lightly grease.",
+        "Pour 80 ml batter per pancake and cook until bubbles form and pop on the surface, about 2 minutes.",
+        "Flip and cook another 1–2 minutes until golden and cooked through.",
+        "Serve hot with butter and warmed maple syrup."
+      ],
+      "tags": ["breakfast", "pancakes", "weekend"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 4
+    }
+  ]
+}

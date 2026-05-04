@@ -1,0 +1,377 @@
+{
+  "cuisine": "Polish",
+  "names": {
+    "first": ["Jakub", "Kacper", "Antoni", "Filip", "Jan", "Szymon", "Aleksander", "Wojciech", "Zofia", "Julia", "Maja", "Lena", "Hanna", "Alicja", "Aleksandra", "Anna"],
+    "last": ["Nowak", "Kowalski", "Wiśniewski", "Wójcik", "Kowalczyk", "Kamiński", "Lewandowski", "Zieliński", "Szymański", "Woźniak", "Dąbrowski", "Kozłowski"]
+  },
+  "recipes": [
+    {
+      "title": "Pierogi",
+      "description": "Polish dumplings with tender dough wrapped around fillings of potato-cheese, meat or sauerkraut and mushroom.",
+      "ingredients": [
+        { "name": "flour", "quantity": 500, "unit": "g" },
+        { "name": "warm water", "quantity": 250, "unit": "ml" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "potatoes", "quantity": 600, "unit": "g" },
+        { "name": "twaróg cheese", "quantity": 250, "unit": "g" },
+        { "name": "onions", "quantity": 2, "unit": "pc" },
+        { "name": "butter", "quantity": 80, "unit": "g" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" },
+        { "name": "sour cream", "quantity": 200, "unit": "ml" }
+      ],
+      "steps": [
+        "Knead flour, warm water, egg and salt into a soft, elastic dough; rest covered 30 minutes.",
+        "Boil potatoes until tender; mash dry.",
+        "Sauté one finely chopped onion in butter until golden; mix with potato, twaróg, salt and pepper.",
+        "Roll dough thin and cut 7cm circles.",
+        "Place a teaspoon of filling on each, fold and press edges to seal firmly.",
+        "Drop pierogi into boiling salted water in batches; cook 3 minutes after they float.",
+        "Pan-fry remaining onion in butter until golden.",
+        "Drain pierogi and toss with onion butter; serve with sour cream."
+      ],
+      "tags": ["dumplings", "polish-classic", "comfort-food"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 25,
+      "servings": 6
+    },
+    {
+      "title": "Bigos",
+      "description": "Polish hunter's stew of sauerkraut, fresh cabbage, mixed meats and sausage simmered for hours.",
+      "ingredients": [
+        { "name": "sauerkraut", "quantity": 1, "unit": "kg" },
+        { "name": "white cabbage", "quantity": 0.5, "unit": "pc" },
+        { "name": "pork shoulder", "quantity": 500, "unit": "g" },
+        { "name": "beef chuck", "quantity": 300, "unit": "g" },
+        { "name": "Polish kiełbasa sausage", "quantity": 300, "unit": "g" },
+        { "name": "smoked bacon", "quantity": 150, "unit": "g" },
+        { "name": "onions", "quantity": 2, "unit": "pc" },
+        { "name": "dried mushrooms", "quantity": 30, "unit": "g" },
+        { "name": "bay leaves", "quantity": 3, "unit": "pc" },
+        { "name": "juniper berries", "quantity": 8, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "red wine", "quantity": 200, "unit": "ml" },
+        { "name": "prunes", "quantity": 100, "unit": "g" }
+      ],
+      "steps": [
+        "Soak dried mushrooms in 300ml hot water 30 minutes.",
+        "Render diced bacon, then brown cubed pork and beef in the fat.",
+        "Add chopped onions and cook until soft.",
+        "Add drained sauerkraut, shredded fresh cabbage, mushrooms with their liquid, bay, juniper, tomato paste and wine.",
+        "Add 500ml water and simmer covered 2 hours, stirring occasionally.",
+        "Slice kiełbasa and add with prunes; simmer 30 more minutes.",
+        "Adjust seasoning. Best when reheated the next day."
+      ],
+      "tags": ["stew", "cabbage", "polish-classic", "winter"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 180,
+      "servings": 8
+    },
+    {
+      "title": "Żurek",
+      "description": "Polish sour rye soup with sausage, eggs and a dollop of horseradish.",
+      "ingredients": [
+        { "name": "sour rye starter (zakwas)", "quantity": 500, "unit": "ml" },
+        { "name": "smoked Polish sausage", "quantity": 300, "unit": "g" },
+        { "name": "smoked bacon", "quantity": 100, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 3, "unit": "pc" },
+        { "name": "potatoes", "quantity": 400, "unit": "g" },
+        { "name": "carrot", "quantity": 1, "unit": "pc" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "marjoram", "quantity": 1, "unit": "tsp" },
+        { "name": "sour cream", "quantity": 100, "unit": "ml" },
+        { "name": "eggs", "quantity": 4, "unit": "pc" },
+        { "name": "water", "quantity": 1.5, "unit": "l" }
+      ],
+      "steps": [
+        "Render diced bacon in a soup pot; add chopped onion and sliced sausage.",
+        "Add water, sliced carrot, bay and marjoram; simmer 30 minutes.",
+        "Add diced potatoes; cook 15 minutes until tender.",
+        "Stir the rye starter well and pour into the soup; simmer 10 minutes.",
+        "Crush garlic and stir in; do not boil hard.",
+        "Temper sour cream with hot soup, then stir back in.",
+        "Hard-boil eggs, halve, and place in bowls before ladling soup over."
+      ],
+      "tags": ["soup", "sour", "polish-classic", "easter"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Kotlet Schabowy",
+      "description": "Polish breaded pork cutlet pan-fried golden, served with potatoes and sauerkraut.",
+      "ingredients": [
+        { "name": "pork loin chops", "quantity": 4, "unit": "pc" },
+        { "name": "flour", "quantity": 100, "unit": "g" },
+        { "name": "eggs", "quantity": 2, "unit": "pc" },
+        { "name": "breadcrumbs", "quantity": 150, "unit": "g" },
+        { "name": "vegetable oil", "quantity": 100, "unit": "ml" },
+        { "name": "butter", "quantity": 30, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Pound chops between cling film to 1cm thick; season with salt and pepper.",
+        "Set up flour, beaten eggs and breadcrumbs in three plates.",
+        "Dredge chops in flour, dip in egg, then coat fully in breadcrumbs.",
+        "Heat oil and butter in a wide pan until hot.",
+        "Fry cutlets 4 minutes per side until deep golden and cooked through.",
+        "Drain briefly on paper and serve hot with potatoes."
+      ],
+      "tags": ["pork", "fried", "breaded", "polish-classic"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Gołąbki",
+      "description": "Polish cabbage rolls stuffed with pork and rice, simmered in tomato sauce.",
+      "ingredients": [
+        { "name": "white cabbage", "quantity": 1, "unit": "pc" },
+        { "name": "ground pork", "quantity": 500, "unit": "g" },
+        { "name": "long grain rice", "quantity": 150, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 2, "unit": "pc" },
+        { "name": "tomato passata", "quantity": 700, "unit": "ml" },
+        { "name": "vegetable broth", "quantity": 250, "unit": "ml" },
+        { "name": "marjoram", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Core cabbage and blanch whole 5 minutes; peel off softened leaves.",
+        "Simmer rice 8 minutes (half-cooked); drain and cool.",
+        "Sauté chopped onion in oil until soft; cool.",
+        "Combine pork, rice, onion, egg, crushed garlic, salt and marjoram.",
+        "Place 2 tablespoons filling on each leaf, fold sides and roll tightly.",
+        "Line a pot with leftover leaves; pack rolls seam-down in tight layers.",
+        "Pour passata and broth over; cover and simmer 90 minutes on low.",
+        "Spoon sauce over rolls to serve."
+      ],
+      "tags": ["cabbage-rolls", "stuffed", "polish-classic", "comfort-food"],
+      "difficulty": "medium",
+      "prepTime": 40,
+      "cookTime": 100,
+      "servings": 6
+    },
+    {
+      "title": "Barszcz",
+      "description": "Polish beetroot soup with deep ruby colour, served clear or with meat dumplings.",
+      "ingredients": [
+        { "name": "beetroots", "quantity": 700, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "carrot", "quantity": 1, "unit": "pc" },
+        { "name": "celery stalks", "quantity": 2, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 4, "unit": "pc" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "allspice berries", "quantity": 4, "unit": "pc" },
+        { "name": "lemon juice", "quantity": 3, "unit": "tbsp" },
+        { "name": "sugar", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable broth", "quantity": 2, "unit": "l" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Peel and grate beetroots coarsely.",
+        "Combine beetroot, chopped onion, carrot, celery, bay, allspice and broth.",
+        "Bring to a simmer and cook 45 minutes over low heat.",
+        "Strain through a fine sieve, pressing gently; discard solids.",
+        "Return broth to pot; stir in crushed garlic, lemon juice, sugar and salt.",
+        "Warm through (do not boil) and serve clear or with small dumplings."
+      ],
+      "tags": ["soup", "beetroot", "polish-classic", "christmas"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Pyzy",
+      "description": "Polish potato dumplings with a pillowy, slightly chewy bite, served with bacon and onion.",
+      "ingredients": [
+        { "name": "potatoes", "quantity": 1, "unit": "kg" },
+        { "name": "potato starch", "quantity": 80, "unit": "g" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "smoked bacon", "quantity": 150, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "butter", "quantity": 30, "unit": "g" }
+      ],
+      "steps": [
+        "Boil potatoes in their skins until tender; peel and rice while warm.",
+        "Spread potato to cool slightly, then mound on a board and divide into quarters.",
+        "Replace one quarter with potato starch; add egg and salt.",
+        "Knead briefly until a soft dough forms; do not overwork.",
+        "Shape into walnut-sized balls.",
+        "Cook in batches in boiling salted water 5-7 minutes after they float.",
+        "Render diced bacon with chopped onion in butter until golden.",
+        "Drain dumplings and toss with bacon-onion mixture."
+      ],
+      "tags": ["dumplings", "potato", "polish-classic"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Placki Ziemniaczane",
+      "description": "Crispy Polish potato pancakes, golden outside and tender inside.",
+      "ingredients": [
+        { "name": "potatoes", "quantity": 1, "unit": "kg" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "eggs", "quantity": 2, "unit": "pc" },
+        { "name": "flour", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 100, "unit": "ml" },
+        { "name": "sour cream", "quantity": 200, "unit": "ml" }
+      ],
+      "steps": [
+        "Grate potatoes and onion finely.",
+        "Place in a sieve and squeeze hard to remove as much liquid as possible.",
+        "Mix with eggs, flour, salt and pepper.",
+        "Heat oil in a wide frying pan over medium-high heat.",
+        "Drop heaped tablespoons of batter into oil and flatten lightly.",
+        "Fry 3-4 minutes per side until deep golden and crisp.",
+        "Drain on paper and serve hot with sour cream."
+      ],
+      "tags": ["pancake", "potato", "fried", "polish-classic"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Rosół",
+      "description": "Clear Polish chicken soup with carrots, root vegetables and thin egg noodles.",
+      "ingredients": [
+        { "name": "whole chicken", "quantity": 1.5, "unit": "kg" },
+        { "name": "beef shin", "quantity": 300, "unit": "g" },
+        { "name": "carrots", "quantity": 3, "unit": "pc" },
+        { "name": "parsnip", "quantity": 1, "unit": "pc" },
+        { "name": "celery root", "quantity": 0.5, "unit": "pc" },
+        { "name": "leek", "quantity": 1, "unit": "pc" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "allspice berries", "quantity": 4, "unit": "pc" },
+        { "name": "egg noodles", "quantity": 200, "unit": "g" },
+        { "name": "fresh parsley", "quantity": 0.5, "unit": "bunch" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Char unpeeled onion over a flame until blackened; this gives the soup its colour.",
+        "Place chicken, beef and onion in a large pot with 3L cold water.",
+        "Bring slowly to a simmer, skimming foam carefully for 20 minutes.",
+        "Add carrots, parsnip, celery root, leek, bay, allspice and salt.",
+        "Simmer uncovered on the lowest heat 2.5 hours; do not boil hard.",
+        "Strain broth into a clean pot; reserve carrots and shred some chicken.",
+        "Cook noodles separately; place in bowls, ladle broth, add carrots and chicken.",
+        "Top with chopped parsley."
+      ],
+      "tags": ["soup", "chicken", "polish-classic", "comfort-food"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 180,
+      "servings": 6
+    },
+    {
+      "title": "Kopytka",
+      "description": "Polish potato dumplings cut on a diagonal, with a chewy bite and a buttery finish.",
+      "ingredients": [
+        { "name": "potatoes", "quantity": 1, "unit": "kg" },
+        { "name": "flour", "quantity": 200, "unit": "g" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "breadcrumbs", "quantity": 3, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Boil potatoes in their skins until tender; peel and rice while warm.",
+        "Cool potatoes slightly, then mound on a board.",
+        "Add flour, egg and salt; knead briefly into a soft dough.",
+        "Roll into long ropes about 2cm thick.",
+        "Cut on a sharp diagonal into 2cm pieces.",
+        "Cook in boiling salted water 2-3 minutes after they float.",
+        "Toast breadcrumbs in butter until golden.",
+        "Drain dumplings and toss with the breadcrumb butter."
+      ],
+      "tags": ["dumplings", "potato", "polish-classic"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Naleśniki",
+      "description": "Thin Polish crepes filled with sweet cheese, fruit or savoury fillings.",
+      "ingredients": [
+        { "name": "flour", "quantity": 200, "unit": "g" },
+        { "name": "eggs", "quantity": 3, "unit": "pc" },
+        { "name": "milk", "quantity": 500, "unit": "ml" },
+        { "name": "sparkling water", "quantity": 100, "unit": "ml" },
+        { "name": "sugar", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "pinch" },
+        { "name": "butter", "quantity": 30, "unit": "g" },
+        { "name": "twaróg cheese", "quantity": 400, "unit": "g" },
+        { "name": "extra sugar for filling", "quantity": 60, "unit": "g" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "raisins", "quantity": 50, "unit": "g" }
+      ],
+      "steps": [
+        "Whisk flour, eggs, milk, sparkling water, sugar and salt to a smooth thin batter; rest 15 minutes.",
+        "Mash twaróg with sugar, vanilla, an egg yolk and raisins.",
+        "Heat a small frying pan and brush with butter.",
+        "Pour a thin layer of batter, swirl, and cook 1 minute until edges lift.",
+        "Flip and cook 30 seconds; stack between paper.",
+        "Place a spoonful of cheese filling on each crepe and roll into a parcel.",
+        "Pan-fry briefly in butter or serve with sour cream and jam."
+      ],
+      "tags": ["crepes", "breakfast", "polish-classic"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Sernik",
+      "description": "Polish baked cheesecake made with twaróg, eggs and a touch of vanilla.",
+      "ingredients": [
+        { "name": "twaróg cheese", "quantity": 1, "unit": "kg" },
+        { "name": "sugar", "quantity": 200, "unit": "g" },
+        { "name": "eggs", "quantity": 6, "unit": "pc" },
+        { "name": "butter", "quantity": 100, "unit": "g" },
+        { "name": "vanilla extract", "quantity": 2, "unit": "tsp" },
+        { "name": "potato starch", "quantity": 50, "unit": "g" },
+        { "name": "lemon zest", "quantity": 1, "unit": "tsp" },
+        { "name": "raisins", "quantity": 80, "unit": "g" },
+        { "name": "shortcrust pastry", "quantity": 250, "unit": "g" }
+      ],
+      "steps": [
+        "Press shortcrust pastry into a 24cm springform tin and chill.",
+        "Twice through a meat grinder or fine sieve, pass the twaróg until silky.",
+        "Cream butter with sugar until pale; beat in egg yolks one at a time.",
+        "Mix in twaróg, vanilla, potato starch and zest.",
+        "Whisk egg whites to firm peaks and fold into the mixture with raisins.",
+        "Pour onto the pastry base and smooth the top.",
+        "Bake at 160°C for 70 minutes until just set with a slight wobble.",
+        "Cool fully in the tin before slicing."
+      ],
+      "tags": ["dessert", "cheesecake", "polish-classic"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 70,
+      "servings": 12
+    }
+  ]
+}

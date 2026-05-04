@@ -66,6 +66,14 @@ export interface IRecipe extends Document {
   featuredAt?: Date;
   createdAt: Date;
   updatedAt: Date;
+  /** True when this recipe was inserted by the seed-data pipeline. */
+  isSeed?: boolean;
+  /** Origin source (themealdb = real api, curated = subagent-curated). */
+  seedSource?: "themealdb" | "curated";
+  /** Canonical cuisine assigned at seed time. Mirrors `cuisineTags[0]`. */
+  seedCuisine?: string;
+  /** External id from TheMealDB (e.g. "52772") for de-duping on re-runs. */
+  seedExternalId?: string;
 }
 
 const ingredientSchema = new Schema<IIngredient>(
@@ -241,6 +249,10 @@ const recipeSchema = new Schema<IRecipe>(
     featuredAt: {
       type: Date,
     },
+    isSeed: { type: Boolean, default: false, index: true },
+    seedSource: { type: String, enum: ["themealdb", "curated"] },
+    seedCuisine: { type: String, index: true },
+    seedExternalId: { type: String, index: true },
   },
   {
     timestamps: true,
@@ -267,6 +279,9 @@ recipeSchema.index(
   { isFeatured: 1 },
   { partialFilterExpression: { isFeatured: true } }
 );
+
+// Compound index for admin Seed Data grouping queries.
+recipeSchema.index({ isSeed: 1, seedCuisine: 1 });
 
 const Recipe =
   (mongoose.models.Recipe as mongoose.Model<IRecipe>) ||

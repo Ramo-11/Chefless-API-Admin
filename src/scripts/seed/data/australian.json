@@ -1,0 +1,339 @@
+{
+  "cuisine": "Australian",
+  "names": {
+    "first": ["Jack", "Oliver", "William", "Charlotte", "Olivia", "Mia", "Noah", "Ruby", "Harper", "Lachlan"],
+    "last": ["Smith", "Jones", "Williams", "Brown", "Wilson", "Taylor", "Anderson", "Thompson", "Murphy", "Campbell"]
+  },
+  "recipes": [
+    {
+      "title": "Meat Pie",
+      "description": "Classic Australian hand-sized pie filled with minced beef in rich gravy under a flaky pastry top.",
+      "ingredients": [
+        { "name": "minced beef", "quantity": 500, "unit": "g" },
+        { "name": "brown onion", "quantity": 1, "unit": "pc" },
+        { "name": "beef stock", "quantity": 300, "unit": "ml" },
+        { "name": "tomato sauce", "quantity": 2, "unit": "tbsp" },
+        { "name": "Worcestershire sauce", "quantity": 1, "unit": "tbsp" },
+        { "name": "plain flour", "quantity": 2, "unit": "tbsp" },
+        { "name": "shortcrust pastry", "quantity": 2, "unit": "pc" },
+        { "name": "puff pastry", "quantity": 2, "unit": "pc" },
+        { "name": "egg", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Saute diced onion in oil until translucent, then add minced beef and brown thoroughly.",
+        "Stir in flour and cook for one minute, then pour in beef stock, tomato sauce and Worcestershire.",
+        "Simmer the filling for 15 minutes until thick, then season and cool completely.",
+        "Line individual pie tins with shortcrust pastry and fill with the cooled mince.",
+        "Top with puff pastry, trim the edges and brush with beaten egg.",
+        "Bake at 200 C for 25 to 30 minutes until the pastry is deep golden.",
+        "Rest for five minutes and serve with extra tomato sauce on top."
+      ],
+      "tags": ["beef", "pie", "comfort food", "lunch"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 50,
+      "servings": 4
+    },
+    {
+      "title": "Lamington",
+      "description": "Square sponge cakes dipped in chocolate icing and rolled in desiccated coconut.",
+      "ingredients": [
+        { "name": "butter", "quantity": 125, "unit": "g" },
+        { "name": "caster sugar", "quantity": 200, "unit": "g" },
+        { "name": "egg", "quantity": 3, "unit": "pc" },
+        { "name": "self raising flour", "quantity": 225, "unit": "g" },
+        { "name": "milk", "quantity": 125, "unit": "ml" },
+        { "name": "icing sugar", "quantity": 500, "unit": "g" },
+        { "name": "cocoa powder", "quantity": 30, "unit": "g" },
+        { "name": "boiling water", "quantity": 125, "unit": "ml" },
+        { "name": "desiccated coconut", "quantity": 200, "unit": "g" }
+      ],
+      "steps": [
+        "Cream butter and caster sugar until pale, then beat in eggs one at a time.",
+        "Fold in flour alternately with milk to make a smooth batter.",
+        "Pour into a lined slice tin and bake at 180 C for 25 minutes.",
+        "Cool completely, then cut into 5 cm squares and chill until firm.",
+        "Sift icing sugar with cocoa, whisk in boiling water until glossy.",
+        "Dip each cube of cake into the chocolate icing using two forks.",
+        "Roll immediately in desiccated coconut and set on a wire rack to dry."
+      ],
+      "tags": ["dessert", "cake", "chocolate", "afternoon tea"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 25,
+      "servings": 16
+    },
+    {
+      "title": "Pavlova",
+      "description": "Crisp-shelled meringue with marshmallow centre, topped with whipped cream and fresh fruit.",
+      "ingredients": [
+        { "name": "egg white", "quantity": 6, "unit": "pc" },
+        { "name": "caster sugar", "quantity": 300, "unit": "g" },
+        { "name": "white vinegar", "quantity": 1, "unit": "tsp" },
+        { "name": "cornflour", "quantity": 2, "unit": "tsp" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "thickened cream", "quantity": 300, "unit": "ml" },
+        { "name": "strawberry", "quantity": 250, "unit": "g" },
+        { "name": "kiwifruit", "quantity": 2, "unit": "pc" },
+        { "name": "passionfruit", "quantity": 2, "unit": "pc" }
+      ],
+      "steps": [
+        "Whisk egg whites to soft peaks, then add caster sugar a spoonful at a time until glossy.",
+        "Fold in vinegar, cornflour and vanilla until just combined.",
+        "Mound the meringue onto a lined tray in a 22 cm circle, smoothing the sides.",
+        "Bake at 120 C for 1 hour 15 minutes, then turn off the oven and cool inside with the door ajar.",
+        "Whip cream to soft peaks and pile generously on top of the cooled meringue.",
+        "Decorate with sliced strawberries, kiwifruit rounds and passionfruit pulp.",
+        "Serve immediately so the shell stays crisp."
+      ],
+      "tags": ["dessert", "meringue", "fruit", "summer"],
+      "dietaryTags": ["gluten-free", "vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 75,
+      "servings": 8
+    },
+    {
+      "title": "Vegemite Sandwich",
+      "description": "Iconic Australian sandwich of buttered white bread spread thinly with salty Vegemite.",
+      "ingredients": [
+        { "name": "white sandwich bread", "quantity": 2, "unit": "pc" },
+        { "name": "salted butter", "quantity": 1, "unit": "tbsp" },
+        { "name": "Vegemite", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Spread softened butter generously over both slices of fresh white bread.",
+        "Spread a thin scrape of Vegemite over the buttered side of one slice.",
+        "Press the second slice butter side down on top to close the sandwich.",
+        "Cut diagonally and serve immediately for breakfast or lunch."
+      ],
+      "tags": ["sandwich", "breakfast", "quick", "lunchbox"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 3,
+      "cookTime": 0,
+      "servings": 1
+    },
+    {
+      "title": "Anzac Biscuits",
+      "description": "Chewy oat and golden syrup biscuits originally baked for soldiers during World War I.",
+      "ingredients": [
+        { "name": "rolled oats", "quantity": 100, "unit": "g" },
+        { "name": "plain flour", "quantity": 150, "unit": "g" },
+        { "name": "desiccated coconut", "quantity": 90, "unit": "g" },
+        { "name": "brown sugar", "quantity": 100, "unit": "g" },
+        { "name": "butter", "quantity": 125, "unit": "g" },
+        { "name": "golden syrup", "quantity": 2, "unit": "tbsp" },
+        { "name": "bicarbonate of soda", "quantity": 1, "unit": "tsp" },
+        { "name": "boiling water", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Combine oats, flour, coconut and brown sugar in a large bowl.",
+        "Melt butter with golden syrup in a small saucepan over low heat.",
+        "Mix bicarbonate of soda with boiling water and stir into the butter mixture, which will foam.",
+        "Pour the wet mixture over the dry ingredients and stir to a stiff dough.",
+        "Roll tablespoons of dough into balls, place on lined trays and flatten slightly.",
+        "Bake at 160 C for 15 minutes until golden but still soft in the centre.",
+        "Cool on the trays for 10 minutes so they crisp up before transferring to a rack."
+      ],
+      "tags": ["biscuit", "dessert", "snack", "traditional"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 24
+    },
+    {
+      "title": "Damper",
+      "description": "Traditional Australian soda bread historically baked by drovers and stockmen in campfire coals.",
+      "ingredients": [
+        { "name": "self raising flour", "quantity": 500, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "milk", "quantity": 250, "unit": "ml" },
+        { "name": "water", "quantity": 60, "unit": "ml" }
+      ],
+      "steps": [
+        "Sift flour and salt into a bowl, then rub in cold butter until the mixture resembles breadcrumbs.",
+        "Make a well in the centre and pour in most of the milk and water.",
+        "Stir with a butter knife to form a soft, slightly sticky dough, adding remaining liquid if needed.",
+        "Turn onto a floured surface and shape into a round about 4 cm thick.",
+        "Place on a floured tray, score a deep cross on top and dust with extra flour.",
+        "Bake at 200 C for 30 minutes until golden and hollow sounding when tapped.",
+        "Tear apart while warm and serve with butter and golden syrup."
+      ],
+      "tags": ["bread", "side", "traditional", "campfire"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 30,
+      "servings": 8
+    },
+    {
+      "title": "Sausage Roll",
+      "description": "Flaky puff pastry wrapped around seasoned pork sausage filling, an Australian bakery staple.",
+      "ingredients": [
+        { "name": "pork mince", "quantity": 500, "unit": "g" },
+        { "name": "brown onion", "quantity": 1, "unit": "pc" },
+        { "name": "carrot", "quantity": 1, "unit": "pc" },
+        { "name": "breadcrumbs", "quantity": 60, "unit": "g" },
+        { "name": "egg", "quantity": 2, "unit": "pc" },
+        { "name": "tomato sauce", "quantity": 2, "unit": "tbsp" },
+        { "name": "Worcestershire sauce", "quantity": 1, "unit": "tbsp" },
+        { "name": "puff pastry", "quantity": 3, "unit": "pc" },
+        { "name": "sesame seeds", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Grate the onion and carrot finely, then squeeze out any excess liquid.",
+        "Combine mince, vegetables, breadcrumbs, one egg and the sauces, season well and mix thoroughly.",
+        "Cut each pastry sheet in half and pipe a log of mince along the long edge.",
+        "Roll up snugly, seam side down, and cut into 6 cm pieces.",
+        "Place on lined trays, brush with the remaining beaten egg and sprinkle with sesame seeds.",
+        "Bake at 200 C for 25 minutes until the pastry is puffed and deep golden.",
+        "Serve hot with tomato sauce on the side."
+      ],
+      "tags": ["pork", "pastry", "snack", "party"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 25,
+      "servings": 12
+    },
+    {
+      "title": "Fairy Bread",
+      "description": "Children's party staple of buttered white bread covered in rainbow hundreds and thousands.",
+      "ingredients": [
+        { "name": "white sandwich bread", "quantity": 8, "unit": "pc" },
+        { "name": "salted butter", "quantity": 80, "unit": "g" },
+        { "name": "hundreds and thousands", "quantity": 100, "unit": "g" }
+      ],
+      "steps": [
+        "Spread softened butter to the very edges of each slice of fresh white bread.",
+        "Tip a generous layer of hundreds and thousands onto a flat plate.",
+        "Press each slice butter-side down firmly into the sprinkles to coat completely.",
+        "Cut each slice diagonally into four small triangles and arrange on a serving plate."
+      ],
+      "tags": ["snack", "party", "kids", "quick"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 0,
+      "servings": 8
+    },
+    {
+      "title": "Chiko Roll",
+      "description": "Deep-fried Australian savoury roll inspired by the Chinese spring roll, sold at takeaway shops.",
+      "ingredients": [
+        { "name": "minced mutton", "quantity": 250, "unit": "g" },
+        { "name": "cabbage", "quantity": 200, "unit": "g" },
+        { "name": "celery", "quantity": 1, "unit": "pc" },
+        { "name": "carrot", "quantity": 1, "unit": "pc" },
+        { "name": "barley", "quantity": 60, "unit": "g" },
+        { "name": "brown onion", "quantity": 1, "unit": "pc" },
+        { "name": "soy sauce", "quantity": 2, "unit": "tbsp" },
+        { "name": "egg roll wrapper", "quantity": 8, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "Cook barley in salted water until tender and drain well.",
+        "Finely chop cabbage, celery, carrot and onion, then saute in oil until softened.",
+        "Add mutton mince and cook through, stirring in soy sauce and cooked barley.",
+        "Season generously and cool the filling completely.",
+        "Spoon a heaped portion of filling onto each thick wrapper and roll into a fat cigar, sealing the seam with water.",
+        "Heat oil to 180 C and deep fry the rolls in batches for 5 minutes until deep golden and crisp.",
+        "Drain on paper towel and serve hot."
+      ],
+      "tags": ["fried", "snack", "takeaway", "savoury"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 25,
+      "servings": 8
+    },
+    {
+      "title": "Dim Sim",
+      "description": "Oversized Australian-Chinese steamed or fried dumpling filled with pork and cabbage.",
+      "ingredients": [
+        { "name": "pork mince", "quantity": 400, "unit": "g" },
+        { "name": "cabbage", "quantity": 200, "unit": "g" },
+        { "name": "spring onion", "quantity": 4, "unit": "pc" },
+        { "name": "ginger", "quantity": 1, "unit": "tbsp" },
+        { "name": "soy sauce", "quantity": 2, "unit": "tbsp" },
+        { "name": "sesame oil", "quantity": 1, "unit": "tbsp" },
+        { "name": "white pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "wonton wrapper", "quantity": 24, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 500, "unit": "ml" }
+      ],
+      "steps": [
+        "Finely chop cabbage, salt lightly, leave for 10 minutes then squeeze out the moisture.",
+        "Combine pork, drained cabbage, spring onion, ginger, soy, sesame oil and white pepper.",
+        "Place a heaped tablespoon of filling in the centre of each wrapper.",
+        "Gather the wrapper around the filling, leaving the top open like a small cup.",
+        "Steam over boiling water for 12 minutes until cooked through.",
+        "For the fried version, shallow fry the steamed dim sims in hot oil until golden on all sides.",
+        "Serve with soy sauce for dipping."
+      ],
+      "tags": ["dumpling", "pork", "snack", "takeaway"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 20,
+      "servings": 6
+    },
+    {
+      "title": "Carpetbag Steak",
+      "description": "Thick beef fillet stuffed with fresh oysters, a retro Australian steakhouse classic.",
+      "ingredients": [
+        { "name": "beef fillet", "quantity": 4, "unit": "pc" },
+        { "name": "fresh oyster", "quantity": 12, "unit": "pc" },
+        { "name": "butter", "quantity": 50, "unit": "g" },
+        { "name": "lemon juice", "quantity": 1, "unit": "tbsp" },
+        { "name": "parsley", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "olive oil", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Cut a deep horizontal pocket into the side of each thick fillet steak.",
+        "Tuck three shucked oysters and a small knob of butter into each pocket and secure with a toothpick.",
+        "Season the outside generously with salt and pepper.",
+        "Heat olive oil in a heavy pan over high heat and sear the steaks for three minutes per side for medium rare.",
+        "Rest the steaks under foil for five minutes.",
+        "Melt remaining butter with lemon juice and chopped parsley to make a quick sauce.",
+        "Remove the toothpicks and spoon the lemon butter over the steaks to serve."
+      ],
+      "tags": ["beef", "seafood", "dinner", "retro"],
+      "difficulty": "hard",
+      "prepTime": 20,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Barramundi",
+      "description": "Pan seared whole barramundi fillet, a native Australian fish, finished with lemon and herbs.",
+      "ingredients": [
+        { "name": "barramundi fillet", "quantity": 4, "unit": "pc" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "lemon", "quantity": 1, "unit": "pc" },
+        { "name": "garlic", "quantity": 2, "unit": "pc" },
+        { "name": "butter", "quantity": 40, "unit": "g" },
+        { "name": "parsley", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Pat the barramundi fillets very dry and score the skin lightly.",
+        "Season generously with salt and pepper on both sides.",
+        "Heat olive oil in a heavy pan and place the fillets skin side down, pressing for 30 seconds.",
+        "Cook undisturbed for four minutes until the skin is crisp and golden.",
+        "Flip the fillets, add butter, smashed garlic and a squeeze of lemon, then baste for two minutes.",
+        "Remove the fish to warm plates and spoon over the pan butter.",
+        "Scatter with chopped parsley and serve with lemon wedges."
+      ],
+      "tags": ["fish", "seafood", "dinner", "native"],
+      "dietaryTags": ["gluten-free", "pescatarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 10,
+      "servings": 4
+    }
+  ]
+}

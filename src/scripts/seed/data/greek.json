@@ -1,0 +1,746 @@
+{
+  "cuisine": "Greek",
+  "names": {
+    "first": ["Nikos", "Yannis", "Dimitris", "Kostas", "Stavros", "Petros", "Andreas", "Vasilis", "Maria", "Eleni", "Sofia", "Katerina", "Athina", "Despina", "Ioanna", "Eftychia"],
+    "last": ["Papadopoulos", "Papadakis", "Karagiannis", "Stavrou", "Konstantinou", "Georgiou", "Nikolaidis", "Vlachos", "Dimitriou", "Antoniou", "Christodoulou", "Mavridis"]
+  },
+  "recipes": [
+    {
+      "title": "Moussaka",
+      "description": "Layered Greek casserole of eggplant, spiced lamb mince, and creamy béchamel baked until golden.",
+      "ingredients": [
+        { "name": "eggplants", "quantity": 3, "unit": "pc" },
+        { "name": "ground lamb", "quantity": 700, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 3, "unit": "pc" },
+        { "name": "tomato passata", "quantity": 400, "unit": "ml" },
+        { "name": "red wine", "quantity": 120, "unit": "ml" },
+        { "name": "cinnamon", "quantity": 1, "unit": "tsp" },
+        { "name": "butter", "quantity": 80, "unit": "g" },
+        { "name": "flour", "quantity": 80, "unit": "g" },
+        { "name": "milk", "quantity": 700, "unit": "ml" },
+        { "name": "eggs", "quantity": 2, "unit": "pc" },
+        { "name": "kefalotyri cheese", "quantity": 100, "unit": "g" },
+        { "name": "olive oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Slice eggplants 1cm thick, salt and rest 30 minutes, then pat dry and brush with olive oil.",
+        "Roast eggplant slices at 200°C until softened and lightly browned, about 20 minutes.",
+        "Sauté chopped onion and garlic in olive oil, add lamb and brown, then deglaze with red wine.",
+        "Stir in passata, cinnamon, salt and simmer 25 minutes until thick.",
+        "Make béchamel: melt butter, whisk in flour, gradually add warm milk, simmer until thick.",
+        "Off heat, whisk eggs and grated kefalotyri into béchamel.",
+        "Layer eggplant, meat sauce, eggplant in a baking dish, then pour béchamel on top.",
+        "Bake at 180°C for 45 minutes until deeply golden, then rest 20 minutes before slicing."
+      ],
+      "tags": ["casserole", "lamb", "eggplant", "baked", "greek-classic"],
+      "difficulty": "hard",
+      "prepTime": 45,
+      "cookTime": 90,
+      "servings": 8
+    },
+    {
+      "title": "Souvlaki",
+      "description": "Marinated pork or chicken skewers grilled over charcoal, served with pita and tzatziki.",
+      "ingredients": [
+        { "name": "pork shoulder", "quantity": 1, "unit": "kg" },
+        { "name": "olive oil", "quantity": 80, "unit": "ml" },
+        { "name": "lemon juice", "quantity": 60, "unit": "ml" },
+        { "name": "garlic cloves", "quantity": 4, "unit": "pc" },
+        { "name": "dried oregano", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "pita breads", "quantity": 6, "unit": "pc" }
+      ],
+      "steps": [
+        "Cut pork into 3cm cubes and place in a bowl.",
+        "Whisk olive oil, lemon juice, crushed garlic, oregano, salt and pepper.",
+        "Pour marinade over pork, toss, cover and refrigerate at least 4 hours.",
+        "Soak wooden skewers, then thread the pork tightly onto them.",
+        "Grill over hot charcoal 3-4 minutes per side until charred and just cooked through.",
+        "Warm pitas on the grill and serve souvlaki with tzatziki, tomato and onion."
+      ],
+      "tags": ["grill", "pork", "skewer", "street-food"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 15,
+      "servings": 6
+    },
+    {
+      "title": "Spanakopita",
+      "description": "Crisp phyllo pie filled with spinach, feta, dill and spring onion.",
+      "ingredients": [
+        { "name": "phyllo pastry", "quantity": 500, "unit": "g" },
+        { "name": "spinach", "quantity": 1, "unit": "kg" },
+        { "name": "feta cheese", "quantity": 300, "unit": "g" },
+        { "name": "spring onions", "quantity": 6, "unit": "pc" },
+        { "name": "fresh dill", "quantity": 1, "unit": "bunch" },
+        { "name": "eggs", "quantity": 3, "unit": "pc" },
+        { "name": "olive oil", "quantity": 120, "unit": "ml" },
+        { "name": "nutmeg", "quantity": 1, "unit": "pinch" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Wilt spinach in a dry pan, cool and squeeze out all water.",
+        "Sauté chopped spring onions in olive oil until soft.",
+        "Combine spinach, spring onions, crumbled feta, chopped dill, eggs, nutmeg and salt.",
+        "Brush a baking tray with olive oil and layer half the phyllo, brushing each sheet with oil.",
+        "Spread the filling evenly and top with remaining phyllo, brushing each sheet.",
+        "Score the top into squares and brush generously with olive oil.",
+        "Bake at 180°C for 45-50 minutes until deeply golden and crisp.",
+        "Cool 15 minutes before cutting along the scored lines."
+      ],
+      "tags": ["pie", "phyllo", "spinach", "feta", "vegetarian"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 40,
+      "cookTime": 50,
+      "servings": 8
+    },
+    {
+      "title": "Dolmades",
+      "description": "Tender vine leaves stuffed with rice, herbs and lemon, simmered until silky.",
+      "ingredients": [
+        { "name": "vine leaves", "quantity": 250, "unit": "g" },
+        { "name": "long grain rice", "quantity": 200, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "spring onions", "quantity": 4, "unit": "pc" },
+        { "name": "fresh dill", "quantity": 1, "unit": "bunch" },
+        { "name": "fresh mint", "quantity": 1, "unit": "bunch" },
+        { "name": "olive oil", "quantity": 150, "unit": "ml" },
+        { "name": "lemon juice", "quantity": 80, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Blanch vine leaves in hot water 2 minutes, drain and pat dry.",
+        "Sauté chopped onions in olive oil until translucent.",
+        "Stir in rice, chopped herbs, salt and 100ml water; cook 5 minutes until rice is half-done.",
+        "Place a vine leaf vein-side up, add a teaspoon of filling, fold sides and roll tightly.",
+        "Line a heavy pot with leftover leaves, then pack dolmades seam-side down in tight layers.",
+        "Pour remaining olive oil, lemon juice and 400ml water over the rolls; weight with a plate.",
+        "Cover and simmer 45 minutes on low heat until rice is tender.",
+        "Cool in the pot before serving at room temperature."
+      ],
+      "tags": ["mezze", "rice", "vine-leaves", "vegetarian"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 50,
+      "cookTime": 50,
+      "servings": 6
+    },
+    {
+      "title": "Tzatziki",
+      "description": "Cool Greek dip of strained yogurt, cucumber, garlic and olive oil.",
+      "ingredients": [
+        { "name": "Greek yogurt", "quantity": 500, "unit": "g" },
+        { "name": "cucumber", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 2, "unit": "pc" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "white wine vinegar", "quantity": 1, "unit": "tbsp" },
+        { "name": "fresh dill", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Grate the cucumber on the coarse side of a box grater.",
+        "Salt the cucumber lightly and let drain in a sieve 15 minutes, then squeeze dry.",
+        "Mince garlic to a paste with a pinch of salt.",
+        "Stir yogurt, cucumber, garlic, olive oil, vinegar and chopped dill together.",
+        "Taste, adjust salt, and chill at least 30 minutes before serving."
+      ],
+      "tags": ["dip", "mezze", "yogurt", "no-cook"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 0,
+      "servings": 6
+    },
+    {
+      "title": "Pastitsio",
+      "description": "Greek baked pasta with cinnamon-spiced meat sauce and a thick béchamel topping.",
+      "ingredients": [
+        { "name": "bucatini pasta", "quantity": 500, "unit": "g" },
+        { "name": "ground beef", "quantity": 700, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 3, "unit": "pc" },
+        { "name": "tomato passata", "quantity": 400, "unit": "ml" },
+        { "name": "red wine", "quantity": 120, "unit": "ml" },
+        { "name": "cinnamon", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cloves", "quantity": 1, "unit": "pinch" },
+        { "name": "butter", "quantity": 100, "unit": "g" },
+        { "name": "flour", "quantity": 100, "unit": "g" },
+        { "name": "milk", "quantity": 1, "unit": "l" },
+        { "name": "eggs", "quantity": 3, "unit": "pc" },
+        { "name": "kefalotyri cheese", "quantity": 150, "unit": "g" }
+      ],
+      "steps": [
+        "Boil pasta until just shy of al dente, drain and toss with a little butter.",
+        "Sauté chopped onion and garlic, add beef and brown, then add wine to deglaze.",
+        "Stir in passata, cinnamon, cloves and salt; simmer 30 minutes until thick.",
+        "Make béchamel: melt butter, whisk in flour, slowly add milk, cook until very thick.",
+        "Off heat, whisk eggs and most of the grated cheese into the béchamel.",
+        "Layer pasta in a deep dish, top with meat sauce, then pour over the béchamel.",
+        "Sprinkle remaining cheese and bake at 180°C for 50 minutes until golden.",
+        "Rest 20 minutes before cutting into squares."
+      ],
+      "tags": ["pasta", "baked", "beef", "comfort-food"],
+      "difficulty": "hard",
+      "prepTime": 40,
+      "cookTime": 90,
+      "servings": 8
+    },
+    {
+      "title": "Avgolemono",
+      "description": "Silky Greek lemon and egg soup with chicken and rice.",
+      "ingredients": [
+        { "name": "whole chicken", "quantity": 1.5, "unit": "kg" },
+        { "name": "carrot", "quantity": 1, "unit": "pc" },
+        { "name": "celery stalk", "quantity": 1, "unit": "pc" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "long grain rice", "quantity": 150, "unit": "g" },
+        { "name": "eggs", "quantity": 3, "unit": "pc" },
+        { "name": "lemon juice", "quantity": 80, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Simmer chicken with vegetables and salt in 2.5L water for 90 minutes; skim foam.",
+        "Remove chicken, strain stock, return stock to pot.",
+        "Add rice and simmer 15 minutes until tender.",
+        "Whisk eggs in a bowl, then whisk in lemon juice.",
+        "Slowly ladle hot stock into the egg-lemon mixture, whisking constantly to temper.",
+        "Off heat, stir tempered mixture back into the pot; do not boil.",
+        "Shred chicken meat back into the soup and serve immediately."
+      ],
+      "tags": ["soup", "chicken", "lemon", "comfort-food"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 105,
+      "servings": 6
+    },
+    {
+      "title": "Horiatiki",
+      "description": "Traditional Greek village salad of tomato, cucumber, feta, olives and oregano.",
+      "ingredients": [
+        { "name": "ripe tomatoes", "quantity": 4, "unit": "pc" },
+        { "name": "cucumber", "quantity": 1, "unit": "pc" },
+        { "name": "red onion", "quantity": 1, "unit": "pc" },
+        { "name": "green pepper", "quantity": 1, "unit": "pc" },
+        { "name": "Kalamata olives", "quantity": 100, "unit": "g" },
+        { "name": "feta cheese", "quantity": 200, "unit": "g" },
+        { "name": "olive oil", "quantity": 60, "unit": "ml" },
+        { "name": "red wine vinegar", "quantity": 1, "unit": "tbsp" },
+        { "name": "dried oregano", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "pinch" }
+      ],
+      "steps": [
+        "Cut tomatoes into wedges and place in a wide bowl.",
+        "Slice cucumber into thick half-moons and add to the bowl.",
+        "Slice red onion thinly and pepper into rings; add along with olives.",
+        "Drizzle with olive oil and vinegar, sprinkle salt and toss gently.",
+        "Lay a thick slab of feta on top, drizzle more oil and sprinkle generously with oregano.",
+        "Serve immediately with crusty bread."
+      ],
+      "tags": ["salad", "no-cook", "summer", "vegetarian"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 0,
+      "servings": 4
+    },
+    {
+      "title": "Gyros",
+      "description": "Greek wrap of seasoned spit-roasted meat in pita with tomato, onion and tzatziki.",
+      "ingredients": [
+        { "name": "pork shoulder", "quantity": 800, "unit": "g" },
+        { "name": "olive oil", "quantity": 60, "unit": "ml" },
+        { "name": "lemon juice", "quantity": 2, "unit": "tbsp" },
+        { "name": "garlic cloves", "quantity": 3, "unit": "pc" },
+        { "name": "dried oregano", "quantity": 2, "unit": "tsp" },
+        { "name": "smoked paprika", "quantity": 1, "unit": "tsp" },
+        { "name": "cumin", "quantity": 0.5, "unit": "tsp" },
+        { "name": "pita breads", "quantity": 6, "unit": "pc" },
+        { "name": "tomatoes", "quantity": 2, "unit": "pc" },
+        { "name": "red onion", "quantity": 1, "unit": "pc" },
+        { "name": "tzatziki", "quantity": 250, "unit": "g" }
+      ],
+      "steps": [
+        "Slice pork thinly and toss with olive oil, lemon, crushed garlic, oregano, paprika and cumin.",
+        "Marinate at least 4 hours in the fridge.",
+        "Sear pork in a hot pan in batches until deeply browned and cooked through.",
+        "Warm pitas, brushed with oil, on the same pan.",
+        "Spread tzatziki on each pita, top with pork, sliced tomato and onion.",
+        "Roll tightly and serve."
+      ],
+      "tags": ["street-food", "pork", "wrap", "grill"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 15,
+      "servings": 6
+    },
+    {
+      "title": "Baklava",
+      "description": "Layered phyllo pastry filled with spiced walnuts and soaked in honey syrup.",
+      "ingredients": [
+        { "name": "phyllo pastry", "quantity": 500, "unit": "g" },
+        { "name": "walnuts", "quantity": 400, "unit": "g" },
+        { "name": "butter", "quantity": 250, "unit": "g" },
+        { "name": "sugar", "quantity": 400, "unit": "g" },
+        { "name": "honey", "quantity": 200, "unit": "g" },
+        { "name": "water", "quantity": 250, "unit": "ml" },
+        { "name": "lemon juice", "quantity": 1, "unit": "tbsp" },
+        { "name": "cinnamon stick", "quantity": 1, "unit": "pc" },
+        { "name": "ground cinnamon", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Pulse walnuts with ground cinnamon until coarsely chopped.",
+        "Brush a tray with melted butter and lay 8 phyllo sheets, brushing each with butter.",
+        "Sprinkle a layer of walnut mix, then add 2 buttered phyllo sheets; repeat until walnuts are used.",
+        "Top with 8 buttered phyllo sheets and trim edges neatly.",
+        "Score into diamonds through all layers and bake at 170°C for 50 minutes until golden.",
+        "Simmer sugar, water, honey, lemon juice and cinnamon stick 10 minutes to make syrup.",
+        "Pour cool syrup over the hot baklava and let it absorb at least 6 hours before serving."
+      ],
+      "tags": ["dessert", "pastry", "honey", "nuts"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 45,
+      "cookTime": 60,
+      "servings": 16
+    },
+    {
+      "title": "Kleftiko",
+      "description": "Slow-roasted lamb wrapped in parchment with potatoes, lemon and oregano.",
+      "ingredients": [
+        { "name": "lamb shoulder", "quantity": 1.5, "unit": "kg" },
+        { "name": "potatoes", "quantity": 1, "unit": "kg" },
+        { "name": "garlic cloves", "quantity": 6, "unit": "pc" },
+        { "name": "lemon juice", "quantity": 80, "unit": "ml" },
+        { "name": "olive oil", "quantity": 80, "unit": "ml" },
+        { "name": "dried oregano", "quantity": 2, "unit": "tbsp" },
+        { "name": "feta cheese", "quantity": 200, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Pierce lamb all over and rub with crushed garlic, oregano, salt, lemon and olive oil.",
+        "Marinate at least 4 hours, ideally overnight.",
+        "Cut potatoes into chunks and toss with oil, oregano and salt.",
+        "Lay a large sheet of parchment on foil; pile potatoes, set lamb on top, scatter feta.",
+        "Wrap parchment then foil to make a sealed parcel.",
+        "Bake at 160°C for 4 hours until lamb is fall-apart tender.",
+        "Open parcel, increase oven to 220°C and roast 15 minutes to brown.",
+        "Serve straight from the parcel at the table."
+      ],
+      "tags": ["lamb", "slow-roast", "potatoes", "feast"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 255,
+      "servings": 6
+    },
+    {
+      "title": "Stifado",
+      "description": "Greek beef stew with sweet pearl onions, red wine, vinegar and warm spices.",
+      "ingredients": [
+        { "name": "beef chuck", "quantity": 1, "unit": "kg" },
+        { "name": "pearl onions", "quantity": 700, "unit": "g" },
+        { "name": "garlic cloves", "quantity": 4, "unit": "pc" },
+        { "name": "red wine", "quantity": 250, "unit": "ml" },
+        { "name": "red wine vinegar", "quantity": 60, "unit": "ml" },
+        { "name": "tomato passata", "quantity": 400, "unit": "ml" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "cinnamon stick", "quantity": 1, "unit": "pc" },
+        { "name": "whole cloves", "quantity": 4, "unit": "pc" },
+        { "name": "olive oil", "quantity": 4, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Cut beef into large chunks and brown in olive oil; remove.",
+        "Peel pearl onions and brown whole in the same pot.",
+        "Return beef, add garlic, wine, vinegar, passata, bay, cinnamon and cloves.",
+        "Cover and simmer on lowest heat 2 hours until beef is fork tender.",
+        "Uncover the last 15 minutes to thicken the sauce.",
+        "Serve with crusty bread or orzo."
+      ],
+      "tags": ["stew", "beef", "wine", "comfort-food"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 135,
+      "servings": 6
+    },
+    {
+      "title": "Loukoumades",
+      "description": "Greek honey doughnuts: crisp yeasted balls drenched in honey syrup and cinnamon.",
+      "ingredients": [
+        { "name": "flour", "quantity": 500, "unit": "g" },
+        { "name": "warm water", "quantity": 400, "unit": "ml" },
+        { "name": "active dry yeast", "quantity": 7, "unit": "g" },
+        { "name": "sugar", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" },
+        { "name": "honey", "quantity": 250, "unit": "g" },
+        { "name": "ground cinnamon", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "Stir yeast and sugar into warm water; rest 10 minutes until foamy.",
+        "Whisk in flour and salt to form a sticky batter.",
+        "Cover and prove 90 minutes until doubled and bubbly.",
+        "Heat oil to 180°C in a deep pot.",
+        "Scoop wet batter with a spoon dipped in water; drop tablespoons into oil.",
+        "Fry, turning, until deep golden, then drain on paper towels.",
+        "Drizzle generously with warmed honey and dust with cinnamon."
+      ],
+      "tags": ["dessert", "fried", "yeasted", "honey"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 25,
+      "servings": 8
+    },
+    {
+      "title": "Saganaki",
+      "description": "Pan-seared Greek cheese, crisp outside and molten inside, finished with lemon.",
+      "ingredients": [
+        { "name": "kefalograviera cheese", "quantity": 250, "unit": "g" },
+        { "name": "flour", "quantity": 4, "unit": "tbsp" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "lemon", "quantity": 1, "unit": "pc" },
+        { "name": "black pepper", "quantity": 1, "unit": "pinch" }
+      ],
+      "steps": [
+        "Cut cheese into 2cm thick slabs and dip briefly in cold water.",
+        "Dredge cheese in flour, shaking off excess.",
+        "Heat olive oil in a small frying pan until shimmering.",
+        "Fry cheese 1-2 minutes per side until a deep golden crust forms.",
+        "Squeeze lemon over the top, grind black pepper and serve immediately."
+      ],
+      "tags": ["mezze", "cheese", "fried", "vegetarian"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 8,
+      "servings": 2
+    },
+    {
+      "title": "Galaktoboureko",
+      "description": "Greek custard pie of semolina cream baked between crisp phyllo and soaked in syrup.",
+      "ingredients": [
+        { "name": "phyllo pastry", "quantity": 400, "unit": "g" },
+        { "name": "milk", "quantity": 1, "unit": "l" },
+        { "name": "fine semolina", "quantity": 130, "unit": "g" },
+        { "name": "sugar", "quantity": 200, "unit": "g" },
+        { "name": "eggs", "quantity": 4, "unit": "pc" },
+        { "name": "butter", "quantity": 200, "unit": "g" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "lemon zest", "quantity": 1, "unit": "tsp" },
+        { "name": "water", "quantity": 250, "unit": "ml" },
+        { "name": "extra sugar for syrup", "quantity": 300, "unit": "g" }
+      ],
+      "steps": [
+        "Heat milk with 200g sugar; whisk in semolina and stir until thickened.",
+        "Off heat, whisk in beaten eggs, vanilla and zest until smooth.",
+        "Brush a baking tray with butter and lay half the phyllo, brushing each sheet.",
+        "Pour custard, level the surface, then top with remaining phyllo, brushing each sheet.",
+        "Tuck edges, score the top and bake at 170°C for 60 minutes until golden.",
+        "Simmer extra sugar, water and a strip of lemon peel 8 minutes for syrup; cool.",
+        "Pour cool syrup over hot pastry; rest 4 hours before slicing."
+      ],
+      "tags": ["dessert", "custard", "phyllo", "syrup"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 75,
+      "servings": 12
+    },
+    {
+      "title": "Fasolada",
+      "description": "Greek white bean soup with carrots, celery, tomato and good olive oil.",
+      "ingredients": [
+        { "name": "dried white beans", "quantity": 400, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "carrots", "quantity": 2, "unit": "pc" },
+        { "name": "celery stalks", "quantity": 2, "unit": "pc" },
+        { "name": "tomato passata", "quantity": 200, "unit": "ml" },
+        { "name": "olive oil", "quantity": 80, "unit": "ml" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak beans overnight in plenty of cold water.",
+        "Drain and place in pot with fresh water; bring to boil 5 minutes, then drain again.",
+        "Return beans to pot with chopped onion, carrot, celery, bay and 2L water.",
+        "Simmer 60-90 minutes until beans are tender.",
+        "Stir in passata, olive oil and salt; simmer another 20 minutes.",
+        "Discard bay leaves and serve with extra olive oil and crusty bread."
+      ],
+      "tags": ["soup", "beans", "winter", "vegan"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 110,
+      "servings": 6
+    },
+    {
+      "title": "Yemista",
+      "description": "Greek baked tomatoes and peppers stuffed with herbed rice.",
+      "ingredients": [
+        { "name": "ripe tomatoes", "quantity": 6, "unit": "pc" },
+        { "name": "bell peppers", "quantity": 4, "unit": "pc" },
+        { "name": "long grain rice", "quantity": 250, "unit": "g" },
+        { "name": "onions", "quantity": 2, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 3, "unit": "pc" },
+        { "name": "fresh parsley", "quantity": 1, "unit": "bunch" },
+        { "name": "fresh mint", "quantity": 0.5, "unit": "bunch" },
+        { "name": "olive oil", "quantity": 120, "unit": "ml" },
+        { "name": "potatoes", "quantity": 3, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Slice the tops off tomatoes and peppers; scoop out flesh and seeds, reserving tomato pulp.",
+        "Sauté chopped onions and garlic in olive oil until soft.",
+        "Add rice, chopped tomato pulp, herbs, salt and 200ml water; cook 5 minutes.",
+        "Stuff tomatoes and peppers loosely with rice mixture; replace tops.",
+        "Arrange in a baking dish with potato wedges tucked between them.",
+        "Drizzle generously with olive oil, add 200ml water to the dish and cover with foil.",
+        "Bake at 180°C for 60 minutes, uncover and bake 30 more minutes until tender.",
+        "Cool 20 minutes and serve warm or at room temperature."
+      ],
+      "tags": ["baked", "vegetables", "rice", "vegetarian"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 35,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Bougatsa",
+      "description": "Crisp phyllo pastry filled with sweet semolina custard and dusted with cinnamon sugar.",
+      "ingredients": [
+        { "name": "phyllo pastry", "quantity": 400, "unit": "g" },
+        { "name": "milk", "quantity": 750, "unit": "ml" },
+        { "name": "fine semolina", "quantity": 100, "unit": "g" },
+        { "name": "sugar", "quantity": 130, "unit": "g" },
+        { "name": "eggs", "quantity": 2, "unit": "pc" },
+        { "name": "butter", "quantity": 150, "unit": "g" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "icing sugar", "quantity": 3, "unit": "tbsp" },
+        { "name": "ground cinnamon", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Heat milk with sugar; whisk in semolina until thick and smooth.",
+        "Off heat, whisk in eggs and vanilla; cool slightly.",
+        "Brush a baking tray with butter and layer 6 phyllo sheets, brushing each with butter.",
+        "Spread custard, fold in sides, then layer 6 more buttered phyllo sheets on top.",
+        "Score the surface and bake at 180°C for 35-40 minutes until deeply golden.",
+        "Dust hot pastry with icing sugar and cinnamon; serve warm."
+      ],
+      "tags": ["breakfast", "pastry", "custard", "phyllo"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 40,
+      "servings": 8
+    },
+    {
+      "title": "Octopus Stifado",
+      "description": "Slow-braised octopus with pearl onions, red wine and warm spices.",
+      "ingredients": [
+        { "name": "octopus", "quantity": 1.5, "unit": "kg" },
+        { "name": "pearl onions", "quantity": 600, "unit": "g" },
+        { "name": "garlic cloves", "quantity": 4, "unit": "pc" },
+        { "name": "red wine", "quantity": 250, "unit": "ml" },
+        { "name": "red wine vinegar", "quantity": 60, "unit": "ml" },
+        { "name": "tomato passata", "quantity": 400, "unit": "ml" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "cinnamon stick", "quantity": 1, "unit": "pc" },
+        { "name": "olive oil", "quantity": 4, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Place octopus in a dry pot, cover and cook on low until it releases its liquid; simmer 20 minutes.",
+        "Remove octopus, cut into bite-size pieces; reserve some cooking liquid.",
+        "Brown peeled pearl onions in olive oil in a clean pot.",
+        "Add octopus, garlic, wine, vinegar, passata, bay and cinnamon.",
+        "Simmer covered for 60 minutes until octopus is tender and sauce thick.",
+        "Adjust seasoning and serve with crusty bread."
+      ],
+      "tags": ["seafood", "stew", "wine", "octopus"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "hard",
+      "prepTime": 25,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Tiropita",
+      "description": "Greek phyllo pastry triangles filled with feta and ricotta, baked until shatteringly crisp.",
+      "ingredients": [
+        { "name": "phyllo pastry", "quantity": 400, "unit": "g" },
+        { "name": "feta cheese", "quantity": 300, "unit": "g" },
+        { "name": "ricotta cheese", "quantity": 200, "unit": "g" },
+        { "name": "eggs", "quantity": 2, "unit": "pc" },
+        { "name": "fresh dill", "quantity": 2, "unit": "tbsp" },
+        { "name": "olive oil", "quantity": 100, "unit": "ml" },
+        { "name": "butter", "quantity": 80, "unit": "g" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Mash feta with a fork and stir in ricotta, eggs, dill and pepper.",
+        "Cut phyllo into long strips about 8cm wide.",
+        "Brush each strip with melted butter and olive oil.",
+        "Place a teaspoon of filling at one end and fold corner over to form a triangle, continuing to fold flag-style.",
+        "Brush tops with butter and arrange on a lined tray.",
+        "Bake at 190°C for 25 minutes until golden and puffed.",
+        "Cool 5 minutes and serve warm."
+      ],
+      "tags": ["pastry", "cheese", "mezze", "vegetarian"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 25,
+      "servings": 8
+    },
+    {
+      "title": "Skordalia",
+      "description": "Pungent Greek garlic dip thickened with potato or stale bread and good olive oil.",
+      "ingredients": [
+        { "name": "potatoes", "quantity": 500, "unit": "g" },
+        { "name": "garlic cloves", "quantity": 6, "unit": "pc" },
+        { "name": "olive oil", "quantity": 120, "unit": "ml" },
+        { "name": "white wine vinegar", "quantity": 2, "unit": "tbsp" },
+        { "name": "lemon juice", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Boil potatoes whole in salted water until very tender; peel while warm.",
+        "Pound garlic with salt to a smooth paste using mortar and pestle.",
+        "Mash potatoes thoroughly and combine with garlic paste.",
+        "Drizzle in olive oil while stirring vigorously to emulsify.",
+        "Stir in vinegar and lemon juice, taste and adjust salt.",
+        "Serve at room temperature with fried fish or beetroot."
+      ],
+      "tags": ["dip", "mezze", "garlic", "vegan"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 6
+    },
+    {
+      "title": "Briam",
+      "description": "Greek roasted vegetable medley of zucchini, potatoes, peppers and tomatoes with herbs.",
+      "ingredients": [
+        { "name": "zucchini", "quantity": 2, "unit": "pc" },
+        { "name": "potatoes", "quantity": 3, "unit": "pc" },
+        { "name": "red bell peppers", "quantity": 2, "unit": "pc" },
+        { "name": "red onions", "quantity": 2, "unit": "pc" },
+        { "name": "tomatoes", "quantity": 4, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 4, "unit": "pc" },
+        { "name": "olive oil", "quantity": 120, "unit": "ml" },
+        { "name": "fresh parsley", "quantity": 0.5, "unit": "bunch" },
+        { "name": "dried oregano", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Slice all vegetables thinly and combine in a large bowl.",
+        "Add chopped garlic, olive oil, oregano, salt and chopped parsley; toss well.",
+        "Spread in a single layer in a baking dish.",
+        "Cover with foil and bake at 180°C for 45 minutes.",
+        "Uncover, stir gently and bake 30 more minutes until edges are caramelised.",
+        "Rest 15 minutes before serving warm or at room temperature."
+      ],
+      "tags": ["vegetables", "roasted", "vegan", "summer"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 25,
+      "cookTime": 75,
+      "servings": 6
+    },
+    {
+      "title": "Soutzoukakia",
+      "description": "Greek Smyrna meatballs spiced with cumin and braised in tomato wine sauce.",
+      "ingredients": [
+        { "name": "ground beef", "quantity": 500, "unit": "g" },
+        { "name": "stale bread", "quantity": 100, "unit": "g" },
+        { "name": "garlic cloves", "quantity": 4, "unit": "pc" },
+        { "name": "ground cumin", "quantity": 1.5, "unit": "tsp" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "red wine", "quantity": 100, "unit": "ml" },
+        { "name": "tomato passata", "quantity": 500, "unit": "ml" },
+        { "name": "olive oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak bread in water, then squeeze dry and tear into a bowl.",
+        "Mix beef, bread, crushed garlic, cumin, egg and salt; knead 5 minutes.",
+        "Shape into oval sausage-like meatballs.",
+        "Brown in olive oil on all sides; remove.",
+        "In the same pan, add wine to deglaze, then add passata; simmer 5 minutes.",
+        "Return meatballs, cover and simmer 25 minutes until sauce thickens.",
+        "Serve over rice or with crusty bread."
+      ],
+      "tags": ["meatballs", "beef", "tomato", "comfort-food"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 35,
+      "servings": 4
+    },
+    {
+      "title": "Revithia",
+      "description": "Slow-baked Greek chickpea stew with onion, lemon and olive oil.",
+      "ingredients": [
+        { "name": "dried chickpeas", "quantity": 400, "unit": "g" },
+        { "name": "onions", "quantity": 2, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 4, "unit": "pc" },
+        { "name": "olive oil", "quantity": 120, "unit": "ml" },
+        { "name": "lemon juice", "quantity": 60, "unit": "ml" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "fresh rosemary", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak chickpeas overnight with a teaspoon of bicarbonate of soda.",
+        "Rinse well and place in a clay pot or heavy casserole.",
+        "Add chopped onions, garlic, bay, rosemary, olive oil and 1.5L water.",
+        "Cover and bake at 150°C for 3-4 hours until very tender.",
+        "Stir in lemon juice and salt in the last 30 minutes.",
+        "Mash a few chickpeas to thicken and serve with extra olive oil."
+      ],
+      "tags": ["stew", "chickpea", "slow-cook", "vegan"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 240,
+      "servings": 6
+    },
+    {
+      "title": "Keftedes",
+      "description": "Greek meatballs with mint, oregano and ouzo, fried until crisp.",
+      "ingredients": [
+        { "name": "ground beef", "quantity": 500, "unit": "g" },
+        { "name": "ground pork", "quantity": 250, "unit": "g" },
+        { "name": "stale bread", "quantity": 100, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 3, "unit": "pc" },
+        { "name": "fresh mint", "quantity": 2, "unit": "tbsp" },
+        { "name": "dried oregano", "quantity": 1, "unit": "tsp" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "ouzo", "quantity": 2, "unit": "tbsp" },
+        { "name": "flour", "quantity": 4, "unit": "tbsp" },
+        { "name": "olive oil", "quantity": 60, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak bread in water, then squeeze dry.",
+        "Mix beef, pork, bread, grated onion, garlic, herbs, egg, ouzo and salt; knead well.",
+        "Rest 30 minutes in the fridge.",
+        "Shape into walnut-sized balls and roll lightly in flour.",
+        "Heat olive oil in a frying pan; fry meatballs in batches until deeply browned and cooked.",
+        "Drain on paper towels and serve hot with lemon wedges."
+      ],
+      "tags": ["meatballs", "fried", "mezze", "appetizer"],
+      "difficulty": "easy",
+      "prepTime": 25,
+      "cookTime": 20,
+      "servings": 6
+    }
+  ]
+}

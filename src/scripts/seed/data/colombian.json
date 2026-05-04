@@ -1,0 +1,379 @@
+{
+  "cuisine": "Colombian",
+  "names": {
+    "first": ["Santiago", "Sebastián", "Mateo", "Andrés", "Daniel", "Camilo", "Valeria", "Mariana", "Sofía", "Isabella", "Daniela", "Manuela"],
+    "last": ["García", "Rodríguez", "Martínez", "González", "López", "Hernández", "Pérez", "Ramírez", "Gómez", "Vásquez"]
+  },
+  "recipes": [
+    {
+      "title": "Bandeja Paisa",
+      "description": "Colombia's mountainous platter from Antioquia: beans, rice, chicharrón, chorizo, ground beef, fried egg, plantain, avocado, and arepa.",
+      "ingredients": [
+        { "name": "red beans, soaked overnight", "quantity": 400, "unit": "g" },
+        { "name": "pork belly", "quantity": 500, "unit": "g" },
+        { "name": "ground beef", "quantity": 400, "unit": "g" },
+        { "name": "chorizo sausages", "quantity": 4, "unit": "pc" },
+        { "name": "white rice, cooked", "quantity": 4, "unit": "cup" },
+        { "name": "ripe plantains, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "eggs", "quantity": 4, "unit": "pc" },
+        { "name": "avocados, halved", "quantity": 2, "unit": "pc" },
+        { "name": "arepas", "quantity": 4, "unit": "pc" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "tomato, chopped", "quantity": 2, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "ground cumin", "quantity": 2, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 4, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Cook soaked beans in fresh water with a piece of plantain, garlic, and onion for 90 minutes until tender.",
+        "Score pork belly skin, simmer in salted water 30 minutes, dry, then deep-fry until crackling — this is the chicharrón.",
+        "Brown ground beef with onion, tomato, garlic, and cumin until cooked through. Season well.",
+        "Grill or pan-fry chorizos until cooked and golden.",
+        "Pan-fry plantain slices in oil until caramelized on both sides.",
+        "Fry eggs sunny-side up in butter or oil.",
+        "Plate generously: beans, rice, chicharrón, ground beef, chorizo, fried plantain, fried egg, avocado, and an arepa for each person."
+      ],
+      "tags": ["national dish", "platter", "Antioquia", "iconic", "main course"],
+      "dietaryTags": ["dairy-free"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 120,
+      "servings": 4
+    },
+    {
+      "title": "Arepas",
+      "description": "Colombian griddled corn cakes made from precooked white cornmeal — eaten with butter, cheese, eggs, or as a base for toppings.",
+      "ingredients": [
+        { "name": "precooked white cornmeal (masarepa)", "quantity": 250, "unit": "g" },
+        { "name": "warm water", "quantity": 300, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "butter, melted", "quantity": 30, "unit": "g" },
+        { "name": "queso fresco, grated", "quantity": 100, "unit": "g" }
+      ],
+      "steps": [
+        "In a bowl, combine masarepa with salt.",
+        "Slowly add warm water, mixing with a spoon, then knead by hand for 2 minutes into a smooth, soft dough.",
+        "Knead in melted butter and grated cheese if making cheese arepas.",
+        "Cover with a damp cloth and rest 5 minutes — the dough should be moist but not sticky.",
+        "Divide into 8 portions, roll into balls, and flatten into 1 cm thick discs.",
+        "Cook on a dry, hot griddle or non-stick skillet over medium heat 5 minutes per side until lightly charred.",
+        "Serve hot, split, with butter or stuffed with cheese, scrambled eggs, or shredded chicken."
+      ],
+      "tags": ["staple", "corn", "breakfast", "side dish", "iconic"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Sancocho",
+      "description": "Hearty Colombian soup of meats, plantains, yuca, and corn, simmered with cilantro and served with avocado and rice.",
+      "ingredients": [
+        { "name": "chicken pieces (drumsticks/thighs)", "quantity": 800, "unit": "g" },
+        { "name": "beef ribs", "quantity": 500, "unit": "g" },
+        { "name": "green plantains, peeled and chunked", "quantity": 2, "unit": "pc" },
+        { "name": "yuca (cassava), peeled and chunked", "quantity": 500, "unit": "g" },
+        { "name": "potatoes, peeled and chunked", "quantity": 400, "unit": "g" },
+        { "name": "fresh corn cobs, halved", "quantity": 2, "unit": "pc" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "scallions, chopped", "quantity": 4, "unit": "pc" },
+        { "name": "cilantro, chopped", "quantity": 1, "unit": "bunch" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "In a large pot, cover beef ribs with 3 liters of water and bring to a boil; skim foam.",
+        "Add onion, garlic, scallions, cumin, and salt. Simmer 60 minutes.",
+        "Add chicken pieces and corn cobs; simmer 20 more minutes.",
+        "Add yuca and green plantain chunks; simmer 15 minutes.",
+        "Add potatoes and continue cooking until tender, about 15 more minutes.",
+        "Stir in chopped cilantro and adjust seasoning.",
+        "Ladle into bowls with a piece of each meat and vegetable. Serve with white rice, avocado, and ají on the side."
+      ],
+      "tags": ["soup", "stew", "national dish", "comfort food", "main course"],
+      "dietaryTags": ["dairy-free", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 120,
+      "servings": 6
+    },
+    {
+      "title": "Ajiaco",
+      "description": "Bogotá's signature creamy potato soup with three varieties of potato, chicken, corn, and the unique herb guascas.",
+      "ingredients": [
+        { "name": "chicken breasts", "quantity": 600, "unit": "g" },
+        { "name": "papas criollas (yellow potatoes)", "quantity": 500, "unit": "g" },
+        { "name": "papas sabaneras (waxy potatoes), cubed", "quantity": 400, "unit": "g" },
+        { "name": "russet potatoes, cubed", "quantity": 300, "unit": "g" },
+        { "name": "fresh corn cobs, halved", "quantity": 2, "unit": "pc" },
+        { "name": "guascas (dried)", "quantity": 3, "unit": "tbsp" },
+        { "name": "scallions, chopped", "quantity": 4, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "cilantro, chopped", "quantity": 0.5, "unit": "bunch" },
+        { "name": "heavy cream", "quantity": 200, "unit": "ml" },
+        { "name": "capers", "quantity": 3, "unit": "tbsp" },
+        { "name": "avocado, sliced", "quantity": 2, "unit": "pc" }
+      ],
+      "steps": [
+        "Place chicken in a pot with 2.5 liters water, scallions, garlic, and salt. Simmer 25 minutes, then remove and shred chicken.",
+        "Strain the broth and return to the pot.",
+        "Add papas criollas and russet potatoes, simmer 25 minutes — they will dissolve and thicken the broth.",
+        "Add papas sabaneras and corn cobs, cook 20 minutes more until tender.",
+        "Stir in guascas during the last 10 minutes of cooking.",
+        "Return shredded chicken and stir in cilantro.",
+        "Serve in bowls topped with a swirl of cream, capers, and avocado slices on the side."
+      ],
+      "tags": ["soup", "Bogotá", "potato", "iconic", "main course"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 80,
+      "servings": 6
+    },
+    {
+      "title": "Lechona",
+      "description": "Tolima specialty: whole roasted pig stuffed with rice, peas, and seasoned pork, slow-cooked until skin is shatteringly crisp.",
+      "ingredients": [
+        { "name": "pork shoulder with skin, butterflied", "quantity": 2, "unit": "kg" },
+        { "name": "long-grain rice", "quantity": 500, "unit": "g" },
+        { "name": "yellow split peas", "quantity": 300, "unit": "g" },
+        { "name": "scallions, chopped", "quantity": 6, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 6, "unit": "pc" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 2, "unit": "tbsp" },
+        { "name": "pork belly, cubed", "quantity": 500, "unit": "g" }
+      ],
+      "steps": [
+        "Soak split peas in cold water for 4 hours, then drain.",
+        "Cook rice in 1 liter water until just al dente (about 12 minutes).",
+        "Sauté onion, scallions, and garlic until soft. Stir in cumin, pepper, and salt.",
+        "Combine cooked rice, drained peas, cubed pork belly, and the aromatics in a bowl. Mix well.",
+        "Lay the butterflied pork shoulder skin-side down. Spread the rice-pea filling over the meat, then roll tightly and secure with twine.",
+        "Place skin-side up in a roasting pan. Score the skin in a diamond pattern and rub with extra salt.",
+        "Roast at 160°C (320°F) for 4 hours, then increase to 220°C (425°F) for 30 minutes to crisp the skin. Rest 15 minutes before slicing."
+      ],
+      "tags": ["pork", "roast", "Tolima", "festive", "main course"],
+      "dietaryTags": ["dairy-free", "gluten-free"],
+      "difficulty": "hard",
+      "prepTime": 45,
+      "cookTime": 270,
+      "servings": 10
+    },
+    {
+      "title": "Patacones",
+      "description": "Colombian twice-fried green plantains, smashed flat and crisped — a beloved side or snack with hogao or guacamole.",
+      "ingredients": [
+        { "name": "green plantains", "quantity": 4, "unit": "pc" },
+        { "name": "vegetable oil for frying", "quantity": 500, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "garlic clove, smashed", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Peel green plantains by scoring the skin lengthwise and prying it off.",
+        "Slice plantains into 3 cm thick rounds.",
+        "Heat oil to 160°C (320°F) and fry plantain rounds for 4 minutes — they should be tender but pale.",
+        "Remove and drain briefly on paper towels.",
+        "Smash each round flat to about 5 mm thick using the bottom of a glass or a tostonera.",
+        "Soak smashed pieces briefly in salted water with garlic for extra flavor and crispness; pat dry.",
+        "Increase oil temperature to 190°C (375°F) and fry patacones again for 2 minutes until deeply golden and crisp. Drain, salt, and serve."
+      ],
+      "tags": ["side dish", "plantain", "fried", "snack", "Caribbean"],
+      "dietaryTags": ["vegan", "gluten-free", "dairy-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Empanadas",
+      "description": "Colombian empanadas with a crisp yellow corn-flour shell filled with seasoned beef and potato, deep-fried golden.",
+      "ingredients": [
+        { "name": "yellow precooked cornmeal (masarepa amarilla)", "quantity": 300, "unit": "g" },
+        { "name": "warm water", "quantity": 350, "unit": "ml" },
+        { "name": "ground annatto", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "potato, peeled and cubed", "quantity": 300, "unit": "g" },
+        { "name": "ground beef", "quantity": 300, "unit": "g" },
+        { "name": "onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "scallions, chopped", "quantity": 3, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 2, "unit": "pc" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "tomato, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "vegetable oil for frying", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "Boil potato until very tender, drain, and lightly mash. Set aside.",
+        "Brown ground beef with onion, scallions, garlic, cumin, and tomato until cooked. Season with salt and combine with mashed potato.",
+        "Mix masarepa, salt, and annatto, then knead in warm water until smooth and slightly tacky. Rest 5 minutes.",
+        "Take a small ball of dough, place between two plastic sheets, and press flat into a thin disc.",
+        "Spoon filling into the center, fold the dough into a half-moon, and seal edges firmly by pressing.",
+        "Trim excess dough with a small bowl rim for a clean edge.",
+        "Heat oil to 180°C and fry empanadas in batches 4–5 minutes until deeply golden. Drain and serve with ají picante."
+      ],
+      "tags": ["snack", "fried", "street food", "appetizer", "iconic"],
+      "dietaryTags": ["dairy-free", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 40,
+      "cookTime": 25,
+      "servings": 12
+    },
+    {
+      "title": "Buñuelos",
+      "description": "Colombian Christmas-season cheese fritters made from queso costeño and cornstarch — round, golden, and irresistible.",
+      "ingredients": [
+        { "name": "queso costeño or queso fresco, finely grated", "quantity": 400, "unit": "g" },
+        { "name": "cornstarch (almidón de yuca/agrio)", "quantity": 200, "unit": "g" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "milk", "quantity": 60, "unit": "ml" },
+        { "name": "sugar", "quantity": 2, "unit": "tbsp" },
+        { "name": "baking powder", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" },
+        { "name": "vegetable oil for frying", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "In a large bowl, combine grated cheese, cornstarch, sugar, baking powder, and salt.",
+        "Add the egg and milk, mixing until a smooth, soft dough forms; if dry, add a splash more milk.",
+        "Knead briefly until the dough is uniform and slightly tacky.",
+        "Roll the dough into smooth balls about 4 cm in diameter — keep them perfectly round for even frying.",
+        "Heat oil to a low temperature (about 150°C) — this is critical so the buñuelos cook through without darkening too quickly.",
+        "Add buñuelos and fry slowly, turning, for 5–7 minutes until they puff and rotate on their own.",
+        "Increase heat slightly at the end to deepen the color, then drain on paper towels and serve warm."
+      ],
+      "tags": ["fritter", "cheese", "Christmas", "snack", "festive"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 15,
+      "servings": 12
+    },
+    {
+      "title": "Tamales Tolimenses",
+      "description": "Banana-leaf-wrapped corn dough parcels stuffed with chicken, pork, peas, carrots, and rice — a hearty Tolima Sunday tradition.",
+      "ingredients": [
+        { "name": "precooked corn flour (masa)", "quantity": 500, "unit": "g" },
+        { "name": "long-grain rice, soaked", "quantity": 200, "unit": "g" },
+        { "name": "yellow split peas, soaked", "quantity": 150, "unit": "g" },
+        { "name": "chicken pieces", "quantity": 600, "unit": "g" },
+        { "name": "pork ribs", "quantity": 500, "unit": "g" },
+        { "name": "carrots, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "potatoes, sliced", "quantity": 3, "unit": "pc" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 5, "unit": "pc" },
+        { "name": "scallions, chopped", "quantity": 4, "unit": "pc" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground annatto", "quantity": 1, "unit": "tsp" },
+        { "name": "banana leaves", "quantity": 12, "unit": "pc" },
+        { "name": "kitchen twine", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Marinate chicken and pork ribs with onion, garlic, scallions, cumin, annatto, and salt for at least 4 hours.",
+        "Soak rice and peas overnight, then drain. Mix masa with 500 ml of warm broth into a thick batter.",
+        "Pass banana leaves over a flame briefly to make them pliable.",
+        "Lay two leaves cross-shaped, spoon a thick layer of masa in the center, top with rice, peas, a piece of each meat, carrot, and potato.",
+        "Fold leaves over to form a tight rectangle and tie firmly with twine.",
+        "Stand parcels upright in a large pot, cover with water, and weigh down with a plate.",
+        "Simmer covered for 3 hours, topping up water as needed. Unwrap and serve hot with hot chocolate."
+      ],
+      "tags": ["tamale", "Tolima", "festive", "main course", "Sunday"],
+      "dietaryTags": ["dairy-free", "gluten-free"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 180,
+      "servings": 6
+    },
+    {
+      "title": "Mondongo",
+      "description": "Hearty Colombian tripe soup slow-cooked with chorizo, vegetables, and herbs — comforting and deeply savory.",
+      "ingredients": [
+        { "name": "beef tripe, cleaned and cubed", "quantity": 800, "unit": "g" },
+        { "name": "pork ribs", "quantity": 400, "unit": "g" },
+        { "name": "chorizo, sliced", "quantity": 200, "unit": "g" },
+        { "name": "potato, cubed", "quantity": 400, "unit": "g" },
+        { "name": "carrot, diced", "quantity": 2, "unit": "pc" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "tomato, chopped", "quantity": 2, "unit": "pc" },
+        { "name": "scallions, chopped", "quantity": 4, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "cilantro, chopped", "quantity": 1, "unit": "bunch" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "lime juice", "quantity": 60, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Soak the cleaned tripe in cold water with lime juice and salt for 30 minutes, then rinse very well.",
+        "Place tripe and pork ribs in a large pot with 3 liters water. Bring to a boil and skim foam.",
+        "Add onion, garlic, scallions, half the cilantro, cumin, and salt. Simmer 90 minutes until tripe is tender.",
+        "Add chorizo, tomato, carrot, and potato; cook 30 more minutes until potatoes are soft.",
+        "Adjust salt and finish with the remaining cilantro.",
+        "Skim any excess fat from the surface.",
+        "Serve hot with white rice, avocado, ají, and a squeeze of lime."
+      ],
+      "tags": ["soup", "tripe", "comfort food", "main course", "rustic"],
+      "dietaryTags": ["dairy-free", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 40,
+      "cookTime": 130,
+      "servings": 6
+    },
+    {
+      "title": "Hogao",
+      "description": "Colombia's foundational tomato and scallion sauce — a slow-simmered sofrito spooned over rice, beans, plantains, and meats.",
+      "ingredients": [
+        { "name": "ripe tomatoes, finely chopped", "quantity": 6, "unit": "pc" },
+        { "name": "scallions, finely chopped", "quantity": 8, "unit": "pc" },
+        { "name": "white onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "ground annatto", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "cilantro, chopped", "quantity": 0.5, "unit": "bunch" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Heat oil in a wide skillet over medium heat.",
+        "Add white onion and scallions; cook gently 8 minutes until very soft and translucent.",
+        "Stir in garlic and cook another 1 minute until fragrant.",
+        "Add tomatoes, cumin, annatto, and salt. Stir well to combine.",
+        "Reduce heat to low and simmer uncovered for 25–30 minutes, stirring occasionally, until tomatoes break down into a thick, glossy sauce.",
+        "Stir in cilantro and adjust salt.",
+        "Serve warm spooned over arepas, rice, beans, fried plantains, or grilled meats."
+      ],
+      "tags": ["sauce", "condiment", "tomato", "side", "iconic"],
+      "dietaryTags": ["vegan", "gluten-free", "dairy-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Chicharrón",
+      "description": "Colombian crispy pork belly strips with crackling skin — essential to bandeja paisa and a beloved snack on its own.",
+      "ingredients": [
+        { "name": "pork belly with skin, cut into strips", "quantity": 1, "unit": "kg" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" },
+        { "name": "garlic cloves, minced", "quantity": 4, "unit": "pc" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "lime juice", "quantity": 60, "unit": "ml" },
+        { "name": "water", "quantity": 500, "unit": "ml" }
+      ],
+      "steps": [
+        "Score the skin of each pork belly strip in a crosshatch pattern, cutting through the fat but not the meat.",
+        "Rub strips with salt, garlic, cumin, and lime juice. Marinate at least 1 hour.",
+        "Place strips skin-side up in a heavy skillet and add water to come halfway up the meat.",
+        "Bring to a boil, reduce to medium, and simmer 30–40 minutes until water has fully evaporated.",
+        "Once dry, the rendered fat will start to fry the meat. Continue cooking, turning occasionally, for about 15 minutes.",
+        "Increase heat slightly to finish crisping the skin until it puffs and crackles audibly.",
+        "Drain on paper towels, season with extra salt, and serve hot with arepas and ají."
+      ],
+      "tags": ["pork", "fried", "snack", "side", "iconic"],
+      "dietaryTags": ["dairy-free", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 70,
+      "cookTime": 60,
+      "servings": 6
+    }
+  ]
+}

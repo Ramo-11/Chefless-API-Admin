@@ -66,13 +66,13 @@
           <i class="fas fa-snowflake"></i>
           <span>Seasonal</span>
         </a>
-        <a href="/admin/promo-codes" class="nav-item <%= page === 'promo-codes' ? 'active' : '' %>">
-          <i class="fas fa-ticket"></i>
-          <span>Promo Codes</span>
-        </a>
         <a href="/admin/app-config" class="nav-item <%= page === 'app-config' ? 'active' : '' %>">
           <i class="fas fa-toggle-on"></i>
           <span>App Settings</span>
+        </a>
+        <a href="/admin/seed-data" class="nav-item <%= page === 'seed-data' ? 'active' : '' %>">
+          <i class="fas fa-seedling"></i>
+          <span>Seed Data</span>
         </a>
         <% if (adminRole === 'super_admin') { %>
           <a href="/admin/admins" class="nav-item <%= page === 'admins' ? 'active' : '' %>">

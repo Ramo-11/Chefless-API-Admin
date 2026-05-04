@@ -1,0 +1,489 @@
+{
+  "cuisine": "Egyptian",
+  "names": {
+    "first": ["Ahmed", "Mariam", "Mostafa", "Yara", "Hassan", "Nadia", "Tamer", "Heba", "Mohamed", "Salma", "Amr", "Dina"],
+    "last": ["Mahfouz", "El-Sayed", "Abdel-Rahman", "Hassanein", "Ibrahim", "Fahmy", "Soliman", "Shalaby", "Mansour", "Awad", "Saad", "Zaki"]
+  },
+  "recipes": [
+    {
+      "title": "Koshari",
+      "description": "Egypt's beloved street food: a tower of rice, lentils, pasta and chickpeas crowned with crisp onions and tangy tomato sauce.",
+      "ingredients": [
+        {"name": "long-grain rice", "quantity": 250, "unit": "g"},
+        {"name": "brown lentils", "quantity": 200, "unit": "g"},
+        {"name": "small pasta (ditalini)", "quantity": 150, "unit": "g"},
+        {"name": "vermicelli", "quantity": 60, "unit": "g"},
+        {"name": "cooked chickpeas", "quantity": 250, "unit": "g"},
+        {"name": "onions", "quantity": 4, "unit": "pc"},
+        {"name": "tomato passata", "quantity": 500, "unit": "ml"},
+        {"name": "garlic cloves", "quantity": 6, "unit": "pc"},
+        {"name": "white vinegar", "quantity": 4, "unit": "tbsp"},
+        {"name": "ground cumin", "quantity": 2, "unit": "tsp"},
+        {"name": "ground coriander", "quantity": 1, "unit": "tsp"},
+        {"name": "chili flakes", "quantity": 1, "unit": "tsp"},
+        {"name": "frying oil", "quantity": 500, "unit": "ml"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"}
+      ],
+      "steps": [
+        "Slice onions thinly and fry in oil for 20 minutes until deep brown and crisp; reserve oil.",
+        "Simmer lentils for 15 minutes until just tender, then drain.",
+        "Toast vermicelli in 2 tablespoons of the onion oil, add rinsed rice, lentils, salt and 500 ml water.",
+        "Cover and simmer 18 minutes; rest 10 minutes off the heat.",
+        "Make the tomato sauce: fry crushed garlic in oil, add passata, cumin, coriander, chili and salt; simmer 15 minutes, then stir in vinegar.",
+        "Boil pasta separately, layer pasta, rice mixture and chickpeas in bowls and top with sauce and crisp onions."
+      ],
+      "tags": ["street food", "national dish", "vegan"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Ful Medames",
+      "description": "Slow-cooked fava beans mashed with garlic, lemon, olive oil and cumin — Egypt's iconic breakfast.",
+      "ingredients": [
+        {"name": "dried fava beans", "quantity": 400, "unit": "g"},
+        {"name": "garlic cloves", "quantity": 4, "unit": "pc"},
+        {"name": "lemon juice", "quantity": 60, "unit": "ml"},
+        {"name": "olive oil", "quantity": 80, "unit": "ml"},
+        {"name": "ground cumin", "quantity": 1.5, "unit": "tsp"},
+        {"name": "salt", "quantity": 1.5, "unit": "tsp"},
+        {"name": "tomato", "quantity": 1, "unit": "pc"},
+        {"name": "fresh parsley", "quantity": 0.25, "unit": "bunch"},
+        {"name": "water", "quantity": 1.5, "unit": "l"}
+      ],
+      "steps": [
+        "Soak the fava beans in cold water overnight.",
+        "Drain and cover with fresh water in a heavy pot, simmering very gently for 4 hours.",
+        "Top up water as needed and cook until the beans are completely soft.",
+        "Mash about half the beans against the side of the pot for a chunky texture.",
+        "Stir in crushed garlic, salt, cumin, lemon juice and olive oil.",
+        "Top with diced tomato, parsley and a final drizzle of olive oil; serve with pita."
+      ],
+      "tags": ["breakfast", "national dish", "vegan"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 720,
+      "cookTime": 240,
+      "servings": 6
+    },
+    {
+      "title": "Ta'ameya",
+      "description": "Egyptian falafel made with skinned dried fava beans and herbs, fried into emerald-green crisp patties.",
+      "ingredients": [
+        {"name": "dried split fava beans", "quantity": 400, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "fresh coriander", "quantity": 1, "unit": "bunch"},
+        {"name": "fresh parsley", "quantity": 0.5, "unit": "bunch"},
+        {"name": "fresh dill", "quantity": 0.5, "unit": "bunch"},
+        {"name": "garlic cloves", "quantity": 4, "unit": "pc"},
+        {"name": "leeks", "quantity": 1, "unit": "pc"},
+        {"name": "ground cumin", "quantity": 2, "unit": "tsp"},
+        {"name": "ground coriander", "quantity": 1, "unit": "tsp"},
+        {"name": "baking soda", "quantity": 1, "unit": "tsp"},
+        {"name": "sesame seeds", "quantity": 3, "unit": "tbsp"},
+        {"name": "salt", "quantity": 1.5, "unit": "tsp"},
+        {"name": "frying oil", "quantity": 1, "unit": "l"}
+      ],
+      "steps": [
+        "Soak split favas in cold water for 24 hours, then drain very thoroughly.",
+        "Pulse favas, onion, leek, garlic, herbs, cumin, coriander and salt to a vivid green coarse paste.",
+        "Stir in baking soda and chill the mixture for 30 minutes.",
+        "Shape into small patties and press sesame seeds onto both sides.",
+        "Heat oil to 170°C and fry patties in batches for 3-4 minutes until dark green-gold and crisp.",
+        "Drain on paper and serve in pita with tahini, salad and pickles."
+      ],
+      "tags": ["street food", "fried", "breakfast"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 1440,
+      "cookTime": 15,
+      "servings": 6
+    },
+    {
+      "title": "Molokhia",
+      "description": "Egyptian-style finely chopped jute leaf soup with rabbit or chicken, finished with a sizzling garlic and coriander tarka.",
+      "ingredients": [
+        {"name": "frozen molokhia leaves", "quantity": 500, "unit": "g"},
+        {"name": "chicken pieces", "quantity": 1, "unit": "kg"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "cardamom pods", "quantity": 4, "unit": "pc"},
+        {"name": "bay leaves", "quantity": 2, "unit": "pc"},
+        {"name": "garlic cloves", "quantity": 8, "unit": "pc"},
+        {"name": "ground coriander", "quantity": 2, "unit": "tsp"},
+        {"name": "ghee", "quantity": 3, "unit": "tbsp"},
+        {"name": "lemon juice", "quantity": 1, "unit": "tbsp"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"},
+        {"name": "water", "quantity": 1.5, "unit": "l"}
+      ],
+      "steps": [
+        "Simmer chicken with onion, bay leaves, cardamom and salt for 60 minutes; strain and reserve broth.",
+        "Defrost the molokhia leaves and add to 1 liter of strained simmering broth.",
+        "Cook gently for 10 minutes without boiling vigorously.",
+        "Crush garlic with a pinch of salt and the ground coriander.",
+        "Heat ghee in a small pan, fry the garlic-coriander paste until golden and fragrant (the ta'aleya).",
+        "Tip the sizzling tarka into the soup, stir in lemon juice and serve with rice and chicken."
+      ],
+      "tags": ["soup", "national dish", "comfort food"],
+      "dietaryTags": ["halal"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 80,
+      "servings": 6
+    },
+    {
+      "title": "Mahshi Cromb",
+      "description": "Egyptian stuffed cabbage rolls of seasoned rice, herbs and tomato, simmered with garlic and cumin in lemony broth.",
+      "ingredients": [
+        {"name": "cabbage", "quantity": 1, "unit": "pc"},
+        {"name": "Egyptian short-grain rice", "quantity": 300, "unit": "g"},
+        {"name": "tomatoes", "quantity": 3, "unit": "pc"},
+        {"name": "tomato paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "fresh parsley", "quantity": 1, "unit": "bunch"},
+        {"name": "fresh dill", "quantity": 0.5, "unit": "bunch"},
+        {"name": "fresh coriander", "quantity": 0.5, "unit": "bunch"},
+        {"name": "ghee", "quantity": 4, "unit": "tbsp"},
+        {"name": "ground cumin", "quantity": 1, "unit": "tsp"},
+        {"name": "garlic cloves", "quantity": 6, "unit": "pc"},
+        {"name": "lemon juice", "quantity": 80, "unit": "ml"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"},
+        {"name": "water", "quantity": 800, "unit": "ml"}
+      ],
+      "steps": [
+        "Boil the cored cabbage in salted water, peeling off leaves as they soften.",
+        "Trim thick ribs and halve large leaves along the spine.",
+        "Mix rinsed rice with chopped tomato, tomato paste, herbs, ghee, cumin and salt.",
+        "Place a finger of filling on each leaf and roll tightly into thin cigars.",
+        "Layer rolls in a heavy pot with crushed garlic between layers.",
+        "Pour over water mixed with lemon juice, weight with a plate and simmer covered for 50 minutes."
+      ],
+      "tags": ["stuffed", "comfort food", "celebration"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 45,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Feteer Meshaltet",
+      "description": "Many-layered Egyptian flaky pastry, brushed with ghee until paper-thin, baked golden and served plain or filled.",
+      "ingredients": [
+        {"name": "all-purpose flour", "quantity": 500, "unit": "g"},
+        {"name": "warm water", "quantity": 300, "unit": "ml"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"},
+        {"name": "ghee", "quantity": 250, "unit": "g"},
+        {"name": "neutral oil", "quantity": 60, "unit": "ml"}
+      ],
+      "steps": [
+        "Mix flour, salt and warm water into a soft dough; knead 10 minutes until silky.",
+        "Divide into 8 balls, coat in oil and rest 1 hour.",
+        "Stretch each ball on an oiled surface into a paper-thin large sheet.",
+        "Brush generously with melted ghee, fold each sheet into a small square and stack.",
+        "Roll the stack into a 30 cm round and place on a baking tray.",
+        "Bake at 220°C for 25 minutes until deep golden and very flaky."
+      ],
+      "tags": ["pastry", "celebration", "buttery"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 90,
+      "cookTime": 25,
+      "servings": 8
+    },
+    {
+      "title": "Hamam Mahshi",
+      "description": "Egyptian roasted pigeon stuffed with freekeh, onions and warm spices, traditionally cooked in a clay tagine.",
+      "ingredients": [
+        {"name": "whole pigeons", "quantity": 4, "unit": "pc"},
+        {"name": "freekeh", "quantity": 250, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "ghee", "quantity": 3, "unit": "tbsp"},
+        {"name": "ground allspice", "quantity": 1, "unit": "tsp"},
+        {"name": "ground cinnamon", "quantity": 0.5, "unit": "tsp"},
+        {"name": "ground cardamom", "quantity": 0.5, "unit": "tsp"},
+        {"name": "chicken stock", "quantity": 700, "unit": "ml"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"},
+        {"name": "lemon juice", "quantity": 2, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Soak the freekeh in cold water for 30 minutes, then drain.",
+        "Brown chopped onion in ghee, add freekeh, spices and salt and toast 3 minutes.",
+        "Pour in 400 ml stock and simmer 10 minutes until almost tender; cool.",
+        "Stuff each pigeon with freekeh and truss the legs together.",
+        "Brown the pigeons in ghee, then nestle in a heavy pot with remaining stock and lemon juice.",
+        "Cover and braise at 180°C for 60 minutes until tender, then crisp under a hot grill for 5 minutes."
+      ],
+      "tags": ["celebration", "roasted", "stuffed"],
+      "dietaryTags": ["halal"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 90,
+      "servings": 4
+    },
+    {
+      "title": "Roz Bel Laban",
+      "description": "Egyptian rice pudding cooked low and slow with milk, sugar and a hint of vanilla, finished with cinnamon and pistachios.",
+      "ingredients": [
+        {"name": "Egyptian short-grain rice", "quantity": 100, "unit": "g"},
+        {"name": "whole milk", "quantity": 1, "unit": "l"},
+        {"name": "sugar", "quantity": 100, "unit": "g"},
+        {"name": "cornstarch", "quantity": 1, "unit": "tbsp"},
+        {"name": "vanilla extract", "quantity": 1, "unit": "tsp"},
+        {"name": "ground cinnamon", "quantity": 0.5, "unit": "tsp"},
+        {"name": "shelled pistachios", "quantity": 30, "unit": "g"},
+        {"name": "water", "quantity": 200, "unit": "ml"}
+      ],
+      "steps": [
+        "Rinse rice and simmer with water for 15 minutes until water is absorbed.",
+        "Pour in 800 ml of milk and cook gently for 25 minutes, stirring often.",
+        "Whisk cornstarch into the remaining milk, then stir into the rice with sugar.",
+        "Cook another 8 minutes until creamy and slightly thickened.",
+        "Stir in vanilla and ladle into bowls; chill for 2 hours.",
+        "Top with crushed pistachios and a dusting of cinnamon before serving."
+      ],
+      "tags": ["dessert", "rice pudding", "comfort food"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 50,
+      "servings": 6
+    },
+    {
+      "title": "Umm Ali",
+      "description": "Egyptian bread pudding of buttery puff pastry baked in sweetened milk with nuts and raisins, served bubbling and golden.",
+      "ingredients": [
+        {"name": "puff pastry", "quantity": 400, "unit": "g"},
+        {"name": "whole milk", "quantity": 1, "unit": "l"},
+        {"name": "sugar", "quantity": 120, "unit": "g"},
+        {"name": "double cream", "quantity": 200, "unit": "ml"},
+        {"name": "blanched almonds", "quantity": 50, "unit": "g"},
+        {"name": "shelled pistachios", "quantity": 50, "unit": "g"},
+        {"name": "shredded coconut", "quantity": 30, "unit": "g"},
+        {"name": "raisins", "quantity": 50, "unit": "g"},
+        {"name": "ground cinnamon", "quantity": 0.5, "unit": "tsp"}
+      ],
+      "steps": [
+        "Bake the puff pastry at 200°C for 15 minutes until puffed and golden, then crumble.",
+        "Spread the crumbled pastry into a baking dish with the nuts, coconut and raisins.",
+        "Heat milk and sugar in a pot until just steaming, stirring to dissolve.",
+        "Pour the warm milk over the pastry and let it absorb for 5 minutes.",
+        "Whip the cream and dollop over the surface, then dust with cinnamon.",
+        "Bake at 220°C for 12-15 minutes until bubbling and the cream is golden; serve immediately."
+      ],
+      "tags": ["dessert", "bread pudding", "celebration"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 30,
+      "servings": 8
+    },
+    {
+      "title": "Basbousa",
+      "description": "Tender semolina cake soaked with citrus syrup and topped with toasted almonds, a beloved Egyptian sweet.",
+      "ingredients": [
+        {"name": "fine semolina", "quantity": 300, "unit": "g"},
+        {"name": "Greek yogurt", "quantity": 250, "unit": "g"},
+        {"name": "sugar", "quantity": 150, "unit": "g"},
+        {"name": "ghee", "quantity": 120, "unit": "g"},
+        {"name": "baking powder", "quantity": 1, "unit": "tsp"},
+        {"name": "tahini", "quantity": 1, "unit": "tbsp"},
+        {"name": "blanched almonds", "quantity": 30, "unit": "pc"},
+        {"name": "sugar for syrup", "quantity": 350, "unit": "g"},
+        {"name": "water", "quantity": 250, "unit": "ml"},
+        {"name": "lemon juice", "quantity": 1, "unit": "tbsp"},
+        {"name": "rose water", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Make syrup by simmering sugar, water and lemon juice for 10 minutes; stir in rose water and cool.",
+        "Brush a tray with tahini and dust with semolina.",
+        "Mix semolina, sugar, baking powder, yogurt and melted ghee into a soft batter.",
+        "Spread into the tray and score into diamonds; press an almond into each diamond.",
+        "Bake at 190°C for 30-35 minutes until deep golden.",
+        "Pour cool syrup over the hot cake and rest 30 minutes before serving."
+      ],
+      "tags": ["dessert", "cake", "syrup-soaked"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 40,
+      "servings": 12
+    },
+    {
+      "title": "Ful Sudani",
+      "description": "Egyptian-style spiced peanut soup, creamy and lightly tomatoey, eaten as a winter starter with bread.",
+      "ingredients": [
+        {"name": "smooth peanut butter", "quantity": 200, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "garlic cloves", "quantity": 3, "unit": "pc"},
+        {"name": "tomato paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "ground cumin", "quantity": 1, "unit": "tsp"},
+        {"name": "ground coriander", "quantity": 0.5, "unit": "tsp"},
+        {"name": "chili flakes", "quantity": 0.5, "unit": "tsp"},
+        {"name": "olive oil", "quantity": 2, "unit": "tbsp"},
+        {"name": "lemon juice", "quantity": 1, "unit": "tbsp"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"},
+        {"name": "water", "quantity": 1, "unit": "l"}
+      ],
+      "steps": [
+        "Sauté chopped onion and garlic in olive oil for 5 minutes.",
+        "Stir in tomato paste, cumin, coriander and chili flakes and cook 1 minute.",
+        "Whisk in the peanut butter and pour over the water.",
+        "Simmer 15 minutes until the soup is creamy and rich.",
+        "Season with salt and lemon juice to balance.",
+        "Ladle into bowls and serve with toasted flatbread."
+      ],
+      "tags": ["soup", "winter", "peanut"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Macarona Bechamel",
+      "description": "Egyptian baked pasta layered with spiced minced meat and a thick béchamel, golden and bubbling on top.",
+      "ingredients": [
+        {"name": "penne pasta", "quantity": 500, "unit": "g"},
+        {"name": "minced beef", "quantity": 500, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "tomato paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "ground allspice", "quantity": 1, "unit": "tsp"},
+        {"name": "ground cinnamon", "quantity": 0.5, "unit": "tsp"},
+        {"name": "butter", "quantity": 80, "unit": "g"},
+        {"name": "all-purpose flour", "quantity": 80, "unit": "g"},
+        {"name": "whole milk", "quantity": 1, "unit": "l"},
+        {"name": "ground nutmeg", "quantity": 0.5, "unit": "tsp"},
+        {"name": "egg", "quantity": 1, "unit": "pc"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"}
+      ],
+      "steps": [
+        "Boil pasta in salted water for 8 minutes, drain and toss with a little oil.",
+        "Brown the beef with chopped onion, tomato paste, allspice, cinnamon and salt.",
+        "Make béchamel: melt butter, whisk in flour, then milk; cook to a thick sauce, season with nutmeg and salt.",
+        "Whisk a little hot sauce into the egg, then stir back into the béchamel off heat.",
+        "Layer half the pasta in a baking dish, spread the meat, then remaining pasta and béchamel on top.",
+        "Bake at 200°C for 25 minutes until deep golden and bubbling; rest 10 minutes before slicing."
+      ],
+      "tags": ["pasta", "comfort food", "baked"],
+      "dietaryTags": ["halal"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 45,
+      "servings": 6
+    },
+    {
+      "title": "Sayadeya",
+      "description": "Egyptian fisherman's spiced rice with caramelized onions and pan-seared fish, dressed with fresh tomato salsa.",
+      "ingredients": [
+        {"name": "white fish fillets", "quantity": 700, "unit": "g"},
+        {"name": "long-grain rice", "quantity": 400, "unit": "g"},
+        {"name": "onions", "quantity": 4, "unit": "pc"},
+        {"name": "ground cumin", "quantity": 2, "unit": "tsp"},
+        {"name": "ground turmeric", "quantity": 1, "unit": "tsp"},
+        {"name": "tomato paste", "quantity": 1, "unit": "tbsp"},
+        {"name": "olive oil", "quantity": 80, "unit": "ml"},
+        {"name": "fish stock", "quantity": 800, "unit": "ml"},
+        {"name": "lemon", "quantity": 1, "unit": "pc"},
+        {"name": "fresh parsley", "quantity": 0.25, "unit": "bunch"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"}
+      ],
+      "steps": [
+        "Slice onions and fry in olive oil for 25 minutes until very dark; reserve some for garnish.",
+        "Stir in tomato paste and cook 1 minute, then blend half with stock for amber broth.",
+        "Toast rinsed rice in remaining onion oil with cumin, turmeric and salt.",
+        "Pour in the dark stock, cover and simmer 18 minutes; rest 10 minutes off heat.",
+        "Season fish with salt and lemon, then pan-fry skin-side down until crisp and just cooked.",
+        "Mound rice on a platter, lay fish on top, scatter reserved onions and parsley and serve with lemon wedges."
+      ],
+      "tags": ["fish", "rice", "coastal"],
+      "dietaryTags": ["halal"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 50,
+      "servings": 4
+    },
+    {
+      "title": "Aish Baladi",
+      "description": "Egypt's wholewheat pita: a hot puffed flatbread with a hollow pocket and a flavor of toasted bran, made daily across the country.",
+      "ingredients": [
+        {"name": "wholewheat flour", "quantity": 400, "unit": "g"},
+        {"name": "white bread flour", "quantity": 100, "unit": "g"},
+        {"name": "instant yeast", "quantity": 7, "unit": "g"},
+        {"name": "warm water", "quantity": 320, "unit": "ml"},
+        {"name": "salt", "quantity": 1.5, "unit": "tsp"},
+        {"name": "wheat bran for dusting", "quantity": 30, "unit": "g"}
+      ],
+      "steps": [
+        "Whisk flours, yeast and salt in a bowl, then add water and mix to a soft dough.",
+        "Knead for 10 minutes until smooth and elastic, then cover and rise 1 hour.",
+        "Divide into 8 balls, dust with wheat bran and rest 15 minutes.",
+        "Roll each ball into a 16 cm disc and let proof another 20 minutes.",
+        "Preheat a baking stone or heavy tray at 250°C for 30 minutes.",
+        "Bake the discs in batches for 3 minutes until they puff and the underside is freckled."
+      ],
+      "tags": ["flatbread", "staple", "everyday"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 100,
+      "cookTime": 15,
+      "servings": 8
+    },
+    {
+      "title": "Hawawshi",
+      "description": "Spiced minced meat stuffed inside Egyptian baladi bread and baked or pan-grilled until the bread is crisp and the meat is juicy.",
+      "ingredients": [
+        {"name": "aish baladi or pita", "quantity": 4, "unit": "pc"},
+        {"name": "minced beef", "quantity": 500, "unit": "g"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "tomato", "quantity": 1, "unit": "pc"},
+        {"name": "green chili", "quantity": 1, "unit": "pc"},
+        {"name": "fresh parsley", "quantity": 0.5, "unit": "bunch"},
+        {"name": "ground allspice", "quantity": 1, "unit": "tsp"},
+        {"name": "ground cumin", "quantity": 1, "unit": "tsp"},
+        {"name": "olive oil", "quantity": 2, "unit": "tbsp"},
+        {"name": "salt", "quantity": 1.5, "unit": "tsp"}
+      ],
+      "steps": [
+        "Finely chop onion, tomato, chili and parsley and squeeze out excess liquid.",
+        "Knead the chopped vegetables with the minced beef, allspice, cumin and salt until cohesive.",
+        "Slit each pita open like a pocket without cutting through.",
+        "Spread the meat mixture into a thin even layer inside each pita.",
+        "Brush both sides with olive oil and bake at 230°C for 18 minutes until very crisp.",
+        "Cut into wedges and serve hot with tahini and pickles."
+      ],
+      "tags": ["street food", "stuffed bread", "beef"],
+      "dietaryTags": ["halal"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Dukkah",
+      "description": "Egyptian dry condiment of toasted nuts, sesame, coriander and cumin — eat with bread dipped in olive oil.",
+      "ingredients": [
+        {"name": "blanched hazelnuts", "quantity": 100, "unit": "g"},
+        {"name": "sesame seeds", "quantity": 80, "unit": "g"},
+        {"name": "coriander seeds", "quantity": 3, "unit": "tbsp"},
+        {"name": "cumin seeds", "quantity": 2, "unit": "tbsp"},
+        {"name": "fennel seeds", "quantity": 1, "unit": "tsp"},
+        {"name": "black pepper", "quantity": 1, "unit": "tsp"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Toast the hazelnuts at 180°C for 8 minutes until fragrant; rub off any skins.",
+        "Toast sesame seeds in a dry pan until pale gold, then tip onto a plate.",
+        "Toast coriander, cumin and fennel seeds 2 minutes until aromatic.",
+        "Pulse all the ingredients with salt and pepper to a coarse, sandy texture.",
+        "Be careful not to over-process or it will turn to butter.",
+        "Store in a jar and serve in a small bowl with olive oil and bread for dipping."
+      ],
+      "tags": ["condiment", "spice mix", "mezze"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 10,
+      "servings": 12
+    }
+  ]
+}

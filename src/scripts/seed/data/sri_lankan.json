@@ -1,0 +1,256 @@
+{
+  "cuisine": "Sri Lankan",
+  "names": {
+    "first": ["Dilan", "Kasun", "Roshan", "Nuwan", "Sahan", "Tharindu", "Lasith", "Chamara", "Nimali", "Sachini", "Tharushi", "Ishara", "Dilshani", "Anuki", "Sandeepa", "Hashini"],
+    "last": ["Perera", "Fernando", "Silva", "Jayawardena", "Rajapaksa", "De Silva", "Wickramasinghe", "Bandara", "Gunawardena", "Senanayake", "Mendis", "Wijesinghe"]
+  },
+  "recipes": [
+    {
+      "title": "Kottu",
+      "description": "Chopped roti stir-fried on a hot griddle with vegetables, egg, and meat in a fiery curry sauce.",
+      "ingredients": [
+        {"name": "godhamba roti", "quantity": 4, "unit": "pc"},
+        {"name": "boneless chicken", "quantity": 300, "unit": "g"},
+        {"name": "eggs", "quantity": 3, "unit": "pc"},
+        {"name": "leeks", "quantity": 100, "unit": "g"},
+        {"name": "carrot", "quantity": 1, "unit": "pc"},
+        {"name": "cabbage", "quantity": 200, "unit": "g"},
+        {"name": "curry leaves", "quantity": 1, "unit": "bunch"},
+        {"name": "sri lankan curry powder", "quantity": 2, "unit": "tbsp"},
+        {"name": "soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "vegetable oil", "quantity": 4, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Cook chicken in a pan with curry powder, salt, and a splash of water until tender; shred.",
+        "Heat oil on a flat griddle and saute curry leaves, leeks, carrot, and cabbage briefly.",
+        "Push vegetables aside and scramble the eggs.",
+        "Add shredded chicken and any cooking liquid.",
+        "Stack roti and chop into thin strips with two metal blades.",
+        "Add roti to the griddle and chop and fold everything together with rapid hammering motions.",
+        "Splash soy sauce and salt to taste, then serve hot."
+      ],
+      "tags": ["street food", "stir fry", "chicken", "spicy"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Hoppers",
+      "description": "Bowl-shaped fermented rice flour and coconut milk pancakes with a soft centre and lacy crisp edges.",
+      "ingredients": [
+        {"name": "rice flour", "quantity": 300, "unit": "g"},
+        {"name": "coconut milk", "quantity": 400, "unit": "ml"},
+        {"name": "instant yeast", "quantity": 1, "unit": "tsp"},
+        {"name": "sugar", "quantity": 2, "unit": "tsp"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"},
+        {"name": "warm water", "quantity": 200, "unit": "ml"}
+      ],
+      "steps": [
+        "Whisk warm water with yeast and sugar; rest 10 minutes until frothy.",
+        "Mix rice flour, salt, and the yeast mixture into a smooth batter.",
+        "Cover and ferment 4 hours in a warm spot until bubbly.",
+        "Stir in coconut milk to a thin pancake-like consistency.",
+        "Heat a small hopper pan and ladle in batter, swirling immediately to coat the sides.",
+        "Cover for 1 minute until edges are crisp and centre is set.",
+        "Lift out and serve hot with seeni sambol or pol sambol."
+      ],
+      "tags": ["breakfast", "fermented", "vegan", "pancake"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 240,
+      "cookTime": 25,
+      "servings": 5
+    },
+    {
+      "title": "Lamprais",
+      "description": "Burgher-Sri Lankan rice bundles with mixed meat curry, frikadeller, and aubergine, baked in banana leaf.",
+      "ingredients": [
+        {"name": "samba rice", "quantity": 400, "unit": "g"},
+        {"name": "mixed meat", "quantity": 500, "unit": "g"},
+        {"name": "lamprais curry powder", "quantity": 3, "unit": "tbsp"},
+        {"name": "coconut milk", "quantity": 300, "unit": "ml"},
+        {"name": "minced beef", "quantity": 200, "unit": "g"},
+        {"name": "aubergine", "quantity": 1, "unit": "pc"},
+        {"name": "shrimp paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "ghee", "quantity": 4, "unit": "tbsp"},
+        {"name": "banana leaves", "quantity": 6, "unit": "pc"}
+      ],
+      "steps": [
+        "Cook the mixed meat with lamprais curry powder, coconut milk, and salt until tender.",
+        "Fry the rice in ghee with whole spices, then cook in the meat broth until just done.",
+        "Form minced beef into small frikadeller balls and fry until brown.",
+        "Slice and fry aubergine until soft for brinjal moju.",
+        "Soften banana leaves over a flame.",
+        "Place rice in the centre, top with curry, frikadeller, aubergine, and a smear of shrimp paste.",
+        "Fold leaves into a parcel and bake at 180 C for 20 minutes; serve hot in the leaf."
+      ],
+      "tags": ["burgher", "rice", "baked", "feast"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Pol Sambol",
+      "description": "Fresh coconut sambol pounded with chili, lime, onion, and Maldive fish — Sri Lanka's iconic relish.",
+      "ingredients": [
+        {"name": "freshly grated coconut", "quantity": 200, "unit": "g"},
+        {"name": "red chili powder", "quantity": 2, "unit": "tsp"},
+        {"name": "maldive fish flakes", "quantity": 2, "unit": "tbsp"},
+        {"name": "small red onion", "quantity": 1, "unit": "pc"},
+        {"name": "lime juice", "quantity": 1, "unit": "tbsp"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Place grated coconut in a wide bowl.",
+        "Pound red onion with chili powder and salt in a mortar until paste-like.",
+        "Add the onion paste to the coconut along with maldive fish.",
+        "Mix vigorously with your fingertips until the coconut turns rosy.",
+        "Squeeze in lime juice and adjust salt.",
+        "Serve immediately with rice, hoppers, or string hoppers."
+      ],
+      "tags": ["coconut", "condiment", "spicy", "no cook"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 0,
+      "servings": 6
+    },
+    {
+      "title": "Fish Ambul Thiyal",
+      "description": "Sour dry tuna curry preserved with goraka and roasted spices, a classic southern Sri Lankan dish.",
+      "ingredients": [
+        {"name": "tuna steaks", "quantity": 600, "unit": "g"},
+        {"name": "goraka", "quantity": 4, "unit": "pc"},
+        {"name": "black pepper", "quantity": 1, "unit": "tbsp"},
+        {"name": "garlic", "quantity": 6, "unit": "pc"},
+        {"name": "ginger", "quantity": 30, "unit": "g"},
+        {"name": "curry leaves", "quantity": 1, "unit": "bunch"},
+        {"name": "pandan leaf", "quantity": 1, "unit": "pc"},
+        {"name": "roasted curry powder", "quantity": 1, "unit": "tbsp"},
+        {"name": "salt", "quantity": 2, "unit": "tsp"}
+      ],
+      "steps": [
+        "Soak goraka in hot water for 15 minutes, then grind to a paste.",
+        "Cut tuna into thick chunks and rinse.",
+        "Pound garlic, ginger, and pepper in a mortar.",
+        "Combine all spices, goraka paste, salt, and a splash of water in a clay pot.",
+        "Add fish and toss to coat, then add curry and pandan leaves.",
+        "Cover and cook on low heat for 25 minutes, gently shaking the pot occasionally.",
+        "The dish is done when liquid has fully evaporated and fish is dark and dry."
+      ],
+      "tags": ["fish", "southern", "dry curry", "preserved"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Kiribath",
+      "description": "Milk rice cooked in coconut milk and pressed into diamonds, a Sri Lankan staple at celebrations.",
+      "ingredients": [
+        {"name": "samba rice", "quantity": 400, "unit": "g"},
+        {"name": "thick coconut milk", "quantity": 400, "unit": "ml"},
+        {"name": "water", "quantity": 600, "unit": "ml"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Wash rice well and cook with water and salt until just tender and water is mostly absorbed.",
+        "Pour in thick coconut milk and stir well.",
+        "Cook on low heat, stirring constantly, until coconut milk is fully absorbed and the rice is creamy.",
+        "Press the cooked rice firmly into a flat tray to about 2 cm thickness.",
+        "Smooth the top with a wet spatula and let it cool for 15 minutes.",
+        "Cut into diamond shapes with a wet knife.",
+        "Serve warm with lunu miris, pol sambol, or jaggery."
+      ],
+      "tags": ["rice", "coconut", "celebration", "vegan"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "String Hoppers",
+      "description": "Steamed nests of pressed rice flour noodles, served at breakfast with curries and sambols.",
+      "ingredients": [
+        {"name": "string hopper flour", "quantity": 400, "unit": "g"},
+        {"name": "boiling water", "quantity": 500, "unit": "ml"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Mix string hopper flour with salt in a wide bowl.",
+        "Pour in boiling water gradually, mixing with a spoon to a soft dough.",
+        "Knead the dough briefly until smooth.",
+        "Pack into a string hopper press.",
+        "Press the dough through the press onto greased string hopper mats in tight circular patterns.",
+        "Steam in a multi-tier steamer for 8 minutes until set.",
+        "Carefully lift off the mats and serve hot with kiri hodi and pol sambol."
+      ],
+      "tags": ["breakfast", "steamed", "vegan", "noodles"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Watalappan",
+      "description": "Sri Lankan Malay steamed coconut and jaggery custard fragrant with cardamom and nutmeg.",
+      "ingredients": [
+        {"name": "kithul jaggery", "quantity": 250, "unit": "g"},
+        {"name": "coconut milk", "quantity": 500, "unit": "ml"},
+        {"name": "eggs", "quantity": 5, "unit": "pc"},
+        {"name": "cardamom powder", "quantity": 1, "unit": "tsp"},
+        {"name": "nutmeg", "quantity": 1, "unit": "pinch"},
+        {"name": "cashews", "quantity": 30, "unit": "g"}
+      ],
+      "steps": [
+        "Melt jaggery with 4 tablespoons of water in a saucepan until syrupy; cool.",
+        "Whisk eggs lightly in a bowl.",
+        "Add coconut milk, jaggery syrup, cardamom, and nutmeg; whisk until smooth.",
+        "Strain through a fine sieve into a heatproof bowl.",
+        "Cover with foil and steam for 35 minutes until set with a slight wobble.",
+        "Cool to room temperature, then refrigerate for at least 2 hours.",
+        "Garnish with toasted cashews before serving."
+      ],
+      "tags": ["dessert", "malay", "custard", "vegetarian"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 40,
+      "servings": 6
+    },
+    {
+      "title": "Dhal Curry",
+      "description": "Sri Lankan red lentil curry tempered with curry leaves, mustard seeds, and creamy coconut milk.",
+      "ingredients": [
+        {"name": "red lentils", "quantity": 250, "unit": "g"},
+        {"name": "coconut milk", "quantity": 400, "unit": "ml"},
+        {"name": "onion", "quantity": 1, "unit": "pc"},
+        {"name": "garlic", "quantity": 4, "unit": "pc"},
+        {"name": "curry leaves", "quantity": 1, "unit": "bunch"},
+        {"name": "pandan leaf", "quantity": 1, "unit": "pc"},
+        {"name": "mustard seeds", "quantity": 1, "unit": "tsp"},
+        {"name": "turmeric", "quantity": 1, "unit": "tsp"},
+        {"name": "dried red chili", "quantity": 2, "unit": "pc"},
+        {"name": "coconut oil", "quantity": 2, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Wash lentils until water runs clear.",
+        "Cook lentils with turmeric, water, and salt until soft and creamy.",
+        "Add coconut milk and pandan leaf; simmer 5 minutes more.",
+        "In a separate pan, heat coconut oil and pop mustard seeds.",
+        "Add curry leaves, sliced onion, garlic, and dried chilies; saute until fragrant.",
+        "Pour the tempering over the lentils and stir.",
+        "Adjust salt and serve with rice or hoppers."
+      ],
+      "tags": ["lentils", "vegan", "curry", "everyday"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 25,
+      "servings": 4
+    }
+  ]
+}

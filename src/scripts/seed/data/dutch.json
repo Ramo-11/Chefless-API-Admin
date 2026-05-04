@@ -1,0 +1,357 @@
+{
+  "cuisine": "Dutch",
+  "names": {
+    "first": ["Daan", "Sanne", "Bram", "Lotte", "Joris", "Femke", "Sven", "Anouk", "Thijs", "Saskia", "Wouter", "Marieke"],
+    "last": ["de Vries", "van den Berg", "Jansen", "Bakker", "Visser", "de Jong", "Mulder", "Smit", "van Dijk", "de Boer", "Hendriks", "Kuipers"]
+  },
+  "recipes": [
+    {
+      "title": "Stamppot",
+      "description": "Traditional Dutch dish of mashed potatoes blended with vegetables, served with smoked sausage and gravy.",
+      "ingredients": [
+        { "name": "floury potatoes, peeled", "quantity": 1, "unit": "kg" },
+        { "name": "curly kale, chopped", "quantity": 500, "unit": "g" },
+        { "name": "smoked sausage (rookworst)", "quantity": 1, "unit": "pc" },
+        { "name": "butter", "quantity": 50, "unit": "g" },
+        { "name": "whole milk, warm", "quantity": 100, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" },
+        { "name": "nutmeg, ground", "quantity": 1, "unit": "pinch" }
+      ],
+      "steps": [
+        "Place the potatoes in a large pot, cover with salted water, and bring to a boil.",
+        "After the potatoes have boiled for ten minutes, lay the smoked sausage on top to warm through.",
+        "Add the kale to the pot for the final ten minutes of cooking.",
+        "Remove the sausage and drain the pot, reserving a little cooking liquid.",
+        "Mash the potatoes and kale together with butter, warm milk, salt, pepper and nutmeg.",
+        "Slice the sausage and serve on top of the stamppot with a well of gravy in the centre."
+      ],
+      "tags": ["potato", "kale", "winter", "comfort"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Erwtensoep",
+      "description": "Thick Dutch split pea soup with pork and smoked sausage, traditionally eaten in winter.",
+      "ingredients": [
+        { "name": "green split peas", "quantity": 500, "unit": "g" },
+        { "name": "pork ribs", "quantity": 500, "unit": "g" },
+        { "name": "smoked sausage (rookworst)", "quantity": 1, "unit": "pc" },
+        { "name": "celeriac, diced", "quantity": 200, "unit": "g" },
+        { "name": "leek, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "carrots, diced", "quantity": 2, "unit": "pc" },
+        { "name": "potatoes, diced", "quantity": 2, "unit": "pc" },
+        { "name": "water", "quantity": 2, "unit": "l" },
+        { "name": "salt", "quantity": 2, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Rinse the split peas under cold water and place in a large pot with the pork ribs and water.",
+        "Bring to a boil, skim the foam, then simmer covered for one hour.",
+        "Add the celeriac, leek, onion, carrots and potatoes and continue simmering for 45 minutes.",
+        "Lift out the ribs, pull the meat from the bones, and return the meat to the pot.",
+        "Slice the smoked sausage and add it to warm through for the final ten minutes.",
+        "Season with salt and pepper. The soup should be thick enough that a spoon stands upright."
+      ],
+      "tags": ["soup", "winter", "pork", "split pea"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 120,
+      "servings": 6
+    },
+    {
+      "title": "Bitterballen",
+      "description": "Crispy deep-fried Dutch beef ragout balls, the classic accompaniment to a Dutch beer.",
+      "ingredients": [
+        { "name": "beef chuck, cooked and shredded", "quantity": 400, "unit": "g" },
+        { "name": "butter", "quantity": 75, "unit": "g" },
+        { "name": "flour", "quantity": 75, "unit": "g" },
+        { "name": "beef stock", "quantity": 500, "unit": "ml" },
+        { "name": "onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "parsley, chopped", "quantity": 2, "unit": "tbsp" },
+        { "name": "nutmeg, ground", "quantity": 1, "unit": "pinch" },
+        { "name": "eggs, beaten", "quantity": 2, "unit": "pc" },
+        { "name": "breadcrumbs", "quantity": 200, "unit": "g" },
+        { "name": "flour for dredging", "quantity": 100, "unit": "g" },
+        { "name": "vegetable oil for frying", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "Melt the butter in a saucepan, sauté the onion until soft, then stir in the flour to make a roux.",
+        "Gradually whisk in the beef stock and simmer until very thick.",
+        "Stir in the shredded beef, parsley and nutmeg, season well, and spread onto a tray to chill for at least 4 hours.",
+        "Roll the firm ragout into walnut-sized balls.",
+        "Dip each ball in flour, then beaten egg, then breadcrumbs, repeating the egg and crumb step for a crisp shell.",
+        "Heat the oil to 180°C and fry the bitterballen in batches for 3 to 4 minutes until deep golden.",
+        "Drain on paper and serve hot with mustard."
+      ],
+      "tags": ["snack", "fried", "beef", "borrel"],
+      "difficulty": "hard",
+      "prepTime": 40,
+      "cookTime": 20,
+      "servings": 6
+    },
+    {
+      "title": "Stroopwafel",
+      "description": "Thin Dutch waffle cookies sandwiched together with a layer of warm caramel syrup.",
+      "ingredients": [
+        { "name": "flour", "quantity": 300, "unit": "g" },
+        { "name": "butter, softened", "quantity": 150, "unit": "g" },
+        { "name": "brown sugar", "quantity": 80, "unit": "g" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "active dry yeast", "quantity": 1, "unit": "tsp" },
+        { "name": "warm milk", "quantity": 60, "unit": "ml" },
+        { "name": "cinnamon, ground", "quantity": 0.5, "unit": "tsp" },
+        { "name": "dark brown sugar (filling)", "quantity": 200, "unit": "g" },
+        { "name": "butter (filling)", "quantity": 100, "unit": "g" },
+        { "name": "golden syrup", "quantity": 100, "unit": "ml" },
+        { "name": "cinnamon (filling)", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Dissolve the yeast in warm milk and let bloom for five minutes.",
+        "Rub butter and sugar into the flour with the cinnamon, then mix in the egg and yeast mixture to a soft dough.",
+        "Cover and rest the dough for 45 minutes.",
+        "Combine all filling ingredients in a saucepan and simmer until thick and shiny, then keep warm.",
+        "Roll the dough into small balls and press in a hot waffle iron until golden, about 30 seconds.",
+        "While still warm, slice each waffle horizontally with a serrated knife and spread the filling on one half.",
+        "Sandwich the halves back together and let cool slightly before serving."
+      ],
+      "tags": ["dessert", "cookie", "waffle", "caramel"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 20,
+      "servings": 12
+    },
+    {
+      "title": "Kroket",
+      "description": "Dutch deep-fried cylindrical croquette with a creamy beef ragout filling and crisp breadcrumb crust.",
+      "ingredients": [
+        { "name": "beef chuck, cooked and shredded", "quantity": 400, "unit": "g" },
+        { "name": "butter", "quantity": 75, "unit": "g" },
+        { "name": "flour", "quantity": 75, "unit": "g" },
+        { "name": "beef stock", "quantity": 500, "unit": "ml" },
+        { "name": "onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "parsley, chopped", "quantity": 2, "unit": "tbsp" },
+        { "name": "nutmeg, ground", "quantity": 1, "unit": "pinch" },
+        { "name": "eggs, beaten", "quantity": 2, "unit": "pc" },
+        { "name": "breadcrumbs", "quantity": 200, "unit": "g" },
+        { "name": "flour for dredging", "quantity": 100, "unit": "g" },
+        { "name": "vegetable oil for frying", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "Sauté the onion in butter, stir in flour to make a roux, and whisk in the stock to a thick sauce.",
+        "Fold in the shredded beef, parsley and nutmeg, season generously, and chill on a tray for at least 4 hours.",
+        "Shape the cold ragout into cylinders about 8 cm long.",
+        "Dredge each cylinder in flour, dip in egg, then coat in breadcrumbs, repeating the egg and crumb step.",
+        "Chill the breaded kroketten for 30 minutes so the crust sets.",
+        "Heat oil to 180°C and fry the kroketten for 4 minutes until deep golden brown.",
+        "Drain on paper and serve hot with mustard or on a soft white roll."
+      ],
+      "tags": ["snack", "fried", "beef", "street food"],
+      "difficulty": "hard",
+      "prepTime": 40,
+      "cookTime": 20,
+      "servings": 6
+    },
+    {
+      "title": "Hutspot",
+      "description": "Dutch mash of potatoes, carrots and onions, traditionally served with klapstuk braised beef.",
+      "ingredients": [
+        { "name": "floury potatoes, peeled", "quantity": 750, "unit": "g" },
+        { "name": "carrots, peeled and sliced", "quantity": 500, "unit": "g" },
+        { "name": "onions, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "beef brisket (klapstuk)", "quantity": 600, "unit": "g" },
+        { "name": "water", "quantity": 1, "unit": "l" },
+        { "name": "butter", "quantity": 50, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" },
+        { "name": "bay leaf", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Place the brisket in a large pot with water, salt and bay leaf, simmer covered for 2 hours.",
+        "Lift out the meat and keep warm; reserve the cooking liquid.",
+        "Cook the potatoes, carrots and onions together in some of the broth until tender, about 25 minutes.",
+        "Drain well, reserving liquid, and mash with butter and a splash of broth.",
+        "Season the mash with salt and pepper.",
+        "Slice the brisket and serve over the hutspot with a spoonful of the cooking liquid as gravy."
+      ],
+      "tags": ["potato", "carrot", "winter", "comfort"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 150,
+      "servings": 4
+    },
+    {
+      "title": "Boerenkool",
+      "description": "Dutch farmer's kale stamppot with smoked sausage, mashed into potatoes for a hearty winter meal.",
+      "ingredients": [
+        { "name": "floury potatoes, peeled", "quantity": 1, "unit": "kg" },
+        { "name": "curly kale, washed and chopped", "quantity": 750, "unit": "g" },
+        { "name": "smoked sausage (rookworst)", "quantity": 1, "unit": "pc" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "whole milk, warm", "quantity": 100, "unit": "ml" },
+        { "name": "bacon lardons", "quantity": 100, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" },
+        { "name": "nutmeg, ground", "quantity": 1, "unit": "pinch" }
+      ],
+      "steps": [
+        "Cover the potatoes with salted water and bring to a boil.",
+        "After ten minutes, place the rookworst on top to warm gently and add the kale to the pot.",
+        "Continue to boil until the potatoes are tender, about 15 more minutes.",
+        "Meanwhile, fry the bacon lardons until crisp.",
+        "Remove the sausage, drain the pot, and mash with butter, warm milk, salt, pepper and nutmeg.",
+        "Stir the bacon and its rendered fat through the mash.",
+        "Slice the sausage and serve on top with a generous well of gravy."
+      ],
+      "tags": ["kale", "potato", "winter", "stamppot"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Poffertjes",
+      "description": "Tiny fluffy Dutch pancakes made with yeasted batter and dusted with powdered sugar and butter.",
+      "ingredients": [
+        { "name": "flour", "quantity": 250, "unit": "g" },
+        { "name": "buckwheat flour", "quantity": 50, "unit": "g" },
+        { "name": "active dry yeast", "quantity": 1, "unit": "tsp" },
+        { "name": "warm milk", "quantity": 400, "unit": "ml" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "sugar", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "pinch" },
+        { "name": "butter, melted", "quantity": 30, "unit": "g" },
+        { "name": "butter for serving", "quantity": 50, "unit": "g" },
+        { "name": "powdered sugar", "quantity": 4, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Stir the yeast and sugar into the warm milk and let bloom for 10 minutes until foamy.",
+        "Whisk both flours and salt into the milk, then beat in the egg and melted butter to a smooth batter.",
+        "Cover the bowl and let the batter rise for one hour until bubbly.",
+        "Heat a poffertjes pan over medium heat and brush each indentation with butter.",
+        "Pour batter into each indentation and cook until bubbles form, then turn each poffertje with a skewer.",
+        "Cook the other side until golden, about another minute.",
+        "Pile onto a plate, top with a knob of butter and a heavy dusting of powdered sugar, and serve immediately."
+      ],
+      "tags": ["dessert", "breakfast", "pancake", "sweet"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 75,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Hagelslag",
+      "description": "Dutch breakfast staple of buttered bread topped with chocolate sprinkles, eaten by all ages.",
+      "ingredients": [
+        { "name": "white bread slices", "quantity": 4, "unit": "pc" },
+        { "name": "butter, softened", "quantity": 40, "unit": "g" },
+        { "name": "chocolate hagelslag (sprinkles)", "quantity": 8, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Take fresh slices of white bread.",
+        "Spread each slice generously and evenly with softened butter, going all the way to the edges.",
+        "Hold the slice over a plate and spoon a thick layer of chocolate hagelslag onto the buttered surface.",
+        "Press lightly so the sprinkles stick, and shake off any loose ones onto the plate.",
+        "Serve immediately as part of a Dutch breakfast or lunch."
+      ],
+      "tags": ["breakfast", "bread", "chocolate", "quick"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 0,
+      "servings": 2
+    },
+    {
+      "title": "Haring",
+      "description": "Dutch raw herring traditionally served with chopped onion and pickles, eaten by tail-first or on a soft bun.",
+      "ingredients": [
+        { "name": "fresh-salted herring fillets (Hollandse nieuwe)", "quantity": 4, "unit": "pc" },
+        { "name": "white onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "soft white bread rolls", "quantity": 4, "unit": "pc" },
+        { "name": "gherkins, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "lemon, in wedges", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Make sure the herring is properly cleaned, gutted and filleted by your fishmonger.",
+        "Rinse the fillets briefly in cold water and pat dry with paper towels.",
+        "Finely chop the white onion and slice the gherkins.",
+        "To eat the traditional way, hold the herring by the tail, dip in onion, and bite from below.",
+        "To make a broodje haring, split a soft bun, lay the herring inside, and top with onion and gherkin.",
+        "Serve with lemon wedges on the side."
+      ],
+      "tags": ["fish", "raw", "street food", "snack"],
+      "dietaryTags": ["pescatarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 0,
+      "servings": 4
+    },
+    {
+      "title": "Ontbijtkoek",
+      "description": "Dutch spiced rye breakfast cake, dense and aromatic with cinnamon, cloves and ginger, served sliced and buttered.",
+      "ingredients": [
+        { "name": "rye flour", "quantity": 250, "unit": "g" },
+        { "name": "flour", "quantity": 100, "unit": "g" },
+        { "name": "dark brown sugar", "quantity": 200, "unit": "g" },
+        { "name": "honey", "quantity": 100, "unit": "g" },
+        { "name": "whole milk", "quantity": 250, "unit": "ml" },
+        { "name": "baking soda", "quantity": 2, "unit": "tsp" },
+        { "name": "cinnamon, ground", "quantity": 2, "unit": "tsp" },
+        { "name": "cloves, ground", "quantity": 1, "unit": "tsp" },
+        { "name": "ginger, ground", "quantity": 1, "unit": "tsp" },
+        { "name": "nutmeg, ground", "quantity": 0.5, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "pinch" }
+      ],
+      "steps": [
+        "Preheat the oven to 160°C and line a loaf tin with parchment.",
+        "Warm the milk, sugar and honey gently until the sugar dissolves, then cool to lukewarm.",
+        "Whisk the rye flour, flour, baking soda, salt and all the spices in a large bowl.",
+        "Pour the milk mixture into the dry ingredients and stir to a smooth thick batter.",
+        "Pour the batter into the prepared tin and smooth the top.",
+        "Bake for 60 to 70 minutes until firm and a skewer comes out clean.",
+        "Cool fully before slicing thickly and serving with butter."
+      ],
+      "tags": ["breakfast", "cake", "spice", "rye"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 70,
+      "servings": 10
+    },
+    {
+      "title": "Speculaas",
+      "description": "Crisp Dutch spiced shortcrust biscuits stamped with windmill or saint figures, traditional around Sinterklaas.",
+      "ingredients": [
+        { "name": "flour", "quantity": 300, "unit": "g" },
+        { "name": "dark brown sugar", "quantity": 150, "unit": "g" },
+        { "name": "butter, cold and cubed", "quantity": 175, "unit": "g" },
+        { "name": "speculaas spice mix", "quantity": 2, "unit": "tbsp" },
+        { "name": "baking powder", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "pinch" },
+        { "name": "milk", "quantity": 2, "unit": "tbsp" },
+        { "name": "sliced almonds", "quantity": 50, "unit": "g" }
+      ],
+      "steps": [
+        "Combine the flour, sugar, spice mix, baking powder and salt in a bowl.",
+        "Rub in the cold butter until the mixture resembles fine crumbs.",
+        "Add the milk and bring the dough together by hand without overworking it.",
+        "Wrap in cling film and refrigerate for at least 2 hours, ideally overnight.",
+        "Preheat the oven to 175°C and line two trays with parchment.",
+        "Roll the dough to 5 mm thickness, press with a speculaas mould or cut into shapes, and press almonds on top if using.",
+        "Arrange on the trays and bake for 12 to 15 minutes until firm and deep golden.",
+        "Cool on a rack so the biscuits crisp up."
+      ],
+      "tags": ["biscuit", "spice", "christmas", "sinterklaas"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 130,
+      "cookTime": 15,
+      "servings": 24
+    }
+  ]
+}

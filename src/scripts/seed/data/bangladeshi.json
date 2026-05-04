@@ -1,0 +1,269 @@
+{
+  "cuisine": "Bangladeshi",
+  "names": {
+    "first": ["Rahim", "Karim", "Tanvir", "Shakib", "Mahmud", "Rafiq", "Sajid", "Arif", "Nusrat", "Tania", "Sumaiya", "Mehnaz", "Rumana", "Tasnim", "Farzana", "Nazia"],
+    "last": ["Rahman", "Hossain", "Islam", "Ahmed", "Chowdhury", "Khan", "Mia", "Begum", "Akter", "Haque", "Karim", "Talukder"]
+  },
+  "recipes": [
+    {
+      "title": "Bhuna Khichuri",
+      "description": "Rich rainy-day Bengali rice and lentil pilaf cooked dry with whole spices and ghee.",
+      "ingredients": [
+        {"name": "polao rice", "quantity": 300, "unit": "g"},
+        {"name": "moong dal", "quantity": 200, "unit": "g"},
+        {"name": "onions", "quantity": 2, "unit": "pc"},
+        {"name": "ginger paste", "quantity": 1, "unit": "tbsp"},
+        {"name": "garlic paste", "quantity": 1, "unit": "tbsp"},
+        {"name": "turmeric", "quantity": 1, "unit": "tsp"},
+        {"name": "cumin powder", "quantity": 1, "unit": "tsp"},
+        {"name": "ghee", "quantity": 4, "unit": "tbsp"},
+        {"name": "bay leaves", "quantity": 2, "unit": "pc"},
+        {"name": "green chili", "quantity": 4, "unit": "pc"}
+      ],
+      "steps": [
+        "Dry roast moong dal until lightly fragrant, then rinse with rice.",
+        "Heat ghee and bloom bay leaves and whole spices.",
+        "Add sliced onions and saute until lightly golden.",
+        "Stir in ginger and garlic pastes, turmeric, and cumin powder.",
+        "Add the rice and dal and toss to coat in the masala.",
+        "Pour in 1.2 liters of hot water with salt and slit chilies; bring to a boil.",
+        "Cover and cook on low for 18 minutes; rest 10 minutes before fluffing."
+      ],
+      "tags": ["bengali", "rice", "lentils", "comfort"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 35,
+      "servings": 5
+    },
+    {
+      "title": "Hilsa Curry",
+      "description": "Ilish fish simmered in mustard-onion gravy with green chilies, the celebrated Bengali national dish.",
+      "ingredients": [
+        {"name": "hilsa fish", "quantity": 800, "unit": "g"},
+        {"name": "mustard oil", "quantity": 5, "unit": "tbsp"},
+        {"name": "onion paste", "quantity": 4, "unit": "tbsp"},
+        {"name": "ginger paste", "quantity": 1, "unit": "tbsp"},
+        {"name": "garlic paste", "quantity": 1, "unit": "tbsp"},
+        {"name": "turmeric", "quantity": 1, "unit": "tsp"},
+        {"name": "red chili powder", "quantity": 1, "unit": "tsp"},
+        {"name": "yellow mustard paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "green chili", "quantity": 6, "unit": "pc"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Rub fish pieces with salt and turmeric and rest 10 minutes.",
+        "Heat mustard oil until smoking, then cool slightly.",
+        "Lightly fry the fish on both sides for 1 minute and remove.",
+        "In the same oil, saute onion paste, ginger, and garlic until oil separates.",
+        "Add turmeric, chili powder, and salt with a splash of water; cook into a thick masala.",
+        "Stir in mustard paste and 200 ml water and bring to a simmer.",
+        "Return fish to the pan, add slit green chilies, cover, and simmer 8 minutes."
+      ],
+      "tags": ["bengali", "fish", "mustard", "curry"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Beef Bhuna",
+      "description": "Slow-cooked, dark, intensely spiced beef curry that's reduced until the masala clings to every piece.",
+      "ingredients": [
+        {"name": "beef chuck", "quantity": 1, "unit": "kg"},
+        {"name": "onions", "quantity": 3, "unit": "pc"},
+        {"name": "ginger paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "garlic paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "yogurt", "quantity": 100, "unit": "g"},
+        {"name": "bhuna masala", "quantity": 3, "unit": "tbsp"},
+        {"name": "mustard oil", "quantity": 5, "unit": "tbsp"},
+        {"name": "cinnamon stick", "quantity": 1, "unit": "pc"},
+        {"name": "cardamom pods", "quantity": 4, "unit": "pc"},
+        {"name": "bay leaves", "quantity": 2, "unit": "pc"}
+      ],
+      "steps": [
+        "Heat mustard oil and bloom whole spices.",
+        "Add sliced onions and fry until deep golden brown.",
+        "Add ginger and garlic pastes and cook 1 minute.",
+        "Whisk yogurt with bhuna masala and salt, then stir into the pot over low heat.",
+        "Add beef and toss to coat; cover and cook 1 hour stirring occasionally.",
+        "Uncover and bhuna (stir-fry on medium heat) until all moisture evaporates and oil rises.",
+        "Add a splash of water if needed to keep the meat tender; finish with a sprinkle of garam masala."
+      ],
+      "tags": ["beef", "bengali", "curry", "slow cook"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Mishti Doi",
+      "description": "Bengali sweet yogurt set in earthen pots with caramelised sugar for a deep amber colour and silky texture.",
+      "ingredients": [
+        {"name": "whole milk", "quantity": 1, "unit": "l"},
+        {"name": "sugar", "quantity": 150, "unit": "g"},
+        {"name": "live yogurt", "quantity": 3, "unit": "tbsp"},
+        {"name": "evaporated milk", "quantity": 100, "unit": "ml"}
+      ],
+      "steps": [
+        "Reduce whole milk in a heavy pan to about two-thirds its volume, stirring often.",
+        "In a separate small pan, melt 100 g sugar to a deep caramel.",
+        "Carefully stir the caramel into the reduced milk; it will foam and dissolve.",
+        "Add remaining sugar and evaporated milk, then cool to lukewarm.",
+        "Whisk in the live yogurt as a starter culture.",
+        "Pour into earthen pots or ramekins.",
+        "Cover and rest in a warm spot for 8 hours to set, then refrigerate before serving."
+      ],
+      "tags": ["bengali", "dessert", "yogurt", "vegetarian"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 480,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Shorshe Ilish",
+      "description": "Hilsa fish steamed in mustard paste, mustard oil, and green chilies — a defining Bengali dish.",
+      "ingredients": [
+        {"name": "hilsa fish", "quantity": 600, "unit": "g"},
+        {"name": "yellow mustard seeds", "quantity": 3, "unit": "tbsp"},
+        {"name": "black mustard seeds", "quantity": 1, "unit": "tbsp"},
+        {"name": "green chili", "quantity": 6, "unit": "pc"},
+        {"name": "turmeric", "quantity": 1, "unit": "tsp"},
+        {"name": "mustard oil", "quantity": 4, "unit": "tbsp"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Soak both mustard seeds with 2 chilies and salt for 30 minutes.",
+        "Grind to a smooth paste with a little water.",
+        "Rub fish with turmeric and salt.",
+        "In a heatproof bowl, mix mustard paste with mustard oil, turmeric, and 100 ml water.",
+        "Add fish, coat well, and top with slit green chilies.",
+        "Cover and steam for 15 minutes until fish flakes and oil floats on top.",
+        "Drizzle a little raw mustard oil before serving with steamed rice."
+      ],
+      "tags": ["bengali", "fish", "steamed", "mustard"],
+      "difficulty": "medium",
+      "prepTime": 35,
+      "cookTime": 20,
+      "servings": 3
+    },
+    {
+      "title": "Patishapta Pitha",
+      "description": "Thin Bengali winter crepes filled with coconut, jaggery, and milk-based khoya.",
+      "ingredients": [
+        {"name": "rice flour", "quantity": 100, "unit": "g"},
+        {"name": "all purpose flour", "quantity": 100, "unit": "g"},
+        {"name": "semolina", "quantity": 50, "unit": "g"},
+        {"name": "milk", "quantity": 400, "unit": "ml"},
+        {"name": "grated coconut", "quantity": 200, "unit": "g"},
+        {"name": "date palm jaggery", "quantity": 150, "unit": "g"},
+        {"name": "khoya", "quantity": 100, "unit": "g"},
+        {"name": "ghee", "quantity": 3, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Whisk flours, semolina, milk, and a pinch of salt to a thin smooth batter; rest 1 hour.",
+        "Cook coconut and jaggery in a pan until thick and sticky for the kheer filling.",
+        "Stir in crumbled khoya and cook 2 more minutes; cool.",
+        "Heat a flat pan and brush with ghee.",
+        "Pour a thin layer of batter and tilt to spread into a small crepe.",
+        "Place a spoon of filling on one edge and roll up tightly while the crepe is still soft.",
+        "Repeat with remaining batter and serve warm or chilled."
+      ],
+      "tags": ["bengali", "dessert", "winter", "vegetarian"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 60,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Kacchi Biryani",
+      "description": "Dhaka-style biryani with raw marinated mutton layered under parboiled rice and slow cooked in dum.",
+      "ingredients": [
+        {"name": "basmati rice", "quantity": 500, "unit": "g"},
+        {"name": "mutton", "quantity": 1, "unit": "kg"},
+        {"name": "yogurt", "quantity": 250, "unit": "g"},
+        {"name": "fried onions", "quantity": 200, "unit": "g"},
+        {"name": "ginger garlic paste", "quantity": 3, "unit": "tbsp"},
+        {"name": "kacchi biryani masala", "quantity": 3, "unit": "tbsp"},
+        {"name": "ghee", "quantity": 100, "unit": "g"},
+        {"name": "potatoes", "quantity": 4, "unit": "pc"},
+        {"name": "milk", "quantity": 100, "unit": "ml"},
+        {"name": "saffron", "quantity": 1, "unit": "pinch"}
+      ],
+      "steps": [
+        "Marinate mutton in yogurt, fried onions, ginger garlic paste, biryani masala, and salt for 2 hours.",
+        "Soak rice 30 minutes and parboil with whole spices and salt to 60 percent done.",
+        "Layer marinated raw mutton in a heavy pot with chunks of fried potato.",
+        "Pour parboiled rice over the meat, drizzle ghee, milk, and saffron.",
+        "Seal the pot tightly with dough or foil and a tight lid.",
+        "Cook on high heat 10 minutes, then on the lowest heat for 1.5 hours.",
+        "Rest 15 minutes off heat, then serve with borhani."
+      ],
+      "tags": ["bengali", "biryani", "mutton", "dhaka"],
+      "difficulty": "hard",
+      "prepTime": 150,
+      "cookTime": 110,
+      "servings": 6
+    },
+    {
+      "title": "Aloo Bhorta",
+      "description": "Bengali mashed potato relish with mustard oil, fried red chilies, onions, and coriander.",
+      "ingredients": [
+        {"name": "potatoes", "quantity": 500, "unit": "g"},
+        {"name": "mustard oil", "quantity": 3, "unit": "tbsp"},
+        {"name": "dried red chilies", "quantity": 4, "unit": "pc"},
+        {"name": "small red onion", "quantity": 1, "unit": "pc"},
+        {"name": "garlic", "quantity": 4, "unit": "pc"},
+        {"name": "coriander leaves", "quantity": 1, "unit": "bunch"},
+        {"name": "salt", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Boil potatoes whole until fork tender, then peel.",
+        "Lightly toast dried chilies and garlic in a dry pan until fragrant.",
+        "In a mortar, pound chilies, garlic, and salt to a paste.",
+        "Mash potatoes coarsely with the spice paste.",
+        "Mix in finely chopped red onion and coriander leaves.",
+        "Drizzle mustard oil and adjust salt.",
+        "Serve at room temperature with steamed rice and dal."
+      ],
+      "tags": ["bengali", "vegan", "mash", "side"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Chingri Malai Curry",
+      "description": "Bengali prawn curry simmered in spiced coconut milk with cinnamon, cardamom, and bay leaves.",
+      "ingredients": [
+        {"name": "large prawns", "quantity": 500, "unit": "g"},
+        {"name": "coconut milk", "quantity": 400, "unit": "ml"},
+        {"name": "onion paste", "quantity": 3, "unit": "tbsp"},
+        {"name": "ginger paste", "quantity": 1, "unit": "tbsp"},
+        {"name": "turmeric", "quantity": 1, "unit": "tsp"},
+        {"name": "red chili powder", "quantity": 1, "unit": "tsp"},
+        {"name": "ghee", "quantity": 3, "unit": "tbsp"},
+        {"name": "cinnamon stick", "quantity": 1, "unit": "pc"},
+        {"name": "cardamom", "quantity": 4, "unit": "pc"},
+        {"name": "bay leaves", "quantity": 2, "unit": "pc"}
+      ],
+      "steps": [
+        "Marinate prawns with turmeric and salt for 10 minutes.",
+        "Heat ghee in a pan and lightly fry the prawns for 1 minute per side; remove.",
+        "Bloom whole spices in the same ghee.",
+        "Add onion paste and ginger and cook until oil separates.",
+        "Stir in chili powder and a splash of water to make a quick masala.",
+        "Pour in coconut milk and bring to a gentle simmer.",
+        "Return prawns to the pan and cook 5 minutes until just done; serve with rice."
+      ],
+      "tags": ["bengali", "prawns", "coconut", "curry"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 4
+    }
+  ]
+}

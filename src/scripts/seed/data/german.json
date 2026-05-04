@@ -1,0 +1,368 @@
+{
+  "cuisine": "German",
+  "names": {
+    "first": ["Lukas", "Maximilian", "Felix", "Jonas", "Leon", "Paul", "Hannes", "Matthias", "Anna", "Lena", "Sophie", "Marie", "Hannah", "Lara", "Greta", "Johanna"],
+    "last": ["Müller", "Schmidt", "Schneider", "Fischer", "Weber", "Meyer", "Wagner", "Becker", "Hoffmann", "Schäfer", "Koch", "Bauer"]
+  },
+  "recipes": [
+    {
+      "title": "Sauerbraten",
+      "description": "German pot roast of beef marinated in wine and vinegar, braised until tender with a tangy gravy.",
+      "ingredients": [
+        { "name": "beef chuck roast", "quantity": 1.5, "unit": "kg" },
+        { "name": "red wine", "quantity": 500, "unit": "ml" },
+        { "name": "red wine vinegar", "quantity": 250, "unit": "ml" },
+        { "name": "onions", "quantity": 2, "unit": "pc" },
+        { "name": "carrots", "quantity": 2, "unit": "pc" },
+        { "name": "bay leaves", "quantity": 3, "unit": "pc" },
+        { "name": "juniper berries", "quantity": 8, "unit": "pc" },
+        { "name": "whole cloves", "quantity": 4, "unit": "pc" },
+        { "name": "gingerbread cookies", "quantity": 60, "unit": "g" },
+        { "name": "butter", "quantity": 40, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" },
+        { "name": "sugar", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Combine wine, vinegar, sliced onions, carrots, bay, juniper and cloves.",
+        "Submerge beef in marinade and refrigerate 3-4 days, turning daily.",
+        "Remove beef, pat dry, strain marinade and reserve liquid and vegetables.",
+        "Brown beef in butter on all sides, then add reserved vegetables and cook briefly.",
+        "Pour in marinade, cover and braise at 160°C for 3 hours until very tender.",
+        "Remove beef, strain sauce, return to pan and crumble in gingerbread cookies; whisk until thick.",
+        "Stir in sugar, taste, adjust salt and slice beef to serve with the sauce."
+      ],
+      "tags": ["braise", "beef", "marinated", "german-classic"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 200,
+      "servings": 6
+    },
+    {
+      "title": "Bratwurst",
+      "description": "German pork sausages grilled or pan-fried, served with mustard and bread roll.",
+      "ingredients": [
+        { "name": "bratwurst sausages", "quantity": 8, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 1, "unit": "tbsp" },
+        { "name": "bread rolls", "quantity": 8, "unit": "pc" },
+        { "name": "German mustard", "quantity": 4, "unit": "tbsp" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "butter", "quantity": 20, "unit": "g" }
+      ],
+      "steps": [
+        "Heat oil in a heavy pan over medium heat.",
+        "Add bratwurst and cook 12-15 minutes, turning, until deeply browned and cooked through.",
+        "Slice onion and sauté in butter until caramelised.",
+        "Split bread rolls and warm briefly in the pan.",
+        "Place a bratwurst in each roll, top with caramelised onion and a smear of mustard."
+      ],
+      "tags": ["sausage", "grill", "street-food", "german-classic"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 15,
+      "servings": 8
+    },
+    {
+      "title": "Schnitzel",
+      "description": "Thin breaded pork or veal cutlet fried until shatteringly crisp and golden.",
+      "ingredients": [
+        { "name": "pork loin cutlets", "quantity": 4, "unit": "pc" },
+        { "name": "flour", "quantity": 100, "unit": "g" },
+        { "name": "eggs", "quantity": 2, "unit": "pc" },
+        { "name": "breadcrumbs", "quantity": 150, "unit": "g" },
+        { "name": "clarified butter", "quantity": 100, "unit": "g" },
+        { "name": "lemon", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Pound cutlets between cling film to 5mm thickness; season.",
+        "Set up three plates: flour, beaten eggs and breadcrumbs.",
+        "Dredge cutlet in flour, dip in egg, then coat in breadcrumbs without pressing.",
+        "Heat clarified butter in a wide pan to 170°C.",
+        "Fry schnitzel 2-3 minutes per side, swirling pan so it puffs.",
+        "Drain briefly on paper, sprinkle with salt and serve with lemon wedges."
+      ],
+      "tags": ["pork", "fried", "breaded", "german-classic"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Rouladen",
+      "description": "German beef rolls stuffed with bacon, onion, mustard and pickle, braised in rich gravy.",
+      "ingredients": [
+        { "name": "beef top round", "quantity": 8, "unit": "pc" },
+        { "name": "German mustard", "quantity": 4, "unit": "tbsp" },
+        { "name": "smoked bacon", "quantity": 200, "unit": "g" },
+        { "name": "onions", "quantity": 2, "unit": "pc" },
+        { "name": "dill pickles", "quantity": 4, "unit": "pc" },
+        { "name": "carrot", "quantity": 1, "unit": "pc" },
+        { "name": "celery stalk", "quantity": 1, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 1, "unit": "tbsp" },
+        { "name": "red wine", "quantity": 200, "unit": "ml" },
+        { "name": "beef stock", "quantity": 500, "unit": "ml" },
+        { "name": "butter", "quantity": 30, "unit": "g" },
+        { "name": "flour", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Pound beef thin and spread each with mustard.",
+        "Lay bacon strips, finely chopped onion and a pickle batter on each piece.",
+        "Roll tightly and secure with toothpicks or kitchen string.",
+        "Brown rolls in butter on all sides; remove.",
+        "Cook chopped onion, carrot and celery in the pan; add tomato paste and flour.",
+        "Add wine and stock; return rolls, cover and braise 90 minutes at low heat.",
+        "Remove rolls; strain sauce and reduce slightly.",
+        "Slice rolls and serve with the gravy and red cabbage."
+      ],
+      "tags": ["beef", "braise", "stuffed", "german-classic"],
+      "difficulty": "hard",
+      "prepTime": 40,
+      "cookTime": 100,
+      "servings": 4
+    },
+    {
+      "title": "Spätzle",
+      "description": "German egg noodles dropped fresh into boiling water, often crisped with butter or cheese.",
+      "ingredients": [
+        { "name": "flour", "quantity": 300, "unit": "g" },
+        { "name": "eggs", "quantity": 4, "unit": "pc" },
+        { "name": "milk", "quantity": 100, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "nutmeg", "quantity": 1, "unit": "pinch" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "fresh parsley", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Whisk flour, eggs, milk, salt and nutmeg to a smooth, sticky batter; rest 15 minutes.",
+        "Bring a large pot of salted water to a boil.",
+        "Press batter through a spätzle maker or coarse colander into the boiling water.",
+        "Cook 1-2 minutes until they float, then lift out with a slotted spoon.",
+        "Toss with melted butter and parsley before serving."
+      ],
+      "tags": ["pasta", "noodles", "side", "german-classic"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Kartoffelsalat",
+      "description": "German potato salad with a warm vinegar and broth dressing, mustard and bacon.",
+      "ingredients": [
+        { "name": "waxy potatoes", "quantity": 1, "unit": "kg" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "smoked bacon", "quantity": 100, "unit": "g" },
+        { "name": "beef broth", "quantity": 200, "unit": "ml" },
+        { "name": "white wine vinegar", "quantity": 4, "unit": "tbsp" },
+        { "name": "German mustard", "quantity": 1, "unit": "tbsp" },
+        { "name": "vegetable oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "fresh chives", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Boil potatoes in their skins until just tender; cool, peel and slice.",
+        "Render diced bacon until crisp; set aside.",
+        "Sauté finely chopped onion in the bacon fat until soft.",
+        "Pour in broth, vinegar and mustard; simmer 2 minutes.",
+        "Whisk in oil and pour warm dressing over the potatoes.",
+        "Toss gently, fold in bacon and chives, and serve warm or at room temperature."
+      ],
+      "tags": ["salad", "potato", "side", "german-classic"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 25,
+      "servings": 6
+    },
+    {
+      "title": "Currywurst",
+      "description": "Berlin street food: sliced bratwurst smothered in tangy curry-spiced ketchup sauce.",
+      "ingredients": [
+        { "name": "bratwurst sausages", "quantity": 6, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "tomato ketchup", "quantity": 250, "unit": "ml" },
+        { "name": "tomato paste", "quantity": 1, "unit": "tbsp" },
+        { "name": "curry powder", "quantity": 2, "unit": "tbsp" },
+        { "name": "smoked paprika", "quantity": 1, "unit": "tsp" },
+        { "name": "Worcestershire sauce", "quantity": 1, "unit": "tsp" },
+        { "name": "sugar", "quantity": 1, "unit": "tbsp" },
+        { "name": "water", "quantity": 100, "unit": "ml" }
+      ],
+      "steps": [
+        "Pan-fry bratwurst in oil until browned and cooked through.",
+        "In a separate pan, toast curry powder and paprika in a little oil 30 seconds.",
+        "Add ketchup, tomato paste, Worcestershire, sugar and water; simmer 5 minutes.",
+        "Slice sausages into rounds.",
+        "Pour sauce over the sausage and dust with extra curry powder.",
+        "Serve with chips or a bread roll."
+      ],
+      "tags": ["sausage", "street-food", "berlin"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Königsberger Klopse",
+      "description": "Tender German veal meatballs in a creamy lemon caper sauce.",
+      "ingredients": [
+        { "name": "ground veal", "quantity": 600, "unit": "g" },
+        { "name": "stale bread roll", "quantity": 1, "unit": "pc" },
+        { "name": "milk", "quantity": 100, "unit": "ml" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "anchovy fillets", "quantity": 2, "unit": "pc" },
+        { "name": "butter", "quantity": 50, "unit": "g" },
+        { "name": "flour", "quantity": 30, "unit": "g" },
+        { "name": "vegetable broth", "quantity": 700, "unit": "ml" },
+        { "name": "double cream", "quantity": 100, "unit": "ml" },
+        { "name": "capers", "quantity": 3, "unit": "tbsp" },
+        { "name": "lemon juice", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak bread in milk, then squeeze and tear into a bowl.",
+        "Combine bread, veal, finely chopped onion, egg, mashed anchovy and salt; knead.",
+        "Shape into walnut-sized balls.",
+        "Bring broth to a simmer and poach meatballs 12 minutes; remove with slotted spoon.",
+        "Melt butter, whisk in flour, then slowly whisk in poaching broth until smooth.",
+        "Stir in cream, capers and lemon juice; simmer 5 minutes.",
+        "Return meatballs and warm through; serve with boiled potatoes."
+      ],
+      "tags": ["meatballs", "veal", "creamy", "german-classic"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Maultaschen",
+      "description": "Swabian filled pasta pockets with pork, spinach and onion, served in broth or pan-fried.",
+      "ingredients": [
+        { "name": "flour", "quantity": 400, "unit": "g" },
+        { "name": "eggs", "quantity": 4, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "ground pork", "quantity": 300, "unit": "g" },
+        { "name": "spinach", "quantity": 300, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "stale bread roll", "quantity": 1, "unit": "pc" },
+        { "name": "milk", "quantity": 80, "unit": "ml" },
+        { "name": "extra eggs for filling", "quantity": 1, "unit": "pc" },
+        { "name": "nutmeg", "quantity": 1, "unit": "pinch" },
+        { "name": "vegetable broth", "quantity": 1.5, "unit": "l" }
+      ],
+      "steps": [
+        "Knead flour, eggs and salt into a smooth pasta dough; rest 30 minutes.",
+        "Wilt spinach, cool and squeeze dry; chop finely.",
+        "Sauté chopped onion until soft; cool.",
+        "Soak bread in milk, squeeze, and combine with pork, spinach, onion, egg and nutmeg.",
+        "Roll dough thin into long strips.",
+        "Pipe filling along one half, fold dough over, press to seal and cut into 6cm squares.",
+        "Simmer in broth 8 minutes until they float and pasta is cooked.",
+        "Serve in broth or fry slices with onion in butter."
+      ],
+      "tags": ["pasta", "stuffed", "swabian", "comfort-food"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 25,
+      "servings": 6
+    },
+    {
+      "title": "Frikadellen",
+      "description": "German pan-fried meat patties of beef and pork seasoned with onion, mustard and herbs.",
+      "ingredients": [
+        { "name": "ground beef", "quantity": 400, "unit": "g" },
+        { "name": "ground pork", "quantity": 300, "unit": "g" },
+        { "name": "stale bread roll", "quantity": 1, "unit": "pc" },
+        { "name": "milk", "quantity": 100, "unit": "ml" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "German mustard", "quantity": 1, "unit": "tbsp" },
+        { "name": "fresh parsley", "quantity": 2, "unit": "tbsp" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak bread in milk, then squeeze and tear into a bowl.",
+        "Sauté finely chopped onion until soft; cool.",
+        "Combine meats, bread, onion, egg, mustard, parsley, salt and pepper; knead well.",
+        "Shape into 8 thick patties.",
+        "Heat oil over medium heat and fry frikadellen 5 minutes per side until cooked through.",
+        "Serve with potato salad or bread and mustard."
+      ],
+      "tags": ["meat-patty", "pan-fry", "comfort-food", "german-classic"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Eintopf",
+      "description": "Hearty German one-pot stew of meat, beans, potatoes and vegetables.",
+      "ingredients": [
+        { "name": "pork shoulder", "quantity": 600, "unit": "g" },
+        { "name": "smoked sausage", "quantity": 200, "unit": "g" },
+        { "name": "white beans", "quantity": 200, "unit": "g" },
+        { "name": "potatoes", "quantity": 500, "unit": "g" },
+        { "name": "carrots", "quantity": 3, "unit": "pc" },
+        { "name": "onions", "quantity": 2, "unit": "pc" },
+        { "name": "leek", "quantity": 1, "unit": "pc" },
+        { "name": "savoy cabbage", "quantity": 0.25, "unit": "pc" },
+        { "name": "vegetable broth", "quantity": 1.5, "unit": "l" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak beans overnight; drain.",
+        "Cube pork and brown in oil; remove from pot.",
+        "Sauté chopped onions and leek until soft.",
+        "Return pork, add beans, broth, bay and a little salt; simmer 60 minutes.",
+        "Add diced potatoes, carrots and shredded cabbage; cook 25 minutes.",
+        "Slice sausage and add for the last 10 minutes; adjust seasoning."
+      ],
+      "tags": ["stew", "one-pot", "winter", "comfort-food"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 105,
+      "servings": 6
+    },
+    {
+      "title": "Apfelstrudel",
+      "description": "Austrian-German pastry of paper-thin dough wrapped around spiced apples, raisins and breadcrumbs.",
+      "ingredients": [
+        { "name": "flour", "quantity": 250, "unit": "g" },
+        { "name": "warm water", "quantity": 125, "unit": "ml" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "pinch" },
+        { "name": "tart apples", "quantity": 1, "unit": "kg" },
+        { "name": "sugar", "quantity": 100, "unit": "g" },
+        { "name": "raisins", "quantity": 80, "unit": "g" },
+        { "name": "ground cinnamon", "quantity": 1, "unit": "tsp" },
+        { "name": "breadcrumbs", "quantity": 80, "unit": "g" },
+        { "name": "butter", "quantity": 100, "unit": "g" },
+        { "name": "lemon juice", "quantity": 1, "unit": "tbsp" },
+        { "name": "icing sugar", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Knead flour, water, oil and salt into a smooth, elastic dough; rest 60 minutes covered.",
+        "Toast breadcrumbs in 30g butter until golden; cool.",
+        "Peel and thinly slice apples; toss with sugar, cinnamon, raisins and lemon juice.",
+        "On a floured cloth, stretch dough until paper-thin and translucent.",
+        "Brush with melted butter, scatter breadcrumbs, then spread apple mixture along one edge.",
+        "Lift the cloth to roll the strudel tightly; transfer to a baking tray seam-down.",
+        "Brush with butter and bake at 190°C for 35 minutes until deep golden.",
+        "Cool slightly and dust with icing sugar before slicing."
+      ],
+      "tags": ["dessert", "pastry", "apple", "austrian-german"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 90,
+      "cookTime": 35,
+      "servings": 8
+    }
+  ]
+}

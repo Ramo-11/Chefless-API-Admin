@@ -1,0 +1,390 @@
+{
+  "cuisine": "Canadian",
+  "names": {
+    "first": ["Liam", "Owen", "Ethan", "Mason", "Jacob", "Noah", "Olivia", "Charlotte", "Emma", "Sophie", "Hannah", "Madeline"],
+    "last": ["Tremblay", "Gagnon", "Roy", "MacDonald", "Smith", "Anderson", "Lefebvre", "Bouchard", "Campbell", "Lavoie"]
+  },
+  "recipes": [
+    {
+      "title": "Poutine",
+      "description": "Quebec's iconic dish: hot crispy fries topped with squeaky cheese curds and smothered in rich brown gravy.",
+      "ingredients": [
+        { "name": "russet potatoes", "quantity": 1.2, "unit": "kg" },
+        { "name": "vegetable oil for frying", "quantity": 1.5, "unit": "l" },
+        { "name": "fresh cheese curds", "quantity": 300, "unit": "g" },
+        { "name": "butter", "quantity": 30, "unit": "g" },
+        { "name": "all-purpose flour", "quantity": 30, "unit": "g" },
+        { "name": "beef broth", "quantity": 400, "unit": "ml" },
+        { "name": "chicken broth", "quantity": 200, "unit": "ml" },
+        { "name": "Worcestershire sauce", "quantity": 1, "unit": "tsp" },
+        { "name": "white vinegar", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Cut potatoes into 1 cm thick fries. Soak in cold water 30 minutes, then drain and pat thoroughly dry.",
+        "Heat oil to 150°C (300°F) and blanch fries for 5 minutes until tender but pale. Drain and rest.",
+        "For the gravy: melt butter, whisk in flour, and cook 2 minutes to make a roux.",
+        "Slowly whisk in both broths along with Worcestershire and vinegar. Simmer 8 minutes until thickened. Season with pepper.",
+        "Increase oil to 190°C (375°F) and fry potatoes again for 3–4 minutes until deeply golden and crisp.",
+        "Drain fries, salt immediately, and pile into deep bowls or plates.",
+        "Scatter cheese curds over hot fries, then ladle hot gravy over to melt the curds slightly. Serve immediately."
+      ],
+      "tags": ["Quebec", "fries", "comfort food", "iconic", "main course"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Tourtière",
+      "description": "Quebec's traditional spiced meat pie of pork and beef encased in flaky pastry — a Réveillon Christmas Eve staple.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 400, "unit": "g" },
+        { "name": "cold lard or butter", "quantity": 200, "unit": "g" },
+        { "name": "ice water", "quantity": 100, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "ground pork", "quantity": 500, "unit": "g" },
+        { "name": "ground beef", "quantity": 250, "unit": "g" },
+        { "name": "onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "potato, finely diced", "quantity": 1, "unit": "pc" },
+        { "name": "ground cinnamon", "quantity": 0.5, "unit": "tsp" },
+        { "name": "ground cloves", "quantity": 0.25, "unit": "tsp" },
+        { "name": "ground nutmeg", "quantity": 0.5, "unit": "tsp" },
+        { "name": "dried savory", "quantity": 1, "unit": "tsp" },
+        { "name": "chicken broth", "quantity": 200, "unit": "ml" },
+        { "name": "egg, beaten (for wash)", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Make pastry: cut cold fat into flour and salt until pea-sized, mix in ice water until just clumping. Divide in two, flatten, chill 1 hour.",
+        "Sauté onion in a heavy pan until soft, add garlic, then both meats and brown.",
+        "Stir in cinnamon, cloves, nutmeg, savory, salt, pepper, and broth.",
+        "Add diced potato and simmer 25 minutes uncovered until liquid evaporates and the mixture is thick. Cool completely.",
+        "Roll one disc of pastry to line a 23 cm pie pan. Fill with cooled meat mixture.",
+        "Roll second disc and lay on top, sealing and crimping edges. Cut steam vents and brush with beaten egg.",
+        "Bake at 200°C (400°F) for 20 minutes, then reduce to 175°C (350°F) and bake 30 more minutes until deeply golden. Rest 15 minutes before serving."
+      ],
+      "tags": ["Quebec", "meat pie", "festive", "Christmas", "main course"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 75,
+      "servings": 8
+    },
+    {
+      "title": "Butter Tart",
+      "description": "Canadian buttery, gooey-centered pastry tarts of brown sugar, butter, and egg in a flaky shell — runny or firm-fillinged, but always sweet.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 250, "unit": "g" },
+        { "name": "cold butter, cubed", "quantity": 175, "unit": "g" },
+        { "name": "ice water", "quantity": 60, "unit": "ml" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" },
+        { "name": "brown sugar", "quantity": 200, "unit": "g" },
+        { "name": "corn syrup", "quantity": 100, "unit": "ml" },
+        { "name": "butter, melted", "quantity": 60, "unit": "g" },
+        { "name": "eggs, beaten", "quantity": 2, "unit": "pc" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "white vinegar", "quantity": 1, "unit": "tsp" },
+        { "name": "raisins or pecans (optional)", "quantity": 60, "unit": "g" }
+      ],
+      "steps": [
+        "Cut cold butter into flour and salt until pea-sized, then add ice water just until dough comes together. Chill 1 hour.",
+        "Roll dough on a floured surface to 4 mm thick. Cut 12 cm rounds and press into a 12-cup muffin tin.",
+        "Whisk brown sugar, corn syrup, melted butter, eggs, vanilla, and vinegar until smooth.",
+        "If using, scatter raisins or pecans into the bottom of each tart shell.",
+        "Pour filling into shells, filling no more than two-thirds full to prevent overflow.",
+        "Bake at 200°C (400°F) for 15 minutes, then reduce to 175°C (350°F) and bake 8 more minutes until edges are golden but the center still wobbles.",
+        "Cool in the tin 10 minutes — the filling will set as it cools — then transfer to a rack."
+      ],
+      "tags": ["dessert", "tart", "iconic", "sweet", "festive"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 25,
+      "servings": 12
+    },
+    {
+      "title": "Nanaimo Bar",
+      "description": "British Columbia's no-bake three-layer dessert: chocolate-coconut crumb base, custard buttercream middle, glossy chocolate top.",
+      "ingredients": [
+        { "name": "graham cracker crumbs", "quantity": 175, "unit": "g" },
+        { "name": "shredded coconut", "quantity": 100, "unit": "g" },
+        { "name": "chopped almonds", "quantity": 50, "unit": "g" },
+        { "name": "butter (for base)", "quantity": 125, "unit": "g" },
+        { "name": "sugar", "quantity": 50, "unit": "g" },
+        { "name": "cocoa powder", "quantity": 30, "unit": "g" },
+        { "name": "egg, beaten", "quantity": 1, "unit": "pc" },
+        { "name": "butter, softened (middle)", "quantity": 125, "unit": "g" },
+        { "name": "powdered sugar", "quantity": 250, "unit": "g" },
+        { "name": "custard powder", "quantity": 2, "unit": "tbsp" },
+        { "name": "milk", "quantity": 3, "unit": "tbsp" },
+        { "name": "dark chocolate", "quantity": 175, "unit": "g" },
+        { "name": "butter (for top)", "quantity": 30, "unit": "g" }
+      ],
+      "steps": [
+        "Line a 20×20 cm pan with parchment paper.",
+        "For the base: melt butter with sugar and cocoa over a double boiler. Whisk in beaten egg and cook 2 minutes until thickened.",
+        "Off heat, stir in graham crumbs, coconut, and almonds. Press firmly into the pan and chill 30 minutes.",
+        "For the middle: cream softened butter, then beat in powdered sugar, custard powder, and milk until smooth and fluffy.",
+        "Spread custard layer evenly over the base. Chill 30 minutes until firm.",
+        "For the top: gently melt dark chocolate with butter over low heat until smooth. Cool slightly.",
+        "Pour over the chilled middle layer, smooth, and chill 1 hour. Cut with a hot knife into squares."
+      ],
+      "tags": ["dessert", "no-bake", "British Columbia", "iconic", "sweet"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 45,
+      "cookTime": 5,
+      "servings": 16
+    },
+    {
+      "title": "Montreal Smoked Meat",
+      "description": "Hand-cut, peppery, brined and smoked beef brisket, piled on rye with mustard — Montreal's defining sandwich.",
+      "ingredients": [
+        { "name": "beef brisket", "quantity": 2, "unit": "kg" },
+        { "name": "kosher salt", "quantity": 80, "unit": "g" },
+        { "name": "pink curing salt (#1)", "quantity": 1, "unit": "tsp" },
+        { "name": "brown sugar", "quantity": 30, "unit": "g" },
+        { "name": "coarse black pepper", "quantity": 4, "unit": "tbsp" },
+        { "name": "coriander seeds, crushed", "quantity": 2, "unit": "tbsp" },
+        { "name": "mustard seeds", "quantity": 2, "unit": "tbsp" },
+        { "name": "garlic powder", "quantity": 1, "unit": "tbsp" },
+        { "name": "onion powder", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground bay leaves", "quantity": 1, "unit": "tsp" },
+        { "name": "rye bread slices", "quantity": 8, "unit": "pc" },
+        { "name": "yellow mustard", "quantity": 4, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Combine kosher salt, curing salt, sugar, and half the spices for the cure. Rub all over brisket.",
+        "Place brisket in a sealed bag and refrigerate 7 days, flipping daily.",
+        "Rinse brisket thoroughly under cold water and pat dry. Press the remaining black pepper, coriander, and mustard seeds into the surface.",
+        "Smoke at 110°C (225°F) over hardwood for 4 hours until a deep bark forms.",
+        "Transfer to a steamer or a covered rack over simmering water for 3 hours until extremely tender (internal 95°C).",
+        "Rest 30 minutes, then carve hand-sliced (not machine) across the grain.",
+        "Pile generously on rye bread slathered with yellow mustard. Serve with pickles."
+      ],
+      "tags": ["Montreal", "smoked meat", "sandwich", "iconic", "main course"],
+      "dietaryTags": ["dairy-free"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 420,
+      "servings": 8
+    },
+    {
+      "title": "Bannock",
+      "description": "Indigenous-inspired Canadian quick bread that can be pan-fried, baked, or cooked over a campfire — simple, hearty, and adaptable.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 400, "unit": "g" },
+        { "name": "baking powder", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "sugar", "quantity": 1, "unit": "tbsp" },
+        { "name": "butter, melted", "quantity": 60, "unit": "g" },
+        { "name": "warm water or milk", "quantity": 250, "unit": "ml" },
+        { "name": "vegetable oil for frying (optional)", "quantity": 250, "unit": "ml" }
+      ],
+      "steps": [
+        "Whisk flour, baking powder, salt, and sugar in a large bowl.",
+        "Stir in melted butter, then gradually add warm water or milk, mixing into a soft, slightly sticky dough.",
+        "Knead lightly on a floured surface for 30 seconds — do not over-knead.",
+        "For pan bread: shape into a 2 cm thick disc, place in a greased cast-iron skillet, and bake at 200°C (400°F) for 25 minutes until golden and hollow-sounding when tapped.",
+        "For fry bread: divide dough into 8 portions and flatten each into rounds about 1 cm thick.",
+        "Heat oil to 175°C (350°F) and fry rounds for 2 minutes per side until puffed and deeply golden.",
+        "Drain fry bread on paper towels. Serve warm with butter, jam, soup, or savory toppings."
+      ],
+      "tags": ["bread", "Indigenous", "campfire", "side dish", "traditional"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 20,
+      "servings": 8
+    },
+    {
+      "title": "Pea Soup",
+      "description": "French Canadian habitant pea soup of dried yellow split peas slow-cooked with salt pork, onions, and herbs — a winter mainstay.",
+      "ingredients": [
+        { "name": "yellow split peas", "quantity": 500, "unit": "g" },
+        { "name": "salt pork or smoked ham hock", "quantity": 250, "unit": "g" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "carrot, diced", "quantity": 2, "unit": "pc" },
+        { "name": "celery stalk, diced", "quantity": 2, "unit": "pc" },
+        { "name": "garlic cloves, minced", "quantity": 3, "unit": "pc" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "dried savory", "quantity": 1, "unit": "tsp" },
+        { "name": "dried thyme", "quantity": 1, "unit": "tsp" },
+        { "name": "water or broth", "quantity": 2.5, "unit": "l" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "parsley, chopped", "quantity": 0.5, "unit": "bunch" }
+      ],
+      "steps": [
+        "Rinse split peas thoroughly under cold water and drain. No need to soak.",
+        "In a large pot, place split peas, salt pork or ham hock, water, bay leaves, savory, and thyme. Bring to a boil and skim foam.",
+        "Reduce heat to low, cover partially, and simmer 90 minutes, stirring occasionally to prevent sticking.",
+        "Add onion, carrot, celery, and garlic; continue simmering 30 minutes more until peas are completely broken down and creamy.",
+        "Remove the salt pork or ham hock, shred the meat off, and return it to the pot.",
+        "Discard bay leaves, season generously with black pepper and salt to taste.",
+        "Stir in chopped parsley and serve hot with crusty bread."
+      ],
+      "tags": ["soup", "Quebec", "comfort food", "winter", "main course"],
+      "dietaryTags": ["dairy-free", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 130,
+      "servings": 6
+    },
+    {
+      "title": "BeaverTails",
+      "description": "Canadian fried whole-wheat dough pastries shaped like a beaver's tail, dusted with cinnamon sugar — Ottawa's Rideau Canal classic.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 400, "unit": "g" },
+        { "name": "whole wheat flour", "quantity": 100, "unit": "g" },
+        { "name": "warm milk", "quantity": 250, "unit": "ml" },
+        { "name": "sugar", "quantity": 50, "unit": "g" },
+        { "name": "active dry yeast", "quantity": 7, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "butter, melted", "quantity": 60, "unit": "g" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil for frying", "quantity": 1, "unit": "l" },
+        { "name": "cinnamon", "quantity": 1, "unit": "tbsp" },
+        { "name": "sugar (for topping)", "quantity": 100, "unit": "g" }
+      ],
+      "steps": [
+        "Dissolve yeast and sugar in warm milk; let foam 10 minutes.",
+        "Add egg, melted butter, vanilla, salt, and both flours. Mix into a soft dough.",
+        "Knead 8 minutes until smooth and elastic. Cover and let rise 1 hour until doubled.",
+        "Punch down and divide into 8 portions. Roll each into a long oval about 5 mm thick — like a beaver's tail.",
+        "Heat oil to 180°C (350°F).",
+        "Fry each tail for 1 minute per side until puffed and deeply golden. Drain briefly on paper towels.",
+        "Mix cinnamon and sugar in a shallow dish. Toss hot tails in cinnamon sugar to coat. Serve immediately."
+      ],
+      "tags": ["dessert", "fried", "pastry", "sweet", "iconic"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 90,
+      "cookTime": 20,
+      "servings": 8
+    },
+    {
+      "title": "Donair",
+      "description": "Halifax's signature pita sandwich of spiced spit-roasted beef, tomato, onion, and a sweet condensed-milk garlic sauce.",
+      "ingredients": [
+        { "name": "ground beef (lean)", "quantity": 1, "unit": "kg" },
+        { "name": "garlic powder", "quantity": 1, "unit": "tbsp" },
+        { "name": "onion powder", "quantity": 1, "unit": "tbsp" },
+        { "name": "dried oregano", "quantity": 1, "unit": "tbsp" },
+        { "name": "sweet paprika", "quantity": 2, "unit": "tsp" },
+        { "name": "ground black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 2, "unit": "tsp" },
+        { "name": "cayenne pepper", "quantity": 0.5, "unit": "tsp" },
+        { "name": "sweetened condensed milk", "quantity": 200, "unit": "ml" },
+        { "name": "white vinegar", "quantity": 60, "unit": "ml" },
+        { "name": "garlic powder (sauce)", "quantity": 1, "unit": "tsp" },
+        { "name": "pita bread", "quantity": 4, "unit": "pc" },
+        { "name": "tomato, diced", "quantity": 2, "unit": "pc" },
+        { "name": "onion, finely chopped", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Knead ground beef with garlic powder, onion powder, oregano, paprika, pepper, salt, and cayenne for 5 minutes until tacky and smooth.",
+        "Press tightly into a loaf pan, eliminating air pockets. Bake at 175°C (350°F) for 1 hour until firm.",
+        "Cool slightly, then slice the loaf as thinly as possible.",
+        "Crisp the sliced beef in a hot dry skillet for 2 minutes per side until edges are caramelized.",
+        "For the sauce: whisk condensed milk with vinegar and garlic powder until thickened — it sets in seconds.",
+        "Warm pita breads briefly. Pile crispy donair meat on each pita.",
+        "Top with tomato, onion, and a generous drizzle of donair sauce. Wrap and eat."
+      ],
+      "tags": ["Halifax", "sandwich", "Maritime", "main course", "iconic"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 70,
+      "servings": 4
+    },
+    {
+      "title": "Peameal Bacon",
+      "description": "Ontario's brined boneless pork loin rolled in cornmeal, sliced thick, and pan-fried — the heart of Toronto's beloved peameal sandwich.",
+      "ingredients": [
+        { "name": "boneless pork loin", "quantity": 1, "unit": "kg" },
+        { "name": "kosher salt", "quantity": 80, "unit": "g" },
+        { "name": "brown sugar", "quantity": 50, "unit": "g" },
+        { "name": "pink curing salt (#1)", "quantity": 1, "unit": "tsp" },
+        { "name": "garlic cloves, smashed", "quantity": 4, "unit": "pc" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "black peppercorns", "quantity": 1, "unit": "tbsp" },
+        { "name": "water", "quantity": 1.5, "unit": "l" },
+        { "name": "yellow cornmeal", "quantity": 150, "unit": "g" },
+        { "name": "butter", "quantity": 30, "unit": "g" }
+      ],
+      "steps": [
+        "Combine water, kosher salt, brown sugar, curing salt, garlic, bay leaves, and peppercorns in a pot. Bring to a simmer to dissolve, then cool completely.",
+        "Submerge pork loin fully in the cold brine and refrigerate 4 days.",
+        "Remove pork, rinse very well, and pat dry.",
+        "Spread cornmeal on a tray and roll the pork loin firmly to coat all sides in a thick crust.",
+        "Wrap tightly and refrigerate 24 hours so the cornmeal adheres.",
+        "Slice into 1 cm rounds and pan-fry in butter over medium heat 3 minutes per side until golden and just cooked through.",
+        "Serve in soft kaiser rolls with mustard for the classic peameal bacon sandwich."
+      ],
+      "tags": ["pork", "Ontario", "Toronto", "breakfast", "iconic"],
+      "dietaryTags": ["dairy-free"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 15,
+      "servings": 8
+    },
+    {
+      "title": "Saskatoon Berry Pie",
+      "description": "Prairie Canadian pie filled with sweet-tart Saskatoon berries (similar to blueberry, with an almond note) in a flaky double crust.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 400, "unit": "g" },
+        { "name": "cold butter, cubed", "quantity": 250, "unit": "g" },
+        { "name": "ice water", "quantity": 100, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "Saskatoon berries (or substitute blueberries)", "quantity": 750, "unit": "g" },
+        { "name": "sugar", "quantity": 150, "unit": "g" },
+        { "name": "lemon juice", "quantity": 2, "unit": "tbsp" },
+        { "name": "cornstarch", "quantity": 3, "unit": "tbsp" },
+        { "name": "ground cinnamon", "quantity": 0.5, "unit": "tsp" },
+        { "name": "butter, cubed (filling)", "quantity": 30, "unit": "g" },
+        { "name": "egg, beaten (for wash)", "quantity": 1, "unit": "pc" },
+        { "name": "coarse sugar (for top)", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Cut cold butter into flour and salt until pea-sized. Add ice water and form into two flat discs. Chill 1 hour.",
+        "In a saucepan, combine 250 g of berries with 100 ml water and bring to a simmer for 5 minutes — this releases their flavor.",
+        "Whisk cornstarch with 3 tbsp cold water and stir into the simmering berries until thickened. Cool.",
+        "Toss the cooked berry mixture with the remaining fresh berries, sugar, lemon juice, and cinnamon.",
+        "Roll one disc to line a 23 cm pie pan. Pour in the filling and dot with cubed butter.",
+        "Roll the second disc and lay over the top. Crimp edges, cut steam vents, brush with egg, and sprinkle with coarse sugar.",
+        "Bake at 220°C (425°F) for 15 minutes, then reduce to 180°C (350°F) and bake 40 more minutes until crust is golden and filling bubbles. Cool 2 hours before slicing."
+      ],
+      "tags": ["dessert", "pie", "prairie", "berries", "traditional"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 45,
+      "cookTime": 60,
+      "servings": 8
+    },
+    {
+      "title": "Maple Taffy",
+      "description": "Quebec sugar-shack treat: hot maple syrup poured over fresh snow, set briefly, then twirled onto a stick into chewy maple candy.",
+      "ingredients": [
+        { "name": "pure maple syrup (Grade A dark)", "quantity": 500, "unit": "ml" },
+        { "name": "clean fresh snow or shaved ice", "quantity": 4, "unit": "l" },
+        { "name": "wooden popsicle sticks", "quantity": 8, "unit": "pc" }
+      ],
+      "steps": [
+        "Pack a long, shallow tray with clean fresh snow or finely shaved ice. Press it firm and flat. Keep outdoors or in the freezer.",
+        "Pour maple syrup into a heavy saucepan with a candy thermometer.",
+        "Bring to a boil over medium heat, watching carefully — maple syrup foams aggressively.",
+        "Cook without stirring until the temperature reaches 112–115°C (234–239°F), the soft-ball stage.",
+        "Remove from heat and let foam subside for 30 seconds.",
+        "Pour the hot syrup in long ribbons over the cold snow. Wait 15–30 seconds for it to firm slightly but stay pliable.",
+        "Press a wooden stick into one end of each ribbon and twirl it up to gather the taffy. Eat immediately."
+      ],
+      "tags": ["dessert", "Quebec", "maple", "sugar shack", "iconic"],
+      "dietaryTags": ["vegan", "gluten-free", "dairy-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 8
+    }
+  ]
+}

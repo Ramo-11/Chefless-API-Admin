@@ -1,0 +1,397 @@
+{
+  "cuisine": "South African",
+  "names": {
+    "first": ["Sipho", "Thandiwe", "Pieter", "Nomvula", "Johan", "Lerato", "Anika", "Bongani", "Marlene", "Zandile", "Hendrik", "Nontobeko"],
+    "last": ["Van der Merwe", "Dlamini", "Naidoo", "Botha", "Mokoena", "Pretorius", "Khumalo", "Du Toit", "Nkosi", "Steyn", "Zulu", "Mahlangu"]
+  },
+  "recipes": [
+    {
+      "title": "Bobotie",
+      "description": "Cape Malay baked dish of spiced minced meat topped with savory egg custard and bay leaves.",
+      "ingredients": [
+        { "name": "ground beef", "quantity": 800, "unit": "g" },
+        { "name": "onions, chopped", "quantity": 2, "unit": "pc" },
+        { "name": "white bread slices, soaked in milk", "quantity": 2, "unit": "pc" },
+        { "name": "milk", "quantity": 250, "unit": "ml" },
+        { "name": "curry powder", "quantity": 2, "unit": "tbsp" },
+        { "name": "turmeric", "quantity": 0.5, "unit": "tsp" },
+        { "name": "apricot jam", "quantity": 2, "unit": "tbsp" },
+        { "name": "raisins", "quantity": 50, "unit": "g" },
+        { "name": "white vinegar", "quantity": 1, "unit": "tbsp" },
+        { "name": "eggs", "quantity": 3, "unit": "pc" },
+        { "name": "bay leaves", "quantity": 4, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Sauté the onions in oil until golden, about 8 minutes.",
+        "Add curry powder and turmeric, toast for 1 minute.",
+        "Add the ground beef and brown for 6 minutes, breaking it up.",
+        "Squeeze excess milk from the soaked bread, crumble bread into the meat.",
+        "Stir in apricot jam, raisins, vinegar, and salt. Simmer for 10 minutes.",
+        "Spoon mixture into a greased baking dish, smoothing the top.",
+        "Whisk eggs with the reserved milk and pour over the meat.",
+        "Tuck bay leaves on top and bake at 180°C for 35 minutes until set and golden.",
+        "Rest 5 minutes and serve with yellow rice."
+      ],
+      "tags": ["baked", "cape-malay", "spiced", "comfort"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 50,
+      "servings": 6
+    },
+    {
+      "title": "Boerewors",
+      "description": "South African farmer's coiled sausage of beef, pork, coriander, and clove, grilled over coals.",
+      "ingredients": [
+        { "name": "beef chuck, coarsely minced", "quantity": 1, "unit": "kg" },
+        { "name": "pork shoulder, coarsely minced", "quantity": 500, "unit": "g" },
+        { "name": "pork back fat", "quantity": 250, "unit": "g" },
+        { "name": "coriander seeds, toasted and ground", "quantity": 3, "unit": "tbsp" },
+        { "name": "ground cloves", "quantity": 0.5, "unit": "tsp" },
+        { "name": "ground nutmeg", "quantity": 0.5, "unit": "tsp" },
+        { "name": "ground allspice", "quantity": 0.5, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "brown vinegar", "quantity": 60, "unit": "ml" },
+        { "name": "salt", "quantity": 2, "unit": "tsp" },
+        { "name": "natural sausage casings", "quantity": 3, "unit": "m" }
+      ],
+      "steps": [
+        "Mix all spices, salt, and vinegar in a small bowl.",
+        "Combine beef, pork, and back fat in a chilled bowl.",
+        "Pour over the spice mix and knead briefly until just combined; do not overwork.",
+        "Cover and refrigerate for 4 hours to mature the flavors.",
+        "Rinse casings thoroughly and load onto a sausage stuffer.",
+        "Stuff into the casings, coiling into a single long spiral, twisting gently.",
+        "Prick lightly with a pin to release trapped air.",
+        "Grill over medium coals for 8-10 minutes per side until deep brown and just cooked through.",
+        "Rest for 3 minutes and serve with pap and chakalaka."
+      ],
+      "tags": ["sausage", "grilled", "braai", "iconic"],
+      "difficulty": "hard",
+      "prepTime": 270,
+      "cookTime": 20,
+      "servings": 6
+    },
+    {
+      "title": "Bunny Chow",
+      "description": "Durban Indian-South African dish of a hollowed bread loaf filled with spicy bean or mutton curry.",
+      "ingredients": [
+        { "name": "lamb or mutton, cubed", "quantity": 700, "unit": "g" },
+        { "name": "onion, chopped", "quantity": 2, "unit": "pc" },
+        { "name": "tomatoes, chopped", "quantity": 3, "unit": "pc" },
+        { "name": "potatoes, cubed", "quantity": 2, "unit": "pc" },
+        { "name": "garlic-ginger paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "Durban masala or hot curry powder", "quantity": 3, "unit": "tbsp" },
+        { "name": "turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "cinnamon stick", "quantity": 1, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "white bread loaf, unsliced", "quantity": 1, "unit": "pc" },
+        { "name": "fresh coriander", "quantity": 1, "unit": "bunch" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Heat oil in a heavy pot and brown the lamb in batches for 6 minutes total.",
+        "Add the onion and cinnamon stick, cook 6 minutes.",
+        "Stir in garlic-ginger paste, masala, and turmeric. Toast 2 minutes.",
+        "Add tomatoes and salt; cook 8 minutes until pulpy.",
+        "Return meat to the pot with 500 ml water. Simmer covered 60 minutes.",
+        "Add potatoes and cook 25 more minutes until meat is tender and gravy is thick.",
+        "Cut the bread loaf into quarters and hollow out each quarter.",
+        "Spoon hot curry into the hollow, place the cut bread cube on top.",
+        "Garnish with coriander and serve with carrot sambals."
+      ],
+      "tags": ["street-food", "curry", "durban", "indian-fusion"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 100,
+      "servings": 4
+    },
+    {
+      "title": "Chakalaka",
+      "description": "South African spicy vegetable relish of onions, peppers, carrots, and beans simmered with curry.",
+      "ingredients": [
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 3, "unit": "pc" },
+        { "name": "ginger, grated", "quantity": 1, "unit": "tbsp" },
+        { "name": "carrots, grated", "quantity": 3, "unit": "pc" },
+        { "name": "red and green bell peppers, diced", "quantity": 2, "unit": "pc" },
+        { "name": "tomatoes, chopped", "quantity": 3, "unit": "pc" },
+        { "name": "curry powder", "quantity": 2, "unit": "tbsp" },
+        { "name": "thyme", "quantity": 1, "unit": "tsp" },
+        { "name": "baked beans in tomato sauce", "quantity": 400, "unit": "g" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "chili flakes", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Heat oil in a wide pan and sauté onion for 4 minutes.",
+        "Add garlic, ginger, and chili flakes. Cook for 1 minute.",
+        "Stir in curry powder and thyme; toast for 1 minute.",
+        "Add carrots and bell peppers, cook for 5 minutes.",
+        "Add tomatoes and salt, simmer for 10 minutes until pulpy.",
+        "Stir in baked beans and warm through for 3 minutes.",
+        "Adjust salt and serve as a relish alongside pap, boerewors, or grilled meat."
+      ],
+      "tags": ["relish", "vegetable", "side", "spicy"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 6
+    },
+    {
+      "title": "Pap",
+      "description": "South African stiff maize porridge, the everyday staple eaten with stews, relish, or boerewors.",
+      "ingredients": [
+        { "name": "white maize meal", "quantity": 500, "unit": "g" },
+        { "name": "water", "quantity": 1.2, "unit": "l" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Bring water and salt to a rolling boil in a heavy pot.",
+        "Pour the maize meal in a slow stream into the boiling water without stirring.",
+        "Let it sit for 1 minute to form a mound, then poke a hole in the middle.",
+        "Cover and reduce heat to low; cook for 10 minutes.",
+        "Use a wooden spoon to vigorously mix the pap until smooth and thick.",
+        "Cover again and cook for another 25 minutes, stirring occasionally.",
+        "Add a splash of water if too stiff, and stir until lump-free.",
+        "Serve hot in a mound alongside chakalaka, stew, or grilled meat."
+      ],
+      "tags": ["staple", "porridge", "side", "everyday"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 40,
+      "servings": 6
+    },
+    {
+      "title": "Biltong",
+      "description": "South African air-dried, spiced cured beef strips, leaner and tangier than jerky.",
+      "ingredients": [
+        { "name": "beef silverside, sliced into 2cm strips", "quantity": 1.5, "unit": "kg" },
+        { "name": "coarse salt", "quantity": 100, "unit": "g" },
+        { "name": "brown sugar", "quantity": 50, "unit": "g" },
+        { "name": "coriander seeds, toasted and crushed", "quantity": 4, "unit": "tbsp" },
+        { "name": "black pepper, coarse", "quantity": 2, "unit": "tbsp" },
+        { "name": "brown vinegar", "quantity": 200, "unit": "ml" },
+        { "name": "Worcestershire sauce", "quantity": 3, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Trim sinew from beef and slice along the grain into long 2cm-thick strips.",
+        "Mix salt, sugar, half the coriander, and pepper.",
+        "Layer the beef in a tray, dusting each layer with the cure.",
+        "Splash with brown vinegar and Worcestershire. Cover and refrigerate 4 hours.",
+        "Drain and pat the strips dry. Dust with the remaining coriander seeds.",
+        "Hook the strips and hang in a biltong dryer or breezy dry place at 18-22°C.",
+        "Dry for 4-7 days depending on desired moisture; should be firm but still slightly pliable.",
+        "Slice thinly across the grain and serve as a snack."
+      ],
+      "tags": ["cured", "snack", "beef", "shelf-stable"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 7200,
+      "servings": 12
+    },
+    {
+      "title": "Potjiekos",
+      "description": "Layered South African stew of meat, vegetables, and broth slow-cooked in a three-legged cast iron pot over coals.",
+      "ingredients": [
+        { "name": "lamb shoulder, cubed", "quantity": 1, "unit": "kg" },
+        { "name": "onions, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "carrots, chunked", "quantity": 4, "unit": "pc" },
+        { "name": "potatoes, halved", "quantity": 4, "unit": "pc" },
+        { "name": "green beans, trimmed", "quantity": 200, "unit": "g" },
+        { "name": "butternut squash, cubed", "quantity": 400, "unit": "g" },
+        { "name": "tomatoes, chopped", "quantity": 2, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 4, "unit": "pc" },
+        { "name": "red wine", "quantity": 250, "unit": "ml" },
+        { "name": "beef stock", "quantity": 250, "unit": "ml" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Heat oil in a cast iron pot over medium coals and brown the lamb for 8 minutes.",
+        "Remove the meat. Sauté onions and garlic for 4 minutes.",
+        "Return meat to the pot. Add wine and stock, season with salt, pepper, and bay leaves.",
+        "Layer carrots, then potatoes, then butternut, then green beans on top — do not stir.",
+        "Top with the chopped tomatoes.",
+        "Cover and let cook gently over low coals for 2.5 hours, never stirring.",
+        "Check liquid once and add a splash of stock if running dry.",
+        "When vegetables are tender, gently mix the layers together.",
+        "Serve from the pot with rice or pap."
+      ],
+      "tags": ["stew", "slow-cooked", "outdoor", "iconic"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 150,
+      "servings": 6
+    },
+    {
+      "title": "Melktert",
+      "description": "Cape Dutch milk tart with creamy cinnamon-dusted custard in a pastry shell.",
+      "ingredients": [
+        { "name": "shortcrust pastry", "quantity": 350, "unit": "g" },
+        { "name": "milk", "quantity": 1, "unit": "l" },
+        { "name": "cinnamon stick", "quantity": 1, "unit": "pc" },
+        { "name": "butter", "quantity": 30, "unit": "g" },
+        { "name": "sugar", "quantity": 150, "unit": "g" },
+        { "name": "cake flour", "quantity": 30, "unit": "g" },
+        { "name": "cornflour", "quantity": 30, "unit": "g" },
+        { "name": "eggs", "quantity": 3, "unit": "pc" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cinnamon for dusting", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 0.25, "unit": "tsp" }
+      ],
+      "steps": [
+        "Roll the pastry and line a 24 cm tart tin. Blind-bake at 180°C for 15 minutes until golden.",
+        "Heat milk with the cinnamon stick and butter until just steaming. Discard cinnamon stick.",
+        "Whisk eggs with sugar, cake flour, cornflour, vanilla, and salt until smooth.",
+        "Pour a third of the warm milk into the egg mixture, whisking quickly.",
+        "Return the tempered mix to the saucepan and whisk over medium heat until thickened, about 5 minutes.",
+        "Pour the hot custard into the prebaked shell and smooth the top.",
+        "Dust generously with ground cinnamon.",
+        "Cool to room temperature, then refrigerate at least 2 hours before slicing."
+      ],
+      "tags": ["dessert", "cape-dutch", "custard", "tart"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 30,
+      "servings": 8
+    },
+    {
+      "title": "Sosaties",
+      "description": "Cape Malay marinated lamb skewers with apricots and onions, grilled over coals in curried sauce.",
+      "ingredients": [
+        { "name": "boneless lamb leg, cubed", "quantity": 1, "unit": "kg" },
+        { "name": "dried apricots", "quantity": 150, "unit": "g" },
+        { "name": "red onions, in wedges", "quantity": 2, "unit": "pc" },
+        { "name": "onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 4, "unit": "pc" },
+        { "name": "curry powder", "quantity": 2, "unit": "tbsp" },
+        { "name": "turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "apricot jam", "quantity": 3, "unit": "tbsp" },
+        { "name": "white wine vinegar", "quantity": 100, "unit": "ml" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "bay leaves", "quantity": 4, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak the dried apricots in warm water for 20 minutes, then drain.",
+        "Sauté chopped onion and garlic in oil for 4 minutes. Add curry powder and turmeric, toast 1 minute.",
+        "Add apricot jam, vinegar, salt, and bay leaves. Simmer 5 minutes; cool.",
+        "Combine lamb cubes with the marinade and refrigerate at least 8 hours.",
+        "Thread the lamb onto skewers alternating with onion wedges and apricots.",
+        "Reserve the marinade and warm it gently in a saucepan to use as a sauce.",
+        "Grill skewers over medium coals for 4 minutes per side, basting with marinade.",
+        "Rest 3 minutes and serve with yellow rice."
+      ],
+      "tags": ["grilled", "skewers", "cape-malay", "braai"],
+      "difficulty": "medium",
+      "prepTime": 510,
+      "cookTime": 15,
+      "servings": 6
+    },
+    {
+      "title": "Koeksisters",
+      "description": "South African plaited deep-fried dough drenched in cold spiced syrup, crisp on the outside and syrup-soaked within.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 500, "unit": "g" },
+        { "name": "baking powder", "quantity": 2, "unit": "tsp" },
+        { "name": "butter", "quantity": 50, "unit": "g" },
+        { "name": "milk", "quantity": 200, "unit": "ml" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" },
+        { "name": "vegetable oil for frying", "quantity": 1, "unit": "l" },
+        { "name": "sugar", "quantity": 1, "unit": "kg" },
+        { "name": "water", "quantity": 500, "unit": "ml" },
+        { "name": "cinnamon stick", "quantity": 1, "unit": "pc" },
+        { "name": "lemon juice", "quantity": 2, "unit": "tbsp" },
+        { "name": "fresh ginger, sliced", "quantity": 20, "unit": "g" }
+      ],
+      "steps": [
+        "Make the syrup: combine sugar, water, cinnamon, ginger, and lemon. Boil 5 minutes, then chill thoroughly in fridge.",
+        "Sift flour, baking powder, and salt. Rub in butter until crumbly.",
+        "Whisk milk and egg, add to flour and knead a smooth dough.",
+        "Rest dough covered for 1 hour.",
+        "Roll dough 8 mm thick. Cut into 8x2 cm rectangles, then slit each into three strips, plait, and pinch ends.",
+        "Heat oil to 175°C. Fry plaits for 3-4 minutes until golden.",
+        "Immediately drop hot koeksisters into the chilled syrup for 30 seconds, turning once.",
+        "Lift onto a rack to drain. Serve while crisp."
+      ],
+      "tags": ["dessert", "fried", "syrup-soaked", "afrikaner"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 90,
+      "cookTime": 30,
+      "servings": 8
+    },
+    {
+      "title": "Malva Pudding",
+      "description": "Cape Dutch warm sticky sponge pudding made with apricot jam and drenched in hot cream sauce.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 200, "unit": "g" },
+        { "name": "sugar", "quantity": 200, "unit": "g" },
+        { "name": "eggs", "quantity": 2, "unit": "pc" },
+        { "name": "apricot jam", "quantity": 2, "unit": "tbsp" },
+        { "name": "milk", "quantity": 250, "unit": "ml" },
+        { "name": "butter", "quantity": 30, "unit": "g" },
+        { "name": "white vinegar", "quantity": 1, "unit": "tbsp" },
+        { "name": "baking soda", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 0.25, "unit": "tsp" },
+        { "name": "cream", "quantity": 250, "unit": "ml" },
+        { "name": "sugar for sauce", "quantity": 100, "unit": "g" },
+        { "name": "butter for sauce", "quantity": 100, "unit": "g" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "hot water for sauce", "quantity": 100, "unit": "ml" }
+      ],
+      "steps": [
+        "Preheat oven to 180°C and grease a square baking dish.",
+        "Whisk eggs and sugar until pale and thick.",
+        "Beat in jam, melted butter, milk, and vinegar.",
+        "Sift flour, baking soda, and salt over the wet mix and fold in.",
+        "Pour into the dish and bake 35-40 minutes until set and springy.",
+        "Make the sauce: heat cream, sugar, butter, hot water, and vanilla until just simmering.",
+        "Pierce holes in the hot pudding and slowly pour over the warm sauce.",
+        "Let it absorb 10 minutes, then serve warm with custard or ice cream."
+      ],
+      "tags": ["dessert", "pudding", "warm", "comfort"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 45,
+      "servings": 6
+    },
+    {
+      "title": "Vetkoek",
+      "description": "South African deep-fried bread rolls, crisp outside and pillowy inside, often filled with mince curry.",
+      "ingredients": [
+        { "name": "all-purpose flour", "quantity": 500, "unit": "g" },
+        { "name": "instant yeast", "quantity": 2, "unit": "tsp" },
+        { "name": "sugar", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "warm water", "quantity": 300, "unit": "ml" },
+        { "name": "vegetable oil for frying", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "Whisk flour, yeast, sugar, and salt in a large bowl.",
+        "Add warm water and stir into a soft, slightly sticky dough.",
+        "Knead 8 minutes until smooth and elastic.",
+        "Cover and let rise in a warm place for 60-75 minutes until doubled.",
+        "Punch down and divide into 12 portions; shape each into a round.",
+        "Rest the rounds covered for 15 minutes.",
+        "Heat oil to 165°C and fry vetkoek in batches for 4 minutes per side until deep golden and cooked through.",
+        "Drain on paper towels. Slit open and stuff with curried mince or jam."
+      ],
+      "tags": ["bread", "fried", "street-food", "snack"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 90,
+      "cookTime": 25,
+      "servings": 6
+    }
+  ]
+}

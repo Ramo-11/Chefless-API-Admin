@@ -1,0 +1,715 @@
+{
+  "cuisine": "Chinese",
+  "names": {
+    "first": ["Wei", "Li", "Mei", "Jian", "Xiao", "Hui", "Feng", "Lin", "Yan", "Bo", "Qiang", "Ling"],
+    "last": ["Wang", "Li", "Zhang", "Liu", "Chen", "Yang", "Huang", "Zhao", "Wu", "Zhou"]
+  },
+  "recipes": [
+    {
+      "title": "Mapo Tofu",
+      "description": "Sichuan classic of soft tofu in a fiery sauce of doubanjiang and Sichuan peppercorn with minced beef.",
+      "ingredients": [
+        {"name": "Silken tofu", "quantity": 500, "unit": "g"},
+        {"name": "Ground beef", "quantity": 200, "unit": "g"},
+        {"name": "Doubanjiang", "quantity": 2, "unit": "tbsp"},
+        {"name": "Douchi", "quantity": 1, "unit": "tbsp"},
+        {"name": "Sichuan peppercorns", "quantity": 1, "unit": "tsp"},
+        {"name": "Garlic", "quantity": 4, "unit": "pc"},
+        {"name": "Ginger", "quantity": 15, "unit": "g"},
+        {"name": "Scallions", "quantity": 3, "unit": "pc"},
+        {"name": "Chicken stock", "quantity": 250, "unit": "ml"},
+        {"name": "Cornstarch", "quantity": 1, "unit": "tbsp"},
+        {"name": "Vegetable oil", "quantity": 3, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Cube tofu and blanch in salted water for 2 minutes, then drain.",
+        "Toast Sichuan peppercorns and grind to powder.",
+        "Heat oil in a wok and brown beef until crisp.",
+        "Add doubanjiang, douchi, garlic and ginger and stir until oil turns red.",
+        "Pour in stock and add tofu, simmering gently for 5 minutes.",
+        "Thicken with cornstarch slurry, finish with peppercorn powder and scallions."
+      ],
+      "tags": ["Sichuan", "spicy", "tofu"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Kung Pao Chicken",
+      "description": "Stir-fried chicken with peanuts, dried chillies and Sichuan peppercorns in a sweet-tart sauce.",
+      "ingredients": [
+        {"name": "Boneless chicken thighs", "quantity": 500, "unit": "g"},
+        {"name": "Dried red chillies", "quantity": 10, "unit": "pc"},
+        {"name": "Sichuan peppercorns", "quantity": 1, "unit": "tsp"},
+        {"name": "Roasted peanuts", "quantity": 80, "unit": "g"},
+        {"name": "Garlic", "quantity": 4, "unit": "pc"},
+        {"name": "Ginger", "quantity": 15, "unit": "g"},
+        {"name": "Scallions", "quantity": 3, "unit": "pc"},
+        {"name": "Soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Chinkiang vinegar", "quantity": 2, "unit": "tbsp"},
+        {"name": "Sugar", "quantity": 1, "unit": "tbsp"},
+        {"name": "Cornstarch", "quantity": 2, "unit": "tsp"},
+        {"name": "Vegetable oil", "quantity": 3, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Cube chicken and toss with 1 teaspoon cornstarch and 1 tablespoon soy sauce.",
+        "Mix remaining soy sauce, vinegar, sugar and cornstarch with 3 tablespoons water for the sauce.",
+        "Heat oil in a wok over high heat and stir-fry chicken until just cooked.",
+        "Push chicken aside, add chillies and peppercorns and toast 30 seconds.",
+        "Add garlic, ginger and scallion whites and stir 30 seconds.",
+        "Pour in sauce, toss until thickened, then fold in peanuts and scallion greens."
+      ],
+      "tags": ["Sichuan", "stir-fry", "spicy"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Xiaolongbao",
+      "description": "Shanghai soup dumplings with pork filling and a burst of rich aspic broth inside.",
+      "ingredients": [
+        {"name": "All-purpose flour", "quantity": 300, "unit": "g"},
+        {"name": "Hot water", "quantity": 160, "unit": "ml"},
+        {"name": "Ground pork", "quantity": 300, "unit": "g"},
+        {"name": "Pork skin aspic", "quantity": 250, "unit": "g"},
+        {"name": "Soy sauce", "quantity": 1, "unit": "tbsp"},
+        {"name": "Shaoxing wine", "quantity": 1, "unit": "tbsp"},
+        {"name": "Ginger", "quantity": 15, "unit": "g"},
+        {"name": "Sesame oil", "quantity": 1, "unit": "tsp"},
+        {"name": "Sugar", "quantity": 1, "unit": "tsp"},
+        {"name": "Black vinegar", "quantity": 60, "unit": "ml"},
+        {"name": "Ginger", "quantity": 20, "unit": "g"}
+      ],
+      "steps": [
+        "Mix flour with hot water to form a dough, knead 10 minutes and rest 30 minutes.",
+        "Combine pork with chopped aspic, soy sauce, wine, grated ginger, sesame oil and sugar.",
+        "Roll dough into a log, cut into small pieces and roll into thin discs with thicker centres.",
+        "Place a tablespoon of filling on each disc and pleat 18 times around the edge.",
+        "Steam over high heat for 8 minutes on parchment in a bamboo basket.",
+        "Serve with black vinegar and julienned ginger."
+      ],
+      "tags": ["Shanghai", "dumplings", "dim sum"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Peking Duck",
+      "description": "Roast duck with shatteringly crisp skin, served with thin pancakes, scallions and hoisin.",
+      "ingredients": [
+        {"name": "Whole duck", "quantity": 1, "unit": "pc"},
+        {"name": "Maltose syrup", "quantity": 3, "unit": "tbsp"},
+        {"name": "Vinegar", "quantity": 2, "unit": "tbsp"},
+        {"name": "Five spice powder", "quantity": 1, "unit": "tsp"},
+        {"name": "Salt", "quantity": 1, "unit": "tbsp"},
+        {"name": "Mandarin pancakes", "quantity": 24, "unit": "pc"},
+        {"name": "Scallions", "quantity": 6, "unit": "pc"},
+        {"name": "Cucumber", "quantity": 1, "unit": "pc"},
+        {"name": "Hoisin sauce", "quantity": 100, "unit": "ml"}
+      ],
+      "steps": [
+        "Loosen the skin of the duck from the meat by inflating with a straw.",
+        "Pour boiling water over the duck to tighten skin, repeat three times.",
+        "Brush duck with maltose mixed with vinegar, hang to dry overnight in a cool place.",
+        "Rub cavity with five spice and salt, then roast at 200C for 90 minutes.",
+        "Carve crisp skin and meat into thin slices.",
+        "Serve in pancakes with scallion strips, cucumber sticks and hoisin sauce."
+      ],
+      "tags": ["roast", "duck", "Beijing"],
+      "difficulty": "hard",
+      "prepTime": 1440,
+      "cookTime": 100,
+      "servings": 6
+    },
+    {
+      "title": "Char Siu",
+      "description": "Cantonese sweet and savoury barbecued pork with a glossy red glaze.",
+      "ingredients": [
+        {"name": "Pork shoulder", "quantity": 1, "unit": "kg"},
+        {"name": "Hoisin sauce", "quantity": 60, "unit": "ml"},
+        {"name": "Soy sauce", "quantity": 30, "unit": "ml"},
+        {"name": "Honey", "quantity": 60, "unit": "ml"},
+        {"name": "Shaoxing wine", "quantity": 30, "unit": "ml"},
+        {"name": "Five spice powder", "quantity": 1, "unit": "tsp"},
+        {"name": "Garlic", "quantity": 4, "unit": "pc"},
+        {"name": "Sugar", "quantity": 30, "unit": "g"},
+        {"name": "Maltose syrup", "quantity": 2, "unit": "tbsp"},
+        {"name": "Red yeast powder", "quantity": 0.5, "unit": "tsp"}
+      ],
+      "steps": [
+        "Slice pork into long strips about 4 cm thick.",
+        "Mix hoisin, soy sauce, half the honey, wine, five spice, crushed garlic, sugar and red yeast powder.",
+        "Marinate pork strips for at least 8 hours in the fridge.",
+        "Roast on a rack at 200C for 25 minutes, basting with marinade twice.",
+        "Brush with maltose mixed with remaining honey and roast 5 minutes more until lacquered.",
+        "Rest 10 minutes and slice."
+      ],
+      "tags": ["Cantonese", "barbecue", "pork"],
+      "difficulty": "medium",
+      "prepTime": 480,
+      "cookTime": 35,
+      "servings": 6
+    },
+    {
+      "title": "Wonton Soup",
+      "description": "Cantonese pork and shrimp wontons in a clear, fragrant chicken broth.",
+      "ingredients": [
+        {"name": "Wonton wrappers", "quantity": 30, "unit": "pc"},
+        {"name": "Ground pork", "quantity": 200, "unit": "g"},
+        {"name": "Shrimp", "quantity": 150, "unit": "g"},
+        {"name": "Soy sauce", "quantity": 1, "unit": "tbsp"},
+        {"name": "Sesame oil", "quantity": 1, "unit": "tsp"},
+        {"name": "White pepper", "quantity": 0.5, "unit": "tsp"},
+        {"name": "Ginger", "quantity": 10, "unit": "g"},
+        {"name": "Scallions", "quantity": 3, "unit": "pc"},
+        {"name": "Chicken stock", "quantity": 1.5, "unit": "l"},
+        {"name": "Bok choy", "quantity": 4, "unit": "pc"}
+      ],
+      "steps": [
+        "Chop shrimp roughly and combine with pork, soy sauce, sesame oil, white pepper, grated ginger and scallions.",
+        "Place a teaspoon of filling on each wrapper, wet edges and fold into bonnets.",
+        "Bring chicken stock to a boil and season lightly.",
+        "Drop wontons into a separate pot of boiling water and cook 4 minutes until they float.",
+        "Blanch bok choy in stock for 1 minute.",
+        "Divide wontons and bok choy into bowls and ladle hot stock over them."
+      ],
+      "tags": ["soup", "dumplings", "Cantonese"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Hot and Sour Soup",
+      "description": "Tangy and peppery soup with tofu, mushrooms, bamboo shoots and egg ribbons.",
+      "ingredients": [
+        {"name": "Chicken stock", "quantity": 1.5, "unit": "l"},
+        {"name": "Firm tofu", "quantity": 200, "unit": "g"},
+        {"name": "Wood ear mushrooms", "quantity": 20, "unit": "g"},
+        {"name": "Shiitake mushrooms", "quantity": 6, "unit": "pc"},
+        {"name": "Bamboo shoots", "quantity": 100, "unit": "g"},
+        {"name": "Eggs", "quantity": 2, "unit": "pc"},
+        {"name": "Soy sauce", "quantity": 3, "unit": "tbsp"},
+        {"name": "Chinkiang vinegar", "quantity": 4, "unit": "tbsp"},
+        {"name": "White pepper", "quantity": 1, "unit": "tsp"},
+        {"name": "Cornstarch", "quantity": 3, "unit": "tbsp"},
+        {"name": "Sesame oil", "quantity": 1, "unit": "tsp"},
+        {"name": "Scallions", "quantity": 2, "unit": "pc"}
+      ],
+      "steps": [
+        "Soak wood ears 20 minutes, then slice with the shiitake, bamboo shoots and tofu into julienne.",
+        "Bring stock to a boil, add mushrooms, bamboo shoots and tofu and simmer 5 minutes.",
+        "Stir in soy sauce, vinegar and white pepper.",
+        "Mix cornstarch with 4 tablespoons water and stir into soup until thickened.",
+        "Pour in beaten eggs in a slow stream while stirring to form ribbons.",
+        "Finish with sesame oil and scallions."
+      ],
+      "tags": ["soup", "spicy", "tangy"],
+      "difficulty": "easy",
+      "prepTime": 25,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Yangzhou Fried Rice",
+      "description": "Classic egg fried rice with char siu, shrimp, peas and carrots.",
+      "ingredients": [
+        {"name": "Cooked rice", "quantity": 4, "unit": "cup"},
+        {"name": "Eggs", "quantity": 3, "unit": "pc"},
+        {"name": "Char siu", "quantity": 200, "unit": "g"},
+        {"name": "Shrimp", "quantity": 150, "unit": "g"},
+        {"name": "Frozen peas", "quantity": 100, "unit": "g"},
+        {"name": "Carrot", "quantity": 1, "unit": "pc"},
+        {"name": "Scallions", "quantity": 3, "unit": "pc"},
+        {"name": "Soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Vegetable oil", "quantity": 3, "unit": "tbsp"},
+        {"name": "Salt", "quantity": 1, "unit": "tsp"},
+        {"name": "White pepper", "quantity": 0.5, "unit": "tsp"}
+      ],
+      "steps": [
+        "Use day-old chilled rice, breaking up clumps with your hands.",
+        "Heat 1 tablespoon oil in a wok and quickly cook beaten eggs into curds, then remove.",
+        "Add remaining oil, stir-fry shrimp and diced char siu briefly.",
+        "Add diced carrot and peas and stir-fry for 1 minute.",
+        "Add rice and toss for 3 minutes over high heat.",
+        "Return eggs, drizzle soy sauce, salt and white pepper, and finish with scallions."
+      ],
+      "tags": ["rice", "stir-fry", "comfort food"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Sweet and Sour Pork",
+      "description": "Crispy battered pork tossed in a glossy sweet and sour sauce with bell peppers and pineapple.",
+      "ingredients": [
+        {"name": "Pork loin", "quantity": 500, "unit": "g"},
+        {"name": "Cornstarch", "quantity": 100, "unit": "g"},
+        {"name": "Egg", "quantity": 1, "unit": "pc"},
+        {"name": "Bell pepper", "quantity": 1, "unit": "pc"},
+        {"name": "Onion", "quantity": 1, "unit": "pc"},
+        {"name": "Pineapple chunks", "quantity": 200, "unit": "g"},
+        {"name": "Ketchup", "quantity": 4, "unit": "tbsp"},
+        {"name": "Rice vinegar", "quantity": 4, "unit": "tbsp"},
+        {"name": "Sugar", "quantity": 4, "unit": "tbsp"},
+        {"name": "Soy sauce", "quantity": 1, "unit": "tbsp"},
+        {"name": "Vegetable oil", "quantity": 1, "unit": "l"}
+      ],
+      "steps": [
+        "Cube pork and toss with beaten egg and a pinch of salt.",
+        "Coat each piece thickly in cornstarch.",
+        "Heat oil to 175C and fry pork in batches until golden, then drain.",
+        "Reheat oil to 190C and double-fry pork for 30 seconds for extra crisp.",
+        "In a wok, simmer ketchup, vinegar, sugar and soy sauce until syrupy.",
+        "Toss in peppers, onion and pineapple, then return pork and coat with sauce."
+      ],
+      "tags": ["fried", "pork", "Cantonese"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Mooncake",
+      "description": "Traditional Mid-Autumn pastry with golden syrup crust and lotus seed paste filling.",
+      "ingredients": [
+        {"name": "Cake flour", "quantity": 200, "unit": "g"},
+        {"name": "Golden syrup", "quantity": 140, "unit": "g"},
+        {"name": "Peanut oil", "quantity": 50, "unit": "ml"},
+        {"name": "Alkaline water", "quantity": 1, "unit": "tsp"},
+        {"name": "Lotus seed paste", "quantity": 600, "unit": "g"},
+        {"name": "Salted egg yolks", "quantity": 8, "unit": "pc"},
+        {"name": "Egg yolk", "quantity": 1, "unit": "pc"}
+      ],
+      "steps": [
+        "Whisk golden syrup, peanut oil and alkaline water, then sift in flour to form a soft dough. Rest 1 hour.",
+        "Wrap each salted egg yolk in 60 g of lotus paste to form a ball.",
+        "Divide dough into 30 g pieces and flatten each into a disc.",
+        "Wrap dough around a paste ball, sealing completely.",
+        "Press into a mooncake mould to imprint a pattern.",
+        "Bake at 180C for 5 minutes, brush with egg wash, then bake 12 minutes more until golden."
+      ],
+      "tags": ["dessert", "festival", "pastry"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 90,
+      "cookTime": 20,
+      "servings": 8
+    },
+    {
+      "title": "Zongzi",
+      "description": "Sticky rice dumplings wrapped in bamboo leaves, traditionally eaten at Dragon Boat Festival.",
+      "ingredients": [
+        {"name": "Glutinous rice", "quantity": 600, "unit": "g"},
+        {"name": "Pork belly", "quantity": 300, "unit": "g"},
+        {"name": "Salted egg yolks", "quantity": 6, "unit": "pc"},
+        {"name": "Dried shiitake mushrooms", "quantity": 6, "unit": "pc"},
+        {"name": "Soy sauce", "quantity": 4, "unit": "tbsp"},
+        {"name": "Dark soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Five spice powder", "quantity": 1, "unit": "tsp"},
+        {"name": "Bamboo leaves", "quantity": 30, "unit": "pc"},
+        {"name": "Kitchen twine", "quantity": 1, "unit": "bunch"}
+      ],
+      "steps": [
+        "Soak rice overnight, drain and toss with soy sauces and five spice.",
+        "Soak bamboo leaves in warm water for 2 hours, then wash thoroughly.",
+        "Marinate pork in soy sauce for 2 hours and rehydrate mushrooms.",
+        "Fold two leaves into a cone, fill with rice, add pork, mushroom and yolk, top with rice.",
+        "Fold leaves over the top and tie firmly with twine into a tetrahedron.",
+        "Boil parcels in plenty of water for 3 hours, weighted to keep submerged."
+      ],
+      "tags": ["festival", "rice", "wrapped"],
+      "difficulty": "hard",
+      "prepTime": 720,
+      "cookTime": 180,
+      "servings": 6
+    },
+    {
+      "title": "Dan Dan Noodles",
+      "description": "Sichuan noodles in a chilli oil sauce with ground pork, preserved vegetable and peppercorn.",
+      "ingredients": [
+        {"name": "Wheat noodles", "quantity": 400, "unit": "g"},
+        {"name": "Ground pork", "quantity": 200, "unit": "g"},
+        {"name": "Ya cai", "quantity": 60, "unit": "g"},
+        {"name": "Chilli oil", "quantity": 4, "unit": "tbsp"},
+        {"name": "Soy sauce", "quantity": 3, "unit": "tbsp"},
+        {"name": "Chinkiang vinegar", "quantity": 1, "unit": "tbsp"},
+        {"name": "Sichuan peppercorns", "quantity": 1, "unit": "tsp"},
+        {"name": "Sesame paste", "quantity": 2, "unit": "tbsp"},
+        {"name": "Garlic", "quantity": 3, "unit": "pc"},
+        {"name": "Scallions", "quantity": 3, "unit": "pc"},
+        {"name": "Vegetable oil", "quantity": 2, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Toast Sichuan peppercorns and grind to powder.",
+        "Stir-fry pork in oil with ya cai until crisp, season with 1 tablespoon soy sauce.",
+        "In each bowl mix chilli oil, sesame paste, remaining soy sauce, vinegar, grated garlic and peppercorn powder.",
+        "Cook noodles until just tender and drain.",
+        "Pile noodles on top of sauce, top with crispy pork and scallions.",
+        "Stir thoroughly before eating."
+      ],
+      "tags": ["Sichuan", "noodles", "spicy"],
+      "difficulty": "medium",
+      "prepTime": 10,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Beef and Broccoli",
+      "description": "Velvety stir-fried beef with broccoli florets in a savoury oyster sauce gravy.",
+      "ingredients": [
+        {"name": "Flank steak", "quantity": 500, "unit": "g"},
+        {"name": "Broccoli florets", "quantity": 400, "unit": "g"},
+        {"name": "Soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Oyster sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Shaoxing wine", "quantity": 1, "unit": "tbsp"},
+        {"name": "Sugar", "quantity": 1, "unit": "tsp"},
+        {"name": "Cornstarch", "quantity": 2, "unit": "tbsp"},
+        {"name": "Garlic", "quantity": 3, "unit": "pc"},
+        {"name": "Ginger", "quantity": 10, "unit": "g"},
+        {"name": "Beef stock", "quantity": 120, "unit": "ml"},
+        {"name": "Vegetable oil", "quantity": 3, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Slice beef thinly against the grain and toss with 1 tablespoon soy sauce, wine and 1 tablespoon cornstarch.",
+        "Blanch broccoli for 90 seconds in salted water and drain.",
+        "Stir remaining cornstarch with stock, oyster sauce, remaining soy sauce and sugar.",
+        "Heat 2 tablespoons oil in a wok and sear beef in a single layer for 1 minute, then remove.",
+        "Add remaining oil with garlic and ginger, then return broccoli and beef.",
+        "Pour in sauce and toss until glossy and thick."
+      ],
+      "tags": ["stir-fry", "beef", "weeknight"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Dumplings",
+      "description": "Northern-style boiled jiaozi with pork and chive filling, dipped in vinegar and chilli oil.",
+      "ingredients": [
+        {"name": "Dumpling wrappers", "quantity": 40, "unit": "pc"},
+        {"name": "Ground pork", "quantity": 400, "unit": "g"},
+        {"name": "Chinese chives", "quantity": 100, "unit": "g"},
+        {"name": "Napa cabbage", "quantity": 150, "unit": "g"},
+        {"name": "Ginger", "quantity": 15, "unit": "g"},
+        {"name": "Soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Sesame oil", "quantity": 1, "unit": "tbsp"},
+        {"name": "Shaoxing wine", "quantity": 1, "unit": "tbsp"},
+        {"name": "Salt", "quantity": 1, "unit": "tsp"},
+        {"name": "White pepper", "quantity": 0.5, "unit": "tsp"},
+        {"name": "Black vinegar", "quantity": 60, "unit": "ml"}
+      ],
+      "steps": [
+        "Salt the chopped cabbage, rest 10 minutes, then squeeze out excess water.",
+        "Mix pork with chopped chives, cabbage, grated ginger, soy sauce, wine, sesame oil, salt and pepper.",
+        "Place a tablespoon of filling on each wrapper, wet edges and pleat into half-moons.",
+        "Bring a large pot of water to a rolling boil.",
+        "Drop dumplings in batches and cook until they float, then add cold water and cook 2 more minutes.",
+        "Serve with black vinegar dipping sauce."
+      ],
+      "tags": ["dumplings", "pork", "northern"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Twice Cooked Pork",
+      "description": "Sichuan favourite of pork belly first boiled, then stir-fried with leeks and doubanjiang.",
+      "ingredients": [
+        {"name": "Pork belly", "quantity": 500, "unit": "g"},
+        {"name": "Leek", "quantity": 2, "unit": "pc"},
+        {"name": "Doubanjiang", "quantity": 2, "unit": "tbsp"},
+        {"name": "Sweet bean sauce", "quantity": 1, "unit": "tbsp"},
+        {"name": "Douchi", "quantity": 1, "unit": "tbsp"},
+        {"name": "Soy sauce", "quantity": 1, "unit": "tbsp"},
+        {"name": "Sugar", "quantity": 1, "unit": "tsp"},
+        {"name": "Garlic", "quantity": 4, "unit": "pc"},
+        {"name": "Ginger", "quantity": 15, "unit": "g"},
+        {"name": "Vegetable oil", "quantity": 2, "unit": "tbsp"},
+        {"name": "Shaoxing wine", "quantity": 1, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Boil pork belly with ginger and a splash of wine for 25 minutes, then cool.",
+        "Slice the cooked pork into thin pieces.",
+        "Heat oil in a wok and render pork slices until edges curl.",
+        "Add doubanjiang, douchi and minced garlic and stir until fragrant.",
+        "Stir in sweet bean sauce, soy sauce and sugar.",
+        "Toss in sliced leeks and stir-fry 1 minute until just tender."
+      ],
+      "tags": ["Sichuan", "pork", "spicy"],
+      "difficulty": "medium",
+      "prepTime": 10,
+      "cookTime": 35,
+      "servings": 4
+    },
+    {
+      "title": "Hot Pot",
+      "description": "Communal Chinese hot pot with thinly sliced meats, tofu and vegetables cooked in spiced broth.",
+      "ingredients": [
+        {"name": "Beef bones", "quantity": 1, "unit": "kg"},
+        {"name": "Doubanjiang", "quantity": 4, "unit": "tbsp"},
+        {"name": "Dried chillies", "quantity": 30, "unit": "g"},
+        {"name": "Sichuan peppercorns", "quantity": 2, "unit": "tbsp"},
+        {"name": "Star anise", "quantity": 4, "unit": "pc"},
+        {"name": "Thinly sliced beef", "quantity": 500, "unit": "g"},
+        {"name": "Thinly sliced lamb", "quantity": 500, "unit": "g"},
+        {"name": "Firm tofu", "quantity": 300, "unit": "g"},
+        {"name": "Mushrooms", "quantity": 300, "unit": "g"},
+        {"name": "Napa cabbage", "quantity": 0.5, "unit": "pc"},
+        {"name": "Glass noodles", "quantity": 200, "unit": "g"},
+        {"name": "Sesame paste", "quantity": 60, "unit": "g"}
+      ],
+      "steps": [
+        "Simmer beef bones for 3 hours to make a stock, then strain.",
+        "In a hot pot vessel, fry doubanjiang, chillies, peppercorns and star anise in oil.",
+        "Add stock and bring to a simmer to make the spicy broth.",
+        "Set up the hot pot at the table over a burner.",
+        "Diners cook meats, tofu, mushrooms, cabbage and noodles to taste.",
+        "Serve with sesame paste dipping sauce mixed with garlic, soy and chilli oil."
+      ],
+      "tags": ["communal", "hot pot", "Sichuan"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 180,
+      "servings": 6
+    },
+    {
+      "title": "Chow Mein",
+      "description": "Stir-fried egg noodles with chicken, bean sprouts, scallions and soy sauce.",
+      "ingredients": [
+        {"name": "Chow mein noodles", "quantity": 400, "unit": "g"},
+        {"name": "Boneless chicken breast", "quantity": 300, "unit": "g"},
+        {"name": "Bean sprouts", "quantity": 200, "unit": "g"},
+        {"name": "Scallions", "quantity": 4, "unit": "pc"},
+        {"name": "Carrot", "quantity": 1, "unit": "pc"},
+        {"name": "Soy sauce", "quantity": 3, "unit": "tbsp"},
+        {"name": "Dark soy sauce", "quantity": 1, "unit": "tbsp"},
+        {"name": "Oyster sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Sesame oil", "quantity": 1, "unit": "tsp"},
+        {"name": "Garlic", "quantity": 3, "unit": "pc"},
+        {"name": "Vegetable oil", "quantity": 3, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Boil noodles for 3 minutes, drain and toss with 1 teaspoon oil.",
+        "Slice chicken thinly and toss with 1 tablespoon soy sauce.",
+        "Heat oil in a wok and stir-fry chicken until cooked through, then remove.",
+        "Stir-fry julienned carrot and garlic for 1 minute, add bean sprouts and scallions.",
+        "Return chicken with noodles, dark soy sauce, remaining soy sauce and oyster sauce.",
+        "Toss over high heat for 2 minutes, finish with sesame oil."
+      ],
+      "tags": ["noodles", "stir-fry", "weeknight"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Congee",
+      "description": "Slow-cooked rice porridge served with century egg, pork floss and scallions.",
+      "ingredients": [
+        {"name": "Jasmine rice", "quantity": 200, "unit": "g"},
+        {"name": "Water", "quantity": 2.5, "unit": "l"},
+        {"name": "Chicken stock", "quantity": 500, "unit": "ml"},
+        {"name": "Ginger", "quantity": 30, "unit": "g"},
+        {"name": "Salt", "quantity": 1, "unit": "tsp"},
+        {"name": "Century egg", "quantity": 2, "unit": "pc"},
+        {"name": "Pork floss", "quantity": 30, "unit": "g"},
+        {"name": "Scallions", "quantity": 3, "unit": "pc"},
+        {"name": "White pepper", "quantity": 0.5, "unit": "tsp"},
+        {"name": "Sesame oil", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Rinse rice and combine with water, stock and sliced ginger.",
+        "Bring to a boil, then simmer with the lid ajar, stirring often.",
+        "Cook 90 minutes until rice is broken down and silky.",
+        "Season with salt and white pepper.",
+        "Ladle into bowls and top with chopped century egg, pork floss and scallions.",
+        "Drizzle with sesame oil before serving."
+      ],
+      "tags": ["porridge", "breakfast", "comfort food"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 90,
+      "servings": 4
+    },
+    {
+      "title": "Salt and Pepper Shrimp",
+      "description": "Cantonese shrimp deep-fried in their shells and tossed with toasted salt, pepper and chillies.",
+      "ingredients": [
+        {"name": "Whole head-on shrimp", "quantity": 600, "unit": "g"},
+        {"name": "Cornstarch", "quantity": 80, "unit": "g"},
+        {"name": "Vegetable oil", "quantity": 1, "unit": "l"},
+        {"name": "Salt", "quantity": 2, "unit": "tsp"},
+        {"name": "White pepper", "quantity": 1, "unit": "tsp"},
+        {"name": "Sichuan peppercorns", "quantity": 1, "unit": "tsp"},
+        {"name": "Garlic", "quantity": 4, "unit": "pc"},
+        {"name": "Red chilli", "quantity": 2, "unit": "pc"},
+        {"name": "Scallions", "quantity": 3, "unit": "pc"}
+      ],
+      "steps": [
+        "Trim shrimp antennae and devein through the shell.",
+        "Toast salt, white pepper and Sichuan peppercorns, then grind to powder.",
+        "Toss shrimp with cornstarch.",
+        "Heat oil to 190C and fry shrimp 90 seconds until shells are crisp, then drain.",
+        "In a clean wok, stir-fry minced garlic, sliced chillies and scallion whites in 1 tablespoon oil.",
+        "Return shrimp, sprinkle salt-pepper mix and toss to coat."
+      ],
+      "tags": ["seafood", "Cantonese", "fried"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Stir-fried Water Spinach",
+      "description": "Quick stir-fry of water spinach with garlic, chilli and fermented bean curd.",
+      "ingredients": [
+        {"name": "Water spinach", "quantity": 500, "unit": "g"},
+        {"name": "Garlic", "quantity": 6, "unit": "pc"},
+        {"name": "Red chilli", "quantity": 2, "unit": "pc"},
+        {"name": "Fermented bean curd", "quantity": 1, "unit": "tbsp"},
+        {"name": "Soy sauce", "quantity": 1, "unit": "tbsp"},
+        {"name": "Sugar", "quantity": 0.5, "unit": "tsp"},
+        {"name": "Vegetable oil", "quantity": 2, "unit": "tbsp"},
+        {"name": "Salt", "quantity": 0.5, "unit": "tsp"}
+      ],
+      "steps": [
+        "Wash water spinach and cut into 6 cm lengths.",
+        "Mash fermented bean curd with soy sauce and sugar.",
+        "Heat oil in a wok over high heat and stir-fry garlic and chillies for 20 seconds.",
+        "Add water spinach and toss continuously for 90 seconds.",
+        "Add fermented bean curd mixture and salt and stir for another minute.",
+        "Serve immediately while bright green."
+      ],
+      "tags": ["vegetable", "stir-fry", "quick"],
+      "dietaryTags": ["vegan"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 5,
+      "servings": 4
+    },
+    {
+      "title": "Fish-Fragrant Eggplant",
+      "description": "Sichuan stir-fried eggplant in a savoury, garlicky chilli sauce called yuxiang.",
+      "ingredients": [
+        {"name": "Chinese eggplants", "quantity": 600, "unit": "g"},
+        {"name": "Ground pork", "quantity": 100, "unit": "g"},
+        {"name": "Doubanjiang", "quantity": 2, "unit": "tbsp"},
+        {"name": "Garlic", "quantity": 5, "unit": "pc"},
+        {"name": "Ginger", "quantity": 15, "unit": "g"},
+        {"name": "Scallions", "quantity": 3, "unit": "pc"},
+        {"name": "Soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Chinkiang vinegar", "quantity": 2, "unit": "tbsp"},
+        {"name": "Sugar", "quantity": 1, "unit": "tbsp"},
+        {"name": "Cornstarch", "quantity": 1, "unit": "tbsp"},
+        {"name": "Chicken stock", "quantity": 120, "unit": "ml"},
+        {"name": "Vegetable oil", "quantity": 4, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Cut eggplants into batons, salt for 15 minutes, then pat dry.",
+        "Mix soy sauce, vinegar, sugar, cornstarch and stock for the sauce.",
+        "Heat oil in a wok and shallow fry eggplants until soft, then drain.",
+        "In remaining oil stir-fry pork until crisp, add doubanjiang, ginger and garlic.",
+        "Return eggplant and pour in sauce, tossing until thickened.",
+        "Finish with scallion greens."
+      ],
+      "tags": ["Sichuan", "eggplant", "stir-fry"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Lion's Head Meatballs",
+      "description": "Large, tender Shanghai-style pork meatballs braised with napa cabbage in a light gravy.",
+      "ingredients": [
+        {"name": "Ground pork", "quantity": 700, "unit": "g"},
+        {"name": "Napa cabbage", "quantity": 1, "unit": "pc"},
+        {"name": "Egg", "quantity": 1, "unit": "pc"},
+        {"name": "Cornstarch", "quantity": 2, "unit": "tbsp"},
+        {"name": "Soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Shaoxing wine", "quantity": 2, "unit": "tbsp"},
+        {"name": "Ginger", "quantity": 20, "unit": "g"},
+        {"name": "Scallions", "quantity": 3, "unit": "pc"},
+        {"name": "Chicken stock", "quantity": 600, "unit": "ml"},
+        {"name": "Vegetable oil", "quantity": 3, "unit": "tbsp"},
+        {"name": "Salt", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Mix pork with egg, cornstarch, soy sauce, wine, grated ginger, chopped scallions and salt.",
+        "Stir vigorously in one direction until sticky, then form into 4 large balls.",
+        "Heat oil in a pot and brown each meatball on all sides.",
+        "Line the bottom of the pot with cabbage leaves, place meatballs on top.",
+        "Pour in stock, cover and simmer 45 minutes.",
+        "Add cabbage hearts in the last 10 minutes and serve."
+      ],
+      "tags": ["Shanghai", "pork", "braised"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 60,
+      "servings": 4
+    },
+    {
+      "title": "Egg Drop Soup",
+      "description": "Simple Chinese soup of chicken stock thickened with cornstarch and silky egg ribbons.",
+      "ingredients": [
+        {"name": "Chicken stock", "quantity": 1.2, "unit": "l"},
+        {"name": "Eggs", "quantity": 3, "unit": "pc"},
+        {"name": "Cornstarch", "quantity": 2, "unit": "tbsp"},
+        {"name": "White pepper", "quantity": 0.5, "unit": "tsp"},
+        {"name": "Salt", "quantity": 1, "unit": "tsp"},
+        {"name": "Sesame oil", "quantity": 1, "unit": "tsp"},
+        {"name": "Scallions", "quantity": 2, "unit": "pc"},
+        {"name": "Ginger", "quantity": 10, "unit": "g"}
+      ],
+      "steps": [
+        "Bring chicken stock to a simmer with grated ginger.",
+        "Mix cornstarch with 4 tablespoons cold water and stir into stock until slightly thickened.",
+        "Season with salt and white pepper.",
+        "Slowly drizzle beaten eggs in a thin stream while stirring the soup gently.",
+        "Turn off heat and finish with sesame oil and chopped scallions."
+      ],
+      "tags": ["soup", "egg", "quick"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Beef Chow Fun",
+      "description": "Cantonese stir-fried wide rice noodles with beef, bean sprouts and scallions in dark soy.",
+      "ingredients": [
+        {"name": "Fresh ho fun rice noodles", "quantity": 500, "unit": "g"},
+        {"name": "Flank steak", "quantity": 300, "unit": "g"},
+        {"name": "Bean sprouts", "quantity": 200, "unit": "g"},
+        {"name": "Scallions", "quantity": 6, "unit": "pc"},
+        {"name": "Yellow chives", "quantity": 60, "unit": "g"},
+        {"name": "Dark soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Shaoxing wine", "quantity": 1, "unit": "tbsp"},
+        {"name": "Sugar", "quantity": 1, "unit": "tsp"},
+        {"name": "Cornstarch", "quantity": 1, "unit": "tbsp"},
+        {"name": "Vegetable oil", "quantity": 4, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Slice beef thinly against the grain and marinate with cornstarch, wine and 1 tablespoon soy sauce.",
+        "Gently separate the noodles by hand.",
+        "Heat 2 tablespoons oil in a wok and sear beef in a single layer, then remove.",
+        "Add remaining oil and noodles, stir-fry briefly to char and warm through.",
+        "Drizzle dark soy sauce, remaining soy sauce and sugar; toss until evenly coloured.",
+        "Add bean sprouts, scallions, chives and beef and toss for 1 minute."
+      ],
+      "tags": ["Cantonese", "noodles", "stir-fry"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 10,
+      "servings": 4
+    }
+  ]
+}

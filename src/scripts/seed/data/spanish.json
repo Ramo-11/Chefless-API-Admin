@@ -1,0 +1,448 @@
+{
+  "cuisine": "Spanish",
+  "names": {
+    "first": ["Javier", "Lucía", "Carlos", "María", "Diego", "Carmen", "Sergio", "Paula", "Andrés", "Isabel", "Mateo", "Elena"],
+    "last": ["García", "Martínez", "López", "Rodríguez", "Hernández", "Pérez", "Sánchez", "Gómez", "Jiménez", "Ruiz", "Fernández", "Álvarez"]
+  },
+  "recipes": [
+    {
+      "title": "Paella Valenciana",
+      "description": "Saffron rice with chicken, rabbit, beans and rosemary, cooked in a wide pan.",
+      "ingredients": [
+        { "name": "bomba rice", "quantity": 400, "unit": "g" },
+        { "name": "chicken pieces", "quantity": 600, "unit": "g" },
+        { "name": "rabbit pieces", "quantity": 400, "unit": "g" },
+        { "name": "flat green beans", "quantity": 200, "unit": "g" },
+        { "name": "garrofó beans", "quantity": 150, "unit": "g" },
+        { "name": "tomato, grated", "quantity": 1, "unit": "pc" },
+        { "name": "saffron threads", "quantity": 1, "unit": "pinch" },
+        { "name": "smoked paprika", "quantity": 1, "unit": "tsp" },
+        { "name": "rosemary sprig", "quantity": 1, "unit": "pc" },
+        { "name": "chicken stock", "quantity": 1.2, "unit": "l" },
+        { "name": "olive oil", "quantity": 60, "unit": "ml" }
+      ],
+      "steps": [
+        "Brown the chicken and rabbit in olive oil in a paella pan, then push to the edges.",
+        "Sauté the green beans, then add the grated tomato and paprika and cook to a sofrito.",
+        "Pour in the hot stock with saffron and bring to a boil, season and add the garrofó beans.",
+        "Sprinkle in the rice evenly and do not stir again.",
+        "Cook 10 minutes on high heat, then 8 minutes on low to form the socarrat at the base.",
+        "Rest with rosemary on top under foil for 5 minutes before serving."
+      ],
+      "tags": ["rice", "valencia", "weekend"],
+      "difficulty": "hard",
+      "prepTime": 20,
+      "cookTime": 45,
+      "servings": 6
+    },
+    {
+      "title": "Tortilla Española",
+      "description": "Thick Spanish potato and onion omelette, served warm or at room temperature.",
+      "ingredients": [
+        { "name": "waxy potatoes", "quantity": 700, "unit": "g" },
+        { "name": "onion, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "eggs", "quantity": 6, "unit": "pc" },
+        { "name": "olive oil", "quantity": 250, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Slice the potatoes thinly and confit them with the onion in olive oil over low heat 25 minutes until tender.",
+        "Drain, reserving the oil, and season generously.",
+        "Whisk the eggs in a large bowl, then fold in the warm potatoes and onion.",
+        "Heat 2 tbsp reserved oil in a non-stick pan and add the mixture, cooking 4 minutes on medium heat.",
+        "Slide onto a plate, invert back into the pan and cook another 3 minutes for a juicy centre.",
+        "Rest 5 minutes, then cut into wedges."
+      ],
+      "tags": ["tapa", "egg", "classic"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 35,
+      "servings": 4
+    },
+    {
+      "title": "Gazpacho Andaluz",
+      "description": "Cold Andalusian raw vegetable soup with tomato, pepper, cucumber and bread.",
+      "ingredients": [
+        { "name": "ripe tomatoes", "quantity": 1, "unit": "kg" },
+        { "name": "cucumber", "quantity": 1, "unit": "pc" },
+        { "name": "green pepper", "quantity": 1, "unit": "pc" },
+        { "name": "garlic clove", "quantity": 1, "unit": "pc" },
+        { "name": "stale bread", "quantity": 80, "unit": "g" },
+        { "name": "sherry vinegar", "quantity": 30, "unit": "ml" },
+        { "name": "extra virgin olive oil", "quantity": 80, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak the bread in a little water until soft.",
+        "Roughly chop the tomatoes, cucumber, pepper and garlic.",
+        "Blend everything with the bread, vinegar and salt until smooth.",
+        "Stream in the olive oil to emulsify the soup.",
+        "Strain through a fine sieve and chill at least 2 hours.",
+        "Serve very cold with a drizzle of olive oil and finely diced vegetables on top."
+      ],
+      "tags": ["andalusia", "soup", "summer"],
+      "dietaryTags": ["vegetarian", "vegan"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 0,
+      "servings": 4
+    },
+    {
+      "title": "Patatas Bravas",
+      "description": "Crisp fried potatoes with smoky tomato bravas sauce and aioli.",
+      "ingredients": [
+        { "name": "Maris Piper potatoes", "quantity": 800, "unit": "g" },
+        { "name": "olive oil", "quantity": 500, "unit": "ml" },
+        { "name": "smoked paprika", "quantity": 2, "unit": "tsp" },
+        { "name": "sweet paprika", "quantity": 1, "unit": "tsp" },
+        { "name": "tomato passata", "quantity": 200, "unit": "ml" },
+        { "name": "garlic cloves", "quantity": 3, "unit": "pc" },
+        { "name": "white wine vinegar", "quantity": 1, "unit": "tbsp" },
+        { "name": "mayonnaise", "quantity": 100, "unit": "g" }
+      ],
+      "steps": [
+        "Cube the potatoes and confit gently in olive oil for 15 minutes until tender.",
+        "Increase the heat and fry until golden and crisp; drain on paper.",
+        "Sauté garlic in 2 tbsp oil, add both paprikas and the passata; simmer 10 minutes.",
+        "Blend the bravas sauce with the vinegar and season.",
+        "Whisk crushed garlic into the mayonnaise to make a quick aioli.",
+        "Serve the potatoes hot with both sauces drizzled on top."
+      ],
+      "tags": ["tapa", "potato", "spicy"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Albóndigas",
+      "description": "Spanish meatballs simmered in a rich tomato and almond sauce.",
+      "ingredients": [
+        { "name": "ground beef", "quantity": 400, "unit": "g" },
+        { "name": "ground pork", "quantity": 200, "unit": "g" },
+        { "name": "breadcrumbs", "quantity": 50, "unit": "g" },
+        { "name": "milk", "quantity": 80, "unit": "ml" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 1, "unit": "tbsp" },
+        { "name": "parsley, chopped", "quantity": 2, "unit": "tbsp" },
+        { "name": "tomato passata", "quantity": 500, "unit": "ml" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "almonds, toasted", "quantity": 30, "unit": "g" },
+        { "name": "smoked paprika", "quantity": 1, "unit": "tsp" },
+        { "name": "olive oil", "quantity": 4, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Soak breadcrumbs in milk, then mix with the meats, egg, garlic, parsley and seasoning.",
+        "Roll into walnut-sized meatballs and brown in olive oil until golden.",
+        "Sauté the onion in the same pan, then add paprika and passata.",
+        "Blend the toasted almonds with a ladle of sauce and stir back in.",
+        "Return the meatballs to the pan and simmer 20 minutes until cooked through.",
+        "Serve as tapas with bread or with rice for a main."
+      ],
+      "tags": ["tapa", "meatballs", "tomato"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 35,
+      "servings": 4
+    },
+    {
+      "title": "Croquetas de Jamón",
+      "description": "Crisp breaded croquettes with a creamy béchamel and Iberian ham filling.",
+      "ingredients": [
+        { "name": "Iberian ham, finely chopped", "quantity": 150, "unit": "g" },
+        { "name": "butter", "quantity": 80, "unit": "g" },
+        { "name": "flour", "quantity": 100, "unit": "g" },
+        { "name": "whole milk", "quantity": 700, "unit": "ml" },
+        { "name": "nutmeg", "quantity": 1, "unit": "pinch" },
+        { "name": "eggs", "quantity": 2, "unit": "pc" },
+        { "name": "breadcrumbs", "quantity": 200, "unit": "g" },
+        { "name": "extra flour for coating", "quantity": 80, "unit": "g" },
+        { "name": "vegetable oil for frying", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "Sauté the ham in butter, then sift in flour and cook 2 minutes.",
+        "Whisk in warm milk gradually to make a thick béchamel; season with nutmeg.",
+        "Pour into a tray, cover and chill several hours until firm.",
+        "Shape into small cylinders, then coat in flour, beaten egg and breadcrumbs.",
+        "Fry in 180°C oil until deep golden and crisp.",
+        "Drain on paper and serve hot."
+      ],
+      "tags": ["tapa", "fried", "creamy"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Pulpo a la Gallega",
+      "description": "Galician octopus on potato slices with paprika, sea salt and olive oil.",
+      "ingredients": [
+        { "name": "octopus", "quantity": 1.5, "unit": "kg" },
+        { "name": "waxy potatoes", "quantity": 800, "unit": "g" },
+        { "name": "smoked paprika", "quantity": 2, "unit": "tsp" },
+        { "name": "coarse sea salt", "quantity": 1, "unit": "tbsp" },
+        { "name": "extra virgin olive oil", "quantity": 100, "unit": "ml" },
+        { "name": "bay leaf", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Freeze the octopus for at least a day to tenderise it, then thaw.",
+        "Bring a large pot of water to the boil with the bay leaf and dip the octopus three times before submerging.",
+        "Simmer 40 minutes until a skewer slides easily into the thickest tentacle.",
+        "Boil the potatoes whole until tender, then peel and slice into thick rounds.",
+        "Slice the octopus tentacles into bite-sized rounds and arrange over the potatoes.",
+        "Sprinkle with paprika and salt and douse generously with olive oil."
+      ],
+      "tags": ["galicia", "seafood", "tapa"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 50,
+      "servings": 4
+    },
+    {
+      "title": "Cocido Madrileño",
+      "description": "Madrid chickpea stew served in three courses: broth, vegetables, then meats.",
+      "ingredients": [
+        { "name": "dried chickpeas", "quantity": 500, "unit": "g" },
+        { "name": "beef shin", "quantity": 500, "unit": "g" },
+        { "name": "ham bone", "quantity": 1, "unit": "pc" },
+        { "name": "chorizo", "quantity": 200, "unit": "g" },
+        { "name": "morcilla", "quantity": 150, "unit": "g" },
+        { "name": "chicken thighs", "quantity": 2, "unit": "pc" },
+        { "name": "carrots", "quantity": 3, "unit": "pc" },
+        { "name": "potatoes", "quantity": 4, "unit": "pc" },
+        { "name": "cabbage", "quantity": 0.5, "unit": "pc" },
+        { "name": "thin noodles for soup", "quantity": 100, "unit": "g" }
+      ],
+      "steps": [
+        "Soak the chickpeas overnight in salted water.",
+        "Place beef, chicken and ham bone in a large pot of water and simmer, skimming.",
+        "After an hour, add the chickpeas (in a net) and carrots and simmer 90 minutes more.",
+        "Add the chorizo, morcilla and potatoes and cook another 30 minutes.",
+        "Boil the cabbage separately, then sauté in olive oil with garlic.",
+        "Strain the broth, cook noodles in it for the soup; serve the broth first, vegetables second, meats third."
+      ],
+      "tags": ["madrid", "stew", "winter"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 180,
+      "servings": 6
+    },
+    {
+      "title": "Fabada Asturiana",
+      "description": "Asturian white bean stew with chorizo, morcilla and pork shoulder.",
+      "ingredients": [
+        { "name": "fabes (large white beans)", "quantity": 500, "unit": "g" },
+        { "name": "chorizo asturiano", "quantity": 200, "unit": "g" },
+        { "name": "morcilla asturiana", "quantity": 200, "unit": "g" },
+        { "name": "salted pork shoulder (lacón)", "quantity": 300, "unit": "g" },
+        { "name": "tocino (cured pork belly)", "quantity": 150, "unit": "g" },
+        { "name": "saffron threads", "quantity": 1, "unit": "pinch" },
+        { "name": "smoked paprika", "quantity": 1, "unit": "tsp" },
+        { "name": "onion, halved", "quantity": 1, "unit": "pc" },
+        { "name": "olive oil", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Soak the beans overnight in cold water.",
+        "Place beans, lacón, tocino and onion in a pot, cover with water and bring to a boil.",
+        "Skim, lower the heat and simmer gently 90 minutes, adding cold water if needed (called 'asustar').",
+        "Add chorizo and morcilla, paprika and saffron and simmer another 30 minutes.",
+        "The beans should be creamy and the broth thickened naturally.",
+        "Rest the stew, then serve with the meats sliced on top."
+      ],
+      "tags": ["asturias", "beans", "winter"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 150,
+      "servings": 6
+    },
+    {
+      "title": "Pisto Manchego",
+      "description": "La Mancha sautéed vegetable stew with tomato, courgette, pepper and onion.",
+      "ingredients": [
+        { "name": "courgettes", "quantity": 2, "unit": "pc" },
+        { "name": "red bell pepper", "quantity": 1, "unit": "pc" },
+        { "name": "green bell pepper", "quantity": 1, "unit": "pc" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "tomatoes", "quantity": 6, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 2, "unit": "pc" },
+        { "name": "olive oil", "quantity": 5, "unit": "tbsp" },
+        { "name": "sugar", "quantity": 1, "unit": "tsp" },
+        { "name": "eggs (optional)", "quantity": 4, "unit": "pc" }
+      ],
+      "steps": [
+        "Dice the onion and peppers and sauté in olive oil 10 minutes until soft.",
+        "Add the diced courgette and cook another 8 minutes.",
+        "Stir in grated tomatoes, garlic and sugar and simmer 25 minutes.",
+        "Season generously and reduce until jammy.",
+        "Crack eggs into wells in the pisto and cook until just set, if you wish.",
+        "Serve with crusty bread."
+      ],
+      "tags": ["la-mancha", "vegetables", "summer"],
+      "dietaryTags": ["vegetarian", "vegan", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 40,
+      "servings": 4
+    },
+    {
+      "title": "Gambas al Ajillo",
+      "description": "Sizzling prawns in olive oil with garlic and chili.",
+      "ingredients": [
+        { "name": "raw peeled prawns", "quantity": 500, "unit": "g" },
+        { "name": "garlic cloves, sliced", "quantity": 6, "unit": "pc" },
+        { "name": "dried chili", "quantity": 1, "unit": "pc" },
+        { "name": "extra virgin olive oil", "quantity": 100, "unit": "ml" },
+        { "name": "smoked paprika", "quantity": 1, "unit": "tsp" },
+        { "name": "parsley, chopped", "quantity": 2, "unit": "tbsp" },
+        { "name": "sherry", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Warm the olive oil in a small terracotta dish with the garlic and chili.",
+        "Cook gently until the garlic is golden but not burnt.",
+        "Add the prawns and turn up the heat to sizzling.",
+        "Cook 2 minutes, then add paprika and sherry and toss.",
+        "Sprinkle with parsley and serve immediately with bread to soak up the oil."
+      ],
+      "tags": ["tapa", "seafood", "garlic"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 8,
+      "servings": 4
+    },
+    {
+      "title": "Churros",
+      "description": "Fried choux sticks dusted with sugar, dunked in thick hot chocolate.",
+      "ingredients": [
+        { "name": "water", "quantity": 250, "unit": "ml" },
+        { "name": "flour", "quantity": 150, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "pinch" },
+        { "name": "sugar for dusting", "quantity": 100, "unit": "g" },
+        { "name": "vegetable oil for frying", "quantity": 1, "unit": "l" },
+        { "name": "dark chocolate", "quantity": 200, "unit": "g" },
+        { "name": "milk", "quantity": 500, "unit": "ml" },
+        { "name": "cornflour", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Boil the water with a pinch of salt, tip in the flour and stir to a smooth paste.",
+        "Spoon into a piping bag fitted with a star tip.",
+        "Pipe lengths of dough into 180°C oil and snip with scissors.",
+        "Fry until golden and crisp, then drain and roll in sugar.",
+        "Warm the milk, whisk in cornflour and pour over chopped chocolate to make a thick sauce.",
+        "Serve the churros hot with the chocolate for dipping."
+      ],
+      "tags": ["dessert", "fried", "breakfast"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 10,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Pan con Tomate",
+      "description": "Catalan toasted bread rubbed with garlic and tomato, drizzled with olive oil.",
+      "ingredients": [
+        { "name": "country bread, thick slices", "quantity": 8, "unit": "pc" },
+        { "name": "ripe tomatoes", "quantity": 4, "unit": "pc" },
+        { "name": "garlic clove", "quantity": 1, "unit": "pc" },
+        { "name": "extra virgin olive oil", "quantity": 60, "unit": "ml" },
+        { "name": "flaky sea salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Toast the bread until crisp on both sides.",
+        "Halve the garlic and rub the cut side over the warm bread.",
+        "Halve the tomatoes and rub them over the bread until the flesh is gone and the seeds soak in.",
+        "Drizzle generously with olive oil.",
+        "Sprinkle with flaky salt and eat immediately."
+      ],
+      "tags": ["catalan", "tapa", "breakfast"],
+      "dietaryTags": ["vegetarian", "vegan"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 5,
+      "servings": 4
+    },
+    {
+      "title": "Salmorejo",
+      "description": "Cordoban thick chilled tomato cream topped with egg and Iberian ham.",
+      "ingredients": [
+        { "name": "ripe tomatoes", "quantity": 1, "unit": "kg" },
+        { "name": "stale country bread", "quantity": 200, "unit": "g" },
+        { "name": "garlic clove", "quantity": 1, "unit": "pc" },
+        { "name": "extra virgin olive oil", "quantity": 150, "unit": "ml" },
+        { "name": "sherry vinegar", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "boiled eggs", "quantity": 2, "unit": "pc" },
+        { "name": "Iberian ham", "quantity": 80, "unit": "g" }
+      ],
+      "steps": [
+        "Blend tomatoes, bread, garlic and salt until smooth.",
+        "Stream in the olive oil and vinegar to emulsify into a thick orange cream.",
+        "Strain to remove tomato skins.",
+        "Chill at least 2 hours before serving.",
+        "Pour into bowls and top with chopped boiled egg and torn Iberian ham."
+      ],
+      "tags": ["andalusia", "cold-soup", "summer"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 0,
+      "servings": 4
+    },
+    {
+      "title": "Pollo al Ajillo",
+      "description": "Andalusian chicken sautéed with whole garlic cloves, sherry and bay.",
+      "ingredients": [
+        { "name": "chicken pieces", "quantity": 1.2, "unit": "kg" },
+        { "name": "garlic cloves, peeled", "quantity": 12, "unit": "pc" },
+        { "name": "fino sherry", "quantity": 150, "unit": "ml" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "olive oil", "quantity": 60, "unit": "ml" },
+        { "name": "thyme", "quantity": 1, "unit": "tsp" },
+        { "name": "salt and pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Brown the seasoned chicken in olive oil, skin side first, until golden.",
+        "Add the whole garlic cloves and bay leaves and sauté until fragrant.",
+        "Pour in the sherry and let it bubble for a minute.",
+        "Cover and simmer 25 minutes until the chicken is cooked through.",
+        "Sprinkle with thyme and serve with bread to mop up the garlicky juices."
+      ],
+      "tags": ["chicken", "andalusia", "garlic"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 35,
+      "servings": 4
+    },
+    {
+      "title": "Crema Catalana",
+      "description": "Catalan citrus and cinnamon custard with a brittle burnt-sugar crust.",
+      "ingredients": [
+        { "name": "whole milk", "quantity": 750, "unit": "ml" },
+        { "name": "egg yolks", "quantity": 6, "unit": "pc" },
+        { "name": "caster sugar", "quantity": 150, "unit": "g" },
+        { "name": "cornflour", "quantity": 30, "unit": "g" },
+        { "name": "lemon zest", "quantity": 1, "unit": "tbsp" },
+        { "name": "cinnamon stick", "quantity": 1, "unit": "pc" },
+        { "name": "demerara sugar", "quantity": 4, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Infuse the milk with cinnamon and lemon zest over low heat for 10 minutes.",
+        "Whisk yolks with sugar and cornflour until pale.",
+        "Strain the warm milk over the yolk mixture, whisking constantly.",
+        "Return to the pan and cook gently until thickened.",
+        "Pour into shallow ramekins and chill at least 2 hours.",
+        "Sprinkle with demerara sugar and caramelise with a torch to a glassy crust."
+      ],
+      "tags": ["catalan", "dessert", "custard"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 20,
+      "servings": 6
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "cuisine": "Somali",
+  "names": {
+    "first": ["Hodan", "Abdullahi", "Faduma", "Yusuf", "Amina", "Mohamed", "Khadija", "Ahmed", "Sahra", "Omar", "Ifrah", "Ismail"],
+    "last": ["Hassan", "Farah", "Ali", "Mohamed", "Abdi", "Warsame", "Jama", "Nur", "Hussein", "Egal", "Adan", "Osman"]
+  },
+  "recipes": [
+    {
+      "title": "Bariis Iskukaris",
+      "description": "Fragrant Somali spiced rice cooked with goat or beef, caramelised onions, and xawaash spice blend.",
+      "ingredients": [
+        { "name": "basmati rice", "quantity": 500, "unit": "g" },
+        { "name": "goat shoulder, bone-in pieces", "quantity": 800, "unit": "g" },
+        { "name": "red onions, sliced", "quantity": 3, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 5, "unit": "pc" },
+        { "name": "tomatoes, chopped", "quantity": 2, "unit": "pc" },
+        { "name": "xawaash spice blend", "quantity": 2, "unit": "tbsp" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "raisins", "quantity": 50, "unit": "g" },
+        { "name": "vegetable oil", "quantity": 80, "unit": "ml" },
+        { "name": "water", "quantity": 1, "unit": "l" },
+        { "name": "salt", "quantity": 2, "unit": "tsp" }
+      ],
+      "steps": [
+        "Rinse the rice in cold water until clear, then soak for 20 minutes and drain.",
+        "Heat the oil in a large pot and fry the onions until deeply caramelised, about 15 minutes.",
+        "Add the garlic and xawaash, stir for 1 minute, then add the goat pieces and brown all over.",
+        "Stir in the tomatoes and tomato paste and cook for 5 minutes.",
+        "Pour in 700 ml of the water, season with 1.5 tsp of the salt, cover, and simmer until the meat is tender, about 60 minutes.",
+        "Lift out the meat and set aside. Top up the broth to 750 ml total liquid.",
+        "Add the rice and remaining salt, stir once, and lay the meat back on top.",
+        "Cover tightly, lower the heat to minimum, and steam for 20 minutes.",
+        "Scatter raisins over the rice, rest off heat for 10 minutes, then fluff and serve."
+      ],
+      "tags": ["rice", "main", "celebration", "spiced"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 100,
+      "servings": 6
+    },
+    {
+      "title": "Sambusa",
+      "description": "Crisp Somali fried pastry triangles filled with spiced minced beef, onion, and green chilli.",
+      "ingredients": [
+        { "name": "samosa pastry sheets", "quantity": 20, "unit": "pc" },
+        { "name": "ground beef", "quantity": 500, "unit": "g" },
+        { "name": "onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 3, "unit": "pc" },
+        { "name": "green chilli, minced", "quantity": 2, "unit": "pc" },
+        { "name": "fresh coriander, chopped", "quantity": 0.5, "unit": "bunch" },
+        { "name": "xawaash spice blend", "quantity": 1, "unit": "tbsp" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "flour", "quantity": 2, "unit": "tbsp" },
+        { "name": "water", "quantity": 3, "unit": "tbsp" },
+        { "name": "vegetable oil for frying", "quantity": 1, "unit": "l" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Heat the 2 tbsp oil in a pan and sauté the onion until soft.",
+        "Add the garlic and chilli and cook for 1 minute.",
+        "Add the ground beef and xawaash, breaking up the meat, and cook until browned and dry, about 12 minutes.",
+        "Stir in the coriander and salt, then cool the filling completely.",
+        "Whisk the flour and water into a thick paste to use as glue.",
+        "Fold each pastry strip into a cone, fill with a heaping tablespoon of filling, fold over to seal into a triangle, and brush the seam with the flour paste.",
+        "Heat the frying oil to 170°C.",
+        "Fry the sambusas in batches for 3-4 minutes until deep golden, turning halfway.",
+        "Drain on paper towels and serve hot, especially during Ramadan iftar."
+      ],
+      "tags": ["fried", "snack", "ramadan", "appetizer"],
+      "difficulty": "medium",
+      "prepTime": 45,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Maraq",
+      "description": "Soothing Somali soup of meat and vegetables in a tomato-spiced broth, eaten with bread.",
+      "ingredients": [
+        { "name": "lamb shoulder, cubed", "quantity": 600, "unit": "g" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 4, "unit": "pc" },
+        { "name": "tomatoes, chopped", "quantity": 3, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "carrots, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "potato, cubed", "quantity": 1, "unit": "pc" },
+        { "name": "xawaash spice blend", "quantity": 1, "unit": "tbsp" },
+        { "name": "fresh coriander, chopped", "quantity": 0.5, "unit": "bunch" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "water", "quantity": 1.5, "unit": "l" },
+        { "name": "salt", "quantity": 1.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Heat the oil in a heavy pot and sauté the onion until softened.",
+        "Add the garlic and xawaash and cook briefly until fragrant.",
+        "Add the lamb and brown on all sides, about 8 minutes.",
+        "Stir in the tomatoes and tomato paste and cook until they break down, about 5 minutes.",
+        "Pour in the water, bring to a boil, then reduce heat and simmer covered for 45 minutes.",
+        "Add the carrots and potato and continue simmering for 20 minutes until the meat and vegetables are tender.",
+        "Season with salt to taste.",
+        "Stir in the chopped coriander and serve hot in bowls with anjero or muufo."
+      ],
+      "tags": ["soup", "comfort", "everyday", "stew"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 80,
+      "servings": 6
+    },
+    {
+      "title": "Anjero",
+      "description": "Light, lacy Somali fermented pancake similar to injera, eaten for breakfast with stew or sugar and ghee.",
+      "ingredients": [
+        { "name": "sorghum flour", "quantity": 250, "unit": "g" },
+        { "name": "all-purpose flour", "quantity": 250, "unit": "g" },
+        { "name": "active dry yeast", "quantity": 1, "unit": "tsp" },
+        { "name": "sugar", "quantity": 1, "unit": "tbsp" },
+        { "name": "warm water", "quantity": 900, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "In a large bowl, dissolve the yeast and sugar in 200 ml of the warm water and let stand for 10 minutes until foamy.",
+        "Whisk in the remaining water, sorghum flour, and all-purpose flour until smooth and lump-free.",
+        "Cover and leave at room temperature for 6-8 hours until bubbly and pleasantly sour.",
+        "Whisk in the salt and adjust consistency with a little extra water if needed; the batter should be like thin pancake batter.",
+        "Heat a non-stick pan over medium heat with no oil.",
+        "Pour a ladle of batter and swirl in a spiral from the centre outward to make a thin circle.",
+        "Cover with a lid and cook for 1-2 minutes until the surface is fully covered with small holes and the edges lift; do not flip.",
+        "Slide onto a clean cloth and stack as you go. Serve warm with stew, or with sesame oil and sugar."
+      ],
+      "tags": ["flatbread", "breakfast", "fermented", "staple"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 480,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Soor",
+      "description": "Somali maize porridge similar to ugali, served with stew, milk, or ghee depending on the meal.",
+      "ingredients": [
+        { "name": "white maize flour", "quantity": 400, "unit": "g" },
+        { "name": "water", "quantity": 1, "unit": "l" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" },
+        { "name": "ghee", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Bring the water to a rolling boil in a heavy pot and add the salt.",
+        "Reduce to medium heat and gradually rain in the maize flour while stirring vigorously with a wooden spoon to prevent lumps.",
+        "Continue stirring as the porridge thickens, about 5 minutes.",
+        "Lower the heat, cover, and let steam for 5 minutes.",
+        "Uncover, stir again, and cook another 5 minutes pressing the soor against the sides of the pot.",
+        "Once the dough pulls cleanly away from the pot, fold in the ghee.",
+        "Wet a bowl, scoop the soor in, and invert onto a serving plate to form a smooth mound.",
+        "Serve hot with maraq or with milk and sugar for breakfast."
+      ],
+      "tags": ["staple", "porridge", "side", "everyday"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Hilib Ari",
+      "description": "Slow-simmered Somali goat meat stew with onions, tomatoes, and warming xawaash.",
+      "ingredients": [
+        { "name": "goat meat, bone-in pieces", "quantity": 1, "unit": "kg" },
+        { "name": "red onions, chopped", "quantity": 2, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 5, "unit": "pc" },
+        { "name": "ginger, grated", "quantity": 1, "unit": "tbsp" },
+        { "name": "tomatoes, chopped", "quantity": 3, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "xawaash spice blend", "quantity": 2, "unit": "tbsp" },
+        { "name": "fresh coriander, chopped", "quantity": 0.5, "unit": "bunch" },
+        { "name": "vegetable oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "water", "quantity": 700, "unit": "ml" },
+        { "name": "salt", "quantity": 1.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Pat the goat pieces dry and season with salt.",
+        "Heat the oil in a heavy pot and brown the goat in batches until deeply coloured, then remove.",
+        "Add the onions to the same pot and cook until softened and golden, about 10 minutes.",
+        "Stir in the garlic, ginger, and xawaash and cook for 1 minute.",
+        "Add the tomatoes and tomato paste and cook until they break down into a sauce.",
+        "Return the goat and any juices, pour in the water, and bring to a boil.",
+        "Reduce heat, cover, and simmer for 90 minutes until the meat is fall-off-the-bone tender, topping up water if needed.",
+        "Uncover and reduce the sauce for 10 minutes until thickened and glossy.",
+        "Stir in the coriander and serve with bariis or anjero."
+      ],
+      "tags": ["stew", "goat", "main", "spiced"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 120,
+      "servings": 6
+    },
+    {
+      "title": "Suqaar",
+      "description": "Quick Somali sauté of finely diced beef or lamb with onions, peppers, and xawaash.",
+      "ingredients": [
+        { "name": "beef sirloin, finely diced", "quantity": 600, "unit": "g" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "green bell pepper, diced", "quantity": 1, "unit": "pc" },
+        { "name": "tomato, diced", "quantity": 1, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 3, "unit": "pc" },
+        { "name": "xawaash spice blend", "quantity": 1, "unit": "tbsp" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "fresh coriander, chopped", "quantity": 0.5, "unit": "bunch" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Heat the oil in a wide skillet over high heat until shimmering.",
+        "Add the diced beef and sear without moving for 2 minutes to develop colour.",
+        "Stir and cook another 3 minutes until the beef is browned but still juicy.",
+        "Add the onion and bell pepper and stir-fry for 4 minutes until just tender.",
+        "Add the garlic and xawaash and cook for 1 minute.",
+        "Stir in the tomato and cook for 2 minutes more until lightly broken down.",
+        "Season with salt and pepper, fold in the coriander, and serve immediately with bariis, baasto, or anjero."
+      ],
+      "tags": ["quick", "stir-fry", "weeknight", "main"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Baasto",
+      "description": "Somali pasta with spiced beef sauce and a banana on the side, an Italian-influenced national favourite.",
+      "ingredients": [
+        { "name": "spaghetti", "quantity": 500, "unit": "g" },
+        { "name": "ground beef", "quantity": 500, "unit": "g" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "garlic, minced", "quantity": 4, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 3, "unit": "tbsp" },
+        { "name": "tomatoes, chopped", "quantity": 3, "unit": "pc" },
+        { "name": "carrot, grated", "quantity": 1, "unit": "pc" },
+        { "name": "xawaash spice blend", "quantity": 2, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "water", "quantity": 250, "unit": "ml" },
+        { "name": "ripe bananas", "quantity": 4, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Heat the oil in a saucepan and sauté the onion until softened.",
+        "Add the garlic and xawaash and cook for 1 minute.",
+        "Add the ground beef and cook, breaking it up, until browned, about 8 minutes.",
+        "Stir in the tomato paste and grated carrot and cook for 3 minutes.",
+        "Add the chopped tomatoes and water, season with salt, and simmer uncovered for 25 minutes until thickened.",
+        "Meanwhile, cook the spaghetti in salted boiling water until al dente, then drain.",
+        "Toss the spaghetti with about a quarter of the sauce until coated.",
+        "Plate the pasta, ladle more sauce on top, and serve with a peeled ripe banana on the side."
+      ],
+      "tags": ["pasta", "main", "fusion", "comfort"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 35,
+      "servings": 6
+    },
+    {
+      "title": "Cambuulo",
+      "description": "Slow-cooked Somali adzuki bean and rice dish, finished with sesame oil and sugar for breakfast or iftar.",
+      "ingredients": [
+        { "name": "dried adzuki beans", "quantity": 300, "unit": "g" },
+        { "name": "long-grain rice", "quantity": 200, "unit": "g" },
+        { "name": "sesame oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "sugar", "quantity": 3, "unit": "tbsp" },
+        { "name": "water", "quantity": 1.5, "unit": "l" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak the adzuki beans overnight in plenty of cold water, then drain.",
+        "Place the beans in a large pot, cover with the fresh water, and bring to a boil.",
+        "Reduce heat and simmer, partially covered, for about 75 minutes until the beans are very tender, topping up water as needed.",
+        "Add the rice and salt, stir, and continue simmering for 20-25 minutes until the rice is fully cooked and the mixture is thick and porridge-like.",
+        "If the mixture is too dry, stir in a little hot water; if too loose, simmer uncovered to reduce.",
+        "Spoon into bowls while hot.",
+        "Top each bowl with a generous drizzle of sesame oil and a spoonful of sugar.",
+        "Serve immediately, especially during Ramadan iftar."
+      ],
+      "tags": ["beans", "ramadan", "breakfast", "comfort"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 720,
+      "cookTime": 100,
+      "servings": 6
+    }
+  ]
+}

@@ -1,0 +1,376 @@
+{
+  "cuisine": "Iraqi",
+  "names": {
+    "first": ["Ahmed", "Zainab", "Yusuf", "Noor", "Omar", "Hala", "Mustafa", "Sara", "Karim", "Layla", "Hussein", "Dunya"],
+    "last": ["Al-Baghdadi", "Al-Hashimi", "Al-Mosuli", "Al-Najafi", "Al-Karbalai", "Al-Ani", "Al-Obeidi", "Al-Saadi", "Al-Khafaji", "Al-Tikriti"]
+  },
+  "recipes": [
+    {
+      "title": "Masgouf",
+      "description": "Iraq's national dish of butterflied carp seasoned with tamarind and turmeric, slow-roasted upright over open flame.",
+      "ingredients": [
+        { "name": "whole carp", "quantity": 2, "unit": "kg" },
+        { "name": "olive oil", "quantity": 60, "unit": "ml" },
+        { "name": "tamarind paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "lemon", "quantity": 2, "unit": "pc" },
+        { "name": "tomato", "quantity": 3, "unit": "pc" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Butterfly the carp from the back, leaving belly skin attached, and remove the spine.",
+        "Whisk olive oil, tamarind paste, turmeric, cumin, salt, and pepper into a paste.",
+        "Rub the marinade thoroughly across the flesh and let stand 30 minutes.",
+        "Build a hot wood fire and lean the fish skin-side out toward the flames using a metal frame.",
+        "Roast slowly for 45 to 60 minutes until the flesh is opaque and lightly smoked.",
+        "Move the fish skin-side down onto embers for the last 5 minutes to crisp the skin.",
+        "Serve on a platter with sliced tomatoes, onions, and lemon wedges."
+      ],
+      "tags": ["iraqi", "fish", "grilled"],
+      "dietaryTags": ["pescatarian", "gluten-free"],
+      "difficulty": "hard",
+      "prepTime": 45,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Tashreeb",
+      "description": "Rustic Iraqi dish of torn flatbread soaked in spiced lamb broth with chickpeas and tender chunks of meat.",
+      "ingredients": [
+        { "name": "lamb shoulder", "quantity": 800, "unit": "g" },
+        { "name": "chickpeas", "quantity": 200, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "tomato", "quantity": 3, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "Iraqi flatbread", "quantity": 4, "unit": "pc" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tbsp" },
+        { "name": "baharat", "quantity": 1, "unit": "tbsp" },
+        { "name": "dried lime", "quantity": 2, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Soak chickpeas overnight, then drain.",
+        "Brown cubed lamb in oil with chopped onions until well caramelized.",
+        "Stir in tomato paste, baharat, and cumin and cook 2 minutes.",
+        "Add chopped tomatoes, soaked chickpeas, dried limes, salt, and 2 liters of water.",
+        "Simmer covered for 2 hours until lamb is fork-tender and chickpeas are creamy.",
+        "Tear flatbread into rough pieces and pile in the bottom of a deep serving bowl.",
+        "Ladle the hot broth over the bread to soak, then top with chunks of lamb and chickpeas."
+      ],
+      "tags": ["iraqi", "stew", "lamb", "bread"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 130,
+      "servings": 6
+    },
+    {
+      "title": "Iraqi Dolma",
+      "description": "Iraqi mixed stuffed vegetables, grape leaves, peppers, and onions filled with spiced rice and meat, layered and slow-simmered.",
+      "ingredients": [
+        { "name": "grape leaves in brine", "quantity": 200, "unit": "g" },
+        { "name": "bell pepper", "quantity": 4, "unit": "pc" },
+        { "name": "tomato", "quantity": 4, "unit": "pc" },
+        { "name": "onion", "quantity": 3, "unit": "pc" },
+        { "name": "courgette", "quantity": 3, "unit": "pc" },
+        { "name": "short grain rice", "quantity": 300, "unit": "g" },
+        { "name": "minced lamb", "quantity": 400, "unit": "g" },
+        { "name": "tomato paste", "quantity": 3, "unit": "tbsp" },
+        { "name": "pomegranate molasses", "quantity": 3, "unit": "tbsp" },
+        { "name": "lemon", "quantity": 2, "unit": "pc" },
+        { "name": "baharat", "quantity": 1, "unit": "tbsp" },
+        { "name": "olive oil", "quantity": 80, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Rinse rice and soak 30 minutes; mix with minced lamb, tomato paste, baharat, salt, and oil.",
+        "Hollow tomatoes, peppers, and courgettes carefully without breaking the walls.",
+        "Peel onions and boil 5 minutes; separate into individual layers.",
+        "Stuff every vegetable and onion layer with the rice mixture, leaving room for expansion.",
+        "Roll grape leaves around the same filling into tight cigars.",
+        "Pack everything snugly into a heavy pot, brushed with oil and lined with sliced potato or extra leaves.",
+        "Mix lemon juice, pomegranate molasses, remaining oil, salt, and 750 ml water and pour over.",
+        "Weight with a plate and simmer covered for 1.5 hours; rest 15 minutes before inverting onto a tray."
+      ],
+      "tags": ["iraqi", "stuffed vegetables", "rice", "lamb"],
+      "difficulty": "hard",
+      "prepTime": 70,
+      "cookTime": 90,
+      "servings": 8
+    },
+    {
+      "title": "Kubba",
+      "description": "Iraqi torpedo-shaped dumplings of bulgur and minced meat, fried golden with a juicy spiced lamb filling.",
+      "ingredients": [
+        { "name": "fine bulgur", "quantity": 300, "unit": "g" },
+        { "name": "minced beef", "quantity": 200, "unit": "g" },
+        { "name": "minced lamb", "quantity": 300, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "pine nuts", "quantity": 50, "unit": "g" },
+        { "name": "baharat", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground cinnamon", "quantity": 0.5, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 500, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak bulgur in cold water for 30 minutes, then drain and squeeze dry.",
+        "Process bulgur with the minced beef, salt, and half the baharat into a smooth paste.",
+        "Sauté finely chopped onions in 2 tablespoons oil until soft, then add minced lamb and brown.",
+        "Stir in pine nuts, cinnamon, and remaining baharat; cool the filling completely.",
+        "Wet hands and shape balls of the bulgur shell, hollow with a finger, fill with the lamb mixture, and seal into torpedoes.",
+        "Heat oil to 180C and fry kubba in batches for 5 minutes until deep golden.",
+        "Drain on paper and serve hot with lemon wedges."
+      ],
+      "tags": ["iraqi", "fried", "lamb", "bulgur"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 25,
+      "servings": 6
+    },
+    {
+      "title": "Quzi",
+      "description": "Iraqi feast of slow-roasted whole lamb served on a bed of spiced rice with nuts, raisins, and fried onions.",
+      "ingredients": [
+        { "name": "lamb shoulder", "quantity": 2, "unit": "kg" },
+        { "name": "basmati rice", "quantity": 500, "unit": "g" },
+        { "name": "onion", "quantity": 3, "unit": "pc" },
+        { "name": "almonds", "quantity": 60, "unit": "g" },
+        { "name": "pine nuts", "quantity": 40, "unit": "g" },
+        { "name": "raisins", "quantity": 60, "unit": "g" },
+        { "name": "baharat", "quantity": 2, "unit": "tbsp" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "butter", "quantity": 80, "unit": "g" },
+        { "name": "vegetable oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "salt", "quantity": 2, "unit": "tsp" }
+      ],
+      "steps": [
+        "Rub the lamb shoulder with baharat, salt, and oil and let marinate 1 hour.",
+        "Sit the lamb on sliced onions in a deep tray with 500 ml water; cover and roast at 150C for 4 hours.",
+        "Uncover and roast another 30 minutes to brown the surface.",
+        "Soak basmati rice for 30 minutes, then boil 6 minutes in salted water and drain.",
+        "Layer the par-cooked rice in a pot with butter and turmeric and steam covered for 30 minutes.",
+        "Toast almonds and pine nuts in butter until golden, then add raisins to plump.",
+        "Pile the rice on a large platter, sit the roasted lamb on top, and scatter the nuts and raisins."
+      ],
+      "tags": ["iraqi", "lamb", "rice", "feast"],
+      "difficulty": "hard",
+      "prepTime": 90,
+      "cookTime": 270,
+      "servings": 8
+    },
+    {
+      "title": "Margat Bamia",
+      "description": "Iraqi okra and lamb stew in a tangy tomato broth brightened with dried lime and lemon.",
+      "ingredients": [
+        { "name": "lamb shoulder", "quantity": 600, "unit": "g" },
+        { "name": "okra", "quantity": 500, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "tomato", "quantity": 4, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "garlic clove", "quantity": 4, "unit": "pc" },
+        { "name": "dried lime", "quantity": 2, "unit": "pc" },
+        { "name": "lemon", "quantity": 1, "unit": "pc" },
+        { "name": "baharat", "quantity": 1, "unit": "tbsp" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Brown cubed lamb with chopped onions in oil until caramelized.",
+        "Stir in tomato paste, baharat, and minced garlic; cook 2 minutes.",
+        "Add chopped tomatoes, dried limes pierced with a knife, salt, and 1 liter of water.",
+        "Simmer for 1.5 hours until the lamb is tender.",
+        "Trim okra stems carefully and add to the stew with lemon juice.",
+        "Simmer another 20 minutes until okra is tender but still bright green.",
+        "Adjust seasoning and serve with white rice."
+      ],
+      "tags": ["iraqi", "stew", "okra", "lamb"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 110,
+      "servings": 6
+    },
+    {
+      "title": "Pacha",
+      "description": "Traditional Iraqi dish of slow-cooked lamb's head, trotters, and stuffed tripe in a clear, garlicky broth.",
+      "ingredients": [
+        { "name": "lamb trotters", "quantity": 4, "unit": "pc" },
+        { "name": "lamb tripe", "quantity": 500, "unit": "g" },
+        { "name": "lamb tongue", "quantity": 2, "unit": "pc" },
+        { "name": "short grain rice", "quantity": 200, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "garlic clove", "quantity": 8, "unit": "pc" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tbsp" },
+        { "name": "baharat", "quantity": 1, "unit": "tbsp" },
+        { "name": "lemon", "quantity": 2, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Scrub trotters and tripe thoroughly and blanch in boiling water for 10 minutes; drain and rinse.",
+        "Soak rice 30 minutes and mix with chopped onion, baharat, turmeric, and salt.",
+        "Stuff the cleaned tripe with the rice mixture and stitch closed with kitchen twine.",
+        "Place trotters, tongues, and stuffed tripe in a large pot; cover with water and bring to a slow simmer.",
+        "Skim the foam, add halved garlic heads, salt, and a pinch of turmeric.",
+        "Simmer very gently for 5 to 6 hours until everything is fall-apart tender.",
+        "Slice the tongue and stuffed tripe and arrange on a platter with the trotters and broth.",
+        "Serve with lemon wedges, extra garlic, and flatbread."
+      ],
+      "tags": ["iraqi", "offal", "slow cooked", "traditional"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 360,
+      "servings": 8
+    },
+    {
+      "title": "Kleicha",
+      "description": "Iraqi national cookies of cardamom-scented dough rolled around date paste, walnuts, or coconut filling.",
+      "ingredients": [
+        { "name": "all purpose flour", "quantity": 500, "unit": "g" },
+        { "name": "butter", "quantity": 200, "unit": "g" },
+        { "name": "instant yeast", "quantity": 1, "unit": "tsp" },
+        { "name": "milk", "quantity": 150, "unit": "ml" },
+        { "name": "ground cardamom", "quantity": 1, "unit": "tbsp" },
+        { "name": "fennel seeds", "quantity": 1, "unit": "tsp" },
+        { "name": "nigella seeds", "quantity": 1, "unit": "tsp" },
+        { "name": "date paste", "quantity": 400, "unit": "g" },
+        { "name": "walnut", "quantity": 80, "unit": "g" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "sugar", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Warm the milk with sugar and yeast and let foam 10 minutes.",
+        "Rub butter into flour, cardamom, fennel, nigella, and salt until sandy.",
+        "Add yeast mixture and knead a smooth dough; rest 1 hour covered.",
+        "Soften date paste with a little warm water and a pinch of cardamom; mix with chopped walnuts.",
+        "Roll the dough into a long thin rectangle, spread the date filling, and roll into a log.",
+        "Slice the log into 1 cm pinwheels and place on a lined tray.",
+        "Brush with beaten egg and bake at 180C for 18 minutes until lightly golden.",
+        "Cool on a rack before serving with tea."
+      ],
+      "tags": ["iraqi", "cookies", "dates", "dessert"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 90,
+      "cookTime": 20,
+      "servings": 12
+    },
+    {
+      "title": "Margat Fasolia",
+      "description": "Iraqi white bean and lamb stew slow-simmered in tomato broth with garlic and dried lime.",
+      "ingredients": [
+        { "name": "white beans", "quantity": 250, "unit": "g" },
+        { "name": "lamb shoulder", "quantity": 500, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "tomato", "quantity": 3, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "garlic clove", "quantity": 4, "unit": "pc" },
+        { "name": "dried lime", "quantity": 2, "unit": "pc" },
+        { "name": "baharat", "quantity": 1, "unit": "tbsp" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak white beans overnight and drain.",
+        "Brown cubed lamb with chopped onion in oil.",
+        "Stir in tomato paste, baharat, and minced garlic and cook 2 minutes.",
+        "Add chopped tomatoes, soaked beans, dried lime, salt, and 1.2 liters water.",
+        "Simmer covered for 1.5 hours until the beans are creamy and lamb is tender.",
+        "Adjust seasoning and reduce uncovered for 10 minutes if too thin.",
+        "Serve over white rice with chopped parsley."
+      ],
+      "tags": ["iraqi", "stew", "beans", "lamb"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 100,
+      "servings": 6
+    },
+    {
+      "title": "Timman Bagilla",
+      "description": "Iraqi rice pilaf of tender fava beans and dill folded into buttery basmati rice.",
+      "ingredients": [
+        { "name": "basmati rice", "quantity": 500, "unit": "g" },
+        { "name": "fava beans", "quantity": 300, "unit": "g" },
+        { "name": "dill", "quantity": 1, "unit": "bunch" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 2, "unit": "tsp" }
+      ],
+      "steps": [
+        "Rinse rice and soak in salted water for 30 minutes.",
+        "Blanch shelled fava beans for 2 minutes, then peel off the outer skin.",
+        "Boil rice in plenty of salted water for 6 minutes until al dente; drain.",
+        "Heat oil and butter in a non-stick pot, then layer rice with fava beans and chopped dill.",
+        "Wrap the lid in a tea towel and steam on low heat for 45 minutes.",
+        "Fluff gently and serve with grilled meat or fish."
+      ],
+      "tags": ["iraqi", "rice", "fava beans", "side"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 35,
+      "cookTime": 50,
+      "servings": 6
+    },
+    {
+      "title": "Samoon",
+      "description": "Iraqi diamond-shaped white bread with a crisp crust and soft, airy crumb, baked daily in stone ovens.",
+      "ingredients": [
+        { "name": "bread flour", "quantity": 600, "unit": "g" },
+        { "name": "warm water", "quantity": 380, "unit": "ml" },
+        { "name": "instant yeast", "quantity": 2, "unit": "tsp" },
+        { "name": "sugar", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 2, "unit": "tsp" },
+        { "name": "olive oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "nigella seeds", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Mix yeast and sugar into warm water and let foam 10 minutes.",
+        "Combine flour and salt, then add the yeast water and olive oil; knead 10 minutes until smooth.",
+        "Cover and rise 1.5 hours until doubled.",
+        "Divide into 8 pieces and shape each into a diamond by stretching and pinching the ends.",
+        "Place on a floured tray, cover, and prove 30 minutes.",
+        "Sprinkle with nigella seeds and slash a line down the center.",
+        "Bake on a preheated stone at 240C for 10 minutes until deep golden with a thin crust.",
+        "Cool on a rack so the crust crisps."
+      ],
+      "tags": ["iraqi", "bread", "baked"],
+      "dietaryTags": ["vegetarian", "vegan"],
+      "difficulty": "medium",
+      "prepTime": 130,
+      "cookTime": 12,
+      "servings": 8
+    },
+    {
+      "title": "Maglooba",
+      "description": "Iraqi upside-down rice with spiced chicken, fried eggplant, and potato, dramatically inverted onto a serving platter.",
+      "ingredients": [
+        { "name": "chicken thighs", "quantity": 800, "unit": "g" },
+        { "name": "basmati rice", "quantity": 500, "unit": "g" },
+        { "name": "eggplant", "quantity": 2, "unit": "pc" },
+        { "name": "potato", "quantity": 3, "unit": "pc" },
+        { "name": "tomato", "quantity": 2, "unit": "pc" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "baharat", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 150, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Salt sliced eggplant and rest 30 minutes, then pat dry.",
+        "Fry eggplant slices and potato slices in oil until golden, then drain.",
+        "Brown chicken with chopped onion, baharat, turmeric, and salt.",
+        "Add 1 liter of water and simmer chicken 30 minutes; reserve broth and chicken separately.",
+        "Layer eggplant, potato, sliced tomato, and chicken on the bottom of a heavy pot.",
+        "Top with rinsed and drained rice; pour over enough hot chicken broth to cover by 2 cm.",
+        "Bring to a boil, then cover and simmer on lowest heat for 35 minutes until rice is tender.",
+        "Rest 10 minutes, then invert the pot onto a large platter to reveal the layered dome."
+      ],
+      "tags": ["iraqi", "rice", "chicken", "eggplant"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 80,
+      "servings": 6
+    }
+  ]
+}

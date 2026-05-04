@@ -1,0 +1,791 @@
+{
+  "generatedAt": "2026-05-01T18:41:06.835Z",
+  "totals": {
+    "users": 266,
+    "recipes": 942,
+    "dropped": 118
+  },
+  "perCuisine": [
+    {
+      "cuisine": "Lebanese",
+      "users": 5,
+      "recipes": 23,
+      "droppedNoImage": [
+        "Warak Enab",
+        "Riz a Djej"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 23
+    },
+    {
+      "cuisine": "Palestinian",
+      "users": 3,
+      "recipes": 5,
+      "droppedNoImage": [
+        "Qidra",
+        "Knafeh Nabulsieh",
+        "Rummaniyya",
+        "Zibdiyit Gambari",
+        "Sumagiyya",
+        "Shorabat Adas",
+        "Mahashi Waraq Dawali"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 5
+    },
+    {
+      "cuisine": "Syrian",
+      "users": 3,
+      "recipes": 4,
+      "droppedNoImage": [
+        "Kibbeh Bil Sanieh",
+        "Shish Barak",
+        "Sheikh El Mahshi",
+        "Mahshi Malfouf",
+        "Kebab Halabi",
+        "Mahshi Filfil",
+        "Fattoush bil Rumman",
+        "Mhalabieh"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 4
+    },
+    {
+      "cuisine": "Egyptian",
+      "users": 4,
+      "recipes": 16,
+      "droppedNoImage": [
+        "Ta'ameya",
+        "Mahshi Cromb",
+        "Roz Bel Laban",
+        "Ful Sudani",
+        "Macarona Bechamel",
+        "Sayadeya",
+        "Aish Baladi"
+      ],
+      "fromMealdb": 8,
+      "fromCurated": 9
+    },
+    {
+      "cuisine": "Moroccan",
+      "users": 4,
+      "recipes": 16,
+      "droppedNoImage": [
+        "Pastilla bil Hout",
+        "Taktouka"
+      ],
+      "fromMealdb": 6,
+      "fromCurated": 14
+    },
+    {
+      "cuisine": "Turkish",
+      "users": 4,
+      "recipes": 16,
+      "droppedNoImage": [],
+      "fromMealdb": 30,
+      "fromCurated": 16
+    },
+    {
+      "cuisine": "Iraqi",
+      "users": 3,
+      "recipes": 8,
+      "droppedNoImage": [
+        "Margat Bamia",
+        "Margat Fasolia",
+        "Timman Bagilla",
+        "Maglooba"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 8
+    },
+    {
+      "cuisine": "Jordanian",
+      "users": 3,
+      "recipes": 11,
+      "droppedNoImage": [
+        "Galayet Bandora"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 11
+    },
+    {
+      "cuisine": "Saudi",
+      "users": 3,
+      "recipes": 8,
+      "droppedNoImage": [
+        "Jareesh",
+        "Areeka",
+        "Mathlouthah",
+        "Margoog"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 8
+    },
+    {
+      "cuisine": "Yemeni",
+      "users": 3,
+      "recipes": 6,
+      "droppedNoImage": [
+        "Shafut",
+        "Salata Hadhramautia",
+        "Bajiya"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 6
+    },
+    {
+      "cuisine": "Emirati",
+      "users": 3,
+      "recipes": 6,
+      "droppedNoImage": [
+        "Khabeesa",
+        "Madrouba",
+        "Chebab"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 6
+    },
+    {
+      "cuisine": "Tunisian",
+      "users": 3,
+      "recipes": 12,
+      "droppedNoImage": [],
+      "fromMealdb": 8,
+      "fromCurated": 12
+    },
+    {
+      "cuisine": "Algerian",
+      "users": 3,
+      "recipes": 8,
+      "droppedNoImage": [
+        "Mhajeb"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 8
+    },
+    {
+      "cuisine": "Persian",
+      "users": 4,
+      "recipes": 12,
+      "droppedNoImage": [
+        "Khoresh-e Bademjan",
+        "Joojeh Kabab",
+        "Khoresh-e Gheymeh",
+        "Zereshk Polo"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 12
+    },
+    {
+      "cuisine": "Japanese",
+      "users": 5,
+      "recipes": 25,
+      "droppedNoImage": [],
+      "fromMealdb": 9,
+      "fromCurated": 25
+    },
+    {
+      "cuisine": "Chinese",
+      "users": 5,
+      "recipes": 25,
+      "droppedNoImage": [
+        "Fish-Fragrant Eggplant"
+      ],
+      "fromMealdb": 27,
+      "fromCurated": 23
+    },
+    {
+      "cuisine": "Korean",
+      "users": 4,
+      "recipes": 16,
+      "droppedNoImage": [],
+      "fromMealdb": 0,
+      "fromCurated": 16
+    },
+    {
+      "cuisine": "Thai",
+      "users": 5,
+      "recipes": 25,
+      "droppedNoImage": [
+        "Yam Nua",
+        "Yum Woon Sen",
+        "Pad Prik King",
+        "Hoy Tod",
+        "Pla Rad Prik"
+      ],
+      "fromMealdb": 27,
+      "fromCurated": 21
+    },
+    {
+      "cuisine": "Vietnamese",
+      "users": 4,
+      "recipes": 16,
+      "droppedNoImage": [],
+      "fromMealdb": 27,
+      "fromCurated": 16
+    },
+    {
+      "cuisine": "Filipino",
+      "users": 4,
+      "recipes": 16,
+      "droppedNoImage": [],
+      "fromMealdb": 8,
+      "fromCurated": 16
+    },
+    {
+      "cuisine": "Indonesian",
+      "users": 4,
+      "recipes": 16,
+      "droppedNoImage": [],
+      "fromMealdb": 0,
+      "fromCurated": 16
+    },
+    {
+      "cuisine": "Malaysian",
+      "users": 3,
+      "recipes": 12,
+      "droppedNoImage": [],
+      "fromMealdb": 8,
+      "fromCurated": 12
+    },
+    {
+      "cuisine": "Singaporean",
+      "users": 3,
+      "recipes": 9,
+      "droppedNoImage": [],
+      "fromMealdb": 0,
+      "fromCurated": 9
+    },
+    {
+      "cuisine": "Taiwanese",
+      "users": 3,
+      "recipes": 8,
+      "droppedNoImage": [
+        "Lu Rou Fan"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 8
+    },
+    {
+      "cuisine": "Cambodian",
+      "users": 3,
+      "recipes": 2,
+      "droppedNoImage": [
+        "Nom Banh Chok",
+        "Bai Sach Chrouk",
+        "Kuy Teav",
+        "Cha Houy Teuk",
+        "Samlor Korkor",
+        "Prahok Ktis",
+        "Char Kreung"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 2
+    },
+    {
+      "cuisine": "Burmese",
+      "users": 3,
+      "recipes": 7,
+      "droppedNoImage": [
+        "Lahpet Thoke",
+        "Sigyet Khauk Swe"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 7
+    },
+    {
+      "cuisine": "Indian",
+      "users": 5,
+      "recipes": 25,
+      "droppedNoImage": [],
+      "fromMealdb": 0,
+      "fromCurated": 25
+    },
+    {
+      "cuisine": "Pakistani",
+      "users": 4,
+      "recipes": 14,
+      "droppedNoImage": [
+        "Aloo Keema",
+        "Bihari Kebab"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 14
+    },
+    {
+      "cuisine": "Sri Lankan",
+      "users": 3,
+      "recipes": 8,
+      "droppedNoImage": [
+        "Fish Ambul Thiyal"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 8
+    },
+    {
+      "cuisine": "Bangladeshi",
+      "users": 3,
+      "recipes": 8,
+      "droppedNoImage": [
+        "Aloo Bhorta"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 8
+    },
+    {
+      "cuisine": "Nepali",
+      "users": 3,
+      "recipes": 9,
+      "droppedNoImage": [],
+      "fromMealdb": 0,
+      "fromCurated": 9
+    },
+    {
+      "cuisine": "Afghan",
+      "users": 3,
+      "recipes": 8,
+      "droppedNoImage": [
+        "Korma E Murgh"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 8
+    },
+    {
+      "cuisine": "Italian",
+      "users": 5,
+      "recipes": 25,
+      "droppedNoImage": [
+        "Lasagna alla Bolognese",
+        "Osso Buco alla Milanese",
+        "Pollo alla Cacciatora",
+        "Gnocchi al Pomodoro"
+      ],
+      "fromMealdb": 21,
+      "fromCurated": 21
+    },
+    {
+      "cuisine": "French",
+      "users": 5,
+      "recipes": 25,
+      "droppedNoImage": [],
+      "fromMealdb": 0,
+      "fromCurated": 25
+    },
+    {
+      "cuisine": "Spanish",
+      "users": 4,
+      "recipes": 16,
+      "droppedNoImage": [],
+      "fromMealdb": 48,
+      "fromCurated": 16
+    },
+    {
+      "cuisine": "Greek",
+      "users": 5,
+      "recipes": 25,
+      "droppedNoImage": [
+        "Octopus Stifado",
+        "Soutzoukakia"
+      ],
+      "fromMealdb": 8,
+      "fromCurated": 23
+    },
+    {
+      "cuisine": "Portuguese",
+      "users": 4,
+      "recipes": 16,
+      "droppedNoImage": [
+        "Feijoada à Transmontana"
+      ],
+      "fromMealdb": 8,
+      "fromCurated": 15
+    },
+    {
+      "cuisine": "German",
+      "users": 3,
+      "recipes": 12,
+      "droppedNoImage": [],
+      "fromMealdb": 0,
+      "fromCurated": 12
+    },
+    {
+      "cuisine": "British",
+      "users": 4,
+      "recipes": 16,
+      "droppedNoImage": [],
+      "fromMealdb": 60,
+      "fromCurated": 16
+    },
+    {
+      "cuisine": "Polish",
+      "users": 3,
+      "recipes": 12,
+      "droppedNoImage": [],
+      "fromMealdb": 27,
+      "fromCurated": 12
+    },
+    {
+      "cuisine": "Swedish",
+      "users": 3,
+      "recipes": 11,
+      "droppedNoImage": [
+        "Ärtsoppa"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 11
+    },
+    {
+      "cuisine": "Hungarian",
+      "users": 3,
+      "recipes": 8,
+      "droppedNoImage": [
+        "Túrós Csusza"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 8
+    },
+    {
+      "cuisine": "Dutch",
+      "users": 3,
+      "recipes": 12,
+      "droppedNoImage": [],
+      "fromMealdb": 0,
+      "fromCurated": 12
+    },
+    {
+      "cuisine": "Swiss",
+      "users": 3,
+      "recipes": 9,
+      "droppedNoImage": [],
+      "fromMealdb": 0,
+      "fromCurated": 9
+    },
+    {
+      "cuisine": "Austrian",
+      "users": 3,
+      "recipes": 9,
+      "droppedNoImage": [],
+      "fromMealdb": 0,
+      "fromCurated": 9
+    },
+    {
+      "cuisine": "Belgian",
+      "users": 3,
+      "recipes": 9,
+      "droppedNoImage": [],
+      "fromMealdb": 0,
+      "fromCurated": 9
+    },
+    {
+      "cuisine": "Russian",
+      "users": 3,
+      "recipes": 12,
+      "droppedNoImage": [
+        "Kotleta po-pozharsky"
+      ],
+      "fromMealdb": 7,
+      "fromCurated": 11
+    },
+    {
+      "cuisine": "Ukrainian",
+      "users": 3,
+      "recipes": 12,
+      "droppedNoImage": [],
+      "fromMealdb": 7,
+      "fromCurated": 12
+    },
+    {
+      "cuisine": "Georgian",
+      "users": 3,
+      "recipes": 9,
+      "droppedNoImage": [],
+      "fromMealdb": 0,
+      "fromCurated": 9
+    },
+    {
+      "cuisine": "American",
+      "users": 5,
+      "recipes": 25,
+      "droppedNoImage": [],
+      "fromMealdb": 0,
+      "fromCurated": 25
+    },
+    {
+      "cuisine": "Mexican",
+      "users": 5,
+      "recipes": 25,
+      "droppedNoImage": [
+        "Chicharrón en Salsa Verde",
+        "Frijoles Charros"
+      ],
+      "fromMealdb": 6,
+      "fromCurated": 23
+    },
+    {
+      "cuisine": "Brazilian",
+      "users": 4,
+      "recipes": 15,
+      "droppedNoImage": [
+        "Empadão de Frango"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 15
+    },
+    {
+      "cuisine": "Peruvian",
+      "users": 4,
+      "recipes": 15,
+      "droppedNoImage": [
+        "Sopa Criolla"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 15
+    },
+    {
+      "cuisine": "Argentine",
+      "users": 3,
+      "recipes": 11,
+      "droppedNoImage": [
+        "Carbonada"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 11
+    },
+    {
+      "cuisine": "Colombian",
+      "users": 3,
+      "recipes": 11,
+      "droppedNoImage": [
+        "Tamales Tolimenses"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 11
+    },
+    {
+      "cuisine": "Cuban",
+      "users": 3,
+      "recipes": 10,
+      "droppedNoImage": [
+        "Yuca con Mojo",
+        "Tamal Cubano"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 10
+    },
+    {
+      "cuisine": "Jamaican",
+      "users": 3,
+      "recipes": 12,
+      "droppedNoImage": [
+        "Escovitch Fish"
+      ],
+      "fromMealdb": 27,
+      "fromCurated": 11
+    },
+    {
+      "cuisine": "Canadian",
+      "users": 3,
+      "recipes": 12,
+      "droppedNoImage": [],
+      "fromMealdb": 22,
+      "fromCurated": 12
+    },
+    {
+      "cuisine": "Chilean",
+      "users": 3,
+      "recipes": 11,
+      "droppedNoImage": [
+        "Asado Chileno"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 11
+    },
+    {
+      "cuisine": "Venezuelan",
+      "users": 3,
+      "recipes": 9,
+      "droppedNoImage": [
+        "Pisca Andina",
+        "Chupe Andino",
+        "Polvorosa"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 9
+    },
+    {
+      "cuisine": "Puerto Rican",
+      "users": 3,
+      "recipes": 9,
+      "droppedNoImage": [],
+      "fromMealdb": 0,
+      "fromCurated": 9
+    },
+    {
+      "cuisine": "Salvadoran",
+      "users": 3,
+      "recipes": 7,
+      "droppedNoImage": [
+        "Tamales Pisques",
+        "Pastelitos de Carne"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 7
+    },
+    {
+      "cuisine": "Haitian",
+      "users": 3,
+      "recipes": 5,
+      "droppedNoImage": [
+        "Diri ak Pwa",
+        "Tassot",
+        "Diri Djon Djon",
+        "Poul Nan Sòs"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 5
+    },
+    {
+      "cuisine": "Trinidadian",
+      "users": 3,
+      "recipes": 9,
+      "droppedNoImage": [],
+      "fromMealdb": 0,
+      "fromCurated": 9
+    },
+    {
+      "cuisine": "Ethiopian",
+      "users": 4,
+      "recipes": 12,
+      "droppedNoImage": [
+        "Misir Wat",
+        "Atakilt Wat",
+        "Doro Tibs",
+        "Yebeg Tibs"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 12
+    },
+    {
+      "cuisine": "Nigerian",
+      "users": 3,
+      "recipes": 12,
+      "droppedNoImage": [],
+      "fromMealdb": 0,
+      "fromCurated": 12
+    },
+    {
+      "cuisine": "South African",
+      "users": 3,
+      "recipes": 12,
+      "droppedNoImage": [],
+      "fromMealdb": 0,
+      "fromCurated": 12
+    },
+    {
+      "cuisine": "Ghanaian",
+      "users": 3,
+      "recipes": 11,
+      "droppedNoImage": [
+        "Bofrot"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 11
+    },
+    {
+      "cuisine": "Senegalese",
+      "users": 3,
+      "recipes": 9,
+      "droppedNoImage": [],
+      "fromMealdb": 0,
+      "fromCurated": 9
+    },
+    {
+      "cuisine": "Kenyan",
+      "users": 3,
+      "recipes": 12,
+      "droppedNoImage": [
+        "Mbuzi Choma"
+      ],
+      "fromMealdb": 5,
+      "fromCurated": 11
+    },
+    {
+      "cuisine": "Somali",
+      "users": 3,
+      "recipes": 5,
+      "droppedNoImage": [
+        "Anjero",
+        "Hilib Ari",
+        "Suqaar",
+        "Cambuulo"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 5
+    },
+    {
+      "cuisine": "Tanzanian",
+      "users": 3,
+      "recipes": 6,
+      "droppedNoImage": [
+        "Wali wa Nazi",
+        "Ndizi Kaanga",
+        "Supu ya Ndizi"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 6
+    },
+    {
+      "cuisine": "Sudanese",
+      "users": 3,
+      "recipes": 7,
+      "droppedNoImage": [
+        "Ful Sudani",
+        "Salata Aswad"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 7
+    },
+    {
+      "cuisine": "Australian",
+      "users": 3,
+      "recipes": 11,
+      "droppedNoImage": [
+        "Carpetbag Steak"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 11
+    },
+    {
+      "cuisine": "New Zealand",
+      "users": 3,
+      "recipes": 7,
+      "droppedNoImage": [
+        "Kiwi Burger",
+        "Whitebait Fritter"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 7
+    },
+    {
+      "cuisine": "Hawaiian",
+      "users": 3,
+      "recipes": 9,
+      "droppedNoImage": [],
+      "fromMealdb": 0,
+      "fromCurated": 9
+    },
+    {
+      "cuisine": "Polynesian",
+      "users": 3,
+      "recipes": 5,
+      "droppedNoImage": [
+        "Faraoa Coco",
+        "Lu'au Stew",
+        "Panipopo",
+        "Fa'apapa"
+      ],
+      "fromMealdb": 0,
+      "fromCurated": 5
+    }
+  ]
+}

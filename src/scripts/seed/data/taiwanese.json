@@ -1,0 +1,300 @@
+{
+  "cuisine": "Taiwanese",
+  "names": {
+    "first": ["Yu-Hsuan", "Mei-Ling", "Chia-Hao", "Hsiao-Wen", "Chih-Yuan", "Ya-Ting", "Wei-Chen", "Pei-Chi", "Chien-Hung", "Hui-Chun", "Cheng-Yu", "Shu-Fen"],
+    "last": ["Chen", "Lin", "Huang", "Chang", "Lee", "Wu", "Liu", "Tsai", "Yang", "Hsu", "Wang", "Kuo"]
+  },
+  "recipes": [
+    {
+      "title": "Beef Noodle Soup",
+      "description": "Taiwanese braised beef and noodle soup in a soy-based broth with star anise, chillies and bok choy.",
+      "ingredients": [
+        {"name": "Beef shank", "quantity": 800, "unit": "g"},
+        {"name": "Beef tendon", "quantity": 400, "unit": "g"},
+        {"name": "Wheat noodles", "quantity": 500, "unit": "g"},
+        {"name": "Doubanjiang", "quantity": 3, "unit": "tbsp"},
+        {"name": "Soy sauce", "quantity": 100, "unit": "ml"},
+        {"name": "Dark soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Shaoxing wine", "quantity": 80, "unit": "ml"},
+        {"name": "Rock sugar", "quantity": 2, "unit": "tbsp"},
+        {"name": "Star anise", "quantity": 3, "unit": "pc"},
+        {"name": "Cinnamon stick", "quantity": 1, "unit": "pc"},
+        {"name": "Sichuan peppercorns", "quantity": 1, "unit": "tbsp"},
+        {"name": "Bay leaves", "quantity": 2, "unit": "pc"},
+        {"name": "Tomatoes", "quantity": 2, "unit": "pc"},
+        {"name": "Onion", "quantity": 1, "unit": "pc"},
+        {"name": "Ginger", "quantity": 40, "unit": "g"},
+        {"name": "Garlic", "quantity": 6, "unit": "pc"},
+        {"name": "Bok choy", "quantity": 200, "unit": "g"},
+        {"name": "Scallions", "quantity": 4, "unit": "pc"},
+        {"name": "Vegetable oil", "quantity": 3, "unit": "tbsp"},
+        {"name": "Water", "quantity": 3, "unit": "l"}
+      ],
+      "steps": [
+        "Parboil beef shank and tendon for 5 minutes, then drain and rinse.",
+        "Saute onion, ginger and garlic in oil; add doubanjiang and cook until red and fragrant.",
+        "Add tomato wedges and cook until softened.",
+        "Pour in soy sauce, dark soy, Shaoxing wine, rock sugar and water.",
+        "Add tied spice sachet of star anise, cinnamon, peppercorns and bay leaves.",
+        "Add beef and tendon; simmer covered for 2.5 hours until very tender.",
+        "Cook noodles in boiling water and divide between bowls with blanched bok choy.",
+        "Slice beef, top noodles with broth, beef and tendon, then garnish with scallions."
+      ],
+      "tags": ["soup", "noodles", "iconic"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 165,
+      "servings": 4
+    },
+    {
+      "title": "Bubble Tea",
+      "description": "Taiwanese tea drink with chewy tapioca pearls, brown sugar and milk, served cold over ice.",
+      "ingredients": [
+        {"name": "Tapioca pearls", "quantity": 200, "unit": "g"},
+        {"name": "Brown sugar", "quantity": 200, "unit": "g"},
+        {"name": "Black tea bags", "quantity": 4, "unit": "pc"},
+        {"name": "Milk", "quantity": 500, "unit": "ml"},
+        {"name": "Hot water", "quantity": 500, "unit": "ml"},
+        {"name": "Ice", "quantity": 500, "unit": "g"}
+      ],
+      "steps": [
+        "Boil tapioca pearls in plenty of water for 25 minutes until chewy and translucent.",
+        "Drain pearls and toss with half the brown sugar and a splash of water.",
+        "Steep black tea bags in hot water for 5 minutes, then remove and stir in remaining sugar.",
+        "Cool the sweetened tea fully.",
+        "Spoon brown sugar pearls into tall glasses, swirl up the sides for a marbled effect.",
+        "Add ice, pour in tea and milk to fill, then stir before drinking with wide straws."
+      ],
+      "tags": ["drink", "iconic", "dessert"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Lu Rou Fan",
+      "description": "Taiwanese braised pork belly rice bowl with five-spice, soy and rock sugar over steamed rice.",
+      "ingredients": [
+        {"name": "Pork belly", "quantity": 800, "unit": "g"},
+        {"name": "Shallots", "quantity": 8, "unit": "pc"},
+        {"name": "Garlic", "quantity": 6, "unit": "pc"},
+        {"name": "Soy sauce", "quantity": 100, "unit": "ml"},
+        {"name": "Dark soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Shaoxing wine", "quantity": 80, "unit": "ml"},
+        {"name": "Rock sugar", "quantity": 2, "unit": "tbsp"},
+        {"name": "Five-spice powder", "quantity": 1, "unit": "tsp"},
+        {"name": "Star anise", "quantity": 2, "unit": "pc"},
+        {"name": "White pepper", "quantity": 1, "unit": "tsp"},
+        {"name": "Eggs", "quantity": 4, "unit": "pc"},
+        {"name": "Water", "quantity": 600, "unit": "ml"},
+        {"name": "Vegetable oil", "quantity": 2, "unit": "tbsp"},
+        {"name": "Steamed rice", "quantity": 800, "unit": "g"}
+      ],
+      "steps": [
+        "Dice pork belly into small 1 cm cubes.",
+        "Fry shallots in oil until deeply golden, then remove and reserve.",
+        "Sear pork belly in the shallot oil until browned and fat is rendered.",
+        "Add garlic, then pour in soy sauce, dark soy, Shaoxing, rock sugar, five-spice, star anise and pepper.",
+        "Add water and the fried shallots, then bring to a simmer.",
+        "Cover and braise for 1 hour until pork is tender.",
+        "Hard-boil eggs, peel and add to the pot for the last 30 minutes.",
+        "Spoon braised pork over steamed rice with a halved egg and pickled mustard greens."
+      ],
+      "tags": ["pork", "rice", "iconic"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 90,
+      "servings": 4
+    },
+    {
+      "title": "Gua Bao",
+      "description": "Taiwanese steamed buns folded around braised pork belly, pickled mustard greens, peanuts and cilantro.",
+      "ingredients": [
+        {"name": "All-purpose flour", "quantity": 400, "unit": "g"},
+        {"name": "Sugar", "quantity": 40, "unit": "g"},
+        {"name": "Active dry yeast", "quantity": 1, "unit": "tsp"},
+        {"name": "Milk", "quantity": 200, "unit": "ml"},
+        {"name": "Vegetable oil", "quantity": 2, "unit": "tbsp"},
+        {"name": "Salt", "quantity": 1, "unit": "tsp"},
+        {"name": "Pork belly", "quantity": 600, "unit": "g"},
+        {"name": "Soy sauce", "quantity": 80, "unit": "ml"},
+        {"name": "Rock sugar", "quantity": 2, "unit": "tbsp"},
+        {"name": "Five-spice powder", "quantity": 0.5, "unit": "tsp"},
+        {"name": "Star anise", "quantity": 1, "unit": "pc"},
+        {"name": "Ginger", "quantity": 30, "unit": "g"},
+        {"name": "Pickled mustard greens", "quantity": 100, "unit": "g"},
+        {"name": "Roasted peanuts", "quantity": 80, "unit": "g"},
+        {"name": "Sugar", "quantity": 1, "unit": "tbsp"},
+        {"name": "Cilantro", "quantity": 1, "unit": "bunch"}
+      ],
+      "steps": [
+        "Mix flour, sugar, yeast, salt, milk and oil into a smooth dough; knead 10 minutes and rise 1 hour.",
+        "Divide dough into 8 ovals, brush with oil and fold each in half over baking paper.",
+        "Steam buns for 10 minutes over high heat until pillowy.",
+        "Sear pork belly slices, then braise in soy sauce, rock sugar, five-spice, star anise and ginger for 1 hour.",
+        "Crush peanuts with sugar to make a sweet powder.",
+        "Open each warm bun, place pork inside, top with pickled mustard greens, peanut sugar and cilantro."
+      ],
+      "tags": ["bun", "pork", "iconic"],
+      "difficulty": "medium",
+      "prepTime": 80,
+      "cookTime": 80,
+      "servings": 4
+    },
+    {
+      "title": "Oyster Omelette",
+      "description": "Taiwanese street snack of oysters in a starchy egg pancake topped with sweet-sour pink sauce.",
+      "ingredients": [
+        {"name": "Oysters", "quantity": 250, "unit": "g"},
+        {"name": "Eggs", "quantity": 4, "unit": "pc"},
+        {"name": "Sweet potato starch", "quantity": 80, "unit": "g"},
+        {"name": "Water", "quantity": 200, "unit": "ml"},
+        {"name": "Bok choy", "quantity": 150, "unit": "g"},
+        {"name": "Garlic", "quantity": 2, "unit": "pc"},
+        {"name": "Tomato sauce", "quantity": 4, "unit": "tbsp"},
+        {"name": "Miso paste", "quantity": 1, "unit": "tbsp"},
+        {"name": "Sugar", "quantity": 2, "unit": "tbsp"},
+        {"name": "Rice vinegar", "quantity": 1, "unit": "tbsp"},
+        {"name": "Cornstarch", "quantity": 1, "unit": "tbsp"},
+        {"name": "Vegetable oil", "quantity": 4, "unit": "tbsp"}
+      ],
+      "steps": [
+        "Whisk sweet potato starch with water to make a slurry.",
+        "Mix tomato sauce, miso, sugar, vinegar and cornstarch with a little water; simmer until pink and glossy.",
+        "Heat oil in a non-stick pan and place oysters in a circle.",
+        "Pour starch slurry over the oysters, swirling to a thin pancake.",
+        "Crack eggs over the top and pierce yolks gently.",
+        "When eggs are nearly set, scatter chopped bok choy and minced garlic on top.",
+        "Flip and cook briefly, then slide onto a plate and pour over the pink sauce."
+      ],
+      "tags": ["street food", "seafood", "iconic"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 2
+    },
+    {
+      "title": "Stinky Tofu",
+      "description": "Taiwanese fermented tofu, deep-fried until crisp and served with pickled cabbage and chilli sauce.",
+      "ingredients": [
+        {"name": "Stinky tofu", "quantity": 600, "unit": "g"},
+        {"name": "Vegetable oil", "quantity": 1, "unit": "l"},
+        {"name": "Cabbage", "quantity": 300, "unit": "g"},
+        {"name": "Carrot", "quantity": 1, "unit": "pc"},
+        {"name": "Rice vinegar", "quantity": 80, "unit": "ml"},
+        {"name": "Sugar", "quantity": 2, "unit": "tbsp"},
+        {"name": "Salt", "quantity": 1, "unit": "tsp"},
+        {"name": "Soy sauce", "quantity": 2, "unit": "tbsp"},
+        {"name": "Garlic", "quantity": 3, "unit": "pc"},
+        {"name": "Chilli sauce", "quantity": 3, "unit": "tbsp"},
+        {"name": "Cilantro", "quantity": 1, "unit": "bunch"}
+      ],
+      "steps": [
+        "Slice cabbage and carrot, then salt for 30 minutes; drain and toss with vinegar and sugar to pickle.",
+        "Pat stinky tofu very dry.",
+        "Heat oil to 180C in a wok or deep pan.",
+        "Carefully lower tofu into the oil and fry 5 minutes until skin is crisp and golden.",
+        "Drain on paper towels.",
+        "Whisk soy sauce, minced garlic and chilli sauce for the dip.",
+        "Slit each tofu open, stuff with pickled cabbage and top with cilantro and chilli sauce."
+      ],
+      "tags": ["street food", "fermented", "iconic"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 35,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Three Cup Chicken",
+      "description": "Taiwanese chicken braised in equal parts soy sauce, rice wine and sesame oil with garlic and basil.",
+      "ingredients": [
+        {"name": "Chicken thigh", "quantity": 1, "unit": "kg"},
+        {"name": "Sesame oil", "quantity": 80, "unit": "ml"},
+        {"name": "Soy sauce", "quantity": 80, "unit": "ml"},
+        {"name": "Rice wine", "quantity": 80, "unit": "ml"},
+        {"name": "Garlic", "quantity": 12, "unit": "pc"},
+        {"name": "Ginger", "quantity": 60, "unit": "g"},
+        {"name": "Dried red chillies", "quantity": 4, "unit": "pc"},
+        {"name": "Rock sugar", "quantity": 1, "unit": "tbsp"},
+        {"name": "Thai basil", "quantity": 1, "unit": "bunch"}
+      ],
+      "steps": [
+        "Heat sesame oil in a clay pot over low heat.",
+        "Add thick ginger slices and fry slowly until edges curl and dry out.",
+        "Add whole peeled garlic cloves and dried chillies; toast briefly.",
+        "Add bone-in chicken pieces and sear until golden.",
+        "Pour in soy sauce, rice wine and rock sugar; bring to a boil.",
+        "Cover and simmer 15 minutes until chicken is cooked and sauce reduces to a glaze.",
+        "Stir in a generous handful of Thai basil and cover off the heat for 1 minute before serving."
+      ],
+      "tags": ["chicken", "braise", "iconic"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Pineapple Cake",
+      "description": "Taiwanese buttery shortbread filled with sweet-tart pineapple jam, pressed into rectangular molds.",
+      "ingredients": [
+        {"name": "Pineapple", "quantity": 1, "unit": "kg"},
+        {"name": "Sugar", "quantity": 150, "unit": "g"},
+        {"name": "Maltose syrup", "quantity": 60, "unit": "g"},
+        {"name": "Butter", "quantity": 200, "unit": "g"},
+        {"name": "Powdered sugar", "quantity": 60, "unit": "g"},
+        {"name": "Eggs", "quantity": 1, "unit": "pc"},
+        {"name": "Egg yolks", "quantity": 2, "unit": "pc"},
+        {"name": "All-purpose flour", "quantity": 280, "unit": "g"},
+        {"name": "Milk powder", "quantity": 30, "unit": "g"},
+        {"name": "Salt", "quantity": 1, "unit": "pinch"}
+      ],
+      "steps": [
+        "Grate pineapple and squeeze out the juice; reserve flesh for jam.",
+        "Cook pineapple flesh, sugar and maltose over low heat for 1 hour, stirring until thick, dark and dry.",
+        "Cool the jam fully and roll into 12 g balls.",
+        "Cream butter and powdered sugar, then mix in eggs and yolks.",
+        "Fold in flour, milk powder and salt to make a soft dough; chill 30 minutes.",
+        "Portion 25 g of dough, flatten and wrap around a pineapple ball, then press into rectangular molds.",
+        "Bake at 170C for 20 minutes, flipping halfway, until lightly golden; cool fully before unmolding."
+      ],
+      "tags": ["dessert", "pastry", "iconic"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 100,
+      "servings": 12
+    },
+    {
+      "title": "Scallion Pancake",
+      "description": "Taiwanese flaky pan-fried flatbread layered with scallions and oil, crisp on the outside and tender within.",
+      "ingredients": [
+        {"name": "All-purpose flour", "quantity": 400, "unit": "g"},
+        {"name": "Boiling water", "quantity": 180, "unit": "ml"},
+        {"name": "Cold water", "quantity": 60, "unit": "ml"},
+        {"name": "Salt", "quantity": 1, "unit": "tsp"},
+        {"name": "Scallions", "quantity": 12, "unit": "pc"},
+        {"name": "Sesame oil", "quantity": 4, "unit": "tbsp"},
+        {"name": "Vegetable oil", "quantity": 6, "unit": "tbsp"},
+        {"name": "White pepper", "quantity": 1, "unit": "tsp"}
+      ],
+      "steps": [
+        "Pour boiling water into flour and stir, then add cold water and salt; knead until smooth.",
+        "Rest dough for 30 minutes.",
+        "Divide into 4 balls and roll each one tissue-thin.",
+        "Brush with sesame oil, sprinkle with chopped scallions, salt and pepper.",
+        "Roll up tightly into a long rope, then coil into a snail shape and rest 15 minutes.",
+        "Roll each coil into a 20 cm pancake.",
+        "Pan-fry in vegetable oil over medium heat for 3 minutes per side until deep golden and flaky.",
+        "Cut into wedges and serve hot."
+      ],
+      "tags": ["pancake", "snack", "street food"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 50,
+      "cookTime": 25,
+      "servings": 4
+    }
+  ]
+}

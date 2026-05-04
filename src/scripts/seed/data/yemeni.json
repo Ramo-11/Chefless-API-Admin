@@ -1,0 +1,290 @@
+{
+  "cuisine": "Yemeni",
+  "names": {
+    "first": ["Hamza", "Asma", "Saleh", "Iman", "Walid", "Fatima", "Tareq", "Nadia", "Ibrahim", "Salma", "Yahya", "Wedad"],
+    "last": ["Al-Sanaani", "Al-Adeni", "Al-Hadrami", "Al-Houthi", "Al-Hashidi", "Al-Bakri", "Al-Saqqaf", "Bin Mohsen", "Al-Fadhli", "Al-Mahdi"]
+  },
+  "recipes": [
+    {
+      "title": "Saltah",
+      "description": "Yemen's national dish: bubbling stew of meat and vegetables in a clay bowl, finished with frothy whipped fenugreek hilbeh.",
+      "ingredients": [
+        { "name": "lamb shoulder", "quantity": 600, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "tomato", "quantity": 4, "unit": "pc" },
+        { "name": "potato", "quantity": 2, "unit": "pc" },
+        { "name": "carrot", "quantity": 2, "unit": "pc" },
+        { "name": "courgette", "quantity": 1, "unit": "pc" },
+        { "name": "fenugreek seeds", "quantity": 3, "unit": "tbsp" },
+        { "name": "cilantro", "quantity": 1, "unit": "bunch" },
+        { "name": "garlic clove", "quantity": 4, "unit": "pc" },
+        { "name": "green chili", "quantity": 2, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "ground coriander", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak fenugreek seeds in water for at least 4 hours, then drain and whip vigorously with a fork until pale and frothy.",
+        "Blend the whipped fenugreek with cilantro, garlic, green chili, salt, and a tablespoon of cold water into hilbeh.",
+        "Brown cubed lamb in oil with chopped onion until caramelized.",
+        "Stir in tomato paste, cumin, and coriander; cook 1 minute.",
+        "Add chopped tomatoes, salt, and 1 liter water; simmer 1 hour until lamb is tender.",
+        "Add cubed potato, carrot, and courgette; cook 20 minutes more.",
+        "Transfer the stew to individual clay bowls and bring to a hard boil over the flame.",
+        "Spoon the hilbeh foam over the bubbling stew at the table and serve immediately with bread."
+      ],
+      "tags": ["yemeni", "stew", "lamb", "national dish"],
+      "difficulty": "medium",
+      "prepTime": 240,
+      "cookTime": 100,
+      "servings": 4
+    },
+    {
+      "title": "Mandi",
+      "description": "Yemeni smoky rice and chicken or lamb cooked together with cardamom and dried lime, finished with charcoal smoke.",
+      "ingredients": [
+        { "name": "lamb shoulder", "quantity": 1.2, "unit": "kg" },
+        { "name": "basmati rice", "quantity": 500, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "ground cardamom", "quantity": 1, "unit": "tbsp" },
+        { "name": "dried lime", "quantity": 2, "unit": "pc" },
+        { "name": "saffron threads", "quantity": 1, "unit": "pinch" },
+        { "name": "ghee", "quantity": 60, "unit": "g" },
+        { "name": "raisins", "quantity": 50, "unit": "g" },
+        { "name": "almonds", "quantity": 50, "unit": "g" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Rub lamb with cardamom, salt, and oil; rest 1 hour.",
+        "Place lamb on a rack inside a deep covered tray with 500 ml water and dried limes.",
+        "Roast at 160C for 3 hours until very tender.",
+        "Light a piece of charcoal until red, place in a heatproof bowl in the tray, drizzle with oil, and seal foil 5 minutes; remove.",
+        "Soak rice 30 minutes; bloom saffron in 3 tablespoons hot water.",
+        "Bring 1 liter of the lamb cooking juices to a boil with ghee and salt; add drained rice and saffron.",
+        "Simmer covered on lowest heat for 20 minutes until rice is tender.",
+        "Plate the rice and arrange the smoked lamb on top with toasted almonds and raisins."
+      ],
+      "tags": ["yemeni", "lamb", "rice", "smoked"],
+      "difficulty": "hard",
+      "prepTime": 70,
+      "cookTime": 200,
+      "servings": 6
+    },
+    {
+      "title": "Fahsa",
+      "description": "Yemeni clay-pot bubbling stew of shredded lamb in spiced broth, lifted with a final swirl of fenugreek hilbeh.",
+      "ingredients": [
+        { "name": "lamb shoulder", "quantity": 700, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "tomato", "quantity": 3, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "garlic clove", "quantity": 4, "unit": "pc" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "ground coriander", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cardamom", "quantity": 0.5, "unit": "tsp" },
+        { "name": "fenugreek seeds", "quantity": 2, "unit": "tbsp" },
+        { "name": "cilantro", "quantity": 1, "unit": "bunch" },
+        { "name": "green chili", "quantity": 2, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak fenugreek seeds in water for 4 hours, then drain and whip with a fork until frothy.",
+        "Blend whipped fenugreek with cilantro, garlic, chili, and salt to make hilbeh.",
+        "Brown cubed lamb in oil with chopped onion until deep golden.",
+        "Stir in tomato paste, cumin, coriander, and cardamom.",
+        "Add chopped tomatoes, salt, and 1 liter water; simmer 1.5 hours until very tender.",
+        "Shred the lamb in the pot using two forks.",
+        "Pour the bubbling stew into clay bowls and place over the flame until furiously boiling.",
+        "Spoon the hilbeh foam over the top at the table; serve with malooga bread."
+      ],
+      "tags": ["yemeni", "stew", "lamb", "fenugreek"],
+      "difficulty": "medium",
+      "prepTime": 240,
+      "cookTime": 110,
+      "servings": 4
+    },
+    {
+      "title": "Bint al-Sahn",
+      "description": "Yemeni honey cake of paper-thin layered dough soaked in butter, baked golden, and drizzled with honey and nigella.",
+      "ingredients": [
+        { "name": "all purpose flour", "quantity": 500, "unit": "g" },
+        { "name": "egg", "quantity": 4, "unit": "pc" },
+        { "name": "instant yeast", "quantity": 1, "unit": "tsp" },
+        { "name": "warm water", "quantity": 100, "unit": "ml" },
+        { "name": "ghee", "quantity": 250, "unit": "g" },
+        { "name": "honey", "quantity": 200, "unit": "ml" },
+        { "name": "nigella seeds", "quantity": 1, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Whisk eggs, yeast, salt, and warm water; mix into the flour and knead 10 minutes into a smooth elastic dough.",
+        "Rest the dough covered for 30 minutes.",
+        "Divide into 16 small balls and oil generously with ghee; rest 20 minutes.",
+        "Stretch each ball paper-thin with oiled hands.",
+        "Layer 4 sheets in an oiled round tray, brushing each with melted ghee, to make one cake.",
+        "Repeat to make 4 stacked cakes in the tray.",
+        "Bake at 200C for 20 minutes until deep golden and crisp.",
+        "Drizzle hot cakes with melted ghee and honey, then sprinkle with nigella seeds before serving."
+      ],
+      "tags": ["yemeni", "dessert", "honey", "pastry"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 25,
+      "servings": 8
+    },
+    {
+      "title": "Aseed",
+      "description": "Yemeni stiff wheat flour dough served as a savory mound, scooped with meat broth and topped with hilbeh or honey.",
+      "ingredients": [
+        { "name": "whole wheat flour", "quantity": 400, "unit": "g" },
+        { "name": "water", "quantity": 600, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "lamb broth", "quantity": 400, "unit": "ml" },
+        { "name": "ghee", "quantity": 60, "unit": "g" },
+        { "name": "honey", "quantity": 60, "unit": "ml" }
+      ],
+      "steps": [
+        "Bring water and salt to a rolling boil in a heavy pot.",
+        "Pour in the flour all at once and immediately beat hard with a sturdy wooden spoon.",
+        "Continue beating over low heat for 15 minutes until very thick, glossy, and pulling away from the pan.",
+        "Wet hands and shape into a smooth mound on a serving plate.",
+        "Make a well in the top with the back of a spoon.",
+        "Pour hot lamb broth and melted ghee into the well, or honey for the sweet version.",
+        "Pull pieces from the mound and dip into the broth or honey to eat."
+      ],
+      "tags": ["yemeni", "porridge", "wheat"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 5,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Shafut",
+      "description": "Cool Yemeni summer dish of layered flatbread soaked in spiced buttermilk with mint, garlic, and chili.",
+      "ingredients": [
+        { "name": "lahoh bread", "quantity": 4, "unit": "pc" },
+        { "name": "buttermilk", "quantity": 600, "unit": "ml" },
+        { "name": "yogurt", "quantity": 200, "unit": "g" },
+        { "name": "fresh mint", "quantity": 1, "unit": "bunch" },
+        { "name": "cilantro", "quantity": 1, "unit": "bunch" },
+        { "name": "garlic clove", "quantity": 2, "unit": "pc" },
+        { "name": "green chili", "quantity": 1, "unit": "pc" },
+        { "name": "spring onion", "quantity": 3, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Blend buttermilk and yogurt with chopped mint, cilantro, garlic, chili, and salt until pale green.",
+        "Tear lahoh into rough pieces and arrange in the bottom of a wide bowl.",
+        "Pour the green buttermilk over the bread and let soak 5 minutes.",
+        "Top with sliced spring onions and extra mint.",
+        "Chill thoroughly before serving."
+      ],
+      "tags": ["yemeni", "cold", "yogurt", "summer"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 0,
+      "servings": 4
+    },
+    {
+      "title": "Zurbian",
+      "description": "Yemeni biryani-style layered rice with marinated lamb, saffron, and crispy fried potatoes; festival celebration food.",
+      "ingredients": [
+        { "name": "lamb shoulder", "quantity": 1, "unit": "kg" },
+        { "name": "basmati rice", "quantity": 500, "unit": "g" },
+        { "name": "yogurt", "quantity": 200, "unit": "g" },
+        { "name": "onion", "quantity": 3, "unit": "pc" },
+        { "name": "tomato", "quantity": 3, "unit": "pc" },
+        { "name": "potato", "quantity": 3, "unit": "pc" },
+        { "name": "saffron threads", "quantity": 1, "unit": "pinch" },
+        { "name": "ground cardamom", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cinnamon", "quantity": 1, "unit": "tsp" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "garlic clove", "quantity": 4, "unit": "pc" },
+        { "name": "vegetable oil", "quantity": 150, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Marinate lamb with yogurt, garlic, turmeric, cardamom, cinnamon, and salt for 4 hours.",
+        "Bloom saffron in 3 tablespoons hot water.",
+        "Fry sliced potatoes in oil until golden; drain.",
+        "Caramelize sliced onions in the same oil for 25 minutes until deep brown.",
+        "Cook the marinated lamb with chopped tomatoes and 500 ml water for 1.5 hours until tender.",
+        "Boil rice in salted water for 6 minutes until al dente; drain.",
+        "Layer rice, lamb, fried potato, and onions in a heavy pot; drizzle saffron water over the top.",
+        "Cover tightly and dum cook on lowest heat for 30 minutes; rest 10 minutes before serving."
+      ],
+      "tags": ["yemeni", "rice", "lamb", "festival"],
+      "difficulty": "hard",
+      "prepTime": 240,
+      "cookTime": 150,
+      "servings": 8
+    },
+    {
+      "title": "Salata Hadhramautia",
+      "description": "Yemeni Hadhrami salad of tomato, cucumber, and onion in a tangy yogurt and lemon dressing with fresh herbs.",
+      "ingredients": [
+        { "name": "tomato", "quantity": 4, "unit": "pc" },
+        { "name": "cucumber", "quantity": 2, "unit": "pc" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "yogurt", "quantity": 200, "unit": "g" },
+        { "name": "lemon", "quantity": 1, "unit": "pc" },
+        { "name": "cilantro", "quantity": 1, "unit": "bunch" },
+        { "name": "fresh mint", "quantity": 0.5, "unit": "bunch" },
+        { "name": "garlic clove", "quantity": 1, "unit": "pc" },
+        { "name": "olive oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Dice tomatoes, cucumber, and onion finely.",
+        "Whisk yogurt, lemon juice, grated garlic, olive oil, and salt into a dressing.",
+        "Toss the diced vegetables with chopped cilantro and mint.",
+        "Pour over the dressing and stir gently.",
+        "Chill 15 minutes and serve cold with grilled meat or rice."
+      ],
+      "tags": ["yemeni", "salad", "yogurt"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 0,
+      "servings": 4
+    },
+    {
+      "title": "Bajiya",
+      "description": "Yemeni-Hadhrami spiced lentil and onion fritters, deep fried into crispy savory snacks for Ramadan iftar.",
+      "ingredients": [
+        { "name": "yellow split peas", "quantity": 250, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "garlic clove", "quantity": 4, "unit": "pc" },
+        { "name": "green chili", "quantity": 2, "unit": "pc" },
+        { "name": "cilantro", "quantity": 1, "unit": "bunch" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "ground coriander", "quantity": 1, "unit": "tsp" },
+        { "name": "baking soda", "quantity": 0.5, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 1, "unit": "l" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak yellow split peas overnight, then drain.",
+        "Pulse split peas with chopped onion, garlic, chili, cilantro, cumin, coriander, baking soda, and salt to a coarse paste.",
+        "Rest the mixture for 15 minutes.",
+        "Heat oil to 180C.",
+        "Drop tablespoon-size scoops of the batter into the oil.",
+        "Fry for 4 minutes until deep golden and crisp.",
+        "Drain on paper and serve hot with sahawiq chili sauce."
+      ],
+      "tags": ["yemeni", "fried", "ramadan", "vegan"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 720,
+      "cookTime": 20,
+      "servings": 6
+    }
+  ]
+}

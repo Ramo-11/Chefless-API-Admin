@@ -1,0 +1,300 @@
+{
+  "cuisine": "Algerian",
+  "names": {
+    "first": ["Karim", "Yasmine", "Younes", "Amina", "Riad", "Nawel", "Idir", "Lila", "Said", "Khadija", "Mourad", "Samira"],
+    "last": ["Boumediene", "Bouteflika", "Belkacem", "Hamidi", "Bensalem", "Ait Ahmed", "Khelil", "Saadi", "Zerouali", "Cherif"]
+  },
+  "recipes": [
+    {
+      "title": "Couscous",
+      "description": "Algerian Friday couscous of fluffy steamed semolina topped with lamb, chickpeas, and a saffron-tinted vegetable broth.",
+      "ingredients": [
+        { "name": "couscous", "quantity": 500, "unit": "g" },
+        { "name": "lamb shoulder", "quantity": 800, "unit": "g" },
+        { "name": "chickpeas", "quantity": 200, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "carrot", "quantity": 4, "unit": "pc" },
+        { "name": "turnip", "quantity": 2, "unit": "pc" },
+        { "name": "courgette", "quantity": 3, "unit": "pc" },
+        { "name": "potato", "quantity": 2, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "ras el hanout", "quantity": 1, "unit": "tbsp" },
+        { "name": "saffron threads", "quantity": 1, "unit": "pinch" },
+        { "name": "olive oil", "quantity": 80, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Soak chickpeas overnight, then drain.",
+        "Brown cubed lamb in olive oil with chopped onions; stir in tomato paste, ras el hanout, and saffron.",
+        "Add chickpeas, salt, and 2 liters water; simmer 1 hour.",
+        "Moisten couscous with cold salted water, rake with fingers, and steam over the broth in a couscoussier for 20 minutes.",
+        "Tip into a tray, drizzle with oil, and rake again to separate; steam another 20 minutes.",
+        "Add chunks of carrot, turnip, and potato to the broth; simmer 20 minutes.",
+        "Add courgette and cook 10 more minutes until vegetables are just tender.",
+        "Steam couscous a final 15 minutes; mound on a platter, top with meat and vegetables, and ladle the broth over."
+      ],
+      "tags": ["algerian", "couscous", "lamb", "national dish"],
+      "difficulty": "hard",
+      "prepTime": 720,
+      "cookTime": 130,
+      "servings": 8
+    },
+    {
+      "title": "Chorba Frik",
+      "description": "Algerian Ramadan soup of cracked freekeh wheat, lamb, tomato, and chickpeas, perfumed with cinnamon and mint.",
+      "ingredients": [
+        { "name": "freekeh", "quantity": 200, "unit": "g" },
+        { "name": "lamb shoulder", "quantity": 400, "unit": "g" },
+        { "name": "chickpeas", "quantity": 100, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "tomato", "quantity": 3, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "celery", "quantity": 2, "unit": "pc" },
+        { "name": "ground cinnamon", "quantity": 1, "unit": "tsp" },
+        { "name": "ras el hanout", "quantity": 1, "unit": "tsp" },
+        { "name": "fresh mint", "quantity": 1, "unit": "bunch" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak chickpeas overnight, then drain.",
+        "Brown cubed lamb in olive oil with chopped onion and celery.",
+        "Stir in tomato paste, cinnamon, and ras el hanout; cook 1 minute.",
+        "Add chopped tomatoes, soaked chickpeas, salt, and 2 liters water; simmer 1 hour.",
+        "Rinse freekeh and add to the pot; cook 30 minutes until tender.",
+        "Adjust salt and add hot water if too thick.",
+        "Stir in chopped mint and serve hot with lemon for iftar."
+      ],
+      "tags": ["algerian", "ramadan", "soup", "freekeh"],
+      "difficulty": "easy",
+      "prepTime": 720,
+      "cookTime": 110,
+      "servings": 6
+    },
+    {
+      "title": "Rechta",
+      "description": "Algerian hand-cut fresh egg noodles steamed and tossed with chicken, chickpeas, and turnip in a cinnamon broth.",
+      "ingredients": [
+        { "name": "all purpose flour", "quantity": 400, "unit": "g" },
+        { "name": "egg", "quantity": 2, "unit": "pc" },
+        { "name": "chicken thighs", "quantity": 600, "unit": "g" },
+        { "name": "chickpeas", "quantity": 150, "unit": "g" },
+        { "name": "turnip", "quantity": 3, "unit": "pc" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "ground cinnamon", "quantity": 1, "unit": "tsp" },
+        { "name": "ground white pepper", "quantity": 0.5, "unit": "tsp" },
+        { "name": "olive oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "butter", "quantity": 30, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak chickpeas overnight, then drain.",
+        "Knead flour, eggs, salt, and a little water into a stiff dough; rest 30 minutes.",
+        "Roll the dough as thinly as possible and cut into long thin noodles; toss with flour to prevent sticking.",
+        "Brown chicken with chopped onion in olive oil, then add cinnamon and white pepper.",
+        "Add chickpeas, salt, and 1.5 liters water; simmer 45 minutes.",
+        "Add cubed turnip and cook 20 minutes more.",
+        "Steam the rechta noodles over the broth in a couscoussier for 15 minutes, then toss with butter.",
+        "Mound the noodles on a platter, top with chicken, chickpeas, and turnip, and ladle over the cinnamon broth."
+      ],
+      "tags": ["algerian", "noodles", "chicken", "festive"],
+      "difficulty": "hard",
+      "prepTime": 720,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Mhajeb",
+      "description": "Algerian semolina flatbread folded around tomato, onion, and pepper filling, then pan-cooked until crisp and flaky.",
+      "ingredients": [
+        { "name": "fine semolina", "quantity": 400, "unit": "g" },
+        { "name": "all purpose flour", "quantity": 100, "unit": "g" },
+        { "name": "warm water", "quantity": 300, "unit": "ml" },
+        { "name": "olive oil", "quantity": 100, "unit": "ml" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "tomato", "quantity": 3, "unit": "pc" },
+        { "name": "red bell pepper", "quantity": 1, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "paprika", "quantity": 1, "unit": "tsp" },
+        { "name": "harissa", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Mix semolina, flour, salt, and water into a soft dough; knead 10 minutes and rest in oil for 30 minutes.",
+        "Sauté chopped onion in olive oil until soft; add chopped pepper, cumin, paprika, and harissa.",
+        "Stir in chopped tomatoes and tomato paste; simmer 15 minutes until thick and dry. Cool completely.",
+        "Divide dough into 8 balls and oil generously; let rest another 15 minutes.",
+        "Stretch each ball paper-thin on a well-oiled surface.",
+        "Spoon a portion of cooled filling in the center, fold all four sides over to form a square parcel.",
+        "Cook on a hot dry skillet for 3 minutes per side until crisp and golden.",
+        "Serve hot with mint tea."
+      ],
+      "tags": ["algerian", "flatbread", "vegan", "stuffed"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 70,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Chakhchoukha",
+      "description": "Algerian Aurès dish of torn flat bread tossed in a spiced lamb and chickpea tomato stew until soft and saturated.",
+      "ingredients": [
+        { "name": "all purpose flour", "quantity": 400, "unit": "g" },
+        { "name": "warm water", "quantity": 250, "unit": "ml" },
+        { "name": "lamb shoulder", "quantity": 700, "unit": "g" },
+        { "name": "chickpeas", "quantity": 150, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "tomato", "quantity": 3, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 3, "unit": "tbsp" },
+        { "name": "ras el hanout", "quantity": 1, "unit": "tbsp" },
+        { "name": "harissa", "quantity": 1, "unit": "tbsp" },
+        { "name": "olive oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "ghee", "quantity": 30, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Soak chickpeas overnight, then drain.",
+        "Knead flour, salt, and water into a soft dough; divide into balls and stretch each into a thin disc.",
+        "Cook the discs on a dry skillet for 2 minutes per side until just set; stack and cool.",
+        "Brown cubed lamb in olive oil with chopped onions; stir in tomato paste, ras el hanout, and harissa.",
+        "Add chopped tomatoes, chickpeas, salt, and 1.5 liters water; simmer 1.5 hours until very tender.",
+        "Tear the bread discs into rough small pieces.",
+        "Pile the bread on a platter, ladle the stew over to soak, and toss gently to coat.",
+        "Top with extra meat and chickpeas and a drizzle of ghee."
+      ],
+      "tags": ["algerian", "stew", "lamb", "bread"],
+      "difficulty": "hard",
+      "prepTime": 720,
+      "cookTime": 120,
+      "servings": 6
+    },
+    {
+      "title": "Bourek",
+      "description": "Algerian crispy fried cigar pastries of thin dough wrapped around minced meat, onion, and parsley, sealed with egg.",
+      "ingredients": [
+        { "name": "brik pastry", "quantity": 12, "unit": "pc" },
+        { "name": "minced beef", "quantity": 400, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "parsley", "quantity": 1, "unit": "bunch" },
+        { "name": "egg", "quantity": 2, "unit": "pc" },
+        { "name": "ground cinnamon", "quantity": 0.5, "unit": "tsp" },
+        { "name": "ras el hanout", "quantity": 1, "unit": "tsp" },
+        { "name": "grated cheese", "quantity": 80, "unit": "g" },
+        { "name": "vegetable oil", "quantity": 500, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "lemon", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Brown minced beef with chopped onion, ras el hanout, cinnamon, salt, and pepper until dry.",
+        "Stir in chopped parsley off the heat; cool completely.",
+        "Lay a brik sheet on the work surface and place a tablespoon of filling in a strip near one edge.",
+        "Sprinkle a little cheese, fold sides in, and roll into a tight cigar.",
+        "Brush the edge with beaten egg to seal.",
+        "Heat oil to 180C and fry borek in batches for 3 minutes until deep golden.",
+        "Drain on paper and serve hot with lemon wedges."
+      ],
+      "tags": ["algerian", "fried", "ramadan", "beef"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 15,
+      "servings": 6
+    },
+    {
+      "title": "Loubia",
+      "description": "Algerian white bean stew slow-simmered with tomato, garlic, paprika, and cumin, finished with olive oil and parsley.",
+      "ingredients": [
+        { "name": "white beans", "quantity": 300, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "tomato", "quantity": 3, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "garlic clove", "quantity": 4, "unit": "pc" },
+        { "name": "paprika", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "harissa", "quantity": 1, "unit": "tsp" },
+        { "name": "olive oil", "quantity": 80, "unit": "ml" },
+        { "name": "parsley", "quantity": 1, "unit": "bunch" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak beans overnight, then drain.",
+        "Sauté chopped onion in olive oil until soft, then add minced garlic.",
+        "Stir in tomato paste, paprika, cumin, and harissa; cook 1 minute.",
+        "Add chopped tomatoes, soaked beans, salt, and 1.5 liters water.",
+        "Simmer covered for 1.5 hours until beans are creamy and the broth has thickened.",
+        "Reduce uncovered for 10 minutes if too thin.",
+        "Drizzle with extra olive oil and shower with chopped parsley before serving with crusty bread."
+      ],
+      "tags": ["algerian", "stew", "beans", "vegan"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 720,
+      "cookTime": 100,
+      "servings": 6
+    },
+    {
+      "title": "Makroudh",
+      "description": "Algerian semolina diamonds stuffed with date paste, fried, and dipped in honey scented with orange blossom.",
+      "ingredients": [
+        { "name": "fine semolina", "quantity": 500, "unit": "g" },
+        { "name": "ghee", "quantity": 150, "unit": "g" },
+        { "name": "warm water", "quantity": 200, "unit": "ml" },
+        { "name": "pitted dates", "quantity": 400, "unit": "g" },
+        { "name": "ground cinnamon", "quantity": 1, "unit": "tsp" },
+        { "name": "orange blossom water", "quantity": 2, "unit": "tbsp" },
+        { "name": "honey", "quantity": 250, "unit": "ml" },
+        { "name": "vegetable oil", "quantity": 1, "unit": "l" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Rub semolina with melted ghee and salt until sandy; rest 1 hour.",
+        "Add warm water and 1 tablespoon orange blossom water; knead just until it holds.",
+        "Mash dates with cinnamon and 1 tablespoon orange blossom water into a smooth paste.",
+        "Roll dough into long ropes; lay a rope of date paste down the center, fold over, and seal.",
+        "Cut on the diagonal into small diamonds and press a pattern with a fork.",
+        "Fry in 170C oil for 3 minutes until pale gold.",
+        "Warm honey with the remaining orange blossom water and dip the hot pastries to coat.",
+        "Drain on a rack and let the syrup set before serving with mint tea."
+      ],
+      "tags": ["algerian", "dessert", "dates", "fried"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 90,
+      "cookTime": 25,
+      "servings": 12
+    },
+    {
+      "title": "Shakshouka",
+      "description": "Algerian skillet of peppers and tomatoes simmered with garlic and harissa, finished with eggs poached on top.",
+      "ingredients": [
+        { "name": "tomato", "quantity": 6, "unit": "pc" },
+        { "name": "red bell pepper", "quantity": 2, "unit": "pc" },
+        { "name": "green pepper", "quantity": 2, "unit": "pc" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic clove", "quantity": 4, "unit": "pc" },
+        { "name": "harissa", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "paprika", "quantity": 1, "unit": "tsp" },
+        { "name": "egg", "quantity": 6, "unit": "pc" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "parsley", "quantity": 1, "unit": "bunch" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Sauté chopped onion and peppers in olive oil for 10 minutes until softened and beginning to char.",
+        "Add minced garlic, cumin, paprika, and harissa; cook 30 seconds.",
+        "Stir in chopped tomatoes and salt and simmer 15 minutes until thickened.",
+        "Make 6 wells in the sauce and crack an egg into each.",
+        "Cover and cook on low heat for 6 minutes until whites are set but yolks remain runny.",
+        "Scatter chopped parsley and serve straight from the pan with crusty bread."
+      ],
+      "tags": ["algerian", "breakfast", "eggs", "harissa"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 25,
+      "servings": 4
+    }
+  ]
+}

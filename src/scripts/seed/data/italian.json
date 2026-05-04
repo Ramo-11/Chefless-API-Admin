@@ -1,0 +1,693 @@
+{
+  "cuisine": "Italian",
+  "names": {
+    "first": ["Marco", "Giulia", "Lorenzo", "Francesca", "Matteo", "Chiara", "Alessandro", "Sofia", "Luca", "Martina", "Giovanni", "Beatrice"],
+    "last": ["Rossi", "Russo", "Ferrari", "Esposito", "Bianchi", "Romano", "Colombo", "Ricci", "Marino", "Greco", "Bruno", "Conti"]
+  },
+  "recipes": [
+    {
+      "title": "Spaghetti alla Carbonara",
+      "description": "Roman pasta with guanciale, eggs, Pecorino Romano and black pepper. No cream.",
+      "ingredients": [
+        { "name": "spaghetti", "quantity": 400, "unit": "g" },
+        { "name": "guanciale", "quantity": 200, "unit": "g" },
+        { "name": "egg yolks", "quantity": 4, "unit": "pc" },
+        { "name": "whole egg", "quantity": 1, "unit": "pc" },
+        { "name": "Pecorino Romano, grated", "quantity": 100, "unit": "g" },
+        { "name": "black pepper, freshly ground", "quantity": 2, "unit": "tsp" },
+        { "name": "salt for pasta water", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Bring a large pot of salted water to a rolling boil and cook the spaghetti until al dente.",
+        "While the pasta cooks, cut the guanciale into thick strips and render it in a cold dry pan over medium heat until crisp and golden.",
+        "In a bowl, whisk the egg yolks, whole egg, grated Pecorino and a generous amount of black pepper into a thick paste.",
+        "Reserve one cup of starchy pasta water, then drain the spaghetti and tip it into the pan with the guanciale off the heat.",
+        "Pour in the egg mixture and toss vigorously, adding splashes of pasta water until a glossy, creamy sauce coats every strand.",
+        "Serve immediately with extra Pecorino and a final crack of black pepper."
+      ],
+      "tags": ["pasta", "roman", "classic", "dinner"],
+      "difficulty": "medium",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Lasagna alla Bolognese",
+      "description": "Layered pasta with slow-cooked ragù, béchamel and Parmigiano, baked golden.",
+      "ingredients": [
+        { "name": "lasagna sheets", "quantity": 500, "unit": "g" },
+        { "name": "ground beef", "quantity": 400, "unit": "g" },
+        { "name": "ground pork", "quantity": 200, "unit": "g" },
+        { "name": "onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "carrot, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "celery stalk, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "tomato passata", "quantity": 700, "unit": "ml" },
+        { "name": "whole milk", "quantity": 1, "unit": "l" },
+        { "name": "butter", "quantity": 100, "unit": "g" },
+        { "name": "flour", "quantity": 100, "unit": "g" },
+        { "name": "Parmigiano Reggiano, grated", "quantity": 150, "unit": "g" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Sweat the onion, carrot and celery in olive oil until soft, then brown the beef and pork until any liquid evaporates.",
+        "Stir in the passata, season, and simmer the ragù gently for at least 90 minutes until rich and thick.",
+        "Make the béchamel by melting butter, whisking in flour, then slowly adding warm milk and cooking until silky.",
+        "Spread a thin layer of ragù in a baking dish, top with pasta sheets, then ragù, béchamel and Parmigiano.",
+        "Repeat the layers until everything is used, finishing with béchamel and a generous shower of cheese.",
+        "Bake at 180°C for 35 minutes until bubbling and golden, then rest 10 minutes before slicing."
+      ],
+      "tags": ["pasta", "baked", "comfort", "weekend"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 130,
+      "servings": 8
+    },
+    {
+      "title": "Risotto alla Milanese",
+      "description": "Creamy saffron risotto from Milan, finished with butter and Parmigiano.",
+      "ingredients": [
+        { "name": "Carnaroli rice", "quantity": 320, "unit": "g" },
+        { "name": "beef stock, hot", "quantity": 1.2, "unit": "l" },
+        { "name": "saffron threads", "quantity": 1, "unit": "pinch" },
+        { "name": "shallot, minced", "quantity": 1, "unit": "pc" },
+        { "name": "dry white wine", "quantity": 100, "unit": "ml" },
+        { "name": "butter", "quantity": 80, "unit": "g" },
+        { "name": "Parmigiano Reggiano, grated", "quantity": 80, "unit": "g" },
+        { "name": "bone marrow (optional)", "quantity": 30, "unit": "g" }
+      ],
+      "steps": [
+        "Steep the saffron in a small ladle of hot stock and set aside.",
+        "Sweat the shallot in half the butter until translucent, then add the rice and toast for two minutes.",
+        "Pour in the wine and stir until absorbed, then begin adding hot stock one ladle at a time, stirring constantly.",
+        "After about 15 minutes, stir in the saffron infusion and continue cooking until the rice is al dente.",
+        "Off the heat, beat in the remaining cold butter and the Parmigiano vigorously to create the mantecatura.",
+        "Cover for two minutes, then serve on warm plates so it spreads in a wave."
+      ],
+      "tags": ["rice", "milanese", "primo"],
+      "difficulty": "medium",
+      "prepTime": 10,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Osso Buco alla Milanese",
+      "description": "Braised veal shanks with white wine, broth and gremolata.",
+      "ingredients": [
+        { "name": "veal shanks, cross-cut", "quantity": 4, "unit": "pc" },
+        { "name": "flour for dusting", "quantity": 50, "unit": "g" },
+        { "name": "onion, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "carrot, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "celery stalk, chopped", "quantity": 1, "unit": "pc" },
+        { "name": "dry white wine", "quantity": 200, "unit": "ml" },
+        { "name": "beef stock", "quantity": 500, "unit": "ml" },
+        { "name": "lemon zest", "quantity": 1, "unit": "tbsp" },
+        { "name": "garlic, minced", "quantity": 1, "unit": "tsp" },
+        { "name": "parsley, chopped", "quantity": 3, "unit": "tbsp" },
+        { "name": "butter", "quantity": 50, "unit": "g" },
+        { "name": "olive oil", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Tie each veal shank with kitchen twine, season and dust with flour.",
+        "Brown the shanks in butter and oil on both sides, then remove from the pan.",
+        "Soften the onion, carrot and celery in the same pot, then deglaze with the white wine.",
+        "Return the shanks to the pot, add the stock, cover and braise gently for 2 hours until fork tender.",
+        "Combine lemon zest, garlic and parsley to make the gremolata.",
+        "Serve the shanks with the pan sauce and a generous spoon of gremolata, traditionally alongside risotto alla Milanese."
+      ],
+      "tags": ["veal", "braise", "milanese", "winter"],
+      "difficulty": "hard",
+      "prepTime": 20,
+      "cookTime": 130,
+      "servings": 4
+    },
+    {
+      "title": "Tiramisu",
+      "description": "Layered dessert of espresso-soaked savoiardi, mascarpone cream and cocoa.",
+      "ingredients": [
+        { "name": "savoiardi ladyfingers", "quantity": 300, "unit": "g" },
+        { "name": "mascarpone", "quantity": 500, "unit": "g" },
+        { "name": "egg yolks", "quantity": 4, "unit": "pc" },
+        { "name": "egg whites", "quantity": 4, "unit": "pc" },
+        { "name": "caster sugar", "quantity": 100, "unit": "g" },
+        { "name": "strong espresso, cooled", "quantity": 400, "unit": "ml" },
+        { "name": "Marsala wine", "quantity": 30, "unit": "ml" },
+        { "name": "unsweetened cocoa powder", "quantity": 3, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Whisk the yolks with sugar over a bain-marie until pale and ribbon-like.",
+        "Fold the mascarpone gently into the yolk mixture until smooth.",
+        "Whip the egg whites to firm peaks and fold into the mascarpone cream.",
+        "Combine the espresso and Marsala in a shallow dish and dip each ladyfinger briefly so it stays firm.",
+        "Layer soaked ladyfingers and cream alternately in a dish, finishing with cream.",
+        "Refrigerate at least 6 hours, then dust generously with cocoa powder before serving."
+      ],
+      "tags": ["dessert", "no-bake", "classic"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 0,
+      "servings": 8
+    },
+    {
+      "title": "Pizza Margherita",
+      "description": "Naples classic: thin crust, San Marzano, fior di latte, basil and olive oil.",
+      "ingredients": [
+        { "name": "00 flour", "quantity": 500, "unit": "g" },
+        { "name": "water", "quantity": 325, "unit": "ml" },
+        { "name": "fresh yeast", "quantity": 2, "unit": "g" },
+        { "name": "salt", "quantity": 10, "unit": "g" },
+        { "name": "San Marzano tomatoes, crushed", "quantity": 400, "unit": "g" },
+        { "name": "fior di latte mozzarella", "quantity": 250, "unit": "g" },
+        { "name": "fresh basil leaves", "quantity": 1, "unit": "bunch" },
+        { "name": "extra virgin olive oil", "quantity": 4, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Dissolve the yeast in water, mix with flour and salt, and knead 10 minutes until smooth.",
+        "Cover and rise at room temperature for 2 hours, then divide into 250 g balls and rest 4 hours more.",
+        "Preheat oven and stone to the highest setting, ideally 280°C, for at least 45 minutes.",
+        "Stretch each ball gently by hand into a thin disc with a thicker rim.",
+        "Top with crushed tomato, torn mozzarella, a drizzle of olive oil and a pinch of salt.",
+        "Bake on the stone 6-8 minutes until the crust is blistered, then finish with fresh basil leaves."
+      ],
+      "tags": ["pizza", "neapolitan", "classic"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 360,
+      "cookTime": 8,
+      "servings": 4
+    },
+    {
+      "title": "Spaghetti alla Bolognese",
+      "description": "Long-simmered meat ragù with vegetables, wine and tomato over pasta.",
+      "ingredients": [
+        { "name": "spaghetti or tagliatelle", "quantity": 400, "unit": "g" },
+        { "name": "ground beef", "quantity": 500, "unit": "g" },
+        { "name": "pancetta, diced", "quantity": 100, "unit": "g" },
+        { "name": "onion, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "carrot, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "celery stalk, finely chopped", "quantity": 1, "unit": "pc" },
+        { "name": "tomato passata", "quantity": 500, "unit": "ml" },
+        { "name": "red wine", "quantity": 200, "unit": "ml" },
+        { "name": "whole milk", "quantity": 200, "unit": "ml" },
+        { "name": "olive oil", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Render the pancetta in oil, then sweat the soffritto of onion, carrot and celery until softened.",
+        "Add the beef and brown thoroughly, breaking it up with a spoon.",
+        "Pour in the wine and let it reduce, then add the milk and simmer until evaporated.",
+        "Stir in the passata, season, and cook uncovered on the lowest heat for 2-3 hours.",
+        "Cook the pasta in salted water until al dente and drain.",
+        "Toss the pasta with the ragù, finishing with grated Parmigiano."
+      ],
+      "tags": ["pasta", "ragù", "comfort"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 180,
+      "servings": 4
+    },
+    {
+      "title": "Cacio e Pepe",
+      "description": "Three-ingredient Roman pasta of Pecorino, black pepper and starchy water.",
+      "ingredients": [
+        { "name": "tonnarelli or spaghetti", "quantity": 400, "unit": "g" },
+        { "name": "Pecorino Romano, finely grated", "quantity": 200, "unit": "g" },
+        { "name": "black peppercorns, cracked", "quantity": 2, "unit": "tsp" },
+        { "name": "salt for pasta water", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Toast the cracked peppercorns in a dry pan until fragrant.",
+        "Cook the pasta in lightly salted water until very al dente.",
+        "Reserve plenty of pasta water and transfer the pasta to the pan with the pepper.",
+        "Add a ladle of warm pasta water to the Pecorino in a bowl and whisk to a creamy paste.",
+        "Off the heat, toss the pasta with the cheese paste, adding water as needed for a glossy emulsion.",
+        "Serve immediately with extra Pecorino and pepper on top."
+      ],
+      "tags": ["pasta", "roman", "quick"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 5,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Saltimbocca alla Romana",
+      "description": "Veal escalopes layered with prosciutto and sage, finished with white wine.",
+      "ingredients": [
+        { "name": "veal escalopes", "quantity": 8, "unit": "pc" },
+        { "name": "prosciutto crudo slices", "quantity": 8, "unit": "pc" },
+        { "name": "fresh sage leaves", "quantity": 16, "unit": "pc" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "dry white wine", "quantity": 150, "unit": "ml" },
+        { "name": "flour for dusting", "quantity": 30, "unit": "g" }
+      ],
+      "steps": [
+        "Pound the veal escalopes thin between sheets of cling film.",
+        "Lay a slice of prosciutto and two sage leaves on each piece and secure with a toothpick.",
+        "Dust the veal lightly in flour, shaking off excess.",
+        "Sear in foaming butter, prosciutto-side down first, for about a minute per side.",
+        "Remove the veal, pour in the wine and reduce to a glossy sauce.",
+        "Spoon the sauce over the veal and serve at once."
+      ],
+      "tags": ["veal", "roman", "quick"],
+      "difficulty": "medium",
+      "prepTime": 10,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Caprese Salad",
+      "description": "Sliced tomato, mozzarella di bufala, basil, olive oil and salt.",
+      "ingredients": [
+        { "name": "ripe tomatoes", "quantity": 4, "unit": "pc" },
+        { "name": "mozzarella di bufala", "quantity": 300, "unit": "g" },
+        { "name": "fresh basil leaves", "quantity": 1, "unit": "bunch" },
+        { "name": "extra virgin olive oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "flaky sea salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "pinch" }
+      ],
+      "steps": [
+        "Slice the tomatoes into thick rounds and arrange on a platter.",
+        "Tear the mozzarella into pieces and tuck them between the tomato slices.",
+        "Scatter generous handfuls of basil leaves over the top.",
+        "Drizzle with olive oil and sprinkle with flaky salt and pepper.",
+        "Serve at room temperature with crusty bread."
+      ],
+      "tags": ["salad", "summer", "no-cook"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 0,
+      "servings": 4
+    },
+    {
+      "title": "Minestrone",
+      "description": "Hearty Italian vegetable soup with beans, pasta and seasonal greens.",
+      "ingredients": [
+        { "name": "cannellini beans, cooked", "quantity": 250, "unit": "g" },
+        { "name": "carrot, diced", "quantity": 2, "unit": "pc" },
+        { "name": "celery stalks, diced", "quantity": 2, "unit": "pc" },
+        { "name": "onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "potato, diced", "quantity": 1, "unit": "pc" },
+        { "name": "zucchini, diced", "quantity": 1, "unit": "pc" },
+        { "name": "tomato passata", "quantity": 200, "unit": "ml" },
+        { "name": "ditalini pasta", "quantity": 100, "unit": "g" },
+        { "name": "vegetable stock", "quantity": 1.5, "unit": "l" },
+        { "name": "Parmigiano rind", "quantity": 1, "unit": "pc" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Sweat the onion, carrot and celery in olive oil until soft.",
+        "Add the potato and zucchini and cook for a few minutes.",
+        "Pour in the passata and stock, drop in the Parmigiano rind, and simmer 30 minutes.",
+        "Add the beans and pasta and cook until pasta is al dente.",
+        "Season and serve with a drizzle of olive oil and grated Parmigiano."
+      ],
+      "tags": ["soup", "vegetable", "comfort"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 50,
+      "servings": 6
+    },
+    {
+      "title": "Panzanella",
+      "description": "Tuscan summer salad of stale bread, ripe tomato, onion and basil.",
+      "ingredients": [
+        { "name": "stale country bread, cubed", "quantity": 300, "unit": "g" },
+        { "name": "ripe tomatoes", "quantity": 600, "unit": "g" },
+        { "name": "red onion, thinly sliced", "quantity": 1, "unit": "pc" },
+        { "name": "cucumber, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "fresh basil", "quantity": 1, "unit": "bunch" },
+        { "name": "red wine vinegar", "quantity": 3, "unit": "tbsp" },
+        { "name": "extra virgin olive oil", "quantity": 6, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Soak the bread in cold water for a few minutes, then squeeze out the liquid and tear into chunks.",
+        "Soak the onion slices in cold water to mellow them, then drain.",
+        "Cut the tomatoes into wedges, season and let them release their juices.",
+        "Combine bread, tomatoes, cucumber, onion and basil in a bowl.",
+        "Dress with vinegar and olive oil, toss and rest 20 minutes before serving."
+      ],
+      "tags": ["salad", "tuscan", "summer"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 0,
+      "servings": 4
+    },
+    {
+      "title": "Arancini",
+      "description": "Sicilian fried rice balls stuffed with ragù and mozzarella.",
+      "ingredients": [
+        { "name": "Arborio rice", "quantity": 400, "unit": "g" },
+        { "name": "saffron threads", "quantity": 1, "unit": "pinch" },
+        { "name": "vegetable stock", "quantity": 1, "unit": "l" },
+        { "name": "Parmigiano, grated", "quantity": 80, "unit": "g" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "ragù bolognese", "quantity": 250, "unit": "g" },
+        { "name": "mozzarella, diced", "quantity": 150, "unit": "g" },
+        { "name": "flour", "quantity": 100, "unit": "g" },
+        { "name": "breadcrumbs", "quantity": 200, "unit": "g" },
+        { "name": "vegetable oil for frying", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "Cook the rice in saffron-infused stock until tender and the liquid is absorbed.",
+        "Stir in Parmigiano and egg, then spread on a tray and chill until firm.",
+        "Take a portion of rice, flatten in your palm, fill with ragù and mozzarella, and seal into a ball.",
+        "Coat each ball in flour, beaten egg and breadcrumbs.",
+        "Deep fry at 180°C until deep golden and crisp all over.",
+        "Drain on paper and serve hot."
+      ],
+      "tags": ["sicilian", "fried", "street-food"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 30,
+      "servings": 6
+    },
+    {
+      "title": "Vitello Tonnato",
+      "description": "Cold sliced veal under a creamy tuna, caper and anchovy sauce.",
+      "ingredients": [
+        { "name": "veal eye of round", "quantity": 800, "unit": "g" },
+        { "name": "carrot", "quantity": 1, "unit": "pc" },
+        { "name": "celery stalk", "quantity": 1, "unit": "pc" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "tuna in oil, drained", "quantity": 200, "unit": "g" },
+        { "name": "anchovy fillets", "quantity": 4, "unit": "pc" },
+        { "name": "capers", "quantity": 2, "unit": "tbsp" },
+        { "name": "egg yolks", "quantity": 2, "unit": "pc" },
+        { "name": "lemon juice", "quantity": 2, "unit": "tbsp" },
+        { "name": "extra virgin olive oil", "quantity": 150, "unit": "ml" }
+      ],
+      "steps": [
+        "Simmer the veal with the carrot, celery and onion in salted water for about 90 minutes until tender.",
+        "Cool the veal in its broth, then slice paper-thin.",
+        "Blend tuna, anchovies, capers, yolks and lemon, drizzling in oil to make a creamy sauce.",
+        "Spoon a layer of sauce on a platter, lay the veal slices on top, then cover with more sauce.",
+        "Garnish with extra capers and chill at least an hour before serving."
+      ],
+      "tags": ["piedmontese", "cold", "appetizer"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Panettone",
+      "description": "Tall Milanese Christmas bread studded with candied fruit and raisins.",
+      "ingredients": [
+        { "name": "strong bread flour", "quantity": 500, "unit": "g" },
+        { "name": "sugar", "quantity": 120, "unit": "g" },
+        { "name": "egg yolks", "quantity": 6, "unit": "pc" },
+        { "name": "butter, soft", "quantity": 150, "unit": "g" },
+        { "name": "milk, warm", "quantity": 150, "unit": "ml" },
+        { "name": "fresh yeast", "quantity": 15, "unit": "g" },
+        { "name": "raisins", "quantity": 100, "unit": "g" },
+        { "name": "candied orange peel", "quantity": 80, "unit": "g" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 5, "unit": "g" }
+      ],
+      "steps": [
+        "Dissolve yeast in warm milk and combine with flour to form a sponge; rise for 1 hour.",
+        "Add sugar, yolks, salt and vanilla, then knead in the butter little by little until silky.",
+        "Fold in raisins and candied orange peel and place in a panettone paper mould.",
+        "Prove at room temperature 6-8 hours until risen above the rim.",
+        "Score a cross on top, dot with butter, and bake at 170°C for 45 minutes.",
+        "Hang the panettone upside down to cool to keep its airy structure."
+      ],
+      "tags": ["bread", "christmas", "milanese"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 480,
+      "cookTime": 45,
+      "servings": 10
+    },
+    {
+      "title": "Penne all'Arrabbiata",
+      "description": "Spicy Roman pasta with tomato, garlic, chili and parsley.",
+      "ingredients": [
+        { "name": "penne", "quantity": 400, "unit": "g" },
+        { "name": "canned tomatoes", "quantity": 400, "unit": "g" },
+        { "name": "garlic cloves", "quantity": 3, "unit": "pc" },
+        { "name": "dried chili flakes", "quantity": 1, "unit": "tsp" },
+        { "name": "extra virgin olive oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "parsley, chopped", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Warm olive oil with sliced garlic and chili flakes until fragrant.",
+        "Add the tomatoes, season, and simmer 15 minutes until thickened.",
+        "Cook the penne in salted water until al dente.",
+        "Toss the pasta in the sauce with a little pasta water for sheen.",
+        "Finish with parsley and serve with grated Pecorino if you wish."
+      ],
+      "tags": ["pasta", "roman", "spicy"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Bucatini all'Amatriciana",
+      "description": "Roman pasta with guanciale, tomato, Pecorino and a kick of chili.",
+      "ingredients": [
+        { "name": "bucatini", "quantity": 400, "unit": "g" },
+        { "name": "guanciale", "quantity": 200, "unit": "g" },
+        { "name": "canned tomatoes", "quantity": 400, "unit": "g" },
+        { "name": "Pecorino Romano, grated", "quantity": 80, "unit": "g" },
+        { "name": "dry white wine", "quantity": 50, "unit": "ml" },
+        { "name": "dried chili flakes", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Render the guanciale strips in a dry pan until crisp, then remove half for garnish.",
+        "Deglaze the pan with white wine and let it evaporate.",
+        "Add tomatoes and chili and simmer 15 minutes until reduced.",
+        "Cook the bucatini until al dente in salted water.",
+        "Toss the pasta in the sauce, finish with Pecorino and the reserved guanciale."
+      ],
+      "tags": ["pasta", "roman", "tomato"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Ribollita",
+      "description": "Tuscan bean and bread soup, thick enough to stand a spoon in.",
+      "ingredients": [
+        { "name": "cannellini beans, cooked", "quantity": 400, "unit": "g" },
+        { "name": "cavolo nero, shredded", "quantity": 300, "unit": "g" },
+        { "name": "stale country bread", "quantity": 300, "unit": "g" },
+        { "name": "carrot, diced", "quantity": 2, "unit": "pc" },
+        { "name": "celery, diced", "quantity": 2, "unit": "pc" },
+        { "name": "onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "tomato passata", "quantity": 200, "unit": "ml" },
+        { "name": "vegetable stock", "quantity": 1.5, "unit": "l" },
+        { "name": "olive oil", "quantity": 4, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Sweat onion, carrot and celery in olive oil for 10 minutes.",
+        "Add cavolo nero, passata and stock and simmer 30 minutes.",
+        "Stir in the beans and torn pieces of stale bread.",
+        "Cook a further 15 minutes until very thick.",
+        "Rest overnight if possible, then reheat with a generous drizzle of olive oil."
+      ],
+      "tags": ["tuscan", "soup", "winter"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 50,
+      "servings": 6
+    },
+    {
+      "title": "Pollo alla Cacciatora",
+      "description": "Hunter-style braised chicken with tomato, herbs and wine.",
+      "ingredients": [
+        { "name": "chicken pieces, bone-in", "quantity": 1.2, "unit": "kg" },
+        { "name": "onion, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 2, "unit": "pc" },
+        { "name": "carrot, sliced", "quantity": 1, "unit": "pc" },
+        { "name": "canned tomatoes", "quantity": 400, "unit": "g" },
+        { "name": "red wine", "quantity": 200, "unit": "ml" },
+        { "name": "rosemary sprig", "quantity": 1, "unit": "pc" },
+        { "name": "olives, pitted", "quantity": 100, "unit": "g" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Brown the seasoned chicken pieces in olive oil until golden, then set aside.",
+        "Sauté the onion, garlic and carrot in the same pan.",
+        "Pour in the wine and let it reduce by half.",
+        "Add tomatoes, rosemary and chicken back to the pan.",
+        "Cover and simmer 45 minutes until the chicken is tender.",
+        "Stir in the olives and serve with crusty bread."
+      ],
+      "tags": ["chicken", "braise", "rustic"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 60,
+      "servings": 4
+    },
+    {
+      "title": "Focaccia",
+      "description": "Ligurian olive oil flatbread, dimpled and topped with rosemary and salt.",
+      "ingredients": [
+        { "name": "00 flour", "quantity": 500, "unit": "g" },
+        { "name": "water", "quantity": 380, "unit": "ml" },
+        { "name": "fresh yeast", "quantity": 7, "unit": "g" },
+        { "name": "extra virgin olive oil", "quantity": 80, "unit": "ml" },
+        { "name": "salt", "quantity": 10, "unit": "g" },
+        { "name": "rosemary", "quantity": 2, "unit": "tbsp" },
+        { "name": "flaky sea salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Dissolve yeast in water, then mix with flour, salt and half the oil to a wet dough.",
+        "Bulk ferment 90 minutes, folding the dough gently every 30 minutes.",
+        "Press the dough into an oiled tray and rest 45 minutes.",
+        "Dimple the surface with your fingertips and drench with the remaining olive oil.",
+        "Scatter rosemary and flaky salt and bake at 220°C for 20 minutes until golden.",
+        "Serve warm, cut into squares."
+      ],
+      "tags": ["bread", "ligurian", "olive-oil"],
+      "dietaryTags": ["vegetarian", "vegan"],
+      "difficulty": "medium",
+      "prepTime": 150,
+      "cookTime": 20,
+      "servings": 8
+    },
+    {
+      "title": "Pesto alla Genovese",
+      "description": "Ligurian sauce of basil, pine nuts, garlic, Parmigiano, Pecorino and olive oil.",
+      "ingredients": [
+        { "name": "fresh basil leaves", "quantity": 100, "unit": "g" },
+        { "name": "pine nuts", "quantity": 30, "unit": "g" },
+        { "name": "garlic cloves", "quantity": 2, "unit": "pc" },
+        { "name": "Parmigiano Reggiano, grated", "quantity": 60, "unit": "g" },
+        { "name": "Pecorino Sardo, grated", "quantity": 20, "unit": "g" },
+        { "name": "extra virgin olive oil", "quantity": 120, "unit": "ml" },
+        { "name": "coarse salt", "quantity": 1, "unit": "pinch" },
+        { "name": "trofie pasta", "quantity": 400, "unit": "g" }
+      ],
+      "steps": [
+        "Pound garlic and salt in a mortar to a paste.",
+        "Add pine nuts and crush, then work in basil leaves a handful at a time.",
+        "Stir in both cheeses, then drizzle in the olive oil to a creamy sauce.",
+        "Cook the trofie in salted water until al dente.",
+        "Toss the pasta with the pesto, loosened with a spoon of pasta water."
+      ],
+      "tags": ["pasta", "ligurian", "sauce"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Gnocchi al Pomodoro",
+      "description": "Pillowy potato gnocchi tossed in fresh tomato sauce with basil.",
+      "ingredients": [
+        { "name": "floury potatoes", "quantity": 1, "unit": "kg" },
+        { "name": "00 flour", "quantity": 250, "unit": "g" },
+        { "name": "egg yolk", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "canned San Marzano tomatoes", "quantity": 500, "unit": "g" },
+        { "name": "garlic clove", "quantity": 1, "unit": "pc" },
+        { "name": "fresh basil", "quantity": 1, "unit": "bunch" },
+        { "name": "extra virgin olive oil", "quantity": 3, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Boil the potatoes in their skins until tender, then peel and pass through a ricer while warm.",
+        "Mix in flour, yolk and salt to a soft dough; do not overwork.",
+        "Roll into ropes, cut into pillows, and shape on the back of a fork.",
+        "Cook the gnocchi in salted water until they float, about 2 minutes.",
+        "Warm crushed tomatoes with garlic and oil, then toss the drained gnocchi in the sauce.",
+        "Serve with torn basil and grated Parmigiano."
+      ],
+      "tags": ["gnocchi", "potato", "comfort"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 45,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Bistecca alla Fiorentina",
+      "description": "Thick Tuscan T-bone steak grilled rare over wood embers.",
+      "ingredients": [
+        { "name": "Chianina T-bone steak, 5 cm thick", "quantity": 1.2, "unit": "kg" },
+        { "name": "extra virgin olive oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "coarse sea salt", "quantity": 1, "unit": "tbsp" },
+        { "name": "black pepper, cracked", "quantity": 1, "unit": "tsp" },
+        { "name": "lemon wedges", "quantity": 2, "unit": "pc" },
+        { "name": "rosemary sprig", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Take the steak out of the fridge an hour before cooking and pat dry.",
+        "Heat a grill until embers glow white-hot.",
+        "Grill the steak 5 minutes per side, then stand it on the bone for 5 minutes more.",
+        "Rest the steak under foil 10 minutes; the centre should be rare.",
+        "Slice along the bone, season with salt, pepper, oil and rosemary.",
+        "Serve with lemon wedges on the side."
+      ],
+      "tags": ["beef", "tuscan", "grill"],
+      "difficulty": "medium",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Cannoli Siciliani",
+      "description": "Crisp fried pastry shells filled with sweet ricotta and candied fruit.",
+      "ingredients": [
+        { "name": "flour", "quantity": 250, "unit": "g" },
+        { "name": "sugar", "quantity": 30, "unit": "g" },
+        { "name": "Marsala wine", "quantity": 80, "unit": "ml" },
+        { "name": "lard or butter", "quantity": 30, "unit": "g" },
+        { "name": "egg white", "quantity": 1, "unit": "pc" },
+        { "name": "ricotta, drained", "quantity": 500, "unit": "g" },
+        { "name": "icing sugar", "quantity": 150, "unit": "g" },
+        { "name": "candied orange peel", "quantity": 50, "unit": "g" },
+        { "name": "dark chocolate chips", "quantity": 50, "unit": "g" },
+        { "name": "vegetable oil for frying", "quantity": 1, "unit": "l" }
+      ],
+      "steps": [
+        "Mix flour, sugar, lard and Marsala into a smooth dough and rest 1 hour.",
+        "Roll the dough thin, cut into ovals and wrap around metal cannoli tubes, sealing with egg white.",
+        "Fry in hot oil at 180°C until golden and bubbled, then cool on a rack.",
+        "Beat the ricotta with icing sugar until smooth, then fold in the candied orange and most of the chocolate chips.",
+        "Pipe the filling into both ends of the shells just before serving.",
+        "Dust with icing sugar and dot the ends with extra chocolate chips."
+      ],
+      "tags": ["sicilian", "dessert", "fried"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 20,
+      "servings": 8
+    },
+    {
+      "title": "Panna Cotta",
+      "description": "Silky Piedmontese cooked cream set with gelatin, served with berries.",
+      "ingredients": [
+        { "name": "double cream", "quantity": 500, "unit": "ml" },
+        { "name": "whole milk", "quantity": 100, "unit": "ml" },
+        { "name": "caster sugar", "quantity": 80, "unit": "g" },
+        { "name": "vanilla pod", "quantity": 1, "unit": "pc" },
+        { "name": "gelatin sheets", "quantity": 3, "unit": "pc" },
+        { "name": "mixed berries", "quantity": 200, "unit": "g" }
+      ],
+      "steps": [
+        "Soak the gelatin sheets in cold water until soft.",
+        "Warm the cream, milk, sugar and split vanilla pod until just below a simmer.",
+        "Squeeze out the gelatin and stir into the warm cream until dissolved.",
+        "Strain into ramekins and chill at least 4 hours until set.",
+        "Unmould onto plates and top with fresh berries."
+      ],
+      "tags": ["dessert", "piedmontese", "make-ahead"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 5,
+      "servings": 6
+    }
+  ]
+}

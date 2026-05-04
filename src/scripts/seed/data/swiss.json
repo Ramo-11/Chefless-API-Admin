@@ -1,0 +1,273 @@
+{
+  "cuisine": "Swiss",
+  "names": {
+    "first": ["Lukas", "Anna", "Matthias", "Lara", "Reto", "Sophie", "Beat", "Nadia", "Stefan", "Heidi", "Andreas", "Claudia"],
+    "last": ["Müller", "Meier", "Schmid", "Keller", "Huber", "Weber", "Steiner", "Brunner", "Frei", "Bachmann", "Bürki", "Gerber"]
+  },
+  "recipes": [
+    {
+      "title": "Fondue",
+      "description": "Swiss communal pot of melted cheese with white wine and kirsch, scooped up with crusty bread on long forks.",
+      "ingredients": [
+        { "name": "Gruyère cheese, grated", "quantity": 400, "unit": "g" },
+        { "name": "Emmental cheese, grated", "quantity": 400, "unit": "g" },
+        { "name": "garlic clove, halved", "quantity": 1, "unit": "pc" },
+        { "name": "dry white wine", "quantity": 300, "unit": "ml" },
+        { "name": "cornstarch", "quantity": 1, "unit": "tbsp" },
+        { "name": "kirsch", "quantity": 2, "unit": "tbsp" },
+        { "name": "lemon juice", "quantity": 1, "unit": "tsp" },
+        { "name": "nutmeg, ground", "quantity": 1, "unit": "pinch" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" },
+        { "name": "crusty bread, cubed", "quantity": 1, "unit": "kg" }
+      ],
+      "steps": [
+        "Rub the inside of a fondue caquelon with the cut garlic clove and discard.",
+        "Pour the white wine and lemon juice into the pot and bring to a gentle simmer over medium heat.",
+        "Add the cheeses a handful at a time, stirring constantly in a figure-eight pattern until melted and smooth.",
+        "Whisk the cornstarch with the kirsch and stir into the cheese to thicken.",
+        "Season with nutmeg and black pepper.",
+        "Set the caquelon over a low flame at the table and serve with cubes of crusty bread for dipping."
+      ],
+      "tags": ["cheese", "winter", "communal"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Raclette",
+      "description": "Swiss melted cheese scraped from a half wheel onto boiled potatoes with pickles, charcuterie and onions.",
+      "ingredients": [
+        { "name": "raclette cheese, sliced", "quantity": 800, "unit": "g" },
+        { "name": "small waxy potatoes", "quantity": 1.5, "unit": "kg" },
+        { "name": "cornichons", "quantity": 200, "unit": "g" },
+        { "name": "pickled pearl onions", "quantity": 200, "unit": "g" },
+        { "name": "air-dried beef (Bündnerfleisch)", "quantity": 200, "unit": "g" },
+        { "name": "rohschinken (cured ham)", "quantity": 200, "unit": "g" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "paprika, ground", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Scrub the potatoes and boil them in their skins in well-salted water for 20 to 25 minutes until tender; keep warm.",
+        "Slice the raclette cheese into 5 mm slabs sized to fit your raclette pans.",
+        "Arrange the charcuterie, cornichons and pickled onions on a platter.",
+        "Place a slice of cheese in each individual raclette pan and slide under the heating element.",
+        "Melt the cheese until bubbling and just starting to brown at the edges, about 3 to 4 minutes.",
+        "Pour the molten cheese over a hot potato and finish with pepper or paprika.",
+        "Eat with a slice of charcuterie and a few pickles, repeating with each round."
+      ],
+      "tags": ["cheese", "winter", "communal"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Rösti",
+      "description": "Swiss crisp grated potato cake fried in butter until golden brown on both sides, eaten as breakfast or side.",
+      "ingredients": [
+        { "name": "waxy potatoes", "quantity": 1, "unit": "kg" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Boil the potatoes in their skins for 10 minutes so they are par-cooked, then chill for at least 4 hours or overnight.",
+        "Peel the cold potatoes and grate them coarsely into a bowl.",
+        "Season with salt and pepper and toss gently.",
+        "Heat half the butter and the oil in a non-stick skillet over medium heat.",
+        "Spread the grated potato evenly in the pan and press down lightly with a spatula.",
+        "Cook for 10 to 12 minutes until the underside is deep golden and crisp.",
+        "Slide the rösti onto a plate, invert back into the pan with the remaining butter, and cook the second side for 10 minutes.",
+        "Slide onto a serving plate and cut into wedges."
+      ],
+      "tags": ["potato", "breakfast", "side"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Älplermagronen",
+      "description": "Swiss alpine macaroni baked with potatoes, cream and cheese, topped with crispy onions and served with apple sauce.",
+      "ingredients": [
+        { "name": "macaroni", "quantity": 300, "unit": "g" },
+        { "name": "waxy potatoes, cubed", "quantity": 500, "unit": "g" },
+        { "name": "Gruyère cheese, grated", "quantity": 200, "unit": "g" },
+        { "name": "heavy cream", "quantity": 250, "unit": "ml" },
+        { "name": "milk", "quantity": 250, "unit": "ml" },
+        { "name": "onions, thinly sliced", "quantity": 2, "unit": "pc" },
+        { "name": "butter", "quantity": 50, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" },
+        { "name": "nutmeg, ground", "quantity": 1, "unit": "pinch" },
+        { "name": "apple sauce", "quantity": 250, "unit": "ml" }
+      ],
+      "steps": [
+        "Boil the cubed potatoes in salted water for 5 minutes, then add the macaroni and cook together until both are tender; drain.",
+        "Meanwhile, slowly fry the sliced onions in butter over low heat for 20 minutes until deeply golden and crisp.",
+        "Warm the cream and milk in a saucepan with the nutmeg and a generous pinch of salt and pepper.",
+        "Layer the potato and macaroni mixture in a buttered baking dish with most of the cheese.",
+        "Pour the cream mixture over and top with the remaining cheese.",
+        "Bake at 200°C for 15 minutes until bubbling and golden.",
+        "Top with the crispy onions and serve with cold apple sauce on the side."
+      ],
+      "tags": ["pasta", "potato", "cheese", "alpine"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 35,
+      "servings": 4
+    },
+    {
+      "title": "Zürcher Geschnetzeltes",
+      "description": "Zurich-style sliced veal in a creamy white wine and mushroom sauce, traditionally served with rösti.",
+      "ingredients": [
+        { "name": "veal, thinly sliced", "quantity": 600, "unit": "g" },
+        { "name": "button mushrooms, sliced", "quantity": 250, "unit": "g" },
+        { "name": "shallots, finely chopped", "quantity": 2, "unit": "pc" },
+        { "name": "dry white wine", "quantity": 100, "unit": "ml" },
+        { "name": "veal or chicken stock", "quantity": 200, "unit": "ml" },
+        { "name": "heavy cream", "quantity": 200, "unit": "ml" },
+        { "name": "butter", "quantity": 40, "unit": "g" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "flour", "quantity": 1, "unit": "tbsp" },
+        { "name": "lemon juice", "quantity": 1, "unit": "tsp" },
+        { "name": "parsley, chopped", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Pat the veal slices very dry, season with salt and pepper, and dust lightly with flour.",
+        "Heat the oil in a wide skillet over high heat and sear the veal in batches for 30 seconds per side; set aside.",
+        "Lower the heat and add the butter, shallots and mushrooms to the same pan; cook until golden.",
+        "Pour in the white wine and simmer until almost evaporated.",
+        "Add the stock and reduce by half, then stir in the cream and simmer to a coating consistency.",
+        "Return the veal and any juices and warm through; do not boil.",
+        "Finish with lemon juice and parsley and serve immediately with rösti."
+      ],
+      "tags": ["veal", "mushroom", "cream"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Birchermüesli",
+      "description": "Original Swiss soaked oat muesli with grated apple, lemon, nuts and yogurt, invented by Dr. Bircher-Benner.",
+      "ingredients": [
+        { "name": "rolled oats", "quantity": 150, "unit": "g" },
+        { "name": "milk", "quantity": 200, "unit": "ml" },
+        { "name": "yogurt", "quantity": 200, "unit": "ml" },
+        { "name": "apples, grated", "quantity": 2, "unit": "pc" },
+        { "name": "lemon juice", "quantity": 2, "unit": "tbsp" },
+        { "name": "honey", "quantity": 2, "unit": "tbsp" },
+        { "name": "hazelnuts, chopped", "quantity": 50, "unit": "g" },
+        { "name": "raisins", "quantity": 50, "unit": "g" },
+        { "name": "berries, mixed", "quantity": 200, "unit": "g" }
+      ],
+      "steps": [
+        "Soak the rolled oats in the milk for at least 30 minutes or overnight.",
+        "Stir the yogurt and honey into the soaked oats.",
+        "Toss the grated apples in lemon juice to keep them bright, then fold into the oats.",
+        "Stir in the raisins and most of the chopped hazelnuts.",
+        "Spoon into bowls and top with fresh berries and the remaining hazelnuts."
+      ],
+      "tags": ["breakfast", "oats", "fruit"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 0,
+      "servings": 4
+    },
+    {
+      "title": "Cervelat",
+      "description": "Swiss national sausage of beef and pork, traditionally grilled with the ends scored to curl into a crown.",
+      "ingredients": [
+        { "name": "cervelat sausages", "quantity": 4, "unit": "pc" },
+        { "name": "crusty bread", "quantity": 4, "unit": "pc" },
+        { "name": "Dijon mustard", "quantity": 4, "unit": "tbsp" },
+        { "name": "cornichons", "quantity": 100, "unit": "g" },
+        { "name": "onion, sliced", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Use a sharp knife to make 4 to 6 deep cuts at each end of every cervelat without cutting all the way through.",
+        "Heat a charcoal grill or barbecue to medium-high.",
+        "Grill the sausages for 3 to 4 minutes per side until the scored ends curl outward and the skins are blistered.",
+        "Slice the bread and lay out the mustard, cornichons and onion as accompaniments.",
+        "Serve the grilled cervelats hot with bread and the condiments."
+      ],
+      "tags": ["sausage", "grill", "snack"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Bündner Nusstorte",
+      "description": "Engadin Swiss caramelized walnut tart enclosed in buttery shortcrust pastry, a famous regional speciality.",
+      "ingredients": [
+        { "name": "flour", "quantity": 350, "unit": "g" },
+        { "name": "butter, cold and cubed", "quantity": 200, "unit": "g" },
+        { "name": "sugar", "quantity": 100, "unit": "g" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "pinch" },
+        { "name": "walnuts, coarsely chopped", "quantity": 300, "unit": "g" },
+        { "name": "sugar (filling)", "quantity": 250, "unit": "g" },
+        { "name": "heavy cream (filling)", "quantity": 200, "unit": "ml" },
+        { "name": "honey", "quantity": 2, "unit": "tbsp" },
+        { "name": "egg wash", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Rub the butter into the flour, sugar and salt until crumbly, add the egg, and bring together into a dough; wrap and chill for 1 hour.",
+        "Caramelize the filling sugar in a dry pan to deep amber, then carefully whisk in the warmed cream and honey.",
+        "Stir the walnuts into the caramel and cool to room temperature.",
+        "Roll two thirds of the dough and line a 24 cm tart tin, pressing into the sides.",
+        "Pour in the walnut filling and level it.",
+        "Roll the remaining dough into a lid, place over the filling and crimp the edges to seal.",
+        "Brush with egg wash, prick a few steam holes, and bake at 180°C for 35 to 40 minutes until deep golden.",
+        "Cool fully in the tin before slicing."
+      ],
+      "tags": ["dessert", "tart", "walnut", "engadin"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 90,
+      "cookTime": 40,
+      "servings": 10
+    },
+    {
+      "title": "Tartiflette",
+      "description": "Alpine baked dish from Savoy of potatoes, lardons and onions topped with melting reblochon cheese.",
+      "ingredients": [
+        { "name": "waxy potatoes, peeled and sliced", "quantity": 1, "unit": "kg" },
+        { "name": "smoked bacon lardons", "quantity": 200, "unit": "g" },
+        { "name": "onions, sliced", "quantity": 2, "unit": "pc" },
+        { "name": "garlic clove", "quantity": 1, "unit": "pc" },
+        { "name": "dry white wine", "quantity": 100, "unit": "ml" },
+        { "name": "heavy cream", "quantity": 100, "unit": "ml" },
+        { "name": "reblochon cheese, halved horizontally", "quantity": 1, "unit": "pc" },
+        { "name": "butter", "quantity": 30, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Boil the sliced potatoes in salted water for 8 minutes until just tender, then drain.",
+        "Sauté the lardons in butter until golden, then add the onions and cook until soft.",
+        "Pour in the white wine and simmer until almost dry.",
+        "Stir in the cream and the cooked potatoes and season with salt and pepper.",
+        "Rub a baking dish with the cut garlic clove and tip in the potato mixture.",
+        "Lay the two halves of reblochon on top, rind side up.",
+        "Bake at 200°C for 20 to 25 minutes until the cheese is melted and golden.",
+        "Rest for 5 minutes before serving with a green salad."
+      ],
+      "tags": ["potato", "cheese", "alpine", "savoy"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 35,
+      "servings": 4
+    }
+  ]
+}

@@ -177,7 +177,6 @@ export async function analyticsPage(
       premiumUsers,
       premiumMonthly,
       premiumAnnual,
-      premiumPromo,
 
       // ── Content Moderation ──
       reportsByStatus,
@@ -389,7 +388,6 @@ export async function analyticsPage(
       User.countDocuments({ isPremium: true }),
       User.countDocuments({ isPremium: true, premiumPlan: "monthly" }),
       User.countDocuments({ isPremium: true, premiumPlan: "annual" }),
-      User.countDocuments({ isPremium: true, premiumPlan: "promo" }),
 
       // ── Content Moderation ──
       Report.aggregate<StatusCount>([
@@ -519,7 +517,6 @@ export async function analyticsPage(
       // Premium
       premiumMonthly,
       premiumAnnual,
-      premiumPromo,
 
       // Moderation
       reportsByStatus,

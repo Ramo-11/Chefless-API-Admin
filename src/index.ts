@@ -32,7 +32,6 @@ import labelsRouter from "./routes/labels";
 import reportsRouter from "./routes/reports";
 import feedbackRouter from "./routes/feedback";
 import aiRouter from "./routes/ai";
-import promoCodesRouter from "./routes/promo-codes";
 import adminRouter from "./admin/routes";
 import pagesRouter from "./routes/pages";
 import blocksRouter from "./routes/blocks";
@@ -159,7 +158,6 @@ app.use("/api/labels", jsonDefault, ...apiLimiters, labelsRouter);
 app.use("/api/reports", jsonDefault, strictLimiter, reportsRouter);
 app.use("/api/feedback", jsonDefault, strictLimiter, feedbackRouter);
 app.use("/api/ai", jsonDefault, strictLimiter, aiRouter);
-app.use("/api/promo-codes", jsonDefault, ...apiLimiters, promoCodesRouter);
 app.use("/api/blocks", jsonDefault, ...apiLimiters, blocksRouter);
 app.use("/api/cook-prompts", jsonDefault, ...apiLimiters, cookPromptsRouter);
 // Cooked-posts endpoints accept base64 photos, so use the larger body limit.

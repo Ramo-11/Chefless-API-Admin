@@ -1,0 +1,304 @@
+{
+  "cuisine": "Austrian",
+  "names": {
+    "first": ["Maximilian", "Hannah", "Leopold", "Sophie", "Sebastian", "Theresa", "Florian", "Magdalena", "Stefan", "Johanna", "Wolfgang", "Elisabeth"],
+    "last": ["Huber", "Gruber", "Wagner", "Mayer", "Pichler", "Steiner", "Moser", "Hofer", "Leitner", "Berger", "Fuchs", "Eder"]
+  },
+  "recipes": [
+    {
+      "title": "Wiener Schnitzel",
+      "description": "Crisp golden Viennese veal cutlet pounded thin and fried in lard or butter, served with lemon and parsley potatoes.",
+      "ingredients": [
+        { "name": "veal cutlets", "quantity": 4, "unit": "pc" },
+        { "name": "flour", "quantity": 150, "unit": "g" },
+        { "name": "eggs, beaten", "quantity": 3, "unit": "pc" },
+        { "name": "fine breadcrumbs", "quantity": 250, "unit": "g" },
+        { "name": "clarified butter or lard", "quantity": 300, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" },
+        { "name": "lemon, in wedges", "quantity": 1, "unit": "pc" },
+        { "name": "parsley, chopped", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Pound each veal cutlet between two sheets of cling film to 4 mm thickness.",
+        "Season the cutlets with salt and pepper.",
+        "Dredge each cutlet first in flour, then dip in beaten egg, and coat lightly in breadcrumbs without pressing.",
+        "Heat the clarified butter or lard in a wide pan to about 170°C until it pops when a crumb is dropped in.",
+        "Fry one cutlet at a time, swirling the pan so the schnitzel swims in fat, for about 90 seconds per side until deep golden.",
+        "Lift onto a paper towel to drain and keep warm while you fry the rest.",
+        "Serve immediately with a wedge of lemon and chopped parsley."
+      ],
+      "tags": ["veal", "fried", "vienna"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Tafelspitz",
+      "description": "Austrian boiled beef in a clear root-vegetable broth, traditionally served with apple-horseradish and chive sauce.",
+      "ingredients": [
+        { "name": "beef tafelspitz cut", "quantity": 1.5, "unit": "kg" },
+        { "name": "beef bones", "quantity": 500, "unit": "g" },
+        { "name": "carrots, peeled", "quantity": 3, "unit": "pc" },
+        { "name": "celeriac", "quantity": 200, "unit": "g" },
+        { "name": "leek", "quantity": 1, "unit": "pc" },
+        { "name": "onion, halved", "quantity": 1, "unit": "pc" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "black peppercorns", "quantity": 10, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" },
+        { "name": "horseradish, grated", "quantity": 4, "unit": "tbsp" },
+        { "name": "apple, grated", "quantity": 1, "unit": "pc" },
+        { "name": "chives, chopped", "quantity": 2, "unit": "tbsp" },
+        { "name": "water", "quantity": 4, "unit": "l" }
+      ],
+      "steps": [
+        "Char the cut side of the onion in a dry pan until blackened, for color and flavor.",
+        "Place the beef and bones in a pot, cover with cold water, bring to a boil and skim well.",
+        "Add the charred onion, salt and peppercorns and simmer very gently for 2 hours.",
+        "Add the carrots, celeriac, leek and bay leaves and cook for another 45 minutes until the beef is fork tender.",
+        "Lift the beef out, slice across the grain, and arrange in warm soup plates.",
+        "Strain the broth and ladle some over the meat with diced root vegetables.",
+        "Mix the grated apple and horseradish for the apfelkren sauce, and serve alongside with chives."
+      ],
+      "tags": ["beef", "boiled", "vienna", "broth"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 180,
+      "servings": 6
+    },
+    {
+      "title": "Kaiserschmarrn",
+      "description": "Austrian shredded fluffy pancake dusted with powdered sugar and served with plum compote, supposedly Emperor Franz Joseph's favourite.",
+      "ingredients": [
+        { "name": "flour", "quantity": 200, "unit": "g" },
+        { "name": "milk", "quantity": 300, "unit": "ml" },
+        { "name": "eggs, separated", "quantity": 4, "unit": "pc" },
+        { "name": "sugar", "quantity": 60, "unit": "g" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "pinch" },
+        { "name": "raisins", "quantity": 50, "unit": "g" },
+        { "name": "rum", "quantity": 2, "unit": "tbsp" },
+        { "name": "butter", "quantity": 50, "unit": "g" },
+        { "name": "powdered sugar", "quantity": 3, "unit": "tbsp" },
+        { "name": "plum compote", "quantity": 250, "unit": "g" }
+      ],
+      "steps": [
+        "Soak the raisins in the rum for 15 minutes.",
+        "Whisk the egg yolks with half of the sugar and the vanilla until pale.",
+        "Stir in the flour, milk and salt to a smooth batter.",
+        "Whip the egg whites with the remaining sugar to stiff peaks and fold into the batter with the raisins.",
+        "Melt half the butter in a wide skillet and pour in the batter.",
+        "Cook over medium heat for 4 minutes until the underside is golden, then flip in pieces using two spoons.",
+        "Add the remaining butter, tear the pancake into rough chunks, and continue cooking until everything is golden.",
+        "Dust generously with powdered sugar and serve hot with plum compote."
+      ],
+      "tags": ["dessert", "pancake", "vienna"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Sachertorte",
+      "description": "Famous Viennese dense chocolate cake with apricot jam and a glossy dark chocolate glaze, served with whipped cream.",
+      "ingredients": [
+        { "name": "dark chocolate (60% cocoa)", "quantity": 200, "unit": "g" },
+        { "name": "butter, softened", "quantity": 150, "unit": "g" },
+        { "name": "powdered sugar", "quantity": 120, "unit": "g" },
+        { "name": "eggs, separated", "quantity": 6, "unit": "pc" },
+        { "name": "sugar", "quantity": 120, "unit": "g" },
+        { "name": "flour", "quantity": 150, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "pinch" },
+        { "name": "apricot jam", "quantity": 250, "unit": "g" },
+        { "name": "dark chocolate (glaze)", "quantity": 200, "unit": "g" },
+        { "name": "sugar (glaze)", "quantity": 200, "unit": "g" },
+        { "name": "water (glaze)", "quantity": 125, "unit": "ml" },
+        { "name": "heavy cream, whipped", "quantity": 200, "unit": "ml" }
+      ],
+      "steps": [
+        "Preheat the oven to 170°C and line a 24 cm springform with parchment.",
+        "Melt the chocolate and let cool slightly. Cream the butter and powdered sugar, then beat in the egg yolks and melted chocolate.",
+        "Whip the egg whites with the sugar and salt to stiff peaks. Fold a third into the chocolate mixture, then fold in the rest with the sifted flour.",
+        "Pour into the tin and bake for 50 minutes until a skewer comes out with moist crumbs. Cool fully and slice horizontally.",
+        "Warm the apricot jam, sieve it, and spread on the bottom layer; sandwich the cake back together and brush the outside with more jam.",
+        "Boil the glaze sugar and water for 5 minutes to a syrup, remove from heat and stir in the chopped chocolate until smooth.",
+        "Pour the glaze over the cake in one go and spread to a glossy coating with a palette knife. Let set without disturbing.",
+        "Slice and serve each piece with a generous spoon of unsweetened whipped cream."
+      ],
+      "tags": ["dessert", "chocolate", "vienna", "torte"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 50,
+      "servings": 12
+    },
+    {
+      "title": "Apfelstrudel",
+      "description": "Austrian flaky strudel pastry filled with cinnamon-spiced apples, raisins and toasted breadcrumbs.",
+      "ingredients": [
+        { "name": "flour", "quantity": 250, "unit": "g" },
+        { "name": "warm water", "quantity": 125, "unit": "ml" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "egg yolk", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "pinch" },
+        { "name": "vinegar", "quantity": 1, "unit": "tsp" },
+        { "name": "tart apples, peeled and sliced", "quantity": 1, "unit": "kg" },
+        { "name": "sugar", "quantity": 100, "unit": "g" },
+        { "name": "cinnamon, ground", "quantity": 2, "unit": "tsp" },
+        { "name": "raisins", "quantity": 75, "unit": "g" },
+        { "name": "rum", "quantity": 2, "unit": "tbsp" },
+        { "name": "breadcrumbs", "quantity": 75, "unit": "g" },
+        { "name": "butter, melted", "quantity": 100, "unit": "g" },
+        { "name": "powdered sugar", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Mix the flour, water, oil, yolk, salt and vinegar to a soft dough, knead until silky for 10 minutes, oil lightly and rest covered for 1 hour.",
+        "Soak the raisins in the rum for 30 minutes.",
+        "Toss the apple slices with sugar and cinnamon. Toast the breadcrumbs in a little butter until golden.",
+        "Spread a clean cloth on the table, dust with flour, and stretch the dough out from the center until paper-thin and translucent.",
+        "Brush the dough with melted butter, scatter breadcrumbs over two thirds, then arrange apples and raisins on top.",
+        "Use the cloth to roll up the strudel tightly, tuck in the ends, and place seam-down on a buttered tray.",
+        "Brush all over with melted butter and bake at 190°C for 35 to 40 minutes until deep golden, basting once.",
+        "Rest briefly, dust with powdered sugar and slice. Serve warm with cream or vanilla sauce."
+      ],
+      "tags": ["dessert", "apple", "pastry", "vienna"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 90,
+      "cookTime": 40,
+      "servings": 8
+    },
+    {
+      "title": "Beuschel",
+      "description": "Austrian creamy ragout of veal lung and heart in a sour cream and lemon sauce, traditionally served with bread dumplings.",
+      "ingredients": [
+        { "name": "veal lung and heart", "quantity": 800, "unit": "g" },
+        { "name": "onion, diced", "quantity": 1, "unit": "pc" },
+        { "name": "carrot, diced", "quantity": 1, "unit": "pc" },
+        { "name": "celery, diced", "quantity": 1, "unit": "pc" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "black peppercorns", "quantity": 8, "unit": "pc" },
+        { "name": "butter", "quantity": 50, "unit": "g" },
+        { "name": "flour", "quantity": 2, "unit": "tbsp" },
+        { "name": "white wine vinegar", "quantity": 2, "unit": "tbsp" },
+        { "name": "Dijon mustard", "quantity": 1, "unit": "tbsp" },
+        { "name": "lemon zest", "quantity": 1, "unit": "tsp" },
+        { "name": "sour cream", "quantity": 150, "unit": "ml" },
+        { "name": "anchovy paste", "quantity": 1, "unit": "tsp" },
+        { "name": "parsley, chopped", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Place the lung and heart in a pot with the diced vegetables, bay leaves, peppercorns and salt and cover with water.",
+        "Simmer gently for 90 minutes until very tender, then lift out and let cool. Strain and reserve 600 ml of the broth.",
+        "Slice the cooled offal into thin strips, removing any sinews.",
+        "Melt the butter in a saucepan, stir in the flour and cook to a light blond roux.",
+        "Whisk in the reserved broth and simmer to a smooth sauce.",
+        "Stir in the vinegar, mustard, lemon zest, anchovy paste and the sliced offal and warm for 10 minutes.",
+        "Off the heat stir in the sour cream and parsley and adjust seasoning.",
+        "Serve hot with bread dumplings or crusty bread."
+      ],
+      "tags": ["offal", "stew", "vienna"],
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 120,
+      "servings": 4
+    },
+    {
+      "title": "Linzer Torte",
+      "description": "Austrian shortcrust torte from Linz, the world's oldest known cake, with redcurrant jam under a lattice top.",
+      "ingredients": [
+        { "name": "flour", "quantity": 250, "unit": "g" },
+        { "name": "ground hazelnuts", "quantity": 150, "unit": "g" },
+        { "name": "butter, cold and cubed", "quantity": 200, "unit": "g" },
+        { "name": "powdered sugar", "quantity": 150, "unit": "g" },
+        { "name": "eggs, separated", "quantity": 1, "unit": "pc" },
+        { "name": "egg yolks", "quantity": 2, "unit": "pc" },
+        { "name": "cinnamon, ground", "quantity": 1, "unit": "tsp" },
+        { "name": "cloves, ground", "quantity": 0.25, "unit": "tsp" },
+        { "name": "lemon zest", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "pinch" },
+        { "name": "redcurrant jam", "quantity": 350, "unit": "g" },
+        { "name": "egg wash", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Combine the flour, ground hazelnuts, sugar, cinnamon, cloves, lemon zest and salt in a bowl.",
+        "Rub in the cold butter until the mixture resembles fine crumbs.",
+        "Stir in the egg yolks and a splash of egg white to bring the dough together; wrap and chill for at least 2 hours.",
+        "Preheat the oven to 180°C and butter a 24 cm tart tin.",
+        "Press two thirds of the dough into the tin and up the sides, then spread with the redcurrant jam.",
+        "Roll the remaining dough into long ropes and arrange in a lattice over the jam, sticking the ends to the rim.",
+        "Brush the lattice with egg wash and bake for 35 to 40 minutes until deep golden.",
+        "Cool fully in the tin before slicing."
+      ],
+      "tags": ["dessert", "torte", "linz", "hazelnut"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 40,
+      "servings": 10
+    },
+    {
+      "title": "Frittatensuppe",
+      "description": "Austrian beef broth garnished with thinly sliced strips of savory pancake, a comforting classic.",
+      "ingredients": [
+        { "name": "beef broth", "quantity": 1.5, "unit": "l" },
+        { "name": "flour", "quantity": 100, "unit": "g" },
+        { "name": "milk", "quantity": 200, "unit": "ml" },
+        { "name": "egg", "quantity": 2, "unit": "pc" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" },
+        { "name": "nutmeg, ground", "quantity": 1, "unit": "pinch" },
+        { "name": "butter for cooking", "quantity": 30, "unit": "g" },
+        { "name": "chives, finely sliced", "quantity": 3, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Whisk the flour, milk, eggs, salt and nutmeg into a smooth thin pancake batter and rest for 15 minutes.",
+        "Heat a small skillet, melt a little butter, and pour in just enough batter to coat thinly.",
+        "Cook each pancake for 1 minute per side until lightly golden and stack on a plate.",
+        "Roll each cooled pancake tightly and slice into 5 mm wide strips.",
+        "Bring the beef broth to a gentle simmer and adjust the salt.",
+        "Divide the pancake strips between warm bowls and ladle the hot broth over them.",
+        "Sprinkle with plenty of chives and serve immediately."
+      ],
+      "tags": ["soup", "broth", "vienna"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Käsespätzle",
+      "description": "Tyrolean soft egg noodles layered with grated mountain cheese and caramelized onions, baked until bubbly.",
+      "ingredients": [
+        { "name": "flour", "quantity": 400, "unit": "g" },
+        { "name": "eggs", "quantity": 4, "unit": "pc" },
+        { "name": "milk", "quantity": 150, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "nutmeg, ground", "quantity": 1, "unit": "pinch" },
+        { "name": "Bergkäse cheese, grated", "quantity": 250, "unit": "g" },
+        { "name": "Emmental cheese, grated", "quantity": 150, "unit": "g" },
+        { "name": "onions, thinly sliced", "quantity": 3, "unit": "pc" },
+        { "name": "butter", "quantity": 80, "unit": "g" },
+        { "name": "chives, chopped", "quantity": 3, "unit": "tbsp" },
+        { "name": "black pepper", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Whisk the flour, eggs, milk, salt and nutmeg into a thick, sticky batter and rest for 15 minutes.",
+        "Slowly fry the sliced onions in butter over low heat for 25 minutes until deep golden and crisp.",
+        "Bring a large pot of salted water to a boil. Press the batter through a spätzle maker or a colander into the boiling water.",
+        "Cook for 2 minutes after the spätzle float, then lift out into a buttered baking dish.",
+        "Layer the spätzle with the grated cheeses and a quarter of the onions, ending with cheese on top.",
+        "Bake at 200°C for 10 to 15 minutes until melted and bubbly.",
+        "Top with the remaining caramelized onions, chives and black pepper and serve hot."
+      ],
+      "tags": ["pasta", "cheese", "tyrol", "alpine"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 35,
+      "servings": 4
+    }
+  ]
+}

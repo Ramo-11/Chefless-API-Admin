@@ -1,0 +1,260 @@
+{
+  "cuisine": "New Zealand",
+  "names": {
+    "first": ["Aroha", "Tane", "Manaia", "Ariki", "Kahurangi", "Hemi", "Anahera", "Mason", "Ella", "Liam"],
+    "last": ["Williams", "Smith", "Tane", "Ngata", "Wiremu", "Te Awa", "Ngāti", "Hemana", "Cameron", "Walker"]
+  },
+  "recipes": [
+    {
+      "title": "Hāngī",
+      "description": "Traditional Māori meal of meat and root vegetables steam-cooked underground over heated stones.",
+      "ingredients": [
+        { "name": "lamb shoulder", "quantity": 1, "unit": "kg" },
+        { "name": "chicken thigh", "quantity": 1, "unit": "kg" },
+        { "name": "kūmara", "quantity": 1, "unit": "kg" },
+        { "name": "potato", "quantity": 1, "unit": "kg" },
+        { "name": "pumpkin", "quantity": 700, "unit": "g" },
+        { "name": "cabbage", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 2, "unit": "tbsp" },
+        { "name": "water", "quantity": 500, "unit": "ml" }
+      ],
+      "steps": [
+        "Dig a pit roughly 50 cm deep and build a fire to heat river stones until glowing red.",
+        "Rake out the embers, line the pit with the hot stones and cover with a layer of wet sacks.",
+        "Season the meats with salt and place into wire baskets with the kūmara, potato and pumpkin chunks.",
+        "Lay cabbage leaves over the food, lower the baskets onto the stones and pour over the water for steam.",
+        "Cover with more wet sacks then mound earth over the top to seal the pit completely.",
+        "Steam undisturbed for three to four hours until the meat is falling apart tender.",
+        "Carefully unearth the hāngī, lift out the baskets and serve everything family style."
+      ],
+      "tags": ["traditional", "Māori", "celebration", "feast"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "hard",
+      "prepTime": 90,
+      "cookTime": 240,
+      "servings": 10
+    },
+    {
+      "title": "Pavlova",
+      "description": "Crisp meringue dessert with marshmallow centre, claimed by both New Zealand and Australia.",
+      "ingredients": [
+        { "name": "egg white", "quantity": 4, "unit": "pc" },
+        { "name": "caster sugar", "quantity": 220, "unit": "g" },
+        { "name": "white vinegar", "quantity": 1, "unit": "tsp" },
+        { "name": "cornflour", "quantity": 2, "unit": "tsp" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "thickened cream", "quantity": 300, "unit": "ml" },
+        { "name": "kiwifruit", "quantity": 3, "unit": "pc" },
+        { "name": "feijoa", "quantity": 4, "unit": "pc" }
+      ],
+      "steps": [
+        "Whisk egg whites until soft peaks form, then add sugar a tablespoon at a time.",
+        "Continue whisking until the meringue is thick, glossy and fully dissolved.",
+        "Fold in vinegar, cornflour and vanilla until just combined.",
+        "Mound onto a lined tray in a 20 cm circle with a slight dip in the centre.",
+        "Bake at 120 C for one hour, then turn off the oven and cool inside for two hours.",
+        "Whip cream to soft peaks and pile generously into the centre.",
+        "Top with sliced kiwifruit and feijoa and serve at once."
+      ],
+      "tags": ["dessert", "meringue", "fruit", "celebration"],
+      "dietaryTags": ["gluten-free", "vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 60,
+      "servings": 8
+    },
+    {
+      "title": "Kiwi Burger",
+      "description": "New Zealand burger featuring beef patty, fried egg, beetroot slice and salad on a soft bun.",
+      "ingredients": [
+        { "name": "minced beef", "quantity": 600, "unit": "g" },
+        { "name": "burger bun", "quantity": 4, "unit": "pc" },
+        { "name": "egg", "quantity": 4, "unit": "pc" },
+        { "name": "pickled beetroot", "quantity": 4, "unit": "pc" },
+        { "name": "tomato", "quantity": 1, "unit": "pc" },
+        { "name": "lettuce", "quantity": 4, "unit": "pc" },
+        { "name": "cheddar cheese", "quantity": 4, "unit": "pc" },
+        { "name": "tomato sauce", "quantity": 4, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Shape the seasoned mince into four flat patties slightly larger than the buns.",
+        "Heat a heavy pan and cook the patties for four minutes per side until well browned.",
+        "Lay a slice of cheddar on each patty in the last minute to melt.",
+        "In the same pan, fry an egg per burger until the white is just set.",
+        "Toast the cut sides of the buns until golden.",
+        "Spread tomato sauce on each base, then layer lettuce, tomato slice, patty, beetroot and fried egg.",
+        "Cap with the bun lid and press gently to serve."
+      ],
+      "tags": ["burger", "beef", "lunch", "iconic"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Lolly Cake",
+      "description": "No-bake New Zealand log cake of crushed Malt biscuits, condensed milk and Eskimo lollies, rolled in coconut.",
+      "ingredients": [
+        { "name": "Malt biscuit", "quantity": 250, "unit": "g" },
+        { "name": "Eskimo lollies", "quantity": 180, "unit": "g" },
+        { "name": "butter", "quantity": 125, "unit": "g" },
+        { "name": "sweetened condensed milk", "quantity": 200, "unit": "g" },
+        { "name": "desiccated coconut", "quantity": 100, "unit": "g" }
+      ],
+      "steps": [
+        "Crush the malt biscuits into fine crumbs in a large bowl.",
+        "Snip the Eskimo lollies into small pieces and add to the crumbs.",
+        "Melt butter with the condensed milk in a saucepan over low heat until smooth.",
+        "Pour the warm mixture over the dry ingredients and stir to a sticky dough.",
+        "Tip the mixture onto a board sprinkled with desiccated coconut.",
+        "Shape into a long log about 5 cm thick and roll fully in the coconut to coat.",
+        "Wrap in baking paper and chill for at least three hours before slicing."
+      ],
+      "tags": ["dessert", "no-bake", "kids", "afternoon tea"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 0,
+      "servings": 12
+    },
+    {
+      "title": "Whitebait Fritter",
+      "description": "Light egg fritters bound with tiny whole West Coast whitebait, served with lemon.",
+      "ingredients": [
+        { "name": "whitebait", "quantity": 300, "unit": "g" },
+        { "name": "egg", "quantity": 4, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "white pepper", "quantity": 0.5, "unit": "tsp" },
+        { "name": "butter", "quantity": 30, "unit": "g" },
+        { "name": "lemon", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Rinse the whitebait gently in cold water and drain well.",
+        "Lightly whisk eggs with salt and white pepper, do not overbeat.",
+        "Stir the whitebait through the eggs.",
+        "Melt half the butter in a hot pan and ladle in a quarter of the mixture.",
+        "Cook for one minute until set underneath, then flip and cook for 30 seconds more.",
+        "Repeat with the remaining mixture, adding more butter as needed.",
+        "Serve immediately with lemon wedges and buttered white bread."
+      ],
+      "tags": ["seafood", "fritter", "West Coast", "traditional"],
+      "dietaryTags": ["gluten-free", "pescatarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Afghan Biscuit",
+      "description": "Chocolate biscuit topped with chocolate icing and a single walnut half, a New Zealand bakery classic.",
+      "ingredients": [
+        { "name": "butter", "quantity": 200, "unit": "g" },
+        { "name": "caster sugar", "quantity": 75, "unit": "g" },
+        { "name": "plain flour", "quantity": 175, "unit": "g" },
+        { "name": "cocoa powder", "quantity": 25, "unit": "g" },
+        { "name": "cornflakes", "quantity": 60, "unit": "g" },
+        { "name": "icing sugar", "quantity": 200, "unit": "g" },
+        { "name": "boiling water", "quantity": 2, "unit": "tbsp" },
+        { "name": "walnut half", "quantity": 24, "unit": "pc" }
+      ],
+      "steps": [
+        "Cream butter and caster sugar until pale and fluffy.",
+        "Sift in flour and cocoa, then fold through the cornflakes carefully so they stay mostly intact.",
+        "Place tablespoonfuls of mixture onto lined trays and press down lightly.",
+        "Bake at 180 C for 15 minutes, then cool fully on the trays.",
+        "Sift icing sugar with extra cocoa, whisk in boiling water to a thick spreadable icing.",
+        "Spread a teaspoon of icing onto each biscuit.",
+        "Top each with a walnut half before the icing sets."
+      ],
+      "tags": ["biscuit", "chocolate", "afternoon tea", "bakery"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 15,
+      "servings": 24
+    },
+    {
+      "title": "Hokey Pokey Ice Cream",
+      "description": "Vanilla ice cream studded with crunchy honeycomb toffee, New Zealand's most loved flavour.",
+      "ingredients": [
+        { "name": "thickened cream", "quantity": 600, "unit": "ml" },
+        { "name": "sweetened condensed milk", "quantity": 400, "unit": "g" },
+        { "name": "vanilla extract", "quantity": 2, "unit": "tsp" },
+        { "name": "caster sugar", "quantity": 100, "unit": "g" },
+        { "name": "golden syrup", "quantity": 2, "unit": "tbsp" },
+        { "name": "bicarbonate of soda", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Combine sugar and golden syrup in a saucepan and stir over low heat until dissolved.",
+        "Bring to a boil and cook without stirring for five minutes until deep amber.",
+        "Whisk in the bicarbonate of soda quickly, the mixture will foam dramatically.",
+        "Pour onto a lined tray and leave to set hard, then smash into small shards.",
+        "Whip the cream to soft peaks, then fold through condensed milk and vanilla.",
+        "Fold most of the honeycomb shards through the cream mixture.",
+        "Pour into a freezer container, scatter the rest of the honeycomb over the top and freeze overnight."
+      ],
+      "tags": ["dessert", "ice cream", "honeycomb", "iconic"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 10,
+      "servings": 8
+    },
+    {
+      "title": "Boil-up",
+      "description": "Hearty Māori one pot of pork bones simmered with watercress, kūmara and dough boys.",
+      "ingredients": [
+        { "name": "pork bone", "quantity": 1.5, "unit": "kg" },
+        { "name": "kūmara", "quantity": 700, "unit": "g" },
+        { "name": "potato", "quantity": 500, "unit": "g" },
+        { "name": "watercress", "quantity": 1, "unit": "bunch" },
+        { "name": "self raising flour", "quantity": 300, "unit": "g" },
+        { "name": "water", "quantity": 200, "unit": "ml" },
+        { "name": "salt", "quantity": 2, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Place pork bones in a large pot and cover with cold water, bring to a boil and skim the foam.",
+        "Reduce to a gentle simmer, season with salt and pepper and cook for 90 minutes.",
+        "Add chunked kūmara and potato and continue simmering for 20 minutes.",
+        "Mix self raising flour with water and a pinch of salt to a soft dough.",
+        "Drop tablespoonfuls of dough onto the simmering broth to make doughboys.",
+        "Cover and cook for 15 minutes until the doughboys are puffed and cooked through.",
+        "Stir through the chopped watercress just before serving so it wilts in the broth."
+      ],
+      "tags": ["Māori", "stew", "pork", "comfort food"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 130,
+      "servings": 6
+    },
+    {
+      "title": "Pikelet",
+      "description": "Small thick pancakes served warm with butter and jam, a New Zealand morning tea favourite.",
+      "ingredients": [
+        { "name": "self raising flour", "quantity": 150, "unit": "g" },
+        { "name": "caster sugar", "quantity": 2, "unit": "tbsp" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "milk", "quantity": 200, "unit": "ml" },
+        { "name": "butter", "quantity": 30, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "pinch" }
+      ],
+      "steps": [
+        "Whisk flour, sugar and salt in a bowl, making a well in the centre.",
+        "Beat egg with milk and pour into the well, whisking to a smooth thick batter.",
+        "Heat a non-stick pan over medium heat and brush with melted butter.",
+        "Drop tablespoons of batter into the pan, leaving room to spread.",
+        "Cook for 90 seconds until bubbles form on the surface, then flip.",
+        "Cook the second side for one minute until golden.",
+        "Stack on a tea towel to keep warm and serve with butter and jam."
+      ],
+      "tags": ["pancake", "breakfast", "afternoon tea", "kids"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 4
+    }
+  ]
+}

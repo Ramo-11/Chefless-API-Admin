@@ -1,0 +1,479 @@
+{
+  "cuisine": "British",
+  "names": {
+    "first": ["Oliver", "Harry", "George", "Jack", "Thomas", "James", "William", "Henry", "Olivia", "Amelia", "Isla", "Emily", "Charlotte", "Sophie", "Florence", "Beatrice"],
+    "last": ["Smith", "Jones", "Taylor", "Brown", "Williams", "Wilson", "Davies", "Walker", "Hughes", "Evans", "Thompson", "Robinson"]
+  },
+  "recipes": [
+    {
+      "title": "Fish and Chips",
+      "description": "British classic of beer-battered cod with thick-cut chips and mushy peas.",
+      "ingredients": [
+        { "name": "cod fillets", "quantity": 4, "unit": "pc" },
+        { "name": "flour", "quantity": 200, "unit": "g" },
+        { "name": "cornflour", "quantity": 50, "unit": "g" },
+        { "name": "baking powder", "quantity": 1, "unit": "tsp" },
+        { "name": "cold lager beer", "quantity": 250, "unit": "ml" },
+        { "name": "potatoes", "quantity": 1, "unit": "kg" },
+        { "name": "vegetable oil for frying", "quantity": 2, "unit": "l" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "malt vinegar", "quantity": 2, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Cut potatoes into thick chips, rinse and pat dry.",
+        "Fry chips at 140°C for 8 minutes; drain.",
+        "Whisk flour, cornflour, baking powder and beer to a smooth batter; rest 10 minutes.",
+        "Heat oil to 180°C.",
+        "Pat fish dry, dust in flour, dip in batter and lower into oil.",
+        "Fry fish 6-7 minutes until golden and crisp; drain.",
+        "Refry chips at 190°C for 3 minutes until crisp.",
+        "Season with salt and serve with malt vinegar."
+      ],
+      "tags": ["fish", "fried", "british-classic", "comfort-food"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Shepherd's Pie",
+      "description": "British minced lamb pie topped with golden mashed potato.",
+      "ingredients": [
+        { "name": "ground lamb", "quantity": 700, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "carrots", "quantity": 2, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 2, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "Worcestershire sauce", "quantity": 2, "unit": "tbsp" },
+        { "name": "lamb stock", "quantity": 300, "unit": "ml" },
+        { "name": "fresh thyme", "quantity": 1, "unit": "tsp" },
+        { "name": "potatoes", "quantity": 1, "unit": "kg" },
+        { "name": "butter", "quantity": 80, "unit": "g" },
+        { "name": "milk", "quantity": 100, "unit": "ml" },
+        { "name": "cheddar cheese", "quantity": 80, "unit": "g" }
+      ],
+      "steps": [
+        "Sauté chopped onion, carrot and garlic in oil until soft.",
+        "Add lamb and brown well, then stir in tomato paste, Worcestershire, thyme and stock.",
+        "Simmer 25 minutes until thick; season.",
+        "Meanwhile boil potatoes until tender; mash with butter and milk.",
+        "Spread lamb in a baking dish and top evenly with mash, fluffing with a fork.",
+        "Sprinkle cheddar over the top.",
+        "Bake at 200°C for 25 minutes until golden and bubbling."
+      ],
+      "tags": ["pie", "lamb", "comfort-food", "baked"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Bangers and Mash",
+      "description": "British pork sausages with creamy mash and rich onion gravy.",
+      "ingredients": [
+        { "name": "pork sausages", "quantity": 8, "unit": "pc" },
+        { "name": "potatoes", "quantity": 1, "unit": "kg" },
+        { "name": "butter", "quantity": 80, "unit": "g" },
+        { "name": "milk", "quantity": 120, "unit": "ml" },
+        { "name": "onions", "quantity": 2, "unit": "pc" },
+        { "name": "flour", "quantity": 1, "unit": "tbsp" },
+        { "name": "beef stock", "quantity": 400, "unit": "ml" },
+        { "name": "Worcestershire sauce", "quantity": 1, "unit": "tbsp" },
+        { "name": "vegetable oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Boil peeled potatoes in salted water until tender.",
+        "Pan-fry sausages in oil over medium heat 15 minutes, turning often, until cooked through.",
+        "Slice onions and cook slowly in the sausage pan until deeply caramelised.",
+        "Stir flour into onions, then add stock and Worcestershire; simmer to a glossy gravy.",
+        "Mash potatoes with butter and milk until smooth; season.",
+        "Serve sausages on a pile of mash, smothered with onion gravy."
+      ],
+      "tags": ["sausage", "comfort-food", "british-classic"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Yorkshire Pudding",
+      "description": "Crisp, billowing British batter pudding traditionally served with roast beef.",
+      "ingredients": [
+        { "name": "flour", "quantity": 140, "unit": "g" },
+        { "name": "eggs", "quantity": 4, "unit": "pc" },
+        { "name": "milk", "quantity": 200, "unit": "ml" },
+        { "name": "beef dripping", "quantity": 4, "unit": "tbsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Whisk flour, salt, eggs and milk to a smooth lump-free batter; rest 30 minutes.",
+        "Place a teaspoon of dripping in each hole of a 12-hole muffin tin.",
+        "Heat tin in a 220°C oven until fat is smoking hot.",
+        "Pour batter quickly into each hole, filling halfway.",
+        "Bake 20-25 minutes without opening the oven until risen and deep golden.",
+        "Serve immediately with roast beef and gravy."
+      ],
+      "tags": ["pudding", "side", "roast", "british-classic"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 35,
+      "cookTime": 25,
+      "servings": 6
+    },
+    {
+      "title": "Cornish Pasty",
+      "description": "Cornish hand pie of beef, swede, potato and onion in a sturdy pastry crust.",
+      "ingredients": [
+        { "name": "flour", "quantity": 500, "unit": "g" },
+        { "name": "lard", "quantity": 100, "unit": "g" },
+        { "name": "butter", "quantity": 100, "unit": "g" },
+        { "name": "cold water", "quantity": 150, "unit": "ml" },
+        { "name": "beef skirt", "quantity": 400, "unit": "g" },
+        { "name": "potato", "quantity": 300, "unit": "g" },
+        { "name": "swede", "quantity": 200, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "egg", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Rub lard and butter into flour and salt until breadcrumb-like.",
+        "Add cold water and bring together; rest dough 30 minutes in fridge.",
+        "Dice beef, potato, swede and onion small (1cm).",
+        "Roll pastry and cut six 20cm discs.",
+        "Pile filling on each disc, season generously, dot with butter.",
+        "Brush edges with egg, fold and crimp into a rope along the top.",
+        "Brush with beaten egg and bake at 220°C for 15 minutes, then 180°C for 45 minutes."
+      ],
+      "tags": ["pie", "beef", "pastry", "hand-pie"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Toad in the Hole",
+      "description": "British sausages baked in fluffy Yorkshire pudding batter, served with onion gravy.",
+      "ingredients": [
+        { "name": "pork sausages", "quantity": 8, "unit": "pc" },
+        { "name": "flour", "quantity": 140, "unit": "g" },
+        { "name": "eggs", "quantity": 3, "unit": "pc" },
+        { "name": "milk", "quantity": 200, "unit": "ml" },
+        { "name": "beef dripping", "quantity": 3, "unit": "tbsp" },
+        { "name": "fresh thyme", "quantity": 1, "unit": "tsp" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Whisk flour, salt, eggs and milk to a smooth batter; rest 30 minutes.",
+        "Place dripping in a heavy roasting tin and heat at 220°C until smoking.",
+        "Add sausages and roast 10 minutes, turning, until browned.",
+        "Quickly pour batter around sausages and scatter thyme.",
+        "Bake undisturbed 25-30 minutes until risen, deep golden and crisp.",
+        "Serve immediately with onion gravy."
+      ],
+      "tags": ["sausage", "baked", "comfort-food", "british-classic"],
+      "difficulty": "medium",
+      "prepTime": 35,
+      "cookTime": 40,
+      "servings": 4
+    },
+    {
+      "title": "Cottage Pie",
+      "description": "British minced beef pie blanketed in golden mashed potato.",
+      "ingredients": [
+        { "name": "ground beef", "quantity": 700, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "carrots", "quantity": 2, "unit": "pc" },
+        { "name": "celery stalks", "quantity": 2, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 2, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "Worcestershire sauce", "quantity": 2, "unit": "tbsp" },
+        { "name": "beef stock", "quantity": 350, "unit": "ml" },
+        { "name": "fresh thyme", "quantity": 1, "unit": "tsp" },
+        { "name": "potatoes", "quantity": 1, "unit": "kg" },
+        { "name": "butter", "quantity": 80, "unit": "g" },
+        { "name": "milk", "quantity": 100, "unit": "ml" }
+      ],
+      "steps": [
+        "Sauté chopped onion, carrot, celery and garlic in oil until soft.",
+        "Add beef and brown well, then stir in tomato paste, Worcestershire, thyme and stock.",
+        "Simmer 25 minutes until thick; season.",
+        "Boil potatoes until tender; mash with butter and milk.",
+        "Spread beef in a baking dish and top with mash, scoring with a fork.",
+        "Bake at 200°C for 25 minutes until top is golden and crisp."
+      ],
+      "tags": ["pie", "beef", "comfort-food", "baked"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Beef Wellington",
+      "description": "Tender beef fillet wrapped in mushroom duxelles, prosciutto and golden puff pastry.",
+      "ingredients": [
+        { "name": "beef fillet", "quantity": 1, "unit": "kg" },
+        { "name": "puff pastry", "quantity": 500, "unit": "g" },
+        { "name": "mushrooms", "quantity": 500, "unit": "g" },
+        { "name": "prosciutto", "quantity": 12, "unit": "pc" },
+        { "name": "Dijon mustard", "quantity": 2, "unit": "tbsp" },
+        { "name": "shallots", "quantity": 2, "unit": "pc" },
+        { "name": "garlic cloves", "quantity": 2, "unit": "pc" },
+        { "name": "fresh thyme", "quantity": 1, "unit": "tsp" },
+        { "name": "butter", "quantity": 30, "unit": "g" },
+        { "name": "egg yolks", "quantity": 2, "unit": "pc" },
+        { "name": "olive oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Season beef and sear hard in olive oil on all sides; cool, then brush with mustard.",
+        "Pulse mushrooms with shallots, garlic and thyme; cook in butter until very dry; cool.",
+        "Lay prosciutto on cling film overlapping; spread mushroom layer over.",
+        "Place beef on top and roll tightly using the cling film; chill 30 minutes.",
+        "Roll puff pastry, unwrap beef and place on pastry; wrap and seal edges.",
+        "Score the top, brush with egg yolk and chill 30 minutes.",
+        "Bake at 200°C for 35-40 minutes until golden and beef is medium-rare.",
+        "Rest 15 minutes before slicing thickly."
+      ],
+      "tags": ["beef", "pastry", "feast", "celebration"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 45,
+      "servings": 8
+    },
+    {
+      "title": "Eton Mess",
+      "description": "British dessert of crushed meringue, whipped cream and macerated strawberries.",
+      "ingredients": [
+        { "name": "strawberries", "quantity": 500, "unit": "g" },
+        { "name": "sugar", "quantity": 2, "unit": "tbsp" },
+        { "name": "double cream", "quantity": 500, "unit": "ml" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "icing sugar", "quantity": 2, "unit": "tbsp" },
+        { "name": "meringues", "quantity": 6, "unit": "pc" }
+      ],
+      "steps": [
+        "Hull and quarter strawberries; toss with sugar and rest 30 minutes.",
+        "Crush a third of the strawberries with a fork to release juice.",
+        "Whip cream with vanilla and icing sugar to soft peaks.",
+        "Crush meringues into bite-size pieces.",
+        "Fold strawberries and meringues into the cream loosely so streaks remain.",
+        "Spoon into glasses and serve immediately."
+      ],
+      "tags": ["dessert", "no-cook", "summer", "strawberry"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 35,
+      "cookTime": 0,
+      "servings": 6
+    },
+    {
+      "title": "Sticky Toffee Pudding",
+      "description": "Moist British date sponge soaked in warm toffee sauce.",
+      "ingredients": [
+        { "name": "pitted dates", "quantity": 200, "unit": "g" },
+        { "name": "boiling water", "quantity": 250, "unit": "ml" },
+        { "name": "bicarbonate of soda", "quantity": 1, "unit": "tsp" },
+        { "name": "butter", "quantity": 80, "unit": "g" },
+        { "name": "sugar", "quantity": 150, "unit": "g" },
+        { "name": "eggs", "quantity": 2, "unit": "pc" },
+        { "name": "self-raising flour", "quantity": 175, "unit": "g" },
+        { "name": "vanilla extract", "quantity": 1, "unit": "tsp" },
+        { "name": "double cream", "quantity": 300, "unit": "ml" },
+        { "name": "dark brown sugar", "quantity": 150, "unit": "g" },
+        { "name": "extra butter for sauce", "quantity": 80, "unit": "g" }
+      ],
+      "steps": [
+        "Pour boiling water over dates with bicarbonate of soda; rest 10 minutes, then mash.",
+        "Cream butter and sugar until pale; beat in eggs one at a time.",
+        "Fold in flour, vanilla and the date mixture.",
+        "Pour into a buttered dish and bake at 180°C for 30 minutes until risen and set.",
+        "Make sauce: simmer cream, brown sugar and butter 5 minutes until glossy.",
+        "Pierce sponge all over and pour over half the sauce; let it absorb.",
+        "Serve warm with extra sauce and clotted cream."
+      ],
+      "tags": ["dessert", "pudding", "dates", "comfort-food"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 40,
+      "servings": 6
+    },
+    {
+      "title": "Spotted Dick",
+      "description": "Traditional British steamed suet pudding studded with currants, served with custard.",
+      "ingredients": [
+        { "name": "self-raising flour", "quantity": 250, "unit": "g" },
+        { "name": "shredded suet", "quantity": 125, "unit": "g" },
+        { "name": "sugar", "quantity": 75, "unit": "g" },
+        { "name": "currants", "quantity": 150, "unit": "g" },
+        { "name": "lemon zest", "quantity": 1, "unit": "tsp" },
+        { "name": "milk", "quantity": 175, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "pinch" },
+        { "name": "custard", "quantity": 500, "unit": "ml" }
+      ],
+      "steps": [
+        "Combine flour, suet, sugar, currants, zest and salt in a bowl.",
+        "Stir in milk to form a soft dough.",
+        "Shape into a log and wrap in pleated buttered parchment, then foil; tie ends like a cracker.",
+        "Place in a steamer over simmering water and steam 90 minutes, topping up water as needed.",
+        "Unwrap carefully, slice thickly and serve with hot custard."
+      ],
+      "tags": ["pudding", "steamed", "british-classic", "dessert"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Trifle",
+      "description": "British layered dessert of sponge, jelly, fruit, custard and whipped cream.",
+      "ingredients": [
+        { "name": "sponge cake", "quantity": 200, "unit": "g" },
+        { "name": "sherry", "quantity": 80, "unit": "ml" },
+        { "name": "raspberries", "quantity": 300, "unit": "g" },
+        { "name": "raspberry jelly", "quantity": 135, "unit": "g" },
+        { "name": "boiling water", "quantity": 600, "unit": "ml" },
+        { "name": "custard", "quantity": 500, "unit": "ml" },
+        { "name": "double cream", "quantity": 400, "unit": "ml" },
+        { "name": "icing sugar", "quantity": 2, "unit": "tbsp" },
+        { "name": "flaked almonds", "quantity": 30, "unit": "g" }
+      ],
+      "steps": [
+        "Cube sponge and place in a glass trifle bowl; drizzle with sherry.",
+        "Scatter raspberries over the sponge.",
+        "Dissolve jelly in boiling water, cool slightly and pour over fruit; chill until set.",
+        "Pour cold custard over the set jelly in an even layer.",
+        "Whip cream with icing sugar to soft peaks and spread over the custard.",
+        "Toast almonds and scatter on top; chill at least 2 hours before serving."
+      ],
+      "tags": ["dessert", "layered", "no-bake", "british-classic"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 30,
+      "cookTime": 0,
+      "servings": 8
+    },
+    {
+      "title": "Scones",
+      "description": "British baked scones with a tender crumb, served warm with clotted cream and jam.",
+      "ingredients": [
+        { "name": "self-raising flour", "quantity": 350, "unit": "g" },
+        { "name": "baking powder", "quantity": 1, "unit": "tsp" },
+        { "name": "cold butter", "quantity": 85, "unit": "g" },
+        { "name": "sugar", "quantity": 30, "unit": "g" },
+        { "name": "milk", "quantity": 175, "unit": "ml" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "pinch" }
+      ],
+      "steps": [
+        "Rub cold butter into flour, baking powder and salt until breadcrumb-like.",
+        "Stir in sugar, then add most of the milk to bring together a soft dough.",
+        "Pat out to 2.5cm thick and stamp out 6cm rounds.",
+        "Place on a tray and brush tops with beaten egg.",
+        "Bake at 220°C for 12-15 minutes until risen and golden.",
+        "Cool on a rack and serve warm with clotted cream and jam."
+      ],
+      "tags": ["bake", "tea-time", "british-classic"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 8
+    },
+    {
+      "title": "Black Pudding",
+      "description": "British blood sausage with oats and warm spices, sliced and pan-fried until crisp.",
+      "ingredients": [
+        { "name": "fresh pig blood", "quantity": 500, "unit": "ml" },
+        { "name": "pork back fat", "quantity": 300, "unit": "g" },
+        { "name": "pinhead oatmeal", "quantity": 200, "unit": "g" },
+        { "name": "onions", "quantity": 2, "unit": "pc" },
+        { "name": "milk", "quantity": 200, "unit": "ml" },
+        { "name": "ground allspice", "quantity": 1, "unit": "tsp" },
+        { "name": "ground mace", "quantity": 0.5, "unit": "tsp" },
+        { "name": "salt", "quantity": 2, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "sausage casings", "quantity": 1, "unit": "pc" }
+      ],
+      "steps": [
+        "Sauté finely chopped onions in a little fat until soft; cool.",
+        "Cube pork fat finely and combine with oatmeal, milk, onions, blood and spices.",
+        "Stuff loosely into rinsed casings, leaving room for oats to swell.",
+        "Tie into 20cm sausages.",
+        "Poach gently in 80°C water 30 minutes; do not boil.",
+        "Cool fully, then slice and pan-fry in a little oil until crisp on both sides."
+      ],
+      "tags": ["sausage", "breakfast", "british-classic"],
+      "difficulty": "hard",
+      "prepTime": 40,
+      "cookTime": 35,
+      "servings": 8
+    },
+    {
+      "title": "Lancashire Hotpot",
+      "description": "Slow-cooked lamb stew topped with overlapping potato slices crisped in the oven.",
+      "ingredients": [
+        { "name": "lamb shoulder", "quantity": 1, "unit": "kg" },
+        { "name": "onions", "quantity": 2, "unit": "pc" },
+        { "name": "carrots", "quantity": 3, "unit": "pc" },
+        { "name": "lamb kidneys", "quantity": 200, "unit": "g" },
+        { "name": "flour", "quantity": 2, "unit": "tbsp" },
+        { "name": "lamb stock", "quantity": 500, "unit": "ml" },
+        { "name": "Worcestershire sauce", "quantity": 1, "unit": "tbsp" },
+        { "name": "fresh thyme", "quantity": 1, "unit": "tsp" },
+        { "name": "bay leaves", "quantity": 2, "unit": "pc" },
+        { "name": "potatoes", "quantity": 1, "unit": "kg" },
+        { "name": "butter", "quantity": 60, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Cube lamb and toss with seasoned flour; brown in a casserole.",
+        "Add sliced onions and carrots; cook 5 minutes.",
+        "Stir in stock, Worcestershire, thyme and bay; bring to a simmer.",
+        "Layer kidney slices on top, then overlap thinly sliced potatoes to cover the surface.",
+        "Brush potatoes with melted butter and season.",
+        "Cover and bake at 160°C for 2 hours.",
+        "Uncover and bake another 30 minutes until potatoes are golden and crisp."
+      ],
+      "tags": ["stew", "lamb", "comfort-food", "casserole"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 150,
+      "servings": 6
+    },
+    {
+      "title": "Treacle Tart",
+      "description": "British shortcrust tart filled with golden syrup, breadcrumbs and lemon.",
+      "ingredients": [
+        { "name": "flour", "quantity": 250, "unit": "g" },
+        { "name": "cold butter", "quantity": 125, "unit": "g" },
+        { "name": "sugar", "quantity": 25, "unit": "g" },
+        { "name": "egg", "quantity": 1, "unit": "pc" },
+        { "name": "cold water", "quantity": 2, "unit": "tbsp" },
+        { "name": "golden syrup", "quantity": 450, "unit": "g" },
+        { "name": "fresh breadcrumbs", "quantity": 175, "unit": "g" },
+        { "name": "lemon zest", "quantity": 2, "unit": "tsp" },
+        { "name": "lemon juice", "quantity": 2, "unit": "tbsp" },
+        { "name": "double cream", "quantity": 60, "unit": "ml" }
+      ],
+      "steps": [
+        "Rub butter into flour and sugar, add egg and water, bring to a dough; rest 30 minutes.",
+        "Roll pastry and line a 23cm tart tin; chill 15 minutes.",
+        "Blind bake at 180°C for 15 minutes with beans, then 5 minutes empty.",
+        "Warm golden syrup gently, then stir in breadcrumbs, lemon zest, juice and cream.",
+        "Pour filling into the case and smooth the top.",
+        "Bake at 170°C for 25-30 minutes until set and golden.",
+        "Cool to warm and serve with cream or custard."
+      ],
+      "tags": ["tart", "dessert", "british-classic"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 50,
+      "cookTime": 50,
+      "servings": 8
+    }
+  ]
+}

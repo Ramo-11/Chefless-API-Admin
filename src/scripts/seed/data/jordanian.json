@@ -1,0 +1,375 @@
+{
+  "cuisine": "Jordanian",
+  "names": {
+    "first": ["Mahmoud", "Rania", "Tariq", "Dina", "Khaled", "Lina", "Yousef", "Hanan", "Bilal", "Sawsan", "Fadi", "Maha"],
+    "last": ["Al-Khatib", "Abu Khalil", "Haddad", "Al-Masri", "Al-Tarawneh", "Al-Zoubi", "Abu Hassan", "Al-Sharif", "Al-Najjar", "Al-Bashir"]
+  },
+  "recipes": [
+    {
+      "title": "Mansaf",
+      "description": "Jordan's national dish of lamb cooked in fermented dried yogurt jameed, served on rice and shrak bread with toasted nuts.",
+      "ingredients": [
+        { "name": "lamb shoulder", "quantity": 1.5, "unit": "kg" },
+        { "name": "jameed", "quantity": 500, "unit": "g" },
+        { "name": "basmati rice", "quantity": 500, "unit": "g" },
+        { "name": "shrak bread", "quantity": 4, "unit": "pc" },
+        { "name": "ghee", "quantity": 80, "unit": "g" },
+        { "name": "almonds", "quantity": 60, "unit": "g" },
+        { "name": "pine nuts", "quantity": 40, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cardamom", "quantity": 1, "unit": "tsp" },
+        { "name": "bay leaf", "quantity": 2, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" },
+        { "name": "parsley", "quantity": 1, "unit": "bunch" }
+      ],
+      "steps": [
+        "Soak jameed overnight in warm water, then blend with the soaking water until smooth.",
+        "Simmer lamb with chopped onions, bay leaves, cardamom, and salt in 2 liters of water for 1.5 hours; skim foam.",
+        "Strain the broth and reserve the lamb separately.",
+        "Whisk the jameed liquid into the broth and simmer 30 minutes, stirring constantly to prevent breaking.",
+        "Return lamb to the jameed sauce and simmer 20 more minutes until tender and infused.",
+        "Cook rice with turmeric, ghee, and salt using the absorption method.",
+        "Toast almonds and pine nuts in ghee until golden.",
+        "Lay shrak on a large platter, top with rice, then lamb, ladle over jameed sauce, and finish with toasted nuts and parsley."
+      ],
+      "tags": ["jordanian", "lamb", "yogurt", "national dish"],
+      "difficulty": "hard",
+      "prepTime": 720,
+      "cookTime": 150,
+      "servings": 8
+    },
+    {
+      "title": "Maqluba",
+      "description": "Levantine upside-down rice with chicken or lamb, fried eggplant, cauliflower, and potato, flipped at the table.",
+      "ingredients": [
+        { "name": "chicken thighs", "quantity": 800, "unit": "g" },
+        { "name": "basmati rice", "quantity": 500, "unit": "g" },
+        { "name": "eggplant", "quantity": 2, "unit": "pc" },
+        { "name": "cauliflower", "quantity": 1, "unit": "pc" },
+        { "name": "potato", "quantity": 3, "unit": "pc" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "tomato", "quantity": 2, "unit": "pc" },
+        { "name": "baharat", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 150, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Salt sliced eggplant and rest 30 minutes; pat dry.",
+        "Fry eggplant, cauliflower florets, and potato slices in batches until golden; drain.",
+        "Brown chicken with chopped onions, baharat, turmeric, and salt.",
+        "Add 1 liter water and simmer chicken 30 minutes; reserve broth.",
+        "Layer fried vegetables and chicken in a heavy pot, then top with sliced tomatoes.",
+        "Add washed rice and pour over enough hot broth to cover the rice by 2 cm.",
+        "Bring to a boil, then simmer covered on lowest heat for 35 minutes.",
+        "Rest 10 minutes, then place a serving platter on top and invert dramatically."
+      ],
+      "tags": ["jordanian", "rice", "chicken", "vegetables"],
+      "difficulty": "medium",
+      "prepTime": 30,
+      "cookTime": 80,
+      "servings": 6
+    },
+    {
+      "title": "Musakhan",
+      "description": "Palestinian-Jordanian roast chicken on flatbread piled with caramelized onions, sumac, and toasted pine nuts.",
+      "ingredients": [
+        { "name": "whole chicken", "quantity": 1.6, "unit": "kg" },
+        { "name": "onion", "quantity": 6, "unit": "pc" },
+        { "name": "sumac", "quantity": 4, "unit": "tbsp" },
+        { "name": "olive oil", "quantity": 200, "unit": "ml" },
+        { "name": "pine nuts", "quantity": 60, "unit": "g" },
+        { "name": "taboon bread", "quantity": 4, "unit": "pc" },
+        { "name": "ground allspice", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cinnamon", "quantity": 0.5, "unit": "tsp" },
+        { "name": "lemon", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Joint the chicken into 8 pieces and rub with olive oil, allspice, cinnamon, salt, and lemon juice.",
+        "Roast at 200C for 40 minutes until golden and cooked through.",
+        "Slice onions thinly and cook in 150 ml olive oil over low heat for 30 minutes until completely soft and translucent.",
+        "Stir sumac into the onions off the heat and season with salt.",
+        "Toast pine nuts in olive oil until golden.",
+        "Lay taboon bread on a tray, brush with olive oil from the chicken, and pile with the sumac onions.",
+        "Top each bread with a chicken piece and bake at 220C for 8 minutes to crisp.",
+        "Scatter pine nuts over the top and serve with extra lemon and yogurt."
+      ],
+      "tags": ["jordanian", "chicken", "sumac", "bread"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 80,
+      "servings": 4
+    },
+    {
+      "title": "Galayet Bandora",
+      "description": "Quick Jordanian skillet of fresh tomatoes and garlic stewed in olive oil with chili, scooped up with bread.",
+      "ingredients": [
+        { "name": "tomato", "quantity": 8, "unit": "pc" },
+        { "name": "garlic clove", "quantity": 6, "unit": "pc" },
+        { "name": "green chili", "quantity": 2, "unit": "pc" },
+        { "name": "olive oil", "quantity": 80, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" },
+        { "name": "parsley", "quantity": 1, "unit": "bunch" }
+      ],
+      "steps": [
+        "Heat olive oil in a heavy skillet and add sliced garlic; cook gently for 1 minute.",
+        "Stir in chopped chilies and cook for 30 seconds.",
+        "Add roughly chopped tomatoes, salt, and pepper.",
+        "Cook over medium-high heat for 15 minutes, smashing the tomatoes as they soften.",
+        "Reduce until the oil rises and the tomatoes are jammy.",
+        "Scatter chopped parsley and serve hot with warm flatbread for scooping."
+      ],
+      "tags": ["jordanian", "tomato", "vegan", "quick"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Knafeh",
+      "description": "Levantine pastry of stretchy white cheese under a crispy semolina crust soaked in rose-orange syrup.",
+      "ingredients": [
+        { "name": "kataifi pastry", "quantity": 400, "unit": "g" },
+        { "name": "unsalted butter", "quantity": 200, "unit": "g" },
+        { "name": "akkawi cheese", "quantity": 400, "unit": "g" },
+        { "name": "fresh mozzarella", "quantity": 200, "unit": "g" },
+        { "name": "sugar", "quantity": 400, "unit": "g" },
+        { "name": "water", "quantity": 300, "unit": "ml" },
+        { "name": "lemon juice", "quantity": 1, "unit": "tbsp" },
+        { "name": "rosewater", "quantity": 1, "unit": "tsp" },
+        { "name": "orange blossom water", "quantity": 1, "unit": "tsp" },
+        { "name": "pistachio", "quantity": 60, "unit": "g" }
+      ],
+      "steps": [
+        "Boil sugar, water, and lemon juice for 10 minutes, then stir in rosewater and orange blossom water; chill.",
+        "Soak akkawi cheese in cold water for 1 hour to remove excess salt, changing the water twice.",
+        "Pulse the kataifi in a processor to chop fine, then toss with melted butter until evenly coated.",
+        "Press half the buttered pastry into a round shallow pan to form a tight base.",
+        "Layer drained akkawi and shredded mozzarella over the base, leaving a 1 cm border.",
+        "Top with the remaining pastry and press down firmly.",
+        "Cook on the stovetop over medium heat for 10 minutes until the bottom is deep golden, then bake at 200C for 10 minutes.",
+        "Invert onto a platter, pour the cold syrup over while hot, and shower with chopped pistachios."
+      ],
+      "tags": ["jordanian", "dessert", "cheese", "pastry"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 75,
+      "cookTime": 25,
+      "servings": 8
+    },
+    {
+      "title": "Mujaddara",
+      "description": "Levantine pilaf of brown lentils and rice topped with deeply caramelized onions; humble, vegan, and beloved.",
+      "ingredients": [
+        { "name": "brown lentils", "quantity": 250, "unit": "g" },
+        { "name": "basmati rice", "quantity": 250, "unit": "g" },
+        { "name": "onion", "quantity": 4, "unit": "pc" },
+        { "name": "olive oil", "quantity": 120, "unit": "ml" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "ground allspice", "quantity": 0.5, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Rinse lentils and simmer in 750 ml water for 20 minutes until just tender; do not drain.",
+        "Slice onions thinly and cook in olive oil over medium heat for 30 minutes until deep brown and crisp at the edges.",
+        "Reserve half the onions for topping; keep the rest with their oil.",
+        "Add rinsed rice, cumin, allspice, salt, and pepper to the pot of lentils with their cooking water.",
+        "Top up with hot water so liquid covers the rice by 2 cm and stir in the onion oil.",
+        "Cover and simmer on low heat for 18 minutes until rice is tender.",
+        "Rest 10 minutes, fluff, and pile onto a platter with the reserved crispy onions on top."
+      ],
+      "tags": ["jordanian", "lentils", "rice", "vegan"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 60,
+      "servings": 6
+    },
+    {
+      "title": "Maftoul",
+      "description": "Hand-rolled Palestinian-Jordanian giant couscous stewed with chicken, chickpeas, and warm spices.",
+      "ingredients": [
+        { "name": "maftoul", "quantity": 400, "unit": "g" },
+        { "name": "chicken thighs", "quantity": 800, "unit": "g" },
+        { "name": "chickpeas", "quantity": 200, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "ground cinnamon", "quantity": 1, "unit": "tsp" },
+        { "name": "ground allspice", "quantity": 1, "unit": "tsp" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "olive oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Soak chickpeas overnight, then drain.",
+        "Brown chicken pieces with sliced onions in olive oil until golden.",
+        "Add cinnamon, allspice, turmeric, salt, soaked chickpeas, and 1.5 liters water; simmer 1 hour.",
+        "Steam the maftoul over the simmering broth in a colander or couscoussier for 30 minutes.",
+        "Toss the steamed maftoul with 2 tablespoons of broth and a drizzle of olive oil.",
+        "Mound the maftoul on a platter, top with chicken and chickpeas, and ladle over hot broth."
+      ],
+      "tags": ["jordanian", "chicken", "couscous", "chickpeas"],
+      "difficulty": "medium",
+      "prepTime": 720,
+      "cookTime": 100,
+      "servings": 6
+    },
+    {
+      "title": "Mutabbal",
+      "description": "Levantine smoked eggplant dip whipped with tahini, garlic, lemon, and yogurt, finished with olive oil and pomegranate.",
+      "ingredients": [
+        { "name": "eggplant", "quantity": 3, "unit": "pc" },
+        { "name": "tahini", "quantity": 4, "unit": "tbsp" },
+        { "name": "yogurt", "quantity": 100, "unit": "g" },
+        { "name": "garlic clove", "quantity": 2, "unit": "pc" },
+        { "name": "lemon", "quantity": 1, "unit": "pc" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "pomegranate seeds", "quantity": 30, "unit": "g" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "parsley", "quantity": 1, "unit": "bunch" }
+      ],
+      "steps": [
+        "Char eggplants over an open flame until blackened all over and the flesh has collapsed.",
+        "Cool the eggplants in a colander to drain bitter juices, then peel and chop the smoked flesh.",
+        "Whisk tahini with lemon juice and 3 tablespoons cold water until pale and creamy.",
+        "Mash grated garlic into a paste with salt, then stir into the tahini.",
+        "Fold in the chopped eggplant and yogurt and beat until fluffy.",
+        "Spread on a plate and drizzle with olive oil; finish with pomegranate seeds and parsley."
+      ],
+      "tags": ["jordanian", "dip", "eggplant", "vegetarian"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Fattoush",
+      "description": "Bright Levantine salad of crisp toasted flatbread, mixed greens, and vegetables tossed with sumac and pomegranate molasses.",
+      "ingredients": [
+        { "name": "pita bread", "quantity": 2, "unit": "pc" },
+        { "name": "romaine lettuce", "quantity": 1, "unit": "pc" },
+        { "name": "cucumber", "quantity": 2, "unit": "pc" },
+        { "name": "tomato", "quantity": 3, "unit": "pc" },
+        { "name": "radish", "quantity": 6, "unit": "pc" },
+        { "name": "spring onion", "quantity": 4, "unit": "pc" },
+        { "name": "parsley", "quantity": 1, "unit": "bunch" },
+        { "name": "fresh mint", "quantity": 1, "unit": "bunch" },
+        { "name": "sumac", "quantity": 2, "unit": "tbsp" },
+        { "name": "pomegranate molasses", "quantity": 2, "unit": "tbsp" },
+        { "name": "olive oil", "quantity": 60, "unit": "ml" },
+        { "name": "lemon", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Tear pita into bite-size pieces and toast at 200C for 8 minutes until crisp.",
+        "Whisk lemon juice, pomegranate molasses, olive oil, sumac, and salt for the dressing.",
+        "Chop romaine, cucumber, tomatoes, radishes, and spring onions into bite-size pieces.",
+        "Toss the vegetables with chopped parsley and torn mint.",
+        "Add the toasted bread and dressing just before serving and toss to combine.",
+        "Finish with extra sumac and a drizzle of olive oil."
+      ],
+      "tags": ["jordanian", "salad", "vegetarian", "sumac"],
+      "dietaryTags": ["vegetarian", "vegan"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 8,
+      "servings": 4
+    },
+    {
+      "title": "Kibbeh",
+      "description": "Levantine torpedo croquettes of bulgur and minced meat shells filled with spiced lamb and pine nuts, fried golden.",
+      "ingredients": [
+        { "name": "fine bulgur", "quantity": 300, "unit": "g" },
+        { "name": "minced beef", "quantity": 250, "unit": "g" },
+        { "name": "minced lamb", "quantity": 300, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "pine nuts", "quantity": 50, "unit": "g" },
+        { "name": "ground allspice", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cinnamon", "quantity": 0.5, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 500, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak bulgur in cold water 30 minutes, then drain and squeeze dry.",
+        "Process bulgur with minced beef, half the onion, salt, and a pinch of allspice into a smooth paste.",
+        "Sauté the remaining chopped onion in 2 tablespoons oil, add lamb, and brown.",
+        "Stir in pine nuts, cinnamon, allspice, and salt; cool the filling completely.",
+        "Wet hands and form egg-size balls of the bulgur shell, hollow with a finger, fill with lamb, and seal into pointed torpedoes.",
+        "Fry in 180C oil for 5 minutes until deep golden.",
+        "Drain on paper and serve hot with yogurt or lemon."
+      ],
+      "tags": ["jordanian", "fried", "lamb", "bulgur"],
+      "difficulty": "hard",
+      "prepTime": 60,
+      "cookTime": 25,
+      "servings": 6
+    },
+    {
+      "title": "Hummus",
+      "description": "Silky Levantine puree of chickpeas, tahini, lemon, and garlic, swirled with olive oil and warm chickpeas on top.",
+      "ingredients": [
+        { "name": "chickpeas", "quantity": 250, "unit": "g" },
+        { "name": "tahini", "quantity": 120, "unit": "g" },
+        { "name": "lemon", "quantity": 2, "unit": "pc" },
+        { "name": "garlic clove", "quantity": 2, "unit": "pc" },
+        { "name": "olive oil", "quantity": 60, "unit": "ml" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "baking soda", "quantity": 0.5, "unit": "tsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "paprika", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak chickpeas overnight with baking soda and salt; drain.",
+        "Simmer chickpeas in fresh water for 1.5 hours until very tender, skimming foam.",
+        "Reserve 12 chickpeas and 200 ml cooking liquid; drain the rest.",
+        "Blend tahini with lemon juice and grated garlic until pale.",
+        "Add the warm chickpeas and salt and blend, streaming in cooking liquid until silky and fluffy.",
+        "Spread on a plate and create a well with the back of a spoon.",
+        "Drizzle with olive oil, top with reserved chickpeas, and dust with paprika and cumin."
+      ],
+      "tags": ["jordanian", "dip", "chickpeas", "vegan"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 720,
+      "cookTime": 90,
+      "servings": 6
+    },
+    {
+      "title": "Falafel",
+      "description": "Levantine herbed chickpea fritters with parsley, cilantro, and cumin, deep fried to a crisp shell with a fluffy center.",
+      "ingredients": [
+        { "name": "chickpeas", "quantity": 300, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic clove", "quantity": 4, "unit": "pc" },
+        { "name": "parsley", "quantity": 1, "unit": "bunch" },
+        { "name": "cilantro", "quantity": 1, "unit": "bunch" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground coriander", "quantity": 1, "unit": "tbsp" },
+        { "name": "baking soda", "quantity": 1, "unit": "tsp" },
+        { "name": "sesame seeds", "quantity": 30, "unit": "g" },
+        { "name": "vegetable oil", "quantity": 1, "unit": "l" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak chickpeas overnight; drain thoroughly. Do not cook them.",
+        "Process chickpeas with onion, garlic, parsley, cilantro, cumin, coriander, and salt to a fine sandy mix.",
+        "Stir in baking soda and rest the mixture 30 minutes.",
+        "Shape into walnut-size patties with damp hands or a falafel mold.",
+        "Roll each patty in sesame seeds.",
+        "Heat oil to 180C and fry falafel in batches for 4 minutes until deep brown and crisp.",
+        "Drain on paper and serve in pita with tahini sauce, salad, and pickles."
+      ],
+      "tags": ["jordanian", "vegan", "fried", "chickpeas"],
+      "dietaryTags": ["vegan", "vegetarian"],
+      "difficulty": "medium",
+      "prepTime": 720,
+      "cookTime": 20,
+      "servings": 6
+    }
+  ]
+}

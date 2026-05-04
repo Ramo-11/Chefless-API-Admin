@@ -70,9 +70,13 @@ export interface IUser extends Document {
   recipesCount: number;
   /** Original recipes only (no remixes) — used for spatula badges and free-tier recipe cap */
   originalRecipesCount: number;
+  /** Recipes the user has saved/bookmarked — counted toward combined free-tier cap (originals + saves ≤ 5). */
+  savedRecipesCount: number;
+  /** Remixes the user has authored — gated to 1 max for free tier. */
+  remixesCount: number;
   kitchenId?: Types.ObjectId;
   isPremium: boolean;
-  premiumPlan?: "monthly" | "annual" | "promo" | "admin";
+  premiumPlan?: "monthly" | "annual" | "admin";
   premiumExpiresAt?: Date;
   /** AdminUser._id of the admin who granted premium (only set when premiumPlan === "admin"). */
   premiumGrantedBy?: Types.ObjectId;
@@ -116,6 +120,17 @@ export interface IUser extends Document {
   aiFormatCount?: number;
   /** Timestamp of the most recent successful AI call. */
   aiLastUsedAt?: Date;
+  /**
+   * True for synthetic accounts created by the seed-data pipeline. Seed users
+   * have unusable Firebase UIDs (`seed-{cuisine}-{n}`) and exist solely to
+   * populate the discovery feed during early launch. Visible-only on the
+   * admin Seed Data tab; hidden from public lists like follow suggestions.
+   */
+  isSeed?: boolean;
+  /** Where the seed user came from. Useful for filtering in the admin tab. */
+  seedSource?: "themealdb" | "curated";
+  /** Canonical cuisine the seed user belongs to (e.g., "Lebanese"). */
+  seedCuisine?: string;
 }
 
 const shippingAddressSchema = new Schema<ShippingAddress>(
@@ -178,6 +193,16 @@ const userSchema = new Schema<IUser>(
       type: Number,
       default: 0,
     },
+    savedRecipesCount: {
+      type: Number,
+      default: 0,
+      min: 0,
+    },
+    remixesCount: {
+      type: Number,
+      default: 0,
+      min: 0,
+    },
     kitchenId: {
       type: Schema.Types.ObjectId,
       ref: "Kitchen",
@@ -189,7 +214,7 @@ const userSchema = new Schema<IUser>(
     },
     premiumPlan: {
       type: String,
-      enum: ["monthly", "annual", "promo", "admin"],
+      enum: ["monthly", "annual", "admin"],
     },
     premiumExpiresAt: { type: Date },
     premiumGrantedBy: {
@@ -258,6 +283,9 @@ const userSchema = new Schema<IUser>(
     aiSubstitutionsCount: { type: Number, default: 0 },
     aiFormatCount: { type: Number, default: 0 },
     aiLastUsedAt: { type: Date },
+    isSeed: { type: Boolean, default: false, index: true },
+    seedSource: { type: String, enum: ["themealdb", "curated"] },
+    seedCuisine: { type: String, index: true },
   },
   {
     timestamps: true,
@@ -266,6 +294,9 @@ const userSchema = new Schema<IUser>(
 
 // Text index for search by name
 userSchema.index({ fullName: "text" });
+
+// Compound index used by the admin Seed Data table when grouping by cuisine.
+userSchema.index({ isSeed: 1, seedCuisine: 1 });
 
 const User = (mongoose.models.User as mongoose.Model<IUser>) ||
   mongoose.model<IUser>("User", userSchema);

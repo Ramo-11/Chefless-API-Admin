@@ -1,0 +1,380 @@
+{
+  "cuisine": "Tunisian",
+  "names": {
+    "first": ["Mohamed", "Amel", "Anis", "Sonia", "Bilel", "Wafa", "Sami", "Imen", "Nabil", "Rim", "Hatem", "Olfa"],
+    "last": ["Ben Ali", "Trabelsi", "Bouzid", "Sassi", "Bouazizi", "Khelifi", "Jendoubi", "Hammami", "Mejri", "Chebbi"]
+  },
+  "recipes": [
+    {
+      "title": "Couscous",
+      "description": "Tunisian semolina couscous steamed over a fiery harissa-spiced broth of lamb, vegetables, and chickpeas.",
+      "ingredients": [
+        { "name": "couscous", "quantity": 500, "unit": "g" },
+        { "name": "lamb shoulder", "quantity": 800, "unit": "g" },
+        { "name": "chickpeas", "quantity": 200, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 3, "unit": "tbsp" },
+        { "name": "harissa", "quantity": 2, "unit": "tbsp" },
+        { "name": "carrot", "quantity": 3, "unit": "pc" },
+        { "name": "courgette", "quantity": 3, "unit": "pc" },
+        { "name": "turnip", "quantity": 2, "unit": "pc" },
+        { "name": "potato", "quantity": 3, "unit": "pc" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "ground caraway", "quantity": 1, "unit": "tsp" },
+        { "name": "olive oil", "quantity": 80, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Soak chickpeas overnight, then drain.",
+        "Brown cubed lamb in olive oil with chopped onions; stir in tomato paste, harissa, turmeric, and caraway.",
+        "Add chickpeas, salt, and 2 liters of water; simmer 1 hour.",
+        "Moisten couscous with cold salted water, rake with fingers, and steam over the broth in a couscoussier for 20 minutes.",
+        "Tip into a tray, drizzle with oil, and rake again to separate; steam another 20 minutes.",
+        "Add chunks of carrot, turnip, and potato to the broth; simmer 20 minutes, then add courgette for 10 more.",
+        "Steam couscous a final 15 minutes; mound on a platter, top with meat and vegetables, and ladle over the spicy broth."
+      ],
+      "tags": ["tunisian", "couscous", "lamb", "national dish"],
+      "difficulty": "hard",
+      "prepTime": 720,
+      "cookTime": 130,
+      "servings": 8
+    },
+    {
+      "title": "Brik",
+      "description": "Tunisian thin pastry triangle stuffed with egg, tuna, capers, and parsley, deep fried until crackling crisp.",
+      "ingredients": [
+        { "name": "brik pastry", "quantity": 8, "unit": "pc" },
+        { "name": "egg", "quantity": 8, "unit": "pc" },
+        { "name": "tuna in oil", "quantity": 200, "unit": "g" },
+        { "name": "potato", "quantity": 2, "unit": "pc" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "parsley", "quantity": 1, "unit": "bunch" },
+        { "name": "capers", "quantity": 2, "unit": "tbsp" },
+        { "name": "harissa", "quantity": 1, "unit": "tsp" },
+        { "name": "vegetable oil", "quantity": 500, "unit": "ml" },
+        { "name": "lemon", "quantity": 1, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Boil potatoes until tender, then mash with chopped onion, drained tuna, parsley, capers, harissa, and salt.",
+        "Place a brik sheet on the work surface, spread a quarter of the filling on one half, and make a well in the center.",
+        "Crack a whole egg into the well and immediately fold the pastry into a triangle, sealing edges firmly.",
+        "Heat oil to 180C in a deep skillet.",
+        "Slide a brik into the oil and baste the top with hot oil for 90 seconds until the pastry is crisp and the white is just set.",
+        "Drain briefly on paper and serve immediately with lemon wedges."
+      ],
+      "tags": ["tunisian", "fried", "tuna", "egg"],
+      "difficulty": "medium",
+      "prepTime": 25,
+      "cookTime": 20,
+      "servings": 4
+    },
+    {
+      "title": "Shakshouka",
+      "description": "Tunisian peppers, tomato, and harissa stew topped with poached eggs, served straight from the pan with crusty bread.",
+      "ingredients": [
+        { "name": "tomato", "quantity": 6, "unit": "pc" },
+        { "name": "red bell pepper", "quantity": 2, "unit": "pc" },
+        { "name": "green pepper", "quantity": 2, "unit": "pc" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic clove", "quantity": 4, "unit": "pc" },
+        { "name": "harissa", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "ground caraway", "quantity": 1, "unit": "tsp" },
+        { "name": "egg", "quantity": 6, "unit": "pc" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "parsley", "quantity": 1, "unit": "bunch" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Sauté chopped onion and peppers in olive oil for 10 minutes until soft and beginning to char.",
+        "Add minced garlic, cumin, caraway, and harissa; cook 30 seconds.",
+        "Stir in chopped tomatoes and salt and simmer 15 minutes until thickened.",
+        "Make 6 wells in the sauce and crack an egg into each.",
+        "Cover and cook on low heat for 7 minutes until whites are just set.",
+        "Scatter chopped parsley and serve from the pan with crusty bread."
+      ],
+      "tags": ["tunisian", "breakfast", "eggs", "harissa"],
+      "dietaryTags": ["vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Mloukhia",
+      "description": "Tunisian dark green stew of dried jute leaves slow-cooked with beef and bay leaves until almost black.",
+      "ingredients": [
+        { "name": "ground mloukhia leaves", "quantity": 200, "unit": "g" },
+        { "name": "beef stew meat", "quantity": 700, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "garlic clove", "quantity": 6, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "bay leaf", "quantity": 4, "unit": "pc" },
+        { "name": "ground coriander", "quantity": 1, "unit": "tsp" },
+        { "name": "olive oil", "quantity": 100, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" },
+        { "name": "black pepper", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Heat olive oil in a heavy pot and gently toast the dried mloukhia powder for 5 minutes, stirring constantly.",
+        "Whisk in 500 ml hot water and stir until smooth without lumps.",
+        "Add chopped onion, smashed garlic, bay leaves, tomato paste, coriander, salt, and pepper.",
+        "Stir in cubed beef and another 750 ml water and simmer covered on lowest heat for 3 hours.",
+        "Stir occasionally and add hot water if too thick; the stew should be very dark and silky.",
+        "Adjust seasoning and serve over white rice or with crusty bread."
+      ],
+      "tags": ["tunisian", "stew", "beef", "slow cooked"],
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 200,
+      "servings": 6
+    },
+    {
+      "title": "Ojja",
+      "description": "Tunisian skillet of tomato, peppers, and merguez sausage with eggs cracked in, finished with harissa.",
+      "ingredients": [
+        { "name": "tomato", "quantity": 5, "unit": "pc" },
+        { "name": "green pepper", "quantity": 3, "unit": "pc" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "merguez sausage", "quantity": 300, "unit": "g" },
+        { "name": "garlic clove", "quantity": 4, "unit": "pc" },
+        { "name": "harissa", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground caraway", "quantity": 1, "unit": "tsp" },
+        { "name": "egg", "quantity": 6, "unit": "pc" },
+        { "name": "olive oil", "quantity": 2, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Slice merguez and brown in olive oil; remove and set aside.",
+        "In the same oil, sauté chopped onion and peppers for 8 minutes.",
+        "Add minced garlic, harissa, and caraway; cook 30 seconds.",
+        "Stir in chopped tomatoes and salt; simmer 15 minutes until reduced.",
+        "Return the merguez to the pan.",
+        "Crack eggs directly into the sauce and stir gently until just set but still runny.",
+        "Serve straight from the pan with crusty bread."
+      ],
+      "tags": ["tunisian", "eggs", "merguez", "skillet"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Lablabi",
+      "description": "Tunisian street-food chickpea soup poured over crusty bread with cumin, harissa, lemon, and a soft egg.",
+      "ingredients": [
+        { "name": "chickpeas", "quantity": 300, "unit": "g" },
+        { "name": "garlic clove", "quantity": 6, "unit": "pc" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tbsp" },
+        { "name": "harissa", "quantity": 2, "unit": "tbsp" },
+        { "name": "olive oil", "quantity": 60, "unit": "ml" },
+        { "name": "lemon", "quantity": 2, "unit": "pc" },
+        { "name": "stale bread", "quantity": 4, "unit": "pc" },
+        { "name": "egg", "quantity": 4, "unit": "pc" },
+        { "name": "tuna in oil", "quantity": 100, "unit": "g" },
+        { "name": "capers", "quantity": 1, "unit": "tbsp" },
+        { "name": "parsley", "quantity": 1, "unit": "bunch" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak chickpeas overnight with a pinch of baking soda and salt.",
+        "Drain and simmer chickpeas in 2 liters fresh water with smashed garlic for 1.5 hours until very soft.",
+        "Stir in cumin, salt, and 1 tablespoon olive oil; the broth should remain thin.",
+        "Poach eggs in the simmering broth for 4 minutes.",
+        "Tear stale bread into a deep bowl; spoon a teaspoon of harissa over the top.",
+        "Ladle the chickpeas and broth over the bread.",
+        "Top with a poached egg, drizzle with olive oil and lemon juice, and finish with tuna, capers, and parsley."
+      ],
+      "tags": ["tunisian", "soup", "chickpeas", "street food"],
+      "difficulty": "easy",
+      "prepTime": 720,
+      "cookTime": 100,
+      "servings": 4
+    },
+    {
+      "title": "Tajine Tunisien",
+      "description": "Tunisian baked egg and meat tajine, like a Maghrebi frittata of chicken or lamb, cheese, and parsley.",
+      "ingredients": [
+        { "name": "chicken thighs", "quantity": 400, "unit": "g" },
+        { "name": "egg", "quantity": 8, "unit": "pc" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "potato", "quantity": 2, "unit": "pc" },
+        { "name": "parsley", "quantity": 1, "unit": "bunch" },
+        { "name": "grated cheese", "quantity": 100, "unit": "g" },
+        { "name": "breadcrumbs", "quantity": 30, "unit": "g" },
+        { "name": "ground turmeric", "quantity": 1, "unit": "tsp" },
+        { "name": "ground cinnamon", "quantity": 0.5, "unit": "tsp" },
+        { "name": "olive oil", "quantity": 4, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Brown chopped chicken with sliced onion in olive oil with turmeric, cinnamon, salt, and pepper.",
+        "Add 200 ml water and simmer 20 minutes until chicken is tender; shred and reserve any liquid.",
+        "Boil cubed potato until tender and drain.",
+        "Beat the eggs with breadcrumbs, cheese, and chopped parsley.",
+        "Fold in the shredded chicken and potato and any reserved cooking liquid.",
+        "Pour into an oiled baking dish and bake at 180C for 35 minutes until set and golden.",
+        "Cool slightly, cut into squares, and serve with harissa and lemon."
+      ],
+      "tags": ["tunisian", "baked", "eggs", "chicken"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 70,
+      "servings": 6
+    },
+    {
+      "title": "Salade Méchouia",
+      "description": "Tunisian smoky salad of fire-roasted peppers, tomatoes, and garlic chopped together with olive oil, tuna, and capers.",
+      "ingredients": [
+        { "name": "red bell pepper", "quantity": 4, "unit": "pc" },
+        { "name": "green pepper", "quantity": 2, "unit": "pc" },
+        { "name": "tomato", "quantity": 4, "unit": "pc" },
+        { "name": "garlic clove", "quantity": 4, "unit": "pc" },
+        { "name": "tuna in oil", "quantity": 100, "unit": "g" },
+        { "name": "capers", "quantity": 1, "unit": "tbsp" },
+        { "name": "olive oil", "quantity": 60, "unit": "ml" },
+        { "name": "lemon", "quantity": 1, "unit": "pc" },
+        { "name": "ground caraway", "quantity": 1, "unit": "tsp" },
+        { "name": "ground coriander", "quantity": 1, "unit": "tsp" },
+        { "name": "egg", "quantity": 2, "unit": "pc" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Char peppers, tomatoes, and unpeeled garlic over an open flame or under a hot broiler until blackened all over.",
+        "Cool peppers in a covered bowl, then peel, seed, and finely chop.",
+        "Peel and chop the charred tomatoes; squeeze the soft garlic from the skins.",
+        "Hard-boil the eggs, peel, and quarter.",
+        "Combine peppers, tomatoes, and garlic with caraway, coriander, salt, lemon juice, and olive oil.",
+        "Spread on a platter and top with flaked tuna, capers, and quartered eggs."
+      ],
+      "tags": ["tunisian", "salad", "smoky", "peppers"],
+      "dietaryTags": ["gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 4
+    },
+    {
+      "title": "Harissa",
+      "description": "Tunisia's signature fiery red paste of dried chilies, garlic, caraway, and coriander, the soul of every Tunisian table.",
+      "ingredients": [
+        { "name": "dried red chilies", "quantity": 100, "unit": "g" },
+        { "name": "garlic clove", "quantity": 8, "unit": "pc" },
+        { "name": "caraway seeds", "quantity": 1, "unit": "tbsp" },
+        { "name": "coriander seeds", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "olive oil", "quantity": 120, "unit": "ml" },
+        { "name": "salt", "quantity": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Stem and seed the dried chilies, then soak in hot water for 30 minutes.",
+        "Toast caraway and coriander seeds in a dry pan until fragrant, then grind to a powder.",
+        "Drain the chilies and pat dry.",
+        "Pound chilies, garlic, ground spices, cumin, and salt in a mortar until smooth, or blend.",
+        "Stream in olive oil while blending until thick and glossy.",
+        "Pack into a jar, top with a layer of olive oil to seal, and refrigerate up to 1 month."
+      ],
+      "tags": ["tunisian", "condiment", "vegan", "spicy"],
+      "dietaryTags": ["vegan", "vegetarian", "gluten-free"],
+      "difficulty": "easy",
+      "prepTime": 35,
+      "cookTime": 5,
+      "servings": 12
+    },
+    {
+      "title": "Kefta",
+      "description": "Tunisian spiced minced meat balls simmered in a tomato and harissa sauce, served over couscous or with bread.",
+      "ingredients": [
+        { "name": "minced beef", "quantity": 500, "unit": "g" },
+        { "name": "onion", "quantity": 2, "unit": "pc" },
+        { "name": "garlic clove", "quantity": 4, "unit": "pc" },
+        { "name": "parsley", "quantity": 1, "unit": "bunch" },
+        { "name": "tomato", "quantity": 4, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 1, "unit": "tbsp" },
+        { "name": "harissa", "quantity": 1, "unit": "tbsp" },
+        { "name": "ground cumin", "quantity": 1, "unit": "tsp" },
+        { "name": "ground coriander", "quantity": 1, "unit": "tsp" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Mix minced beef with grated onion, garlic, chopped parsley, half the cumin, salt, and pepper; knead until tacky.",
+        "Roll into walnut-sized balls.",
+        "Brown the meatballs in olive oil and remove.",
+        "In the same pan, sauté chopped onion until soft, then stir in tomato paste, harissa, remaining cumin, and coriander.",
+        "Add chopped tomatoes, salt, and 200 ml water; simmer 10 minutes.",
+        "Return the meatballs to the sauce and simmer 20 minutes until cooked through and the sauce is thick.",
+        "Serve over couscous with extra harissa on the side."
+      ],
+      "tags": ["tunisian", "meatballs", "tomato", "harissa"],
+      "difficulty": "easy",
+      "prepTime": 20,
+      "cookTime": 40,
+      "servings": 4
+    },
+    {
+      "title": "Makroudh",
+      "description": "Tunisian semolina diamond-cut pastry stuffed with date paste, fried, and dipped in honey and orange blossom syrup.",
+      "ingredients": [
+        { "name": "fine semolina", "quantity": 500, "unit": "g" },
+        { "name": "ghee", "quantity": 150, "unit": "g" },
+        { "name": "warm water", "quantity": 200, "unit": "ml" },
+        { "name": "pitted dates", "quantity": 400, "unit": "g" },
+        { "name": "ground cinnamon", "quantity": 1, "unit": "tsp" },
+        { "name": "orange blossom water", "quantity": 2, "unit": "tbsp" },
+        { "name": "honey", "quantity": 250, "unit": "ml" },
+        { "name": "vegetable oil", "quantity": 1, "unit": "l" },
+        { "name": "salt", "quantity": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Rub semolina with melted ghee and salt until sandy; rest 1 hour.",
+        "Add warm water and 1 tablespoon orange blossom water; knead just until it holds, do not over work.",
+        "Mash dates with cinnamon and 1 tablespoon orange blossom water into a smooth paste.",
+        "Roll the dough into long rectangles; pipe a rope of date paste down the center, fold, and seal.",
+        "Cut on the diagonal into small diamonds and press a pattern with a fork.",
+        "Fry in 170C oil for 3 minutes until pale gold.",
+        "Warm honey with the remaining orange blossom water and dip the hot pastries to coat.",
+        "Drain on a rack and let the syrup set before serving with mint tea."
+      ],
+      "tags": ["tunisian", "dessert", "dates", "fried"],
+      "dietaryTags": ["vegetarian"],
+      "difficulty": "hard",
+      "prepTime": 90,
+      "cookTime": 25,
+      "servings": 12
+    },
+    {
+      "title": "Chorba Frik",
+      "description": "Maghrebi soup of cracked freekeh wheat, lamb, tomato, and chickpeas, perfumed with cinnamon and mint for Ramadan.",
+      "ingredients": [
+        { "name": "freekeh", "quantity": 200, "unit": "g" },
+        { "name": "lamb shoulder", "quantity": 400, "unit": "g" },
+        { "name": "chickpeas", "quantity": 100, "unit": "g" },
+        { "name": "onion", "quantity": 1, "unit": "pc" },
+        { "name": "tomato", "quantity": 3, "unit": "pc" },
+        { "name": "tomato paste", "quantity": 2, "unit": "tbsp" },
+        { "name": "celery", "quantity": 2, "unit": "pc" },
+        { "name": "ground cinnamon", "quantity": 1, "unit": "tsp" },
+        { "name": "ground caraway", "quantity": 1, "unit": "tsp" },
+        { "name": "fresh mint", "quantity": 1, "unit": "bunch" },
+        { "name": "olive oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "salt", "quantity": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Soak chickpeas overnight, then drain.",
+        "Brown cubed lamb in olive oil with chopped onion and celery.",
+        "Stir in tomato paste, cinnamon, and caraway; cook 1 minute.",
+        "Add chopped tomatoes, soaked chickpeas, salt, and 2 liters water; simmer 1 hour.",
+        "Rinse freekeh and add to the pot; cook 30 minutes until tender.",
+        "Adjust salt and add hot water if too thick.",
+        "Stir in chopped mint and serve hot with lemon."
+      ],
+      "tags": ["tunisian", "soup", "ramadan", "freekeh"],
+      "difficulty": "easy",
+      "prepTime": 720,
+      "cookTime": 110,
+      "servings": 6
+    }
+  ]
+}
