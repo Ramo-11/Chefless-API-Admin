@@ -7,6 +7,7 @@ import ScheduleEntry, { IScheduleEntry } from "../models/ScheduleEntry";
 import ShoppingList from "../models/ShoppingList";
 import KitchenInvite, { IKitchenInvite } from "../models/KitchenInvite";
 import RecipeRating from "../models/RecipeRating";
+import Notification from "../models/Notification";
 import {
   uploadImage,
   deleteImage,
@@ -805,6 +806,31 @@ async function performLeadTransfer(
     senderId: currentLeadId,
     status: "pending",
   });
+
+  // Auto-confirm any pending suggestions the new lead made before promotion.
+  // Leads add directly — they shouldn't have to "approve their own past
+  // suggestions" after being promoted, and the stale `schedule_suggestion`
+  // notifications sitting in approvers' inboxes referencing those entries
+  // become misleading once the suggestion is resolved.
+  const autoConfirmed = await ScheduleEntry.find({
+    kitchenId,
+    suggestedBy: newLeadId,
+    status: "suggested",
+  })
+    .select("_id")
+    .lean();
+
+  if (autoConfirmed.length > 0) {
+    const confirmedIds = autoConfirmed.map((e) => e._id);
+    await ScheduleEntry.updateMany(
+      { _id: { $in: confirmedIds } },
+      { $set: { status: "confirmed", confirmedBy: newLeadId } }
+    );
+    await Notification.deleteMany({
+      type: "schedule_suggestion",
+      scheduleEntryId: { $in: confirmedIds },
+    });
+  }
 
   notifyKitchenLeadTransferred(
     newLeadId.toString(),
