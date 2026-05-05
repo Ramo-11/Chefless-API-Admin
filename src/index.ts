@@ -116,7 +116,9 @@ app.use(
 app.use("/", pagesRouter);
 
 // ── Admin panel (served at /admin) ──────────────────────────────────
-app.use("/admin", adminRouter);
+// Admin router needs JSON parsing for adminFetch() POST/PUT calls from the
+// EJS views. urlencoded is already applied globally above for form posts.
+app.use("/admin", jsonDefault, adminRouter);
 
 // ── Webhook routes (no auth — they verify their own secrets) ────────
 // RevenueCat webhooks are authorized by a shared Bearer token (see
