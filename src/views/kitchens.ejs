@@ -361,7 +361,7 @@
       closeModal('kitchen-detail-modal');
       toastAndReload('Kitchen lead transferred successfully');
     })
-    .catch(() => showToast('Failed to transfer lead', 'error'));
+    .catch((err) => showToast(err && err.message ? err.message : 'Failed to transfer lead', 'error'));
   }
 
   function confirmDeleteKitchen(id, name) {

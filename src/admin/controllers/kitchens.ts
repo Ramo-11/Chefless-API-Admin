@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import { isValidObjectId } from "mongoose";
 import Kitchen from "../../models/Kitchen";
 import User from "../../models/User";
 import ScheduleEntry from "../../models/ScheduleEntry";
@@ -222,8 +223,24 @@ export async function transferKitchenLead(
     const { id } = req.params;
     const { newLeadId } = req.body;
 
-    if (!newLeadId) {
+    if (!newLeadId || typeof newLeadId !== "string") {
       res.status(400).json({ error: "newLeadId is required" });
+      return;
+    }
+
+    if (!isValidObjectId(id) || !isValidObjectId(newLeadId)) {
+      res.status(400).json({ error: "Invalid kitchen or member id" });
+      return;
+    }
+
+    const kitchen = await Kitchen.findById(id);
+    if (!kitchen) {
+      res.status(404).json({ error: "Kitchen not found" });
+      return;
+    }
+
+    if (kitchen.leadId.toString() === newLeadId) {
+      res.status(400).json({ error: "User is already the kitchen lead" });
       return;
     }
 
@@ -233,24 +250,19 @@ export async function transferKitchenLead(
       return;
     }
 
-    const kitchen = await Kitchen.findByIdAndUpdate(
-      id,
-      { $set: { leadId: newLeadId } }
-    );
-
-    if (!kitchen) {
-      res.status(404).json({ error: "Kitchen not found" });
-      return;
-    }
+    const previousLeadId = kitchen.leadId.toString();
+    kitchen.leadId = newLead._id;
+    await kitchen.save();
 
     await audit(req, "transfer_kitchen_lead", "kitchen", id as string, {
-      previousLeadId: kitchen.leadId.toString(),
+      previousLeadId,
       newLeadId,
     });
     res.json({ success: true });
   } catch (error) {
     logger.error({ err: error }, "Failed to transfer kitchen lead");
-    res.status(500).json({ error: "Failed to transfer lead" });
+    const message = error instanceof Error ? error.message : "Failed to transfer lead";
+    res.status(500).json({ error: message });
   }
 }
 
