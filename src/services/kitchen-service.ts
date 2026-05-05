@@ -15,11 +15,33 @@ import {
 import {
   notifyKitchenInviteWelcome,
   notifyKitchenJoined,
+  notifyKitchenLeadTransferred,
   notifyKitchenRemoved,
   notifyKitchenInviteReceived,
   notifyKitchenInviteAccepted,
   notifyKitchenInviteDeclined,
 } from "./notification-service";
+
+// ── Lead-transfer warnings ─────────────────────────────────────────────
+//
+// Surfaced to admins so they can choose to override (e.g. demote a 5-member
+// kitchen to a free lead, accepting the over-cap state). For user-initiated
+// transfers any warning is a hard error — users can't override.
+export type TransferLeadWarning =
+  | { code: "OVER_CAPACITY"; memberCount: number; cap: number }
+  | { code: "TARGET_BANNED" };
+
+/**
+ * Custom error class for admin-side transfer attempts that hit warnings.
+ * The admin route maps this to a 409 with the structured warning list so
+ * the UI can confirm-and-retry with `force=true`.
+ */
+export class TransferLeadWarningError extends Error {
+  constructor(public readonly warnings: TransferLeadWarning[]) {
+    super("Lead transfer has warnings");
+    this.name = "TransferLeadWarningError";
+  }
+}
 
 const FREE_TIER_MAX_MEMBERS = 2;
 
@@ -720,6 +742,91 @@ export async function removeMember(
   );
 }
 
+/**
+ * Run all warning checks on a candidate lead transfer. Pure function — no
+ * writes. Both the user path and the admin path call this; the user path
+ * throws on any warning, the admin path may bypass with `force=true`.
+ */
+async function evaluateLeadTransferWarnings(
+  kitchen: IKitchen,
+  newLead: { _id: Types.ObjectId; isPremium: boolean; premiumExpiresAt?: Date | null; isBanned: boolean }
+): Promise<TransferLeadWarning[]> {
+  const warnings: TransferLeadWarning[] = [];
+
+  if (newLead.isBanned) {
+    warnings.push({ code: "TARGET_BANNED" });
+  }
+
+  // Member-cap regression: if the new lead doesn't carry premium, the kitchen
+  // must already fit inside the free-tier cap or it'll silently violate its
+  // own rule and block all future joins.
+  const newLeadHasPremium =
+    newLead.isPremium &&
+    (!newLead.premiumExpiresAt || new Date(newLead.premiumExpiresAt) > new Date());
+  if (!newLeadHasPremium && kitchen.memberCount > FREE_TIER_MAX_MEMBERS) {
+    warnings.push({
+      code: "OVER_CAPACITY",
+      memberCount: kitchen.memberCount,
+      cap: FREE_TIER_MAX_MEMBERS,
+    });
+  }
+
+  return warnings;
+}
+
+/**
+ * Atomic core of the transfer. Asserts the lead hasn't shifted under us,
+ * cleans up the ex-lead's pending invites, and notifies the new lead.
+ * Callers are responsible for all validation.
+ */
+async function performLeadTransfer(
+  kitchenId: Types.ObjectId,
+  currentLeadId: Types.ObjectId,
+  newLeadId: Types.ObjectId
+): Promise<IKitchen> {
+  // Atomic conditional update: only transfer if `leadId` still equals the
+  // pre-check value. If another request transferred or changed the lead in
+  // the meantime, modifiedCount is 0 and we surface a 409 rather than
+  // silently overwriting someone else's transfer.
+  const result = await Kitchen.updateOne(
+    { _id: kitchenId, leadId: currentLeadId },
+    { $set: { leadId: newLeadId } }
+  );
+
+  if (result.modifiedCount === 0) {
+    throw createError("Lead changed concurrently. Please refresh and try again.", 409);
+  }
+
+  // The ex-lead's pending invites should no longer carry their authority. Keep
+  // them out of the recipient's inbox by deleting silently — the new lead can
+  // re-invite anyone they want.
+  await KitchenInvite.deleteMany({
+    kitchenId,
+    senderId: currentLeadId,
+    status: "pending",
+  });
+
+  notifyKitchenLeadTransferred(
+    newLeadId.toString(),
+    kitchenId.toString(),
+    currentLeadId.toString()
+  ).catch((err: unknown) => {
+    const msg = err instanceof Error ? err.message : "Unknown error";
+    console.error(`Failed to send kitchen_lead_transferred notification: ${msg}`);
+  });
+
+  const updated = await Kitchen.findById(kitchenId);
+  if (!updated) {
+    throw createError("Kitchen not found", 404);
+  }
+  return updated;
+}
+
+/**
+ * User-facing transfer: the current lead promotes a member. Hard-fails on
+ * any warning — users can't override over-capacity or hand the kitchen to
+ * a banned account.
+ */
 export async function transferLead(
   currentLeadId: string,
   newLeadId: string
@@ -742,39 +849,87 @@ export async function transferLead(
     throw createError("Only the kitchen lead can transfer leadership", 403);
   }
 
-  const newLead = await User.findById(newLeadId).select("kitchenId").lean();
+  const newLead = await User.findById(newLeadId)
+    .select("kitchenId isPremium premiumExpiresAt isBanned")
+    .lean();
   if (!newLead || !newLead.kitchenId || !newLead.kitchenId.equals(kitchen._id)) {
     throw createError("Target user is not a member of this kitchen", 404);
   }
 
-  // Atomic conditional update: only transfer if `leadId` still equals the
-  // pre-check value. If another request transferred or changed the lead in
-  // the meantime, modifiedCount is 0 and we surface a 409 rather than
-  // silently overwriting someone else's transfer.
-  const result = await Kitchen.updateOne(
-    { _id: kitchen._id, leadId: new Types.ObjectId(currentLeadId) },
-    { $set: { leadId: new Types.ObjectId(newLeadId) } }
-  );
-
-  if (result.modifiedCount === 0) {
-    throw createError("Lead changed concurrently. Please refresh and try again.", 409);
-  }
-
-  // The ex-lead's pending invites should no longer carry their authority. Keep
-  // them out of the recipient's inbox by deleting silently — the new lead can
-  // re-invite anyone they want.
-  await KitchenInvite.deleteMany({
-    kitchenId: kitchen._id,
-    senderId: new Types.ObjectId(currentLeadId),
-    status: "pending",
+  const warnings = await evaluateLeadTransferWarnings(kitchen, {
+    _id: newLead._id,
+    isPremium: newLead.isPremium,
+    premiumExpiresAt: newLead.premiumExpiresAt,
+    isBanned: newLead.isBanned,
   });
 
-  const updated = await Kitchen.findById(kitchen._id);
-  if (!updated) {
+  for (const w of warnings) {
+    if (w.code === "OVER_CAPACITY") {
+      throw createError(
+        `This kitchen has ${w.memberCount} members. Free accounts can lead kitchens with up to ${w.cap} members. The new lead needs premium first.`,
+        403
+      );
+    }
+    if (w.code === "TARGET_BANNED") {
+      throw createError("This member can't be made kitchen lead.", 403);
+    }
+  }
+
+  return performLeadTransfer(
+    kitchen._id,
+    new Types.ObjectId(currentLeadId),
+    new Types.ObjectId(newLeadId)
+  );
+}
+
+/**
+ * Admin transfer: bypasses the lead-authority check (admins act on the
+ * kitchen directly) and surfaces warnings instead of throwing, so the
+ * admin UI can confirm-and-retry with `force=true`.
+ *
+ * Returns the updated kitchen and the warnings that were active at the
+ * time of the transfer (empty when forced through a clean state). Throws
+ * `TransferLeadWarningError` when warnings are present and `force` is false.
+ */
+export async function adminTransferLead(
+  kitchenId: string,
+  newLeadId: string,
+  opts: { force?: boolean } = {}
+): Promise<{ kitchen: IKitchen; warnings: TransferLeadWarning[] }> {
+  const kitchen = await Kitchen.findById(kitchenId);
+  if (!kitchen) {
     throw createError("Kitchen not found", 404);
   }
 
-  return updated;
+  if (kitchen.leadId.toString() === newLeadId) {
+    throw createError("User is already the kitchen lead", 400);
+  }
+
+  const newLead = await User.findById(newLeadId)
+    .select("kitchenId isPremium premiumExpiresAt isBanned")
+    .lean();
+  if (!newLead || !newLead.kitchenId || !newLead.kitchenId.equals(kitchen._id)) {
+    throw createError("Target user is not a member of this kitchen", 404);
+  }
+
+  const warnings = await evaluateLeadTransferWarnings(kitchen, {
+    _id: newLead._id,
+    isPremium: newLead.isPremium,
+    premiumExpiresAt: newLead.premiumExpiresAt,
+    isBanned: newLead.isBanned,
+  });
+
+  if (warnings.length > 0 && !opts.force) {
+    throw new TransferLeadWarningError(warnings);
+  }
+
+  const updated = await performLeadTransfer(
+    kitchen._id,
+    kitchen.leadId,
+    new Types.ObjectId(newLeadId)
+  );
+
+  return { kitchen: updated, warnings };
 }
 
 export async function updatePermissions(

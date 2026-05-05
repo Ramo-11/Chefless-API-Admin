@@ -353,15 +353,54 @@
 
   function transferLead(kitchenId, memberId, memberName) {
     if (!confirm('Are you sure you want to transfer kitchen lead to ' + memberName + '?')) return;
-    adminFetch('/admin/api/kitchens/' + kitchenId + '/transfer-lead', {
+    submitTransferLead(kitchenId, memberId, memberName, false);
+  }
+
+  function submitTransferLead(kitchenId, memberId, memberName, force) {
+    fetch('/admin/api/kitchens/' + kitchenId + '/transfer-lead', {
       method: 'POST',
-      body: JSON.stringify({ newLeadId: memberId })
+      headers: {
+        'Content-Type': 'application/json',
+        'x-csrf-token': getCsrfToken()
+      },
+      body: JSON.stringify({ newLeadId: memberId, force: force })
     })
-    .then(() => {
-      closeModal('kitchen-detail-modal');
-      toastAndReload('Kitchen lead transferred successfully');
+    .then(function (r) {
+      return r.json().then(function (body) { return { ok: r.ok, status: r.status, body: body }; });
     })
-    .catch((err) => showToast(err && err.message ? err.message : 'Failed to transfer lead', 'error'));
+    .then(function (res) {
+      if (res.ok) {
+        closeModal('kitchen-detail-modal');
+        toastAndReload('Kitchen lead transferred successfully');
+        return;
+      }
+      // 409 with structured warnings → ask for confirmation, then re-POST with force=true.
+      if (res.status === 409 && res.body && Array.isArray(res.body.warnings) && res.body.canForce) {
+        var lines = res.body.warnings.map(formatTransferWarning).filter(Boolean);
+        var msg = 'Transfer to ' + memberName + ' has issues:\n\n' +
+                  lines.map(function (l) { return '• ' + l; }).join('\n') +
+                  '\n\nProceed anyway?';
+        if (confirm(msg)) {
+          submitTransferLead(kitchenId, memberId, memberName, true);
+        }
+        return;
+      }
+      showToast((res.body && res.body.error) || 'Failed to transfer lead', 'error');
+    })
+    .catch(function () { showToast('Failed to transfer lead', 'error'); });
+  }
+
+  function formatTransferWarning(w) {
+    if (!w || !w.code) return null;
+    switch (w.code) {
+      case 'OVER_CAPACITY':
+        return 'Kitchen has ' + w.memberCount + ' members. Free leads can host up to ' +
+               w.cap + ' — the kitchen will be over capacity until they upgrade.';
+      case 'TARGET_BANNED':
+        return 'The selected member is banned.';
+      default:
+        return w.code;
+    }
   }
 
   function confirmDeleteKitchen(id, name) {

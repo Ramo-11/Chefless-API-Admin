@@ -74,6 +74,7 @@ function deriveRouteForType(params: CreateNotificationParams): string | null {
     case "kitchen_invite":
     case "kitchen_removed":
     case "kitchen_invite_accepted":
+    case "kitchen_lead_transferred":
       // Accepting lands the user in the kitchen screen; the sender tapping
       // the "accepted" receipt also wants the kitchen view.
       return "/kitchen";
@@ -722,6 +723,41 @@ export async function notifyKitchenInviteDeclined(
     kitchenName: kitchen.name,
     pushTitle: "Invite declined",
     pushBody: `${actor.fullName} declined your kitchen invite.`,
+  });
+}
+
+/**
+ * Notify the new lead that they've been promoted. Used by both user-initiated
+ * transfer (old lead chooses successor) and admin-initiated transfer (admin
+ * reassigns leadership). When `formerLeadId` is provided we render the
+ * actor's name in the message; admin-driven transfers omit it so the message
+ * reads as a system action.
+ */
+export async function notifyKitchenLeadTransferred(
+  newLeadId: string,
+  kitchenId: string,
+  formerLeadId?: string
+): Promise<void> {
+  const [actor, kitchen] = await Promise.all([
+    formerLeadId ? getActorData(formerLeadId) : Promise.resolve(null),
+    Kitchen.findById(kitchenId).select("name").lean(),
+  ]);
+  if (!kitchen) return;
+
+  const pushBody = actor
+    ? `${actor.fullName} made you the lead of ${kitchen.name}.`
+    : `You're now the lead of ${kitchen.name}.`;
+
+  await createNotification({
+    userId: new Types.ObjectId(newLeadId),
+    type: "kitchen_lead_transferred",
+    actorId: actor?._id,
+    actorName: actor?.fullName,
+    actorPhoto: actor?.profilePicture,
+    kitchenId: new Types.ObjectId(kitchenId),
+    kitchenName: kitchen.name,
+    pushTitle: "Kitchen lead",
+    pushBody,
   });
 }
 

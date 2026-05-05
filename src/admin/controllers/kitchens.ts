@@ -6,7 +6,11 @@ import ScheduleEntry from "../../models/ScheduleEntry";
 import ShoppingList from "../../models/ShoppingList";
 import AuditLog from "../../models/AuditLog";
 import { logger } from "../../lib/logger";
-import { adminDeleteKitchenPhoto } from "../../services/kitchen-service";
+import {
+  adminDeleteKitchenPhoto,
+  adminTransferLead,
+  TransferLeadWarningError,
+} from "../../services/kitchen-service";
 import { publicIdFromUrl, deleteImage } from "../../lib/cloudinary";
 
 /** Escape user input for use inside a MongoDB `$regex` expression. */
@@ -221,7 +225,10 @@ export async function transferKitchenLead(
 ): Promise<void> {
   try {
     const { id } = req.params;
-    const { newLeadId } = req.body;
+    const { newLeadId, force } = req.body as {
+      newLeadId?: unknown;
+      force?: unknown;
+    };
 
     if (!newLeadId || typeof newLeadId !== "string") {
       res.status(400).json({ error: "newLeadId is required" });
@@ -233,33 +240,41 @@ export async function transferKitchenLead(
       return;
     }
 
-    const kitchen = await Kitchen.findById(id);
-    if (!kitchen) {
-      res.status(404).json({ error: "Kitchen not found" });
-      return;
-    }
+    const kitchen = await Kitchen.findById(id).select("leadId").lean();
+    const previousLeadId = kitchen?.leadId.toString();
 
-    if (kitchen.leadId.toString() === newLeadId) {
-      res.status(400).json({ error: "User is already the kitchen lead" });
-      return;
-    }
-
-    const newLead = await User.findOne({ _id: newLeadId, kitchenId: id });
-    if (!newLead) {
-      res.status(400).json({ error: "New lead must be a member of the kitchen" });
-      return;
-    }
-
-    const previousLeadId = kitchen.leadId.toString();
-    kitchen.leadId = newLead._id;
-    await kitchen.save();
+    const { warnings } = await adminTransferLead(id as string, newLeadId, {
+      force: force === true,
+    });
 
     await audit(req, "transfer_kitchen_lead", "kitchen", id as string, {
       previousLeadId,
       newLeadId,
+      forced: force === true,
+      warnings: warnings.map((w) => w.code),
     });
-    res.json({ success: true });
+    res.json({ success: true, warnings });
   } catch (error) {
+    if (error instanceof TransferLeadWarningError) {
+      res.status(409).json({
+        error: "Transfer has warnings",
+        warnings: error.warnings,
+        canForce: true,
+      });
+      return;
+    }
+
+    // Service-thrown HTTP errors (createError) carry a `statusCode`. Surface
+    // them as-is so the admin UI shows the real reason ("already the lead",
+    // "not a member", etc.) instead of a generic 500.
+    const status = (error as { statusCode?: number })?.statusCode;
+    if (typeof status === "number" && status >= 400 && status < 500) {
+      res.status(status).json({
+        error: error instanceof Error ? error.message : "Failed to transfer lead",
+      });
+      return;
+    }
+
     logger.error({ err: error }, "Failed to transfer kitchen lead");
     const message = error instanceof Error ? error.message : "Failed to transfer lead";
     res.status(500).json({ error: message });
