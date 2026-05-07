@@ -18,6 +18,10 @@
     "backfill:remix-signatures": "tsx src/scripts/backfill-remix-signatures.ts",
     "create-apple-review-user": "tsx src/scripts/create-apple-review-user.ts",
     "delete-apple-review-user": "tsx src/scripts/delete-apple-review-user.ts",
+    "create-google-review-user": "tsx src/scripts/create-google-review-user.ts",
+    "delete-google-review-user": "tsx src/scripts/delete-google-review-user.ts",
+    "create-google-review-premium-user": "tsx src/scripts/create-google-review-premium-user.ts",
+    "delete-google-review-premium-user": "tsx src/scripts/delete-google-review-premium-user.ts",
     "backfill-premium-grants": "tsx src/scripts/backfill-premium-grants.ts",
     "test": "vitest run",
     "test:watch": "vitest"

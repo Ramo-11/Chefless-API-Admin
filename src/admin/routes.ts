@@ -6,7 +6,17 @@ import { csrfProtection } from "../middleware/csrf";
 import { loginPage, loginPost, logout } from "./auth";
 import { dashboardPage } from "./controllers/dashboard";
 import { analyticsPage } from "./controllers/analytics";
-import { usersPage, userDetail, banUser, unbanUser, updateUser, grantPremium, revokePremium } from "./controllers/users";
+import {
+  usersPage,
+  userDetail,
+  userDeleteImpact,
+  deleteUser,
+  banUser,
+  unbanUser,
+  updateUser,
+  grantPremium,
+  revokePremium,
+} from "./controllers/users";
 import {
   recipesPage,
   toggleHideRecipe,
@@ -82,9 +92,11 @@ router.use(requireAdminSession);
 
 // ── JSON API routes (no layout) ────────────────────────────────────
 router.get("/api/users/:id", userDetail);
+router.get("/api/users/:id/delete-impact", userDeleteImpact);
 router.post("/api/users/:id/ban", csrfProtection, banUser);
 router.post("/api/users/:id/unban", csrfProtection, unbanUser);
 router.put("/api/users/:id", csrfProtection, updateUser);
+router.delete("/api/users/:id", csrfProtection, deleteUser);
 router.post("/api/users/:id/grant-premium", csrfProtection, grantPremium);
 router.post("/api/users/:id/revoke-premium", csrfProtection, revokePremium);
 router.get("/api/recipes/:id", recipeDetail);

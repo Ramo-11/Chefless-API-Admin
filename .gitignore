@@ -12,6 +12,10 @@ dist/
 # Test/reviewer account scripts — never check in (creds live in env)
 src/scripts/create-apple-review-user.ts
 src/scripts/delete-apple-review-user.ts
+src/scripts/create-google-review-user.ts
+src/scripts/delete-google-review-user.ts
+src/scripts/create-google-review-premium-user.ts
+src/scripts/delete-google-review-premium-user.ts
 
 # Logs
 *.log

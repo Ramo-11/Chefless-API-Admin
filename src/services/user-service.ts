@@ -13,6 +13,7 @@ import Cookbook from "../models/Cookbook";
 import KitchenInvite from "../models/KitchenInvite";
 import Report from "../models/Report";
 import Block from "../models/Block";
+import CookedPost from "../models/CookedPost";
 import admin from "firebase-admin";
 import { canViewProfile } from "./visibility-service";
 import {
@@ -20,6 +21,11 @@ import {
   notifyFollowRequest,
   notifyFollowAccepted,
 } from "./notification-service";
+import {
+  cloudinary,
+  deleteImage,
+  publicIdFromUrl,
+} from "../lib/cloudinary";
 
 type SpatulaBadge = "silver" | "golden" | "diamond" | "ruby" | null;
 
@@ -133,13 +139,267 @@ export async function updateProfile(
   return user;
 }
 
+interface DeleteImpactKitchen {
+  kitchenId: string;
+  name: string;
+  role: "lead" | "member";
+  memberCount: number;
+  /** True when removing this user wipes the kitchen (lead with no successor). */
+  willBeDeleted: boolean;
+  photoPublicId: string | null;
+}
+
+export interface DeleteImpact {
+  user: { id: string; fullName: string; email: string };
+  recipes: { count: number; imageCount: number };
+  cookedPosts: { count: number; imageCount: number };
+  kitchens: DeleteImpactKitchen[];
+  profileImages: {
+    profilePicture: boolean;
+    signature: boolean;
+  };
+  cloudinary: {
+    totalImages: number;
+    /** Sum of `bytes` across every Cloudinary asset that will be destroyed. */
+    totalBytes: number;
+    /** True when at least one publicId failed Cloudinary lookup. Total may undercount. */
+    partial: boolean;
+  };
+}
+
+interface UserAssets {
+  recipeIds: Types.ObjectId[];
+  /** Every Cloudinary publicId tied to this user (recipe photos, step photos, profile, signature, cooked posts, owned kitchen photo). */
+  publicIds: string[];
+  recipePhotoCount: number;
+  cookedPostCount: number;
+  cookedPostPhotoCount: number;
+  hasProfilePicture: boolean;
+  hasSignature: boolean;
+  ownedKitchen: {
+    id: Types.ObjectId;
+    name: string;
+    memberCount: number;
+    photoPublicId: string | null;
+  } | null;
+  memberOfKitchens: Array<{
+    id: Types.ObjectId;
+    name: string;
+    memberCount: number;
+  }>;
+}
+
+/**
+ * Walk the user's content and collect every Cloudinary publicId that will be
+ * destroyed when the account is deleted. Used by the admin delete-impact UI
+ * AND by the cascade itself, so the two stay in sync.
+ */
+async function collectUserAssets(userId: string): Promise<UserAssets | null> {
+  const objectId = new Types.ObjectId(userId);
+  const user = await User.findById(userId)
+    .select("kitchenId profilePicture signature")
+    .lean();
+  if (!user) return null;
+
+  const publicIds: string[] = [];
+  const pushUrl = (url: string | null | undefined) => {
+    if (!url) return;
+    const id = publicIdFromUrl(url);
+    if (id) publicIds.push(id);
+  };
+
+  pushUrl(user.profilePicture);
+  pushUrl(user.signature);
+
+  const recipes = await Recipe.find({ authorId: objectId })
+    .select("_id photos steps")
+    .lean();
+  let recipePhotoCount = 0;
+  for (const r of recipes) {
+    for (const p of r.photos ?? []) {
+      pushUrl(p);
+      recipePhotoCount += 1;
+    }
+    for (const s of r.steps ?? []) {
+      if (s.photo) {
+        pushUrl(s.photo);
+        recipePhotoCount += 1;
+      }
+    }
+  }
+
+  const cookedPosts = await CookedPost.find({ userId: objectId })
+    .select("photoUrl")
+    .lean();
+  let cookedPostPhotoCount = 0;
+  for (const cp of cookedPosts) {
+    if (cp.photoUrl) {
+      pushUrl(cp.photoUrl);
+      cookedPostPhotoCount += 1;
+    }
+  }
+
+  let ownedKitchen: UserAssets["ownedKitchen"] = null;
+  const memberOfKitchens: UserAssets["memberOfKitchens"] = [];
+
+  if (user.kitchenId) {
+    const kitchen = await Kitchen.findById(user.kitchenId)
+      .select("_id name leadId photo")
+      .lean();
+    if (kitchen) {
+      const memberCount = await User.countDocuments({ kitchenId: kitchen._id });
+      const isLead = kitchen.leadId.equals(objectId);
+      if (isLead) {
+        const photoPublicId = kitchen.photo ? publicIdFromUrl(kitchen.photo) : null;
+        if (photoPublicId) publicIds.push(photoPublicId);
+        ownedKitchen = {
+          id: kitchen._id,
+          name: kitchen.name,
+          memberCount,
+          photoPublicId,
+        };
+      } else {
+        memberOfKitchens.push({
+          id: kitchen._id,
+          name: kitchen.name,
+          memberCount,
+        });
+      }
+    }
+  }
+
+  return {
+    recipeIds: recipes.map((r) => r._id),
+    publicIds,
+    recipePhotoCount,
+    cookedPostCount: cookedPosts.length,
+    cookedPostPhotoCount,
+    hasProfilePicture: Boolean(user.profilePicture),
+    hasSignature: Boolean(user.signature),
+    ownedKitchen,
+    memberOfKitchens,
+  };
+}
+
+/**
+ * Look up Cloudinary `bytes` for a list of publicIds. Cloudinary caps each
+ * `resources_by_ids` call at 100 ids — we chunk and sum. A missing id (asset
+ * already gone) is silently skipped and surfaced via the `partial` flag.
+ */
+async function cloudinaryBytesForIds(
+  publicIds: string[]
+): Promise<{ totalBytes: number; partial: boolean }> {
+  if (publicIds.length === 0) return { totalBytes: 0, partial: false };
+
+  const unique = Array.from(new Set(publicIds));
+  let totalBytes = 0;
+  let foundCount = 0;
+
+  for (let i = 0; i < unique.length; i += 100) {
+    const batch = unique.slice(i, i + 100);
+    try {
+      const result = (await cloudinary.api.resources_by_ids(batch)) as {
+        resources: Array<{ bytes?: number }>;
+      };
+      for (const r of result.resources ?? []) {
+        if (typeof r.bytes === "number") totalBytes += r.bytes;
+        foundCount += 1;
+      }
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : String(err);
+      console.error(`Cloudinary resources_by_ids failed: ${msg}`);
+    }
+  }
+
+  return { totalBytes, partial: foundCount < unique.length };
+}
+
+/**
+ * Pre-flight summary of everything that gets removed when an admin deletes
+ * a user: recipe count, kitchen impact, Cloudinary asset count + size.
+ * Display-only — no mutations.
+ */
+export async function getDeleteImpact(
+  userId: string
+): Promise<DeleteImpact | null> {
+  const user = await User.findById(userId)
+    .select("fullName email")
+    .lean();
+  if (!user) return null;
+
+  const assets = await collectUserAssets(userId);
+  if (!assets) return null;
+
+  const { totalBytes, partial } = await cloudinaryBytesForIds(assets.publicIds);
+
+  const kitchens: DeleteImpactKitchen[] = [];
+  if (assets.ownedKitchen) {
+    kitchens.push({
+      kitchenId: assets.ownedKitchen.id.toString(),
+      name: assets.ownedKitchen.name,
+      role: "lead",
+      memberCount: assets.ownedKitchen.memberCount,
+      willBeDeleted: true,
+      photoPublicId: assets.ownedKitchen.photoPublicId,
+    });
+  }
+  for (const k of assets.memberOfKitchens) {
+    kitchens.push({
+      kitchenId: k.id.toString(),
+      name: k.name,
+      role: "member",
+      memberCount: k.memberCount,
+      willBeDeleted: false,
+      photoPublicId: null,
+    });
+  }
+
+  return {
+    user: {
+      id: user._id.toString(),
+      fullName: user.fullName,
+      email: user.email,
+    },
+    recipes: {
+      count: assets.recipeIds.length,
+      imageCount: assets.recipePhotoCount,
+    },
+    cookedPosts: {
+      count: assets.cookedPostCount,
+      imageCount: assets.cookedPostPhotoCount,
+    },
+    kitchens,
+    profileImages: {
+      profilePicture: assets.hasProfilePicture,
+      signature: assets.hasSignature,
+    },
+    cloudinary: {
+      totalImages: assets.publicIds.length,
+      totalBytes,
+      partial,
+    },
+  };
+}
+
 /**
  * Delete the user and cascade-remove every document that references them.
  * Runs steps serially (not in a transaction) — if it fails midway the caller
  * may retry and the remaining orphaned rows will be cleaned up.
+ *
+ * Cascade covers: follows, likes, saves, recipes (with their likes/saves/shares
+ * + Cloudinary photos), cookbooks, cooked posts (with photos), kitchen invites,
+ * reports, blocks, kitchen membership (lead → full kitchen wipe; member →
+ * removal), notifications, shopping lists, schedule entries, recipe shares,
+ * profile + signature images, the User doc, and the Firebase Auth account.
  */
 export async function deleteAccount(userId: string): Promise<void> {
   const objectId = new Types.ObjectId(userId);
+
+  // Snapshot every Cloudinary publicId before MongoDB rows disappear. Asset
+  // destruction runs at the end (fire-and-forget) so a Cloudinary stall can't
+  // stall the user-facing delete.
+  const assets = await collectUserAssets(userId);
+  if (!assets) return;
 
   // Load the user to get their firebaseUid and kitchenId
   const user = await User.findById(userId).select("firebaseUid kitchenId").lean();
@@ -268,8 +528,22 @@ export async function deleteAccount(userId: string): Promise<void> {
     $or: [{ blockerId: objectId }, { blockedId: objectId }],
   });
 
-  // Remove user from their kitchen member/permission arrays (lead transfer handled elsewhere)
-  if (user.kitchenId) {
+  // Cooked posts authored by this user — delete the rows; their Cloudinary
+  // photos are destroyed in the asset sweep below.
+  await CookedPost.deleteMany({ userId: objectId });
+
+  // Kitchen handling: if the user is the lead, wipe the whole kitchen (no
+  // automatic successor). If they're a regular member, just remove them.
+  if (assets.ownedKitchen) {
+    const kitchenId = assets.ownedKitchen.id;
+    await Promise.all([
+      ScheduleEntry.deleteMany({ kitchenId }),
+      ShoppingList.deleteMany({ kitchenId }),
+      KitchenInvite.deleteMany({ kitchenId }),
+      User.updateMany({ kitchenId }, { $unset: { kitchenId: 1 } }),
+    ]);
+    await Kitchen.findByIdAndDelete(kitchenId);
+  } else if (user.kitchenId) {
     await Kitchen.updateOne(
       { _id: user.kitchenId },
       {
@@ -294,6 +568,14 @@ export async function deleteAccount(userId: string): Promise<void> {
 
   // Delete the user document from MongoDB
   await User.findByIdAndDelete(userId);
+
+  // Destroy every Cloudinary asset tied to the deleted account. Awaited so
+  // an admin-triggered delete reports a clean exit, but each `deleteImage`
+  // already swallows per-asset failures so one bad id can't abort the sweep.
+  if (assets.publicIds.length > 0) {
+    const unique = Array.from(new Set(assets.publicIds));
+    await Promise.all(unique.map((id) => deleteImage(id)));
+  }
 
   // Delete the Firebase Auth user (best-effort — client may have already deleted it)
   try {

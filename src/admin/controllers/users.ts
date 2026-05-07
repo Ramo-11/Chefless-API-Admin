@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import User from "../../models/User";
 import AuditLog from "../../models/AuditLog";
 import { logger } from "../../lib/logger";
+import { getDeleteImpact, deleteAccount } from "../../services/user-service";
 
 async function audit(
   req: Request,
@@ -238,6 +239,63 @@ export async function revokePremium(req: Request, res: Response): Promise<void> 
   } catch (error) {
     logger.error({ err: error }, "Failed to revoke premium");
     res.status(500).json({ error: "Failed to revoke premium" });
+  }
+}
+
+export async function userDeleteImpact(
+  req: Request,
+  res: Response
+): Promise<void> {
+  try {
+    const impact = await getDeleteImpact(req.params.id as string);
+    if (!impact) {
+      res.status(404).json({ error: "User not found" });
+      return;
+    }
+    res.json(impact);
+  } catch (error) {
+    logger.error({ err: error }, "Failed to compute delete impact");
+    res.status(500).json({ error: "Failed to compute delete impact" });
+  }
+}
+
+export async function deleteUser(req: Request, res: Response): Promise<void> {
+  try {
+    const targetId = req.params.id as string;
+
+    // Snapshot for the audit log BEFORE the cascade runs and the user vanishes.
+    const impact = await getDeleteImpact(targetId);
+    if (!impact) {
+      res.status(404).json({ error: "User not found" });
+      return;
+    }
+
+    // Refuse to delete an admin via this surface — admin lifecycle goes
+    // through /admin/admins routes (which are super-admin gated).
+    const target = await User.findById(targetId).select("isAdmin").lean();
+    if (target?.isAdmin) {
+      res.status(403).json({
+        error: "Cannot delete an admin account from this screen.",
+      });
+      return;
+    }
+
+    await deleteAccount(targetId);
+
+    await audit(req, "delete_user", "user", targetId, {
+      email: impact.user.email,
+      fullName: impact.user.fullName,
+      recipesDeleted: impact.recipes.count,
+      cookedPostsDeleted: impact.cookedPosts.count,
+      kitchensAffected: impact.kitchens.length,
+      cloudinaryImagesDeleted: impact.cloudinary.totalImages,
+      cloudinaryBytesDeleted: impact.cloudinary.totalBytes,
+    });
+
+    res.json({ success: true });
+  } catch (error) {
+    logger.error({ err: error }, "Failed to delete user");
+    res.status(500).json({ error: "Failed to delete user" });
   }
 }
 

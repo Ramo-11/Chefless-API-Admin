@@ -1197,6 +1197,24 @@ img { max-width: 100%; height: auto; }
   color: #991b1b;
 }
 
+/* ── Impact list (admin user-delete preview) ───────────────── */
+.impact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.impact-list li {
+  padding: 0.625rem 0.75rem;
+  background: var(--bg-soft, #f9fafb);
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+}
+
 /* ── Overlay ───────────────────────────────────────────────── */
 .sidebar-overlay {
   display: none;

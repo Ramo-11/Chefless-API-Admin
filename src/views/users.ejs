@@ -107,6 +107,11 @@
                   <i class="fas fa-check-circle"></i>
                 </button>
               <% } %>
+              <% if (!user.isAdmin) { %>
+                <button class="btn btn-sm btn-danger-outline" onclick="showDeleteUserModal('<%= user._id %>', '<%= user.fullName %>')" aria-label="Delete user">
+                  <i class="fas fa-trash"></i>
+                </button>
+              <% } %>
             </div>
           </td>
         </tr>
@@ -225,6 +230,25 @@
   </div>
 </div>
 
+<!-- Delete User Modal -->
+<div class="modal" id="delete-user-modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Delete User</h2>
+      <button class="modal-close" onclick="closeModal('delete-user-modal')" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body" id="delete-user-body">
+      <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" onclick="closeModal('delete-user-modal')">Cancel</button>
+      <button class="btn btn-danger" id="confirm-delete-user-btn" onclick="confirmDeleteUser()" disabled>
+        <i class="fas fa-trash"></i> Delete permanently
+      </button>
+    </div>
+  </div>
+</div>
+
 <!-- Grant Premium Modal -->
 <div class="modal" id="grant-premium-modal">
   <div class="modal-content modal-sm">
@@ -251,6 +275,105 @@
   let banUserId = null;
   let editUserId = null;
   let grantPremiumUserId = null;
+  let deleteUserId = null;
+
+  function formatBytes(bytes) {
+    if (!bytes || bytes <= 0) return '0 B';
+    const units = ['B', 'KB', 'MB', 'GB', 'TB'];
+    const i = Math.min(units.length - 1, Math.floor(Math.log(bytes) / Math.log(1024)));
+    const value = bytes / Math.pow(1024, i);
+    return value.toFixed(value >= 100 || i === 0 ? 0 : value >= 10 ? 1 : 2) + ' ' + units[i];
+  }
+
+  function showDeleteUserModal(id, name) {
+    deleteUserId = id;
+    const body = document.getElementById('delete-user-body');
+    const btn = document.getElementById('confirm-delete-user-btn');
+    btn.disabled = true;
+    body.innerHTML = '<div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i></div>';
+    openModal('delete-user-modal');
+
+    adminFetch('/admin/api/users/' + id + '/delete-impact')
+      .then(impact => {
+        const u = impact.user;
+        const cl = impact.cloudinary;
+        const sizeLabel = formatBytes(cl.totalBytes) + (cl.partial ? ' (partial — some assets unavailable)' : '');
+        const kitchensHtml = impact.kitchens.length === 0
+          ? '<p class="text-muted">No kitchens.</p>'
+          : '<ul class="impact-list">' + impact.kitchens.map(k => {
+              const role = k.role === 'lead' ? '<span class="badge badge-warning">Lead</span>' : '<span class="badge badge-default">Member</span>';
+              const fate = k.willBeDeleted
+                ? `<span class="text-error"><i class="fas fa-exclamation-triangle"></i> Kitchen will be deleted (${Number(k.memberCount) || 0} member${k.memberCount === 1 ? '' : 's'} kicked out)</span>`
+                : `<span class="text-muted">User will be removed from this kitchen</span>`;
+              return `<li><strong>${esc(k.name)}</strong> ${role}<br>${fate}</li>`;
+            }).join('') + '</ul>';
+
+        body.innerHTML = `
+          <div class="alert alert-error">
+            <i class="fas fa-exclamation-triangle"></i>
+            <div>
+              <strong>This is permanent.</strong> Deleting <strong>${esc(u.fullName)}</strong> (${esc(u.email)}) cascades through every piece of their content. Review the impact below.
+            </div>
+          </div>
+
+          <div class="detail-section">
+            <h4>Recipes</h4>
+            <div class="detail-row"><span>Recipes authored:</span> <span><strong>${Number(impact.recipes.count) || 0}</strong></span></div>
+            <div class="detail-row"><span>Recipe + step photos:</span> <span><strong>${Number(impact.recipes.imageCount) || 0}</strong></span></div>
+            <p class="form-help">All likes, saves, and shares attached to these recipes are also removed. Forks of these recipes keep their attribution name but lose the link.</p>
+          </div>
+
+          <div class="detail-section">
+            <h4>I Cooked It posts</h4>
+            <div class="detail-row"><span>Posts:</span> <span><strong>${Number(impact.cookedPosts.count) || 0}</strong></span></div>
+            <div class="detail-row"><span>Photos:</span> <span><strong>${Number(impact.cookedPosts.imageCount) || 0}</strong></span></div>
+          </div>
+
+          <div class="detail-section">
+            <h4>Kitchens</h4>
+            ${kitchensHtml}
+          </div>
+
+          <div class="detail-section">
+            <h4>Profile assets</h4>
+            <div class="detail-row"><span>Profile picture:</span> <span>${impact.profileImages.profilePicture ? 'Yes' : '—'}</span></div>
+            <div class="detail-row"><span>Signature:</span> <span>${impact.profileImages.signature ? 'Yes' : '—'}</span></div>
+          </div>
+
+          <div class="detail-section">
+            <h4>Cloudinary</h4>
+            <div class="detail-row"><span>Total images destroyed:</span> <span><strong>${Number(cl.totalImages) || 0}</strong></span></div>
+            <div class="detail-row"><span>Total storage freed:</span> <span><strong>${esc(sizeLabel)}</strong></span></div>
+          </div>
+
+          <div class="detail-section">
+            <h4>Also removed</h4>
+            <p class="form-help">Follows (both directions), follow requests, blocks, reports filed by the user, kitchen invites, notifications, shopping lists, schedule entries, recipe shares, cookbooks, the Firebase Auth account.</p>
+          </div>
+        `;
+        document.getElementById('confirm-delete-user-btn').disabled = false;
+      })
+      .catch(() => {
+        body.innerHTML = '<p class="text-error">Failed to load impact summary. Aborting for safety.</p>';
+      });
+  }
+
+  function confirmDeleteUser() {
+    if (!deleteUserId) return;
+    const btn = document.getElementById('confirm-delete-user-btn');
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Deleting...';
+    adminFetch('/admin/api/users/' + deleteUserId, { method: 'DELETE' })
+      .then(() => {
+        closeModal('delete-user-modal');
+        toastAndReload('User deleted');
+      })
+      .catch(() => {
+        showToast('Failed to delete user', 'error');
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-trash"></i> Delete permanently';
+      });
+  }
 
   function viewUser(id) {
     openModal('user-detail-modal');
