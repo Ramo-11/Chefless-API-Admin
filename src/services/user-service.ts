@@ -158,6 +158,12 @@ export interface DeleteImpact {
     profilePicture: boolean;
     signature: boolean;
   };
+  notifications: {
+    /** Notifications addressed to this user — wiped from their own inbox. */
+    asRecipient: number;
+    /** Notifications elsewhere where this user is the actor — wiped to avoid dangling actorId. */
+    asActor: number;
+  };
   cloudinary: {
     totalImages: number;
     /** Sum of `bytes` across every Cloudinary asset that will be destroyed. */
@@ -332,6 +338,11 @@ export async function getDeleteImpact(
 
   const { totalBytes, partial } = await cloudinaryBytesForIds(assets.publicIds);
 
+  const [notifAsRecipient, notifAsActor] = await Promise.all([
+    Notification.countDocuments({ userId: new Types.ObjectId(userId) }),
+    Notification.countDocuments({ actorId: new Types.ObjectId(userId) }),
+  ]);
+
   const kitchens: DeleteImpactKitchen[] = [];
   if (assets.ownedKitchen) {
     kitchens.push({
@@ -372,6 +383,10 @@ export async function getDeleteImpact(
     profileImages: {
       profilePicture: assets.hasProfilePicture,
       signature: assets.hasSignature,
+    },
+    notifications: {
+      asRecipient: notifAsRecipient,
+      asActor: notifAsActor,
     },
     cloudinary: {
       totalImages: assets.publicIds.length,
@@ -556,9 +571,15 @@ export async function deleteAccount(userId: string): Promise<void> {
     );
   }
 
-  // Notifications / shopping lists / schedule entries / recipe shares tied to this user
+  // Notifications / shopping lists / schedule entries / recipe shares tied to this user.
+  // Notifications are deleted from BOTH directions: the user's own inbox AND
+  // any notifications elsewhere where this user was the actor (e.g. "X liked
+  // your recipe" sitting in someone else's feed) — otherwise those rows leak
+  // with a dangling actorId pointing at a deleted account.
   await Promise.all([
-    Notification.deleteMany({ userId: objectId }),
+    Notification.deleteMany({
+      $or: [{ userId: objectId }, { actorId: objectId }],
+    }),
     ShoppingList.deleteMany({ userId: objectId }),
     ScheduleEntry.deleteMany({
       $or: [{ userId: objectId }, { suggestedBy: objectId }],
