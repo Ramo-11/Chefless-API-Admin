@@ -39,25 +39,28 @@ function utcMondayOf(d: Date): Date {
 }
 
 /**
- * Last schedulable calendar day for the free tier: a rolling window of
- * (today + 6) UTC days, i.e. 7 days inclusive of today. Chosen over an
- * ISO-week boundary so Sunday-night meal planners aren't locked out of
- * scheduling tomorrow.
+ * Free-tier schedulable window: a rolling 5-day band of [today - 2, today + 2]
+ * UTC, inclusive. Two days behind lets users still log/edit recent meals;
+ * two days ahead covers the imminent planning horizon. Anything outside
+ * this band requires premium.
  */
-function freeTierMaxScheduleDateUtc(): Date {
+function freeTierScheduleWindowUtc(): { min: Date; max: Date } {
   const today = stripTime(new Date());
-  const end = new Date(today);
-  end.setUTCDate(end.getUTCDate() + 6);
-  return end;
+  const min = new Date(today);
+  min.setUTCDate(min.getUTCDate() - 2);
+  const max = new Date(today);
+  max.setUTCDate(max.getUTCDate() + 2);
+  return { min, max };
 }
 
 function isBeyondFreeTierScheduleLimit(date: Date): boolean {
-  const max = freeTierMaxScheduleDateUtc();
-  return stripTime(date) > max;
+  const { min, max } = freeTierScheduleWindowUtc();
+  const d = stripTime(date);
+  return d > max || d < min;
 }
 
 const FREE_TIER_SCHEDULE_LIMIT_MESSAGE =
-  "Free tier users can plan up to 7 days ahead. Upgrade to premium for full calendar scheduling.";
+  "Free tier users can plan within 2 days before and 2 days after today. Upgrade to premium for full calendar scheduling.";
 
 interface AddEntryData {
   date: Date;
@@ -584,8 +587,11 @@ export async function importToKitchen(
   const end = stripTime(endDate);
 
   // Free-tier members can only import within the free-tier planning window.
-  // Enforce on the end date so imports past the cutoff are rejected cleanly.
-  if (!hasActivePremium(user) && isBeyondFreeTierScheduleLimit(end)) {
+  // Reject if either end of the range falls outside the rolling 5-day band.
+  if (
+    !hasActivePremium(user) &&
+    (isBeyondFreeTierScheduleLimit(end) || isBeyondFreeTierScheduleLimit(start))
+  ) {
     throw createError(
       FREE_TIER_SCHEDULE_LIMIT_MESSAGE,
       403
