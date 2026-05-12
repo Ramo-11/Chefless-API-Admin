@@ -17,6 +17,9 @@ src/scripts/delete-google-review-user.ts
 src/scripts/create-google-review-premium-user.ts
 src/scripts/delete-google-review-premium-user.ts
 
+# Seed data pipeline — local-only (scripts, curated JSON, gallery, reports)
+src/scripts/seed/
+
 # Logs
 *.log
 npm-debug.log*
