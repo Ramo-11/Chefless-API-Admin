@@ -55,6 +55,25 @@ const envSchema = z.object({
   ANTHROPIC_API_KEY: z.string().optional(),
   /** Optional — comma-separated list of browser origins permitted via CORS */
   ALLOWED_ORIGINS: allowedOriginsSchema,
+  /** Optional — Resend API key for transactional emails (crash alerts). */
+  RESEND_API_KEY: z.string().optional(),
+  /** Optional — `from` address for outbound alert emails. */
+  ALERT_EMAIL_FROM: z
+    .string()
+    .email()
+    .optional()
+    .default("Chefless Alerts <alerts@chefless.org>"),
+  /** Optional — comma-separated `to` addresses for crash alerts. */
+  ALERT_EMAIL_TO: z
+    .string()
+    .optional()
+    .default("admin@chefless.org")
+    .transform((val) =>
+      val
+        .split(",")
+        .map((s) => s.trim())
+        .filter((s) => s.length > 0)
+    ),
 });
 
 export type Env = z.infer<typeof envSchema>;

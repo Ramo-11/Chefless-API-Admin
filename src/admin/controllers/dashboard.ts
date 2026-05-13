@@ -3,6 +3,7 @@ import User from "../../models/User";
 import Recipe from "../../models/Recipe";
 import Kitchen from "../../models/Kitchen";
 import Report from "../../models/Report";
+import ClientError from "../../models/ClientError";
 import { logger } from "../../lib/logger";
 
 export async function dashboardPage(
@@ -24,6 +25,8 @@ export async function dashboardPage(
       premiumUsers,
       recentUsers,
       bannedUsers,
+      openCrashes,
+      crashesWeek,
     ] = await Promise.all([
       User.countDocuments(),
       User.countDocuments({ createdAt: { $gte: weekAgo } }),
@@ -38,6 +41,8 @@ export async function dashboardPage(
         .select("fullName email isPremium createdAt profilePicture")
         .lean(),
       User.countDocuments({ isBanned: true }),
+      ClientError.countDocuments({ status: "new" }),
+      ClientError.countDocuments({ lastSeenAt: { $gte: weekAgo } }),
     ]);
 
     res.render("dashboard", {
@@ -51,6 +56,8 @@ export async function dashboardPage(
         pendingReports,
         premiumUsers,
         bannedUsers,
+        openCrashes,
+        crashesWeek,
       },
       recentUsers,
     });

@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import { generateCsrfToken } from "./csrf";
 import Report from "../models/Report";
+import ClientError from "../models/ClientError";
 
 /**
  * Protects admin panel pages. Checks for a valid admin session.
@@ -26,9 +27,15 @@ export async function requireAdminSession(
 
   // Pending report count for the nav badge
   try {
-    res.locals.pendingCount = await Report.countDocuments({ status: "pending" });
+    const [pendingReports, openCrashes] = await Promise.all([
+      Report.countDocuments({ status: "pending" }),
+      ClientError.countDocuments({ status: "new" }),
+    ]);
+    res.locals.pendingCount = pendingReports;
+    res.locals.openCrashesCount = openCrashes;
   } catch {
     res.locals.pendingCount = 0;
+    res.locals.openCrashesCount = 0;
   }
 
   next();

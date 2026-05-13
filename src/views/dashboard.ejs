@@ -64,6 +64,22 @@
     <% } %>
   </div>
 
+  <div class="stat-card <%= stats.openCrashes > 0 ? 'stat-card-alert' : '' %>">
+    <div class="stat-icon stat-icon-red">
+      <i class="fas fa-bug"></i>
+    </div>
+    <div class="stat-content">
+      <span class="stat-value"><%= stats.openCrashes %></span>
+      <span class="stat-label">Open Crashes</span>
+    </div>
+    <% if (stats.crashesWeek > 0) { %>
+      <div class="stat-trend"><i class="fas fa-clock"></i> <%= stats.crashesWeek %> this week</div>
+    <% } %>
+    <% if (stats.openCrashes > 0) { %>
+      <a href="/admin/errors" class="stat-action">Investigate <i class="fas fa-arrow-right"></i></a>
+    <% } %>
+  </div>
+
   <div class="stat-card">
     <div class="stat-icon stat-icon-slate">
       <i class="fas fa-ban"></i>

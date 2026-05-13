@@ -79,6 +79,13 @@ import {
   deleteSeedCuisine,
   deleteAllSeed,
 } from "./controllers/seed-data";
+import {
+  errorsPage,
+  errorDetail,
+  updateErrorStatus,
+  updateErrorNote,
+  deleteError,
+} from "./controllers/errors";
 
 const router = Router();
 
@@ -127,6 +134,11 @@ router.post("/feedback/:id/status", csrfProtection, updateFeedbackStatus);
 router.post("/feedback/:id/note", csrfProtection, updateFeedbackNote);
 router.post("/feedback/:id/delete", csrfProtection, deleteFeedback);
 
+// ── Crashes mutation routes (form POSTs, redirect responses) ───────
+router.post("/errors/:id/status", csrfProtection, updateErrorStatus);
+router.post("/errors/:id/note", csrfProtection, updateErrorNote);
+router.post("/errors/:id/delete", csrfProtection, deleteError);
+
 // ── Admin management API routes (super admin only) ─────────────────
 router.post("/api/admins", requireSuperAdmin, csrfProtection, createAdmin);
 router.put("/api/admins/:id", requireSuperAdmin, csrfProtection, updateAdmin);
@@ -171,6 +183,8 @@ router.get("/seasonal", seasonalPage);
 router.get("/kitchens", kitchensPage);
 router.get("/feedback", feedbackPage);
 router.get("/feedback/:id", feedbackDetail);
+router.get("/errors", errorsPage);
+router.get("/errors/:id", errorDetail);
 router.get("/admins", requireSuperAdmin, adminsPage);
 router.get("/app-config", appConfigPage);
 router.get("/seed-data", seedDataPage);

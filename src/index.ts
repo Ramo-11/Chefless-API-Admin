@@ -31,6 +31,7 @@ import webhooksRouter from "./routes/webhooks";
 import labelsRouter from "./routes/labels";
 import reportsRouter from "./routes/reports";
 import feedbackRouter from "./routes/feedback";
+import errorsRouter from "./routes/errors";
 import aiRouter from "./routes/ai";
 import adminRouter from "./admin/routes";
 import pagesRouter from "./routes/pages";
@@ -159,6 +160,8 @@ app.use("/api/notifications", jsonDefault, ...apiLimiters, notificationsRouter);
 app.use("/api/labels", jsonDefault, ...apiLimiters, labelsRouter);
 app.use("/api/reports", jsonDefault, strictLimiter, reportsRouter);
 app.use("/api/feedback", jsonDefault, strictLimiter, feedbackRouter);
+// Errors route uses its own per-IP limiter because crashes can fire pre-auth.
+app.use("/api/errors", jsonDefault, errorsRouter);
 app.use("/api/ai", jsonDefault, strictLimiter, aiRouter);
 app.use("/api/blocks", jsonDefault, ...apiLimiters, blocksRouter);
 app.use("/api/cook-prompts", jsonDefault, ...apiLimiters, cookPromptsRouter);

@@ -1,0 +1,123 @@
+<% var pageTitle = 'Crash detail'; %>
+<% var page = 'errors'; %>
+
+<%
+  var statusClass = 'badge-info';
+  if (item.status === 'triaged') statusClass = 'badge-warning';
+  else if (item.status === 'resolved') statusClass = 'badge-success';
+  else if (item.status === 'ignored') statusClass = 'badge-default';
+%>
+
+<div class="page-header">
+  <div>
+    <a href="/admin/errors" class="text-muted text-sm" style="display:inline-flex;align-items:center;gap:.35rem;">
+      <i class="fas fa-chevron-left"></i> Back to crashes
+    </a>
+    <h1 style="margin-top:.35rem;"><%= item.exception.length > 140 ? item.exception.slice(0, 140) + '…' : item.exception %></h1>
+    <p class="page-subtitle">
+      First seen <%= new Date(item.firstSeenAt).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' }) %>
+      &nbsp;·&nbsp; Last seen <%= new Date(item.lastSeenAt).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' }) %>
+      &nbsp;·&nbsp; <%= item.occurrences.toLocaleString() %> occurrence<%= item.occurrences === 1 ? '' : 's' %>
+    </p>
+  </div>
+  <div style="display:flex;gap:.5rem;align-items:center;">
+    <span class="badge badge-default"><%= item.platform %></span>
+    <span class="badge <%= statusClass %>"><%= item.status %></span>
+  </div>
+</div>
+
+<div class="card" style="margin-bottom:1rem;">
+  <div class="card-header"><h2><i class="fas fa-info-circle"></i> Context</h2></div>
+  <div class="card-body">
+    <div class="text-sm">
+      <div><strong>Source:</strong> <%= item.source %></div>
+      <div><strong>App version:</strong> <%= item.appVersion ? 'v' + item.appVersion : '—' %></div>
+      <div><strong>Build:</strong> <%= item.buildMode || '—' %></div>
+      <div><strong>Device:</strong> <%= item.deviceModel || '—' %><% if (item.osVersion) { %> · <%= item.osVersion %><% } %></div>
+      <div><strong>Route:</strong> <%= item.route || '—' %></div>
+      <div><strong>User:</strong>
+        <% if (item.userId && item.userId.email) { %>
+          <%= item.userId.fullName %> (<%= item.userId.email %>)
+        <% } else if (item.userEmail) { %>
+          <%= item.userEmail %>
+        <% } else if (item.firebaseUid) { %>
+          Firebase uid: <code><%= item.firebaseUid %></code>
+        <% } else { %>
+          anonymous
+        <% } %>
+      </div>
+      <div><strong>Fingerprint:</strong> <code><%= item.fingerprint %></code></div>
+    </div>
+  </div>
+</div>
+
+<div class="card" style="margin-bottom:1rem;">
+  <div class="card-header"><h2><i class="fas fa-bug"></i> Exception</h2></div>
+  <div class="card-body">
+    <pre style="white-space:pre-wrap;background:var(--gray-50);padding:1rem;border-radius:6px;margin:0;font-size:13px;"><%= item.exception %></pre>
+  </div>
+</div>
+
+<% if (item.reason) { %>
+<div class="card" style="margin-bottom:1rem;">
+  <div class="card-header"><h2><i class="fas fa-comment"></i> Reason</h2></div>
+  <div class="card-body">
+    <pre style="white-space:pre-wrap;background:var(--gray-50);padding:1rem;border-radius:6px;margin:0;font-size:13px;"><%= item.reason %></pre>
+  </div>
+</div>
+<% } %>
+
+<% if (item.stack) { %>
+<div class="card" style="margin-bottom:1rem;">
+  <div class="card-header"><h2><i class="fas fa-stream"></i> Stack trace</h2></div>
+  <div class="card-body">
+    <pre style="white-space:pre-wrap;background:var(--gray-50);padding:1rem;border-radius:6px;margin:0;font-size:12px;max-height:560px;overflow:auto;"><%= item.stack %></pre>
+  </div>
+</div>
+<% } %>
+
+<div class="card" style="margin-bottom:1rem;">
+  <div class="card-header"><h2><i class="fas fa-flag"></i> Status</h2></div>
+  <div class="card-body">
+    <form action="/admin/errors/<%= item._id %>/status" method="POST" style="display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;">
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+      <label for="error-status" class="text-muted text-sm">Set status</label>
+      <select id="error-status" name="status">
+        <option value="new" <%= item.status === 'new' ? 'selected' : '' %>>New</option>
+        <option value="triaged" <%= item.status === 'triaged' ? 'selected' : '' %>>Triaged</option>
+        <option value="resolved" <%= item.status === 'resolved' ? 'selected' : '' %>>Resolved</option>
+        <option value="ignored" <%= item.status === 'ignored' ? 'selected' : '' %>>Ignored</option>
+      </select>
+      <button type="submit" class="btn btn-primary btn-sm">Update status</button>
+    </form>
+  </div>
+</div>
+
+<div class="card" style="margin-bottom:1rem;">
+  <div class="card-header"><h2><i class="fas fa-sticky-note"></i> Admin note</h2></div>
+  <div class="card-body">
+    <form action="/admin/errors/<%= item._id %>/note" method="POST">
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+      <div class="form-group">
+        <label for="admin-note" class="text-muted text-sm">Internal note (max 2000 chars)</label>
+        <textarea id="admin-note" name="adminNote" rows="4" maxlength="2000" placeholder="Repro steps, hypothesis, owner…"><%= item.adminNote || '' %></textarea>
+      </div>
+      <div style="display:flex;justify-content:flex-end;">
+        <button type="submit" class="btn btn-primary btn-sm">Save note</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="card" style="border:1px solid var(--danger-light);">
+  <div class="card-header">
+    <h2 style="color:var(--danger);"><i class="fas fa-trash"></i> Danger zone</h2>
+  </div>
+  <div class="card-body">
+    <p class="text-muted text-sm" style="margin-top:0;">Deletes this crash and all its occurrence counters.</p>
+    <form action="/admin/errors/<%= item._id %>/delete" method="POST" onsubmit="return confirm('Delete this crash record permanently?');">
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+      <button type="submit" class="btn btn-danger btn-sm">Delete crash</button>
+    </form>
+  </div>
+</div>

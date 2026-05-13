@@ -1,0 +1,95 @@
+<% var pageTitle = 'Crashes'; %>
+<% var page = 'errors'; %>
+
+<div class="page-header">
+  <h1>Crashes</h1>
+  <p class="page-subtitle"><%= newCount %> new <%= newCount === 1 ? 'crash' : 'crashes' %></p>
+</div>
+
+<div class="toolbar">
+  <div class="toolbar-filters">
+    <a href="/admin/errors?status=new<%= platform ? '&platform=' + platform : '' %>" class="filter-chip <%= status === 'new' ? 'active' : '' %>">
+      New <% if (newCount > 0) { %><span class="filter-count"><%= newCount %></span><% } %>
+    </a>
+    <a href="/admin/errors?status=triaged<%= platform ? '&platform=' + platform : '' %>" class="filter-chip <%= status === 'triaged' ? 'active' : '' %>">Triaged</a>
+    <a href="/admin/errors?status=resolved<%= platform ? '&platform=' + platform : '' %>" class="filter-chip <%= status === 'resolved' ? 'active' : '' %>">Resolved</a>
+    <a href="/admin/errors?status=ignored<%= platform ? '&platform=' + platform : '' %>" class="filter-chip <%= status === 'ignored' ? 'active' : '' %>">Ignored</a>
+    <a href="/admin/errors?status=all<%= platform ? '&platform=' + platform : '' %>" class="filter-chip <%= status === 'all' ? 'active' : '' %>">All</a>
+  </div>
+  <div class="toolbar-filters">
+    <a href="/admin/errors?status=<%= status %>" class="filter-chip <%= !platform ? 'active' : '' %>">All platforms</a>
+    <a href="/admin/errors?status=<%= status %>&platform=ios" class="filter-chip <%= platform === 'ios' ? 'active' : '' %>">iOS</a>
+    <a href="/admin/errors?status=<%= status %>&platform=android" class="filter-chip <%= platform === 'android' ? 'active' : '' %>">Android</a>
+    <a href="/admin/errors?status=<%= status %>&platform=web" class="filter-chip <%= platform === 'web' ? 'active' : '' %>">Web</a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="table-responsive">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Exception</th>
+          <th>Platform</th>
+          <th>Version</th>
+          <th>Source</th>
+          <th>Occurrences</th>
+          <th>Last seen</th>
+          <th>Status</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% items.forEach(function(item) { %>
+        <tr>
+          <td>
+            <a href="/admin/errors/<%= item._id %>" style="font-weight:600;color:var(--gray-900);text-decoration:none;">
+              <%= item.exception.length > 120 ? item.exception.slice(0, 120) + '…' : item.exception %>
+            </a>
+            <% if (item.reason) { %>
+              <div class="text-muted text-sm"><%= item.reason.length > 100 ? item.reason.slice(0, 100) + '…' : item.reason %></div>
+            <% } %>
+          </td>
+          <td>
+            <span class="badge badge-default"><%= item.platform %></span>
+          </td>
+          <td class="text-muted text-sm">
+            <% if (item.appVersion) { %>v<%= item.appVersion %><% } else { %>—<% } %>
+          </td>
+          <td class="text-muted text-sm"><%= item.source %></td>
+          <td>
+            <strong><%= item.occurrences.toLocaleString() %></strong>
+          </td>
+          <td class="text-muted text-sm"><%= new Date(item.lastSeenAt).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) %></td>
+          <td>
+            <%
+              var statusClass = 'badge-info';
+              if (item.status === 'triaged') statusClass = 'badge-warning';
+              else if (item.status === 'resolved') statusClass = 'badge-success';
+              else if (item.status === 'ignored') statusClass = 'badge-default';
+            %>
+            <span class="badge <%= statusClass %>"><%= item.status %></span>
+          </td>
+          <td>
+            <div class="action-buttons">
+              <a class="btn btn-sm btn-primary" href="/admin/errors/<%= item._id %>">Open</a>
+            </div>
+          </td>
+        </tr>
+        <% }); %>
+        <% if (items.length === 0) { %>
+        <tr>
+          <td colspan="8" class="empty-state">
+            <i class="fas fa-shield-alt"></i>
+            <span>No crashes in this view</span>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<% if (pagination.total > 1) { %>
+  <%- include('../partials/pagination', { pagination, baseUrl: '/admin/errors?status=' + status + '&platform=' + (platform || '') }) %>
+<% } %>
