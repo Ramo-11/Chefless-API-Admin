@@ -57,10 +57,19 @@ const envSchema = z.object({
   ALLOWED_ORIGINS: allowedOriginsSchema,
   /** Optional — Resend API key for transactional emails (crash alerts). */
   RESEND_API_KEY: z.string().optional(),
-  /** Optional — `from` address for outbound alert emails. */
+  /** Optional — `from` address for outbound alert emails. Accepts either a
+   * bare email (`alerts@chefless.org`) or RFC-style display name format
+   * (`Chefless Alerts <alerts@chefless.org>`). Resend supports both. */
   ALERT_EMAIL_FROM: z
     .string()
-    .email()
+    .refine(
+      (val) => {
+        const bare = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const display = /^.+<[^\s@]+@[^\s@]+\.[^\s@]+>$/;
+        return bare.test(val) || display.test(val.trim());
+      },
+      { message: "must be a valid email or 'Name <email@addr>' format" }
+    )
     .optional()
     .default("Chefless Alerts <alerts@chefless.org>"),
   /** Optional — comma-separated `to` addresses for crash alerts. */
