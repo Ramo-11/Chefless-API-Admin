@@ -20,6 +20,7 @@ import {
   isFollowing,
   computeSpatulaBadge,
 } from "../services/user-service";
+import { syncUserPremiumFromRevenueCat } from "../services/revenuecat-service";
 
 const router = Router();
 
@@ -108,6 +109,27 @@ router.get(
     }));
 
     res.status(200).json({ users: results });
+  })
+);
+
+// POST /api/users/me/sync-subscription
+// Deterministically reconciles the caller's premium state with RevenueCat's
+// servers. The app calls this right after a purchase / restore so premium
+// unlocks immediately instead of waiting on the webhook. Safe to call
+// repeatedly; idempotent. Returns the up-to-date user document.
+router.post(
+  "/me/sync-subscription",
+  requireAuth,
+  asyncHandler(async (req: Request, res: Response) => {
+    const firebaseUid = req.user!.uid;
+    const user = await syncUserPremiumFromRevenueCat(firebaseUid);
+
+    if (!user) {
+      res.status(404).json({ error: "User not found. Please register first." });
+      return;
+    }
+
+    res.status(200).json({ user });
   })
 );
 

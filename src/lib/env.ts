@@ -48,6 +48,14 @@ const envSchema = z.object({
   REVENUECAT_WEBHOOK_SECRET: z
     .string()
     .min(1, "REVENUECAT_WEBHOOK_SECRET is required"),
+  /**
+   * Optional — RevenueCat secret REST API key (`sk_...`). Enables deterministic
+   * server-side entitlement verification via `POST /api/users/me/sync-subscription`,
+   * so premium unlocks immediately after purchase/restore instead of depending
+   * solely on the webhook landing in time. When unset, that endpoint falls back
+   * to returning the current DB state (still updated by the webhook).
+   */
+  REVENUECAT_API_KEY: z.string().optional(),
   SESSION_SECRET: z
     .string()
     .min(32, "SESSION_SECRET must be at least 32 characters"),
@@ -109,6 +117,18 @@ function validateEnv(): Env {
     console.warn(
       "[env] ALLOWED_ORIGINS is empty in production — browser CORS will be refused. " +
         "Set ALLOWED_ORIGINS to a comma-separated list of absolute URLs to allow web clients."
+    );
+  }
+
+  // Premium unlock is bulletproof when the app can force a server-side
+  // entitlement check. Without the secret key it still works via the webhook,
+  // but a delayed/dropped webhook leaves a paid user locked — surface that.
+  if (parsed.NODE_ENV === "production" && !parsed.REVENUECAT_API_KEY) {
+    // eslint-disable-next-line no-console
+    console.warn(
+      "[env] REVENUECAT_API_KEY is not set — premium unlock relies solely on the " +
+        "RevenueCat webhook. Set the secret REST API key to enable deterministic " +
+        "server-side verification via POST /api/users/me/sync-subscription."
     );
   }
 
