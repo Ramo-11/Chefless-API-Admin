@@ -45,9 +45,23 @@ export async function recipesPage(
       query.title = { $regex: escapeRegex(search), $options: "i" };
     }
 
-    if (filter === "reported") query.reportsCount = { $gt: 0 };
-    if (filter === "hidden") query.isHidden = true;
-    if (filter === "featured") query.isFeatured = true;
+    // Synthetic seed recipes are kept out of every "real content" view. They
+    // only surface under their own `seed` filter — except `reported`, where a
+    // seed recipe flagged by a real user must still be actionable.
+    if (filter === "reported") {
+      query.reportsCount = { $gt: 0 };
+    } else if (filter === "hidden") {
+      query.isHidden = true;
+      query.isSeed = { $ne: true };
+    } else if (filter === "featured") {
+      query.isFeatured = true;
+      query.isSeed = { $ne: true };
+    } else if (filter === "seed") {
+      query.isSeed = true;
+    } else {
+      // "all" — every real (non-seed) recipe.
+      query.isSeed = { $ne: true };
+    }
 
     const skip = (page - 1) * limit;
 
@@ -58,7 +72,7 @@ export async function recipesPage(
         .limit(limit)
         .populate("authorId", "fullName email")
         .select(
-          "title authorId photos reportsCount isHidden isPrivate isFeatured featuredAt likesCount forksCount createdAt"
+          "title authorId photos reportsCount isHidden isPrivate isFeatured featuredAt likesCount forksCount isSeed createdAt"
         )
         .lean(),
       Recipe.countDocuments(query),

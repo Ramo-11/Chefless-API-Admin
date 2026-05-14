@@ -91,6 +91,27 @@ const envSchema = z.object({
         .map((s) => s.trim())
         .filter((s) => s.length > 0)
     ),
+  /** Optional — `from` address for outbound marketing emails (early-access
+   * campaigns). Accepts a bare email or `Name <email@addr>` format. The domain
+   * must be verified in Resend. Falls back to ALERT_EMAIL_FROM when unset. */
+  MARKETING_EMAIL_FROM: z
+    .string()
+    .refine(
+      (val) => {
+        const bare = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const display = /^.+<[^\s@]+@[^\s@]+\.[^\s@]+>$/;
+        return bare.test(val) || display.test(val.trim());
+      },
+      { message: "must be a valid email or 'Name <email@addr>' format" }
+    )
+    .optional(),
+  /** Optional — public base URL of this service, used to build absolute links
+   * (e.g. the unsubscribe link in marketing emails). */
+  PUBLIC_BASE_URL: z
+    .string()
+    .url()
+    .optional()
+    .default("https://chefless-web.onrender.com"),
 });
 
 export type Env = z.infer<typeof envSchema>;

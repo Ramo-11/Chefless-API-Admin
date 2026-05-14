@@ -30,8 +30,17 @@
     <a href="/admin/recipes?filter=all&search=<%= search %>" class="filter-chip <%= filter === 'all' ? 'active' : '' %>">
       All
     </a>
+    <a href="/admin/recipes?filter=seed&search=<%= search %>" class="filter-chip <%= filter === 'seed' ? 'active' : '' %>">
+      <i class="fas fa-seedling"></i> Seed
+    </a>
   </div>
 </div>
+
+<% if (filter === 'seed') { %>
+  <p class="page-subtitle" style="margin: -0.5rem 0 1rem;">
+    Synthetic recipes created by the seed pipeline. Hidden from analytics and the main recipe tabs.
+  </p>
+<% } %>
 
 <!-- Recipes Table -->
 <div class="card">
@@ -78,6 +87,9 @@
           </td>
           <td>
             <div class="badge-group">
+              <% if (recipe.isSeed) { %>
+                <span class="badge badge-default"><i class="fas fa-seedling"></i> Seed</span>
+              <% } %>
               <% if (recipe.isFeatured) { %>
                 <span class="badge badge-warning"><i class="fas fa-star"></i> Featured</span>
               <% } %>

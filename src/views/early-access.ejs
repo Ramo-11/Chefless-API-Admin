@@ -1,0 +1,313 @@
+<% var pageTitle = 'Early Access'; %>
+<% var page = 'early-access'; %>
+
+<div class="page-header">
+  <div>
+    <h1>Early Access</h1>
+    <p class="page-subtitle">
+      <%= totalContacts.toLocaleString() %> contacts ·
+      <%= counts.subscribed.toLocaleString() %> subscribed ·
+      <%= counts.unsubscribed.toLocaleString() %> unsubscribed
+    </p>
+  </div>
+</div>
+
+<p class="text-muted text-sm" style="margin-top:-.5rem;margin-bottom:1.25rem;">
+  This is the early-signup mailing list collected from the Google Form. It is
+  completely separate from app accounts &mdash; nothing here touches Chefless users or their data.
+</p>
+
+<!-- ── Import CSV ──────────────────────────────────────────────── -->
+<div class="card" style="margin-bottom:1.25rem;">
+  <div class="card-header">
+    <h2><i class="fas fa-file-csv"></i> Import contacts</h2>
+  </div>
+  <div class="card-body">
+    <p class="text-muted text-sm" style="margin-top:0;">
+      Upload the Google Form CSV export (or paste its contents). Columns are matched
+      automatically. Contacts already on the list are updated by email &mdash; nothing is duplicated.
+    </p>
+    <div class="form-group">
+      <label for="csv-file">CSV file</label>
+      <input type="file" id="csv-file" accept=".csv,text/csv">
+    </div>
+    <div class="form-group">
+      <label for="csv-text">…or paste CSV content</label>
+      <textarea id="csv-text" rows="5" placeholder="Timestamp,First Name:,Last Name:,Email Address:,…" style="font-family:monospace;font-size:12px;"></textarea>
+    </div>
+    <div style="display:flex;justify-content:flex-end;">
+      <button class="btn btn-primary btn-sm" id="import-btn" onclick="importCsv()">
+        <i class="fas fa-upload"></i> Import contacts
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Compose & send ──────────────────────────────────────────── -->
+<div class="card" style="margin-bottom:1.25rem;">
+  <div class="card-header">
+    <h2><i class="fas fa-paper-plane"></i> Compose campaign</h2>
+  </div>
+  <div class="card-body">
+    <p class="text-muted text-sm" style="margin-top:0;">
+      This sends to all <strong><%= counts.subscribed.toLocaleString() %></strong> subscribed contacts.
+      Use <code>{{firstName}}</code> anywhere in the subject or message to personalize it.
+      Every email includes a Chefless header and an unsubscribe link automatically.
+    </p>
+    <div class="form-group">
+      <label for="campaign-subject">Subject</label>
+      <input type="text" id="campaign-subject" maxlength="200" placeholder="Chefless is live, {{firstName}} 🎉">
+    </div>
+    <div class="form-group">
+      <label for="campaign-body">Message</label>
+      <textarea id="campaign-body" rows="10" maxlength="20000" placeholder="Hi {{firstName}},&#10;&#10;The day is finally here — Chefless is now on the App Store…&#10;&#10;Leave a blank line between paragraphs."></textarea>
+    </div>
+    <div style="display:flex;justify-content:flex-end;">
+      <button class="btn btn-primary btn-sm" onclick="openSendModal()">
+        <i class="fas fa-paper-plane"></i> Review &amp; send
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Contacts ────────────────────────────────────────────────── -->
+<div class="card" style="margin-bottom:1.25rem;">
+  <div class="card-header">
+    <h2><i class="fas fa-address-book"></i> Contacts</h2>
+  </div>
+  <div class="card-body" style="padding-bottom:0;">
+    <div class="toolbar" style="margin-bottom:1rem;">
+      <form action="/admin/early-access" method="GET" class="toolbar-search">
+        <input type="text" name="search" value="<%= search %>" placeholder="Search name or email…">
+        <input type="hidden" name="status" value="<%= statusFilter %>">
+        <button type="submit" class="btn btn-primary btn-sm">Search</button>
+        <% if (search) { %>
+          <a href="/admin/early-access?status=<%= statusFilter %>" class="btn btn-secondary btn-sm">Clear</a>
+        <% } %>
+      </form>
+      <div class="toolbar-filters">
+        <a href="/admin/early-access?status=all<%= search ? '&search=' + encodeURIComponent(search) : '' %>" class="filter-chip <%= statusFilter === 'all' ? 'active' : '' %>">All</a>
+        <a href="/admin/early-access?status=subscribed<%= search ? '&search=' + encodeURIComponent(search) : '' %>" class="filter-chip <%= statusFilter === 'subscribed' ? 'active' : '' %>">Subscribed</a>
+        <a href="/admin/early-access?status=unsubscribed<%= search ? '&search=' + encodeURIComponent(search) : '' %>" class="filter-chip <%= statusFilter === 'unsubscribed' ? 'active' : '' %>">Unsubscribed</a>
+        <a href="/admin/early-access?status=bounced<%= search ? '&search=' + encodeURIComponent(search) : '' %>" class="filter-chip <%= statusFilter === 'bounced' ? 'active' : '' %>">Bounced</a>
+      </div>
+    </div>
+  </div>
+  <div class="table-responsive">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>From / Lives</th>
+          <th>Signed up</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% contacts.forEach(function(c) { %>
+        <tr id="contact-row-<%= c._id %>">
+          <td><strong><%= [c.firstName, c.lastName].filter(Boolean).join(' ') || '—' %></strong></td>
+          <td class="text-sm"><%= c.email %></td>
+          <td class="text-muted text-sm"><%= c.phone || '—' %></td>
+          <td class="text-muted text-sm">
+            <%= c.ethnicity || '—' %><% if (c.country) { %> · <%= c.country %><% } %>
+          </td>
+          <td class="text-muted text-sm">
+            <%= c.signedUpAt ? new Date(c.signedUpAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '—' %>
+          </td>
+          <td>
+            <%
+              var statusClass = 'badge-success';
+              if (c.status === 'unsubscribed') statusClass = 'badge-default';
+              else if (c.status === 'bounced') statusClass = 'badge-danger';
+            %>
+            <span class="badge <%= statusClass %>"><%= c.status %></span>
+          </td>
+          <td>
+            <div class="action-buttons">
+              <% if (c.status === 'bounced') { %>
+                <span class="text-muted text-sm">—</span>
+              <% } else { %>
+                <button class="btn btn-sm btn-secondary" onclick="toggleContact('<%= c._id %>')" aria-label="Toggle subscription">
+                  <%= c.status === 'subscribed' ? 'Unsubscribe' : 'Resubscribe' %>
+                </button>
+              <% } %>
+              <button class="btn btn-sm btn-danger-outline" onclick="deleteContact('<%= c._id %>', '<%= c.email.replace(/'/g, "") %>')" aria-label="Delete contact">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </td>
+        </tr>
+        <% }); %>
+        <% if (contacts.length === 0) { %>
+        <tr>
+          <td colspan="7" class="empty-state">
+            <i class="fas fa-address-book"></i>
+            <span>No contacts<%= search || statusFilter !== 'all' ? ' match this filter' : ' yet — import the CSV above to get started' %>.</span>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<% if (pagination.total > 1) { %>
+  <%- include('partials/pagination', { pagination, baseUrl: '/admin/early-access?status=' + statusFilter + '&search=' + encodeURIComponent(search) }) %>
+<% } %>
+
+<!-- ── Past campaigns ──────────────────────────────────────────── -->
+<div class="card">
+  <div class="card-header">
+    <h2><i class="fas fa-clock-rotate-left"></i> Sent campaigns</h2>
+  </div>
+  <div class="table-responsive">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Recipients</th>
+          <th>Sent</th>
+          <th>Failed</th>
+          <th>Status</th>
+          <th>Date</th>
+          <th>Sent by</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% campaigns.forEach(function(c) { %>
+        <tr>
+          <td><strong><%= c.subject %></strong></td>
+          <td><%= c.recipientCount.toLocaleString() %></td>
+          <td><%= c.sentCount.toLocaleString() %></td>
+          <td><%= c.failedCount > 0 ? c.failedCount.toLocaleString() : '—' %></td>
+          <td>
+            <%
+              var cClass = 'badge-info';
+              if (c.status === 'sent') cClass = 'badge-success';
+              else if (c.status === 'partial') cClass = 'badge-warning';
+              else if (c.status === 'failed') cClass = 'badge-danger';
+            %>
+            <span class="badge <%= cClass %>"><%= c.status %></span>
+            <% if (c.errorSummary) { %>
+              <div class="text-muted text-sm" style="margin-top:.25rem;"><%= c.errorSummary %></div>
+            <% } %>
+          </td>
+          <td class="text-muted text-sm"><%= new Date(c.createdAt).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) %></td>
+          <td class="text-muted text-sm"><%= c.sentByEmail %></td>
+        </tr>
+        <% }); %>
+        <% if (campaigns.length === 0) { %>
+        <tr>
+          <td colspan="7" class="empty-state">
+            <i class="fas fa-clock-rotate-left"></i>
+            <span>No campaigns sent yet.</span>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ── Send confirmation modal ─────────────────────────────────── -->
+<div class="modal" id="send-modal">
+  <div class="modal-content modal-sm">
+    <div class="modal-header">
+      <h2>Send campaign</h2>
+      <button class="modal-close" onclick="closeModal('send-modal')" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p>You're about to email <strong><%= counts.subscribed.toLocaleString() %></strong> subscribed contacts.</p>
+      <p class="text-muted text-sm">Subject: <strong id="send-modal-subject"></strong></p>
+      <p class="text-muted text-sm">This cannot be undone. Sending may take up to a minute for a large list.</p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" onclick="closeModal('send-modal')">Cancel</button>
+      <button class="btn btn-primary" id="send-confirm-btn" onclick="sendCampaign()">Send now</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ── Import CSV ──────────────────────────────────────────────
+  document.getElementById('csv-file').addEventListener('change', function (e) {
+    var file = e.target.files[0];
+    if (!file) return;
+    var reader = new FileReader();
+    reader.onload = function () {
+      document.getElementById('csv-text').value = reader.result;
+      showToast('File loaded — review and click Import', 'success');
+    };
+    reader.onerror = function () { showToast('Could not read that file', 'error'); };
+    reader.readAsText(file);
+  });
+
+  function importCsv() {
+    var csv = document.getElementById('csv-text').value.trim();
+    if (!csv) { showToast('Choose a CSV file or paste its contents first', 'error'); return; }
+    var btn = document.getElementById('import-btn');
+    btn.disabled = true;
+    adminFetch('/admin/api/early-access/import', {
+      method: 'POST',
+      body: JSON.stringify({ csv: csv })
+    }).then(function (d) {
+      toastAndReload(d.message || 'Contacts imported', 'success');
+    }).catch(function (err) {
+      btn.disabled = false;
+      showToast(err.message, 'error');
+    });
+  }
+
+  // ── Contacts ────────────────────────────────────────────────
+  function toggleContact(id) {
+    adminFetch('/admin/api/early-access/contacts/' + id + '/toggle', { method: 'POST' })
+      .then(function (d) {
+        toastAndReload('Contact ' + d.status, 'success');
+      }).catch(function (err) { showToast(err.message, 'error'); });
+  }
+
+  function deleteContact(id, email) {
+    if (!confirm('Permanently delete ' + email + ' from the list? This cannot be undone.')) return;
+    adminFetch('/admin/api/early-access/contacts/' + id, { method: 'DELETE' })
+      .then(function () {
+        var row = document.getElementById('contact-row-' + id);
+        if (row) row.remove();
+        showToast('Contact deleted', 'success');
+      }).catch(function (err) { showToast(err.message, 'error'); });
+  }
+
+  // ── Send campaign ───────────────────────────────────────────
+  function openSendModal() {
+    var subject = document.getElementById('campaign-subject').value.trim();
+    var body = document.getElementById('campaign-body').value.trim();
+    if (!subject) { showToast('Add a subject first', 'error'); return; }
+    if (!body) { showToast('Add a message body first', 'error'); return; }
+    document.getElementById('send-modal-subject').textContent = subject;
+    openModal('send-modal');
+  }
+
+  function sendCampaign() {
+    var subject = document.getElementById('campaign-subject').value.trim();
+    var body = document.getElementById('campaign-body').value.trim();
+    var btn = document.getElementById('send-confirm-btn');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    adminFetch('/admin/api/early-access/send', {
+      method: 'POST',
+      body: JSON.stringify({ subject: subject, body: body })
+    }).then(function (d) {
+      var msg = 'Sent ' + d.sentCount + ' email' + (d.sentCount === 1 ? '' : 's');
+      if (d.failedCount > 0) msg += ' · ' + d.failedCount + ' failed';
+      toastAndReload(msg, d.failedCount > 0 ? 'error' : 'success');
+    }).catch(function (err) {
+      btn.disabled = false;
+      btn.textContent = 'Send now';
+      closeModal('send-modal');
+      showToast(err.message, 'error');
+    });
+  }
+</script>

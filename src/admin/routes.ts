@@ -87,6 +87,13 @@ import {
   deleteError,
   deleteAllErrors,
 } from "./controllers/errors";
+import {
+  earlyAccessPage,
+  importContacts,
+  toggleContactStatus,
+  deleteContact,
+  sendCampaignToList,
+} from "./controllers/early-access";
 
 const router = Router();
 
@@ -172,6 +179,20 @@ router.delete(
   removeWrappedTestUser
 );
 
+// ── Early access (early-signup email list) ─────────────────────────
+router.post("/api/early-access/import", csrfProtection, importContacts);
+router.post(
+  "/api/early-access/contacts/:id/toggle",
+  csrfProtection,
+  toggleContactStatus
+);
+router.delete(
+  "/api/early-access/contacts/:id",
+  csrfProtection,
+  deleteContact
+);
+router.post("/api/early-access/send", csrfProtection, sendCampaignToList);
+
 // ── Page routes (with layout) ──────────────────────────────────────
 router.use(expressLayouts);
 router.get("/", dashboardPage);
@@ -190,5 +211,6 @@ router.get("/errors/:id", errorDetail);
 router.get("/admins", requireSuperAdmin, adminsPage);
 router.get("/app-config", appConfigPage);
 router.get("/seed-data", seedDataPage);
+router.get("/early-access", earlyAccessPage);
 
 export default router;

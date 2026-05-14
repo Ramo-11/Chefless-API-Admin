@@ -158,8 +158,18 @@ export async function seedRecipesList(
     const limit = 20;
     const cuisine = (req.query.cuisine as string) || "";
 
-    const filter: Record<string, unknown> = { isSeed: true };
-    if (cuisine) filter.seedCuisine = cuisine;
+    // The Seed Data page groups by the *author's* seedCuisine, but each seed
+    // recipe carries its own dish cuisine in `seedCuisine` (e.g. "Italian"),
+    // not the author's bucket (e.g. "Chefless"). Resolve the bucket through
+    // its seed users so the recipe list matches the grouping.
+    const userFilter: Record<string, unknown> = { isSeed: true };
+    if (cuisine) userFilter.seedCuisine = cuisine;
+    const seedUserIds = await User.distinct("_id", userFilter);
+
+    const filter: Record<string, unknown> = {
+      isSeed: true,
+      authorId: { $in: seedUserIds },
+    };
 
     const [recipes, total] = await Promise.all([
       Recipe.find(filter)

@@ -19,6 +19,7 @@
     "seed:recipes": "tsx src/scripts/seed/seed-real-recipes.ts",
     "seed:chefless": "tsx src/scripts/seed/seed-chefless-recipes.ts",
     "seed:clean-steps": "tsx src/scripts/seed/clean-chefless-steps.ts",
+    "seed:remove-haram": "tsx src/scripts/seed/remove-haram-recipes.ts",
     "backfill:original-recipes": "tsx src/scripts/backfill-original-recipes-count.ts",
     "backfill:recipe-counters": "tsx src/scripts/backfill-recipe-counters.ts",
     "backfill:remix-signatures": "tsx src/scripts/backfill-remix-signatures.ts",

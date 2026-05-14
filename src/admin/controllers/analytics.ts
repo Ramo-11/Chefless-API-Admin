@@ -129,6 +129,10 @@ export async function analyticsPage(
     const monthAgo = thirtyDaysAgo;
     const twelveWeeksAgo = getWeeksAgo(12);
 
+    // Synthetic seed accounts and their recipes are excluded from every
+    // platform metric below. They stay visible under the Seed Data tab.
+    const notSeed = { isSeed: { $ne: true } };
+
     const [
       // ── User Engagement ──
       totalUsers,
@@ -185,11 +189,11 @@ export async function analyticsPage(
       hiddenRecipes,
     ] = await Promise.all([
       // ── User Engagement ──
-      User.countDocuments(),
-      User.countDocuments({ lastActiveAt: { $gte: sevenDaysAgo } }),
-      User.countDocuments({ lastActiveAt: { $gte: thirtyDaysAgo } }),
+      User.countDocuments(notSeed),
+      User.countDocuments({ ...notSeed, lastActiveAt: { $gte: sevenDaysAgo } }),
+      User.countDocuments({ ...notSeed, lastActiveAt: { $gte: thirtyDaysAgo } }),
       User.aggregate<{ _id: string; count: number }>([
-        { $match: { createdAt: { $gte: thirtyDaysAgo } } },
+        { $match: { ...notSeed, createdAt: { $gte: thirtyDaysAgo } } },
         {
           $group: {
             _id: {
@@ -200,20 +204,20 @@ export async function analyticsPage(
         },
         { $sort: { _id: 1 } },
       ]),
-      User.countDocuments({ onboardingComplete: true }),
-      User.countDocuments({ onboardingComplete: false }),
-      User.find()
+      User.countDocuments({ ...notSeed, onboardingComplete: true }),
+      User.countDocuments({ ...notSeed, onboardingComplete: false }),
+      User.find(notSeed)
         .sort({ recipesCount: -1, followingCount: -1 })
         .limit(10)
         .select("fullName email recipesCount followersCount followingCount")
         .lean<TopUser[]>(),
 
       // ── Recipe Activity ──
-      Recipe.countDocuments(),
-      Recipe.countDocuments({ createdAt: { $gte: weekAgo } }),
-      Recipe.countDocuments({ createdAt: { $gte: monthAgo } }),
+      Recipe.countDocuments(notSeed),
+      Recipe.countDocuments({ ...notSeed, createdAt: { $gte: weekAgo } }),
+      Recipe.countDocuments({ ...notSeed, createdAt: { $gte: monthAgo } }),
       Recipe.aggregate<{ _id: string; count: number }>([
-        { $match: { createdAt: { $gte: thirtyDaysAgo } } },
+        { $match: { ...notSeed, createdAt: { $gte: thirtyDaysAgo } } },
         {
           $group: {
             _id: {
@@ -225,7 +229,7 @@ export async function analyticsPage(
         { $sort: { _id: 1 } },
       ]),
       Recipe.aggregate<TopRecipe>([
-        { $match: { likesCount: { $gt: 0 } } },
+        { $match: { ...notSeed, likesCount: { $gt: 0 } } },
         { $sort: { likesCount: -1 } },
         { $limit: 10 },
         {
@@ -252,7 +256,7 @@ export async function analyticsPage(
         },
       ]),
       Recipe.aggregate<TopRecipe>([
-        { $match: { forksCount: { $gt: 0 } } },
+        { $match: { ...notSeed, forksCount: { $gt: 0 } } },
         { $sort: { forksCount: -1 } },
         { $limit: 10 },
         {
@@ -279,6 +283,7 @@ export async function analyticsPage(
         },
       ]),
       Recipe.aggregate<TagCount>([
+        { $match: notSeed },
         { $unwind: "$dietaryTags" },
         { $group: { _id: "$dietaryTags", count: { $sum: 1 } } },
         { $sort: { count: -1 } },
@@ -286,29 +291,36 @@ export async function analyticsPage(
         { $project: { _id: 0, tag: "$_id", count: 1 } },
       ]),
       Recipe.countDocuments({
+        ...notSeed,
         photos: { $exists: true, $not: { $size: 0 } },
       }),
       Recipe.countDocuments({
+        ...notSeed,
         $or: [{ photos: { $exists: false } }, { photos: { $size: 0 } }],
       }),
 
       // ── Social & Engagement ──
       Recipe.aggregate<{ total: number }>([
+        { $match: notSeed },
         { $group: { _id: null, total: { $sum: "$likesCount" } } },
       ]),
       Recipe.aggregate<{ total: number }>([
+        { $match: notSeed },
         { $group: { _id: null, total: { $sum: "$forksCount" } } },
       ]),
       User.aggregate<{ total: number }>([
+        { $match: notSeed },
         { $group: { _id: null, total: { $sum: "$followersCount" } } },
       ]),
       User.aggregate<{ avg: number }>([
+        { $match: notSeed },
         { $group: { _id: null, avg: { $avg: "$followersCount" } } },
       ]),
       Recipe.aggregate<{ avg: number }>([
+        { $match: notSeed },
         { $group: { _id: null, avg: { $avg: "$likesCount" } } },
       ]),
-      User.find()
+      User.find(notSeed)
         .sort({ followersCount: -1 })
         .limit(10)
         .select("fullName email followersCount recipesCount")
@@ -385,9 +397,9 @@ export async function analyticsPage(
       ]),
 
       // ── Premium Funnel ──
-      User.countDocuments({ isPremium: true }),
-      User.countDocuments({ isPremium: true, premiumPlan: "monthly" }),
-      User.countDocuments({ isPremium: true, premiumPlan: "annual" }),
+      User.countDocuments({ ...notSeed, isPremium: true }),
+      User.countDocuments({ ...notSeed, isPremium: true, premiumPlan: "monthly" }),
+      User.countDocuments({ ...notSeed, isPremium: true, premiumPlan: "annual" }),
 
       // ── Content Moderation ──
       Report.aggregate<StatusCount>([
@@ -398,8 +410,8 @@ export async function analyticsPage(
         { $group: { _id: "$reason", count: { $sum: 1 } } },
         { $project: { _id: 0, reason: "$_id", count: 1 } },
       ]),
-      User.countDocuments({ isBanned: true }),
-      Recipe.countDocuments({ isHidden: true }),
+      User.countDocuments({ ...notSeed, isBanned: true }),
+      Recipe.countDocuments({ ...notSeed, isHidden: true }),
     ]);
 
     // ── Derived values ──

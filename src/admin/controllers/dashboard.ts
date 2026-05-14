@@ -15,6 +15,10 @@ export async function dashboardPage(
     const weekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
     const monthAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
 
+    // Synthetic seed accounts and their recipes never count toward real
+    // platform metrics. They remain visible under the Seed Data tab.
+    const notSeed = { isSeed: { $ne: true } };
+
     const [
       totalUsers,
       newUsersWeek,
@@ -28,19 +32,19 @@ export async function dashboardPage(
       openCrashes,
       crashesWeek,
     ] = await Promise.all([
-      User.countDocuments(),
-      User.countDocuments({ createdAt: { $gte: weekAgo } }),
-      User.countDocuments({ createdAt: { $gte: monthAgo } }),
-      Recipe.countDocuments(),
+      User.countDocuments(notSeed),
+      User.countDocuments({ ...notSeed, createdAt: { $gte: weekAgo } }),
+      User.countDocuments({ ...notSeed, createdAt: { $gte: monthAgo } }),
+      Recipe.countDocuments(notSeed),
       Kitchen.countDocuments(),
       Report.countDocuments({ status: "pending" }),
-      User.countDocuments({ isPremium: true }),
-      User.find()
+      User.countDocuments({ ...notSeed, isPremium: true }),
+      User.find(notSeed)
         .sort({ createdAt: -1 })
         .limit(10)
         .select("fullName email isPremium createdAt profilePicture")
         .lean(),
-      User.countDocuments({ isBanned: true }),
+      User.countDocuments({ ...notSeed, isBanned: true }),
       ClientError.countDocuments({ status: "new" }),
       ClientError.countDocuments({ lastSeenAt: { $gte: weekAgo } }),
     ]);

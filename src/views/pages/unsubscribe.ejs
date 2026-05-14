@@ -1,0 +1,15 @@
+<%- include('layout', { title, body: `
+
+<h1>${ ok ? 'Unsubscribed' : 'Unsubscribe' }</h1>
+<p class="effective-date">Chefless early access mailing list</p>
+
+<p>${ message }</p>
+
+${ ok ? '<p>Changed your mind? Just reply to any earlier email and we\\'ll add you back.</p>' : '<p>If you keep seeing this, reply to the email you received and we\\'ll remove you manually.</p>' }
+
+<div class="contact">
+  <p><strong>Chefless</strong> &mdash; by Sahab Solutions</p>
+  <p>Questions? <a href="mailto:hello@chefless.org">hello@chefless.org</a></p>
+</div>
+
+` }) %>
