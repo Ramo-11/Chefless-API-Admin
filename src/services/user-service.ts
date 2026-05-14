@@ -16,6 +16,7 @@ import Block from "../models/Block";
 import CookedPost from "../models/CookedPost";
 import admin from "firebase-admin";
 import { canViewProfile } from "./visibility-service";
+import { cascadeRecipeDeletion } from "./recipe-service";
 import {
   notifyNewFollower,
   notifyFollowRequest,
@@ -473,51 +474,18 @@ export async function deleteAccount(userId: string): Promise<void> {
   // own savedRecipesCount is moot — no per-user adjustment needed here.
   await SavedRecipe.deleteMany({ userId: objectId });
 
-  // Delete all recipes authored by this user (plus their likes/saves/shares)
-  const userRecipes = await Recipe.find({ authorId: objectId }).select("_id").lean();
+  // Delete every recipe authored by this user. Each runs through the shared
+  // per-recipe cascade so engagement rows, child-remix pointers, cooked posts,
+  // schedule entries, cookbooks, shopping-list refs, notifications, reports and
+  // the denormalized counters on OTHER users' content are all cleaned up — same
+  // logic as a single recipe-level delete. Cloudinary photos for these recipes
+  // are also destroyed here; the end-of-function asset sweep re-covers them
+  // harmlessly (deleteImage swallows already-gone ids).
+  const userRecipes = await Recipe.find({ authorId: objectId });
+  for (const recipe of userRecipes) {
+    await cascadeRecipeDeletion(recipe);
+  }
   if (userRecipes.length > 0) {
-    const recipeIds = userRecipes.map((r) => r._id);
-
-    // Capture every OTHER user that had any of these recipes saved BEFORE we
-    // wipe the SavedRecipe rows. Each of those users must have their
-    // savedRecipesCount decremented by the count of this user's recipes they
-    // saved, so the free-tier combined cap stays consistent post-delete.
-    const cascadingSaves = await SavedRecipe.find({
-      recipeId: { $in: recipeIds },
-    })
-      .select("userId")
-      .lean();
-
-    await Promise.all([
-      Like.deleteMany({ recipeId: { $in: recipeIds } }),
-      SavedRecipe.deleteMany({ recipeId: { $in: recipeIds } }),
-      RecipeShare.deleteMany({ recipeId: { $in: recipeIds } }),
-      // Preserve fork chain display: null out the link but keep the attribution name
-      Recipe.updateMany(
-        { "forkedFrom.recipeId": { $in: recipeIds } },
-        { $set: { "forkedFrom.recipeId": null, "forkedFrom.authorId": null } }
-      ),
-    ]);
-
-    if (cascadingSaves.length > 0) {
-      const counts = new Map<string, number>();
-      for (const s of cascadingSaves) {
-        const key = s.userId.toString();
-        counts.set(key, (counts.get(key) ?? 0) + 1);
-      }
-      await User.bulkWrite(
-        Array.from(counts.entries()).map(([uid, n]) => ({
-          updateOne: {
-            filter: {
-              _id: new Types.ObjectId(uid),
-              savedRecipesCount: { $gte: n },
-            },
-            update: { $inc: { savedRecipesCount: -n } },
-          },
-        }))
-      );
-    }
-
     await Recipe.deleteMany({ authorId: objectId });
   }
 
