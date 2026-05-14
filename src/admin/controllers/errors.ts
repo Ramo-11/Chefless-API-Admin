@@ -227,3 +227,43 @@ export async function deleteError(
     res.status(500).send("Failed to delete crash");
   }
 }
+
+export async function deleteAllErrors(
+  req: Request,
+  res: Response
+): Promise<void> {
+  try {
+    // Bulk-clear every crash matching the list view's active filters. Mirrors
+    // the exact query logic in errorsPage so "clear all" deletes precisely the
+    // rows the admin is looking at — nothing more.
+    const body = req.body as { status?: unknown; platform?: unknown };
+    const statusParam =
+      typeof body.status === "string" ? body.status : "new";
+    const platformParam =
+      typeof body.platform === "string" ? body.platform : "";
+
+    const query: Record<string, unknown> = {};
+    if (statusParam && statusParam !== "all" && isStatus(statusParam)) {
+      query.status = statusParam;
+    }
+    if (platformParam && isPlatform(platformParam)) {
+      query.platform = platformParam;
+    }
+
+    const result = await ClientError.deleteMany(query);
+
+    await audit(req, "delete_all_errors", undefined, {
+      status: statusParam,
+      platform: platformParam || "all",
+      deleted: result.deletedCount,
+    });
+
+    const redirectQuery = `status=${encodeURIComponent(statusParam)}${
+      platformParam ? `&platform=${encodeURIComponent(platformParam)}` : ""
+    }`;
+    res.redirect(`/admin/errors?${redirectQuery}`);
+  } catch (error) {
+    logger.error({ err: error }, "Failed to clear crashes");
+    res.status(500).send("Failed to clear crashes");
+  }
+}

@@ -2,8 +2,21 @@
 <% var page = 'errors'; %>
 
 <div class="page-header">
-  <h1>Crashes</h1>
-  <p class="page-subtitle"><%= newCount %> new <%= newCount === 1 ? 'crash' : 'crashes' %></p>
+  <div>
+    <h1>Crashes</h1>
+    <p class="page-subtitle"><%= newCount %> new <%= newCount === 1 ? 'crash' : 'crashes' %></p>
+  </div>
+  <% if (items.length > 0) { %>
+  <form action="/admin/errors/delete-all" method="POST"
+        onsubmit="return confirm('Delete ALL <%= pagination.totalItems.toLocaleString() %> crash<%= pagination.totalItems === 1 ? '' : 'es' %> in this view permanently? This cannot be undone.');">
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+    <input type="hidden" name="status" value="<%= status %>">
+    <input type="hidden" name="platform" value="<%= platform %>">
+    <button type="submit" class="btn btn-danger btn-sm">
+      <i class="fas fa-trash"></i> Clear all in view
+    </button>
+  </form>
+  <% } %>
 </div>
 
 <div class="toolbar">
@@ -73,6 +86,11 @@
           <td>
             <div class="action-buttons">
               <a class="btn btn-sm btn-primary" href="/admin/errors/<%= item._id %>">Open</a>
+              <form action="/admin/errors/<%= item._id %>/delete" method="POST" style="display:inline;"
+                    onsubmit="return confirm('Delete this crash permanently?');">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+              </form>
             </div>
           </td>
         </tr>

@@ -85,6 +85,7 @@ import {
   updateErrorStatus,
   updateErrorNote,
   deleteError,
+  deleteAllErrors,
 } from "./controllers/errors";
 
 const router = Router();
@@ -135,6 +136,7 @@ router.post("/feedback/:id/note", csrfProtection, updateFeedbackNote);
 router.post("/feedback/:id/delete", csrfProtection, deleteFeedback);
 
 // ── Crashes mutation routes (form POSTs, redirect responses) ───────
+router.post("/errors/delete-all", csrfProtection, deleteAllErrors);
 router.post("/errors/:id/status", csrfProtection, updateErrorStatus);
 router.post("/errors/:id/note", csrfProtection, updateErrorNote);
 router.post("/errors/:id/delete", csrfProtection, deleteError);
