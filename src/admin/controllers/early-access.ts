@@ -177,7 +177,7 @@ export async function toggleContactStatus(
   res: Response
 ): Promise<void> {
   try {
-    const { id } = req.params;
+    const id = req.params.id as string;
     if (!id || !Types.ObjectId.isValid(id)) {
       res.status(400).json({ error: "Invalid contact id." });
       return;
@@ -208,7 +208,7 @@ export async function deleteContact(
   res: Response
 ): Promise<void> {
   try {
-    const { id } = req.params;
+    const id = req.params.id as string;
     if (!id || !Types.ObjectId.isValid(id)) {
       res.status(400).json({ error: "Invalid contact id." });
       return;
