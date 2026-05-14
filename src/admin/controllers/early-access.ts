@@ -229,17 +229,20 @@ export async function deleteContact(
 }
 
 /**
- * POST /admin/api/early-access/send — send a campaign to every subscribed
- * contact. Persists an EmailCampaign record with the outcome.
+ * POST /admin/api/early-access/send — send a campaign. By default it goes to
+ * every subscribed contact; pass `contactIds` to send to a hand-picked subset.
+ * Unsubscribed/bounced contacts are always excluded, even if explicitly picked.
+ * Persists an EmailCampaign record with the outcome.
  */
 export async function sendCampaignToList(
   req: Request,
   res: Response
 ): Promise<void> {
   try {
-    const { subject, body } = req.body as {
+    const { subject, body, contactIds } = req.body as {
       subject?: unknown;
       body?: unknown;
+      contactIds?: unknown;
     };
     const trimmedSubject =
       typeof subject === "string" ? subject.trim() : "";
@@ -258,10 +261,31 @@ export async function sendCampaignToList(
       return;
     }
 
-    const contacts = await EmailContact.find({ status: "subscribed" });
+    // Resolve the audience: a non-empty contactIds array means "selected only".
+    let selectedIds: string[] | null = null;
+    if (contactIds !== undefined && contactIds !== null) {
+      if (
+        !Array.isArray(contactIds) ||
+        !contactIds.every(
+          (id) => typeof id === "string" && Types.ObjectId.isValid(id)
+        )
+      ) {
+        res.status(400).json({ error: "Invalid contact selection." });
+        return;
+      }
+      if (contactIds.length > 0) selectedIds = contactIds as string[];
+    }
+    const audience = selectedIds ? "selected" : "all";
+
+    const filter: Record<string, unknown> = { status: "subscribed" };
+    if (selectedIds) filter._id = { $in: selectedIds };
+
+    const contacts = await EmailContact.find(filter);
     if (contacts.length === 0) {
       res.status(400).json({
-        error: "There are no subscribed contacts to send to.",
+        error: selectedIds
+          ? "None of the selected contacts are subscribed."
+          : "There are no subscribed contacts to send to.",
       });
       return;
     }
@@ -270,6 +294,7 @@ export async function sendCampaignToList(
       subject: trimmedSubject,
       body: trimmedBody,
       status: "sending",
+      audience,
       recipientCount: contacts.length,
       sentByEmail: req.session.adminEmail ?? "unknown",
     });
@@ -286,6 +311,7 @@ export async function sendCampaignToList(
 
     await audit(req, "send_email_campaign", "email_campaign", campaign._id.toString(), {
       subject: trimmedSubject,
+      audience,
       recipientCount: contacts.length,
       sentCount: result.sentCount,
       failedCount: result.failedCount,
@@ -294,6 +320,8 @@ export async function sendCampaignToList(
     res.json({
       success: true,
       status: campaign.status,
+      audience,
+      recipientCount: contacts.length,
       sentCount: result.sentCount,
       failedCount: result.failedCount,
       errorSummary: result.errorSummary,

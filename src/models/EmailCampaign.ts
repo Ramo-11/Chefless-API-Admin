@@ -6,6 +6,8 @@ import mongoose, { Schema, Document, Types } from "mongoose";
  * an auditable history of what went out to contacts.
  */
 export type EmailCampaignStatus = "sending" | "sent" | "partial" | "failed";
+/** Whether the campaign targeted every subscriber or a hand-picked subset. */
+export type EmailCampaignAudience = "all" | "selected";
 
 export interface IEmailCampaign extends Document {
   _id: Types.ObjectId;
@@ -13,6 +15,7 @@ export interface IEmailCampaign extends Document {
   /** The raw body the admin typed (plain text, may contain {{firstName}}). */
   body: string;
   status: EmailCampaignStatus;
+  audience: EmailCampaignAudience;
   recipientCount: number;
   sentCount: number;
   failedCount: number;
@@ -32,6 +35,11 @@ const emailCampaignSchema = new Schema<IEmailCampaign>(
       enum: ["sending", "sent", "partial", "failed"],
       default: "sending",
       index: true,
+    },
+    audience: {
+      type: String,
+      enum: ["all", "selected"],
+      default: "all",
     },
     recipientCount: { type: Number, default: 0 },
     sentCount: { type: Number, default: 0 },

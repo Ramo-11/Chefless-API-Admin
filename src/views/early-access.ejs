@@ -50,7 +50,6 @@
   </div>
   <div class="card-body">
     <p class="text-muted text-sm" style="margin-top:0;">
-      This sends to all <strong><%= counts.subscribed.toLocaleString() %></strong> subscribed contacts.
       Use <code>{{firstName}}</code> anywhere in the subject or message to personalize it.
       Every email includes a Chefless header and an unsubscribe link automatically.
     </p>
@@ -61,6 +60,17 @@
     <div class="form-group">
       <label for="campaign-body">Message</label>
       <textarea id="campaign-body" rows="10" maxlength="20000" placeholder="Hi {{firstName}},&#10;&#10;The day is finally here — Chefless is now on the App Store…&#10;&#10;Leave a blank line between paragraphs."></textarea>
+    </div>
+    <div class="form-group">
+      <label>Send to</label>
+      <label style="display:flex;align-items:center;gap:.5rem;font-weight:normal;cursor:pointer;">
+        <input type="radio" name="audience" value="all" checked onchange="updateAudienceUI()">
+        All subscribed contacts (<%= counts.subscribed.toLocaleString() %>)
+      </label>
+      <label style="display:flex;align-items:center;gap:.5rem;font-weight:normal;cursor:pointer;margin-top:.35rem;">
+        <input type="radio" name="audience" value="selected" id="audience-selected" onchange="updateAudienceUI()">
+        Only selected contacts (<span id="selected-count">0</span> picked in the table below)
+      </label>
     </div>
     <div style="display:flex;justify-content:flex-end;">
       <button class="btn btn-primary btn-sm" onclick="openSendModal()">
@@ -76,7 +86,7 @@
     <h2><i class="fas fa-address-book"></i> Contacts</h2>
   </div>
   <div class="card-body" style="padding-bottom:0;">
-    <div class="toolbar" style="margin-bottom:1rem;">
+    <div class="toolbar" style="margin-bottom:.5rem;">
       <form action="/admin/early-access" method="GET" class="toolbar-search">
         <input type="text" name="search" value="<%= search %>" placeholder="Search name or email…">
         <input type="hidden" name="status" value="<%= statusFilter %>">
@@ -92,16 +102,25 @@
         <a href="/admin/early-access?status=bounced<%= search ? '&search=' + encodeURIComponent(search) : '' %>" class="filter-chip <%= statusFilter === 'bounced' ? 'active' : '' %>">Bounced</a>
       </div>
     </div>
+    <div id="selection-bar" class="text-sm" style="display:none;align-items:center;gap:.75rem;padding:.5rem .25rem;">
+      <strong><span id="selection-bar-count">0</span> contact(s) selected</strong>
+      <span class="text-muted">— selection is kept as you search and page through the list.</span>
+      <button class="btn btn-secondary btn-sm" onclick="clearSelection()">Clear selection</button>
+    </div>
   </div>
   <div class="table-responsive">
     <table class="data-table">
       <thead>
         <tr>
+          <th style="width:32px;">
+            <input type="checkbox" id="select-all" onchange="toggleSelectAll(this)" aria-label="Select all on this page">
+          </th>
           <th>Name</th>
           <th>Email</th>
           <th>Phone</th>
           <th>From / Lives</th>
           <th>Signed up</th>
+          <th>Emailed</th>
           <th>Status</th>
           <th>Actions</th>
         </tr>
@@ -109,6 +128,13 @@
       <tbody>
         <% contacts.forEach(function(c) { %>
         <tr id="contact-row-<%= c._id %>">
+          <td>
+            <% if (c.status === 'subscribed') { %>
+              <input type="checkbox" class="contact-check" value="<%= c._id %>" onchange="onContactCheck(this)" aria-label="Select contact">
+            <% } else { %>
+              <span class="text-muted">—</span>
+            <% } %>
+          </td>
           <td><strong><%= [c.firstName, c.lastName].filter(Boolean).join(' ') || '—' %></strong></td>
           <td class="text-sm"><%= c.email %></td>
           <td class="text-muted text-sm"><%= c.phone || '—' %></td>
@@ -117,6 +143,13 @@
           </td>
           <td class="text-muted text-sm">
             <%= c.signedUpAt ? new Date(c.signedUpAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '—' %>
+          </td>
+          <td class="text-muted text-sm">
+            <% if (c.emailsSent && c.emailsSent > 0) { %>
+              <%= c.emailsSent %>&times;<% if (c.lastEmailedAt) { %><br><span style="font-size:11px;">last <%= new Date(c.lastEmailedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) %></span><% } %>
+            <% } else { %>
+              —
+            <% } %>
           </td>
           <td>
             <%
@@ -144,7 +177,7 @@
         <% }); %>
         <% if (contacts.length === 0) { %>
         <tr>
-          <td colspan="7" class="empty-state">
+          <td colspan="9" class="empty-state">
             <i class="fas fa-address-book"></i>
             <span>No contacts<%= search || statusFilter !== 'all' ? ' match this filter' : ' yet — import the CSV above to get started' %>.</span>
           </td>
@@ -169,18 +202,21 @@
       <thead>
         <tr>
           <th>Subject</th>
+          <th>Audience</th>
           <th>Recipients</th>
           <th>Sent</th>
           <th>Failed</th>
           <th>Status</th>
           <th>Date</th>
           <th>Sent by</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
         <% campaigns.forEach(function(c) { %>
         <tr>
           <td><strong><%= c.subject %></strong></td>
+          <td class="text-muted text-sm"><%= c.audience === 'selected' ? 'Selected' : 'All subscribers' %></td>
           <td><%= c.recipientCount.toLocaleString() %></td>
           <td><%= c.sentCount.toLocaleString() %></td>
           <td><%= c.failedCount > 0 ? c.failedCount.toLocaleString() : '—' %></td>
@@ -198,11 +234,20 @@
           </td>
           <td class="text-muted text-sm"><%= new Date(c.createdAt).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) %></td>
           <td class="text-muted text-sm"><%= c.sentByEmail %></td>
+          <td>
+            <button class="btn btn-sm btn-secondary"
+              data-subject="<%= c.subject %>"
+              data-body="<%= c.body %>"
+              data-meta="<%= c.audience === 'selected' ? 'Selected contacts' : 'All subscribers' %> · <%= c.sentCount %>/<%= c.recipientCount %> delivered · <%= new Date(c.createdAt).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' }) %> · by <%= c.sentByEmail %>"
+              onclick="viewCampaign(this)" aria-label="View campaign content">
+              <i class="fas fa-eye"></i> View
+            </button>
+          </td>
         </tr>
         <% }); %>
         <% if (campaigns.length === 0) { %>
         <tr>
-          <td colspan="7" class="empty-state">
+          <td colspan="9" class="empty-state">
             <i class="fas fa-clock-rotate-left"></i>
             <span>No campaigns sent yet.</span>
           </td>
@@ -221,13 +266,37 @@
       <button class="modal-close" onclick="closeModal('send-modal')" aria-label="Close">&times;</button>
     </div>
     <div class="modal-body">
-      <p>You're about to email <strong><%= counts.subscribed.toLocaleString() %></strong> subscribed contacts.</p>
+      <p id="send-modal-audience">You're about to send this campaign.</p>
       <p class="text-muted text-sm">Subject: <strong id="send-modal-subject"></strong></p>
       <p class="text-muted text-sm">This cannot be undone. Sending may take up to a minute for a large list.</p>
     </div>
     <div class="modal-footer">
       <button class="btn btn-secondary" onclick="closeModal('send-modal')">Cancel</button>
       <button class="btn btn-primary" id="send-confirm-btn" onclick="sendCampaign()">Send now</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Campaign view modal ─────────────────────────────────────── -->
+<div class="modal" id="campaign-modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Campaign</h2>
+      <button class="modal-close" onclick="closeModal('campaign-modal')" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label>Subject</label>
+        <p id="campaign-modal-subject" style="margin:0;font-weight:600;"></p>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <p id="campaign-modal-body" style="margin:0;white-space:pre-wrap;"></p>
+      </div>
+      <p class="text-muted text-sm" id="campaign-modal-meta" style="margin:0;"></p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" onclick="closeModal('campaign-modal')">Close</button>
     </div>
   </div>
 </div>
@@ -262,6 +331,68 @@
     });
   }
 
+  // ── Contact selection (persists across search/pagination) ───
+  var SELECTION_KEY = 'chefless-early-access-selection';
+
+  function getSelection() {
+    try {
+      var raw = sessionStorage.getItem(SELECTION_KEY);
+      return raw ? JSON.parse(raw) : [];
+    } catch (e) { return []; }
+  }
+  function saveSelection(ids) {
+    try { sessionStorage.setItem(SELECTION_KEY, JSON.stringify(ids)); } catch (e) {}
+  }
+
+  function refreshSelectionUI() {
+    var ids = getSelection();
+    document.getElementById('selected-count').textContent = ids.length;
+    document.getElementById('selection-bar-count').textContent = ids.length;
+    document.getElementById('selection-bar').style.display = ids.length > 0 ? 'flex' : 'none';
+  }
+
+  function onContactCheck(box) {
+    var ids = getSelection();
+    var idx = ids.indexOf(box.value);
+    if (box.checked && idx === -1) ids.push(box.value);
+    else if (!box.checked && idx !== -1) ids.splice(idx, 1);
+    saveSelection(ids);
+    refreshSelectionUI();
+  }
+
+  function toggleSelectAll(box) {
+    document.querySelectorAll('.contact-check').forEach(function (cb) {
+      cb.checked = box.checked;
+      onContactCheck(cb);
+    });
+  }
+
+  function clearSelection() {
+    saveSelection([]);
+    document.querySelectorAll('.contact-check').forEach(function (cb) { cb.checked = false; });
+    document.getElementById('select-all').checked = false;
+    var selectedRadio = document.getElementById('audience-selected');
+    if (selectedRadio.checked) {
+      document.querySelector('input[name="audience"][value="all"]').checked = true;
+      updateAudienceUI();
+    }
+    refreshSelectionUI();
+  }
+
+  function updateAudienceUI() {
+    // No-op hook for future UI state; keeps the radio onchange harmless.
+    refreshSelectionUI();
+  }
+
+  // Restore checkbox state for rows visible on this page.
+  (function () {
+    var ids = getSelection();
+    document.querySelectorAll('.contact-check').forEach(function (cb) {
+      cb.checked = ids.indexOf(cb.value) !== -1;
+    });
+    refreshSelectionUI();
+  })();
+
   // ── Contacts ────────────────────────────────────────────────
   function toggleContact(id) {
     adminFetch('/admin/api/early-access/contacts/' + id + '/toggle', { method: 'POST' })
@@ -276,16 +407,47 @@
       .then(function () {
         var row = document.getElementById('contact-row-' + id);
         if (row) row.remove();
+        var ids = getSelection();
+        var idx = ids.indexOf(id);
+        if (idx !== -1) { ids.splice(idx, 1); saveSelection(ids); refreshSelectionUI(); }
         showToast('Contact deleted', 'success');
       }).catch(function (err) { showToast(err.message, 'error'); });
   }
 
+  // ── Campaign history ────────────────────────────────────────
+  function viewCampaign(btn) {
+    document.getElementById('campaign-modal-subject').textContent = btn.getAttribute('data-subject');
+    document.getElementById('campaign-modal-body').textContent = btn.getAttribute('data-body');
+    document.getElementById('campaign-modal-meta').textContent = btn.getAttribute('data-meta');
+    openModal('campaign-modal');
+  }
+
   // ── Send campaign ───────────────────────────────────────────
+  function selectedAudience() {
+    var checked = document.querySelector('input[name="audience"]:checked');
+    return checked ? checked.value : 'all';
+  }
+
   function openSendModal() {
     var subject = document.getElementById('campaign-subject').value.trim();
     var body = document.getElementById('campaign-body').value.trim();
     if (!subject) { showToast('Add a subject first', 'error'); return; }
     if (!body) { showToast('Add a message body first', 'error'); return; }
+
+    var audience = selectedAudience();
+    var msg;
+    if (audience === 'selected') {
+      var count = getSelection().length;
+      if (count === 0) {
+        showToast('Pick contacts in the table first, or choose "All subscribed"', 'error');
+        return;
+      }
+      msg = "You're about to email " + count + ' selected contact' + (count === 1 ? '' : 's') +
+            '. Unsubscribed contacts are skipped automatically.';
+    } else {
+      msg = "You're about to email all subscribed contacts on the list.";
+    }
+    document.getElementById('send-modal-audience').textContent = msg;
     document.getElementById('send-modal-subject').textContent = subject;
     openModal('send-modal');
   }
@@ -293,15 +455,20 @@
   function sendCampaign() {
     var subject = document.getElementById('campaign-subject').value.trim();
     var body = document.getElementById('campaign-body').value.trim();
+    var audience = selectedAudience();
+    var payload = { subject: subject, body: body };
+    if (audience === 'selected') payload.contactIds = getSelection();
+
     var btn = document.getElementById('send-confirm-btn');
     btn.disabled = true;
     btn.textContent = 'Sending…';
     adminFetch('/admin/api/early-access/send', {
       method: 'POST',
-      body: JSON.stringify({ subject: subject, body: body })
+      body: JSON.stringify(payload)
     }).then(function (d) {
       var msg = 'Sent ' + d.sentCount + ' email' + (d.sentCount === 1 ? '' : 's');
       if (d.failedCount > 0) msg += ' · ' + d.failedCount + ' failed';
+      if (audience === 'selected') saveSelection([]);
       toastAndReload(msg, d.failedCount > 0 ? 'error' : 'success');
     }).catch(function (err) {
       btn.disabled = false;
