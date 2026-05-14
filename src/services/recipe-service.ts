@@ -4,9 +4,15 @@ import Like from "../models/Like";
 import SavedRecipe from "../models/SavedRecipe";
 import RecipeShare from "../models/RecipeShare";
 import RecipeRating from "../models/RecipeRating";
+import CookedPost from "../models/CookedPost";
+import ScheduleEntry from "../models/ScheduleEntry";
+import Cookbook from "../models/Cookbook";
+import ShoppingList from "../models/ShoppingList";
+import Notification from "../models/Notification";
+import Report from "../models/Report";
 import User, { IUser } from "../models/User";
 import { canViewRecipe } from "./visibility-service";
-import { uploadImage } from "../lib/cloudinary";
+import { uploadImage, deleteImage, publicIdFromUrl } from "../lib/cloudinary";
 import {
   notifyRecipeLiked,
   notifyRecipeForked,
@@ -476,6 +482,129 @@ export async function updateRecipe(
   return updatedRecipe;
 }
 
+/**
+ * Full cleanup for a recipe that is being permanently deleted. Shared by BOTH
+ * the author-facing delete and the admin moderation delete so the two paths
+ * can never drift apart.
+ *
+ * Removes every dependent document, repairs the denormalized counters on
+ * related users / recipes / cookbooks, and deletes the recipe's images from
+ * Cloudinary. Does NOT delete the recipe document itself — the caller does
+ * that, so the caller stays in control of ordering and audit logging.
+ */
+export async function cascadeRecipeDeletion(recipe: IRecipe): Promise<void> {
+  const recipeId = recipe._id;
+
+  // If this recipe was itself forked from another, the origin loses a fork.
+  if (recipe.forkedFrom?.recipeId) {
+    await Recipe.updateOne(
+      { _id: recipe.forkedFrom.recipeId },
+      { $inc: { forksCount: -1 } }
+    );
+  }
+
+  // Capture affected users/cookbooks BEFORE we mutate their join rows, so we
+  // can repair their denormalized counters afterwards.
+  const [savers, cookbooks] = await Promise.all([
+    // Each user has at most one save row per recipe (unique index).
+    SavedRecipe.find({ recipeId }).select("userId").lean(),
+    Cookbook.find({ recipeIds: recipeId }).select("_id").lean(),
+  ]);
+
+  await Promise.all([
+    // Engagement rows — meaningless once the recipe is gone.
+    Like.deleteMany({ recipeId }),
+    SavedRecipe.deleteMany({ recipeId }),
+    RecipeShare.deleteMany({ recipeId }),
+    // Ratings cascade away — preserving them would leave orphans pointing at a
+    // deleted recipeId.
+    RecipeRating.deleteMany({ recipeId }),
+
+    // Child remixes: keep the "Remix of …" attribution name, but null the now
+    // dangling id pointers so nothing tries to load a deleted recipe.
+    Recipe.updateMany(
+      { "forkedFrom.recipeId": recipeId },
+      { $set: { "forkedFrom.recipeId": null, "forkedFrom.authorId": null } }
+    ),
+
+    // "I Cooked It" posts survive by design — title, author and cuisine tags
+    // are snapshotted and still drive passport stamps — so just null the
+    // dangling recipe pointer.
+    CookedPost.updateMany({ recipeId }, { $set: { recipeId: null } }),
+
+    // Schedule entries snapshot the recipe's title/photo/author, so the planned
+    // slot still renders. Just detach it from the deleted recipe.
+    ScheduleEntry.updateMany({ recipeId }, { $unset: { recipeId: "" } }),
+
+    // Pull the recipe out of every cookbook that referenced it.
+    Cookbook.updateMany({ recipeIds: recipeId }, { $pull: { recipeIds: recipeId } }),
+
+    // Shopping-list items copy name/quantity at add time, so detach the dead
+    // reference rather than removing the item.
+    ShoppingList.updateMany(
+      { "items.recipeId": recipeId },
+      { $unset: { "items.$[item].recipeId": "" } },
+      { arrayFilters: [{ "item.recipeId": recipeId }] }
+    ),
+
+    // Notifications about this recipe are dead ends once it's gone.
+    Notification.deleteMany({ recipeId }),
+
+    // Reports targeting this recipe — no target left to moderate.
+    Report.deleteMany({ targetType: "recipe", targetId: recipeId }),
+  ]);
+
+  // Repair cookbook.recipesCount for every cookbook the recipe was pulled from.
+  if (cookbooks.length > 0) {
+    await Cookbook.updateMany(
+      { _id: { $in: cookbooks.map((c) => c._id) }, recipesCount: { $gt: 0 } },
+      { $inc: { recipesCount: -1 } }
+    );
+  }
+
+  // Repair savedRecipesCount for every user who had this recipe saved, so the
+  // free-tier combined cap stays consistent.
+  if (savers.length > 0) {
+    await User.updateMany(
+      {
+        _id: { $in: savers.map((s) => s.userId) },
+        savedRecipesCount: { $gt: 0 },
+      },
+      { $inc: { savedRecipesCount: -1 } }
+    );
+  }
+
+  // Repair the author's own recipe counters.
+  const isRemix = !!recipe.forkedFrom;
+  await User.updateOne(
+    {
+      _id: recipe.authorId,
+      ...(isRemix
+        ? { remixesCount: { $gt: 0 } }
+        : { originalRecipesCount: { $gt: 0 } }),
+    },
+    {
+      $inc: {
+        recipesCount: -1,
+        originalRecipesCount: isRemix ? 0 : -1,
+        remixesCount: isRemix ? -1 : 0,
+      },
+    }
+  );
+
+  // Delete the recipe's images from Cloudinary: the gallery photos and any
+  // per-step photos. `originalSignatureUrl` is intentionally left alone — it
+  // points at the origin author's signature asset, which they still own.
+  const imageUrls = [
+    ...recipe.photos,
+    ...recipe.steps.map((s) => s.photo).filter((p): p is string => !!p),
+  ];
+  const publicIds = imageUrls
+    .map((url) => publicIdFromUrl(url))
+    .filter((id): id is string => !!id);
+  await Promise.all(publicIds.map((id) => deleteImage(id)));
+}
+
 export async function deleteRecipe(
   recipeId: string,
   userId: string
@@ -489,69 +618,8 @@ export async function deleteRecipe(
     throw createError("Only the author can delete this recipe", 403);
   }
 
-  // If this recipe was forked from another, decrement the original's forksCount
-  if (recipe.forkedFrom?.recipeId) {
-    await Recipe.updateOne(
-      { _id: recipe.forkedFrom.recipeId },
-      { $inc: { forksCount: -1 } }
-    );
-  }
-
-  // Capture the IDs of every user who saved this recipe BEFORE we wipe the
-  // SavedRecipe rows. Each of those users must have their savedRecipesCount
-  // decremented so the free-tier combined cap stays consistent.
-  const savers = await SavedRecipe.find({ recipeId: recipe._id })
-    .select("userId")
-    .lean();
-
-  // Delete all likes, saves, and shares associated with this recipe.
-  // Preserve remix attribution: null out the recipeId/authorId pointers on
-  // child forks but keep the authorName so future readers still see "Remix of …".
-  await Promise.all([
-    Like.deleteMany({ recipeId: recipe._id }),
-    SavedRecipe.deleteMany({ recipeId: recipe._id }),
-    RecipeShare.deleteMany({ recipeId: recipe._id }),
-    // Ratings cascade away with the recipe — preserving them would leave
-    // orphans pointing at a deleted recipeId.
-    RecipeRating.deleteMany({ recipeId: recipe._id }),
-    Recipe.updateMany(
-      { "forkedFrom.recipeId": recipe._id },
-      { $set: { "forkedFrom.recipeId": null, "forkedFrom.authorId": null } }
-    ),
-  ]);
-
-  // Decrement savedRecipesCount for every user who had this recipe saved.
-  // Each user has at most one save row per recipe (unique index), so a single
-  // -1 per user is correct.
-  if (savers.length > 0) {
-    await User.updateMany(
-      {
-        _id: { $in: savers.map((s) => s.userId) },
-        savedRecipesCount: { $gt: 0 },
-      },
-      { $inc: { savedRecipesCount: -1 } }
-    );
-  }
-
-  // Delete the recipe
+  await cascadeRecipeDeletion(recipe);
   await Recipe.findByIdAndDelete(recipeId);
-
-  const isRemix = !!recipe.forkedFrom;
-  await User.updateOne(
-    {
-      _id: userId,
-      ...(isRemix
-        ? { remixesCount: { $gt: 0 } }
-        : { originalRecipesCount: { $gt: 0 } }),
-    },
-    {
-      $inc: {
-        recipesCount: -1,
-        originalRecipesCount: isRemix ? 0 : -1,
-        remixesCount: isRemix ? -1 : 0,
-      },
-    }
-  );
 }
 
 export async function listMyRecipes(

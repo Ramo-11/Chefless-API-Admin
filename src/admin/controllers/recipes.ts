@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import Recipe from "../../models/Recipe";
-import Report from "../../models/Report";
 import AuditLog from "../../models/AuditLog";
+import { cascadeRecipeDeletion } from "../../services/recipe-service";
 import { logger } from "../../lib/logger";
 
 /** Escape user input for use inside a MongoDB `$regex` expression. */
@@ -159,17 +159,17 @@ export async function deleteRecipe(
   res: Response
 ): Promise<void> {
   try {
-    const recipe = await Recipe.findByIdAndDelete(req.params.id);
+    const recipe = await Recipe.findById(req.params.id);
     if (!recipe) {
       res.status(404).json({ error: "Recipe not found" });
       return;
     }
 
-    // Clean up orphaned reports for this recipe
-    await Report.deleteMany({
-      targetType: "recipe",
-      targetId: recipe._id,
-    });
+    // Full cleanup: engagement rows, remix pointers, cooked posts, schedule
+    // entries, cookbooks, shopping lists, notifications, reports, denormalized
+    // counters and Cloudinary images. Shared with the author-facing delete.
+    await cascadeRecipeDeletion(recipe);
+    await Recipe.findByIdAndDelete(recipe._id);
 
     await audit(req, "delete_recipe", "recipe", req.params.id as string, { title: recipe.title });
     res.json({ success: true });
