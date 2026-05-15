@@ -86,6 +86,9 @@ import {
   updateErrorNote,
   deleteError,
   deleteAllErrors,
+  ignoreErrorPermanently,
+  ignoredListPage,
+  removeIgnoredFingerprint,
 } from "./controllers/errors";
 import {
   earlyAccessPage,
@@ -146,8 +149,18 @@ router.post("/feedback/:id/delete", csrfProtection, deleteFeedback);
 
 // ── Crashes mutation routes (form POSTs, redirect responses) ───────
 router.post("/errors/delete-all", csrfProtection, deleteAllErrors);
+router.post(
+  "/errors/ignored/:id/remove",
+  csrfProtection,
+  removeIgnoredFingerprint
+);
 router.post("/errors/:id/status", csrfProtection, updateErrorStatus);
 router.post("/errors/:id/note", csrfProtection, updateErrorNote);
+router.post(
+  "/errors/:id/ignore-permanent",
+  csrfProtection,
+  ignoreErrorPermanently
+);
 router.post("/errors/:id/delete", csrfProtection, deleteError);
 
 // ── Admin management API routes (super admin only) ─────────────────
@@ -215,6 +228,7 @@ router.get("/kitchens", kitchensPage);
 router.get("/feedback", feedbackPage);
 router.get("/feedback/:id", feedbackDetail);
 router.get("/errors", errorsPage);
+router.get("/errors/ignored", ignoredListPage);
 router.get("/errors/:id", errorDetail);
 router.get("/admins", requireSuperAdmin, adminsPage);
 router.get("/app-config", appConfigPage);

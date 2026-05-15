@@ -3,6 +3,7 @@ import ClientError, {
   ClientErrorStatus,
   ClientErrorPlatform,
 } from "../../models/ClientError";
+import IgnoredErrorFingerprint from "../../models/IgnoredErrorFingerprint";
 import AuditLog from "../../models/AuditLog";
 import { logger } from "../../lib/logger";
 
@@ -114,10 +115,15 @@ export async function errorDetail(
       return;
     }
 
+    const permanentlyIgnored = await IgnoredErrorFingerprint.exists({
+      fingerprint: item.fingerprint,
+    });
+
     res.render("errors/detail", {
       page: "errors",
       pageTitle: "Crash detail",
       item,
+      permanentlyIgnored: Boolean(permanentlyIgnored),
     });
   } catch (error) {
     logger.error({ err: error }, "Failed to load crash detail");
@@ -265,5 +271,113 @@ export async function deleteAllErrors(
   } catch (error) {
     logger.error({ err: error }, "Failed to clear crashes");
     res.status(500).send("Failed to clear crashes");
+  }
+}
+
+export async function ignoreErrorPermanently(
+  req: Request,
+  res: Response
+): Promise<void> {
+  try {
+    const item = await ClientError.findById(req.params.id);
+    if (!item) {
+      res.status(404).send("Crash not found");
+      return;
+    }
+
+    const rawReason = (req.body as { reason?: unknown }).reason;
+    const reason = typeof rawReason === "string" ? rawReason.trim() : "";
+    if (reason.length > 500) {
+      res.status(400).send("Reason must be 500 characters or fewer");
+      return;
+    }
+
+    await IgnoredErrorFingerprint.findOneAndUpdate(
+      { fingerprint: item.fingerprint },
+      {
+        $set: {
+          fingerprint: item.fingerprint,
+          platform: item.platform,
+          source: item.source,
+          exception: item.exception,
+          ignoredBy: req.session.adminEmail ?? "unknown",
+          ...(reason ? { reason } : {}),
+        },
+        ...(reason ? {} : { $unset: { reason: 1 } }),
+      },
+      { upsert: true, new: true, runValidators: true, setDefaultsOnInsert: true }
+    );
+
+    await ClientError.findByIdAndUpdate(
+      req.params.id,
+      { $set: { status: "ignored" }, $unset: { resolvedAt: 1 } },
+      { runValidators: true }
+    );
+
+    await audit(req, "ignore_error_permanently", req.params.id as string, {
+      fingerprint: item.fingerprint,
+      hasReason: reason.length > 0,
+    });
+
+    res.redirect(`/admin/errors/${req.params.id}`);
+  } catch (error) {
+    logger.error({ err: error }, "Failed to permanently ignore crash");
+    res.status(500).send("Failed to permanently ignore crash");
+  }
+}
+
+export async function ignoredListPage(
+  req: Request,
+  res: Response
+): Promise<void> {
+  try {
+    const page = parseInt(req.query.page as string) || 1;
+    const limit = 25;
+    const skip = (page - 1) * limit;
+
+    const [items, total] = await Promise.all([
+      IgnoredErrorFingerprint.find({})
+        .sort({ updatedAt: -1 })
+        .skip(skip)
+        .limit(limit)
+        .lean(),
+      IgnoredErrorFingerprint.countDocuments({}),
+    ]);
+
+    const totalPages = Math.max(1, Math.ceil(total / limit));
+
+    res.render("errors/ignored", {
+      page: "errors",
+      pageTitle: "Ignored crashes",
+      items,
+      pagination: { current: page, total: totalPages, totalItems: total },
+    });
+  } catch (error) {
+    logger.error({ err: error }, "Failed to load ignored crashes");
+    res.status(500).send("Internal server error");
+  }
+}
+
+export async function removeIgnoredFingerprint(
+  req: Request,
+  res: Response
+): Promise<void> {
+  try {
+    const removed = await IgnoredErrorFingerprint.findByIdAndDelete(
+      req.params.id
+    );
+    if (!removed) {
+      res.status(404).send("Ignored fingerprint not found");
+      return;
+    }
+
+    await audit(req, "remove_ignored_fingerprint", req.params.id as string, {
+      fingerprint: removed.fingerprint,
+    });
+
+    res.redirect("/admin/errors/ignored");
+  } catch (error) {
+    logger.error({ err: error }, "Failed to remove ignored fingerprint");
+    res.status(500).send("Failed to remove ignored fingerprint");
   }
 }

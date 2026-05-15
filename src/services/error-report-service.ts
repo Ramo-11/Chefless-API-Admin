@@ -4,6 +4,7 @@ import ClientError, {
   ClientErrorSource,
   IClientError,
 } from "../models/ClientError";
+import IgnoredErrorFingerprint from "../models/IgnoredErrorFingerprint";
 import User from "../models/User";
 import { env } from "../lib/env";
 import { logger } from "../lib/logger";
@@ -51,6 +52,18 @@ export async function recordClientError(
 ): Promise<RecordClientErrorResult> {
   const fingerprint = buildFingerprint(input);
   const now = new Date();
+
+  // Permanently ignored fingerprints short-circuit before any DB write so the
+  // crash queue and email alerts stay silent until an admin removes them from
+  // the ignore list.
+  const ignored = await IgnoredErrorFingerprint.exists({ fingerprint });
+  if (ignored) {
+    return {
+      errorId: ignored._id.toString(),
+      isNew: false,
+      occurrences: 0,
+    };
+  }
 
   let userObjectId: IClientError["userId"];
   let userEmail: string | undefined;

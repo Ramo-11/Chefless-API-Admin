@@ -1,0 +1,78 @@
+<% var pageTitle = 'Ignored crashes'; %>
+<% var page = 'errors'; %>
+
+<div class="page-header">
+  <div>
+    <a href="/admin/errors" class="text-muted text-sm" style="display:inline-flex;align-items:center;gap:.35rem;">
+      <i class="fas fa-chevron-left"></i> Back to crashes
+    </a>
+    <h1 style="margin-top:.35rem;">Ignored crashes</h1>
+    <p class="page-subtitle">
+      <%= pagination.totalItems.toLocaleString() %>
+      ignored fingerprint<%= pagination.totalItems === 1 ? '' : 's' %> ·
+      future occurrences of these are silently dropped on the API
+    </p>
+  </div>
+</div>
+
+<div class="card">
+  <div class="table-responsive">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Exception</th>
+          <th>Platform</th>
+          <th>Source</th>
+          <th>Reason</th>
+          <th>Ignored by</th>
+          <th>Ignored at</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% items.forEach(function(item) { %>
+        <tr>
+          <td>
+            <div style="font-weight:600;color:var(--gray-900);">
+              <%= item.exception.length > 120 ? item.exception.slice(0, 120) + '…' : item.exception %>
+            </div>
+            <div class="text-muted text-sm">
+              <code><%= item.fingerprint %></code>
+            </div>
+          </td>
+          <td><span class="badge badge-default"><%= item.platform %></span></td>
+          <td class="text-muted text-sm"><%= item.source %></td>
+          <td class="text-muted text-sm">
+            <%= item.reason ? (item.reason.length > 80 ? item.reason.slice(0, 80) + '…' : item.reason) : '—' %>
+          </td>
+          <td class="text-muted text-sm"><%= item.ignoredBy %></td>
+          <td class="text-muted text-sm">
+            <%= new Date(item.updatedAt).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' }) %>
+          </td>
+          <td>
+            <form action="/admin/errors/ignored/<%= item._id %>/remove" method="POST"
+                  onsubmit="return confirm('Remove from ignored list? Future occurrences of this crash will start being reported again.');">
+              <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+              <button type="submit" class="btn btn-sm btn-secondary">
+                <i class="fas fa-undo"></i> Remove
+              </button>
+            </form>
+          </td>
+        </tr>
+        <% }); %>
+        <% if (items.length === 0) { %>
+        <tr>
+          <td colspan="7" class="empty-state">
+            <i class="fas fa-ban"></i>
+            <span>No ignored crashes yet — use "Ignore permanently" on a crash detail page to add one.</span>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<% if (pagination.total > 1) { %>
+  <%- include('../partials/pagination', { pagination, baseUrl: '/admin/errors/ignored?_=1' }) %>
+<% } %>

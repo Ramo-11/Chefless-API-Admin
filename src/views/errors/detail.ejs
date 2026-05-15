@@ -23,6 +23,11 @@
   <div style="display:flex;gap:.5rem;align-items:center;">
     <span class="badge badge-default"><%= item.platform %></span>
     <span class="badge <%= statusClass %>"><%= item.status %></span>
+    <% if (permanentlyIgnored) { %>
+      <span class="badge badge-warning" title="Future occurrences of this crash will not be reported">
+        <i class="fas fa-ban"></i> Permanently ignored
+      </span>
+    <% } %>
   </div>
 </div>
 
@@ -106,6 +111,38 @@
         <button type="submit" class="btn btn-primary btn-sm">Save note</button>
       </div>
     </form>
+  </div>
+</div>
+
+<div class="card" style="margin-bottom:1rem;">
+  <div class="card-header"><h2><i class="fas fa-ban"></i> Ignore permanently</h2></div>
+  <div class="card-body">
+    <% if (permanentlyIgnored) { %>
+      <p class="text-muted text-sm" style="margin-top:0;">
+        This fingerprint is on the ignore list — future occurrences will be silently dropped.
+        <a href="/admin/errors/ignored">Manage ignored crashes →</a>
+      </p>
+    <% } else { %>
+      <p class="text-muted text-sm" style="margin-top:0;">
+        Add this fingerprint to the ignore list. Future reports with the same
+        platform + app version + exception will be dropped on arrival
+        (no row, no email, no alert). Removable any time from
+        <a href="/admin/errors/ignored">Ignored crashes</a>.
+      </p>
+      <form action="/admin/errors/<%= item._id %>/ignore-permanent" method="POST"
+            onsubmit="return confirm('Permanently ignore this crash and silently drop future occurrences?');">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <div class="form-group">
+          <label for="ignore-reason" class="text-muted text-sm">Why are you ignoring it? (optional, max 500 chars)</label>
+          <textarea id="ignore-reason" name="reason" rows="2" maxlength="500" placeholder="e.g. Harmless Google sign-in cancel on emulator"></textarea>
+        </div>
+        <div style="display:flex;justify-content:flex-end;">
+          <button type="submit" class="btn btn-warning btn-sm">
+            <i class="fas fa-ban"></i> Ignore permanently
+          </button>
+        </div>
+      </form>
+    <% } %>
   </div>
 </div>
 
