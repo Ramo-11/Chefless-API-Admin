@@ -243,22 +243,41 @@ export interface CampaignSendResult {
 }
 
 /**
- * Send a campaign to every supplied contact. Splits into batches of 100,
- * personalizes per recipient, and attaches a List-Unsubscribe header so the
- * email is treated as legitimate bulk mail by inbox providers.
+ * Send a campaign to every supplied contact. The list is first deduped by
+ * email — the same address may appear multiple times because each Google-Form
+ * submission imports as its own EmailContact row, and we never want to send
+ * the same person two copies of the same campaign. Splits into batches of
+ * 100, personalizes per recipient, and attaches a List-Unsubscribe header so
+ * the email is treated as legitimate bulk mail by inbox providers.
  *
- * Returns counts; the caller persists them on the EmailCampaign record.
+ * After a successful batch, lastEmailedAt/emailsSent are updated on every row
+ * sharing one of the batch's email addresses, so the admin UI consistently
+ * shows "emailed" status for every duplicate row.
+ *
+ * Returns counts based on unique email addresses sent to; the caller persists
+ * them on the EmailCampaign record.
  */
 export async function sendCampaign(
   subject: string,
   body: string,
   contacts: IEmailContact[]
 ): Promise<CampaignSendResult> {
+  // Dedupe by email — keep the first contact we see for each address so the
+  // unsubscribe link is stable across re-sends (token on a specific row).
+  const recipients: IEmailContact[] = [];
+  const seenEmails = new Set<string>();
+  for (const contact of contacts) {
+    const key = contact.email.toLowerCase();
+    if (seenEmails.has(key)) continue;
+    seenEmails.add(key);
+    recipients.push(contact);
+  }
+
   const client = getResend();
   if (!client) {
     return {
       sentCount: 0,
-      failedCount: contacts.length,
+      failedCount: recipients.length,
       errorSummary: "RESEND_API_KEY is not configured on the server.",
     };
   }
@@ -268,8 +287,8 @@ export async function sendCampaign(
   let failedCount = 0;
   let errorSummary: string | undefined;
 
-  for (let i = 0; i < contacts.length; i += BATCH_SIZE) {
-    const batch = contacts.slice(i, i + BATCH_SIZE);
+  for (let i = 0; i < recipients.length; i += BATCH_SIZE) {
+    const batch = recipients.slice(i, i + BATCH_SIZE);
     const payload = batch.map((contact) => {
       const unsubUrl = `${env.PUBLIC_BASE_URL}/email/unsubscribe?c=${contact._id.toString()}&t=${contact.unsubToken}`;
       return {
@@ -296,9 +315,9 @@ export async function sendCampaign(
         );
       } else {
         sentCount += batch.length;
-        const ids = batch.map((c) => c._id);
+        const emails = batch.map((c) => c.email.toLowerCase());
         await EmailContact.updateMany(
-          { _id: { $in: ids } },
+          { email: { $in: emails } },
           { $set: { lastEmailedAt: new Date() }, $inc: { emailsSent: 1 } }
         );
       }

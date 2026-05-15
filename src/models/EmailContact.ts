@@ -47,7 +47,6 @@ const emailContactSchema = new Schema<IEmailContact>(
     email: {
       type: String,
       required: true,
-      unique: true,
       lowercase: true,
       trim: true,
       index: true,
@@ -82,6 +81,13 @@ const emailContactSchema = new Schema<IEmailContact>(
 );
 
 emailContactSchema.index({ createdAt: -1 });
+// One row per form submission. Composite key keeps re-imports idempotent while
+// allowing the same email to appear multiple times (e.g. the same person
+// submitted the early-access form twice). Sends/unsubs cascade by email.
+emailContactSchema.index(
+  { email: 1, signedUpAt: 1 },
+  { unique: true, partialFilterExpression: { signedUpAt: { $exists: true } } }
+);
 
 const EmailContact =
   (mongoose.models.EmailContact as mongoose.Model<IEmailContact>) ||

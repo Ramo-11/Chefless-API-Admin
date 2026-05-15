@@ -30,6 +30,7 @@
     "create-google-review-premium-user": "tsx src/scripts/create-google-review-premium-user.ts",
     "delete-google-review-premium-user": "tsx src/scripts/delete-google-review-premium-user.ts",
     "backfill-premium-grants": "tsx src/scripts/backfill-premium-grants.ts",
+    "migrate:email-contact-index": "tsx src/scripts/drop-email-contact-unique-index.ts",
     "test": "vitest run",
     "test:watch": "vitest"
   },

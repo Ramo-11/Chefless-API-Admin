@@ -64,24 +64,35 @@ export async function earlyAccessPage(
 
     const skip = (page - 1) * PAGE_SIZE;
 
-    const [contacts, total, stats, needsReviewCount, readyToSendCount, campaigns] =
-      await Promise.all([
-        EmailContact.find(query)
-          .sort({ createdAt: -1 })
-          .skip(skip)
-          .limit(PAGE_SIZE)
-          .lean(),
-        EmailContact.countDocuments(query),
-        EmailContact.aggregate<{ _id: string; count: number }>([
-          { $group: { _id: "$status", count: { $sum: 1 } } },
-        ]),
-        EmailContact.countDocuments({ needsReview: true }),
-        EmailContact.countDocuments({
-          status: "subscribed",
-          needsReview: { $ne: true },
-        }),
-        EmailCampaign.find().sort({ createdAt: -1 }).limit(20).lean(),
-      ]);
+    // readyToSendCount must count unique email addresses, not contact rows —
+    // sendCampaign dedupes by email and only sends one message per address,
+    // so showing "80 subscribed contacts" when there are only 77 unique
+    // emails would be misleading.
+    const [
+      contacts,
+      total,
+      stats,
+      needsReviewCount,
+      readyToSendEmails,
+      campaigns,
+    ] = await Promise.all([
+      EmailContact.find(query)
+        .sort({ createdAt: -1 })
+        .skip(skip)
+        .limit(PAGE_SIZE)
+        .lean(),
+      EmailContact.countDocuments(query),
+      EmailContact.aggregate<{ _id: string; count: number }>([
+        { $group: { _id: "$status", count: { $sum: 1 } } },
+      ]),
+      EmailContact.countDocuments({ needsReview: true }),
+      EmailContact.distinct("email", {
+        status: "subscribed",
+        needsReview: { $ne: true },
+      }),
+      EmailCampaign.find().sort({ createdAt: -1 }).limit(20).lean(),
+    ]);
+    const readyToSendCount = readyToSendEmails.length;
 
     const counts = { subscribed: 0, unsubscribed: 0, bounced: 0 };
     for (const s of stats) {
@@ -144,8 +155,15 @@ export async function importContacts(
     let updated = 0;
     let flagged = 0;
     for (const row of rows) {
-      const { email, needsReview, ...rest } = row;
+      const { email, needsReview, signedUpAt, ...rest } = row;
       if (needsReview) flagged += 1;
+      // Each form submission becomes its own row, keyed by (email, signedUpAt)
+      // so the same person submitting the form twice creates two contacts.
+      // Sends/unsubs dedupe by email. Rows without a timestamp (rare; only
+      // legacy data or a malformed CSV) fall back to email-only upsert.
+      const filter: Record<string, unknown> = signedUpAt
+        ? { email, signedUpAt }
+        : { email };
       // Only set fields that actually have a value, so a re-import never wipes
       // existing data with blank cells. `needsReview` is set explicitly each
       // time so that fixing the form and re-importing clears the flag.
@@ -153,8 +171,9 @@ export async function importContacts(
       for (const [key, value] of Object.entries(rest)) {
         if (value !== undefined && value !== "") set[key] = value;
       }
+      if (signedUpAt) set.signedUpAt = signedUpAt;
       const result = await EmailContact.updateOne(
-        { email },
+        filter,
         { $set: set, $setOnInsert: { email, source: "google_form" } },
         { upsert: true }
       );
@@ -207,15 +226,22 @@ export async function toggleContactStatus(
       res.status(404).json({ error: "Contact not found." });
       return;
     }
-    contact.status =
+    const nextStatus =
       contact.status === "subscribed" ? "unsubscribed" : "subscribed";
-    await contact.save();
+    // Cascade by email: the same person may appear as multiple rows (one per
+    // Google-Form submission). Flipping one row's status must flip all of
+    // them, otherwise sends would still target the duplicates.
+    await EmailContact.updateMany(
+      { email: contact.email },
+      { $set: { status: nextStatus } }
+    );
 
     await audit(req, "toggle_email_contact_status", "email_contact", id, {
-      status: contact.status,
+      email: contact.email,
+      status: nextStatus,
     });
 
-    res.json({ success: true, status: contact.status });
+    res.json({ success: true, status: nextStatus });
   } catch (error) {
     logger.error({ err: error }, "Failed to toggle contact status");
     res.status(500).json({ error: "Failed to update contact." });
@@ -460,7 +486,12 @@ export async function sendCampaignToList(
     if (selectedIds) filter._id = { $in: selectedIds };
 
     const contacts = await EmailContact.find(filter);
-    if (contacts.length === 0) {
+    // Recipient count is unique email addresses — duplicate rows for the same
+    // person collapse into one send.
+    const uniqueRecipientCount = new Set(
+      contacts.map((c) => c.email.toLowerCase())
+    ).size;
+    if (uniqueRecipientCount === 0) {
       res.status(400).json({
         error: selectedIds
           ? "None of the selected contacts can receive emails right now (check for unsubscribed or flagged addresses)."
@@ -474,7 +505,7 @@ export async function sendCampaignToList(
       body: trimmedBody,
       status: "sending",
       audience,
-      recipientCount: contacts.length,
+      recipientCount: uniqueRecipientCount,
       sentByEmail: req.session.adminEmail ?? "unknown",
     });
 
@@ -491,7 +522,7 @@ export async function sendCampaignToList(
     await audit(req, "send_email_campaign", "email_campaign", campaign._id.toString(), {
       subject: trimmedSubject,
       audience,
-      recipientCount: contacts.length,
+      recipientCount: uniqueRecipientCount,
       sentCount: result.sentCount,
       failedCount: result.failedCount,
     });
@@ -500,7 +531,7 @@ export async function sendCampaignToList(
       success: true,
       status: campaign.status,
       audience,
-      recipientCount: contacts.length,
+      recipientCount: uniqueRecipientCount,
       sentCount: result.sentCount,
       failedCount: result.failedCount,
       errorSummary: result.errorSummary,
@@ -538,10 +569,12 @@ export async function unsubscribeContact(
       renderResult(false, "This unsubscribe link is invalid or has expired.");
       return;
     }
-    if (contact.status !== "unsubscribed") {
-      contact.status = "unsubscribed";
-      await contact.save();
-    }
+    // Cascade by email so every duplicate row for this address is silenced —
+    // not just the row whose token was in the unsubscribe link.
+    await EmailContact.updateMany(
+      { email: contact.email, status: { $ne: "unsubscribed" } },
+      { $set: { status: "unsubscribed" } }
+    );
     renderResult(
       true,
       "You've been unsubscribed. You won't receive any more emails from Chefless."
