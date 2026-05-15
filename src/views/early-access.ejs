@@ -65,7 +65,7 @@
       <label>Send to</label>
       <label style="display:flex;align-items:center;gap:.5rem;font-weight:normal;cursor:pointer;">
         <input type="radio" name="audience" value="all" checked onchange="updateAudienceUI()">
-        All subscribed contacts (<%= counts.subscribed.toLocaleString() %>)
+        All subscribed contacts (<%= readyToSendCount.toLocaleString() %><% if (needsReviewCount > 0) { %>, <%= needsReviewCount %> flagged address<%= needsReviewCount === 1 ? '' : 'es' %> skipped<% } %>)
       </label>
       <label style="display:flex;align-items:center;gap:.5rem;font-weight:normal;cursor:pointer;margin-top:.35rem;">
         <input type="radio" name="audience" value="selected" id="audience-selected" onchange="updateAudienceUI()">
@@ -106,6 +106,10 @@
         <a href="/admin/early-access?status=subscribed<%= search ? '&search=' + encodeURIComponent(search) : '' %>" class="filter-chip <%= statusFilter === 'subscribed' ? 'active' : '' %>">Subscribed</a>
         <a href="/admin/early-access?status=unsubscribed<%= search ? '&search=' + encodeURIComponent(search) : '' %>" class="filter-chip <%= statusFilter === 'unsubscribed' ? 'active' : '' %>">Unsubscribed</a>
         <a href="/admin/early-access?status=bounced<%= search ? '&search=' + encodeURIComponent(search) : '' %>" class="filter-chip <%= statusFilter === 'bounced' ? 'active' : '' %>">Bounced</a>
+        <a href="/admin/early-access?status=needsReview<%= search ? '&search=' + encodeURIComponent(search) : '' %>" class="filter-chip <%= statusFilter === 'needsReview' ? 'active' : '' %>" style="<%= needsReviewCount > 0 ? 'color:#b45309;' : '' %>">
+          <i class="fas fa-triangle-exclamation"></i> Needs review
+          <% if (needsReviewCount > 0) { %><span class="filter-count"><%= needsReviewCount %></span><% } %>
+        </a>
       </div>
     </div>
     <div id="selection-bar" class="text-sm" style="display:none;align-items:center;gap:.75rem;padding:.5rem .25rem;">
@@ -142,7 +146,14 @@
             <% } %>
           </td>
           <td><strong><%= [c.firstName, c.lastName].filter(Boolean).join(' ') || '—' %></strong></td>
-          <td class="text-sm"><%= c.email %></td>
+          <td class="text-sm">
+            <% if (c.needsReview) { %>
+              <span title="This email doesn't look valid — open Edit to fix it. Sends will skip this contact until then." style="color:#b45309;margin-right:.25rem;">
+                <i class="fas fa-triangle-exclamation"></i>
+              </span>
+            <% } %>
+            <%= c.email %>
+          </td>
           <td class="text-muted text-sm"><%= c.phone || '—' %></td>
           <td class="text-muted text-sm">
             <%= c.ethnicity || '—' %><% if (c.country) { %> · <%= c.country %><% } %>
@@ -167,6 +178,15 @@
           </td>
           <td>
             <div class="action-buttons">
+              <button class="btn btn-sm btn-secondary"
+                data-id="<%= c._id %>"
+                data-first="<%= c.firstName || '' %>"
+                data-last="<%= c.lastName || '' %>"
+                data-email="<%= c.email %>"
+                data-phone="<%= c.phone || '' %>"
+                onclick="openEditContact(this)" aria-label="Edit contact">
+                <i class="fas fa-pen"></i>
+              </button>
               <% if (c.status === 'bounced') { %>
                 <span class="text-muted text-sm">—</span>
               <% } else { %>
@@ -318,6 +338,40 @@
   </div>
 </div>
 
+<!-- ── Edit contact modal ──────────────────────────────────────── -->
+<div class="modal" id="edit-contact-modal">
+  <div class="modal-content modal-sm">
+    <div class="modal-header">
+      <h2>Edit contact</h2>
+      <button class="modal-close" onclick="closeModal('edit-contact-modal')" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body">
+      <input type="hidden" id="edit-id">
+      <div class="form-group">
+        <label for="edit-email">Email</label>
+        <input type="text" id="edit-email" placeholder="name@example.com">
+        <p class="text-muted text-sm" style="margin:.25rem 0 0;">A flagged address gets the warning icon. Fix it here and the flag clears automatically.</p>
+      </div>
+      <div class="form-group">
+        <label for="edit-first">First name <span class="text-muted">(optional)</span></label>
+        <input type="text" id="edit-first">
+      </div>
+      <div class="form-group">
+        <label for="edit-last">Last name <span class="text-muted">(optional)</span></label>
+        <input type="text" id="edit-last">
+      </div>
+      <div class="form-group">
+        <label for="edit-phone">Phone <span class="text-muted">(optional)</span></label>
+        <input type="tel" id="edit-phone">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" onclick="closeModal('edit-contact-modal')">Cancel</button>
+      <button class="btn btn-primary" id="edit-contact-btn" onclick="saveContactEdits()">Save changes</button>
+    </div>
+  </div>
+</div>
+
 <!-- ── Campaign view modal ─────────────────────────────────────── -->
 <div class="modal" id="campaign-modal">
   <div class="modal-content">
@@ -365,7 +419,24 @@
       method: 'POST',
       body: JSON.stringify({ csv: csv })
     }).then(function (d) {
-      toastAndReload(d.message || 'Contacts imported', 'success');
+      // Surface rows that need attention: bad-email contacts are imported but
+      // flagged for review (admin can fix in place); empty-email rows had to
+      // be dropped because there is nothing to key the contact by.
+      var notes = [];
+      if (d.flagged > 0) {
+        notes.push(
+          d.flagged + ' contact' + (d.flagged === 1 ? '' : 's') +
+          ' imported with a flagged email address. Use the "Needs review" filter to fix them.'
+        );
+      }
+      if (d.skippedRows && d.skippedRows.length > 0) {
+        notes.push(
+          'Rows dropped (no email):\n  • ' + d.skippedRows.join('\n  • ')
+        );
+      }
+      if (notes.length > 0) alert(d.message + '\n\n' + notes.join('\n\n'));
+      toastAndReload(d.message || 'Contacts imported',
+        (d.flagged > 0 || d.skipped > 0) ? 'error' : 'success');
     }).catch(function (err) {
       btn.disabled = false;
       showToast(err.message, 'error');
@@ -471,6 +542,37 @@
       })
     }).then(function () {
       toastAndReload('Contact added', 'success');
+    }).catch(function (err) {
+      btn.disabled = false;
+      showToast(err.message, 'error');
+    });
+  }
+
+  // ── Edit contact ────────────────────────────────────────────
+  function openEditContact(btn) {
+    document.getElementById('edit-id').value = btn.getAttribute('data-id');
+    document.getElementById('edit-email').value = btn.getAttribute('data-email') || '';
+    document.getElementById('edit-first').value = btn.getAttribute('data-first') || '';
+    document.getElementById('edit-last').value = btn.getAttribute('data-last') || '';
+    document.getElementById('edit-phone').value = btn.getAttribute('data-phone') || '';
+    openModal('edit-contact-modal');
+  }
+
+  function saveContactEdits() {
+    var id = document.getElementById('edit-id').value;
+    if (!id) return;
+    var btn = document.getElementById('edit-contact-btn');
+    btn.disabled = true;
+    adminFetch('/admin/api/early-access/contacts/' + id, {
+      method: 'PATCH',
+      body: JSON.stringify({
+        email: document.getElementById('edit-email').value,
+        firstName: document.getElementById('edit-first').value,
+        lastName: document.getElementById('edit-last').value,
+        phone: document.getElementById('edit-phone').value
+      })
+    }).then(function () {
+      toastAndReload('Contact updated', 'success');
     }).catch(function (err) {
       btn.disabled = false;
       showToast(err.message, 'error');

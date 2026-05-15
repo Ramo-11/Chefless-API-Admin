@@ -29,12 +29,16 @@ export interface ParsedContactRow {
   country?: string;
   phoneType?: string;
   signedUpAt?: Date;
+  /** True if the email value is present but doesn't pass basic validation. */
+  needsReview?: boolean;
 }
 
 export interface CsvParseResult {
   rows: ParsedContactRow[];
   /** Rows that were dropped because they had no usable email address. */
   skipped: number;
+  /** Short human-readable labels for the skipped rows so admins can fix them. */
+  skippedRows: string[];
   /** Total data rows seen (excludes the header). */
   totalRows: number;
 }
@@ -115,14 +119,14 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 export function parseContactsCsv(text: string): CsvParseResult {
   const grid = parseCsv(text);
   if (grid.length < 2) {
-    return { rows: [], skipped: 0, totalRows: 0 };
+    return { rows: [], skipped: 0, skippedRows: [], totalRows: 0 };
   }
 
   const headerRow = grid[0] ?? [];
   const columnMap = headerRow.map(classifyHeader);
 
   const rows: ParsedContactRow[] = [];
-  let skipped = 0;
+  const skippedRows: string[] = [];
   let totalRows = 0;
 
   for (let r = 1; r < grid.length; r += 1) {
@@ -145,16 +149,26 @@ export function parseContactsCsv(text: string): CsvParseResult {
       }
     }
 
-    const email = parsed.email.trim().toLowerCase();
-    if (!EMAIL_RE.test(email)) {
-      skipped += 1;
+    const rawEmail = parsed.email.trim();
+    if (rawEmail.length === 0) {
+      // No email at all — there is nothing to key the contact by, so this row
+      // genuinely has to be dropped. Surface it so admins can chase it down.
+      const name = [parsed.firstName, parsed.lastName]
+        .filter(Boolean)
+        .join(" ")
+        .trim();
+      skippedRows.push(`${name || `(row ${r + 1})`} — no email provided`);
       continue;
     }
-    parsed.email = email;
+    // Lowercase so the unique key is case-insensitive, but otherwise keep the
+    // value exactly as the form respondent typed it (including stray spaces),
+    // and flag it for review when it doesn't pass basic validation.
+    parsed.email = rawEmail.toLowerCase();
+    if (!EMAIL_RE.test(parsed.email)) parsed.needsReview = true;
     rows.push(parsed);
   }
 
-  return { rows, skipped, totalRows };
+  return { rows, skipped: skippedRows.length, skippedRows, totalRows };
 }
 
 // ── Campaign sending ─────────────────────────────────────────────────

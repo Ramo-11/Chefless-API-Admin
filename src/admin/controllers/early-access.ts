@@ -54,7 +54,8 @@ export async function earlyAccessPage(
     const statusFilter = (req.query.status as string) || "all";
 
     const query: Record<string, unknown> = {};
-    if (statusFilter !== "all") query.status = statusFilter;
+    if (statusFilter === "needsReview") query.needsReview = true;
+    else if (statusFilter !== "all") query.status = statusFilter;
     if (search) {
       const safe = search.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
       const rx = new RegExp(safe, "i");
@@ -63,18 +64,24 @@ export async function earlyAccessPage(
 
     const skip = (page - 1) * PAGE_SIZE;
 
-    const [contacts, total, stats, campaigns] = await Promise.all([
-      EmailContact.find(query)
-        .sort({ createdAt: -1 })
-        .skip(skip)
-        .limit(PAGE_SIZE)
-        .lean(),
-      EmailContact.countDocuments(query),
-      EmailContact.aggregate<{ _id: string; count: number }>([
-        { $group: { _id: "$status", count: { $sum: 1 } } },
-      ]),
-      EmailCampaign.find().sort({ createdAt: -1 }).limit(20).lean(),
-    ]);
+    const [contacts, total, stats, needsReviewCount, readyToSendCount, campaigns] =
+      await Promise.all([
+        EmailContact.find(query)
+          .sort({ createdAt: -1 })
+          .skip(skip)
+          .limit(PAGE_SIZE)
+          .lean(),
+        EmailContact.countDocuments(query),
+        EmailContact.aggregate<{ _id: string; count: number }>([
+          { $group: { _id: "$status", count: { $sum: 1 } } },
+        ]),
+        EmailContact.countDocuments({ needsReview: true }),
+        EmailContact.countDocuments({
+          status: "subscribed",
+          needsReview: { $ne: true },
+        }),
+        EmailCampaign.find().sort({ createdAt: -1 }).limit(20).lean(),
+      ]);
 
     const counts = { subscribed: 0, unsubscribed: 0, bounced: 0 };
     for (const s of stats) {
@@ -89,6 +96,8 @@ export async function earlyAccessPage(
       contacts,
       campaigns,
       counts,
+      needsReviewCount,
+      readyToSendCount,
       totalContacts,
       search,
       statusFilter,
@@ -122,7 +131,7 @@ export async function importContacts(
       return;
     }
 
-    const { rows, skipped, totalRows } = parseContactsCsv(csv);
+    const { rows, skipped, skippedRows, totalRows } = parseContactsCsv(csv);
     if (rows.length === 0) {
       res.status(400).json({
         error:
@@ -133,11 +142,14 @@ export async function importContacts(
 
     let imported = 0;
     let updated = 0;
+    let flagged = 0;
     for (const row of rows) {
-      const { email, ...rest } = row;
+      const { email, needsReview, ...rest } = row;
+      if (needsReview) flagged += 1;
       // Only set fields that actually have a value, so a re-import never wipes
-      // existing data with blank cells.
-      const set: Record<string, unknown> = {};
+      // existing data with blank cells. `needsReview` is set explicitly each
+      // time so that fixing the form and re-importing clears the flag.
+      const set: Record<string, unknown> = { needsReview: needsReview === true };
       for (const [key, value] of Object.entries(rest)) {
         if (value !== undefined && value !== "") set[key] = value;
       }
@@ -153,17 +165,25 @@ export async function importContacts(
     await audit(req, "import_email_contacts", "email_contact", undefined, {
       imported,
       updated,
+      flagged,
       skipped,
       totalRows,
     });
+
+    const parts = [`${imported} new`, `${updated} updated`];
+    if (flagged > 0) parts.push(`${flagged} flagged for review`);
+    if (skipped > 0) parts.push(`${skipped} dropped (no email)`);
+    const message = `Imported ${parts.join(', ')}.`;
 
     res.json({
       success: true,
       imported,
       updated,
+      flagged,
       skipped,
+      skippedRows,
       totalRows,
-      message: `Imported ${imported} new, updated ${updated}, skipped ${skipped} without a valid email.`,
+      message,
     });
   } catch (error) {
     logger.error({ err: error }, "Failed to import email contacts");
@@ -262,6 +282,99 @@ export async function addContact(
   }
 }
 
+/**
+ * PATCH /admin/api/early-access/contacts/:id — edit any of name/email/phone.
+ * Only provided fields are written. Editing the email re-evaluates the
+ * `needsReview` flag, so cleaning up a typo here clears the warning badge.
+ */
+export async function updateContact(
+  req: Request,
+  res: Response
+): Promise<void> {
+  try {
+    const id = req.params.id as string;
+    if (!id || !Types.ObjectId.isValid(id)) {
+      res.status(400).json({ error: "Invalid contact id." });
+      return;
+    }
+    const body = req.body as {
+      firstName?: unknown;
+      lastName?: unknown;
+      email?: unknown;
+      phone?: unknown;
+    };
+
+    const update: Record<string, unknown> = {};
+    const unset: Record<string, unknown> = {};
+
+    const applyOptional = (
+      key: "firstName" | "lastName" | "phone",
+      max: number
+    ): void => {
+      const v = body[key];
+      if (v === undefined) return;
+      if (typeof v !== "string") return;
+      const trimmed = v.trim();
+      if (trimmed.length === 0) unset[key] = "";
+      else update[key] = trimmed.slice(0, max);
+    };
+    applyOptional("firstName", MAX_NAME_LEN);
+    applyOptional("lastName", MAX_NAME_LEN);
+    applyOptional("phone", MAX_PHONE_LEN);
+
+    if (typeof body.email === "string") {
+      const email = body.email.trim().toLowerCase();
+      if (email.length === 0) {
+        res.status(400).json({ error: "Email cannot be empty." });
+        return;
+      }
+      update.email = email;
+      update.needsReview = !EMAIL_RE.test(email);
+    }
+
+    if (Object.keys(update).length === 0 && Object.keys(unset).length === 0) {
+      res.status(400).json({ error: "Nothing to update." });
+      return;
+    }
+
+    const mongoUpdate: Record<string, unknown> = {};
+    if (Object.keys(update).length > 0) mongoUpdate.$set = update;
+    if (Object.keys(unset).length > 0) mongoUpdate.$unset = unset;
+
+    try {
+      const contact = await EmailContact.findByIdAndUpdate(id, mongoUpdate, {
+        new: true,
+        runValidators: true,
+      });
+      if (!contact) {
+        res.status(404).json({ error: "Contact not found." });
+        return;
+      }
+      await audit(req, "update_email_contact", "email_contact", id, {
+        fields: Object.keys(update).concat(Object.keys(unset)),
+      });
+      res.json({ success: true });
+    } catch (err) {
+      if (
+        err !== null &&
+        typeof err === "object" &&
+        "code" in err &&
+        (err as { code?: number }).code === 11000
+      ) {
+        res.status(409).json({
+          error:
+            "Another contact already has that email. Delete or merge one of them first.",
+        });
+        return;
+      }
+      throw err;
+    }
+  } catch (error) {
+    logger.error({ err: error }, "Failed to update email contact");
+    res.status(500).json({ error: "Failed to update contact." });
+  }
+}
+
 /** DELETE /admin/api/early-access/contacts/:id — permanently remove a contact. */
 export async function deleteContact(
   req: Request,
@@ -337,14 +450,20 @@ export async function sendCampaignToList(
     }
     const audience = selectedIds ? "selected" : "all";
 
-    const filter: Record<string, unknown> = { status: "subscribed" };
+    // Always skip contacts whose email is flagged for review — sending to
+    // "lexiehuys@ gmail.com" would just bounce. The admin must fix the
+    // address in the UI before they can receive a campaign.
+    const filter: Record<string, unknown> = {
+      status: "subscribed",
+      needsReview: { $ne: true },
+    };
     if (selectedIds) filter._id = { $in: selectedIds };
 
     const contacts = await EmailContact.find(filter);
     if (contacts.length === 0) {
       res.status(400).json({
         error: selectedIds
-          ? "None of the selected contacts are subscribed."
+          ? "None of the selected contacts can receive emails right now (check for unsubscribed or flagged addresses)."
           : "There are no subscribed contacts to send to.",
       });
       return;

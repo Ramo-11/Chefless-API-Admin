@@ -27,6 +27,13 @@ export interface IEmailContact extends Document {
   /** Where this contact came from — e.g. "google_form". */
   source: string;
   status: EmailContactStatus;
+  /**
+   * True when the email address didn't pass basic validation on import
+   * (e.g. the form respondent typed a space in the middle of their address).
+   * The row is kept so nothing is lost; sends skip these contacts and the
+   * admin UI surfaces a warning so the address can be fixed in place.
+   */
+  needsReview: boolean;
   /** Opaque token used in the public one-click unsubscribe link. */
   unsubToken: string;
   lastEmailedAt?: Date;
@@ -62,6 +69,7 @@ const emailContactSchema = new Schema<IEmailContact>(
       default: "subscribed",
       index: true,
     },
+    needsReview: { type: Boolean, default: false, index: true },
     unsubToken: {
       type: String,
       required: true,
