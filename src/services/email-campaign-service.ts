@@ -205,6 +205,8 @@ function renderHtml(body: string, unsubUrl: string): string {
     })
     .join("");
 
+  const logoUrl = `${env.PUBLIC_BASE_URL}/admin/images/logo.png`;
+
   return `<!DOCTYPE html>
 <html lang="en">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
@@ -212,16 +214,18 @@ function renderHtml(body: string, unsubUrl: string): string {
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f1ec;padding:32px 0;">
     <tr><td align="center">
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;border-radius:16px;overflow:hidden;">
-        <tr><td style="background:#e8623c;padding:28px 32px;">
-          <span style="font-size:22px;font-weight:700;color:#ffffff;letter-spacing:-0.02em;">Chefless</span>
+        <tr><td style="background:#ffffff;padding:32px 32px 16px;text-align:center;">
+          <img src="${logoUrl}" alt="Chefless" width="72" height="72" style="display:inline-block;width:72px;height:72px;border-radius:18px;">
+          <div style="margin-top:12px;font-size:22px;font-weight:700;color:#e8623c;letter-spacing:-0.02em;">Chefless</div>
         </td></tr>
-        <tr><td style="padding:32px;">
+        <tr><td style="padding:8px 32px 32px;">
           ${paragraphs}
         </td></tr>
         <tr><td style="padding:0 32px 32px;">
           <hr style="border:none;border-top:1px solid #ece8e1;margin:0 0 16px;">
           <p style="margin:0;font-size:12px;line-height:1.6;color:#9a948c;">
             You're receiving this because you signed up for early access to Chefless.<br>
+            Questions? <a href="mailto:admin@chefless.org" style="color:#9a948c;">admin@chefless.org</a> &middot;
             <a href="${unsubUrl}" style="color:#9a948c;">Unsubscribe</a>
           </p>
         </td></tr>
@@ -233,7 +237,7 @@ function renderHtml(body: string, unsubUrl: string): string {
 }
 
 function renderText(body: string, unsubUrl: string): string {
-  return `${body.trim()}\n\n—\nYou're receiving this because you signed up for early access to Chefless.\nUnsubscribe: ${unsubUrl}`;
+  return `${body.trim()}\n\n—\nYou're receiving this because you signed up for early access to Chefless.\nQuestions? admin@chefless.org\nUnsubscribe: ${unsubUrl}`;
 }
 
 export interface CampaignSendResult {

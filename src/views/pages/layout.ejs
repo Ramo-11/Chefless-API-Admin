@@ -27,20 +27,16 @@
       border-bottom: 1px solid #e5e7eb;
     }
     .brand-icon {
-      width: 36px;
-      height: 36px;
-      background: #0D9488;
+      width: 40px;
+      height: 40px;
       border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 18px;
+      display: block;
+      object-fit: contain;
     }
     .brand-name {
       font-size: 18px;
       font-weight: 600;
-      color: #0D9488;
+      color: #e8623c;
     }
     h1 {
       font-size: 28px;
@@ -70,32 +66,31 @@
       margin-bottom: 16px;
     }
     li { margin-bottom: 6px; }
-    a { color: #0D9488; }
+    a { color: #e8623c; }
     .contact {
       margin-top: 40px;
       padding: 20px;
-      background: #f0fdfa;
+      background: #fff7ed;
       border-radius: 10px;
-      border: 1px solid #ccfbf1;
+      border: 1px solid #ffedd5;
     }
     .contact p { margin-bottom: 4px; }
     @media (prefers-color-scheme: dark) {
       body { background: #111; color: #e5e7eb; }
       h1, h2 { color: #f9fafb; }
       p, li { color: #d1d5db; }
-      .brand-name { color: #2dd4bf; }
-      .brand-icon { background: #14b8a6; }
+      .brand-name { color: #f59e0b; }
       .effective-date { color: #9ca3af; }
       .brand { border-bottom-color: #374151; }
-      a { color: #2dd4bf; }
-      .contact { background: #1a2e2b; border-color: #2d4a45; }
+      a { color: #fb923c; }
+      .contact { background: #2a1e15; border-color: #4a2f1f; }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="brand">
-      <div class="brand-icon">&#127860;</div>
+      <img src="/admin/images/logo.png" alt="Chefless" class="brand-icon">
       <span class="brand-name">Chefless</span>
     </div>
     <%- body %>
