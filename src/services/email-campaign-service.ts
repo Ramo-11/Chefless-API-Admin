@@ -91,8 +91,12 @@ function parseCsv(text: string): string[][] {
   return rows;
 }
 
+/** A CSV column maps to one of these real input fields; never to `needsReview`,
+ *  which is derived from the parsed email value, not pulled from a column. */
+type ParsedCsvField = Exclude<keyof ParsedContactRow, "needsReview">;
+
 /** Maps a CSV header cell to one of our known fields, or null if unknown. */
-function classifyHeader(header: string): keyof ParsedContactRow | null {
+function classifyHeader(header: string): ParsedCsvField | null {
   const h = header.toLowerCase().replace(/[^a-z]/g, "");
   if (h.includes("timestamp")) return "signedUpAt";
   if (h.includes("firstname")) return "firstName";
