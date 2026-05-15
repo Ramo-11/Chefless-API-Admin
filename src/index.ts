@@ -102,10 +102,10 @@ app.use(
     store: MongoStore.create({
       mongoUrl: env.MONGODB_URI,
       collectionName: "admin_sessions",
-      ttl: 24 * 60 * 60, // 1 day
+      ttl: 7 * 24 * 60 * 60, // 7 days — must match cookie maxAge
     }),
     cookie: {
-      maxAge: 4 * 60 * 60 * 1000, // 4 hours for admin sessions
+      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days for admin sessions
       httpOnly: true,
       secure: isProd,
       sameSite: "lax",

@@ -202,6 +202,66 @@ export async function toggleContactStatus(
   }
 }
 
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const MAX_NAME_LEN = 120;
+const MAX_PHONE_LEN = 40;
+
+/**
+ * POST /admin/api/early-access/contacts — manually add a single contact.
+ * Email is required (it's an email list); first/last name and phone are optional.
+ */
+export async function addContact(
+  req: Request,
+  res: Response
+): Promise<void> {
+  try {
+    const body = req.body as {
+      email?: unknown;
+      firstName?: unknown;
+      lastName?: unknown;
+      phone?: unknown;
+    };
+
+    const email =
+      typeof body.email === "string" ? body.email.trim().toLowerCase() : "";
+    if (!EMAIL_RE.test(email)) {
+      res.status(400).json({ error: "A valid email address is required." });
+      return;
+    }
+
+    const str = (v: unknown, max: number): string | undefined => {
+      if (typeof v !== "string") return undefined;
+      const trimmed = v.trim();
+      return trimmed.length > 0 ? trimmed.slice(0, max) : undefined;
+    };
+
+    const existing = await EmailContact.findOne({ email }).lean();
+    if (existing) {
+      res
+        .status(409)
+        .json({ error: "A contact with that email is already on the list." });
+      return;
+    }
+
+    const contact = await EmailContact.create({
+      email,
+      firstName: str(body.firstName, MAX_NAME_LEN),
+      lastName: str(body.lastName, MAX_NAME_LEN),
+      phone: str(body.phone, MAX_PHONE_LEN),
+      source: "manual",
+    });
+
+    await audit(req, "add_email_contact", "email_contact", contact._id.toString(), {
+      email,
+    });
+
+    res.json({ success: true });
+  } catch (error) {
+    logger.error({ err: error }, "Failed to add email contact");
+    res.status(500).json({ error: "Failed to add contact." });
+  }
+}
+
 /** DELETE /admin/api/early-access/contacts/:id — permanently remove a contact. */
 export async function deleteContact(
   req: Request,

@@ -102,6 +102,21 @@ function adminFetch(url, options) {
 
   return fetch(url, opts)
     .then(function (r) {
+      // An expired admin session 302-redirects to /admin/login. fetch follows
+      // the redirect, so we land on the login page (HTML, status 200). Detect
+      // that and surface a clear message instead of "Unexpected token '<'".
+      if (r.redirected && r.url.indexOf('/admin/login') !== -1) {
+        throw new Error('Your admin session expired. Reload the page and log in again.');
+      }
+      var contentType = r.headers.get('content-type') || '';
+      if (contentType.indexOf('application/json') === -1) {
+        // Any non-JSON response (HTML error page, plain-text 404, etc.).
+        throw new Error(
+          r.status === 401 || r.status === 403
+            ? 'Session or permission error. Reload the page and log in again.'
+            : 'Unexpected server response (status ' + r.status + '). Try reloading the page.'
+        );
+      }
       if (!r.ok) {
         return r.json().then(function (d) {
           throw new Error(d.error || 'Request failed');

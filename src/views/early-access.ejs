@@ -82,8 +82,14 @@
 
 <!-- ── Contacts ────────────────────────────────────────────────── -->
 <div class="card" style="margin-bottom:1.25rem;">
-  <div class="card-header">
-    <h2><i class="fas fa-address-book"></i> Contacts</h2>
+  <div class="card-header" style="display:flex;align-items:center;justify-content:space-between;">
+    <h2>
+      <i class="fas fa-address-book"></i> Contacts
+      <span class="badge badge-default" style="margin-left:.35rem;"><%= pagination.totalItems.toLocaleString() %></span>
+    </h2>
+    <button class="btn btn-primary btn-sm" onclick="openModal('add-contact-modal')">
+      <i class="fas fa-user-plus"></i> Add someone
+    </button>
   </div>
   <div class="card-body" style="padding-bottom:0;">
     <div class="toolbar" style="margin-bottom:.5rem;">
@@ -277,6 +283,41 @@
   </div>
 </div>
 
+<!-- ── Add contact modal ───────────────────────────────────────── -->
+<div class="modal" id="add-contact-modal">
+  <div class="modal-content modal-sm">
+    <div class="modal-header">
+      <h2>Add someone</h2>
+      <button class="modal-close" onclick="closeModal('add-contact-modal')" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p class="text-muted text-sm" style="margin-top:0;">
+        Email is required so they can receive campaigns. Name and phone are optional.
+      </p>
+      <div class="form-group">
+        <label for="add-email">Email</label>
+        <input type="email" id="add-email" placeholder="name@example.com">
+      </div>
+      <div class="form-group">
+        <label for="add-first">First name <span class="text-muted">(optional)</span></label>
+        <input type="text" id="add-first" placeholder="First name">
+      </div>
+      <div class="form-group">
+        <label for="add-last">Last name <span class="text-muted">(optional)</span></label>
+        <input type="text" id="add-last" placeholder="Last name">
+      </div>
+      <div class="form-group">
+        <label for="add-phone">Phone <span class="text-muted">(optional)</span></label>
+        <input type="tel" id="add-phone" placeholder="Phone number">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" onclick="closeModal('add-contact-modal')">Cancel</button>
+      <button class="btn btn-primary" id="add-contact-btn" onclick="addContactSubmit()">Add contact</button>
+    </div>
+  </div>
+</div>
+
 <!-- ── Campaign view modal ─────────────────────────────────────── -->
 <div class="modal" id="campaign-modal">
   <div class="modal-content">
@@ -412,6 +453,28 @@
         if (idx !== -1) { ids.splice(idx, 1); saveSelection(ids); refreshSelectionUI(); }
         showToast('Contact deleted', 'success');
       }).catch(function (err) { showToast(err.message, 'error'); });
+  }
+
+  // ── Add contact ─────────────────────────────────────────────
+  function addContactSubmit() {
+    var email = document.getElementById('add-email').value.trim();
+    if (!email) { showToast('Email is required', 'error'); return; }
+    var btn = document.getElementById('add-contact-btn');
+    btn.disabled = true;
+    adminFetch('/admin/api/early-access/contacts', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: email,
+        firstName: document.getElementById('add-first').value.trim(),
+        lastName: document.getElementById('add-last').value.trim(),
+        phone: document.getElementById('add-phone').value.trim()
+      })
+    }).then(function () {
+      toastAndReload('Contact added', 'success');
+    }).catch(function (err) {
+      btn.disabled = false;
+      showToast(err.message, 'error');
+    });
   }
 
   // ── Campaign history ────────────────────────────────────────

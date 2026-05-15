@@ -90,6 +90,7 @@ import {
 import {
   earlyAccessPage,
   importContacts,
+  addContact,
   toggleContactStatus,
   deleteContact,
   sendCampaignToList,
@@ -181,6 +182,7 @@ router.delete(
 
 // ── Early access (early-signup email list) ─────────────────────────
 router.post("/api/early-access/import", csrfProtection, importContacts);
+router.post("/api/early-access/contacts", csrfProtection, addContact);
 router.post(
   "/api/early-access/contacts/:id/toggle",
   csrfProtection,
