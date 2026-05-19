@@ -14,8 +14,11 @@ import EmailContact from "../../models/EmailContact";
 import EmailCampaign from "../../models/EmailCampaign";
 import {
   parseContactsCsv,
+  personalize,
+  renderHtml,
   sendCampaign,
 } from "../../services/email-campaign-service";
+import { env } from "../../lib/env";
 
 const PAGE_SIZE = 25;
 // The admin router parses JSON bodies at a 1 MB limit, which comfortably fits
@@ -539,6 +542,70 @@ export async function sendCampaignToList(
   } catch (error) {
     logger.error({ err: error }, "Failed to send email campaign");
     res.status(500).json({ error: "Failed to send campaign." });
+  }
+}
+
+/**
+ * POST /admin/api/early-access/preview — render the same HTML shell Resend
+ * sends, using the admin-supplied subject/body. Sample firstName/lastName
+ * substitute for the personalization placeholders so the admin sees how a
+ * real recipient would receive the email. No side effects: nothing is sent
+ * or persisted.
+ */
+export async function previewCampaign(
+  req: Request,
+  res: Response
+): Promise<void> {
+  try {
+    const {
+      subject,
+      body,
+      firstName,
+      lastName,
+    } = req.body as {
+      subject?: unknown;
+      body?: unknown;
+      firstName?: unknown;
+      lastName?: unknown;
+    };
+    const trimmedSubject =
+      typeof subject === "string" ? subject.trim() : "";
+    const trimmedBody = typeof body === "string" ? body.trim() : "";
+    if (trimmedSubject.length === 0 || trimmedSubject.length > 200) {
+      res
+        .status(400)
+        .json({ error: "Subject is required and must be under 200 characters." });
+      return;
+    }
+    if (trimmedBody.length === 0 || trimmedBody.length > 20000) {
+      res
+        .status(400)
+        .json({ error: "Message body is required and must be under 20,000 characters." });
+      return;
+    }
+    const sampleFirst =
+      typeof firstName === "string" && firstName.trim().length > 0
+        ? firstName.trim().slice(0, 80)
+        : "Sarah";
+    const sampleLast =
+      typeof lastName === "string" && lastName.trim().length > 0
+        ? lastName.trim().slice(0, 80)
+        : "";
+    // Fake contact only used by personalize(); never touches the database.
+    const sampleContact = {
+      firstName: sampleFirst,
+      lastName: sampleLast,
+    } as unknown as Parameters<typeof personalize>[1];
+    const personalSubject = personalize(trimmedSubject, sampleContact);
+    const personalBody = personalize(trimmedBody, sampleContact);
+    // Use a placeholder unsubscribe URL so the link is visually present but
+    // does not resolve to a real token.
+    const unsubUrl = `${env.PUBLIC_BASE_URL}/email/unsubscribe?preview=1`;
+    const html = renderHtml(personalBody, unsubUrl);
+    res.json({ subject: personalSubject, html, firstName: sampleFirst });
+  } catch (error) {
+    logger.error({ err: error }, "Failed to render campaign preview");
+    res.status(500).json({ error: "Failed to render preview." });
   }
 }
 

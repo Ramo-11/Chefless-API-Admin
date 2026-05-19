@@ -98,6 +98,7 @@ import {
   toggleContactStatus,
   deleteContact,
   sendCampaignToList,
+  previewCampaign,
 } from "./controllers/early-access";
 
 const router = Router();
@@ -212,6 +213,7 @@ router.delete(
   csrfProtection,
   deleteContact
 );
+router.post("/api/early-access/preview", csrfProtection, previewCampaign);
 router.post("/api/early-access/send", csrfProtection, sendCampaignToList);
 
 // ── Page routes (with layout) ──────────────────────────────────────

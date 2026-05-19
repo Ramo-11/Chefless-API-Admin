@@ -72,7 +72,10 @@
         Only selected contacts (<span id="selected-count">0</span> picked in the table below)
       </label>
     </div>
-    <div style="display:flex;justify-content:flex-end;">
+    <div style="display:flex;justify-content:flex-end;gap:.5rem;">
+      <button class="btn btn-secondary btn-sm" onclick="openPreviewModal()">
+        <i class="fas fa-eye"></i> Preview email
+      </button>
       <button class="btn btn-primary btn-sm" onclick="openSendModal()">
         <i class="fas fa-paper-plane"></i> Review &amp; send
       </button>
@@ -281,6 +284,38 @@
         <% } %>
       </tbody>
     </table>
+  </div>
+</div>
+
+<!-- ── Preview email modal ─────────────────────────────────────── -->
+<div class="modal" id="preview-modal">
+  <div class="modal-content" style="max-width:680px;">
+    <div class="modal-header">
+      <h2>Email preview</h2>
+      <button class="modal-close" onclick="closeModal('preview-modal')" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p class="text-muted text-sm" style="margin:0 0 .5rem;">
+        Personalized with <code>firstName</code> =
+        <input type="text" id="preview-first-name" value="Sarah" maxlength="80"
+               style="display:inline-block;width:auto;padding:.15rem .4rem;font-size:13px;"
+               onchange="renderPreview()">
+        — this is exactly how Resend wraps and sends the email.
+      </p>
+      <div class="form-group" style="margin-bottom:.75rem;">
+        <label>Subject</label>
+        <p id="preview-subject" style="margin:0;font-weight:600;"></p>
+      </div>
+      <div class="form-group" style="margin-bottom:0;">
+        <label>Body</label>
+        <iframe id="preview-iframe" sandbox=""
+                style="width:100%;height:520px;border:1px solid #ece8e1;border-radius:8px;background:#f4f1ec;"
+                title="Email preview"></iframe>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" onclick="closeModal('preview-modal')">Close</button>
+    </div>
   </div>
 </div>
 
@@ -591,6 +626,37 @@
   function selectedAudience() {
     var checked = document.querySelector('input[name="audience"]:checked');
     return checked ? checked.value : 'all';
+  }
+
+  function openPreviewModal() {
+    var subject = document.getElementById('campaign-subject').value.trim();
+    var body = document.getElementById('campaign-body').value.trim();
+    if (!subject) { showToast('Add a subject first', 'error'); return; }
+    if (!body) { showToast('Add a message body first', 'error'); return; }
+    openModal('preview-modal');
+    renderPreview();
+  }
+
+  function renderPreview() {
+    var subject = document.getElementById('campaign-subject').value.trim();
+    var body = document.getElementById('campaign-body').value.trim();
+    if (!subject || !body) return;
+    var firstName = document.getElementById('preview-first-name').value.trim();
+    var iframe = document.getElementById('preview-iframe');
+    var subjectEl = document.getElementById('preview-subject');
+    subjectEl.textContent = 'Loading…';
+    iframe.srcdoc = '';
+    adminFetch('/admin/api/early-access/preview', {
+      method: 'POST',
+      body: JSON.stringify({ subject: subject, body: body, firstName: firstName })
+    }).then(function (d) {
+      subjectEl.textContent = d.subject;
+      iframe.srcdoc = d.html;
+    }).catch(function (err) {
+      subjectEl.textContent = '';
+      iframe.srcdoc = '';
+      showToast(err.message, 'error');
+    });
   }
 
   function openSendModal() {

@@ -187,7 +187,7 @@ function getResend(): Resend | null {
 /** Resend caps batch sends at 100 messages per request. */
 const BATCH_SIZE = 100;
 
-function personalize(template: string, contact: IEmailContact): string {
+export function personalize(template: string, contact: IEmailContact): string {
   const first = contact.firstName?.trim() || "there";
   const last = contact.lastName?.trim() || "";
   return template
@@ -196,7 +196,7 @@ function personalize(template: string, contact: IEmailContact): string {
 }
 
 /** Wrap the admin's plain-text body in a branded, responsive HTML shell. */
-function renderHtml(body: string, unsubUrl: string): string {
+export function renderHtml(body: string, unsubUrl: string): string {
   const paragraphs = body
     .split(/\n{2,}/)
     .map((block) => {
