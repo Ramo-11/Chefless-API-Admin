@@ -90,6 +90,13 @@ export interface IUser extends Document {
   cuisinePreferences?: string[];
   onboardingComplete: boolean;
   fcmToken?: string;
+  /**
+   * Most recent client platform that registered an FCM token for this user.
+   * Captured on every FCM token registration (every app launch), so it
+   * reflects the device the user last opened the app on. `web` is reserved —
+   * the production Chefless client is mobile-only today.
+   */
+  lastKnownPlatform?: "ios" | "android" | "web";
   notificationPreferences: NotificationPreferences;
   isAdmin: boolean;
   isBanned: boolean;
@@ -235,6 +242,11 @@ const userSchema = new Schema<IUser>(
       default: false,
     },
     fcmToken: { type: String },
+    lastKnownPlatform: {
+      type: String,
+      enum: ["ios", "android", "web"],
+      index: true,
+    },
     notificationPreferences: {
       type: {
         new_follower: { type: Boolean, default: true },

@@ -14,6 +14,7 @@ const registerSchema = z.object({
 
 const fcmTokenSchema = z.object({
   token: z.string().min(1, "FCM token is required"),
+  platform: z.enum(["ios", "android", "web"]).optional(),
 });
 
 // --- Helpers ---
@@ -114,12 +115,18 @@ router.post(
   requireAuth,
   validate({ body: fcmTokenSchema }),
   asyncHandler(async (req: Request, res: Response) => {
-    const { token } = req.body as z.infer<typeof fcmTokenSchema>;
+    const { token, platform } = req.body as z.infer<typeof fcmTokenSchema>;
     const firebaseUid = req.user!.uid;
+
+    const update: Record<string, unknown> = {
+      fcmToken: token,
+      lastActiveAt: new Date(),
+    };
+    if (platform) update.lastKnownPlatform = platform;
 
     const user = await User.findOneAndUpdate(
       { firebaseUid },
-      { fcmToken: token, lastActiveAt: new Date() },
+      update,
       { new: true }
     );
 

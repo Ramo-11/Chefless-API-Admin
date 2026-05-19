@@ -22,6 +22,9 @@
     <a href="/admin/users?filter=premium&search=<%= search %>" class="filter-chip <%= filter === 'premium' ? 'active' : '' %>">Premium</a>
     <a href="/admin/users?filter=banned&search=<%= search %>" class="filter-chip <%= filter === 'banned' ? 'active' : '' %>">Banned</a>
     <a href="/admin/users?filter=admin&search=<%= search %>" class="filter-chip <%= filter === 'admin' ? 'active' : '' %>">Admin</a>
+    <a href="/admin/users?filter=ios&search=<%= search %>" class="filter-chip <%= filter === 'ios' ? 'active' : '' %>">iOS</a>
+    <a href="/admin/users?filter=android&search=<%= search %>" class="filter-chip <%= filter === 'android' ? 'active' : '' %>">Android</a>
+    <a href="/admin/users?filter=unknown_device&search=<%= search %>" class="filter-chip <%= filter === 'unknown_device' ? 'active' : '' %>">Unknown device</a>
   </div>
 </div>
 
@@ -36,6 +39,7 @@
           <th>Recipes</th>
           <th>Followers</th>
           <th>Status</th>
+          <th>Device</th>
           <th>Joined</th>
           <th>Last Active</th>
           <th>Actions</th>
@@ -79,6 +83,17 @@
               <% } %>
             </div>
           </td>
+          <td>
+            <% if (user.lastKnownPlatform === 'ios') { %>
+              <span class="badge badge-default" title="Last seen on iOS"><i class="fab fa-apple"></i> iOS</span>
+            <% } else if (user.lastKnownPlatform === 'android') { %>
+              <span class="badge badge-default" title="Last seen on Android"><i class="fab fa-android"></i> Android</span>
+            <% } else if (user.lastKnownPlatform === 'web') { %>
+              <span class="badge badge-default" title="Last seen on web"><i class="fas fa-globe"></i> Web</span>
+            <% } else { %>
+              <span class="text-muted">—</span>
+            <% } %>
+          </td>
           <td class="text-muted"><%= new Date(user.createdAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) %></td>
           <td class="text-muted"><%= user.lastActiveAt ? new Date(user.lastActiveAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : 'Never' %></td>
           <td>
@@ -118,7 +133,7 @@
         <% }); %>
         <% if (users.length === 0) { %>
         <tr>
-          <td colspan="8" class="empty-state">
+          <td colspan="9" class="empty-state">
             <i class="fas fa-search"></i>
             <span>No users found</span>
           </td>
@@ -435,6 +450,7 @@
               <div class="detail-row"><span>Status:</span> <span>${u.isBanned ? '<span class="badge badge-danger">Banned</span>' : '<span class="badge badge-success">Active</span>'}</span></div>
               <div class="detail-row"><span>Joined:</span> <span>${new Date(u.createdAt).toLocaleDateString()}</span></div>
               <div class="detail-row"><span>Last Active:</span> <span>${u.lastActiveAt ? new Date(u.lastActiveAt).toLocaleDateString() : 'N/A'}</span></div>
+              <div class="detail-row"><span>Last device:</span> <span>${u.lastKnownPlatform === 'ios' ? 'iOS' : u.lastKnownPlatform === 'android' ? 'Android' : u.lastKnownPlatform === 'web' ? 'Web' : 'Unknown'}</span></div>
             </div>
             <div class="detail-section">
               <h4>AI Recipe Helper</h4>

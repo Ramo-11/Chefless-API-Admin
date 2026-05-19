@@ -44,6 +44,9 @@ export async function usersPage(req: Request, res: Response): Promise<void> {
     if (filter === "premium") query.isPremium = true;
     if (filter === "banned") query.isBanned = true;
     if (filter === "admin") query.isAdmin = true;
+    if (filter === "ios") query.lastKnownPlatform = "ios";
+    if (filter === "android") query.lastKnownPlatform = "android";
+    if (filter === "unknown_device") query.lastKnownPlatform = { $exists: false };
 
     const skip = (page - 1) * limit;
 
@@ -53,7 +56,7 @@ export async function usersPage(req: Request, res: Response): Promise<void> {
         .skip(skip)
         .limit(limit)
         .select(
-          "fullName email profilePicture isPremium premiumPlan isBanned isAdmin recipesCount followersCount followingCount createdAt lastActiveAt isPublic"
+          "fullName email profilePicture isPremium premiumPlan isBanned isAdmin recipesCount followersCount followingCount createdAt lastActiveAt isPublic lastKnownPlatform"
         )
         .lean(),
       User.countDocuments(query),
