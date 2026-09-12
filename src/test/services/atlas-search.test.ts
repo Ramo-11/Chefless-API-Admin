@@ -152,6 +152,8 @@ describe("recipesSearchIndexDefinition", () => {
       "ratingCount",
       "likesCount",
       "createdAt",
+      "tags",
+      "labels",
     ]) {
       expect(hasMappingForPath(field)).toBe(true);
     }
@@ -193,6 +195,8 @@ describe("buildRecipeSearchStage", () => {
           "dietaryTags",
           "ingredients.name",
           "ingredients.name",
+          "labels",
+          "tags",
           "title",
           "title",
         ].sort()

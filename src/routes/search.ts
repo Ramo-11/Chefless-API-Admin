@@ -10,6 +10,7 @@ import { getBlockedUserIds } from "../services/block-service";
 import { buildAccessiblePrivateIds } from "../services/visibility-service";
 import { computeSpatulaBadge } from "../services/user-service";
 import { ALL_KNOWN_CUISINES } from "../lib/cuisines";
+import { CANONICAL_DIETS, CANONICAL_MEAL_LABELS } from "../lib/diets";
 import {
   buildRecipeSearchStage,
   isAtlasSearchAvailable,
@@ -28,18 +29,6 @@ function asyncHandler(
 }
 
 const CANONICAL_CUISINES = [...ALL_KNOWN_CUISINES].sort();
-
-const CANONICAL_DIETS = [
-  "Halal",
-  "Vegan",
-  "Vegetarian",
-  "Gluten-Free",
-  "Dairy-Free",
-  "Nut-Free",
-  "Keto",
-  "Paleo",
-  "Low FODMAP",
-] as const;
 
 const DIFFICULTIES = ["easy", "medium", "hard"] as const;
 
@@ -71,8 +60,9 @@ const searchQuerySchema = z.object({
   type: z.enum(["all", "recipes", "users", "kitchens"]).default("all"),
   page: z.coerce.number().int().min(1).default(1),
   limit: z.coerce.number().int().min(1).max(50).default(20),
-  cuisines: commaList(10, 40),
+  cuisines: commaList(20, 40),
   diets: commaList(10, 40),
+  labels: commaList(10, 40),
   difficulty: z.enum(DIFFICULTIES).optional(),
   maxTotalTime: z.coerce.number().int().min(1).max(1440).optional(),
   minRating: z.coerce.number().min(1).max(5).optional(),
@@ -85,6 +75,7 @@ type SortOption = SearchQuery["sort"];
 interface RecipeFilters {
   cuisines?: string[];
   diets?: string[];
+  labels?: string[];
   difficulty?: "easy" | "medium" | "hard";
   maxTotalTime?: number;
   minRating?: number;
@@ -94,6 +85,7 @@ function hasRecipeFilter(filters: RecipeFilters): boolean {
   return Boolean(
     (filters.cuisines && filters.cuisines.length > 0) ||
       (filters.diets && filters.diets.length > 0) ||
+      (filters.labels && filters.labels.length > 0) ||
       filters.difficulty ||
       filters.maxTotalTime !== undefined ||
       filters.minRating !== undefined
@@ -235,6 +227,22 @@ function buildRecipeFilterClauses(
   return clauses;
 }
 
+function buildLabelsFilterClause(
+  labels: string[] | undefined
+): Record<string, unknown> | null {
+  if (!labels || labels.length === 0) return null;
+
+  return {
+    $or: labels.flatMap((label) => {
+      const pattern = `^${escapeRegex(label)}$`;
+      return [
+        { labels: { $regex: pattern, $options: "i" } },
+        { tags: { $regex: pattern, $options: "i" } },
+      ];
+    }),
+  };
+}
+
 function isSetExpr(field: string): Record<string, unknown> {
   return { $ne: [{ $ifNull: [field, null] }, null] };
 }
@@ -353,6 +361,8 @@ async function searchRecipes(
             { "ingredients.name": { $regex: term, $options: "i" } },
             { dietaryTags: { $regex: term, $options: "i" } },
             { cuisineTags: { $regex: term, $options: "i" } },
+            { tags: { $regex: term, $options: "i" } },
+            { labels: { $regex: term, $options: "i" } },
           ],
         }))
       );
@@ -373,6 +383,11 @@ async function searchRecipes(
       pipeline.push(atlasStage);
     }
     pipeline.push({ $match: initialMatch });
+
+    const labelsClause = buildLabelsFilterClause(filters.labels);
+    if (labelsClause) {
+      pipeline.push({ $match: labelsClause });
+    }
 
     if (needsEffectiveTime) {
       pipeline.push({ $addFields: EFFECTIVE_TIME_FIELDS });
@@ -779,6 +794,7 @@ router.get(
     res.status(200).json({
       cuisines: CANONICAL_CUISINES,
       diets: [...CANONICAL_DIETS],
+      labels: [...CANONICAL_MEAL_LABELS],
       difficulties: [...DIFFICULTIES],
       sorts: [...SORTS],
     });
@@ -797,6 +813,7 @@ router.get(
       limit,
       cuisines,
       diets,
+      labels,
       difficulty,
       maxTotalTime,
       minRating,
@@ -812,6 +829,7 @@ router.get(
     const filters: RecipeFilters = {
       cuisines,
       diets,
+      labels,
       difficulty,
       maxTotalTime,
       minRating,

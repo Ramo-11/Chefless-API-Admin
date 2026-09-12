@@ -19,6 +19,8 @@ interface RecipeOverrides {
   title?: string;
   cuisineTags?: string[];
   dietaryTags?: string[];
+  labels?: string[];
+  tags?: string[];
   difficulty?: "easy" | "medium" | "hard";
   prepTime?: number;
   cookTime?: number;
@@ -41,6 +43,8 @@ async function makeRecipe(overrides: RecipeOverrides) {
     isHidden: overrides.isHidden ?? false,
     cuisineTags: overrides.cuisineTags ?? [],
     dietaryTags: overrides.dietaryTags ?? [],
+    labels: overrides.labels ?? [],
+    tags: overrides.tags ?? [],
     difficulty: overrides.difficulty,
     prepTime: overrides.prepTime,
     cookTime: overrides.cookTime,
@@ -284,6 +288,103 @@ describe("GET /api/search filters", () => {
     expect(res.body.recipes.map((r: { title: string }) => r.title)).toEqual(["Cased"]);
   });
 
+  it("filters recipes by labels alone in browse mode, matching the labels array", async () => {
+    await makeRecipe({ authorId: author._id, title: "Quick Meal", labels: ["breakfast"] });
+    await makeRecipe({ authorId: author._id, title: "Slow Meal", labels: ["dinner"] });
+
+    const res = await request(app)
+      .get("/api/search")
+      .query({ labels: "breakfast" })
+      .set(getAuthHeaders());
+
+    expect(res.body.recipes.map((r: { title: string }) => r.title)).toEqual(["Quick Meal"]);
+  });
+
+  it("filters recipes by labels alone, also matching the tags array", async () => {
+    await makeRecipe({ authorId: author._id, title: "Tagged", tags: ["breakfast"] });
+    await makeRecipe({ authorId: author._id, title: "Untagged", tags: ["dinner"] });
+
+    const res = await request(app)
+      .get("/api/search")
+      .query({ labels: "breakfast" })
+      .set(getAuthHeaders());
+
+    expect(res.body.recipes.map((r: { title: string }) => r.title)).toEqual(["Tagged"]);
+  });
+
+  it("matches labels case-insensitively", async () => {
+    await makeRecipe({ authorId: author._id, title: "Cased Label", labels: ["Breakfast"] });
+
+    const res = await request(app)
+      .get("/api/search")
+      .query({ labels: "BREAKFAST" })
+      .set(getAuthHeaders());
+
+    expect(res.body.recipes.map((r: { title: string }) => r.title)).toEqual(["Cased Label"]);
+  });
+
+  it("ORs labels together (matches any listed label, across either field)", async () => {
+    await makeRecipe({ authorId: author._id, title: "Breakfast Dish", labels: ["breakfast"] });
+    await makeRecipe({ authorId: author._id, title: "Dinner Dish", tags: ["dinner"] });
+    await makeRecipe({ authorId: author._id, title: "Snack Dish", labels: ["snack"] });
+
+    const res = await request(app)
+      .get("/api/search")
+      .query({ labels: "breakfast,dinner" })
+      .set(getAuthHeaders());
+
+    const titles = res.body.recipes.map((r: { title: string }) => r.title).sort();
+    expect(titles).toEqual(["Breakfast Dish", "Dinner Dish"]);
+  });
+
+  it("combines labels with diets and cuisines", async () => {
+    await makeRecipe({
+      authorId: author._id,
+      title: "Match",
+      labels: ["breakfast"],
+      dietaryTags: ["Vegan"],
+      cuisineTags: ["Italian"],
+    });
+    await makeRecipe({
+      authorId: author._id,
+      title: "Wrong Label",
+      labels: ["dinner"],
+      dietaryTags: ["Vegan"],
+      cuisineTags: ["Italian"],
+    });
+
+    const res = await request(app)
+      .get("/api/search")
+      .query({ labels: "breakfast", diets: "Vegan", cuisines: "Italian" })
+      .set(getAuthHeaders());
+
+    expect(res.body.recipes.map((r: { title: string }) => r.title)).toEqual(["Match"]);
+  });
+
+  it("accepts a browse-mode request with only labels set", async () => {
+    await makeRecipe({ authorId: author._id, title: "Breakfast Dish", labels: ["breakfast"] });
+
+    const res = await request(app)
+      .get("/api/search")
+      .query({ labels: "breakfast" })
+      .set(getAuthHeaders());
+
+    expect(res.status).toBe(200);
+    expect(res.body.recipes.map((r: { title: string }) => r.title)).toEqual(["Breakfast Dish"]);
+  });
+
+  it("matches a text query against a recipe whose only hit is a tag", async () => {
+    await makeRecipe({ authorId: author._id, title: "Weeknight Bowl", tags: ["mealprep"] });
+    await makeRecipe({ authorId: author._id, title: "Other Dish" });
+
+    const res = await request(app)
+      .get("/api/search")
+      .query({ q: "mealprep" })
+      .set(getAuthHeaders());
+
+    expect(res.body.recipes.map((r: { title: string }) => r.title)).toEqual(["Weeknight Bowl"]);
+  });
+
   it("computes effective total time from prepTime + cookTime when totalTime is unset", async () => {
     await makeRecipe({ authorId: author._id, title: "Within Budget", prepTime: 10, cookTime: 15 });
     await makeRecipe({ authorId: author._id, title: "Over Budget", prepTime: 10, cookTime: 30 });
@@ -515,10 +616,21 @@ describe("GET /api/search filters", () => {
     expect(res.body.recipes.map((r: { title: string }) => r.title)).toEqual([]);
   });
 
-  it("rejects a cuisines list longer than 10 entries", async () => {
+  it("accepts a cuisines list of exactly 20 entries", async () => {
+    const cuisines = Array.from({ length: 20 }, (_, i) => `Cuisine${i}`).join(",");
     const res = await request(app)
       .get("/api/search")
-      .query({ cuisines: "a,b,c,d,e,f,g,h,i,j,k" })
+      .query({ cuisines })
+      .set(getAuthHeaders());
+
+    expect(res.status).toBe(200);
+  });
+
+  it("rejects a cuisines list longer than 20 entries", async () => {
+    const cuisines = Array.from({ length: 21 }, (_, i) => `Cuisine${i}`).join(",");
+    const res = await request(app)
+      .get("/api/search")
+      .query({ cuisines })
       .set(getAuthHeaders());
 
     expect(res.status).toBe(400);
@@ -564,14 +676,31 @@ describe("GET /api/search/filters", () => {
     expect(res.body.cuisines).toContain("Italian");
     expect(res.body.diets).toEqual([
       "Halal",
-      "Vegan",
       "Vegetarian",
+      "Vegan",
+      "Pescatarian",
       "Gluten-Free",
       "Dairy-Free",
       "Nut-Free",
+      "Egg-Free",
+      "Soy-Free",
+      "Shellfish-Free",
+      "Low Sugar",
+      "Low Sodium",
+      "Low Carb",
+      "High Protein",
       "Keto",
       "Paleo",
       "Low FODMAP",
+      "Kosher",
+    ]);
+    expect(res.body.labels).toEqual([
+      "breakfast",
+      "lunch",
+      "dinner",
+      "snack",
+      "dessert",
+      "drink",
     ]);
     expect(res.body.difficulties).toEqual(["easy", "medium", "hard"]);
     expect(res.body.sorts).toEqual(["relevance", "newest", "popular", "rating", "quickest"]);

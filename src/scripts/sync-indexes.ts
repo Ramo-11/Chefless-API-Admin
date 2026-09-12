@@ -67,6 +67,50 @@ const MODELS = [
   WebhookEvent,
 ] as unknown as Array<Model<unknown>>;
 
+function sameKey(a: Record<string, unknown>, b: Record<string, unknown>): boolean {
+  const ak = Object.keys(a);
+  const bk = Object.keys(b);
+  if (ak.length !== bk.length) return false;
+  return ak.every((k, i) => bk[i] === k && String(a[k]) === String(b[k]));
+}
+
+function sameOptions(
+  existing: Record<string, unknown>,
+  wanted: Record<string, unknown>
+): boolean {
+  const uniqueMatches = Boolean(existing.unique) === Boolean(wanted.unique);
+  const existingPartial = JSON.stringify(existing.partialFilterExpression ?? null);
+  const wantedPartial = JSON.stringify(wanted.partialFilterExpression ?? null);
+  const sparseMatches = Boolean(existing.sparse) === Boolean(wanted.sparse);
+  const ttlMatches =
+    (existing.expireAfterSeconds ?? null) === (wanted.expireAfterSeconds ?? null);
+  return (
+    uniqueMatches &&
+    existingPartial === wantedPartial &&
+    sparseMatches &&
+    ttlMatches
+  );
+}
+
+async function dropConflictingIndexes(model: Model<unknown>): Promise<string[]> {
+  const existing = await model.collection.indexes();
+  const wanted = model.schema.indexes();
+  const dropped: string[] = [];
+
+  for (const [wantedKey, wantedOptions] of wanted) {
+    const options = (wantedOptions ?? {}) as Record<string, unknown>;
+    for (const idx of existing) {
+      if (!idx.name || idx.name === "_id_") continue;
+      if (!sameKey(idx.key as Record<string, unknown>, wantedKey)) continue;
+      if (sameOptions(idx as Record<string, unknown>, options)) continue;
+      await model.collection.dropIndex(idx.name);
+      dropped.push(idx.name);
+    }
+  }
+
+  return dropped;
+}
+
 async function main(): Promise<void> {
   await mongoose.connect(env.MONGODB_URI);
   console.log("Connected to MongoDB");
@@ -83,9 +127,33 @@ async function main(): Promise<void> {
     try {
       await model.createIndexes();
     } catch (err) {
-      failed++;
-      console.error(`${name}: index creation failed:`, err);
-      continue;
+      const code = (err as { code?: number }).code;
+      if (code !== 86) {
+        failed++;
+        console.error(`${name}: index creation failed:`, err);
+        continue;
+      }
+      try {
+        const dropped = await dropConflictingIndexes(model);
+        if (dropped.length > 0) {
+          console.log(
+            `${name}: replacing ${dropped.join(", ")} (same name, different definition)`
+          );
+        }
+        await model.createIndexes();
+      } catch (retryErr) {
+        failed++;
+        const retryCode = (retryErr as { code?: number }).code;
+        if (retryCode === 11000) {
+          console.error(
+            `${name}: cannot apply a unique index because the collection already contains duplicates. Remove the duplicate rows, then rerun this script.`
+          );
+          console.error(retryErr);
+        } else {
+          console.error(`${name}: index creation failed:`, retryErr);
+        }
+        continue;
+      }
     }
 
     const after = await model.collection.indexes();
