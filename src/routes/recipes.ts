@@ -2,6 +2,7 @@ import { Router, Request, Response, NextFunction } from "express";
 import { z } from "zod";
 import mongoose from "mongoose";
 import { requireAuth } from "../middleware/auth";
+import { strictLimiter } from "../middleware/rateLimit";
 import { validate } from "../middleware/validate";
 import {
   createRecipe,
@@ -37,7 +38,9 @@ import {
   reserveImportQuota,
   releaseAiQuota,
   aiExtractRecipeFromCaption,
+  aiExtractRecipeFromImages,
   getAiUsage,
+  type RecipeImageMediaType,
 } from "../services/ai-recipe-service";
 import { imageDataUri } from "../lib/image-validation";
 
@@ -71,7 +74,7 @@ const paginationSchema = z.object({
 const ingredientSchema = z.object({
   name: z.string().min(1).max(200),
   quantity: z.number().min(0),
-  unit: z.string().min(1).max(50),
+  unit: z.string().max(50),
   group: z.string().max(100).optional(),
 });
 
@@ -644,6 +647,51 @@ const importFromTextSchema = z.object({
   timezoneOffsetMinutes: timezoneOffsetField,
 });
 
+function hasImageSignature(bytes: Buffer, mediaType: RecipeImageMediaType): boolean {
+  if (mediaType === "image/jpeg") {
+    return bytes.length >= 3 && bytes[0] === 0xff && bytes[1] === 0xd8 && bytes[2] === 0xff;
+  }
+  if (mediaType === "image/png") {
+    return bytes.length >= 8 && bytes.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]));
+  }
+  return bytes.length >= 12 && bytes.toString("ascii", 0, 4) === "RIFF" && bytes.toString("ascii", 8, 12) === "WEBP";
+}
+
+const imageDataUriSchema = z
+  .string()
+  .max(4_200_000)
+  .transform((value, context) => {
+    const match = /^data:(image\/(?:jpeg|png|webp));base64,([A-Za-z0-9+/]+={0,2})$/.exec(value);
+    if (!match) {
+      context.addIssue({ code: z.ZodIssueCode.custom, message: "Use a JPEG, PNG, or WebP image" });
+      return z.NEVER;
+    }
+    const mediaType = match[1] as RecipeImageMediaType;
+    const data = match[2];
+    const bytes = Buffer.from(data, "base64");
+    if (bytes.length <= 0 || bytes.length > 3_000_000) {
+      context.addIssue({ code: z.ZodIssueCode.custom, message: "Each image must be 3 MB or smaller" });
+      return z.NEVER;
+    }
+    if (!hasImageSignature(bytes, mediaType)) {
+      context.addIssue({ code: z.ZodIssueCode.custom, message: "The image data does not match its format" });
+      return z.NEVER;
+    }
+    return { mediaType, data };
+  });
+
+const importFromImagesSchema = z.object({
+  images: z.array(z.object({ data: imageDataUriSchema })).min(1).max(4).transform((images, context) => {
+    const decodedBytes = images.reduce((total, image) => total + Math.ceil(image.data.data.length * 0.75), 0);
+    if (decodedBytes > 10_000_000) {
+      context.addIssue({ code: z.ZodIssueCode.custom, message: "Images must total 10 MB or smaller" });
+      return z.NEVER;
+    }
+    return images.map((image) => image.data);
+  }),
+  timezoneOffsetMinutes: timezoneOffsetField,
+});
+
 /** Maps an extractor error code to the HTTP status the client expects. */
 const IMPORT_ERROR_STATUS: Record<ImportErrorCode, number> = {
   INVALID_URL: 400,
@@ -669,6 +717,7 @@ const IMPORT_ERROR_MESSAGE: Record<ImportErrorCode, string> = {
 router.post(
   "/import",
   requireAuth,
+  strictLimiter,
   validate({ body: importRecipeSchema }),
   asyncHandler(async (req: Request, res: Response) => {
     const userId = req.user?.userId;
@@ -737,6 +786,7 @@ router.post(
 router.post(
   "/import/from-text",
   requireAuth,
+  strictLimiter,
   validate({ body: importFromTextSchema }),
   asyncHandler(async (req: Request, res: Response) => {
     const userId = req.user?.userId;
@@ -778,6 +828,50 @@ router.post(
       : { type: "other" as const, url: sourceUrl ?? "", importedVia: "ai" as const };
 
     res.status(200).json({ recipe, source, usage });
+  })
+);
+
+router.post(
+  "/import/from-images",
+  requireAuth,
+  strictLimiter,
+  validate({ body: importFromImagesSchema }),
+  asyncHandler(async (req: Request, res: Response) => {
+    const userId = req.user?.userId;
+    if (!userId) {
+      res.status(404).json({ error: "User not found" });
+      return;
+    }
+    const { images, timezoneOffsetMinutes: tz } = req.body as z.infer<typeof importFromImagesSchema>;
+    const reservation = await reserveImportQuota(userId, tz);
+    let extraction;
+    try {
+      extraction = await aiExtractRecipeFromImages(images, {
+        userId,
+        feature: "import",
+      });
+    } catch (error) {
+      await releaseAiQuota(userId, reservation);
+      throw error;
+    }
+    if (!extraction) {
+      await releaseAiQuota(userId, reservation);
+      res.status(422).json({
+        code: "IMAGE_NOT_READABLE",
+        error: "We could not read a complete recipe from those images.",
+      });
+      return;
+    }
+    const usage = await getAiUsage(userId, tz).catch(() => undefined);
+    res.status(200).json({
+      recipe: extraction.recipe,
+      usage,
+      review: {
+        needsReview: true,
+        missingFields: extraction.missingFields,
+        warnings: extraction.warnings,
+      },
+    });
   })
 );
 

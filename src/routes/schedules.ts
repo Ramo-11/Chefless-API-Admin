@@ -94,6 +94,7 @@ const addEntrySchema = z
       .regex(/^\d{2}:\d{2}$/, "Time must be in HH:mm format")
       .optional(),
     prepTime: z.number().int().min(0).max(1440).optional(),
+    servings: z.number().int().min(1).max(100).optional(),
   })
   .refine((data) => data.recipeId || data.freeformText, {
     message: "Either recipeId or freeformText must be provided",
@@ -114,13 +115,17 @@ const updateEntrySchema = z
       .optional()
       .nullable(),
     prepTime: z.number().int().min(0).max(1440).optional().nullable(),
+    servings: z.number().int().min(1).max(100).optional(),
   })
   .refine(
     (data) =>
       data.date !== undefined ||
       data.mealSlot !== undefined ||
       data.recipeId !== undefined ||
-      data.freeformText !== undefined,
+      data.freeformText !== undefined ||
+      data.scheduledTime !== undefined ||
+      data.prepTime !== undefined ||
+      data.servings !== undefined,
     { message: "At least one field must be provided for update" }
   );
 

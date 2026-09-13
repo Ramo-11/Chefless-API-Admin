@@ -5,9 +5,10 @@ import ShoppingList, {
 } from "../models/ShoppingList";
 import ScheduleEntry from "../models/ScheduleEntry";
 import Recipe, { IIngredient } from "../models/Recipe";
-import User from "../models/User";
+import User, { IUser } from "../models/User";
 import { deleteImage, publicIdFromUrl } from "../lib/cloudinary";
 import { categorizeIngredient, normalizeIngredientKey } from "../lib/ingredients";
+import { canViewRecipe } from "./visibility-service";
 
 interface ServiceError extends Error {
   statusCode: number;
@@ -177,7 +178,12 @@ export async function updateList(
     if (updates.isPrivate) {
       // Make personal — set userId, remove kitchenId
       setFields.userId = user._id;
+      setFields.generatedFromSchedule = false;
       unsetFields.kitchenId = 1;
+      unsetFields.scheduleLinkVersion = 1;
+      unsetFields.scheduleStartDate = 1;
+      unsetFields.scheduleEndDate = 1;
+      unsetFields.excludedScheduleSourceKeys = 1;
     } else {
       // Make shared — set kitchenId, remove userId
       if (!user.kitchenId) {
@@ -383,7 +389,12 @@ export async function removeItem(
 
   const updated = await ShoppingList.findByIdAndUpdate(
     listId,
-    { $pull: { items: { _id: new Types.ObjectId(itemId) } } },
+    {
+      $pull: { items: { _id: new Types.ObjectId(itemId) } },
+      ...(item?.scheduleSource?.key
+        ? { $addToSet: { excludedScheduleSourceKeys: item.scheduleSource.key } }
+        : {}),
+    },
     { new: true }
   );
 
@@ -461,24 +472,26 @@ export async function clearCompleted(
   listId: string,
   userId: string
 ): Promise<IShoppingList> {
-  const list = await ShoppingList.findById(listId);
-  if (!list) {
-    throw createError("Shopping list not found", 404);
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    const list = await ShoppingList.findById(listId);
+    if (!list) throw createError("Shopping list not found", 404);
+    await assertListAccess(list, userId);
+    const excludedKeys = list.items
+      .filter((item) => item.isChecked && item.scheduleSource)
+      .map((item) => item.scheduleSource!.key);
+    const updated = await ShoppingList.findOneAndUpdate(
+      { _id: listId, revision: list.revision },
+      {
+        $pull: { items: { isChecked: true } },
+        ...(excludedKeys.length > 0
+          ? { $addToSet: { excludedScheduleSourceKeys: { $each: excludedKeys } } }
+          : {}),
+      },
+      { new: true }
+    );
+    if (updated) return updated;
   }
-
-  await assertListAccess(list, userId);
-
-  const updated = await ShoppingList.findByIdAndUpdate(
-    listId,
-    { $pull: { items: { isChecked: true } } },
-    { new: true }
-  );
-
-  if (!updated) {
-    throw createError("Shopping list not found", 404);
-  }
-
-  return updated;
+  throw createError("This shopping list changed. Reload it and try again", 409);
 }
 
 export async function toggleItem(
@@ -547,6 +560,7 @@ export async function reorderItems(
     }
   }
 
+  list.revision += 1;
   await list.save();
 
   return list;
@@ -623,6 +637,7 @@ export async function uncheckAll(
 
 interface GenerateData {
   kitchenId?: string;
+  scope?: "kitchen" | "personal";
   startDate: Date;
   endDate: Date;
   name?: string;
@@ -634,6 +649,12 @@ interface CombinedIngredient {
   unit: string;
   recipeIds: Types.ObjectId[];
   category: string;
+  key: string;
+  contributions: Array<{
+    scheduleEntryId: Types.ObjectId;
+    recipeId: Types.ObjectId;
+    quantity: number;
+  }>;
 }
 
 export interface GeneratedShoppingList {
@@ -644,130 +665,133 @@ export interface GeneratedShoppingList {
   };
 }
 
-export async function generateFromSchedule(
-  userId: string,
-  data: GenerateData
-): Promise<GeneratedShoppingList> {
-  const user = await getUserWithKitchen(userId);
-
-  let kitchenId: Types.ObjectId;
-
-  if (data.kitchenId) {
-    if (!user.kitchenId || !user.kitchenId.equals(data.kitchenId)) {
-      throw createError("You are not a member of this kitchen", 403);
-    }
-    kitchenId = new Types.ObjectId(data.kitchenId);
-  } else if (user.kitchenId) {
-    kitchenId = user.kitchenId;
-  } else {
-    throw createError(
-      "You need to be in a kitchen to generate a shopping list from a schedule",
-      400
-    );
-  }
-
-  // 1. Fetch schedule entries with recipes for the date range
+async function buildScheduleItems(
+  scope: { kitchenId?: Types.ObjectId; userId?: Types.ObjectId },
+  startDate: Date,
+  endDate: Date,
+  userId: Types.ObjectId,
+  allowEmpty = false
+): Promise<{ items: Array<Record<string, unknown>>; skippedPrivateCount: number }> {
   const entries = await ScheduleEntry.find({
-    kitchenId,
-    date: { $gte: data.startDate, $lte: data.endDate },
+    ...(scope.kitchenId
+      ? { kitchenId: scope.kitchenId }
+      : { userId: scope.userId, kitchenId: { $exists: false } }),
+    date: { $gte: startDate, $lte: endDate },
     recipeId: { $exists: true, $ne: null },
   }).lean();
 
   if (entries.length === 0) {
-    throw createError(
-      "No scheduled recipes found in this date range",
-      400
-    );
+    if (allowEmpty) return { items: [], skippedPrivateCount: 0 };
+    throw createError("No scheduled recipes found in this date range", 400);
   }
 
-  // 2. Collect unique recipe IDs
-  const recipeIds = [
-    ...new Set(entries.map((e) => e.recipeId!.toString())),
-  ].map((id) => new Types.ObjectId(id));
-
-  // 3. Fetch recipes + their authors. Only include recipes visible to every
-  //    kitchen member — i.e. public, non-private, non-hidden, non-banned-author.
-  //    Members may have scheduled private recipes of their own; those are
-  //    silently skipped (see skippedPrivateCount in the response meta).
-  const recipes = await Recipe.find({ _id: { $in: recipeIds } })
-    .select("_id ingredients authorId isPrivate isHidden")
-    .lean();
-
-  const authorIds = [
-    ...new Set(recipes.map((r) => r.authorId.toString())),
-  ].map((id) => new Types.ObjectId(id));
-  const authors = await User.find({ _id: { $in: authorIds } })
-    .select("_id isPublic isBanned")
-    .lean();
-  const authorMap = new Map(authors.map((a) => [a._id.toString(), a]));
-
-  const viewableRecipes = recipes.filter((r) => {
-    if (r.isPrivate) return false;
-    if (r.isHidden) return false;
-    const author = authorMap.get(r.authorId.toString());
-    if (!author) return false;
-    if (author.isBanned) return false;
-    if (!author.isPublic) return false;
-    return true;
-  });
-
-  // Recipes we pulled in from the schedule but excluded on visibility grounds
-  const skippedPrivateCount = recipes.length - viewableRecipes.length;
-
-  const recipeMap = new Map(
-    viewableRecipes.map((r) => [r._id.toString(), r])
+  const recipeIds = [...new Set(entries.map((entry) => entry.recipeId!.toString()))].map(
+    (id) => new Types.ObjectId(id)
   );
-
-  // 4. Count how many times each recipe appears in the schedule
-  const recipeCounts = new Map<string, number>();
-  for (const entry of entries) {
-    const rid = entry.recipeId!.toString();
-    recipeCounts.set(rid, (recipeCounts.get(rid) ?? 0) + 1);
-  }
-
-  // 5. Combine ingredients: group by normalized name + unit
+  const recipes = await Recipe.find({ _id: { $in: recipeIds } })
+    .select("_id ingredients servings authorId isPrivate isHidden")
+    .lean();
+  const authorIds = [...new Set(recipes.map((recipe) => recipe.authorId.toString()))].map(
+    (id) => new Types.ObjectId(id)
+  );
+  const authors = await User.find({ _id: { $in: authorIds } })
+    .select("_id isPublic isBanned kitchenId")
+    .lean();
+  const authorMap = new Map(authors.map((author) => [author._id.toString(), author]));
+  const viewableRecipes = scope.kitchenId
+    ? recipes.filter((recipe) => {
+        const author = authorMap.get(recipe.authorId.toString());
+        return !recipe.isPrivate && !recipe.isHidden && Boolean(author?.isPublic) && !author?.isBanned;
+      })
+    : (
+        await Promise.all(
+          recipes.map(async (recipe) => {
+            const author = authorMap.get(recipe.authorId.toString());
+            if (!author || recipe.isHidden || author.isBanned) return null;
+            return (await canViewRecipe(userId, recipe, author as unknown as IUser))
+              ? recipe
+              : null;
+          })
+        )
+      ).filter((recipe) => recipe !== null) as typeof recipes;
+  const recipeMap = new Map(viewableRecipes.map((recipe) => [recipe._id.toString(), recipe]));
   const combinedMap = new Map<string, CombinedIngredient>();
 
-  for (const [recipeIdStr, count] of recipeCounts.entries()) {
-    const recipe = recipeMap.get(recipeIdStr);
+  for (const entry of entries) {
+    const recipe = recipeMap.get(entry.recipeId!.toString());
     if (!recipe) continue;
-
-    const recipeObjectId = new Types.ObjectId(recipeIdStr);
-
+    const ratio = (entry.servings ?? recipe.servings ?? 1) / (recipe.servings ?? 1);
     for (const ingredient of recipe.ingredients) {
-      const normalizedName = normalizeIngredientKey(ingredient.name);
-      const normalizedUnit = normalizeIngredientKey(ingredient.unit);
-      const key = `${normalizedName}|${normalizedUnit}`;
-
+      const key = `${normalizeIngredientKey(ingredient.name)}|${normalizeIngredientKey(ingredient.unit)}`;
+      const quantity = ingredient.quantity * ratio;
       const existing = combinedMap.get(key);
       if (existing) {
-        existing.quantity += ingredient.quantity * count;
-        if (!existing.recipeIds.some((id) => id.equals(recipeObjectId))) {
-          existing.recipeIds.push(recipeObjectId);
-        }
+        existing.quantity += quantity;
+        existing.contributions.push({ scheduleEntryId: entry._id, recipeId: recipe._id, quantity });
+        if (!existing.recipeIds.some((id) => id.equals(recipe._id))) existing.recipeIds.push(recipe._id);
       } else {
         combinedMap.set(key, {
+          key,
           name: ingredient.name.trim(),
-          quantity: ingredient.quantity * count,
+          quantity,
           unit: ingredient.unit.trim(),
-          recipeIds: [recipeObjectId],
+          recipeIds: [recipe._id],
           category: categorizeIngredient(ingredient.name),
+          contributions: [{ scheduleEntryId: entry._id, recipeId: recipe._id, quantity }],
         });
       }
     }
   }
 
-  // 6. Build items array
   const items = Array.from(combinedMap.values()).map((combined, index) => ({
     name: combined.name,
     quantity: combined.quantity,
     unit: combined.unit,
     recipeId: combined.recipeIds[0],
     isChecked: false,
-    addedBy: user._id,
+    addedBy: userId,
     category: combined.category,
     order: index,
+    scheduleSource: {
+      key: combined.key,
+      name: combined.name,
+      quantity: combined.quantity,
+      unit: combined.unit,
+      category: combined.category,
+      contributions: combined.contributions,
+    },
   }));
+
+  return { items, skippedPrivateCount: recipes.length - viewableRecipes.length };
+}
+
+export async function generateFromSchedule(
+  userId: string,
+  data: GenerateData
+): Promise<GeneratedShoppingList> {
+  const user = await getUserWithKitchen(userId);
+
+  let scope: { kitchenId?: Types.ObjectId; userId?: Types.ObjectId };
+
+  if (data.scope === "personal") {
+    scope = { userId: user._id, kitchenId: undefined };
+  } else if (data.kitchenId) {
+    if (!user.kitchenId || !user.kitchenId.equals(data.kitchenId)) {
+      throw createError("You are not a member of this kitchen", 403);
+    }
+    scope = { kitchenId: new Types.ObjectId(data.kitchenId) };
+  } else if (user.kitchenId) {
+    scope = { kitchenId: user.kitchenId };
+  } else {
+    scope = { userId: user._id, kitchenId: undefined };
+  }
+
+  const { items, skippedPrivateCount } = await buildScheduleItems(
+    scope,
+    data.startDate,
+    data.endDate,
+    user._id
+  );
 
   // 7. Create the shopping list
   const listName =
@@ -775,13 +799,108 @@ export async function generateFromSchedule(
     `Week of ${data.startDate.toLocaleDateString("en-US", { month: "short", day: "numeric" })}`;
 
   const list = await ShoppingList.create({
-    kitchenId,
+    ...(scope.kitchenId ? { kitchenId: scope.kitchenId } : { userId: user._id }),
     name: listName,
     items,
     generatedFromSchedule: true,
     scheduleStartDate: data.startDate,
     scheduleEndDate: data.endDate,
+    scheduleLinkVersion: 1,
+    revision: 0,
+    excludedScheduleSourceKeys: [],
   });
 
   return { list, meta: { skippedPrivateCount } };
+}
+
+export async function refreshFromSchedule(
+  listId: string,
+  userId: string,
+  revision: number
+): Promise<GeneratedShoppingList> {
+  const list = await ShoppingList.findById(listId);
+  if (!list) throw createError("Shopping list not found", 404);
+  await assertListAccess(list, userId);
+  if (
+    list.scheduleLinkVersion !== 1 ||
+    (!list.kitchenId && !list.userId) ||
+    !list.scheduleStartDate ||
+    !list.scheduleEndDate
+  ) {
+    throw createError("This older shopping list cannot be updated from the plan", 409);
+  }
+  if (list.revision !== revision) {
+    throw createError("This shopping list changed. Reload it and try again", 409);
+  }
+
+  const generated = await buildScheduleItems(
+    list.kitchenId
+      ? { kitchenId: list.kitchenId }
+      : { userId: list.userId!, kitchenId: undefined },
+    list.scheduleStartDate,
+    list.scheduleEndDate,
+    new Types.ObjectId(userId),
+    true
+  );
+  const desired = new Map(
+    generated.items.map((item) => [
+      (item.scheduleSource as { key: string }).key,
+      item,
+    ])
+  );
+  const excluded = new Set(list.excludedScheduleSourceKeys ?? []);
+  const nextItems: Array<Record<string, unknown>> = [];
+
+  for (const item of list.items) {
+    const source = item.scheduleSource;
+    if (!source) {
+      nextItems.push(
+        (item as unknown as { toObject(): Record<string, unknown> }).toObject()
+      );
+      continue;
+    }
+    const changed =
+      item.name !== source.name ||
+      item.quantity !== source.quantity ||
+      (item.unit ?? "") !== source.unit ||
+      item.category !== source.category;
+    if (changed) {
+      const detached = (
+        item as unknown as { toObject(): Record<string, unknown> }
+      ).toObject();
+      delete detached.scheduleSource;
+      nextItems.push(detached);
+      excluded.add(source.key);
+      continue;
+    }
+    const replacement = desired.get(source.key);
+    desired.delete(source.key);
+    if (!replacement) continue;
+    nextItems.push({
+      ...replacement,
+      _id: item._id,
+      isChecked: item.isChecked,
+      notes: item.notes,
+      imageUrl: item.imageUrl,
+      order: item.order,
+    });
+  }
+
+  for (const [key, item] of desired) {
+    if (!excluded.has(key)) nextItems.push(item);
+  }
+
+  const updated = await ShoppingList.findOneAndUpdate(
+    { _id: list._id, revision },
+    {
+      $set: {
+        items: nextItems,
+        excludedScheduleSourceKeys: Array.from(excluded),
+      },
+      $inc: { revision: 1 },
+    },
+    { new: true, runValidators: true }
+  );
+  if (!updated) throw createError("This shopping list changed. Reload it and try again", 409);
+  return { list: updated, meta: { skippedPrivateCount: generated.skippedPrivateCount } };
 }

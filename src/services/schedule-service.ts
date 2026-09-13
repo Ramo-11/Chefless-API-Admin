@@ -110,6 +110,7 @@ interface AddEntryData {
   freeformText?: string;
   scheduledTime?: string;
   prepTime?: number;
+  servings?: number;
 }
 
 function hasScheduleEditPermission(
@@ -176,7 +177,11 @@ export async function addEntry(
     }
 
     if (data.recipeId) {
-      await populateRecipeFields(entryFields, data.recipeId, userId);
+      await populateRecipeFields(entryFields, data.recipeId, userId, false);
+    }
+
+    if (data.servings != null) {
+      entryFields.servings = data.servings;
     }
 
     return ScheduleEntry.create(entryFields);
@@ -232,7 +237,11 @@ export async function addEntry(
   }
 
   if (data.recipeId) {
-    await populateRecipeFields(entryFields, data.recipeId, userId);
+    await populateRecipeFields(entryFields, data.recipeId, userId, true);
+  }
+
+  if (data.servings != null) {
+    entryFields.servings = data.servings;
   }
 
   const entry = await ScheduleEntry.create(entryFields);
@@ -260,10 +269,11 @@ export async function addEntry(
 async function populateRecipeFields(
   entryFields: Record<string, unknown>,
   recipeId: string,
-  actingUserId: string
+  actingUserId: string,
+  requireShared: boolean
 ): Promise<void> {
   const recipe = await Recipe.findById(recipeId)
-    .select("title photos authorId prepTime isPrivate isHidden")
+    .select("title photos authorId prepTime servings isPrivate isHidden")
     .lean();
   if (!recipe) {
     throw createError("Recipe not found", 404);
@@ -279,6 +289,13 @@ async function populateRecipeFields(
   // Hidden (admin-moderated) or banned-author recipes are off limits for scheduling
   if (recipe.isHidden || author.isBanned) {
     throw createError("You cannot schedule this recipe", 403);
+  }
+
+  if (requireShared && recipe.isPrivate) {
+    throw createError(
+      "Private recipes cannot be added to a Kitchen plan. Share the recipe first.",
+      400
+    );
   }
 
   const canView = await canViewRecipe(
@@ -301,6 +318,7 @@ async function populateRecipeFields(
   if (recipe.prepTime != null) {
     entryFields.prepTime = recipe.prepTime;
   }
+  entryFields.servings = recipe.servings ?? 1;
 }
 
 export async function getEntries(
@@ -334,7 +352,15 @@ export async function getEntries(
 export async function updateEntry(
   userId: string,
   entryId: string,
-  updates: { date?: Date; mealSlot?: string; recipeId?: string; freeformText?: string }
+  updates: {
+    date?: Date;
+    mealSlot?: string;
+    recipeId?: string;
+    freeformText?: string;
+    scheduledTime?: string | null;
+    prepTime?: number | null;
+    servings?: number;
+  }
 ): Promise<IScheduleEntry> {
   const entry = await ScheduleEntry.findById(entryId);
   if (!entry) {
@@ -400,8 +426,25 @@ export async function updateEntry(
     updateFields.freeformText = updates.freeformText;
   }
 
+  if (updates.scheduledTime !== undefined) {
+    updateFields.scheduledTime = updates.scheduledTime;
+  }
+
+  if (updates.prepTime !== undefined) {
+    updateFields.prepTime = updates.prepTime;
+  }
+
   if (updates.recipeId !== undefined) {
-    await populateRecipeFields(updateFields, updates.recipeId, userId);
+    await populateRecipeFields(
+      updateFields,
+      updates.recipeId,
+      userId,
+      Boolean(entry.kitchenId)
+    );
+  }
+
+  if (updates.servings !== undefined) {
+    updateFields.servings = updates.servings;
   }
 
   const updated = await ScheduleEntry.findByIdAndUpdate(
@@ -650,6 +693,19 @@ export async function importToKitchen(
     return 0;
   }
 
+  const importedRecipeIds = [
+    ...new Set(
+      personalEntries
+        .filter((entry) => entry.recipeId)
+        .map((entry) => entry.recipeId!.toString())
+    ),
+  ];
+  await Promise.all(
+    importedRecipeIds.map((recipeId) =>
+      populateRecipeFields({}, recipeId, userId, true)
+    )
+  );
+
   const canEdit = hasScheduleEditPermission(userId, kitchen);
   const status =
     kitchen.scheduleAddPolicy === "all" || canEdit ? "confirmed" : "suggested";
@@ -672,6 +728,7 @@ export async function importToKitchen(
     recipeAuthorId: entry.recipeAuthorId,
     recipeAuthorName: entry.recipeAuthorName,
     freeformText: entry.freeformText,
+    servings: entry.servings,
     status,
     suggestedBy: new Types.ObjectId(userId),
     ...(status === "confirmed"

@@ -19,6 +19,7 @@ import {
   toggleItem,
   reorderItems,
   generateFromSchedule,
+  refreshFromSchedule,
 } from "../services/shopping-list-service";
 
 const router = Router();
@@ -119,6 +120,11 @@ const generateSchema = z.object({
   startDate: z.coerce.date(),
   endDate: z.coerce.date(),
   name: z.string().min(1).max(200).trim().optional(),
+  scope: z.enum(["kitchen", "personal"]).optional(),
+});
+
+const refreshSchema = z.object({
+  revision: z.number().int().min(0),
 });
 
 // --- Helper to resolve the caller's Mongo user ID (attached by requireAuth) ---
@@ -151,9 +157,24 @@ router.post(
       startDate: data.startDate,
       endDate: data.endDate,
       name: data.name,
+      scope: data.scope,
     });
 
     res.status(201).json({ list, meta });
+  })
+);
+
+router.post(
+  "/:id/refresh",
+  requireAuth,
+  validate({ params: objectIdParam, body: refreshSchema }),
+  asyncHandler(async (req: Request, res: Response) => {
+    const userId = await resolveUserId(req, res);
+    if (!userId) return;
+    const { id } = req.params as z.infer<typeof objectIdParam>;
+    const { revision } = req.body as z.infer<typeof refreshSchema>;
+    const { list, meta } = await refreshFromSchedule(id, userId, revision);
+    res.status(200).json({ list, meta });
   })
 );
 

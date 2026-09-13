@@ -22,6 +22,7 @@ export interface IScheduleEntry extends Document {
   freeformText?: string;
   scheduledTime?: string;
   prepTime?: number;
+  servings?: number;
   status: "confirmed" | "suggested";
   suggestedBy?: Types.ObjectId;
   confirmedBy?: Types.ObjectId;
@@ -99,6 +100,11 @@ const scheduleEntrySchema = new Schema<IScheduleEntry>(
     prepTime: {
       type: Number,
       min: 0,
+    },
+    servings: {
+      type: Number,
+      min: 1,
+      max: 100,
     },
     status: {
       type: String,

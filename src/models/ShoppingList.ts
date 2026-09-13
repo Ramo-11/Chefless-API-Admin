@@ -12,6 +12,18 @@ export interface IShoppingListItem {
   notes?: string;
   imageUrl?: string;
   order?: number;
+  scheduleSource?: {
+    key: string;
+    name: string;
+    quantity: number;
+    unit: string;
+    category: string;
+    contributions: Array<{
+      scheduleEntryId: Types.ObjectId;
+      recipeId: Types.ObjectId;
+      quantity: number;
+    }>;
+  };
 }
 
 export interface IShoppingList extends Document {
@@ -23,6 +35,9 @@ export interface IShoppingList extends Document {
   generatedFromSchedule: boolean;
   scheduleStartDate?: Date;
   scheduleEndDate?: Date;
+  scheduleLinkVersion?: number;
+  revision: number;
+  excludedScheduleSourceKeys: string[];
   createdAt: Date;
   updatedAt: Date;
 }
@@ -38,6 +53,33 @@ const shoppingListItemSchema = new Schema<IShoppingListItem>({
   notes: { type: String, trim: true, maxlength: 500 },
   imageUrl: { type: String },
   order: { type: Number },
+  scheduleSource: {
+    type: new Schema(
+      {
+        key: { type: String, required: true },
+        name: { type: String, required: true },
+        quantity: { type: Number, required: true },
+        unit: { type: String, required: true },
+        category: { type: String, required: true },
+        contributions: {
+          type: [
+            new Schema(
+              {
+                scheduleEntryId: { type: Schema.Types.ObjectId, required: true },
+                recipeId: { type: Schema.Types.ObjectId, required: true },
+                quantity: { type: Number, required: true },
+              },
+              { _id: false }
+            ),
+          ],
+          default: [],
+        },
+      },
+      { _id: false }
+    ),
+    required: false,
+    default: undefined,
+  },
 });
 
 const shoppingListSchema = new Schema<IShoppingList>(
@@ -67,6 +109,9 @@ const shoppingListSchema = new Schema<IShoppingList>(
     },
     scheduleStartDate: { type: Date },
     scheduleEndDate: { type: Date },
+    scheduleLinkVersion: { type: Number },
+    revision: { type: Number, required: true, default: 0 },
+    excludedScheduleSourceKeys: { type: [String], default: [] },
   },
   {
     timestamps: true,
@@ -77,6 +122,16 @@ const shoppingListSchema = new Schema<IShoppingList>(
 shoppingListSchema.index({ kitchenId: 1, updatedAt: -1 });
 shoppingListSchema.index({ userId: 1, updatedAt: -1 });
 shoppingListSchema.index({ "items.recipeId": 1 });
+
+shoppingListSchema.pre(["findOneAndUpdate", "updateOne"], function (next) {
+  const update = this.getUpdate() as Record<string, Record<string, number>> | null;
+  if (update) {
+    update.$inc = update.$inc ?? {};
+    if (update.$inc.revision === undefined) update.$inc.revision = 1;
+    this.setUpdate(update);
+  }
+  next();
+});
 
 const ShoppingList =
   (mongoose.models.ShoppingList as mongoose.Model<IShoppingList>) ||
