@@ -84,11 +84,17 @@ function sameOptions(
   const sparseMatches = Boolean(existing.sparse) === Boolean(wanted.sparse);
   const ttlMatches =
     (existing.expireAfterSeconds ?? null) === (wanted.expireAfterSeconds ?? null);
+  const languageOverrideMatches =
+    (existing.language_override ?? null) === (wanted.language_override ?? null);
+  const defaultLanguageMatches =
+    (existing.default_language ?? null) === (wanted.default_language ?? null);
   return (
     uniqueMatches &&
     existingPartial === wantedPartial &&
     sparseMatches &&
-    ttlMatches
+    ttlMatches &&
+    languageOverrideMatches &&
+    defaultLanguageMatches
   );
 }
 
@@ -128,7 +134,7 @@ async function main(): Promise<void> {
       await model.createIndexes();
     } catch (err) {
       const code = (err as { code?: number }).code;
-      if (code !== 86) {
+      if (code !== 85 && code !== 86) {
         failed++;
         console.error(`${name}: index creation failed:`, err);
         continue;

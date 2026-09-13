@@ -10,6 +10,7 @@ const router = Router();
 
 const registerSchema = z.object({
   fullName: z.string().min(1, "Full name is required").max(100),
+  language: z.enum(["en", "ar", "tr", "es"]).optional(),
 });
 
 const fcmTokenSchema = z.object({
@@ -35,7 +36,7 @@ router.post(
   requireAuth,
   validate({ body: registerSchema }),
   asyncHandler(async (req: Request, res: Response) => {
-    const { fullName } = req.body as z.infer<typeof registerSchema>;
+    const { fullName, language } = req.body as z.infer<typeof registerSchema>;
     const firebaseUid = req.user!.uid;
 
     // Email must come from the verified Firebase token — never trust the request body
@@ -61,6 +62,7 @@ router.post(
       existingByEmail.firebaseUid = firebaseUid;
       existingByEmail.fullName = fullName;
       existingByEmail.lastActiveAt = new Date();
+      if (language) existingByEmail.language = language;
       await existingByEmail.save();
       res.status(200).json({ user: existingByEmail });
       return;
@@ -71,6 +73,7 @@ router.post(
       email,
       fullName,
       lastActiveAt: new Date(),
+      ...(language && { language }),
     });
 
     res.status(201).json({ user });

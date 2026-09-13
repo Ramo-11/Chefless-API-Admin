@@ -5,6 +5,8 @@ import { requireAuth } from "../middleware/auth";
 import { validate } from "../middleware/validate";
 import User from "../models/User";
 import Recipe from "../models/Recipe";
+import SavedRecipe from "../models/SavedRecipe";
+import ScheduleEntry from "../models/ScheduleEntry";
 import { uploadImage } from "../lib/cloudinary";
 import {
   getUserById,
@@ -232,6 +234,41 @@ router.get(
     const result = await getPendingRequests(userId, page, limit);
 
     res.status(200).json(result);
+  })
+);
+
+router.get(
+  "/me/first-steps",
+  requireAuth,
+  asyncHandler(async (req: Request, res: Response) => {
+    const userId = req.user?.userId;
+
+    if (!userId) {
+      res.status(401).json({ error: "User not found. Please register first." });
+      return;
+    }
+
+    const userObjectId = new Types.ObjectId(userId);
+
+    const [savedRecipe, importedRecipe, plannedMeal, user] = await Promise.all([
+      SavedRecipe.exists({ userId: userObjectId }),
+      Recipe.exists({ authorId: userObjectId, source: { $exists: true } }),
+      ScheduleEntry.exists({ userId: userObjectId }),
+      User.findById(userId).select("kitchenId createdAt").lean(),
+    ]);
+
+    if (!user) {
+      res.status(404).json({ error: "User not found" });
+      return;
+    }
+
+    res.status(200).json({
+      savedRecipe: Boolean(savedRecipe),
+      importedRecipe: Boolean(importedRecipe),
+      plannedMeal: Boolean(plannedMeal),
+      kitchen: Boolean(user.kitchenId),
+      createdAt: user.createdAt,
+    });
   })
 );
 

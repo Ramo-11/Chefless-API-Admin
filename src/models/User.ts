@@ -334,7 +334,10 @@ const userSchema = new Schema<IUser>(
 );
 
 // Text index for search by name
-userSchema.index({ fullName: "text" });
+userSchema.index(
+  { fullName: "text" },
+  { language_override: "textSearchLanguage" }
+);
 
 // Compound index used by the admin Seed Data table when grouping by cuisine.
 userSchema.index({ isSeed: 1, seedCuisine: 1 });
