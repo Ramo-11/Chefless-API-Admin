@@ -359,27 +359,35 @@ function toHandle(label: string): string | undefined {
   return trimmed.startsWith("@") ? trimmed : `@${trimmed}`;
 }
 
-const META_PROPERTY_PATTERNS = (key: string): RegExp[] => {
-  const escaped = key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  return [
-    new RegExp(
-      `<meta[^>]+property=["']${escaped}["'][^>]+content=["']([\\s\\S]*?)["']`,
-      "i"
-    ),
-    new RegExp(
-      `<meta[^>]+content=["']([\\s\\S]*?)["'][^>]+property=["']${escaped}["']`,
-      "i"
-    ),
-  ];
-};
+const META_TAG_PATTERN = /<meta\b(?:[^>"']|"[^"]*"|'[^']*')*>/gi;
+const META_ATTRIBUTE_PATTERN = /([^\s"'=<>/]+)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'=<>`]+))/g;
+
+function readMetaContent(
+  html: string,
+  keyAttribute: "property" | "name",
+  key: string
+): string | undefined {
+  const wanted = key.toLowerCase();
+  for (const tag of html.matchAll(META_TAG_PATTERN)) {
+    let matchesKey = false;
+    let content: string | undefined;
+    for (const attribute of tag[0].matchAll(META_ATTRIBUTE_PATTERN)) {
+      const attributeName = attribute[1].toLowerCase();
+      const value = attribute[2] ?? attribute[3] ?? attribute[4] ?? "";
+      if (attributeName === keyAttribute && value.toLowerCase() === wanted) {
+        matchesKey = true;
+      } else if (attributeName === "content") {
+        content = value;
+      }
+    }
+    if (matchesKey && content !== undefined && content.trim()) return content;
+  }
+  return undefined;
+}
 
 /** Reads `<meta property="og:..." content="...">` (either attribute order). */
 function extractMetaContent(html: string, property: string): string | undefined {
-  for (const pattern of META_PROPERTY_PATTERNS(property)) {
-    const match = html.match(pattern);
-    if (match && match[1].trim()) return match[1];
-  }
-  return undefined;
+  return readMetaContent(html, "property", property);
 }
 
 /** Reads `<meta name="description" content="...">` (either attribute order). */
@@ -387,22 +395,7 @@ function extractMetaNameContent(
   html: string,
   name: string
 ): string | undefined {
-  const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const patterns = [
-    new RegExp(
-      `<meta[^>]+name=["']${escaped}["'][^>]+content=["']([\\s\\S]*?)["']`,
-      "i"
-    ),
-    new RegExp(
-      `<meta[^>]+content=["']([\\s\\S]*?)["'][^>]+name=["']${escaped}["']`,
-      "i"
-    ),
-  ];
-  for (const pattern of patterns) {
-    const match = html.match(pattern);
-    if (match && match[1].trim()) return match[1];
-  }
-  return undefined;
+  return readMetaContent(html, "name", name);
 }
 
 const HTML_ENTITIES: Record<string, string> = {
@@ -438,6 +431,15 @@ const REDIRECT_STATUSES = new Set([301, 302, 303, 307, 308]);
 /** Hop budget for manually followed redirects (initial request + 5 hops). */
 const MAX_IMPORT_REDIRECTS = 5;
 
+export function isAllowedImportUrl(url: string): boolean {
+  try {
+    validateUrl(url);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 function validateUrl(url: string): void {
   let parsed: URL;
   try {
@@ -462,6 +464,8 @@ function validateUrl(url: string): void {
 }
 
 function isBlockedHost(host: string): boolean {
+  if (host === "localhost" || host.endsWith(".localhost")) return true;
+  if (isIP(host) === 0) return false;
   return (
     // Loopback
     host === "localhost" ||
@@ -553,9 +557,17 @@ function isReserved(host: string): boolean {
 
 function isIPv4MappedPrivate(host: string): boolean {
   // Matches ::ffff:127.0.0.1, ::ffff:10.x.x.x, etc.
-  const match = host.match(/^::ffff:(\d+\.\d+\.\d+\.\d+)$/i);
-  if (!match) return false;
-  const ipv4 = match[1];
+  const dotted = host.match(/^::ffff:(\d+\.\d+\.\d+\.\d+)$/i);
+  const hex = host.match(/^::ffff:([0-9a-f]{1,4}):([0-9a-f]{1,4})$/i);
+  if (!dotted && !hex) return false;
+  const ipv4 = dotted
+    ? dotted[1]
+    : [
+        parseInt(hex![1], 16) >> 8,
+        parseInt(hex![1], 16) & 255,
+        parseInt(hex![2], 16) >> 8,
+        parseInt(hex![2], 16) & 255,
+      ].join(".");
   return (
     ipv4.startsWith("127.") ||
     ipv4.startsWith("10.") ||

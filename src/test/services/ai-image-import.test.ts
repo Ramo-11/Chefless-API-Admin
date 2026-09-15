@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { parseImageRecipeResponse } from "../../services/ai-recipe-service";
+import { imageImportInstruction, parseImageRecipeResponse } from "../../services/ai-recipe-service";
 
 describe("AI image recipe import", () => {
   it("preserves unknown quantities without inventing values", () => {
@@ -45,6 +45,92 @@ describe("AI image recipe import", () => {
       { order: 2, instruction: "Bake." },
     ]);
     expect(result?.warnings).toEqual(["The final line was cut off."]);
+  });
+
+  it("keeps a recipe whose missing servings, times, description, and tags come back as null", () => {
+    const result = parseImageRecipeResponse(JSON.stringify({
+      outcome: "recipe",
+      recipe: {
+        title: "Guacamole",
+        description: null,
+        servings: null,
+        prepTime: null,
+        cookTime: null,
+        ingredients: [{ name: "Avocados", quantity: 4, unit: "" }],
+        steps: [{ order: 1, instruction: "Halve and pit the avocados." }],
+        dietaryTags: null,
+        cuisineTags: null,
+      },
+      missingFields: ["servings", "prepTime", "cookTime"],
+      warnings: null,
+    }));
+
+    expect(result).not.toBeNull();
+    expect(result?.recipe.title).toBe("Guacamole");
+    expect(result?.recipe.servings).toBeUndefined();
+    expect(result?.recipe.prepTime).toBeUndefined();
+    expect(result?.recipe.cookTime).toBeUndefined();
+    expect(result?.recipe.description).toBeUndefined();
+    expect(result?.recipe.dietaryTags).toEqual([]);
+    expect(result?.recipe.cuisineTags).toEqual([]);
+    expect(result?.missingFields).toEqual(["servings", "prepTime", "cookTime"]);
+    expect(result?.warnings).toEqual([]);
+  });
+
+  it("reads a fenced JSON reply with null optional fields", () => {
+    const body = JSON.stringify({
+      outcome: "recipe",
+      recipe: {
+        title: "Guacamole",
+        servings: null,
+        ingredients: [{ name: "Lime", quantity: 0.5, unit: "" }],
+        steps: [{ order: 1, instruction: "Add the lime juice." }],
+      },
+      missingFields: [],
+      warnings: [],
+    }, null, 2);
+
+    expect(parseImageRecipeResponse(`\`\`\`json\n${body}\n\`\`\``)?.recipe.ingredients[0]).toEqual({
+      name: "Lime",
+      quantity: 0.5,
+      unit: "",
+    });
+  });
+
+  it("keeps the recipe and treats a zero serving count or a negative time as not shown", () => {
+    const result = parseImageRecipeResponse(JSON.stringify({
+      outcome: "recipe",
+      recipe: {
+        title: "Guacamole",
+        servings: 0,
+        prepTime: -5,
+        cookTime: 0,
+        ingredients: [{ name: "Avocados", quantity: 4, unit: "" }],
+        steps: [{ order: 1, instruction: "Mash the avocados." }],
+      },
+      missingFields: ["The serving count is not shown."],
+      warnings: [],
+    }));
+
+    expect(result).not.toBeNull();
+    expect(result?.recipe.servings).toBeUndefined();
+    expect(result?.recipe.prepTime).toBeUndefined();
+    expect(result?.recipe.cookTime).toBe(0);
+  });
+
+  it("asks for review notes in the app language when a supported locale is sent", () => {
+    expect(imageImportInstruction("ar")).toContain("Write every missingFields and warnings entry in Arabic.");
+    expect(imageImportInstruction("tr")).toContain("in Turkish.");
+    expect(imageImportInstruction("es-MX")).toContain("in Spanish.");
+    expect(imageImportInstruction("EN")).toContain("in English.");
+    expect(imageImportInstruction("ar")).toContain("Keep the recipe itself in its source language.");
+  });
+
+  it("keeps the original instruction for old apps and unsupported locales", () => {
+    const original = "Read these recipe images in order and return the structured result.";
+    expect(imageImportInstruction()).toBe(original);
+    expect(imageImportInstruction("fr")).toBe(original);
+    expect(imageImportInstruction("")).toBe(original);
   });
 
   it.each([
