@@ -10,7 +10,7 @@ import mongoose, { Schema, Document, Types } from "mongoose";
  * the day this shipped; calls made before then were never token-tracked and
  * cannot be backfilled.
  */
-export type AiUsageFeature = "generate" | "substitutions" | "format" | "import";
+export type AiUsageFeature = "generate" | "substitutions" | "format" | "import" | "ask";
 
 export interface IAiUsageEvent extends Document {
   _id: Types.ObjectId;
@@ -33,7 +33,7 @@ const aiUsageEventSchema = new Schema<IAiUsageEvent>(
     feature: {
       type: String,
       required: true,
-      enum: ["generate", "substitutions", "format", "import"],
+      enum: ["generate", "substitutions", "format", "import", "ask"],
     },
     modelId: { type: String, required: true },
     inputTokens: { type: Number, required: true, default: 0 },

@@ -71,14 +71,14 @@ function createError(
   return err;
 }
 
-function getClient(): Anthropic {
+export function getClient(): Anthropic {
   if (!env.ANTHROPIC_API_KEY) {
     throw createError("AI Recipe Helper is not configured.", 503, "AI_UNAVAILABLE");
   }
   return new Anthropic({ apiKey: env.ANTHROPIC_API_KEY });
 }
 
-export type AiFeature = "generate" | "substitutions" | "format";
+export type AiFeature = "generate" | "substitutions" | "format" | "ask";
 
 /**
  * Returns today's date as `YYYY-MM-DD` at [offsetMinutes] east of UTC
@@ -118,12 +118,15 @@ export interface AiQuotaReservation {
   feature: AiFeature;
 }
 
+const FEATURE_FIELD_MAP: Record<AiFeature, string> = {
+  generate: "aiGenerateCount",
+  substitutions: "aiSubstitutionsCount",
+  format: "aiFormatCount",
+  ask: "aiAskCount",
+};
+
 function featureFieldFor(feature: AiFeature): string {
-  return feature === "generate"
-    ? "aiGenerateCount"
-    : feature === "substitutions"
-    ? "aiSubstitutionsCount"
-    : "aiFormatCount";
+  return FEATURE_FIELD_MAP[feature];
 }
 
 /**
