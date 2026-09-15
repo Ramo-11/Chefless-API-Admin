@@ -11,6 +11,7 @@ import {
   aiSuggestSubstitutions,
   aiFormatRoughNotes,
 } from "../services/ai-recipe-service";
+import { askAboutRecipe } from "../services/ask-recipe-service";
 
 const router = Router();
 
@@ -52,6 +53,25 @@ const substituteSchema = z.object({
 
 const formatSchema = z.object({
   notes: z.string().min(1).max(12000),
+  timezoneOffsetMinutes: timezoneOffsetField,
+});
+
+const askRecipeSchema = z.object({
+  recipeId: z.string().trim().regex(/^[a-f\d]{24}$/i),
+  question: z.string().trim().min(1).max(500),
+  history: z
+    .array(
+      z.object({
+        question: z.string().trim().min(1).max(500),
+        answer: z.string().trim().min(1).max(4000),
+      })
+    )
+    .max(8)
+    .optional(),
+  servings: z.number().int().min(1).max(100).optional(),
+  stepIndex: z.number().int().min(0).max(500).optional(),
+  measurementSystem: z.enum(["original", "metric", "imperial"]).optional(),
+  locale: z.enum(["en", "ar", "tr", "es"]),
   timezoneOffsetMinutes: timezoneOffsetField,
 });
 
@@ -155,6 +175,22 @@ router.post(
     }
     const usage = await getAiUsage(userId, tz);
     res.status(200).json({ recipe, usage });
+  })
+);
+
+router.post(
+  "/ask-recipe",
+  requireAuth,
+  validate({ body: askRecipeSchema }),
+  asyncHandler(async (req: Request, res: Response) => {
+    const userId = resolveMongoUserId(req);
+    if (!userId) {
+      res.status(404).json({ error: "User not found" });
+      return;
+    }
+    res
+      .status(200)
+      .json(await askAboutRecipe(userId, req.body as z.infer<typeof askRecipeSchema>));
   })
 );
 

@@ -144,6 +144,9 @@ export interface IUser extends Document {
   aiGenerateCount?: number;
   aiSubstitutionsCount?: number;
   aiFormatCount?: number;
+  aiAskCount?: number;
+  aiAskFreeQuestionUsedAt?: Date | null;
+  aiAskFreeQuestionClaimedAt?: Date | null;
   /** Timestamp of the most recent successful AI call. */
   aiLastUsedAt?: Date;
   /**
@@ -330,6 +333,9 @@ const userSchema = new Schema<IUser>(
     aiGenerateCount: { type: Number, default: 0 },
     aiSubstitutionsCount: { type: Number, default: 0 },
     aiFormatCount: { type: Number, default: 0 },
+    aiAskCount: { type: Number, default: 0 },
+    aiAskFreeQuestionUsedAt: { type: Date },
+    aiAskFreeQuestionClaimedAt: { type: Date },
     aiLastUsedAt: { type: Date },
     isSeed: { type: Boolean, default: false },
     seedSource: { type: String, enum: ["themealdb", "curated"] },
