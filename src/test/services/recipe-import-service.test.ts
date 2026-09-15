@@ -3,6 +3,7 @@ import {
   detectSource,
   extractCaption,
   extractFromUrl,
+  isAllowedImportUrl,
 } from "../../services/recipe-import-service";
 
 function mockFetchHtml(html: string, finalUrl: string): void {
@@ -125,6 +126,52 @@ describe("recipe-import-service", () => {
       const html = `<meta property="og:description" content="Yum!">`;
       expect(extractCaption(html, igSource)).toBeNull();
     });
+
+    it("reads content placed before the property attribute", () => {
+      const html = `<meta content="Slow braised lamb shoulder with apricots and cumin." property="og:description">`;
+      expect(
+        extractCaption(html, { type: "website", url: "https://x.test/d" })?.text
+      ).toBe("Slow braised lamb shoulder with apricots and cumin.");
+    });
+
+    it("keeps apostrophes inside double quoted content and reads single quoted attributes", () => {
+      const doubleQuoted = `<meta property="og:description" content="Grandma's lemon cake with a crackly sugar top.">`;
+      expect(
+        extractCaption(doubleQuoted, { type: "website", url: "https://x.test/e" })?.text
+      ).toBe("Grandma's lemon cake with a crackly sugar top.");
+
+      const singleQuoted = `<meta name='description' content='Charred corn salad with feta and lime.'>`;
+      expect(
+        extractCaption(singleQuoted, { type: "website", url: "https://x.test/f" })?.text
+      ).toBe("Charred corn salad with feta and lime.");
+    });
+
+    it("skips a meta tag whose content is blank and uses the next matching tag", () => {
+      const html = `<meta property="og:description" content="   "><meta name="description" content="Toasted sesame noodles with scallions and chili oil.">`;
+      expect(
+        extractCaption(html, { type: "website", url: "https://x.test/g" })?.text
+      ).toBe("Toasted sesame noodles with scallions and chili oil.");
+    });
+
+    it("does not treat a data attribute that ends in property as the key", () => {
+      const html = `<meta data-property="og:description" content="This should never be read as a caption text.">`;
+      expect(
+        extractCaption(html, { type: "website", url: "https://x.test/h" })
+      ).toBeNull();
+    });
+
+    it("returns quickly for a large quote heavy page without any caption so one import cannot stall the server", () => {
+      const filler = Array.from(
+        { length: 6000 },
+        (_, index) => `<meta content="value ${index}" data-a='x'><div class="c" title='t'>"quoted" 'text'</div>`
+      ).join("");
+      const html = `<html><head>${filler}</head><body>${filler}</body></html>`;
+      expect(html.length).toBeGreaterThan(600_000);
+
+      const startedAt = Date.now();
+      expect(extractCaption(html, igSource)).toBeNull();
+      expect(Date.now() - startedAt).toBeLessThan(1000);
+    });
   });
 
   describe("extractFromUrl", () => {
@@ -134,6 +181,11 @@ describe("recipe-import-service", () => {
 
     it("returns INVALID_URL for an SSRF-blocked host", async () => {
       const result = await extractFromUrl("http://127.0.0.1/admin");
+      expect(result).toEqual({ kind: "error", code: "INVALID_URL" });
+    });
+
+    it("returns INVALID_URL for a loopback address written as an IPv4 mapped IPv6 literal", async () => {
+      const result = await extractFromUrl("http://[::ffff:7f00:1]:3102/admin");
       expect(result).toEqual({ kind: "error", code: "INVALID_URL" });
     });
 
@@ -193,6 +245,55 @@ describe("recipe-import-service", () => {
 
       const result = await extractFromUrl(url);
       expect(result).toEqual({ kind: "error", code: "NO_CAPTION" });
+    });
+  });
+
+  describe("isAllowedImportUrl", () => {
+    it("is true for a public https URL", () => {
+      expect(isAllowedImportUrl("https://www.allrecipes.com/recipe/123")).toBe(true);
+    });
+
+    it("is false for a private class C address", () => {
+      expect(isAllowedImportUrl("http://192.168.1.1/x")).toBe(false);
+    });
+
+    it("is false for IPv4 loopback", () => {
+      expect(isAllowedImportUrl("http://127.0.0.1/x")).toBe(false);
+    });
+
+    it("is false for link-local addresses including cloud metadata", () => {
+      expect(isAllowedImportUrl("http://169.254.169.254/latest/meta-data")).toBe(false);
+    });
+
+    it("is false for IPv6 loopback", () => {
+      expect(isAllowedImportUrl("http://[::1]/x")).toBe(false);
+    });
+
+    it("is false for a non http scheme", () => {
+      expect(isAllowedImportUrl("ftp://example.com/file")).toBe(false);
+    });
+
+    it("is false for garbage input", () => {
+      expect(isAllowedImportUrl("definitely not a url")).toBe(false);
+    });
+
+    it("is true for public domains whose names only look like private address prefixes", () => {
+      expect(isAllowedImportUrl("https://fc2.com/recipe")).toBe(true);
+      expect(isAllowedImportUrl("https://fcbarcelona.com/recipe")).toBe(true);
+      expect(isAllowedImportUrl("https://fdgroup.com/recipe")).toBe(true);
+      expect(isAllowedImportUrl("https://10.wiki/page")).toBe(true);
+      expect(isAllowedImportUrl("https://127.example.com/page")).toBe(true);
+    });
+
+    it("is still false for private IPv6 literals and localhost names", () => {
+      expect(isAllowedImportUrl("http://[fd00::1]/x")).toBe(false);
+      expect(isAllowedImportUrl("http://[fe80::1]/x")).toBe(false);
+      expect(isAllowedImportUrl("http://[::ffff:10.0.0.1]/x")).toBe(false);
+      expect(isAllowedImportUrl("http://[::ffff:7f00:1]/x")).toBe(false);
+      expect(isAllowedImportUrl("http://[::ffff:a9fe:a9fe]/latest/meta-data")).toBe(false);
+      expect(isAllowedImportUrl("http://[::ffff:808:808]/x")).toBe(true);
+      expect(isAllowedImportUrl("http://2130706433/x")).toBe(false);
+      expect(isAllowedImportUrl("http://app.localhost/x")).toBe(false);
     });
   });
 });

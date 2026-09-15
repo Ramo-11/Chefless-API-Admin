@@ -43,16 +43,20 @@ const stepSchema = z.object({
   instruction: z.string(),
 });
 
+function absentAsUndefined<T extends z.ZodTypeAny>(schema: T) {
+  return schema.nullish().transform((value) => value ?? undefined);
+}
+
 const recipeJsonSchema = z.object({
   title: z.string().min(1),
-  description: z.string().optional(),
-  prepTime: z.number().nonnegative().optional(),
-  cookTime: z.number().nonnegative().optional(),
-  servings: z.number().positive().optional(),
+  description: absentAsUndefined(z.string()),
+  prepTime: absentAsUndefined(z.number()).transform((value) => (value !== undefined && value >= 0 ? value : undefined)),
+  cookTime: absentAsUndefined(z.number()).transform((value) => (value !== undefined && value >= 0 ? value : undefined)),
+  servings: absentAsUndefined(z.number()).transform((value) => (value !== undefined && value > 0 ? value : undefined)),
   ingredients: z.array(ingredientSchema),
   steps: z.array(stepSchema),
-  dietaryTags: z.array(z.string()).optional(),
-  cuisineTags: z.array(z.string()).optional(),
+  dietaryTags: absentAsUndefined(z.array(z.string())),
+  cuisineTags: absentAsUndefined(z.array(z.string())),
 });
 
 interface ServiceError extends Error {
@@ -525,7 +529,7 @@ Otherwise reply with:
   "warnings": string[]
 }
 
-Images are in page order and may form one recipe across several pages. Preserve the source language. Transcribe visible facts faithfully. Never invent a missing quantity, unit, time, serving count, ingredient, or instruction. For a visible ingredient whose quantity is missing or unreadable, use quantity 0 and unit "" and add a clear warning. If a page appears cut off or a recipe is partial, return the useful content and identify what is missing. Do not guess dietary or cuisine tags unless explicitly stated. A successful recipe must have a usable title or dish name, at least one ingredient, and at least one instruction.`;
+Images are in page order and may form one recipe across several pages. Preserve the source language. Transcribe visible facts faithfully. Never invent a missing quantity, unit, time, serving count, ingredient, or instruction. For a visible ingredient whose quantity is missing or unreadable, use quantity 0 and unit "" and add a clear warning. If a page appears cut off or a recipe is partial, return the useful content and identify what is missing. Write every missingFields and warnings entry as a short plain sentence a home cook understands, such as "The serving count is not shown.", never a field name such as prepTime. Do not guess dietary or cuisine tags unless explicitly stated. A successful recipe must have a usable title or dish name, at least one ingredient, and at least one instruction.`;
 
 const imageRecipeResponseSchema = z.discriminatedUnion("outcome", [
   z.object({
@@ -535,8 +539,8 @@ const imageRecipeResponseSchema = z.discriminatedUnion("outcome", [
   z.object({
     outcome: z.literal("recipe"),
     recipe: recipeJsonSchema,
-    missingFields: z.array(z.string()).default([]),
-    warnings: z.array(z.string()).default([]),
+    missingFields: z.array(z.string()).nullish().transform((value) => value ?? []),
+    warnings: z.array(z.string()).nullish().transform((value) => value ?? []),
   }),
 ]);
 
@@ -581,9 +585,24 @@ export function parseImageRecipeResponse(text: string): ImageRecipeExtraction | 
   };
 }
 
+const REVIEW_NOTE_LANGUAGES: Record<string, string> = {
+  en: "English",
+  ar: "Arabic",
+  tr: "Turkish",
+  es: "Spanish",
+};
+
+export function imageImportInstruction(locale?: string): string {
+  const base = "Read these recipe images in order and return the structured result.";
+  const language = locale ? REVIEW_NOTE_LANGUAGES[locale.trim().slice(0, 2).toLowerCase()] : undefined;
+  if (!language) return base;
+  return `${base} Write every missingFields and warnings entry in ${language}. Keep the recipe itself in its source language.`;
+}
+
 export async function aiExtractRecipeFromImages(
   images: RecipeImageInput[],
-  meta?: AiCallMeta
+  meta?: AiCallMeta,
+  locale?: string
 ): Promise<ImageRecipeExtraction | null> {
   if (images.length < 1 || images.length > 4) {
     throw createError("Choose between 1 and 4 recipe images", 400, "INVALID_IMAGES");
@@ -598,7 +617,7 @@ export async function aiExtractRecipeFromImages(
   }));
   content.push({
     type: "text",
-    text: "Read these recipe images in order and return the structured result.",
+    text: imageImportInstruction(locale),
   });
   const client = getClient();
   const response = await client.messages.create({

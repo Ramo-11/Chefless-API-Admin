@@ -122,7 +122,7 @@ const ingredientSchema = new Schema<IIngredient>(
   {
     name: { type: String, required: true, trim: true },
     quantity: { type: Number, required: true },
-    unit: { type: String, required: true, trim: true },
+    unit: { type: String, default: "", trim: true },
     group: { type: String, trim: true },
   },
   { _id: false }

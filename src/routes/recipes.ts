@@ -1,6 +1,7 @@
 import { Router, Request, Response, NextFunction } from "express";
 import { z } from "zod";
 import mongoose from "mongoose";
+import { isIP } from "node:net";
 import { requireAuth } from "../middleware/auth";
 import { strictLimiter } from "../middleware/rateLimit";
 import { validate } from "../middleware/validate";
@@ -32,6 +33,7 @@ import {
 import {
   extractFromUrl,
   detectSource,
+  isAllowedImportUrl,
   type ImportErrorCode,
 } from "../services/recipe-import-service";
 import {
@@ -610,13 +612,15 @@ function isSafeImportUrl(url: string): boolean {
     if (!["http:", "https:"].includes(parsed.protocol)) return false;
     const host = parsed.hostname.toLowerCase();
     // Block private/internal hosts
+    const isIpv4Literal = isIP(host) === 4;
     if (
       host === "localhost" ||
-      host.startsWith("127.") ||
-      host.startsWith("10.") ||
-      host.startsWith("192.168.") ||
-      host.startsWith("172.") ||
-      host === "0.0.0.0" ||
+      (isIpv4Literal &&
+        (host.startsWith("127.") ||
+          host.startsWith("10.") ||
+          host.startsWith("192.168.") ||
+          host.startsWith("172.") ||
+          host === "0.0.0.0")) ||
       host.endsWith(".local") ||
       host.endsWith(".internal")
     ) {
@@ -689,6 +693,14 @@ const importFromImagesSchema = z.object({
     }
     return images.map((image) => image.data);
   }),
+  sourceUrl: z
+    .string()
+    .url()
+    .max(2048)
+    .refine(isSafeImportUrl, { message: "URL must be a public HTTP/HTTPS address" })
+    .refine(isAllowedImportUrl, { message: "URL must be a public HTTP/HTTPS address" })
+    .optional(),
+  locale: z.string().max(35).optional(),
   timezoneOffsetMinutes: timezoneOffsetField,
 });
 
@@ -842,14 +854,16 @@ router.post(
       res.status(404).json({ error: "User not found" });
       return;
     }
-    const { images, timezoneOffsetMinutes: tz } = req.body as z.infer<typeof importFromImagesSchema>;
+    const { images, sourceUrl, locale, timezoneOffsetMinutes: tz } =
+      req.body as z.infer<typeof importFromImagesSchema>;
     const reservation = await reserveImportQuota(userId, tz);
     let extraction;
     try {
-      extraction = await aiExtractRecipeFromImages(images, {
-        userId,
-        feature: "import",
-      });
+      extraction = await aiExtractRecipeFromImages(
+        images,
+        { userId, feature: "import" },
+        locale
+      );
     } catch (error) {
       await releaseAiQuota(userId, reservation);
       throw error;
@@ -863,15 +877,24 @@ router.post(
       return;
     }
     const usage = await getAiUsage(userId, tz).catch(() => undefined);
-    res.status(200).json({
-      recipe: extraction.recipe,
-      usage,
-      review: {
-        needsReview: true,
-        missingFields: extraction.missingFields,
-        warnings: extraction.warnings,
-      },
-    });
+    const recipe = sourceUrl
+      ? { ...extraction.recipe, sourceUrl }
+      : extraction.recipe;
+    const review = {
+      needsReview: true,
+      missingFields: extraction.missingFields,
+      warnings: extraction.warnings,
+    };
+    if (sourceUrl) {
+      res.status(200).json({
+        recipe,
+        source: { ...detectSource(sourceUrl), importedVia: "ai" as const },
+        usage,
+        review,
+      });
+      return;
+    }
+    res.status(200).json({ recipe, usage, review });
   })
 );
 
