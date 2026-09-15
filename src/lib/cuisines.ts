@@ -269,7 +269,7 @@ export function regionForCuisine(cuisine: string): CuisineRegion | null {
 //
 // Badges are awarded based on the set of unique cuisines a user has posted
 // an "I Cooked It" for. Tiered global badges gamify breadth; regional badges
-// reward completion of a geographic section.
+// reward cooking across a geographic section.
 
 export type BadgeTier = "bronze" | "silver" | "gold" | "legend";
 
@@ -279,10 +279,6 @@ export interface BadgeDefinition {
   subtitle: string;
   emoji: string;
   tier: BadgeTier;
-  /**
-   * Number of unique cuisines required (for global badges). For regional
-   * badges this is derived at evaluation time (all cuisines in the region).
-   */
   threshold?: number;
   /** Populated for regional badges; null for breadth badges. */
   regionId?: string;
@@ -324,20 +320,42 @@ export const GLOBAL_BADGES: readonly BadgeDefinition[] = [
   {
     id: "planet_eater",
     title: "Planet Eater",
-    subtitle: "Every known cuisine — legendary.",
+    subtitle: "Every known cuisine tasted.",
     emoji: "🪐",
     tier: "legend",
     threshold: ALL_KNOWN_CUISINES.size,
   },
 ] as const;
 
+export const REGIONAL_BADGE_CUISINE_TARGET = 5;
+
+export function regionalBadgeThreshold(region: CuisineRegion): number {
+  return Math.min(REGIONAL_BADGE_CUISINE_TARGET, region.cuisines.length);
+}
+
+export function regionUnlockedCount(
+  region: CuisineRegion,
+  uniqueCuisines: ReadonlySet<string>
+): number {
+  return region.cuisines.filter((c) => uniqueCuisines.has(c)).length;
+}
+
+function regionalBadgeSubtitle(region: CuisineRegion): string {
+  const threshold = regionalBadgeThreshold(region);
+  if (threshold >= region.cuisines.length) {
+    return "Cook every cuisine from this region.";
+  }
+  return `Cook ${threshold} different cuisines from this region.`;
+}
+
 export const REGIONAL_BADGES: readonly BadgeDefinition[] = CUISINE_REGIONS.map(
   (region) => ({
     id: `region_${region.id}`,
     title: `${region.name} Master`,
-    subtitle: `Cooked every ${region.name} cuisine.`,
+    subtitle: regionalBadgeSubtitle(region),
     emoji: region.emoji,
     tier: "gold" as const,
+    threshold: regionalBadgeThreshold(region),
     regionId: region.id,
   })
 );
@@ -346,6 +364,10 @@ export const ALL_BADGES: readonly BadgeDefinition[] = [
   ...GLOBAL_BADGES,
   ...REGIONAL_BADGES,
 ];
+
+export const KNOWN_BADGE_IDS: ReadonlySet<string> = new Set(
+  ALL_BADGES.map((b) => b.id)
+);
 
 /**
  * Returns the ids of every badge the user has earned given the set of unique
@@ -364,11 +386,25 @@ export function earnedBadgeIds(
   }
 
   for (const region of CUISINE_REGIONS) {
-    const complete = region.cuisines.every((c) => uniqueCuisines.has(c));
-    if (complete) {
+    const threshold = regionalBadgeThreshold(region);
+    if (threshold > 0 && regionUnlockedCount(region, uniqueCuisines) >= threshold) {
       earned.add(`region_${region.id}`);
     }
   }
 
   return earned;
+}
+
+export function badgeProgress(
+  badge: BadgeDefinition,
+  uniqueCuisines: ReadonlySet<string>
+): number | undefined {
+  if (badge.threshold === undefined) return undefined;
+  const region = badge.regionId
+    ? CUISINE_REGIONS.find((r) => r.id === badge.regionId)
+    : undefined;
+  const count = region
+    ? regionUnlockedCount(region, uniqueCuisines)
+    : uniqueCuisines.size;
+  return Math.min(count, badge.threshold);
 }

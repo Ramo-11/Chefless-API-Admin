@@ -10,6 +10,7 @@ import {
   earnedBadgeIds,
   CUISINE_REGIONS,
 } from "../lib/cuisines";
+import { knownPersistedBadges, recordPassportBadges } from "../lib/passport-badges";
 import {
   notifyRecipeCooked,
   notifyPassportStamp,
@@ -116,7 +117,7 @@ export async function createCookedPost(params: {
   const [recipe, user] = await Promise.all([
     Recipe.findById(recipeId),
     User.findById(userId)
-      .select("fullName profilePicture unlockedCuisines")
+      .select("fullName profilePicture unlockedCuisines passportBadges")
       .lean(),
   ]);
   if (!recipe) throw createError("Recipe not found", 404);
@@ -173,6 +174,7 @@ export async function createCookedPost(params: {
     );
   }
 
+  const persistedBadgeIds = new Set(knownPersistedBadges(user.passportBadges).keys());
   const priorEarnedBadges = earnedBadgeIds(priorSet);
 
   const post = await CookedPost.create({
@@ -218,7 +220,21 @@ export async function createCookedPost(params: {
   const afterEarnedBadges = earnedBadgeIds(priorSet);
   const newBadges: string[] = [];
   for (const badgeId of afterEarnedBadges) {
-    if (!priorEarnedBadges.has(badgeId)) newBadges.push(badgeId);
+    if (!priorEarnedBadges.has(badgeId) && !persistedBadgeIds.has(badgeId)) {
+      newBadges.push(badgeId);
+    }
+  }
+
+  if (newBadges.length > 0) {
+    try {
+      await recordPassportBadges(
+        userOid,
+        newBadges.map((id) => ({ id, earnedAt: post.createdAt }))
+      );
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : "Unknown error";
+      console.error(`recordPassportBadges failed: ${msg}`);
+    }
   }
 
   // ── Notifications (fire-and-forget) ──────────────────────────────────

@@ -97,6 +97,7 @@ export interface IUser extends Document {
   dietaryPreferences?: string[];
   cuisinePreferences?: string[];
   unlockedCuisines?: string[];
+  passportBadges?: { id: string; earnedAt: Date }[];
   /**
    * App display language (ISO 639-1). The cross-device sync source — the
    * device-side SharedPreferences cache is what actually renders the UI. New
@@ -168,6 +169,11 @@ const shippingAddressSchema = new Schema<ShippingAddress>(
     country: { type: String, required: true },
   },
   { _id: false }
+);
+
+const passportBadgeSchema = new Schema(
+  { id: { type: String, required: true }, earnedAt: { type: Date, required: true } },
+  { _id: false, id: false }
 );
 
 const userSchema = new Schema<IUser>(
@@ -254,6 +260,7 @@ const userSchema = new Schema<IUser>(
     dietaryPreferences: [{ type: String }],
     cuisinePreferences: [{ type: String }],
     unlockedCuisines: { type: [String], default: undefined },
+    passportBadges: { type: [passportBadgeSchema], default: undefined },
     language: {
       type: String,
       enum: ["en", "ar", "tr", "es"],

@@ -47,9 +47,11 @@
     "backfill:prod:seed-dietary-tags": "DOTENV_CONFIG_PATH=.env.production tsx src/scripts/backfill-seed-dietary-tags.ts",
     "migrate:prod:create-search-indexes": "DOTENV_CONFIG_PATH=.env.production tsx src/scripts/create-search-indexes.ts",
     "migrate:prod:backfill-unlocked-cuisines": "DOTENV_CONFIG_PATH=.env.production tsx src/scripts/backfill-unlocked-cuisines.ts",
+    "migrate:prod:backfill-passport-badges": "DOTENV_CONFIG_PATH=.env.production tsx src/scripts/backfill-passport-badges.ts",
     "migrate:prod:recompute-trending-scores": "DOTENV_CONFIG_PATH=.env.production tsx src/scripts/recompute-trending-scores.ts",
     "migrate:prod:drop-redundant-indexes": "DOTENV_CONFIG_PATH=.env.production tsx src/scripts/drop-redundant-indexes.ts",
     "migrate:backfill-unlocked-cuisines": "tsx src/scripts/backfill-unlocked-cuisines.ts",
+    "migrate:backfill-passport-badges": "tsx src/scripts/backfill-passport-badges.ts",
     "test": "vitest run",
     "test:watch": "vitest"
   },

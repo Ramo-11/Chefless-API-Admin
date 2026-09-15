@@ -4,10 +4,19 @@ import User from "../models/User";
 import {
   ALL_BADGES,
   BadgeDefinition,
+  badgeProgress,
   canonicalCuisine,
   CUISINE_REGIONS,
   earnedBadgeIds,
 } from "../lib/cuisines";
+import {
+  badgeEarnedDates,
+  CURRENT_BADGE_REQUIREMENTS,
+  EarnedPassportBadge,
+  firstCookedByCuisine,
+  knownPersistedBadges,
+  recordPassportBadges,
+} from "../lib/passport-badges";
 
 interface AppError extends Error {
   statusCode: number;
@@ -50,7 +59,7 @@ export interface PassportBadge {
   tier: string;
   /** True once the user has earned this badge. */
   earned: boolean;
-  /** Total requirement for progress bars (absent for regional badges). */
+  earnedAt?: string;
   threshold?: number;
   /** Current progress value toward this badge (unique cuisines cooked). */
   progress?: number;
@@ -76,9 +85,7 @@ export interface PassportSummary {
 
 /**
  * Build a user's passport summary: unlocked cuisines with sample photos,
- * per-region progress, earned badges, and aggregate counts. This is computed
- * fresh on every call because it's the single source of truth for stamps
- * (stored state would only drift).
+ * per-region progress, earned badges, and aggregate counts.
  */
 export async function getPassportSummary(
   userId: string
@@ -86,7 +93,7 @@ export async function getPassportSummary(
   const userOid = new Types.ObjectId(userId);
 
   const [user, totalPosts, aggregate, latestPost] = await Promise.all([
-    User.findById(userId).select("fullName profilePicture").lean(),
+    User.findById(userId).select("fullName profilePicture passportBadges").lean(),
     CookedPost.countDocuments({ userId: userOid }),
     CookedPost.aggregate<{
       _id: string;
@@ -158,22 +165,44 @@ export async function getPassportSummary(
     0
   );
 
-  const earned = earnedBadgeIds(unlocked);
-  const badges: PassportBadge[] = ALL_BADGES.map((b: BadgeDefinition) => {
-    const progress =
-      b.threshold !== undefined ? Math.min(unlocked.size, b.threshold) : undefined;
-    return {
-      id: b.id,
-      title: b.title,
-      subtitle: b.subtitle,
-      emoji: b.emoji,
-      tier: b.tier,
-      earned: earned.has(b.id),
-      threshold: b.threshold,
-      progress,
-      regionId: b.regionId,
-    };
-  });
+  const firstCooked = firstCookedByCuisine(
+    aggregate.map((row) => ({ tag: row._id, firstCookedAt: row.firstCookedAt }))
+  );
+  const persisted = knownPersistedBadges(user.passportBadges);
+  const liveDates = badgeEarnedDates(CURRENT_BADGE_REQUIREMENTS, firstCooked);
+  const live = earnedBadgeIds(unlocked);
+
+  const missing: EarnedPassportBadge[] = [];
+  for (const id of live) {
+    if (!persisted.has(id)) {
+      missing.push({ id, earnedAt: liveDates.get(id) ?? new Date() });
+    }
+  }
+
+  if (missing.length > 0) {
+    try {
+      await recordPassportBadges(userOid, missing);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : "Unknown error";
+      console.error(`recordPassportBadges self heal failed: ${msg}`);
+    }
+    for (const badge of missing) {
+      persisted.set(badge.id, badge.earnedAt);
+    }
+  }
+
+  const badges: PassportBadge[] = ALL_BADGES.map((b: BadgeDefinition) => ({
+    id: b.id,
+    title: b.title,
+    subtitle: b.subtitle,
+    emoji: b.emoji,
+    tier: b.tier,
+    earned: persisted.has(b.id),
+    earnedAt: persisted.get(b.id)?.toISOString(),
+    threshold: b.threshold,
+    progress: badgeProgress(b, unlocked),
+    regionId: b.regionId,
+  }));
 
   return {
     userId,
