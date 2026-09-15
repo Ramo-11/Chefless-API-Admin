@@ -98,6 +98,27 @@ function sameOptions(
   );
 }
 
+function matchesWantedKey(
+  existing: Record<string, unknown>,
+  wantedKey: Record<string, unknown>
+): boolean {
+  const key = existing.key as Record<string, unknown>;
+  if (key._fts !== "text") return sameKey(key, wantedKey);
+  const weights = (existing.weights ?? {}) as Record<string, unknown>;
+  const wantedText = Object.keys(wantedKey)
+    .filter((k) => wantedKey[k] === "text")
+    .sort();
+  const existingText = Object.keys(weights).sort();
+  if (wantedText.join(",") !== existingText.join(",")) return false;
+  const wantedRest = Object.fromEntries(
+    Object.entries(wantedKey).filter(([, value]) => value !== "text")
+  );
+  const existingRest = Object.fromEntries(
+    Object.entries(key).filter(([k]) => k !== "_fts" && k !== "_ftsx")
+  );
+  return sameKey(existingRest, wantedRest);
+}
+
 async function dropConflictingIndexes(model: Model<unknown>): Promise<string[]> {
   const existing = await model.collection.indexes();
   const wanted = model.schema.indexes();
@@ -107,7 +128,7 @@ async function dropConflictingIndexes(model: Model<unknown>): Promise<string[]> 
     const options = (wantedOptions ?? {}) as Record<string, unknown>;
     for (const idx of existing) {
       if (!idx.name || idx.name === "_id_") continue;
-      if (!sameKey(idx.key as Record<string, unknown>, wantedKey)) continue;
+      if (!matchesWantedKey(idx as Record<string, unknown>, wantedKey)) continue;
       if (sameOptions(idx as Record<string, unknown>, options)) continue;
       await model.collection.dropIndex(idx.name);
       dropped.push(idx.name);
