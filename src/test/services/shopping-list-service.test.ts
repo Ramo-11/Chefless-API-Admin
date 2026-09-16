@@ -553,6 +553,51 @@ describe("shopping-list-service schedule links", () => {
     expect(generated.list.items).toHaveLength(1);
   });
 
+  it("includes a shared recipe from a private Kitchen member in the Kitchen list", async () => {
+    const kitchenId = new Types.ObjectId();
+    const lead = await createUserInKitchen(kitchenId);
+    const author = await createTestUser({ isPublic: false });
+    await User.updateOne({ _id: author._id }, { $set: { kitchenId } });
+    const recipe = await createTestRecipe({ authorId: author._id });
+    await ScheduleEntry.create({
+      kitchenId,
+      userId: author._id,
+      date: new Date("2026-06-12T00:00:00.000Z"),
+      mealSlot: "dinner",
+      recipeId: recipe._id,
+      status: "confirmed",
+    });
+    const generated = await generateFromSchedule(lead._id.toString(), {
+      startDate: new Date("2026-06-10T00:00:00.000Z"),
+      endDate: new Date("2026-06-15T23:59:59.000Z"),
+    });
+    expect(generated.list.kitchenId?.toString()).toBe(kitchenId.toString());
+    expect(generated.list.items).toHaveLength(1);
+    expect(generated.meta.skippedPrivateCount).toBe(0);
+  });
+
+  it("skips a shared recipe from a private author outside the Kitchen and counts it", async () => {
+    const kitchenId = new Types.ObjectId();
+    const lead = await createUserInKitchen(kitchenId);
+    const outsider = await createTestUser({ isPublic: false });
+    const recipe = await createTestRecipe({ authorId: outsider._id });
+    await ScheduleEntry.create({
+      kitchenId,
+      userId: lead._id,
+      date: new Date("2026-06-12T00:00:00.000Z"),
+      mealSlot: "dinner",
+      recipeId: recipe._id,
+      status: "confirmed",
+    });
+    const generated = await generateFromSchedule(lead._id.toString(), {
+      startDate: new Date("2026-06-10T00:00:00.000Z"),
+      endDate: new Date("2026-06-15T23:59:59.000Z"),
+      name: "Outsider week",
+    });
+    expect(generated.list.items).toHaveLength(0);
+    expect(generated.meta.skippedPrivateCount).toBe(1);
+  });
+
   it("keeps checked generated items excluded after clearing completed", async () => {
     const kitchenId = new Types.ObjectId();
     const user = await createUserInKitchen(kitchenId);

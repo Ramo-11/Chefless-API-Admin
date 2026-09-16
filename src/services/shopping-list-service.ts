@@ -819,7 +819,8 @@ async function buildScheduleItems(
   const viewableRecipes = scope.kitchenId
     ? recipes.filter((recipe) => {
         const author = authorMap.get(recipe.authorId.toString());
-        return !recipe.isPrivate && !recipe.isHidden && Boolean(author?.isPublic) && !author?.isBanned;
+        if (!author || recipe.isPrivate || recipe.isHidden || author.isBanned) return false;
+        return Boolean(author.isPublic) || author.kitchenId?.toString() === scope.kitchenId?.toString();
       })
     : (
         await Promise.all(
