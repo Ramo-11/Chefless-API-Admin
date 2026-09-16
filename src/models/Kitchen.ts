@@ -106,6 +106,7 @@ export interface IKitchen extends Document {
    * until the first announcement.
    */
   foodReadyNotifiedAt?: Date;
+  scheduleRevision?: number;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -245,6 +246,7 @@ const kitchenSchema = new Schema<IKitchen>(
     foodReadyNotifiedAt: {
       type: Date,
     },
+    scheduleRevision: { type: Number, default: 0 },
   },
   {
     timestamps: true,

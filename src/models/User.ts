@@ -160,6 +160,7 @@ export interface IUser extends Document {
   seedSource?: "themealdb" | "curated";
   /** Canonical cuisine the seed user belongs to (e.g., "Lebanese"). */
   seedCuisine?: string;
+  scheduleRevision?: number;
 }
 
 const shippingAddressSchema = new Schema<ShippingAddress>(
@@ -340,6 +341,7 @@ const userSchema = new Schema<IUser>(
     isSeed: { type: Boolean, default: false },
     seedSource: { type: String, enum: ["themealdb", "curated"] },
     seedCuisine: { type: String, index: true },
+    scheduleRevision: { type: Number, default: 0 },
   },
   {
     timestamps: true,
