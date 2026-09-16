@@ -3,7 +3,7 @@ import ScheduleEntry, {
   IScheduleEntry,
   RsvpStatus,
 } from "../models/ScheduleEntry";
-import Kitchen from "../models/Kitchen";
+import Kitchen, { IKitchen } from "../models/Kitchen";
 import Recipe from "../models/Recipe";
 import User, { IUser } from "../models/User";
 import {
@@ -17,11 +17,17 @@ import { canViewRecipe } from "./visibility-service";
 
 interface ServiceError extends Error {
   statusCode: number;
+  code?: string;
 }
 
-function createError(message: string, statusCode: number): ServiceError {
+function createError(
+  message: string,
+  statusCode: number,
+  code?: string
+): ServiceError {
   const error = new Error(message) as ServiceError;
   error.statusCode = statusCode;
+  error.code = code;
   return error;
 }
 
@@ -41,14 +47,25 @@ function utcMondayOf(d: Date): Date {
   return stripTime(m);
 }
 
+function localCalendarToday(offsetMinutes?: number): Date {
+  if (offsetMinutes == null) {
+    return stripTime(new Date());
+  }
+  return stripTime(new Date(Date.now() + offsetMinutes * 60000));
+}
+
 /**
- * Free-tier schedulable window: a rolling 5-day band of [today - 2, today + 2]
- * UTC, inclusive. Two days behind lets users still log/edit recent meals;
- * two days ahead covers the imminent planning horizon. Anything outside
- * this band requires premium.
+ * Free-tier schedulable window: a rolling 5-day band of [today - 2, today + 2],
+ * inclusive, computed on the person's own calendar day when we know their
+ * offset and falling back to UTC when we have never recorded one. Two days
+ * behind lets users still log/edit recent meals; two days ahead covers the
+ * imminent planning horizon. Anything outside this band requires premium.
  */
-function freeTierScheduleWindowUtc(): { min: Date; max: Date } {
-  const today = stripTime(new Date());
+function freeTierScheduleWindow(offsetMinutes?: number): {
+  min: Date;
+  max: Date;
+} {
+  const today = localCalendarToday(offsetMinutes);
   const min = new Date(today);
   min.setUTCDate(min.getUTCDate() - 2);
   const max = new Date(today);
@@ -56,8 +73,11 @@ function freeTierScheduleWindowUtc(): { min: Date; max: Date } {
   return { min, max };
 }
 
-function isBeyondFreeTierScheduleLimit(date: Date): boolean {
-  const { min, max } = freeTierScheduleWindowUtc();
+function isBeyondFreeTierScheduleLimit(
+  date: Date,
+  offsetMinutes?: number
+): boolean {
+  const { min, max } = freeTierScheduleWindow(offsetMinutes);
   const d = stripTime(date);
   return d > max || d < min;
 }
@@ -77,12 +97,13 @@ const FREE_TIER_SCHEDULE_LIMIT_MESSAGE =
  */
 export function redactLockedEntriesForFree(
   entries: IScheduleEntry[],
-  isPremium: boolean
+  isPremium: boolean,
+  offsetMinutes?: number
 ): IScheduleEntry[] {
   if (isPremium) {
     return entries;
   }
-  const { max } = freeTierScheduleWindowUtc();
+  const { max } = freeTierScheduleWindow(offsetMinutes);
   for (const entry of entries) {
     if (stripTime(entry.date) <= max) {
       continue;
@@ -161,7 +182,7 @@ export async function addEntry(
   data: AddEntryData
 ): Promise<IScheduleEntry> {
   const user = await User.findById(userId)
-    .select("kitchenId isPremium premiumExpiresAt")
+    .select("kitchenId isPremium premiumExpiresAt timezoneOffsetMinutes")
     .lean();
   if (!user) {
     throw createError("User not found", 404);
@@ -169,7 +190,10 @@ export async function addEntry(
 
   const entryDate = stripTime(data.date);
 
-  if (!hasActivePremium(user) && isBeyondFreeTierScheduleLimit(entryDate)) {
+  if (
+    !hasActivePremium(user) &&
+    isBeyondFreeTierScheduleLimit(entryDate, user.timezoneOffsetMinutes)
+  ) {
     throw createError(
       FREE_TIER_SCHEDULE_LIMIT_MESSAGE,
       403
@@ -372,7 +396,7 @@ export async function planLeftovers(
   }
 
   const user = await User.findById(userId)
-    .select("kitchenId isPremium premiumExpiresAt")
+    .select("kitchenId isPremium premiumExpiresAt timezoneOffsetMinutes")
     .lean();
   if (!user) {
     throw createError("User not found", 404);
@@ -411,7 +435,10 @@ export async function planLeftovers(
 
   const entryDate = stripTime(data.date);
 
-  if (!hasActivePremium(user) && isBeyondFreeTierScheduleLimit(entryDate)) {
+  if (
+    !hasActivePremium(user) &&
+    isBeyondFreeTierScheduleLimit(entryDate, user.timezoneOffsetMinutes)
+  ) {
     throw createError(FREE_TIER_SCHEDULE_LIMIT_MESSAGE, 403);
   }
 
@@ -624,7 +651,7 @@ export async function updateEntry(
   }
 
   const user = await User.findById(userId)
-    .select("kitchenId isPremium premiumExpiresAt")
+    .select("kitchenId isPremium premiumExpiresAt timezoneOffsetMinutes")
     .lean();
   if (!user) {
     throw createError("User not found", 404);
@@ -665,7 +692,10 @@ export async function updateEntry(
 
   if (updates.date !== undefined) {
     const newDate = stripTime(updates.date);
-    if (!hasActivePremium(user) && isBeyondFreeTierScheduleLimit(newDate)) {
+    if (
+      !hasActivePremium(user) &&
+      isBeyondFreeTierScheduleLimit(newDate, user.timezoneOffsetMinutes)
+    ) {
       throw createError(
         FREE_TIER_SCHEDULE_LIMIT_MESSAGE,
         403
@@ -952,7 +982,7 @@ export async function importToKitchen(
   endDate: Date
 ): Promise<number> {
   const user = await User.findById(userId)
-    .select("kitchenId isPremium premiumExpiresAt")
+    .select("kitchenId isPremium premiumExpiresAt timezoneOffsetMinutes")
     .lean();
   if (!user) {
     throw createError("User not found", 404);
@@ -974,7 +1004,8 @@ export async function importToKitchen(
   // Reject if either end of the range falls outside the rolling 5-day band.
   if (
     !hasActivePremium(user) &&
-    (isBeyondFreeTierScheduleLimit(end) || isBeyondFreeTierScheduleLimit(start))
+    (isBeyondFreeTierScheduleLimit(end, user.timezoneOffsetMinutes) ||
+      isBeyondFreeTierScheduleLimit(start, user.timezoneOffsetMinutes))
   ) {
     throw createError(
       FREE_TIER_SCHEDULE_LIMIT_MESSAGE,
@@ -1110,4 +1141,498 @@ export async function setEntryRsvp(
     throw createError("Schedule entry not found", 404);
   }
   return updated;
+}
+
+function dateKey(date: Date): string {
+  const d = stripTime(date);
+  const year = d.getUTCFullYear();
+  const month = String(d.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(d.getUTCDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+function addDays(date: Date, days: number): Date {
+  const d = new Date(date);
+  d.setUTCDate(d.getUTCDate() + days);
+  return d;
+}
+
+function scheduleScopeFilter(
+  userId: string,
+  kitchenId: Types.ObjectId | null
+): Record<string, unknown> {
+  return kitchenId
+    ? { kitchenId }
+    : { userId: new Types.ObjectId(userId), kitchenId: { $exists: false } };
+}
+
+export interface CopyWeekSkipCounts {
+  filledSlots: number;
+  unavailableRecipes: number;
+  leftoversWithoutSource: number;
+}
+
+export interface CopiedEntryPlan {
+  entries: Record<string, unknown>[];
+  skipped: CopyWeekSkipCounts;
+  lockedDates: number;
+  sourceEntryIdByNewId: Map<string, Types.ObjectId>;
+}
+
+export interface BuildCopiedEntriesInput {
+  sourceEntries: IScheduleEntry[];
+  targetStart: Date;
+  sourceStart: Date;
+  targetEntries: IScheduleEntry[];
+  actingUserId: string;
+  kitchenId: Types.ObjectId | null;
+  status: "confirmed" | "suggested";
+  skipFilledSlots: boolean;
+  isPremium: boolean;
+  timezoneOffsetMinutes?: number;
+}
+
+export async function buildCopiedEntries(
+  input: BuildCopiedEntriesInput
+): Promise<CopiedEntryPlan> {
+  const {
+    sourceEntries,
+    targetStart,
+    sourceStart,
+    targetEntries,
+    actingUserId,
+    kitchenId,
+    status,
+    skipFilledSlots,
+    isPremium,
+    timezoneOffsetMinutes,
+  } = input;
+
+  const shift = Math.round(
+    (stripTime(targetStart).getTime() - stripTime(sourceStart).getTime()) /
+      86400000
+  );
+
+  const sorted = [...sourceEntries].sort((a, b) => {
+    const dateDiff =
+      stripTime(a.date).getTime() - stripTime(b.date).getTime();
+    if (dateDiff !== 0) {
+      return dateDiff;
+    }
+    const slotDiff = a.mealSlot.localeCompare(b.mealSlot);
+    if (slotDiff !== 0) {
+      return slotDiff;
+    }
+    return a.createdAt.getTime() - b.createdAt.getTime();
+  });
+
+  const recipeIds = [
+    ...new Set(
+      sorted
+        .filter((entry) => entry.recipeId)
+        .map((entry) => entry.recipeId!.toString())
+    ),
+  ];
+
+  const recipeSnapshots = new Map<string, Record<string, unknown>>();
+  const unavailableRecipeIds = new Set<string>();
+
+  for (const recipeId of recipeIds) {
+    try {
+      const fields: Record<string, unknown> = {};
+      await populateRecipeFields(
+        fields,
+        recipeId,
+        actingUserId,
+        Boolean(kitchenId)
+      );
+      recipeSnapshots.set(recipeId, fields);
+    } catch {
+      unavailableRecipeIds.add(recipeId);
+    }
+  }
+
+  const occupied = new Set(
+    targetEntries.map(
+      (entry) => `${dateKey(entry.date)}|${entry.mealSlot.toLowerCase()}`
+    )
+  );
+
+  const skipped: CopyWeekSkipCounts = {
+    filledSlots: 0,
+    unavailableRecipes: 0,
+    leftoversWithoutSource: 0,
+  };
+
+  const actingUserObjectId = new Types.ObjectId(actingUserId);
+
+  function buildDocument(
+    entry: IScheduleEntry,
+    targetDate: Date,
+    recipeSnapshot: Record<string, unknown> | undefined
+  ): Record<string, unknown> {
+    const doc: Record<string, unknown> = {
+      _id: new Types.ObjectId(),
+      userId: actingUserObjectId,
+      date: targetDate,
+      mealSlot: entry.mealSlot,
+      status,
+    };
+
+    if (kitchenId) {
+      doc.kitchenId = kitchenId;
+      doc.suggestedBy = actingUserObjectId;
+    }
+
+    if (status === "confirmed") {
+      doc.confirmedBy = actingUserObjectId;
+    }
+
+    if (recipeSnapshot) {
+      doc.recipeId = recipeSnapshot.recipeId;
+      doc.recipeTitle = recipeSnapshot.recipeTitle;
+      doc.recipePhoto = recipeSnapshot.recipePhoto;
+      doc.recipeAuthorId = recipeSnapshot.recipeAuthorId;
+      doc.recipeAuthorName = recipeSnapshot.recipeAuthorName;
+    }
+
+    if (entry.freeformText) {
+      doc.freeformText = entry.freeformText;
+    }
+
+    if (entry.scheduledTime) {
+      doc.scheduledTime = entry.scheduledTime;
+    }
+
+    const prepTime = entry.prepTime ?? recipeSnapshot?.prepTime;
+    if (prepTime != null) {
+      doc.prepTime = prepTime;
+    }
+
+    const servings = entry.servings ?? recipeSnapshot?.servings;
+    if (servings != null) {
+      doc.servings = servings;
+    }
+
+    return doc;
+  }
+
+  const entries: Record<string, unknown>[] = [];
+  const newIdBySourceId = new Map<string, Types.ObjectId>();
+  const sourceEntryIdByNewId = new Map<string, Types.ObjectId>();
+
+  for (const entry of sorted) {
+    if (entry.leftoverOfEntryId) {
+      continue;
+    }
+
+    const targetDate = addDays(stripTime(entry.date), shift);
+    const key = `${dateKey(targetDate)}|${entry.mealSlot.toLowerCase()}`;
+
+    if (skipFilledSlots && occupied.has(key)) {
+      skipped.filledSlots += 1;
+      continue;
+    }
+
+    const recipeKey = entry.recipeId?.toString();
+    if (recipeKey && unavailableRecipeIds.has(recipeKey)) {
+      skipped.unavailableRecipes += 1;
+      continue;
+    }
+
+    const doc = buildDocument(
+      entry,
+      targetDate,
+      recipeKey ? recipeSnapshots.get(recipeKey) : undefined
+    );
+    entries.push(doc);
+    newIdBySourceId.set(entry._id.toString(), doc._id as Types.ObjectId);
+    sourceEntryIdByNewId.set((doc._id as Types.ObjectId).toString(), entry._id);
+  }
+
+  for (const entry of sorted) {
+    if (!entry.leftoverOfEntryId) {
+      continue;
+    }
+
+    const targetDate = addDays(stripTime(entry.date), shift);
+    const key = `${dateKey(targetDate)}|${entry.mealSlot.toLowerCase()}`;
+
+    if (skipFilledSlots && occupied.has(key)) {
+      skipped.filledSlots += 1;
+      continue;
+    }
+
+    const recipeKey = entry.recipeId?.toString();
+    if (recipeKey && unavailableRecipeIds.has(recipeKey)) {
+      skipped.unavailableRecipes += 1;
+      continue;
+    }
+
+    const newSourceId = newIdBySourceId.get(
+      entry.leftoverOfEntryId.toString()
+    );
+    if (!newSourceId) {
+      skipped.leftoversWithoutSource += 1;
+      continue;
+    }
+
+    const doc = buildDocument(
+      entry,
+      targetDate,
+      recipeKey ? recipeSnapshots.get(recipeKey) : undefined
+    );
+    doc.leftoverOfEntryId = newSourceId;
+    entries.push(doc);
+    sourceEntryIdByNewId.set((doc._id as Types.ObjectId).toString(), entry._id);
+  }
+
+  const lockedDates = isPremium
+    ? 0
+    : new Set(
+        entries
+          .filter((doc) =>
+            isBeyondFreeTierScheduleLimit(
+              doc.date as Date,
+              timezoneOffsetMinutes
+            )
+          )
+          .map((doc) => dateKey(doc.date as Date))
+      ).size;
+
+  return { entries, skipped, lockedDates, sourceEntryIdByNewId };
+}
+
+export async function copyWeek(
+  userId: string,
+  data: {
+    sourceStart: Date;
+    targetStart: Date;
+    skipFilledSlots: boolean;
+    dryRun: boolean;
+  }
+): Promise<{
+  created: unknown[];
+  skipped: CopyWeekSkipCounts;
+  lockedDates: number;
+  sourceCount: number;
+}> {
+  const user = await User.findById(userId)
+    .select("kitchenId isPremium premiumExpiresAt timezoneOffsetMinutes")
+    .lean();
+  if (!user) {
+    throw createError("User not found", 404);
+  }
+
+  const sourceStart = stripTime(data.sourceStart);
+  const targetStart = stripTime(data.targetStart);
+  const shift = Math.round(
+    (targetStart.getTime() - sourceStart.getTime()) / 86400000
+  );
+
+  if (Math.abs(shift) < 7) {
+    throw createError(
+      "Pick a week that does not overlap the week you are copying into.",
+      400
+    );
+  }
+
+  const kitchenId = user.kitchenId ?? null;
+  let status: "confirmed" | "suggested" = "confirmed";
+
+  if (kitchenId) {
+    const kitchen = await Kitchen.findById(kitchenId);
+    if (!kitchen) {
+      throw createError("Kitchen not found", 404);
+    }
+
+    const canEdit = hasScheduleEditPermission(userId, kitchen);
+    status =
+      kitchen.scheduleAddPolicy === "all" || canEdit
+        ? "confirmed"
+        : "suggested";
+
+    if (status === "suggested" && kitchen.allowMemberSuggestions === false) {
+      throw createError(
+        "The kitchen lead has turned off member suggestions.",
+        403
+      );
+    }
+  }
+
+  const sourceEnd = addDays(sourceStart, 6);
+  const sourceEntries = await ScheduleEntry.find({
+    ...scheduleScopeFilter(userId, kitchenId),
+    status: "confirmed",
+    date: { $gte: sourceStart, $lte: sourceEnd },
+  }).lean<IScheduleEntry[]>();
+
+  const sourceCount = sourceEntries.length;
+
+  if (sourceCount > 500) {
+    throw createError("That week has too many meals to copy at once.", 400);
+  }
+
+  const targetEnd = addDays(targetStart, 6);
+  const targetEntries = data.skipFilledSlots
+    ? await ScheduleEntry.find({
+        ...scheduleScopeFilter(userId, kitchenId),
+        date: { $gte: targetStart, $lte: targetEnd },
+      }).lean<IScheduleEntry[]>()
+    : [];
+
+  const plan = await buildCopiedEntries({
+    sourceEntries,
+    targetStart,
+    sourceStart,
+    targetEntries,
+    actingUserId: userId,
+    kitchenId,
+    status,
+    skipFilledSlots: data.skipFilledSlots,
+    isPremium: hasActivePremium(user),
+    timezoneOffsetMinutes: user.timezoneOffsetMinutes,
+  });
+
+  if (data.dryRun) {
+    const sourceEntriesById = new Map(
+      sourceEntries.map((entry) => [entry._id.toString(), entry])
+    );
+
+    const created = plan.entries.map((doc) => {
+      const rest: Record<string, unknown> = { ...doc };
+      const newId = (doc._id as Types.ObjectId).toString();
+      delete rest._id;
+      if (rest.leftoverOfEntryId) {
+        const sourceEntryId = plan.sourceEntryIdByNewId.get(newId);
+        const sourceEntry = sourceEntryId
+          ? sourceEntriesById.get(sourceEntryId.toString())
+          : undefined;
+        if (sourceEntry?.leftoverOfEntryId) {
+          rest.leftoverOfEntryId = sourceEntry.leftoverOfEntryId;
+        } else {
+          delete rest.leftoverOfEntryId;
+        }
+      }
+      return rest;
+    });
+
+    return {
+      created,
+      skipped: plan.skipped,
+      lockedDates: plan.lockedDates,
+      sourceCount,
+    };
+  }
+
+  if (plan.lockedDates > 0) {
+    throw createError(
+      FREE_TIER_SCHEDULE_LIMIT_MESSAGE,
+      403,
+      "PREMIUM_REQUIRED"
+    );
+  }
+
+  if (plan.entries.length === 0) {
+    return { created: [], skipped: plan.skipped, lockedDates: 0, sourceCount };
+  }
+
+  const inserted = await ScheduleEntry.insertMany(plan.entries);
+  await bumpScheduleRevision(userId, kitchenId);
+
+  if (status === "suggested") {
+    notifyScheduleImportSuggestions(
+      userId,
+      kitchenId!.toString(),
+      inserted.length
+    ).catch((err: unknown) => {
+      const msg = err instanceof Error ? err.message : "Unknown error";
+      console.error(
+        `Failed to send schedule_suggestion import notification: ${msg}`
+      );
+    });
+  }
+
+  return {
+    created: inserted,
+    skipped: plan.skipped,
+    lockedDates: 0,
+    sourceCount,
+  };
+}
+
+export async function batchDeleteEntries(
+  userId: string,
+  ids: string[]
+): Promise<{ deleted: number }> {
+  const user = await User.findById(userId).select("kitchenId").lean();
+  if (!user) {
+    throw createError("User not found", 404);
+  }
+
+  const entries = await ScheduleEntry.find({
+    _id: { $in: ids },
+  }).lean<IScheduleEntry[]>();
+
+  const kitchenCache = new Map<string, IKitchen | null>();
+  const permittedIds: Types.ObjectId[] = [];
+  const touchedKitchenIds = new Set<string>();
+  let touchedPersonal = false;
+
+  for (const entry of entries) {
+    if (!entry.kitchenId) {
+      if (!entry.userId.equals(userId)) {
+        throw createError("You do not own this schedule entry", 403);
+      }
+      permittedIds.push(entry._id);
+      touchedPersonal = true;
+      continue;
+    }
+
+    if (!user.kitchenId || !user.kitchenId.equals(entry.kitchenId)) {
+      throw createError("You are not a member of this kitchen", 403);
+    }
+
+    const kitchenKey = entry.kitchenId.toString();
+    if (!kitchenCache.has(kitchenKey)) {
+      kitchenCache.set(kitchenKey, await Kitchen.findById(entry.kitchenId));
+    }
+    const kitchen = kitchenCache.get(kitchenKey) ?? null;
+    if (!kitchen) {
+      throw createError("Kitchen not found", 404);
+    }
+
+    const canEdit = hasScheduleEditPermission(userId, kitchen);
+
+    if (entry.status === "confirmed" && !canEdit) {
+      throw createError(
+        "Only the kitchen lead or editors can delete confirmed entries",
+        403
+      );
+    }
+
+    if (
+      entry.status === "suggested" &&
+      !entry.suggestedBy?.equals(userId) &&
+      !canEdit
+    ) {
+      throw createError("You can only delete your own suggestions", 403);
+    }
+
+    permittedIds.push(entry._id);
+    touchedKitchenIds.add(kitchenKey);
+  }
+
+  const result = await ScheduleEntry.deleteMany({
+    _id: { $in: permittedIds },
+  });
+
+  for (const kitchenId of touchedKitchenIds) {
+    await bumpScheduleRevision(userId, kitchenId);
+  }
+  if (touchedPersonal) {
+    await bumpScheduleRevision(userId, null);
+  }
+
+  return { deleted: result.deletedCount ?? 0 };
 }
