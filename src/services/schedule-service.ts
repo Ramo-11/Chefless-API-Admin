@@ -370,6 +370,23 @@ async function populateRecipeFields(
   entryFields.servings = recipe.servings ?? 1;
 }
 
+export async function canScheduleRecipe(
+  recipeId: string,
+  actingUserId: string,
+  requireShared: boolean
+): Promise<boolean> {
+  try {
+    await populateRecipeFields({}, recipeId, actingUserId, requireShared);
+    return true;
+  } catch (err) {
+    const statusCode = (err as ServiceError).statusCode;
+    if (typeof statusCode === "number" && statusCode >= 400 && statusCode <= 499) {
+      return false;
+    }
+    throw err;
+  }
+}
+
 export async function planLeftovers(
   userId: string,
   sourceEntryId: string,

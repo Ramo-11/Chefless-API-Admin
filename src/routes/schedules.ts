@@ -23,6 +23,7 @@ import {
   markEntryCooked,
   clearEntryCooked,
 } from "../services/rating-service";
+import { getMealIdeas, MEAL_IDEAS_MAX_LIMIT } from "../services/meal-ideas-service";
 import { hasActivePremium } from "../lib/premium";
 import { normalizeOffset, offsetFromQuery } from "../lib/timezone";
 
@@ -220,6 +221,38 @@ router.get(
     );
 
     res.status(200).json({ suggestions });
+  })
+);
+
+const mealIdeasQuerySchema = z.object({
+  date: dateString,
+  slot: z.string().trim().min(1).max(50).optional(),
+  limit: z.coerce
+    .number()
+    .int()
+    .min(1)
+    .max(MEAL_IDEAS_MAX_LIMIT)
+    .default(MEAL_IDEAS_MAX_LIMIT),
+});
+
+router.get(
+  "/ideas",
+  requireAuth,
+  validate({ query: mealIdeasQuerySchema }),
+  asyncHandler(async (req: Request, res: Response) => {
+    const userId = req.user?.userId;
+    if (!userId) {
+      res.status(404).json({ error: "User not found" });
+      return;
+    }
+
+    const { date, slot, limit } = req.query as unknown as z.infer<
+      typeof mealIdeasQuerySchema
+    >;
+
+    const result = await getMealIdeas(userId, { date, slot, limit });
+
+    res.status(200).json(result);
   })
 );
 
