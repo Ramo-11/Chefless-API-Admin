@@ -44,6 +44,7 @@ export interface IScheduleEntry extends Document {
    * resurfaces. Null = never skipped.
    */
   ratingPromptSkippedAt?: Date | null;
+  leftoverOfEntryId?: Types.ObjectId;
   createdAt: Date;
   updatedAt: Date;
   /**
@@ -53,6 +54,8 @@ export interface IScheduleEntry extends Document {
    * "locked" teaser. See `redactLockedEntriesForFree` in schedule-service.
    */
   locked?: boolean;
+  leftoverOfDate?: Date;
+  leftoverCount?: number;
 }
 
 const scheduleEntrySchema = new Schema<IScheduleEntry>(
@@ -148,6 +151,10 @@ const scheduleEntrySchema = new Schema<IScheduleEntry>(
       type: Date,
       default: null,
     },
+    leftoverOfEntryId: {
+      type: Schema.Types.ObjectId,
+      ref: "ScheduleEntry",
+    },
   },
   {
     timestamps: true,
@@ -171,6 +178,8 @@ scheduleEntrySchema.index({ userId: 1, date: 1 });
 scheduleEntrySchema.index({ suggestedBy: 1 });
 
 scheduleEntrySchema.index({ recipeId: 1 });
+
+scheduleEntrySchema.index({ leftoverOfEntryId: 1 });
 
 const ScheduleEntry =
   (mongoose.models.ScheduleEntry as mongoose.Model<IScheduleEntry>) ||

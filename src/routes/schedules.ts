@@ -15,6 +15,7 @@ import {
   importToKitchen,
   redactLockedEntriesForFree,
   setEntryRsvp,
+  planLeftovers,
 } from "../services/schedule-service";
 import {
   markEntryCooked,
@@ -134,6 +135,17 @@ const rsvpSchema = z.object({
   status: z.enum(["going", "not_going"]).nullable(),
 });
 
+const planLeftoversSchema = z.object({
+  date: dateString,
+  mealSlot: z.string().min(1).max(50).trim(),
+  cookExtra: z.boolean(),
+  extraServings: z.number().int().min(1).max(100).optional(),
+});
+
+const deleteEntryQuerySchema = z.object({
+  withLeftovers: z.union([z.literal("true"), z.literal("false")]).optional(),
+});
+
 // --- Routes ---
 
 // GET /api/schedule/suggestions — Get pending suggestions (must be before /:id)
@@ -250,6 +262,25 @@ router.post(
   })
 );
 
+router.post(
+  "/:id/leftovers",
+  requireAuth,
+  validate({ params: objectIdParam, body: planLeftoversSchema }),
+  asyncHandler(async (req: Request, res: Response) => {
+    const userId = req.user?.userId;
+    if (!userId) {
+      res.status(404).json({ error: "User not found" });
+      return;
+    }
+
+    const { id } = req.params as z.infer<typeof objectIdParam>;
+    const data = req.body as z.infer<typeof planLeftoversSchema>;
+    const { leftover, source } = await planLeftovers(userId, id, data);
+
+    res.status(201).json({ leftover, source });
+  })
+);
+
 // GET /api/schedule — Get entries for date range
 router.get(
   "/",
@@ -342,7 +373,7 @@ router.patch(
 router.delete(
   "/:id",
   requireAuth,
-  validate({ params: objectIdParam }),
+  validate({ params: objectIdParam, query: deleteEntryQuerySchema }),
   asyncHandler(async (req: Request, res: Response) => {
     const firebaseUid = req.user!.uid;
     const currentUser = await User.findOne({ firebaseUid })
@@ -355,9 +386,16 @@ router.delete(
     }
 
     const { id } = req.params as z.infer<typeof objectIdParam>;
-    await deleteEntry(currentUser._id.toString(), id);
+    const { withLeftovers } = req.query as unknown as z.infer<
+      typeof deleteEntryQuerySchema
+    >;
+    const { removedLeftovers } = await deleteEntry(
+      currentUser._id.toString(),
+      id,
+      { withLeftovers: withLeftovers === "true" }
+    );
 
-    res.status(200).json({ success: true });
+    res.status(200).json({ success: true, removedLeftovers });
   })
 );
 

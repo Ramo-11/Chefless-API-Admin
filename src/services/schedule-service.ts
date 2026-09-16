@@ -99,6 +99,9 @@ export function redactLockedEntriesForFree(
     entry.confirmedBy = undefined;
     entry.cookedAt = undefined;
     entry.locked = true;
+    entry.leftoverOfEntryId = undefined;
+    entry.leftoverOfDate = undefined;
+    entry.leftoverCount = undefined;
   }
   return entries;
 }
@@ -321,6 +324,170 @@ async function populateRecipeFields(
   entryFields.servings = recipe.servings ?? 1;
 }
 
+export async function planLeftovers(
+  userId: string,
+  sourceEntryId: string,
+  data: { date: Date; mealSlot: string; cookExtra: boolean; extraServings?: number }
+): Promise<{ leftover: IScheduleEntry; source: IScheduleEntry }> {
+  const source = await ScheduleEntry.findById(sourceEntryId);
+  if (!source) {
+    throw createError("Schedule entry not found", 404);
+  }
+
+  if (source.leftoverOfEntryId) {
+    throw createError("Leftovers cannot have their own leftovers.", 400);
+  }
+
+  if (!source.recipeId) {
+    throw createError("Only meals with a recipe can have leftovers.", 400);
+  }
+
+  if (source.status !== "confirmed") {
+    throw createError(
+      "This meal is waiting for approval. Plan leftovers once it is approved.",
+      400
+    );
+  }
+
+  const user = await User.findById(userId)
+    .select("kitchenId isPremium premiumExpiresAt")
+    .lean();
+  if (!user) {
+    throw createError("User not found", 404);
+  }
+
+  let status: "confirmed" | "suggested";
+  let canEdit: boolean;
+
+  if (source.kitchenId) {
+    if (!user.kitchenId || !user.kitchenId.equals(source.kitchenId)) {
+      throw createError("You are not a member of this kitchen", 403);
+    }
+
+    const kitchen = await Kitchen.findById(source.kitchenId);
+    if (!kitchen) {
+      throw createError("Kitchen not found", 404);
+    }
+
+    canEdit = hasScheduleEditPermission(userId, kitchen);
+    status =
+      kitchen.scheduleAddPolicy === "all" || canEdit ? "confirmed" : "suggested";
+
+    if (status === "suggested" && kitchen.allowMemberSuggestions === false) {
+      throw createError(
+        "The kitchen lead has turned off member suggestions.",
+        403
+      );
+    }
+  } else {
+    if (!source.userId.equals(userId)) {
+      throw createError("You do not own this schedule entry", 403);
+    }
+    status = "confirmed";
+    canEdit = true;
+  }
+
+  const entryDate = stripTime(data.date);
+
+  if (!hasActivePremium(user) && isBeyondFreeTierScheduleLimit(entryDate)) {
+    throw createError(FREE_TIER_SCHEDULE_LIMIT_MESSAGE, 403);
+  }
+
+  if (data.cookExtra && !canEdit) {
+    throw createError(
+      "Only the kitchen lead or editors can change how much is cooked.",
+      403
+    );
+  }
+
+  if (entryDate < stripTime(source.date)) {
+    throw createError(
+      "Leftovers go on the same day as the meal or a later day.",
+      400
+    );
+  }
+
+  const entryFields: Record<string, unknown> = {
+    userId: new Types.ObjectId(userId),
+    date: entryDate,
+    mealSlot: data.mealSlot,
+    status,
+  };
+
+  if (source.kitchenId) {
+    entryFields.kitchenId = source.kitchenId;
+    entryFields.suggestedBy = new Types.ObjectId(userId);
+  }
+
+  if (status === "confirmed") {
+    entryFields.confirmedBy = new Types.ObjectId(userId);
+  }
+
+  await populateRecipeFields(
+    entryFields,
+    source.recipeId.toString(),
+    userId,
+    Boolean(source.kitchenId)
+  );
+
+  const sourceServings = source.servings ?? 1;
+  const requestedExtra = data.cookExtra
+    ? Math.min(Math.max(data.extraServings ?? sourceServings, 1), 100)
+    : 0;
+  const extra = Math.max(0, Math.min(requestedExtra, 100 - sourceServings));
+  entryFields.servings = extra > 0 ? extra : sourceServings;
+  entryFields.leftoverOfEntryId = source._id;
+
+  const leftover = await ScheduleEntry.create(entryFields);
+
+  let updatedSource: IScheduleEntry | null = null;
+
+  if (extra > 0) {
+    try {
+      updatedSource = await ScheduleEntry.findOneAndUpdate(
+        { _id: source._id },
+        [
+          {
+            $set: {
+              servings: {
+                $min: [100, { $add: [{ $ifNull: ["$servings", 1] }, extra] }],
+              },
+            },
+          },
+        ],
+        { new: true }
+      );
+    } catch {
+      await ScheduleEntry.findByIdAndDelete(leftover._id);
+      throw createError(
+        "Could not plan the leftovers. Please try again.",
+        500
+      );
+    }
+
+    if (!updatedSource) {
+      await ScheduleEntry.findByIdAndDelete(leftover._id);
+      throw createError(
+        "Could not plan the leftovers. Please try again.",
+        500
+      );
+    }
+  }
+
+  if (status === "suggested") {
+    notifyScheduleSuggestion(
+      userId,
+      source.kitchenId!.toString(),
+      leftover._id.toString()
+    ).catch((err: unknown) => {
+      const msg = err instanceof Error ? err.message : "Unknown error";
+      console.error(`Failed to send schedule_suggestion notification: ${msg}`);
+    });
+  }
+
+  return { leftover, source: updatedSource ?? source };
+}
+
 export async function getEntries(
   query: { kitchenId?: string; userId?: string },
   startDate: Date,
@@ -345,6 +512,71 @@ export async function getEntries(
   const entries = await ScheduleEntry.find(filter)
     .sort({ date: 1, mealSlot: 1 })
     .lean<IScheduleEntry[]>();
+
+  if (entries.length === 0) {
+    return entries;
+  }
+
+  const fetchedIds = entries.map((entry) => entry._id);
+
+  const counts = await ScheduleEntry.aggregate<{
+    _id: Types.ObjectId;
+    count: number;
+  }>([
+    { $match: { leftoverOfEntryId: { $in: fetchedIds } } },
+    { $group: { _id: "$leftoverOfEntryId", count: { $sum: 1 } } },
+  ]);
+
+  if (counts.length > 0) {
+    const countsById = new Map(
+      counts.map((c) => [c._id.toString(), c.count])
+    );
+    for (const entry of entries) {
+      const count = countsById.get(entry._id.toString());
+      if (count && count > 0) {
+        entry.leftoverCount = count;
+      }
+    }
+  }
+
+  const leftoverEntries = entries.filter((entry) => entry.leftoverOfEntryId);
+
+  if (leftoverEntries.length > 0) {
+    const fetchedById = new Map(
+      entries.map((entry) => [entry._id.toString(), entry])
+    );
+    const sourceIds = [
+      ...new Set(
+        leftoverEntries.map((entry) => entry.leftoverOfEntryId!.toString())
+      ),
+    ];
+    const missingIds = sourceIds.filter((id) => !fetchedById.has(id));
+
+    const fetchedSources =
+      missingIds.length > 0
+        ? await ScheduleEntry.find({ _id: { $in: missingIds } })
+            .select("date")
+            .lean<Pick<IScheduleEntry, "_id" | "date">[]>()
+        : [];
+
+    const datesById = new Map<string, Date>();
+    for (const id of sourceIds) {
+      const local = fetchedById.get(id);
+      if (local) {
+        datesById.set(id, local.date);
+      }
+    }
+    for (const fetchedSource of fetchedSources) {
+      datesById.set(fetchedSource._id.toString(), fetchedSource.date);
+    }
+
+    for (const entry of leftoverEntries) {
+      const date = datesById.get(entry.leftoverOfEntryId!.toString());
+      if (date) {
+        entry.leftoverOfDate = date;
+      }
+    }
+  }
 
   return entries;
 }
@@ -457,13 +689,41 @@ export async function updateEntry(
     throw createError("Schedule entry not found", 404);
   }
 
+  if (updates.recipeId !== undefined && !entry.leftoverOfEntryId) {
+    const snapshotKeys = [
+      "recipeId",
+      "recipeTitle",
+      "recipePhoto",
+      "recipeAuthorId",
+      "recipeAuthorName",
+      "prepTime",
+    ] as const;
+
+    const setFields: Record<string, unknown> = {};
+
+    for (const key of snapshotKeys) {
+      const value = updateFields[key];
+      if (value !== undefined) {
+        setFields[key] = value;
+      }
+    }
+
+    if (Object.keys(setFields).length > 0) {
+      await ScheduleEntry.updateMany(
+        { leftoverOfEntryId: entry._id },
+        { $set: setFields }
+      );
+    }
+  }
+
   return updated;
 }
 
 export async function deleteEntry(
   userId: string,
-  entryId: string
-): Promise<void> {
+  entryId: string,
+  options?: { withLeftovers?: boolean }
+): Promise<{ removedLeftovers: number }> {
   const entry = await ScheduleEntry.findById(entryId);
   if (!entry) {
     throw createError("Schedule entry not found", 404);
@@ -479,31 +739,39 @@ export async function deleteEntry(
     if (!entry.userId.equals(userId)) {
       throw createError("You do not own this schedule entry", 403);
     }
-    await ScheduleEntry.findByIdAndDelete(entryId);
-    return;
-  }
+  } else {
+    // Kitchen entry — existing permission logic
+    if (!user.kitchenId || !user.kitchenId.equals(entry.kitchenId)) {
+      throw createError("You are not a member of this kitchen", 403);
+    }
 
-  // Kitchen entry — existing permission logic
-  if (!user.kitchenId || !user.kitchenId.equals(entry.kitchenId)) {
-    throw createError("You are not a member of this kitchen", 403);
-  }
+    const kitchen = await Kitchen.findById(entry.kitchenId);
+    if (!kitchen) {
+      throw createError("Kitchen not found", 404);
+    }
 
-  const kitchen = await Kitchen.findById(entry.kitchenId);
-  if (!kitchen) {
-    throw createError("Kitchen not found", 404);
-  }
+    const canEdit = hasScheduleEditPermission(userId, kitchen);
 
-  const canEdit = hasScheduleEditPermission(userId, kitchen);
+    if (entry.status === "confirmed" && !canEdit) {
+      throw createError("Only the kitchen lead or editors can delete confirmed entries", 403);
+    }
 
-  if (entry.status === "confirmed" && !canEdit) {
-    throw createError("Only the kitchen lead or editors can delete confirmed entries", 403);
-  }
-
-  if (entry.status === "suggested" && !entry.suggestedBy?.equals(userId) && !canEdit) {
-    throw createError("You can only delete your own suggestions", 403);
+    if (entry.status === "suggested" && !entry.suggestedBy?.equals(userId) && !canEdit) {
+      throw createError("You can only delete your own suggestions", 403);
+    }
   }
 
   await ScheduleEntry.findByIdAndDelete(entryId);
+
+  let removedLeftovers = 0;
+  if (options?.withLeftovers) {
+    const result = await ScheduleEntry.deleteMany({
+      leftoverOfEntryId: entry._id,
+    });
+    removedLeftovers = result.deletedCount ?? 0;
+  }
+
+  return { removedLeftovers };
 }
 
 export async function getSuggestions(

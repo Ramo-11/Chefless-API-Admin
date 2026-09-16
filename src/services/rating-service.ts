@@ -349,6 +349,7 @@ export async function listPendingCookPrompts(
       { ratingPromptSkippedAt: { $exists: false } },
     ],
     recipeId: { $ne: null },
+    leftoverOfEntryId: { $exists: false },
     date: { $gte: cutoffLower, $lt: cutoffUpper },
   })
     .sort({ date: -1 })

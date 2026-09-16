@@ -678,6 +678,7 @@ async function buildScheduleItems(
       : { userId: scope.userId, kitchenId: { $exists: false } }),
     date: { $gte: startDate, $lte: endDate },
     recipeId: { $exists: true, $ne: null },
+    leftoverOfEntryId: { $exists: false },
   }).lean();
 
   if (entries.length === 0) {
