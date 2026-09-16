@@ -38,6 +38,8 @@ export interface IShoppingList extends Document {
   scheduleLinkVersion?: number;
   revision: number;
   excludedScheduleSourceKeys: string[];
+  scheduleRevisionAtSync?: number;
+  scheduleSyncedAt?: Date;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -112,6 +114,8 @@ const shoppingListSchema = new Schema<IShoppingList>(
     scheduleLinkVersion: { type: Number },
     revision: { type: Number, required: true, default: 0 },
     excludedScheduleSourceKeys: { type: [String], default: [] },
+    scheduleRevisionAtSync: { type: Number },
+    scheduleSyncedAt: { type: Date },
   },
   {
     timestamps: true,

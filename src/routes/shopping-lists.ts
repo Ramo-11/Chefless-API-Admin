@@ -3,6 +3,9 @@ import { z } from "zod";
 import mongoose from "mongoose";
 import { requireAuth } from "../middleware/auth";
 import { validate } from "../middleware/validate";
+import { utcCalendarDay } from "../lib/calendar-date";
+import { normalizeOffset, offsetFromQuery } from "../lib/timezone";
+import User from "../models/User";
 import {
   createList,
   getLists,
@@ -112,13 +115,22 @@ const reorderItemsSchema = z.object({
     .max(500),
 });
 
+const calendarDaySchema = z.union([z.string(), z.number()]).transform((value, context) => {
+  const day = utcCalendarDay(value);
+  if (!day) {
+    context.addIssue({ code: z.ZodIssueCode.custom, message: "Enter a valid date." });
+    return z.NEVER;
+  }
+  return day;
+});
+
 const generateSchema = z.object({
   kitchenId: z
     .string()
     .refine(isValidObjectId, { message: "Invalid kitchen ID format" })
     .optional(),
-  startDate: z.coerce.date(),
-  endDate: z.coerce.date(),
+  startDate: calendarDaySchema,
+  endDate: calendarDaySchema,
   name: z.string().min(1).max(200).trim().optional(),
   scope: z.enum(["kitchen", "personal"]).optional(),
 });
@@ -138,6 +150,19 @@ async function resolveUserId(req: Request, res: Response): Promise<string | null
   }
 
   return userId;
+}
+
+async function resolveViewerOffsetMinutes(
+  req: Request,
+  userId: string
+): Promise<number> {
+  const queryOffset = normalizeOffset(offsetFromQuery(req.query.timezoneOffsetMinutes));
+  if (queryOffset !== undefined) return queryOffset;
+
+  const user = await User.findById(userId)
+    .select("_id timezoneOffsetMinutes")
+    .lean();
+  return normalizeOffset(user?.timezoneOffsetMinutes) ?? 0;
 }
 
 // --- Routes ---
@@ -186,7 +211,8 @@ router.get(
     const userId = await resolveUserId(req, res);
     if (!userId) return;
 
-    const lists = await getLists(userId);
+    const viewerOffsetMinutes = await resolveViewerOffsetMinutes(req, userId);
+    const lists = await getLists(userId, viewerOffsetMinutes);
 
     res.status(200).json({ lists });
   })
@@ -223,7 +249,8 @@ router.get(
     if (!userId) return;
 
     const { id } = req.params as z.infer<typeof objectIdParam>;
-    const list = await getList(id, userId);
+    const viewerOffsetMinutes = await resolveViewerOffsetMinutes(req, userId);
+    const list = await getList(id, userId, viewerOffsetMinutes);
 
     res.status(200).json({ list });
   })

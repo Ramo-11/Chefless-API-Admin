@@ -6,6 +6,7 @@ import ShoppingList, {
 import ScheduleEntry from "../models/ScheduleEntry";
 import Recipe, { IIngredient } from "../models/Recipe";
 import User, { IUser } from "../models/User";
+import Kitchen from "../models/Kitchen";
 import { deleteImage, publicIdFromUrl } from "../lib/cloudinary";
 import { categorizeIngredient, normalizeIngredientKey } from "../lib/ingredients";
 import { canViewRecipe } from "./visibility-service";
@@ -118,7 +119,115 @@ export async function createList(
   return list;
 }
 
-export async function getLists(userId: string): Promise<IShoppingList[]> {
+export type ShoppingListWithPlanChanged = IShoppingList & { planChanged: boolean };
+
+function resolveStartOfViewerToday(offsetMinutes: number): Date {
+  const shifted = new Date(Date.now() + offsetMinutes * 60000);
+  return new Date(
+    Date.UTC(shifted.getUTCFullYear(), shifted.getUTCMonth(), shifted.getUTCDate())
+  );
+}
+
+function isPlanLinked(list: IShoppingList): boolean {
+  return (
+    list.scheduleLinkVersion === 1 &&
+    Boolean(list.scheduleStartDate) &&
+    Boolean(list.scheduleEndDate) &&
+    Boolean(list.kitchenId || list.userId)
+  );
+}
+
+function computePlanChanged(
+  list: IShoppingList,
+  ownerRevision: number | undefined,
+  startOfViewerToday: Date
+): boolean {
+  const linked = isPlanLinked(list);
+  const notPast = Boolean(
+    list.scheduleEndDate && list.scheduleEndDate >= startOfViewerToday
+  );
+  const stale = (ownerRevision ?? 0) > (list.scheduleRevisionAtSync ?? 0);
+  return linked && notPast && stale;
+}
+
+async function getOwnerScheduleRevision(scope: {
+  kitchenId?: Types.ObjectId;
+  userId?: Types.ObjectId;
+}): Promise<number> {
+  if (scope.kitchenId) {
+    const kitchen = await Kitchen.findById(scope.kitchenId)
+      .select("_id scheduleRevision")
+      .lean();
+    return kitchen?.scheduleRevision ?? 0;
+  }
+  if (scope.userId) {
+    const owner = await User.findById(scope.userId)
+      .select("_id scheduleRevision")
+      .lean();
+    return owner?.scheduleRevision ?? 0;
+  }
+  return 0;
+}
+
+async function resolveOwnerRevisions(
+  lists: IShoppingList[]
+): Promise<Map<string, number>> {
+  const userIds = new Set<string>();
+  const kitchenIds = new Set<string>();
+
+  for (const list of lists) {
+    if (!isPlanLinked(list)) continue;
+    if (list.kitchenId) {
+      kitchenIds.add(list.kitchenId.toString());
+    } else if (list.userId) {
+      userIds.add(list.userId.toString());
+    }
+  }
+
+  const revisions = new Map<string, number>();
+
+  if (userIds.size > 0) {
+    const owners = await User.find({ _id: { $in: Array.from(userIds) } })
+      .select("_id scheduleRevision")
+      .lean();
+    for (const owner of owners) {
+      revisions.set(owner._id.toString(), owner.scheduleRevision ?? 0);
+    }
+  }
+
+  if (kitchenIds.size > 0) {
+    const owners = await Kitchen.find({ _id: { $in: Array.from(kitchenIds) } })
+      .select("_id scheduleRevision")
+      .lean();
+    for (const owner of owners) {
+      revisions.set(owner._id.toString(), owner.scheduleRevision ?? 0);
+    }
+  }
+
+  return revisions;
+}
+
+async function attachPlanChanged(
+  lists: IShoppingList[],
+  viewerOffsetMinutes?: number
+): Promise<ShoppingListWithPlanChanged[]> {
+  const startOfViewerToday = resolveStartOfViewerToday(viewerOffsetMinutes ?? 0);
+  const revisions = await resolveOwnerRevisions(lists);
+
+  return lists.map((list) => {
+    const ownerId = list.kitchenId?.toString() ?? list.userId?.toString();
+    const ownerRevision = ownerId ? revisions.get(ownerId) : undefined;
+    return {
+      ...list,
+      planChanged: computePlanChanged(list, ownerRevision, startOfViewerToday),
+    } as ShoppingListWithPlanChanged;
+  });
+}
+
+export async function getLists(
+  userId: string,
+  viewerOffsetMinutes?: number
+): Promise<ShoppingListWithPlanChanged[]> {
   const user = await getUserWithKitchen(userId);
 
   const conditions: Record<string, unknown>[] = [
@@ -133,20 +242,23 @@ export async function getLists(userId: string): Promise<IShoppingList[]> {
     .sort({ updatedAt: -1 })
     .lean<IShoppingList[]>();
 
-  return lists;
+  return attachPlanChanged(lists, viewerOffsetMinutes);
 }
 
 export async function getList(
   listId: string,
-  userId: string
-): Promise<IShoppingList> {
+  userId: string,
+  viewerOffsetMinutes?: number
+): Promise<ShoppingListWithPlanChanged> {
   const list = await ShoppingList.findById(listId).lean<IShoppingList>();
   if (!list) {
     throw createError("Shopping list not found", 404);
   }
 
   await assertListAccess(list as IShoppingList, userId);
-  return list;
+
+  const [withPlanChanged] = await attachPlanChanged([list], viewerOffsetMinutes);
+  return withPlanChanged;
 }
 
 interface UpdateListData {
@@ -658,10 +770,13 @@ interface CombinedIngredient {
 }
 
 export interface GeneratedShoppingList {
-  list: IShoppingList;
+  list: ShoppingListWithPlanChanged;
   meta: {
     /** Number of scheduled recipes that were omitted because they weren't viewable by the whole kitchen. */
     skippedPrivateCount: number;
+    added?: number;
+    removed?: number;
+    updated?: number;
   };
 }
 
@@ -679,7 +794,9 @@ async function buildScheduleItems(
     date: { $gte: startDate, $lte: endDate },
     recipeId: { $exists: true, $ne: null },
     leftoverOfEntryId: { $exists: false },
-  }).lean();
+  })
+    .sort({ _id: 1 })
+    .lean();
 
   if (entries.length === 0) {
     if (allowEmpty) return { items: [], skippedPrivateCount: 0 };
@@ -787,6 +904,8 @@ export async function generateFromSchedule(
     scope = { userId: user._id, kitchenId: undefined };
   }
 
+  const ownerRevision = await getOwnerScheduleRevision(scope);
+
   const { items, skippedPrivateCount } = await buildScheduleItems(
     scope,
     data.startDate,
@@ -797,7 +916,7 @@ export async function generateFromSchedule(
   // 7. Create the shopping list
   const listName =
     data.name ??
-    `Week of ${data.startDate.toLocaleDateString("en-US", { month: "short", day: "numeric" })}`;
+    `Week of ${data.startDate.toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" })}`;
 
   const list = await ShoppingList.create({
     ...(scope.kitchenId ? { kitchenId: scope.kitchenId } : { userId: user._id }),
@@ -809,9 +928,19 @@ export async function generateFromSchedule(
     scheduleLinkVersion: 1,
     revision: 0,
     excludedScheduleSourceKeys: [],
+    scheduleRevisionAtSync: ownerRevision,
+    scheduleSyncedAt: new Date(),
   });
 
-  return { list, meta: { skippedPrivateCount } };
+  const plainList = list.toObject() as IShoppingList;
+
+  return {
+    list: {
+      ...plainList,
+      planChanged: computePlanChanged(plainList, ownerRevision, resolveStartOfViewerToday(0)),
+    } as ShoppingListWithPlanChanged,
+    meta: { skippedPrivateCount },
+  };
 }
 
 export async function refreshFromSchedule(
@@ -834,10 +963,13 @@ export async function refreshFromSchedule(
     throw createError("This shopping list changed. Reload it and try again", 409);
   }
 
+  const scope = list.kitchenId
+    ? { kitchenId: list.kitchenId }
+    : { userId: list.userId!, kitchenId: undefined };
+  const ownerRevision = await getOwnerScheduleRevision(scope);
+
   const generated = await buildScheduleItems(
-    list.kitchenId
-      ? { kitchenId: list.kitchenId }
-      : { userId: list.userId!, kitchenId: undefined },
+    scope,
     list.scheduleStartDate,
     list.scheduleEndDate,
     new Types.ObjectId(userId),
@@ -851,6 +983,9 @@ export async function refreshFromSchedule(
   );
   const excluded = new Set(list.excludedScheduleSourceKeys ?? []);
   const nextItems: Array<Record<string, unknown>> = [];
+  let addedCount = 0;
+  let removedCount = 0;
+  let updatedCount = 0;
 
   for (const item of list.items) {
     const source = item.scheduleSource;
@@ -876,7 +1011,24 @@ export async function refreshFromSchedule(
     }
     const replacement = desired.get(source.key);
     desired.delete(source.key);
-    if (!replacement) continue;
+    if (!replacement) {
+      removedCount += 1;
+      continue;
+    }
+    const replacementSnapshot = replacement as {
+      name: string;
+      quantity: number;
+      unit: string;
+      category: string;
+    };
+    if (
+      replacementSnapshot.name !== source.name ||
+      replacementSnapshot.quantity !== source.quantity ||
+      (replacementSnapshot.unit ?? "") !== source.unit ||
+      replacementSnapshot.category !== source.category
+    ) {
+      updatedCount += 1;
+    }
     nextItems.push({
       ...replacement,
       _id: item._id,
@@ -888,7 +1040,10 @@ export async function refreshFromSchedule(
   }
 
   for (const [key, item] of desired) {
-    if (!excluded.has(key)) nextItems.push(item);
+    if (!excluded.has(key)) {
+      nextItems.push(item);
+      addedCount += 1;
+    }
   }
 
   const updated = await ShoppingList.findOneAndUpdate(
@@ -897,11 +1052,27 @@ export async function refreshFromSchedule(
       $set: {
         items: nextItems,
         excludedScheduleSourceKeys: Array.from(excluded),
+        scheduleRevisionAtSync: ownerRevision,
+        scheduleSyncedAt: new Date(),
       },
       $inc: { revision: 1 },
     },
     { new: true, runValidators: true }
   );
   if (!updated) throw createError("This shopping list changed. Reload it and try again", 409);
-  return { list: updated, meta: { skippedPrivateCount: generated.skippedPrivateCount } };
+
+  const plainUpdated = updated.toObject() as IShoppingList;
+
+  return {
+    list: {
+      ...plainUpdated,
+      planChanged: computePlanChanged(plainUpdated, ownerRevision, resolveStartOfViewerToday(0)),
+    } as ShoppingListWithPlanChanged,
+    meta: {
+      skippedPrivateCount: generated.skippedPrivateCount,
+      added: addedCount,
+      removed: removedCount,
+      updated: updatedCount,
+    },
+  };
 }

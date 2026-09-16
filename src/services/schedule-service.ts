@@ -136,6 +136,25 @@ function hasApprovalPermission(
   );
 }
 
+export async function bumpScheduleRevision(
+  userId: string,
+  kitchenId?: Types.ObjectId | string | null
+): Promise<void> {
+  try {
+    if (kitchenId) {
+      await Kitchen.updateOne(
+        { _id: kitchenId },
+        { $inc: { scheduleRevision: 1 } }
+      );
+      return;
+    }
+    await User.updateOne({ _id: userId }, { $inc: { scheduleRevision: 1 } });
+  } catch (err: unknown) {
+    const msg = err instanceof Error ? err.message : "Unknown error";
+    console.error(`Failed to bump the schedule revision: ${msg}`);
+  }
+}
+
 export async function addEntry(
   userId: string,
   kitchenId: string | null,
@@ -187,7 +206,9 @@ export async function addEntry(
       entryFields.servings = data.servings;
     }
 
-    return ScheduleEntry.create(entryFields);
+    const personalEntry = await ScheduleEntry.create(entryFields);
+    await bumpScheduleRevision(userId, null);
+    return personalEntry;
   }
 
   // Kitchen entry
@@ -248,6 +269,7 @@ export async function addEntry(
   }
 
   const entry = await ScheduleEntry.create(entryFields);
+  await bumpScheduleRevision(userId, kitchenId);
 
   // Fire-and-forget notification for suggestions
   if (status === "suggested") {
@@ -474,6 +496,8 @@ export async function planLeftovers(
     }
   }
 
+  await bumpScheduleRevision(userId, source.kitchenId ?? null);
+
   if (status === "suggested") {
     notifyScheduleSuggestion(
       userId,
@@ -689,6 +713,8 @@ export async function updateEntry(
     throw createError("Schedule entry not found", 404);
   }
 
+  await bumpScheduleRevision(entry.userId.toString(), entry.kitchenId ?? null);
+
   if (updates.recipeId !== undefined && !entry.leftoverOfEntryId) {
     const snapshotKeys = [
       "recipeId",
@@ -762,6 +788,8 @@ export async function deleteEntry(
   }
 
   await ScheduleEntry.findByIdAndDelete(entryId);
+
+  await bumpScheduleRevision(entry.userId.toString(), entry.kitchenId ?? null);
 
   let removedLeftovers = 0;
   if (options?.withLeftovers) {
@@ -852,6 +880,8 @@ export async function approveSuggestion(
     throw createError("Schedule entry not found", 404);
   }
 
+  await bumpScheduleRevision(entry.userId.toString(), entry.kitchenId);
+
   // Fire-and-forget notification
   notifySuggestionApproved(entryId).catch((err: unknown) => {
     const msg = err instanceof Error ? err.message : "Unknown error";
@@ -904,6 +934,8 @@ export async function denySuggestion(
 
   // Delete first, then notify with pre-loaded data
   await ScheduleEntry.findByIdAndDelete(entryId);
+
+  await bumpScheduleRevision(entry.userId.toString(), entry.kitchenId);
 
   if (notificationData) {
     notifySuggestionDeniedWithData(notificationData).catch((err: unknown) => {
@@ -1005,6 +1037,10 @@ export async function importToKitchen(
   }));
 
   const result = await ScheduleEntry.insertMany(kitchenEntries);
+
+  if (result.length > 0) {
+    await bumpScheduleRevision(userId, kitchenId);
+  }
 
   // If the imported entries are suggestions, send a single aggregate
   // notification to the lead + approvers (avoids per-entry spam).
