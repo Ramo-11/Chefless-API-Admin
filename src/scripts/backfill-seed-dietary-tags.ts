@@ -5,8 +5,8 @@ import mongoose from "mongoose";
 import Recipe from "../models/Recipe";
 import { env } from "../lib/env";
 import { canonicalDiet } from "../lib/diets";
-import { slugify } from "./seed/slugify";
-import type { CuratedCuisineData } from "./seed/curated-types";
+import { slugify } from "../lib/seed/slugify";
+import type { CuratedCuisineData } from "../lib/seed/curated-types";
 
 const DATA_DIR = path.join(__dirname, "seed", "data");
 const BATCH_SIZE = 500;

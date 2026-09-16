@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { buildDietaryTagsMap } from "../../scripts/backfill-seed-dietary-tags";
-import type { CuratedCuisineData, CuratedRecipe } from "../../scripts/seed/curated-types";
+import type { CuratedCuisineData, CuratedRecipe } from "../../lib/seed/curated-types";
 
 function makeRecipe(title: string, dietaryTags?: string[]): CuratedRecipe {
   return {

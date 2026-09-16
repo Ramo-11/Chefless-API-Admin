@@ -61,7 +61,7 @@ const shoppingListItemSchema = new Schema<IShoppingListItem>({
         key: { type: String, required: true },
         name: { type: String, required: true },
         quantity: { type: Number, required: true },
-        unit: { type: String, required: true },
+        unit: { type: String, default: "" },
         category: { type: String, required: true },
         contributions: {
           type: [
