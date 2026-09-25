@@ -184,24 +184,22 @@ async function resolveOwnerRevisions(
     }
   }
 
+  const [userOwners, kitchenOwners] = await Promise.all([
+    userIds.size > 0
+      ? User.find({ _id: { $in: Array.from(userIds) } })
+          .select("_id scheduleRevision")
+          .lean()
+      : [],
+    kitchenIds.size > 0
+      ? Kitchen.find({ _id: { $in: Array.from(kitchenIds) } })
+          .select("_id scheduleRevision")
+          .lean()
+      : [],
+  ]);
+
   const revisions = new Map<string, number>();
-
-  if (userIds.size > 0) {
-    const owners = await User.find({ _id: { $in: Array.from(userIds) } })
-      .select("_id scheduleRevision")
-      .lean();
-    for (const owner of owners) {
-      revisions.set(owner._id.toString(), owner.scheduleRevision ?? 0);
-    }
-  }
-
-  if (kitchenIds.size > 0) {
-    const owners = await Kitchen.find({ _id: { $in: Array.from(kitchenIds) } })
-      .select("_id scheduleRevision")
-      .lean();
-    for (const owner of owners) {
-      revisions.set(owner._id.toString(), owner.scheduleRevision ?? 0);
-    }
+  for (const owner of [...userOwners, ...kitchenOwners]) {
+    revisions.set(owner._id.toString(), owner.scheduleRevision ?? 0);
   }
 
   return revisions;

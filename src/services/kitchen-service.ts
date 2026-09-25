@@ -164,14 +164,15 @@ export async function getMyKitchen(
     return null;
   }
 
-  const kitchen = await Kitchen.findById(user.kitchenId);
+  const [kitchen, members] = await Promise.all([
+    Kitchen.findById(user.kitchenId),
+    User.find({ kitchenId: user.kitchenId })
+      .select("fullName profilePicture recipesCount")
+      .lean<KitchenMember[]>(),
+  ]);
   if (!kitchen) {
     return null;
   }
-
-  const members = await User.find({ kitchenId: kitchen._id })
-    .select("fullName profilePicture recipesCount")
-    .lean<KitchenMember[]>();
 
   return { kitchen, members };
 }

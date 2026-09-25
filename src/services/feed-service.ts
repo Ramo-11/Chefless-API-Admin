@@ -6,7 +6,7 @@ import Like from "../models/Like";
 import SavedRecipe from "../models/SavedRecipe";
 import SeasonalTag from "../models/SeasonalTag";
 import { getBlockedUserIds } from "./block-service";
-import { buildAccessiblePrivateIds } from "./visibility-service";
+import { getKitchenMemberIds } from "./visibility-service";
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
@@ -22,6 +22,7 @@ interface FeedRecipe {
   cuisineTags: string[];
   difficulty?: string;
   ingredients: IRecipe["ingredients"];
+  ingredientCount: number;
   steps: IRecipe["steps"];
   prepTime?: number;
   cookTime?: number;
@@ -53,55 +54,193 @@ interface PaginatedFeed {
   hasMore: boolean;
 }
 
+interface ViewerContext {
+  blockExclusionIds: Types.ObjectId[];
+  followingIds: Types.ObjectId[];
+  kitchenId?: Types.ObjectId;
+  dietaryPreferences: string[];
+  cuisinePreferences: string[];
+}
+
+interface PoolDoc {
+  _id: Types.ObjectId;
+  authorId: Types.ObjectId;
+  likesCount?: number;
+  forksCount?: number;
+}
+
+interface AuthorProfile {
+  _id: Types.ObjectId;
+  fullName?: string;
+  profilePicture?: string;
+  isPublic?: boolean;
+  isBanned?: boolean;
+  isPremium?: boolean;
+}
+
+interface ViewerRecipeState {
+  authors: Map<string, AuthorProfile>;
+  liked: Set<string>;
+  saved: Set<string>;
+}
+
+interface VisiblePool {
+  docs: PoolDoc[];
+  state: ViewerRecipeState;
+}
+
+interface RankedPage {
+  docs: LeanRecipe[];
+  total: number;
+  hasMore: boolean;
+  state: ViewerRecipeState;
+  accessiblePrivateIds: Types.ObjectId[];
+  blockExclusionIds: Types.ObjectId[];
+}
+
+interface FeedPage {
+  docs: LeanRecipe[];
+  total: number;
+  hasMore: boolean;
+  state: ViewerRecipeState;
+}
+
+interface FeaturedCandidate {
+  recipe: LeanRecipe;
+  state: ViewerRecipeState;
+}
+
 export const FEED_POOL_SIZE = 2000;
+
+export const FEED_INGREDIENT_PREVIEW = 4;
 
 export const TRENDING_HALF_LIFE_DAYS = 14;
 export const TRENDING_DECAY_RATE = Math.LN2 / TRENDING_HALF_LIFE_DAYS;
 
 const TRENDING_SCORE_STALE_MS = 4 * 24 * 60 * 60 * 1000;
 
-function dedupeIds(
-  docs: Array<{ _id: Types.ObjectId }>,
-  limit: number
-): Types.ObjectId[] {
+const POOL_FIELDS = "_id authorId";
+const FOR_YOU_POOL_FIELDS = "_id authorId likesCount forksCount";
+const POOL_AUTHOR_FIELDS = "fullName profilePicture isPublic isBanned isPremium";
+const FEATURED_AUTHOR_FIELDS = "fullName profilePicture isPublic isBanned";
+const PAGE_AUTHOR_FIELDS = "fullName profilePicture";
+
+const FEED_RECIPE_FIELDS = [
+  "authorId",
+  "title",
+  "description",
+  "photos",
+  "showSignature",
+  "labels",
+  "dietaryTags",
+  "cuisineTags",
+  "difficulty",
+  "prepTime",
+  "cookTime",
+  "totalTime",
+  "servings",
+  "calories",
+  "costEstimate",
+  "baseServings",
+  "forkedFrom",
+  "isModifiedFork",
+  "isPrivate",
+  "likesCount",
+  "forksCount",
+  "commentsCount",
+  "createdAt",
+  "updatedAt",
+] as const;
+
+const FEED_RECIPE_INCLUDE = Object.fromEntries(
+  FEED_RECIPE_FIELDS.map((field) => [field, 1])
+);
+
+const INGREDIENT_COUNT_EXPRESSION = {
+  $cond: [{ $isArray: "$ingredients" }, { $size: "$ingredients" }, 0],
+};
+
+const FEED_RECIPE_SELECT = {
+  ...FEED_RECIPE_INCLUDE,
+  ingredients: { $slice: FEED_INGREDIENT_PREVIEW },
+  ingredientCount: INGREDIENT_COUNT_EXPRESSION,
+  steps: { $slice: 1 },
+};
+
+const FEED_RECIPE_PREVIEW_STAGE = {
+  $project: {
+    ...FEED_RECIPE_INCLUDE,
+    ingredientCount: INGREDIENT_COUNT_EXPRESSION,
+    ingredients: {
+      $cond: [
+        { $isArray: "$ingredients" },
+        { $slice: ["$ingredients", FEED_INGREDIENT_PREVIEW] },
+        "$ingredients",
+      ],
+    },
+    steps: {
+      $cond: [{ $isArray: "$steps" }, { $slice: ["$steps", 1] }, "$steps"],
+    },
+  },
+};
+
+const EMPTY_VIEWER_RECIPE_STATE: ViewerRecipeState = {
+  authors: new Map(),
+  liked: new Set(),
+  saved: new Set(),
+};
+
+function dedupePool(docs: PoolDoc[], limit: number): PoolDoc[] {
   const seen = new Set<string>();
-  const ids: Types.ObjectId[] = [];
+  const unique: PoolDoc[] = [];
   for (const doc of docs) {
-    if (ids.length >= limit) break;
+    if (unique.length >= limit) break;
     const key = doc._id.toString();
     if (!seen.has(key)) {
       seen.add(key);
-      ids.push(doc._id);
+      unique.push(doc);
     }
   }
-  return ids;
+  return unique;
 }
 
-async function getRecencyPopularityPoolIds(
-  baseMatch: Record<string, unknown>
-): Promise<Types.ObjectId[]> {
+function uniqueIds(ids: Types.ObjectId[]): Types.ObjectId[] {
+  const seen = new Map<string, Types.ObjectId>();
+  for (const id of ids) seen.set(id.toString(), id);
+  return Array.from(seen.values());
+}
+
+function findPool(
+  filter: Record<string, unknown>,
+  sort: Record<string, 1 | -1>,
+  fields: string
+) {
+  return Recipe.find(filter)
+    .select(fields)
+    .sort(sort)
+    .limit(FEED_POOL_SIZE)
+    .batchSize(FEED_POOL_SIZE)
+    .lean<PoolDoc[]>();
+}
+
+async function getRecencyPopularityPool(
+  baseMatch: Record<string, unknown>,
+  fields: string
+): Promise<PoolDoc[]> {
   const [recent, popular] = await Promise.all([
-    Recipe.find(baseMatch)
-      .select("_id")
-      .sort({ createdAt: -1 })
-      .limit(FEED_POOL_SIZE)
-      .lean(),
-    Recipe.find(baseMatch)
-      .select("_id")
-      .sort({ likesCount: -1 })
-      .limit(FEED_POOL_SIZE)
-      .lean(),
+    findPool(baseMatch, { createdAt: -1 }, fields),
+    findPool(baseMatch, { likesCount: -1 }, fields),
   ]);
-  return dedupeIds([...recent, ...popular], FEED_POOL_SIZE);
+  return dedupePool([...recent, ...popular], FEED_POOL_SIZE);
 }
 
-async function getForYouCandidateIds(
+async function getForYouPool(
   baseMatch: Record<string, unknown>,
   userDietary: string[],
   userCuisine: string[]
-): Promise<Types.ObjectId[]> {
+): Promise<PoolDoc[]> {
   if (userDietary.length === 0 && userCuisine.length === 0) {
-    return getRecencyPopularityPoolIds(baseMatch);
+    return getRecencyPopularityPool(baseMatch, FOR_YOU_POOL_FIELDS);
   }
 
   const preferenceMatch: Record<string, unknown> = {
@@ -112,55 +251,58 @@ async function getForYouCandidateIds(
     ],
   };
 
-  const docs = await Recipe.find(preferenceMatch)
-    .select("_id")
-    .sort({ createdAt: -1 })
-    .limit(FEED_POOL_SIZE)
-    .lean();
-  return docs.map((d) => d._id);
+  return findPool(preferenceMatch, { createdAt: -1 }, FOR_YOU_POOL_FIELDS);
 }
 
-async function getTrendingCandidateIds(
-  baseMatch: Record<string, unknown>
-): Promise<{ ids: Types.ObjectId[]; materialized: boolean }> {
+async function isTrendingScoreFresh(): Promise<boolean> {
   const freshest = await Recipe.findOne({ trendingScore: { $gt: 0 } })
     .select("trendingScoreUpdatedAt")
     .sort({ trendingScore: -1 })
     .lean();
 
-  const isStale =
-    !freshest?.trendingScoreUpdatedAt ||
-    Date.now() - freshest.trendingScoreUpdatedAt.getTime() > TRENDING_SCORE_STALE_MS;
-
-  if (!freshest || isStale) {
-    return { ids: await getRecencyPopularityPoolIds(baseMatch), materialized: false };
-  }
-
-  const docs = await Recipe.find(baseMatch)
-    .select("_id")
-    .sort({ trendingScore: -1 })
-    .limit(FEED_POOL_SIZE)
-    .lean();
-  return { ids: docs.map((d) => d._id), materialized: true };
+  const updatedAt = freshest?.trendingScoreUpdatedAt;
+  return (
+    updatedAt !== undefined &&
+    updatedAt !== null &&
+    Date.now() - updatedAt.getTime() <= TRENDING_SCORE_STALE_MS
+  );
 }
 
-async function getSeasonalCandidateIds(
+async function getTrendingPool(
+  baseMatch: Record<string, unknown>,
+  materialized: boolean
+): Promise<PoolDoc[]> {
+  if (!materialized) {
+    return getRecencyPopularityPool(baseMatch, POOL_FIELDS);
+  }
+  return findPool(baseMatch, { trendingScore: -1 }, POOL_FIELDS);
+}
+
+async function getActiveSeasonalSlugs(): Promise<string[]> {
+  const now = new Date();
+  const activeTags = await SeasonalTag.find({
+    isActive: true,
+    startDate: { $lte: now },
+    endDate: { $gte: now },
+  })
+    .select("slug")
+    .lean();
+  return activeTags.map((t) => t.slug);
+}
+
+async function getSeasonalPool(
   baseMatch: Record<string, unknown>,
   activeSlugs: string[]
-): Promise<Types.ObjectId[]> {
+): Promise<PoolDoc[]> {
   if (activeSlugs.length === 0) {
-    return getRecencyPopularityPoolIds(baseMatch);
+    return getRecencyPopularityPool(baseMatch, POOL_FIELDS);
   }
 
-  const docs = await Recipe.find({
-    ...baseMatch,
-    seasonalTags: { $in: activeSlugs },
-  })
-    .select("_id")
-    .sort({ likesCount: -1, createdAt: -1 })
-    .limit(FEED_POOL_SIZE)
-    .lean();
-  return docs.map((d) => d._id);
+  return findPool(
+    { ...baseMatch, seasonalTags: { $in: activeSlugs } },
+    { likesCount: -1, createdAt: -1 },
+    POOL_FIELDS
+  );
 }
 
 function splitHasMore<T>(docs: T[], limit: number): { page: T[]; hasMore: boolean } {
@@ -185,8 +327,23 @@ async function getFollowingIds(
     status: "active",
   })
     .select("followingId")
+    .batchSize(FEED_POOL_SIZE)
     .lean();
   return follows.map((f) => f.followingId);
+}
+
+async function getSecondDegreeFollowingIds(
+  followingIds: Types.ObjectId[]
+): Promise<Types.ObjectId[]> {
+  if (followingIds.length === 0) return [];
+  const secondDegree = await Follow.find({
+    followerId: { $in: followingIds },
+    status: "active",
+  })
+    .select("followingId")
+    .batchSize(FEED_POOL_SIZE)
+    .lean();
+  return secondDegree.map((f) => f.followingId);
 }
 
 /**
@@ -200,137 +357,203 @@ async function getBlockExclusionIds(
   return getBlockedUserIds(viewerId.toString());
 }
 
-/**
- * Returns aggregation pipeline stages that filter recipes to only those
- * visible to the viewer, using $lookup to check author.isPublic instead
- * of loading all public user IDs into memory.
- */
-function buildVisibilityPipelineStages(
-  userId: Types.ObjectId,
-  accessiblePrivateIds: Types.ObjectId[]
-): Record<string, unknown>[] {
-  return [
-    {
-      $lookup: {
-        from: "users",
-        localField: "authorId",
-        foreignField: "_id",
-        as: "_author",
-        pipeline: [{ $project: { isPublic: 1, isBanned: 1 } }],
-      },
-    },
-    { $unwind: "$_author" },
-    {
-      $match: {
-        "_author.isBanned": { $ne: true },
-        $or: [
-          { "_author.isPublic": true },
-          ...(accessiblePrivateIds.length > 0
-            ? [{ authorId: { $in: accessiblePrivateIds } }]
-            : []),
-        ],
-      },
-    },
-    { $project: { _author: 0 } },
-  ];
+async function loadViewerContext(userId: Types.ObjectId): Promise<ViewerContext> {
+  const [blockExclusionIds, followingIds, viewer] = await Promise.all([
+    getBlockExclusionIds(userId),
+    getFollowingIds(userId),
+    User.findById(userId)
+      .select("kitchenId dietaryPreferences cuisinePreferences")
+      .lean<Pick<IUser, "kitchenId" | "dietaryPreferences" | "cuisinePreferences"> | null>(),
+  ]);
+  return {
+    blockExclusionIds,
+    followingIds,
+    kitchenId: viewer?.kitchenId,
+    dietaryPreferences: viewer?.dietaryPreferences ?? [],
+    cuisinePreferences: viewer?.cuisinePreferences ?? [],
+  };
 }
 
-/** Lean recipe shape returned by Mongoose `.lean()`. */
-type LeanRecipe = Omit<IRecipe, keyof Document> & { _id: Types.ObjectId };
+function buildBaseMatch(
+  userId: Types.ObjectId,
+  blockExclusionIds: Types.ObjectId[]
+): Record<string, unknown> {
+  return {
+    isPrivate: false,
+    isHidden: { $ne: true },
+    authorId:
+      blockExclusionIds.length > 0
+        ? { $ne: userId, $nin: blockExclusionIds }
+        : { $ne: userId },
+  };
+}
 
-/**
- * Enriches lean recipe documents with author info and isLiked status.
- */
-async function enrichRecipes(
-  recipes: LeanRecipe[],
-  userId: Types.ObjectId
-): Promise<FeedRecipe[]> {
-  if (recipes.length === 0) return [];
+async function loadViewerRecipeState(
+  userId: Types.ObjectId,
+  recipeIds: Types.ObjectId[],
+  authorIds: Types.ObjectId[],
+  authorFields: string
+): Promise<ViewerRecipeState> {
+  if (recipeIds.length === 0) return EMPTY_VIEWER_RECIPE_STATE;
 
-  // Fetch authors
-  const authorIds = [...new Set(recipes.map((r) => r.authorId.toString()))];
-  const authors = await User.find({ _id: { $in: authorIds } })
-    .select("fullName profilePicture")
-    .lean();
-  const authorMap = new Map(
-    authors.map((a) => [a._id.toString(), a])
-  );
-
-  // Fetch user's likes + saves for these recipes in parallel
-  const recipeIds = recipes.map((r) => r._id);
-  const [likes, saves] = await Promise.all([
+  const [authors, likes, saves] = await Promise.all([
+    User.find({ _id: { $in: authorIds } })
+      .select(authorFields)
+      .batchSize(FEED_POOL_SIZE)
+      .lean<AuthorProfile[]>(),
     Like.find({
       userId,
       recipeId: { $in: recipeIds },
     })
       .select("recipeId")
+      .batchSize(FEED_POOL_SIZE)
       .lean(),
     SavedRecipe.find({
       userId,
       recipeId: { $in: recipeIds },
     })
       .select("recipeId")
+      .batchSize(FEED_POOL_SIZE)
       .lean(),
   ]);
-  const likedSet = new Set(likes.map((l) => l.recipeId.toString()));
-  const savedSet = new Set(saves.map((s) => s.recipeId.toString()));
 
-  return recipes.map((recipe) => {
-    const author = authorMap.get(recipe.authorId.toString());
-    const id = recipe._id.toString();
-    return {
-      _id: recipe._id,
-      authorId: recipe.authorId,
-      title: recipe.title,
-      description: recipe.description,
-      photos: recipe.photos,
-      showSignature: recipe.showSignature,
-      labels: recipe.labels,
-      dietaryTags: recipe.dietaryTags,
-      cuisineTags: recipe.cuisineTags,
-      difficulty: recipe.difficulty,
-      ingredients: recipe.ingredients,
-      steps: recipe.steps,
-      prepTime: recipe.prepTime,
-      cookTime: recipe.cookTime,
-      totalTime: recipe.totalTime,
-      servings: recipe.servings,
-      calories: recipe.calories,
-      costEstimate: recipe.costEstimate,
-      baseServings: recipe.baseServings,
-      forkedFrom: recipe.forkedFrom,
-      isModifiedFork: recipe.isModifiedFork,
-      isPrivate: recipe.isPrivate,
-      likesCount: recipe.likesCount,
-      forksCount: recipe.forksCount,
-      commentsCount: recipe.commentsCount ?? 0,
-      createdAt: recipe.createdAt,
-      updatedAt: recipe.updatedAt,
-      authorName: author?.fullName ?? "Unknown",
-      authorPhoto: author?.profilePicture,
-      isLiked: likedSet.has(id),
-      isSaved: savedSet.has(id),
-    };
-  });
+  return {
+    authors: new Map(authors.map((a) => [a._id.toString(), a])),
+    liked: new Set(likes.map((l) => l.recipeId.toString())),
+    saved: new Set(saves.map((s) => s.recipeId.toString())),
+  };
 }
 
-/**
- * Returns the globally featured recipe enriched for the viewer, or null if
- * there is no active feature, if the feature is authored by the viewer, or if
- * the viewer cannot see the author (banned, or private account the viewer
- * does not follow / share a kitchen with).
- */
-async function getFeaturedRecipeForViewer(
+function mergeViewerRecipeState(
+  base: ViewerRecipeState,
+  extra: ViewerRecipeState
+): ViewerRecipeState {
+  return {
+    authors: new Map([...base.authors, ...extra.authors]),
+    liked: new Set([...base.liked, ...extra.liked]),
+    saved: new Set([...base.saved, ...extra.saved]),
+  };
+}
+
+function isVisibleAuthor(
+  author: AuthorProfile | undefined,
+  accessibleKeys: Set<string>
+): boolean {
+  if (!author || author.isBanned === true) return false;
+  return author.isPublic === true || accessibleKeys.has(author._id.toString());
+}
+
+async function resolveVisiblePool(
   userId: Types.ObjectId,
-  accessiblePrivateIds: Types.ObjectId[],
-  blockExclusionIds: Types.ObjectId[] = []
-): Promise<FeedRecipe | null> {
+  pool: PoolDoc[],
+  accessiblePrivateIds: Types.ObjectId[]
+): Promise<VisiblePool> {
+  const state = await loadViewerRecipeState(
+    userId,
+    pool.map((doc) => doc._id),
+    uniqueIds(pool.map((doc) => doc.authorId)),
+    POOL_AUTHOR_FIELDS
+  );
+  const accessibleKeys = new Set(accessiblePrivateIds.map((id) => id.toString()));
+  const docs = pool.filter((doc) =>
+    isVisibleAuthor(state.authors.get(doc.authorId.toString()), accessibleKeys)
+  );
+  return { docs, state };
+}
+
+function maxEngagementOf(docs: PoolDoc[]): number {
+  let max: number | null = null;
+  for (const doc of docs) {
+    if (typeof doc.likesCount !== "number" || typeof doc.forksCount !== "number") {
+      continue;
+    }
+    const engagement = doc.likesCount + doc.forksCount * 3;
+    if (max === null || engagement > max) max = engagement;
+  }
+  return Math.max(1, max ?? 0);
+}
+
+function premiumAuthorIdsOf(
+  docs: PoolDoc[],
+  state: ViewerRecipeState
+): Types.ObjectId[] {
+  return uniqueIds(docs.map((doc) => doc.authorId)).filter((id) =>
+    Boolean(state.authors.get(id.toString())?.isPremium)
+  );
+}
+
+/** Lean recipe shape returned by Mongoose `.lean()`. */
+type LeanRecipe = Omit<IRecipe, keyof Document> & {
+  _id: Types.ObjectId;
+  ingredientCount?: number;
+};
+
+function previewIngredients(recipe: LeanRecipe): IRecipe["ingredients"] {
+  return Array.isArray(recipe.ingredients)
+    ? recipe.ingredients.slice(0, FEED_INGREDIENT_PREVIEW)
+    : recipe.ingredients;
+}
+
+function previewSteps(recipe: LeanRecipe): IRecipe["steps"] {
+  if (!Array.isArray(recipe.steps)) return recipe.steps;
+  if (Array.isArray(recipe.ingredients) && recipe.ingredients.length > 0) {
+    return [];
+  }
+  return recipe.steps.slice(0, 1);
+}
+
+function toFeedRecipe(
+  recipe: LeanRecipe,
+  state: ViewerRecipeState
+): FeedRecipe {
+  const author = state.authors.get(recipe.authorId.toString());
+  const id = recipe._id.toString();
+  return {
+    _id: recipe._id,
+    authorId: recipe.authorId,
+    title: recipe.title,
+    description: recipe.description,
+    photos: recipe.photos,
+    showSignature: recipe.showSignature,
+    labels: recipe.labels,
+    dietaryTags: recipe.dietaryTags,
+    cuisineTags: recipe.cuisineTags,
+    difficulty: recipe.difficulty,
+    ingredients: previewIngredients(recipe),
+    ingredientCount: recipe.ingredientCount ?? 0,
+    steps: previewSteps(recipe),
+    prepTime: recipe.prepTime,
+    cookTime: recipe.cookTime,
+    totalTime: recipe.totalTime,
+    servings: recipe.servings,
+    calories: recipe.calories,
+    costEstimate: recipe.costEstimate,
+    baseServings: recipe.baseServings,
+    forkedFrom: recipe.forkedFrom,
+    isModifiedFork: recipe.isModifiedFork,
+    isPrivate: recipe.isPrivate,
+    likesCount: recipe.likesCount,
+    forksCount: recipe.forksCount,
+    commentsCount: recipe.commentsCount ?? 0,
+    createdAt: recipe.createdAt,
+    updatedAt: recipe.updatedAt,
+    authorName: author?.fullName ?? "Unknown",
+    authorPhoto: author?.profilePicture,
+    isLiked: state.liked.has(id),
+    isSaved: state.saved.has(id),
+  };
+}
+
+async function findFeaturedCandidate(
+  userId: Types.ObjectId
+): Promise<FeaturedCandidate | null> {
   const featured = await Recipe.findOne({
     isFeatured: true,
     isHidden: { $ne: true },
     isPrivate: false,
   })
     .sort({ featuredAt: -1 })
+    .select(FEED_RECIPE_SELECT)
     .lean<LeanRecipe | null>();
 
   if (!featured) return null;
@@ -338,25 +561,38 @@ async function getFeaturedRecipeForViewer(
   // Feeds always exclude the viewer's own recipes — keep parity here.
   if (featured.authorId.equals(userId)) return null;
 
+  const state = await loadViewerRecipeState(
+    userId,
+    [featured._id],
+    [featured.authorId],
+    FEATURED_AUTHOR_FIELDS
+  );
+  return { recipe: featured, state };
+}
+
+function resolveFeaturedForViewer(
+  candidate: FeaturedCandidate | null,
+  accessiblePrivateIds: Types.ObjectId[],
+  blockExclusionIds: Types.ObjectId[]
+): FeaturedCandidate | null {
+  if (!candidate) return null;
+  const { recipe, state } = candidate;
+
   // Exclude any recipe whose author is on either side of a block.
-  if (blockExclusionIds.some((id) => id.equals(featured.authorId))) {
+  if (blockExclusionIds.some((id) => id.equals(recipe.authorId))) {
     return null;
   }
 
-  const author = await User.findById(featured.authorId)
-    .select("isPublic isBanned")
-    .lean<Pick<IUser, "isPublic" | "isBanned"> | null>();
-
+  const author = state.authors.get(recipe.authorId.toString());
   if (!author || author.isBanned) return null;
 
   const authorIsPublic = author.isPublic === true;
   const viewerHasAccess = accessiblePrivateIds.some((id) =>
-    id.equals(featured.authorId)
+    id.equals(recipe.authorId)
   );
   if (!authorIsPublic && !viewerHasAccess) return null;
 
-  const [enriched] = await enrichRecipes([featured], userId);
-  return enriched ?? null;
+  return candidate;
 }
 
 /**
@@ -364,12 +600,12 @@ async function getFeaturedRecipeForViewer(
  * the algorithmic result if it was already included. Adjusts `total` only
  * when the featured recipe was NOT already in the base list.
  */
-function applyFeaturedToPage(
-  recipes: FeedRecipe[],
+function applyFeaturedToPage<T extends { _id: Types.ObjectId }>(
+  recipes: T[],
   total: number,
-  featured: FeedRecipe | null,
+  featured: T | null,
   page: number
-): { recipes: FeedRecipe[]; total: number } {
+): { recipes: T[]; total: number } {
   if (!featured || page !== 1) {
     return { recipes, total };
   }
@@ -384,107 +620,102 @@ function applyFeaturedToPage(
   };
 }
 
-// ── Feed Algorithms ────────────────────────────────────────────────────────────
+async function loadFeedPage(
+  userId: Types.ObjectId,
+  page: number,
+  rank: () => Promise<RankedPage>
+): Promise<FeedPage> {
+  const [ranked, featuredCandidate] = await Promise.all([
+    rank(),
+    page === 1 ? findFeaturedCandidate(userId) : null,
+  ]);
+  const featured = resolveFeaturedForViewer(
+    featuredCandidate,
+    ranked.accessiblePrivateIds,
+    ranked.blockExclusionIds
+  );
+  const { recipes, total } = applyFeaturedToPage(
+    ranked.docs,
+    ranked.total,
+    featured?.recipe ?? null,
+    page
+  );
+  return {
+    docs: recipes,
+    total,
+    hasMore: ranked.hasMore,
+    state: featured
+      ? mergeViewerRecipeState(ranked.state, featured.state)
+      : ranked.state,
+  };
+}
 
-/**
- * Algorithmic "For You" feed.
- *
- * Scoring is performed in MongoDB aggregation to avoid loading large candidate
- * sets into memory. The score uses:
- * - recency (0.25): newer recipes score higher
- * - engagement (0.25): normalized likes + weighted forks
- * - relevance (0.30): dietary/cuisine/label match + followed-by-following
- * - premium boost (0.10): small bonus for premium authors
- * - diversity constant (0.10): simplified constant (stateful windowing not
- *   feasible in aggregation)
- */
-export async function forYouFeed(
+function toPaginatedFeed(
+  page: number,
+  limit: number,
+  feed: FeedPage
+): PaginatedFeed {
+  return {
+    recipes: feed.docs.map((doc) => toFeedRecipe(doc, feed.state)),
+    page,
+    limit,
+    total: feed.total,
+    totalPages: Math.ceil(feed.total / limit),
+    hasMore: feed.hasMore,
+  };
+}
+
+async function aggregateVisiblePool(
+  visibleDocs: PoolDoc[],
+  rankingStages: Record<string, unknown>[],
+  page: number,
+  limit: number
+): Promise<{ docs: LeanRecipe[]; total: number; hasMore: boolean }> {
+  if (visibleDocs.length === 0) return { docs: [], total: 0, hasMore: false };
+  const skip = (page - 1) * limit;
+  const [result] = await Recipe.aggregate([
+    { $match: { _id: { $in: visibleDocs.map((doc) => doc._id) } } },
+    ...rankingStages,
+    {
+      $facet: {
+        data: [{ $skip: skip }, { $limit: limit + 1 }, FEED_RECIPE_PREVIEW_STAGE],
+        count: [{ $limit: 1000 }, { $count: "n" }],
+      },
+    },
+  ] as unknown as PipelineStage[]).allowDiskUse(true);
+
+  const { page: docs, hasMore } = splitHasMore(
+    (result?.data ?? []) as LeanRecipe[],
+    limit
+  );
+  return { docs, total: (result?.count[0]?.n ?? 0) as number, hasMore };
+}
+
+async function rankForYou(
   userId: Types.ObjectId,
   page: number,
   limit: number
-): Promise<PaginatedFeed> {
-  // Load block exclusion set once at the top — same set is applied to the
-  // base match AND the featured-recipe lookup.
-  const blockExclusionIds = await getBlockExclusionIds(userId);
-  const accessiblePrivateIds = await buildAccessiblePrivateIds(userId);
-  const featuredPromise = getFeaturedRecipeForViewer(
-    userId,
-    accessiblePrivateIds,
-    blockExclusionIds
-  );
-
-  // Fetch user preferences
-  const currentUser = await User.findById(userId)
-    .select("dietaryPreferences cuisinePreferences")
-    .lean();
-  const userDietary: string[] = currentUser?.dietaryPreferences ?? [];
-  const userCuisine: string[] = currentUser?.cuisinePreferences ?? [];
-
-  // Fetch who the user follows, and who *they* follow (2nd-degree)
-  const followingIds = await getFollowingIds(userId);
-  let followedByFollowingIds: Types.ObjectId[] = [];
-  if (followingIds.length > 0) {
-    const secondDegree = await Follow.find({
-      followerId: { $in: followingIds },
-      status: "active",
-    })
-      .select("followingId")
-      .lean();
-    followedByFollowingIds = secondDegree.map((f) => f.followingId);
-  }
-
-  const skip = (page - 1) * limit;
+): Promise<RankedPage> {
+  const viewer = await loadViewerContext(userId);
+  const userDietary = viewer.dietaryPreferences;
+  const userCuisine = viewer.cuisinePreferences;
 
   // No hard recency cutoff: the whole visible catalog is eligible. Recency
   // still shapes ranking via `_recencyScore` below, but never hides a recipe.
-  const baseMatch: Record<string, unknown> = {
-    isPrivate: false,
-    isHidden: { $ne: true },
-    authorId:
-      blockExclusionIds.length > 0
-        ? { $ne: userId, $nin: blockExclusionIds }
-        : { $ne: userId },
-  };
+  const baseMatch = buildBaseMatch(userId, viewer.blockExclusionIds);
 
-  const candidateIds = await getForYouCandidateIds(
-    baseMatch,
-    userDietary,
-    userCuisine
-  );
-  const poolMatch = { _id: { $in: candidateIds } };
-
-  // First pass: get maxEngagement for normalization
-  const maxResult = await Recipe.aggregate([
-    { $match: poolMatch },
-    ...buildVisibilityPipelineStages(userId, accessiblePrivateIds),
-    {
-      $group: {
-        _id: null,
-        max: {
-          $max: { $add: ["$likesCount", { $multiply: ["$forksCount", 3] }] },
-        },
-      },
-    },
-  ] as unknown[] as PipelineStage[]).allowDiskUse(true);
-  const maxEngagement = Math.max(1, (maxResult[0]?.max as number) ?? 0);
-
-  // Second pass: score in aggregation and paginate
+  const [kitchenMemberIds, followedByFollowingIds, pool] = await Promise.all([
+    getKitchenMemberIds(userId, viewer.kitchenId),
+    getSecondDegreeFollowingIds(viewer.followingIds),
+    getForYouPool(baseMatch, userDietary, userCuisine),
+  ]);
+  const accessiblePrivateIds = [...viewer.followingIds, ...kitchenMemberIds];
+  const visible = await resolveVisiblePool(userId, pool, accessiblePrivateIds);
+  const maxEngagement = maxEngagementOf(visible.docs);
+  const premiumAuthorIds = premiumAuthorIdsOf(visible.docs, visible.state);
   const nowMs = Date.now();
 
-  const pipeline = [
-    { $match: poolMatch },
-    ...buildVisibilityPipelineStages(userId, accessiblePrivateIds),
-    // Join author for premium status
-    {
-      $lookup: {
-        from: "users",
-        localField: "authorId",
-        foreignField: "_id",
-        as: "_authorFull",
-        pipeline: [{ $project: { isPremium: 1 } }],
-      },
-    },
-    { $unwind: { path: "$_authorFull", preserveNullAndEmptyArrays: false } },
+  const rankingStages: Record<string, unknown>[] = [
     // Compute scoring components
     {
       $addFields: {
@@ -597,7 +828,15 @@ export async function forYouFeed(
             },
           ],
         },
-        _premiumBoost: { $cond: ["$_authorFull.isPremium", 0.1, 0] },
+        _premiumBoost: {
+          $cond: [
+            premiumAuthorIds.length > 0
+              ? { $in: ["$authorId", premiumAuthorIds] }
+              : false,
+            0.1,
+            0,
+          ],
+        },
       },
     },
     {
@@ -616,86 +855,40 @@ export async function forYouFeed(
     // Real (non-seed) recipes rank ahead of seed recipes, then by score.
     // `isSeed` sorts ascending: missing/false (real) before true (seed).
     { $sort: { isSeed: 1, _score: -1 } },
-    {
-      $facet: {
-        data: [
-          { $skip: skip },
-          { $limit: limit + 1 },
-          {
-            $project: {
-              _daysSince: 0,
-              _rawEngagement: 0,
-              _recencyScore: 0,
-              _engagementScore: 0,
-              _relevanceScore: 0,
-              _premiumBoost: 0,
-              _score: 0,
-              _authorFull: 0,
-            },
-          },
-        ],
-        count: [{ $limit: 1000 }, { $count: "n" }],
-      },
-    },
   ];
 
-  const [[result], featured] = await Promise.all([
-    Recipe.aggregate(pipeline as unknown as PipelineStage[]).allowDiskUse(true),
-    featuredPromise,
-  ]);
-  const rawData = (result?.data ?? []) as LeanRecipe[];
-  const { page: recipes, hasMore: hasMoreRaw } = splitHasMore(rawData, limit);
-  const baseTotal = (result?.count[0]?.n ?? 0) as number;
-
-  const enrichedBase = await enrichRecipes(recipes, userId);
-  const { recipes: finalRecipes, total } = applyFeaturedToPage(
-    enrichedBase,
-    baseTotal,
-    featured,
-    page
-  );
-
+  const ranked = await aggregateVisiblePool(visible.docs, rankingStages, page, limit);
   return {
-    recipes: finalRecipes,
-    page,
-    limit,
-    total,
-    totalPages: Math.ceil(total / limit),
-    hasMore: hasMoreRaw,
+    ...ranked,
+    state: visible.state,
+    accessiblePrivateIds,
+    blockExclusionIds: viewer.blockExclusionIds,
   };
 }
 
-/**
- * Trending feed — most-engaged recipes from the last 7 days.
- * Uses aggregation with $lookup to avoid loading all public user IDs.
- */
-export async function trendingFeed(
+async function rankTrending(
   userId: Types.ObjectId,
   page: number,
   limit: number
-): Promise<PaginatedFeed> {
-  const blockExclusionIds = await getBlockExclusionIds(userId);
-  const accessiblePrivateIds = await buildAccessiblePrivateIds(userId);
-  const skip = (page - 1) * limit;
-  const nowMs = Date.now();
+): Promise<RankedPage> {
+  const [viewer, materialized] = await Promise.all([
+    loadViewerContext(userId),
+    isTrendingScoreFresh(),
+  ]);
 
   // Rank by engagement across the whole visible catalog rather than a fixed
   // recent window, so the feed is never emptied out as recipes age.
-  const baseMatch: Record<string, unknown> = {
-    isPrivate: false,
-    isHidden: { $ne: true },
-    authorId:
-      blockExclusionIds.length > 0
-        ? { $ne: userId, $nin: blockExclusionIds }
-        : { $ne: userId },
-  };
+  const baseMatch = buildBaseMatch(userId, viewer.blockExclusionIds);
 
-  const { ids: candidateIds, materialized } = await getTrendingCandidateIds(
-    baseMatch
-  );
-  const poolMatch = { _id: { $in: candidateIds } };
+  const [kitchenMemberIds, pool] = await Promise.all([
+    getKitchenMemberIds(userId, viewer.kitchenId),
+    getTrendingPool(baseMatch, materialized),
+  ]);
+  const accessiblePrivateIds = [...viewer.followingIds, ...kitchenMemberIds];
+  const visible = await resolveVisiblePool(userId, pool, accessiblePrivateIds);
+  const nowMs = Date.now();
 
-  const scoringStages: Record<string, unknown>[] = materialized
+  const rankingStages: Record<string, unknown>[] = materialized
     ? [{ $sort: { isSeed: 1, trendingScore: -1 } }]
     : [
         {
@@ -722,49 +915,148 @@ export async function trendingFeed(
         { $sort: { isSeed: 1, _trendScore: -1 } },
       ];
 
-  const dataStages: Record<string, unknown>[] = [
-    { $skip: skip },
-    { $limit: limit + 1 },
-    ...(materialized
-      ? []
-      : [{ $project: { _ageDays: 0, _trendScore: 0 } }]),
-  ];
+  const ranked = await aggregateVisiblePool(visible.docs, rankingStages, page, limit);
+  return {
+    ...ranked,
+    state: visible.state,
+    accessiblePrivateIds,
+    blockExclusionIds: viewer.blockExclusionIds,
+  };
+}
 
-  const [[result], featured] = await Promise.all([
-    Recipe.aggregate([
-      { $match: poolMatch },
-      ...buildVisibilityPipelineStages(userId, accessiblePrivateIds),
-      ...scoringStages,
-      {
-        $facet: {
-          data: dataStages,
-          count: [{ $limit: 1000 }, { $count: "n" }],
-        },
-      },
-    ] as unknown as PipelineStage[]).allowDiskUse(true),
-    getFeaturedRecipeForViewer(userId, accessiblePrivateIds, blockExclusionIds),
+async function rankFriends(
+  userId: Types.ObjectId,
+  page: number,
+  limit: number
+): Promise<RankedPage> {
+  const viewer = await loadViewerContext(userId);
+  const skip = (page - 1) * limit;
+
+  // Remove blocked (either direction) authors from the followed-author set.
+  const blockedKeys = new Set(
+    viewer.blockExclusionIds.map((id) => id.toString())
+  );
+  const visibleFollowing = viewer.followingIds.filter(
+    (id) => !blockedKeys.has(id.toString())
+  );
+
+  const filter = {
+    authorId: { $in: visibleFollowing },
+    isPrivate: false,
+    isHidden: { $ne: true },
+  };
+
+  const [docs, total, kitchenMemberIds] = await Promise.all([
+    visibleFollowing.length > 0
+      ? Recipe.find(filter)
+          // Real (non-seed) recipes rank ahead of seed recipes, then newest first.
+          .sort({ isSeed: 1, createdAt: -1 })
+          .skip(skip)
+          .limit(limit)
+          .select(FEED_RECIPE_SELECT)
+          .lean<LeanRecipe[]>()
+      : [],
+    visibleFollowing.length > 0 ? Recipe.countDocuments(filter) : 0,
+    page === 1 ? getKitchenMemberIds(userId, viewer.kitchenId) : [],
   ]);
 
-  const rawData = (result?.data ?? []) as LeanRecipe[];
-  const { page: recipes, hasMore: hasMoreRaw } = splitHasMore(rawData, limit);
-  const baseTotal = (result?.count[0]?.n ?? 0) as number;
-
-  const enrichedBase = await enrichRecipes(recipes, userId);
-  const { recipes: finalRecipes, total } = applyFeaturedToPage(
-    enrichedBase,
-    baseTotal,
-    featured,
-    page
+  const state = await loadViewerRecipeState(
+    userId,
+    docs.map((doc) => doc._id),
+    uniqueIds(docs.map((doc) => doc.authorId)),
+    PAGE_AUTHOR_FIELDS
   );
 
   return {
-    recipes: finalRecipes,
-    page,
-    limit,
+    docs,
     total,
-    totalPages: Math.ceil(total / limit),
-    hasMore: hasMoreRaw,
+    hasMore: skip + docs.length < total,
+    state,
+    accessiblePrivateIds: [...viewer.followingIds, ...kitchenMemberIds],
+    blockExclusionIds: viewer.blockExclusionIds,
   };
+}
+
+async function rankSeasonal(
+  userId: Types.ObjectId,
+  page: number,
+  limit: number
+): Promise<RankedPage> {
+  const [viewer, activeSlugs] = await Promise.all([
+    loadViewerContext(userId),
+    getActiveSeasonalSlugs(),
+  ]);
+  const baseMatch = buildBaseMatch(userId, viewer.blockExclusionIds);
+
+  // No active seasonal tags: fall back to the full visible catalog rather than
+  // an empty feed. The sort below still ranks user recipes ahead of seed.
+  const [kitchenMemberIds, pool] = await Promise.all([
+    getKitchenMemberIds(userId, viewer.kitchenId),
+    getSeasonalPool(baseMatch, activeSlugs),
+  ]);
+  const accessiblePrivateIds = [...viewer.followingIds, ...kitchenMemberIds];
+  const visible = await resolveVisiblePool(userId, pool, accessiblePrivateIds);
+
+  const ranked = await aggregateVisiblePool(
+    visible.docs,
+    // Real (non-seed) recipes rank ahead of seed recipes.
+    [{ $sort: { isSeed: 1, likesCount: -1, createdAt: -1 } }],
+    page,
+    limit
+  );
+  return {
+    ...ranked,
+    state: visible.state,
+    accessiblePrivateIds,
+    blockExclusionIds: viewer.blockExclusionIds,
+  };
+}
+
+// ── Feed Algorithms ────────────────────────────────────────────────────────────
+
+/**
+ * Algorithmic "For You" feed.
+ *
+ * Scoring is performed in MongoDB aggregation to avoid loading large candidate
+ * sets into memory. The score uses:
+ * - recency (0.25): newer recipes score higher
+ * - engagement (0.25): normalized likes + weighted forks
+ * - relevance (0.30): dietary/cuisine/label match + followed-by-following
+ * - premium boost (0.10): small bonus for premium authors
+ * - diversity constant (0.10): simplified constant (stateful windowing not
+ *   feasible in aggregation)
+ */
+export async function forYouFeed(
+  userId: Types.ObjectId,
+  page: number,
+  limit: number
+): Promise<PaginatedFeed> {
+  const feed = await loadFeedPage(userId, page, () =>
+    rankForYou(userId, page, limit)
+  );
+  return toPaginatedFeed(page, limit, feed);
+}
+
+export async function forYouFeedRecipeIds(
+  userId: Types.ObjectId,
+  limit: number
+): Promise<Types.ObjectId[]> {
+  const feed = await loadFeedPage(userId, 1, () => rankForYou(userId, 1, limit));
+  return feed.docs.map((doc) => doc._id);
+}
+
+/**
+ * Trending feed — most-engaged recipes from the last 7 days.
+ */
+export async function trendingFeed(
+  userId: Types.ObjectId,
+  page: number,
+  limit: number
+): Promise<PaginatedFeed> {
+  const feed = await loadFeedPage(userId, page, () =>
+    rankTrending(userId, page, limit)
+  );
+  return toPaginatedFeed(page, limit, feed);
 }
 
 /**
@@ -775,75 +1067,10 @@ export async function friendsFeed(
   page: number,
   limit: number
 ): Promise<PaginatedFeed> {
-  const blockExclusionIds = await getBlockExclusionIds(userId);
-  const accessiblePrivateIds = await buildAccessiblePrivateIds(userId);
-  const featuredPromise = getFeaturedRecipeForViewer(
-    userId,
-    accessiblePrivateIds,
-    blockExclusionIds
+  const feed = await loadFeedPage(userId, page, () =>
+    rankFriends(userId, page, limit)
   );
-  // `getFollowingIds` already filters on status: "active" — pending follow
-  // requests do NOT populate this feed.
-  const followingIds = await getFollowingIds(userId);
-  const skip = (page - 1) * limit;
-
-  // Remove blocked (either direction) authors from the followed-author set.
-  const blockedKeys = new Set(
-    blockExclusionIds.map((id) => id.toString())
-  );
-  const visibleFollowing = followingIds.filter(
-    (id) => !blockedKeys.has(id.toString())
-  );
-
-  if (visibleFollowing.length === 0) {
-    const featured = await featuredPromise;
-    const { recipes, total } = applyFeaturedToPage([], 0, featured, page);
-    return {
-      recipes,
-      page,
-      limit,
-      total,
-      totalPages: Math.ceil(total / limit),
-      hasMore: false,
-    };
-  }
-
-  const filter = {
-    authorId: { $in: visibleFollowing },
-    isPrivate: false,
-    isHidden: { $ne: true },
-  };
-
-  const [recipes, baseTotal, featured] = await Promise.all([
-    Recipe.find(filter)
-      // Real (non-seed) recipes rank ahead of seed recipes, then newest first.
-      .sort({ isSeed: 1, createdAt: -1 })
-      .skip(skip)
-      .limit(limit)
-      .lean(),
-    Recipe.countDocuments(filter),
-    featuredPromise,
-  ]);
-
-  const enrichedBase = await enrichRecipes(
-    recipes as LeanRecipe[],
-    userId
-  );
-  const { recipes: finalRecipes, total } = applyFeaturedToPage(
-    enrichedBase,
-    baseTotal,
-    featured,
-    page
-  );
-
-  return {
-    recipes: finalRecipes,
-    page,
-    limit,
-    total,
-    totalPages: Math.ceil(total / limit),
-    hasMore: skip + recipes.length < baseTotal,
-  };
+  return toPaginatedFeed(page, limit, feed);
 }
 
 /**
@@ -855,69 +1082,8 @@ export async function seasonalFeed(
   page: number,
   limit: number
 ): Promise<PaginatedFeed> {
-  const blockExclusionIds = await getBlockExclusionIds(userId);
-  const accessiblePrivateIds = await buildAccessiblePrivateIds(userId);
-  const skip = (page - 1) * limit;
-
-  // Find currently active seasonal tags
-  const now = new Date();
-  const activeTags = await SeasonalTag.find({
-    isActive: true,
-    startDate: { $lte: now },
-    endDate: { $gte: now },
-  })
-    .select("slug")
-    .lean();
-
-  const baseMatch: Record<string, unknown> = {
-    isPrivate: false,
-    isHidden: { $ne: true },
-    authorId:
-      blockExclusionIds.length > 0
-        ? { $ne: userId, $nin: blockExclusionIds }
-        : { $ne: userId },
-  };
-
-  // No active seasonal tags: fall back to the full visible catalog rather than
-  // an empty feed. The sort below still ranks user recipes ahead of seed.
-  const activeSlugs = activeTags.map((t) => t.slug);
-  const candidateIds = await getSeasonalCandidateIds(baseMatch, activeSlugs);
-  const poolMatch = { _id: { $in: candidateIds } };
-
-  const [[result], featured] = await Promise.all([
-    Recipe.aggregate([
-      { $match: poolMatch },
-      ...buildVisibilityPipelineStages(userId, accessiblePrivateIds),
-      // Real (non-seed) recipes rank ahead of seed recipes.
-      { $sort: { isSeed: 1, likesCount: -1, createdAt: -1 } },
-      {
-        $facet: {
-          data: [{ $skip: skip }, { $limit: limit + 1 }],
-          count: [{ $limit: 1000 }, { $count: "n" }],
-        },
-      },
-    ] as unknown as PipelineStage[]).allowDiskUse(true),
-    getFeaturedRecipeForViewer(userId, accessiblePrivateIds, blockExclusionIds),
-  ]);
-
-  const rawData = (result?.data ?? []) as LeanRecipe[];
-  const { page: recipes, hasMore: hasMoreRaw } = splitHasMore(rawData, limit);
-  const baseTotal = (result?.count[0]?.n ?? 0) as number;
-
-  const enrichedBase = await enrichRecipes(recipes, userId);
-  const { recipes: finalRecipes, total } = applyFeaturedToPage(
-    enrichedBase,
-    baseTotal,
-    featured,
-    page
+  const feed = await loadFeedPage(userId, page, () =>
+    rankSeasonal(userId, page, limit)
   );
-
-  return {
-    recipes: finalRecipes,
-    page,
-    limit,
-    total,
-    totalPages: Math.ceil(total / limit),
-    hasMore: hasMoreRaw,
-  };
+  return toPaginatedFeed(page, limit, feed);
 }

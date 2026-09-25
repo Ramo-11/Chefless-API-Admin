@@ -13,19 +13,23 @@ export async function buildAccessiblePrivateIds(
     User.findById(userId).select("kitchenId").lean(),
   ]);
   const followingIds = follows.map((f) => f.followingId);
-
-  let kitchenMemberIds: Types.ObjectId[] = [];
-  if (viewer?.kitchenId) {
-    const members = await User.find({
-      kitchenId: viewer.kitchenId,
-      _id: { $ne: userId },
-    })
-      .select("_id")
-      .lean();
-    kitchenMemberIds = members.map((m) => m._id);
-  }
+  const kitchenMemberIds = await getKitchenMemberIds(userId, viewer?.kitchenId);
 
   return [...followingIds, ...kitchenMemberIds];
+}
+
+export async function getKitchenMemberIds(
+  userId: Types.ObjectId,
+  kitchenId: Types.ObjectId | null | undefined
+): Promise<Types.ObjectId[]> {
+  if (!kitchenId) return [];
+  const members = await User.find({
+    kitchenId,
+    _id: { $ne: userId },
+  })
+    .select("_id")
+    .lean();
+  return members.map((m) => m._id);
 }
 
 export function resolveRecipeVisibility(

@@ -10,7 +10,7 @@ import PantryItem from "../models/PantryItem";
 import { hasActivePremium } from "../lib/premium";
 import { canonicalDiet, CANONICAL_MEAL_LABELS } from "../lib/diets";
 import { getPantryMatches, PantryMatch } from "./pantry-service";
-import { forYouFeed } from "./feed-service";
+import { forYouFeedRecipeIds } from "./feed-service";
 import { getBlockedUserIds } from "./block-service";
 import { canScheduleRecipe } from "./schedule-service";
 
@@ -469,8 +469,7 @@ async function forYouCandidates(
   cookedWithin: CookedWithinFn,
   ctx: CandidateContext
 ): Promise<Candidate[]> {
-  const feed = await forYouFeed(userOid, 1, FOR_YOU_POOL_LIMIT);
-  const ids = feed.recipes.map((recipe) => recipe._id);
+  const ids = await forYouFeedRecipeIds(userOid, FOR_YOU_POOL_LIMIT);
   if (ids.length === 0) {
     return [];
   }

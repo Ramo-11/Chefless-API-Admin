@@ -4,6 +4,7 @@ import Kitchen from "../../models/Kitchen";
 import { createTestUser } from "../helpers";
 import {
   createKitchen,
+  getMyKitchen,
   joinKitchen,
   acceptKitchenInvite,
   sendKitchenInvite,
@@ -108,5 +109,33 @@ describe("kitchen-service member capacity", () => {
 
     const finalKitchen = await Kitchen.findById(kitchen._id).lean();
     expect(finalKitchen?.memberCount).toBe(2);
+  });
+});
+
+describe("kitchen-service getMyKitchen", () => {
+  it("returns the kitchen with every member, the lead included", async () => {
+    const lead = await createTestUser({ email: "mine-lead@test.com", fullName: "Lead Cook" });
+    const kitchen = await createKitchen(lead._id.toString(), "Casa Mine");
+    const joiner = await createTestUser({ email: "mine-joiner@test.com", fullName: "Joiner Cook" });
+    await joinKitchen(joiner._id.toString(), kitchen.inviteCode);
+
+    const result = await getMyKitchen(joiner._id.toString());
+
+    expect(result?.kitchen._id.toString()).toBe(kitchen._id.toString());
+    expect(result?.members.map((m) => m.fullName).sort()).toEqual(["Joiner Cook", "Lead Cook"]);
+  });
+
+  it("returns null for a user whose stored kitchen no longer exists, rather than listing leftover members", async () => {
+    const lead = await createTestUser({ email: "gone-lead@test.com" });
+    const kitchen = await createKitchen(lead._id.toString(), "Casa Gone");
+    await Kitchen.deleteOne({ _id: kitchen._id });
+
+    expect(await getMyKitchen(lead._id.toString())).toBeNull();
+  });
+
+  it("returns null for a user without a kitchen", async () => {
+    const loner = await createTestUser({ email: "mine-loner@test.com" });
+
+    expect(await getMyKitchen(loner._id.toString())).toBeNull();
   });
 });
